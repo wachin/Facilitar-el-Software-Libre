@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>-</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="dolphin-color-folder-debian-11-ubuntu-22.04">Dolphin Color Folder, Debian 11, Ubuntu 22.04</h1>
+<p>Este tutorial es sólo para Sistemas Operativos Linux basados en Debian 11, además basados en Ubuntu 22.04 y pueden probarlo en basados en Ubuntu 20.04 y me avisan si funciona</p>
+<h1 id="tutorial-pensado-para-linux-no-kde">Tutorial pensado para Linux no KDE</h1>
+<p>Está pensado en Distribuciones Linux que NO son basadas en KDE (como Kubuntu, KDE Neon, etc) ya que allí vienen instaladas todas las dependencias para que funcione bien Dolphin. Este tutorial es para que puedan usar Dolphin Color Folder en otras Distribuciones Linux en las que no les funcione</p>
+<h1 id="instalación-de-dolphin">Instalación de Dolphin</h1>
+<p>Para que pueda funcionar correctamente Dolphin en Sistemas Operativos Linux no KDE ponga estos comandos en la terminal:</p>
+<pre><code>sudo apt install dolphin kde-baseapps konsole kde-cli-tools \
+     kio-extras kdegraphics-thumbnailers ffmpegthumbs engrampa \
+     kde-style-oxygen-qt5 kde-style-qtcurve-qt5 breeze</code></pre>
+<p>Si tiene curiosidad puede ver la siguiente entrada con explicaciones del porqué de instalar esos paquetes:</p>
+<p><strong>Instalar correctamente Dolphin (Administrador de archivos) en MX Linux, antiX basados en Debian en entornos no KDE (tal vez basados en Ubuntu también)</strong> https://facilitarelsoftwarelibre.blogspot.com/2019/11/instalar-correctamente-dolphin-en-entornos-no-kde.html</p>
+<p>Una vez instalado, estará entre todas sus aplicaciones, ejemplo:</p>
+<p><img src="img/101%20Dophin%20instalado%20aparece%20entre%20las%20aplicaciones.png" /></p>
+<p>pero sino puede lanzarlo desde la terminal así:</p>
+<pre><code>dolphin</code></pre>
+<h1 id="instalación-de-dolphin-folder-color">Instalación de Dolphin Folder Color</h1>
+<p>Copie todo el siguiente código (seleccionelo todo de una sola vez) y peguelo en una terminal:</p>
+<pre><code>mkdir -p ~/.local/share/kservices5/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/dolphin-folder-color
+cd dolphin-folder-color
+cp *.desktop ~/.local/share/kservices5/ServiceMenus
+sudo ./install.sh
+echo &quot;Dios les bendiga&quot; </code></pre>
+<p>y es posible le aparezca una ventandole pidiendo que confirme la instalación y luego aparecerá la siguiente ventana:</p>
+<p><img src="img/102%20Ventana%20de%20instalación%20correcta.png" /></p>
+<p>allí como se ve hay que dar clic en Aceptar y cierre Dolphin y vuelvalo a abrir (para que lo reinicie)</p>
+<p>y al dar clic derecho en alguna carpeta le aparecerán las opciones para escoger los colores de carpetas que usted desee:</p>
+<p><img src="img/103%20poniendo%20un%20color%20a%20carpeta%20en%20Dolphin%20con%20Dolphin%20Folder%20Color.png" /></p>
+<h1 id="temas-de-iconos-compatibles-con-dolphin-folder-color">Temas de iconos compatibles con Dolphin Folder color</h1>
+<p>No todos los temas de iconos son compatibles, los que conozco que son compatibles son:</p>
+<p><strong>Breeze Icon Theme.-</strong> Que ya lo instalamos cuando instalamos el paquete Breeze</p>
+<p><strong>Oxygen Icon Theme.-</strong> Este tema de iconos hasta donde se viene por defecto instalado en Sistemas Operativos Linux KDE pero se lo puede instalar así:</p>
+<pre><code>sudo apt install oxygen-icon-theme</code></pre>
+<p><strong>Nuvola Orange Icon Theme.-</strong> El cual es un Fork que yo hice del tema Nuvola, las instrucciones de instalación están en:</p>
+<p>https://facilitarelsoftwarelibre.blogspot.com/2020/06/tema-de-iconos-nuvola-color-naranja.html</p>
+<p>solo que mi tema no está del todo completo, yo le puse los colores faltantes de algunas carpetas para poder usarlo con Dolphin Folder Color, si desean lo pueden probar</p>
+<p><strong>KDE Store Full Icon Themes</strong>.- Hay muchos temas de iconos KDE en:</p>
+<p>https://store.kde.org/browse?cat=132&amp;order=latest</p>
+<p><img src="img/104%20KDE%20Store%20Full%20Icon%20Themes.png" /></p>
+<p>algunos de ellos podrian ser compatibles y tener las carpetas de colores necesarias, pero es necesario probar, me avisan si encuentrar algunas</p>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+# Converting Documents From Markdown Into Microsoft Word Format
+
+https://linuxhint.com/convert_document_markdown_microsoft_word/
+
+2 years ago
+
+by [Frank Hofmann](https://linuxhint.com/author/frank_hofmann/)
+
+Among other activities, writing and editing text documents belongs to the most common actions we use our (desktop) computers for. The exact way it is done follows different paths --- from using a bare text editor like Vim to graphical applications like Open/Libre Office or cloud-based services that are accessible via webbrowser like Google Docs. To our disadvantage, every tool comes with its own native document format as well as selection of other supported document formats. The quality of the conversion between these formats varies widely, and can lead to a lot of frustration when crossing format boundaries.
+
+In this article we have a look at the conversion between Markdown [1] and DOCX --- the native document format of Microsoft Word that is in use since 2007. You may wonder why an enthusiast of Markdown and Asciidoc (like me) deals with this case. Well, collaborating with a group of other writers can lead to a situation whereas one or more participants request DOCX as the output format. Don't let anybody down, and find out which limitations exist, instead, and how we can try to make all group members happy.
+
+### What is Markdown?
+
+As already pointed out in "An Introduction into Markdown" [2], the intention for Markdown is a simple text to HTML conversion. The idea behind it was to make writing web pages, documentation and especially blog entries as easy as writing an e-mail. As of today it is the de facto-synonym for a class of lightweight markup description languages, and the goal can be seen as reached.
+
+Markdown uses a plain text formatting syntax. With a similar approach as HTML a number of markers indicate headlines, lists, images, and references in your text. The few lines below illustrate a basic document that contains two headlines (1st and 2nd level) as well as two paragraphs, and a list environment.
+
+
+### Conversion to DOCX
+
+In order to convert your Markdown document to DOCX, use the tool pandoc [3]. Pandoc is a Haskell library, and describes itself as "the universal document converter", or the "Swiss army knife for document conversions". It is available for a variety of platforms such as Linux, Microsoft Windows, Mac OS X, and BSD. Pandoc is commonly included as a package for Linux distributions like Debian GNU/Linux, Ubuntu, and CentOS.
+
+A simple call for a conversion is as follows:
+
+    pandoc -o test.docx test.md
+
+The first parameter `-o` refers to the output file, followed by the name of the file (`test.docx`). The file extension helps pandoc to identify the desired output format. The second parameter names the input file --- in our case it is simply `test.md`.
+
+The long version of the command shown above contains the two parameters `-f markdown` and `-t docx`. The first one abbreviates the term `flavour`, and describes the format of the input file. The second one does the same for the output file, and abbreviates `-to`.
+
+The full command is as follows:
+
+    pandoc -o test.docx -f markdown -t docx test.md
+
+Opening the converted file using Microsoft Word results in the following output:
+
+For the different text elements Pandoc uses stylesheets. This allows you to adjust these elements later according to your needs throughout the entire document. The newer versions of Pandoc also offer the other way around --- you can convert a DOCX file into Markdown as follows:
+
+    pandoc -o test.md test.docx
+
+Then, the generated file has the following content:
+
+
+### Useful Command-line Options
+
+The list of Pandoc options is rather long. The following ones help you to produce better results, and make your life much easier:
+
+* `-P` (long version `--preserve-tabs`): Preserve tabs instead of converting them to spaces. This is useful for code blocks with  indented lines that are part of your text.
+
+* `-S` (long version `--smart`): Produce typographically correct output.
+
+This option corrects quotes, hyphens/dashes as well as ellipses  ("..."). Additional, non-breaking spaces are added after certain abbreviations such as "Mr.".
+
+* `--track-changes=value`: Specifies what to do with insertions, deletions, and comments that are produced with the help of the Microsoft Word  "Track Changes" feature. The value can be either accept, reject, or all in order to include or remove the changes made in the document. The result is a flat file.
+
+For more options have a look at the documentation, and the manual page of Pandoc.
+
+### Summary
+
+The conversion between Markdown and DOCX is no longer a mystery. It is done within a few steps, and works very well. Happy hacking 🙂

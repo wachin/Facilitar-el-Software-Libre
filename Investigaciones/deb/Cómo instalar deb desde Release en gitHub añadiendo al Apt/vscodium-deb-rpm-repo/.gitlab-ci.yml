@@ -1,0 +1,24 @@
+image: fedora:latest
+
+before_script:
+  - echo 'fastestmirror=True' >> /etc/dnf/dnf.conf
+  - dnf -q -y install --allowerasing createrepo_c curl git dpkg-devel tar gzip gnupg2 expect openssl reprepro findutils rpm-sign
+  - chmod +x updaterepos.sh
+
+pages:
+  stage: deploy
+  variables:
+    FF_USE_FASTZIP: "true"
+    ARTIFACT_COMPRESSION_LEVEL: "fastest"
+  script:
+    - ./updaterepos.sh
+    - mkdir .public
+    - cp -r pkgs/* .public
+    - mv .public public
+    - ls -lah public/
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - public
+  only:
+    - master

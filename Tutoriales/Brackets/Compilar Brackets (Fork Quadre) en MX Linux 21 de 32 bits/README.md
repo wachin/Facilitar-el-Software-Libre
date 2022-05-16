@@ -20,7 +20,7 @@ node-v16.15.0.tar.xz
 
 según las instrucciones de compilación en el archivo:
 
-/home/wachin/Dev/nodejs/node-v16.15.0/BUILDING.md
+/nodejs/node-v16.15.0/BUILDING.md
 
 hay que instalar algunos paquetes:
 
@@ -29,7 +29,7 @@ hay que instalar algunos paquetes:
 
 ## Compilando Node.js
 
-Nota: Si la ruta donde está el código fuente contenga algún espacio la compilación fallará, por eso asegurese que no haya espacios en los nombres de las carpetas
+**Nota:** Si la ruta donde está el código fuente contenga algún espacio la compilación fallará, por eso asegurese que no haya espacios en los nombres de las carpetas
 
 Para compilar build Node.js:
 
@@ -45,52 +45,82 @@ Para ver la versión instalada:
 
 
 
-#Compilando Quadre:
+# Compilando Quadre:  
 Con las siguientes instrucciones se compila y generan los ejecutables:
 
+```
 git clone https://github.com/quadre-code/quadre
 cd quadre
 git submodule update --init
 npm install
 npm run dist
+```
 
-en la carpeta 
+luego de un tiempo de compilación, en la carpeta:
 
 /dist-build
 
 se encuentran los instaladores
 
 
-## Corregir vista previa en en Google-Chrome
-Por defecto Quadre usa Google-Chome para la vista previa, pero podemos instalar Chromium para que lo podamos usar y que funcione en Linux 32 bits:
 
-    sudo apt install chromium chromium-l10n chromium-driver chromium-sandbox
+# Usar el instalador deb, o AppImage, o portable
+En esa carpeta **dist-build** estarán los siguietes:
 
-Ahora hay que crear un enlace simbólico:
+**quadre--ia32-linux-unpacked**  
+que es el portable, para asegúrese que el archivo:
 
-    sudo ln -s /usr/bin/chromium /bin/google-chrome
+quadre
 
-y para usar siempre deberá usted buscar sus archivos .html desde la opción:
+esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable
+
+**Quadre-2.0.0-alpha.6-i386.AppImage**  
+Es el App image, asegúrese que esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable
+
+**quadre_2.0.0-alpha.6_i386.deb**  
+Es el instalador, instalelo con gdebi
+
+# Cómo poner en español
+De clic en:
+
+**Debug**
+
+allí clic en:
+k
+**Switch Language**
+
+y elija el idioma español y de clic en:
+
+**reload quadre**
 
 
-Archivo / Abrir Carpeta ...
+# Vista previa no funciona, solución usar un Navegador Web extra
+La vista previa no funciona en:
 
-Sólo así se cargará la vista previa en Chromium
+**Archivo / Vista previa dinámica**
 
+pero usted puede usar otro navegador web, ejemplo si usted usa Firefox instale Chromium:
+
+    sudo apt install chromium chromium-l10n
+
+y al archivo que esté editando, para ver la vista previa dele clic derecho y abrir con ese otro navegador web, y para recargar cualquier cambio que usted haga en el navegador web recargue la pagina con "Ctrl + R"
+
+![](img/101 Abirndo proyecto .html con clic derecho en Chromium para ver Vista Previa.png)
+ 
  
 
-###CONSULTAS
+### Consultas
 
-html - Brackets - Live Preview not working - Stack Overflow
-https://stackoverflow.com/questions/25108420/brackets-live-preview-not-working
-https://stackoverflow.com/a/50334602/10648253
+html - Brackets - Live Preview not working - Stack Overflow  
+https://stackoverflow.com/questions/25108420/brackets-live-preview-not-working  
+https://stackoverflow.com/a/50334602/10648253  
 I had this problem as well. What I did was simply goto File->Open Folder... it all worked after all the necessary files were loaded into Brackets. 
 
 Enhacement: Chromium-based forks for live preview · Issue 13010 · adobe/brackets  
-https://github.com/adobe/brackets/issues/13010
+https://github.com/adobe/brackets/issues/13010  
 
 Live preview doesn't work on archlinux Issue 9562 · adobe/brackets  
-https://github.com/adobe/brackets/issues/9562
+https://github.com/adobe/brackets/issues/9562  
 
 
 

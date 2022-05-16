@@ -6,6 +6,7 @@ Han hecho un Fork de Brackets para seguirle dando mantenimiento y que se pueda u
 Brackets necesita node.js 16 para poder ser compilado
 
 ## Compilar node.js 16.15.0 para 32 bits
+Encontré el codigo fuente en:
 
 https://nodejs.org/dist/v16.15.0/
 
@@ -17,7 +18,7 @@ extraer:
 
 node-v16.15.0.tar.xz
 
-según las instrucciones de compilación en archivo:
+según las instrucciones de compilación en el archivo:
 
 /home/wachin/Dev/nodejs/node-v16.15.0/BUILDING.md
 
@@ -26,7 +27,7 @@ hay que instalar algunos paquetes:
     sudo apt-get install python3 gcc g++ make python3-pip
 
 
-## Building Node.js
+## Compilando Node.js
 
 Nota: Si la ruta donde está el código fuente contenga algún espacio la compilación fallará, por eso asegurese que no haya espacios en los nombres de las carpetas
 
@@ -44,8 +45,8 @@ Para ver la versión instalada:
 
 
 
-#DESCARGA:
-
+#Compilando Quadre:
+Con las siguientes instrucciones se compila y generan los ejecutables:
 
 git clone https://github.com/quadre-code/quadre
 cd quadre
@@ -53,10 +54,15 @@ git submodule update --init
 npm install
 npm run dist
 
+en la carpeta 
+
+/dist-build
+
+se encuentran los instaladores
 
 
 ## Corregir vista previa en en Google-Chrome
-Por defecto Quadre usa Google-Chome para la vista previa, pero podemos instalar Chromium para que lo podamos usar y que funcione:
+Por defecto Quadre usa Google-Chome para la vista previa, pero podemos instalar Chromium para que lo podamos usar y que funcione en Linux 32 bits:
 
     sudo apt install chromium chromium-l10n chromium-driver chromium-sandbox
 
@@ -80,10 +86,10 @@ https://stackoverflow.com/questions/25108420/brackets-live-preview-not-working
 https://stackoverflow.com/a/50334602/10648253
 I had this problem as well. What I did was simply goto File->Open Folder... it all worked after all the necessary files were loaded into Brackets. 
 
-Enhacement: Chromium-based forks for live preview · Issue #13010 · adobe/brackets
+Enhacement: Chromium-based forks for live preview · Issue 13010 · adobe/brackets  
 https://github.com/adobe/brackets/issues/13010
 
-Live preview doesn't work on archlinux · Issue #9562 · adobe/brackets
+Live preview doesn't work on archlinux Issue 9562 · adobe/brackets  
 https://github.com/adobe/brackets/issues/9562
 
 

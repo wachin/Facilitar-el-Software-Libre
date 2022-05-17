@@ -13,3 +13,6 @@ y para usar siempre deberá usted buscar sus archivos .html desde la opción:
 Archivo / Abrir Carpeta ...
 
 Sólo así se cargará la vista previa en Chromium
+
+
+

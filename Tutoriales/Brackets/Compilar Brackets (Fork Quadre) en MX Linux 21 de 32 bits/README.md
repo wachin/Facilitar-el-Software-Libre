@@ -1,5 +1,5 @@
 
-# Cómo instalar Brackets (Fork Quadre) en MX Linux 21 de 32 bits
+# Compilar Brackets (Fork Quadre) en MX Linux 21 de 32 bits
 Han hecho un Fork de Brackets para seguirle dando mantenimiento y que se pueda usar en Linux. Yo lo he compilado en MX Linux 21 de 32 bits y funciona, y he creado un Fork y allí lo he subido para que lo puedan usar en Linux 32 bits
 
 ## DEPENDENCIAS
@@ -8,11 +8,11 @@ Brackets necesita node.js 16 para poder ser compilado
 ## Compilar node.js 16.15.0 para 32 bits
 Encontré el codigo fuente en:
 
-https://nodejs.org/dist/v16.15.0/
+[https://nodejs.org/dist/v16.15.0/](https://nodejs.org/dist/v16.15.0/)
 
 descargar:
 
-https://nodejs.org/dist/v16.15.0/node-v16.15.0.tar.xz
+[https://nodejs.org/dist/v16.15.0/node-v16.15.0.tar.xz](https://nodejs.org/dist/v16.15.0/node-v16.15.0.tar.xz)
 
 extraer:
 
@@ -72,10 +72,10 @@ que es el portable, para asegúrese que el archivo:
 
 quadre
 
-esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable
+esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable y para lanzarlo dele doble clic
 
 **Quadre-2.0.0-alpha.6-i386.AppImage**  
-Es el App image, asegúrese que esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable
+Es el App image, asegúrese que esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña "Permisos" verifique que esté marcado como ejecutable y para lanzarlo dele doble clic
 
 **quadre_2.0.0-alpha.6_i386.deb**  
 Es el instalador, instalelo con gdebi
@@ -103,7 +103,7 @@ pero usted puede usar otro navegador web, ejemplo si usted usa Firefox instale C
 
     sudo apt install chromium chromium-l10n
 
-y al archivo que esté editando, para ver la vista previa dele clic derecho y abrir con ese otro navegador web, y para recargar cualquier cambio que usted haga en el navegador web recargue la pagina con "Ctrl + R"
+para ver la vista previa, haga clic derecho en su archivo de proyecto .html y ábralo con chromium, y cuando haga algún cambio vuelva a cargar el navegador web con "Ctrl + R"
 
 ![](img/101 Abirndo proyecto .html con clic derecho en Chromium para ver Vista Previa.png)
  

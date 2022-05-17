@@ -1,0 +1,65 @@
+<h1 id="compilar-brackets-fork-quadre-en-mx-linux-21-de-32-bits">Compilar Brackets (Fork Quadre) en MX Linux 21 de 32 bits</h1>
+<p>Han hecho un Fork de Brackets para seguirle dando mantenimiento y que se pueda usar en Linux. Yo lo he compilado en MX Linux 21 de 32 bits y funciona, y he creado un Fork y allí lo he subido para que lo puedan usar en Linux 32 bits</p>
+<h2 id="dependencias">DEPENDENCIAS</h2>
+<p>Brackets necesita node.js 16 para poder ser compilado</p>
+<h2 id="compilar-node.js-16.15.0-para-32-bits">Compilar node.js 16.15.0 para 32 bits</h2>
+<p>Encontré el codigo fuente en:</p>
+<p><a href="https://nodejs.org/dist/v16.15.0/">https://nodejs.org/dist/v16.15.0/</a></p>
+<p>descargar:</p>
+<p><a href="https://nodejs.org/dist/v16.15.0/node-v16.15.0.tar.xz">https://nodejs.org/dist/v16.15.0/node-v16.15.0.tar.xz</a></p>
+<p>extraer:</p>
+<p>node-v16.15.0.tar.xz</p>
+<p>según las instrucciones de compilación en el archivo:</p>
+<p>/nodejs/node-v16.15.0/BUILDING.md</p>
+<p>hay que instalar algunos paquetes:</p>
+<pre class="linux-code" style="background: url(https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; font-size: medium; line-height: 22.3999996185303px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>sudo apt-get install python3 gcc g++ make python3-pip</code></pre>
+<h2 id="compilando-node.js">Compilando Node.js</h2>
+<p><strong>Nota:</strong> Si la ruta donde está el código fuente contenga algún espacio la compilación fallará, por eso asegurese que no haya espacios en los nombres de las carpetas</p>
+<p>Para compilar build Node.js:</p>
+<pre class="linux-code" style="background: url(https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; font-size: medium; line-height: 22.3999996185303px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>./configure
+make -j4
+sudo make install</code></pre>
+<p>Para ver la versión instalada:</p>
+<pre class="linux-code" style="background: url(https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; font-size: medium; line-height: 22.3999996185303px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>node -v</code></pre>
+<h1 id="compilando-quadre">Compilando Quadre:</h1>
+<p>Con las siguientes instrucciones se compila y generan los ejecutables:</p>
+<pre class="linux-code" style="background: url(https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; font-size: medium; line-height: 22.3999996185303px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>git clone https://github.com/quadre-code/quadre
+cd quadre
+git submodule update --init
+npm install
+npm run dist</code></pre>
+<p>luego de un tiempo de compilación, en la carpeta:</p>
+<p>/dist-build</p>
+<p>se encuentran los instaladores</p>
+<h1 id="usar-el-instalador-deb-o-appimage-o-portable">Usar el instalador deb, o AppImage, o portable</h1>
+<p>En esa carpeta <strong>dist-build</strong> estarán los siguietes:</p>
+<p><strong>quadre–ia32-linux-unpacked</strong><br />
+que es el portable, para asegúrese que el archivo:</p>
+<p>quadre</p>
+<p>esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña “Permisos” verifique que esté marcado como ejecutable y para lanzarlo dele doble clic</p>
+<p><strong>Quadre-2.0.0-alpha.6-i386.AppImage</strong><br />
+Es el App image, asegúrese que esté como ejecutable, para ver eso en algún administrador de archivos de clic derecho y en la pestaña “Permisos” verifique que esté marcado como ejecutable y para lanzarlo dele doble clic</p>
+<p><strong>quadre_2.0.0-alpha.6_i386.deb</strong><br />
+Es el instalador, instalelo con gdebi</p>
+<h1 id="cómo-poner-en-español">Cómo poner en español</h1>
+<p>De clic en:</p>
+<p><strong>Debug</strong></p>
+<p>allí clic en: k <strong>Switch Language</strong></p>
+<p>y elija el idioma español y de clic en:</p>
+<p><strong>reload quadre</strong></p>
+<h1 id="vista-previa-no-funciona-solución-usar-un-navegador-web-extra">Vista previa no funciona, solución usar un Navegador Web extra</h1>
+<p>La vista previa no funciona en:</p>
+<p><strong>Archivo / Vista previa dinámica</strong></p>
+<p>pero usted puede usar otro navegador web, ejemplo si usted usa Firefox instale Chromium:</p>
+<pre class="linux-code" style="background: url(https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; font-size: medium; line-height: 22.3999996185303px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>sudo apt install chromium chromium-l10n</code></pre>
+<p>para ver la vista previa, haga clic derecho en su archivo de proyecto .html y ábralo con chromium, y cuando haga algún cambio vuelva a cargar el navegador web con “Ctrl + R”</p>
+<p><img src="img/101%20Abirndo%20proyecto%20.html%20con%20clic%20derecho%20en%20Chromium%20para%20ver%20Vista%20Previa.png" /></p>
+<h3 id="consultas">Consultas</h3>
+<p>html - Brackets - Live Preview not working - Stack Overflow<br />
+https://stackoverflow.com/questions/25108420/brackets-live-preview-not-working<br />
+https://stackoverflow.com/a/50334602/10648253<br />
+I had this problem as well. What I did was simply goto File-&gt;Open Folder… it all worked after all the necessary files were loaded into Brackets.</p>
+<p>Enhacement: Chromium-based forks for live preview · Issue 13010 · adobe/brackets<br />
+https://github.com/adobe/brackets/issues/13010</p>
+<p>Live preview doesn’t work on archlinux Issue 9562 · adobe/brackets<br />
+https://github.com/adobe/brackets/issues/9562</p>

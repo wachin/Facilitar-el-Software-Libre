@@ -8,7 +8,7 @@ https://websetnet.net/converting-multiple-markdown-files-into-html-or-other-form
 
 Ver si le puedo añadir lo siguiente para que sea más exacto
 
-pandoc file.md -f markdown -t html -s -o file.html
+    pandoc file.md -f markdown -t html -s -o file.html
 
 
 intentandolo:

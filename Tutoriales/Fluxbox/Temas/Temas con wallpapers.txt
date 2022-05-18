@@ -1,0 +1,12 @@
+
+
+/usr/share/fluxbox/styles/Squared_for_Debian
+
+
+!----------------------------------------------------------------------------------------------
+
+# Edit by Paul:
+background:             fullscreen
+background.pixmap:      /usr/share/images/fluxbox/debian-squared.jpg
+# Use the theme that Endel designed for this theme. Hope you don't mind :)
+# I hereby release this unoriginal change to Endel.

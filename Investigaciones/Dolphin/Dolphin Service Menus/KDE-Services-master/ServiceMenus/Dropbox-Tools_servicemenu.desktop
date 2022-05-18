@@ -1,0 +1,170 @@
+[Desktop Entry]
+Actions=CopyToDropbox;MoveToDropbox;_SEPARATOR_;CopyToPublicAndGetURL;MoveToPublicAndGetURL;_SEPARATOR_;GetPublicURL;_SEPARATOR_;InstallService;UpdateService;_SEPARATOR_;StartService;StopService;_SEPARATOR_;AutoStart;
+Icon=ks-dropbox
+MimeType=all/all;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Dropbox Tools
+X-KDE-Submenu[de]=Dropbox Werkzeuge
+X-KDE-Submenu[es]=Dropbox - Herramientas
+X-KDE-Submenu[fr]=Outils Dropbox
+X-KDE-Submenu[it]=Dropbox - Strumenti
+X-KDE-Submenu[ja]=Dropbox 道具
+X-KDE-Submenu[ko]=Dropbox 도구
+X-KDE-Submenu[pt]=Dropbox - Ferramentas
+X-KDE-Submenu[ru]=Инструменты Dropbox
+X-KDE-Submenu[uk]=Інструменти Dropbox
+X-KDE-Submenu[zh_CN]=Dropbox 工具
+X-KDE-Submenu[x-test]=xxDropbox Toolsxx
+
+[Desktop Action CopyToDropbox]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh copy %F
+Icon=ks-dropbox
+Name=Copy to Dropbox
+Name[de]=Kopiere auf Dropbox
+Name[es]=Copiar a Dropbox
+Name[fr]=Copier dans Dropbox
+Name[it]=Copia su Dropbox
+Name[ja]=Dropbox をコピーするために
+Name[ko]=복사한다 Dropbox
+Name[pt]=Copiar para Dropbox
+Name[ru]=Копировать в Dropbox
+Name[uk]=Копіювати до Dropbox
+Name[zh_CN]=复制到 Dropbox
+
+[Desktop Action MoveToDropbox]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh move %F
+Icon=ks-dropbox
+Name=Move to Dropbox
+Name[de]=Verschiebe auf Dropbox
+Name[es]=Mover a Dropbox
+Name[fr]=Déplacer dans Dropbox
+Name[it]=Muovei su Dropbox
+Name[ja]=Dropbox に引っ越すために
+Name[ko]=움직인다 Dropbox
+Name[pt]=Se Mudar para Dropbox
+Name[ru]=Переместить в Dropbox
+Name[uk]=Пересунути до Dropbox
+Name[zh_CN]=移动到 Dropbox
+
+[Desktop Action CopyToPublicAndGetURL]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh copy_pub %F
+Icon=ks-dropbox
+Name=Copy to Public Dropbox and get URL
+Name[de]=Zu öffentlicher Dropbox hinzufügen und abrufen der Adresse(URL)
+Name[es]=Copiar a Dropbox Público y obtener URL
+Name[fr]=Copier dans le dossier Public et obtenir l'URL
+Name[it]=Copia su Dropbox Pubblico ed ottieni URL
+Name[ja]=公的な Dropbox をコピーして、そして URL を得るために
+Name[ko]=Dropbox 대중을 복사하고, URL를 얻는다
+Name[pt]=Copiar o Público de Dropbox e obter URL
+Name[ru]=Копировать в Dropbox с общим доступом и получить ссылку
+Name[uk]=Копіювати до Dropbox із публічним доступом і отримати посиланяя
+Name[zh_CN]=复制到 Dropbox 并分享
+
+[Desktop Action MoveToPublicAndGetURL]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh move_pub %F
+Icon=ks-dropbox
+Name=Move to Public Dropbox and get URL
+Name[de]=Zu öffentlicher Dropbox verschieben und abrufen der Adresse(URL)
+Name[es]=Mover a Dropbox Público y obtener URL
+Name[fr]=Déplacer dans le dossier Public et obtenir l'URL
+Name[it]=Muove su Dropbox Pubblico ed ottieni URL
+Name[ja]=Dropbox Public に引っ越して、そして URL を得るために
+Name[ko]=Dropbox 대중을 움직이고, URL를 얻는다
+Name[pt]=Se Mudar para Público de Dropbox e obter URL
+Name[ru]=Переместить в Dropbox с общим доступом и получить ссылку
+Name[uk]=Пересунути до Dropbox із публічним доступом і отримати посиланяя
+Name[zh_CN]=移动到 Dropbox 并分享
+
+[Desktop Action GetPublicURL]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh get_pub_url %F
+Icon=ks-dropbox
+Name=Get public URL
+Name[de]=Abrufen der öffentlichen Adresse(URL)
+Name[es]=Obtener URL pública
+Name[fr]=Obtenir l'URL publique
+Name[it]=Ottieni URL pubblico
+Name[ja]=公開の URL を得るために
+Name[ko]=공공 URL를 얻는다
+Name[pt]=Obter URL pública
+Name[ru]=Получить ссылку с общим доступом
+Name[uk]=Отримати публічне посиланяя
+Name[zh_CN]=获得公开链接
+
+[Desktop Action InstallService]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh install_service %F
+Icon=ks-dropbox
+Name=Install Dropbox service
+Name[de]=Dropboxdienst installieren
+Name[es]=Instalar servicio Dropbox
+Name[fr]=Installer le service Dropbox
+Name[it]=Installa servizio Dropbox
+Name[ja]=サービス Dropbox をインストールするために
+Name[ko]=서비스 Dropbox 를 구성한다
+Name[pt]=Instalar serviço Dropbox
+Name[ru]=Установить сервис Dropbox
+Name[uk]=Встановити сервіс Dropbox
+Name[zh_CN]=安装 Dropbox 服务
+
+[Desktop Action UpdateService]
+Exec=which wget; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Update Dropbox service" --passivepopup="[Error] Please install wget command and try again."; exit 1; else /usr/share/applications/Dropbox_Tools-main.sh update_service %F;fi
+Icon=ks-dropbox
+Name=Update Dropbox service
+Name[de]=Dropbox aktualisieren
+Name[es]=Actualizar servicio Dropbox
+Name[fr]=Mettre à jour le service Dropbox
+Name[it]=Aggiorna servizio Dropbox
+Name[ja]=サービス Dropbox をアップグレードするために
+Name[ko]=서비스 Dropbox 를 개량한다
+Name[pt]=Atualizar serviço Dropbox
+Name[ru]=Обновить сервис Dropbox
+Name[uk]=Оновити сервіс Dropbox
+Name[zh_CN]=更新 Dropbox 服务
+
+[Desktop Action StartService]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh start_service %F
+Icon=ks-dropbox-on
+Name=Start Dropbox service
+Name[de]=Dropbox starten
+Name[es]=Iniciar servicio Dropbox
+Name[fr]=Lancer le service Dropbox
+Name[it]=Inizia servizio Dropbox
+Name[ja]=サービス Dropbox を始めるために
+Name[ko]=서비스 Dropbox 를 시작한다
+Name[pt]=Começar serviço Dropbox
+Name[ru]=Запустить сервис Dropbox
+Name[uk]=Запустити сервіс Dropbox
+Name[zh_CN]=启动 Dropbox 服务
+
+[Desktop Action StopService]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh stop_service %F
+Icon=ks-dropbox-off
+Name=Stop Dropbox service
+Name[de]=Dropboxdienst annhalten
+Name[es]=Detener servicio Dropbox
+Name[fr]=Arrêter le service Dropbox
+Name[it]=Ferma servizio Dropbox
+Name[ja]=サービス Dropbox を止めるために
+Name[ko]=서비스 Dropbox 를 멈춘다
+Name[pt]=Parar serviço Dropbox
+Name[ru]=Остановить сервис Dropbox
+Name[uk]=Зупинити сервіс Dropbox
+Name[zh_CN]=停止 Dropbox 服务
+
+[Desktop Action AutoStart]
+Exec=/usr/share/applications/Dropbox_Tools-main.sh autostart_service %F
+Icon=ks-dropbox
+Name=Enable autostart Dropbox service
+Name[de]=Dropbox beim Systemstart starten
+Name[es]=Habilitar autoarranque del servicio Dropbox
+Name[fr]=Lancer le service Dropbox au démarrage
+Name[it]=Abilita auto avvio del servizio Dropbox
+Name[ja]=上へサービス Dropbox の始めを可能にするために
+Name[ko]=서비스 Dropbox 의 안에서 올라가고 있는 출발을 가능하게 한다
+Name[pt]=Habilitar começos para cima do serviço Dropbox
+Name[ru]=Автозапуск сервиса Dropbox
+Name[uk]=Автозапуск сервіса Dropbox
+Name[zh_CN]=自动启动 Dropbox 服务

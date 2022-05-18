@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=System-Tools;
+Exec=kdesu -i ks-error --noignorebutton -d /usr/share/applications/System_Tools-system-monitor.sh
+Icon=ks-error
+Name=System Monitor
+Name[de]=Systemüberwachung
+Name[es]=Monitor del Sistema
+Name[fr]=Moniteur Système
+Name[it]=Monitor di Sistema
+Name[ja]=システムのモニター
+Name[ko]=체내의 모니터
+Name[pt]=Monitor do Sistema
+Name[ru]=Системный монитор
+Name[uk]=Системний монітор
+Name[zh_CN]=系统监视器
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

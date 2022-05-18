@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=YouTube-Tools;
+Exec=which lynx; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Video List Code Collector" --passivepopup="[Error] Please install lynx command and try again."; exit 1; else /usr/share/applications/YouTube_Tools-video-code-collector.sh;fi
+Icon=ks-youtube-video-code-collector
+Name=Video List Code Collector
+Name[de]=Video liste holen
+Name[es]=Colector de Códigos de Lista de Videos
+Name[fr]=Collecter des Listes de Codes Vidéo
+Name[it]=Collezione di codici video
+Name[ja]=ビデオのリストのコードの徴収人
+Name[ko]=비디오의 목록의 코드의 수집가
+Name[pt]=Coletor de Códigos de Lista de Vídeos
+Name[ru]=Сборщик видео по списку кодов
+Name[uk]=Збиральник відео за списком кодів
+Name[zh_CN]=视频列表编号收集
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

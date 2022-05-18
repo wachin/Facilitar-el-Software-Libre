@@ -1,0 +1,24 @@
+[Desktop Entry]
+Actions=NameWhitespaceReplace;
+Icon=ks-whitespace-replace
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+X-KDE-StartupNotify=false
+X-KDE-Submenu=KDE-Services
+X-KDE-Submenu[x-test]=xxKDE-Servicesxx
+
+[Desktop Action NameWhitespaceReplace]
+Exec=/usr/share/applications/Dolphin_Tools-name-whitespace-replace.sh
+Icon=ks-whitespace-replace
+Name=[File|Dir]name Whitespace Replace
+Name[de]=Leerzeichen erstezen von [Datei|Verzeichnis]
+Name[es]=Reemplazar Espacio en Nombre de [Fichero|Directorio]
+Name[fr]=Remplacer les Espace dans le Nom du [Fichier|Dossier]
+Name[it]=Rimpiazza Spazio nel Nome dei [File|Cartella]
+Name[ja]=からスペースを交替させなさい [ファイル|∥ディレクトリ] ∥
+Name[ko]=공간을 바꾼다 [파일|디렉토리]
+Name[pt]=Substituir Espaço em Nome de [Arquivo|Diretório]
+Name[ru]=Заменить пробелы в имени [Файла|Папки]
+Name[uk]=Замінити пробіли у назві [Файлу|Теки]
+Name[zh_CN]=[文件|目录]名去除空格
+Name[x-test]=xx[File|Dir]name Whitespace Replacexx

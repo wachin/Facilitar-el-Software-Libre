@@ -1,0 +1,25 @@
+[Desktop Entry]
+Actions=SendByEmail;
+Icon=ks-secure-mail
+MimeType=all/allfiles;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-StartupNotify=false
+X-KDE-Submenu=KDE-Services
+X-KDE-Submenu[x-test]=xxKDE-Servicesxx
+
+[Desktop Action SendByEmail]
+Exec=which xdg-email; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Send by Email" --passivepopup="[Error] Please install xdg-email command and try again."; exit 1; else xdg-email --utf8 $(for file in %F;do echo "--attach $file";done);fi
+Icon=ks-secure-mail
+Name=Send by Email
+Name[de]=Mit E-mail versenden
+Name[es]=Enviar por Correo Electrónico
+Name[fr]=Envoyer par Email
+Name[it]=Invia E-mail
+Name[ja]=電子メールで送信しなさい
+Name[ko]=전자 메일에 의해 보내라
+Name[pt]=Envie através de E-mail
+Name[ru]=Пошлите на Электронную почту
+Name[uk]=Пошліть Email
+Name[zh_CN]=使用邮件发送
+Name[x-test]=xxSend by Emailxx

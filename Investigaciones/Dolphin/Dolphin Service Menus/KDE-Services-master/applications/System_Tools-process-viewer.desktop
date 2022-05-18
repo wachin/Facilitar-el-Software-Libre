@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=System-Tools;
+Exec=which htop; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Process Viewer" --passivepopup="[Error] Please install htop command and try again."; exit 1; else /usr/share/applications/System_Tools-process-viewer.sh;fi
+Icon=ks-system-process
+Name=Process Viewer
+Name[de]=Prozesse anzeigen
+Name[es]=Visor de Procesos
+Name[fr]=Afficher les Processus
+Name[it]=Gestore Processi
+Name[ja]=プロセスのファインダ
+Name[ko]=과정의 파인더
+Name[pt]=Descobridor de Processos
+Name[ru]=Обзор процессов
+Name[uk]=Перегляд процесів
+Name[zh_CN]=进程查看器
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

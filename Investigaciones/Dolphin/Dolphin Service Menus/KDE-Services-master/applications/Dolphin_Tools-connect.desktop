@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Dolphin-Tools;
+Exec=/usr/share/applications/Dolphin_Tools-connect.sh
+Icon=ks-folder-remote
+Name=Connect to
+Name[de]=Verbinde mit
+Name[es]=Conectar a
+Name[fr]=Se Connecter à
+Name[it]=Connetti a
+Name[ja]=から連結してください
+Name[ko]=이어진다
+Name[pt]=Conecte
+Name[ru]=Подключиться к
+Name[uk]=Підключитися до
+Name[zh_CN]=连接到
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

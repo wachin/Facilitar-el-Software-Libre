@@ -1,0 +1,25 @@
+[Desktop Entry]
+Actions=MultiplexSubtitle;
+Icon=ks-multiplexing-subs
+MimeType=video/mpeg;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-StartupNotify=false
+X-KDE-Submenu=KDE-Services
+X-KDE-Submenu[x-test]=xxKDE-Servicesxx
+
+[Desktop Action MultiplexSubtitle]
+Exec=which ffprobe recode spumux; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Multiplex Subtitle" --passivepopup="[Error] Please install ffprobe, recode and spumux command and try again."; exit 1; else /usr/share/applications/Multiplex_Subtitle.sh %F;fi
+Icon=ks-multiplexing-subs
+Name=Multiplex Subtitle
+Name[de]=Mehrsprachige Untertitel
+Name[es]=Multiplexar Subtítulo
+Name[fr]=Sous-titre Multiplex
+Name[it]=Multiplex Sottotitoli
+Name[ja]=音声多重放送字幕
+Name[ko]=다양한 부제
+Name[pt]=Subtítulo Multíplice
+Name[ru]=Мультиплексор субтитров
+Name[uk]=Мультиплексор субтитрів
+Name[zh_CN]=多重字幕
+Name[x-test]=xxMultiplex Subtitlexx

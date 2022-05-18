@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=SSH-Tools;
+Exec=/usr/share/applications/SSH_Tools-connect.sh
+Icon=ks-connect-to
+Name=Connect to Remote Server
+Name[de]=Mit Remote Server verbinden
+Name[es]=Conectar a Servidor Remoto
+Name[fr]=Se Connecter à un Serveur Distant
+Name[it]=Connetti a Server Remoto
+Name[ja]=遠い使用人をつなぐために
+Name[ko]=먼 하인을 접속한다
+Name[pt]=Conectar o Servidor Remoto
+Name[ru]=Подключиться к удалённому серверу
+Name[uk]=Підключитися до віддаленого серверу
+Name[zh_CN]=连接远程服务器
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

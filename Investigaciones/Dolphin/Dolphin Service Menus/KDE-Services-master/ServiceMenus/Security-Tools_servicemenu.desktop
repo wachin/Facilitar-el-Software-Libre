@@ -1,0 +1,84 @@
+[Desktop Entry]
+Actions=sendto-mailx;_SEPARATOR_;Encrypt;Decrypt;_SEPARATOR_;shredder;
+Icon=ks-encrypt
+MimeType=all/allfiles;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Security Tools
+X-KDE-Submenu[de]=Sicherheitswerkzeuge
+X-KDE-Submenu[es]=Seguridad - Herramientas
+X-KDE-Submenu[fr]=Outils Sécurité
+X-KDE-Submenu[it]=Sicurezza - Strumenti
+X-KDE-Submenu[ja]=保全 道具
+X-KDE-Submenu[ko]=안전 도구
+X-KDE-Submenu[pt]=Segurança - Ferramentas
+X-KDE-Submenu[ru]=Инструменты безопасности
+X-KDE-Submenu[uk]=Інструменти безпеки
+X-KDE-Submenu[zh_CN]=安全工具
+X-KDE-Submenu[x-test]=xxSecurity Toolsxx
+
+[Desktop Action Decrypt]
+Exec=which gpg; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Decrypt" --passivepopup="[Error] Please install gpg command and try again."; exit 1; else gpg --yes --passphrase "$(kdialog --title="File Decryption" --password="Enter passphrase for decrypt")" %f && if [ "$?" = "0" ]; then kdialog --icon=ks-decrypt --title="File Decryption" --passivepopup="[Finished]";fi;fi
+Icon=ks-decrypt
+Name=Decrypt
+Name[de]=Entschlüsseln
+Name[es]=Desencriptar
+Name[fr]=Décrypter
+Name[it]=Decriptare
+Name[ja]=解読しなさい
+Name[ko]=해독해라
+Name[pt]=Decifre
+Name[ru]=Расшифровать
+Name[uk]=Розшифрувати
+Name[zh_CN]=解密
+Name[x-test]=xxDecryptxx
+
+[Desktop Action Encrypt]
+Exec=which gpg; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Encrypt" --passivepopup="[Error] Please install gpg command and try again."; exit 1; else gpg --yes -c --passphrase "$(kdialog --title="File Encryption" --password="Enter passphrase for encrypt")" %f && if [ "$?" = "0" ]; then kdialog --icon=ks-encrypt --title="File Encryption" --passivepopup="[Finished]";fi;fi
+Icon=ks-encrypt
+Name=Encrypt
+Name[de]=Verschlüsseln
+Name[es]=Encriptar
+Name[fr]=Crypter
+Name[it]=Cripta
+Name[ja]=暗号化しなさい
+Name[ko]=암호화해라
+Name[pt]=Codifique
+Name[ru]=Зашифровать
+Name[uk]=Зашифрувати
+Name[zh_CN]=加密
+Name[x-test]=xxEncryptxx
+
+[Desktop Action sendto-mailx]
+Exec=which zip mailx; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Secure Send to Mailx" --passivepopup="[Error] Please install zip and mailx command and try again."; exit 1; else zip -9reP $(kdialog --icon=ks-secure-mail --title="Secure Send to Mailx" --password="Enter password for encrypt:") %f.zip %f; mailx -s "$(kdialog --icon=ks-secure-mail --title="Secure Send to Mailx" --inputbox="Message Subject:")" -a $(kdialog --icon=ks-secure-mail --title="Secure Send to Mailx" --textinputbox="Message Body:" > /tmp/mailbody) /tmp/mailbody -a %f.zip $(kdialog --icon=ks-secure-mail --title="Secure Send to Mailx" --inputbox="Mail To:\t(For send to multiples mailbox enter comma separated list of address)") <.; rm -f %f.zip /tmp/mailbody; kdialog --icon=ks-secure-mail --title="Secure Send to Mailx" --passivepopup="[Finished]";fi
+Icon=ks-secure-mail
+Name=Secure Send to Mailx
+Name[de]=Sicher mit Mailx versenden
+Name[es]=Envío Seguro a Mailx
+Name[fr]=Envoi Sécurisé à Mailx
+Name[it]=Invia Email Sicura a Mailx
+Name[ja]=Mailx への保全性が高い送信
+Name[ko]=Mailx 에서 안전한 송신
+Name[pt]=Seguro Envie a Mailx
+Name[ru]=Безопасно отправить через Mailx
+Name[uk]=Безпечно надіслати через Mailx
+Name[zh_CN]=通过邮件安全发送
+Name[x-test]=xxSecure Send to Mailxxx
+
+[Desktop Action shredder]
+Exec=which shred; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Paranoid Shredder" --passivepopup="[Error] Please install shred command and try again."; exit 1; else COUNT="0"; COUNTFILES=$(echo %F|wc -w); COUNTFILES=$((++COUNTFILES)); DBUSREF=$(kdialog --icon=ks-shredder --title="Paranoid Shredder" --progressbar "\t\t\t\t\t\t\t" $COUNTFILES); for file in %F;do COUNT=$((++COUNT)); qdbus $DBUSREF setLabelText "Shredding:  ${file##*/}  [$COUNT/$((COUNTFILES-1))]"; qdbus $DBUSREF Set "" value $COUNT; cd ${file%/*}; shred -f -n 5 --random-source=/dev/urandom -u -z "$file"; kdialog --icon=ks-shredder --title="Paranoid Shredder" --passivepopup="[Finished]    ${file##*/}";done; qdbus $DBUSREF Set "" value $COUNTFILES; sleep 1; qdbus $DBUSREF close;fi
+Icon=ks-shredder
+Name=Paranoid Shredder
+Name[de]=Shredder für Paranoide
+Name[es]=Trituradora Paranoica
+Name[fr]=Déchiqueteuse Paranoïaque
+Name[it]=Paranoid Shredder
+Name[ja]=パラノイドのシュレッダー
+Name[ko]=편집증 서류 촌단기
+Name[pt]=Desfibrador Paranóico
+Name[ru]=Надёжное удаление
+Name[uk]=Надійне видалення
+Name[zh_CN]=文件粉碎
+Name[x-test]=xxParanoid Shredderxx

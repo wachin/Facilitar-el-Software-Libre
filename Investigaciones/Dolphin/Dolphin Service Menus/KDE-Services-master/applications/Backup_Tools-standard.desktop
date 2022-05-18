@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Backup-Tools;
+Exec=/usr/share/applications/Backup_Tools-standard.sh
+Icon=ks-database
+Name=Standards
+Name[de]=Standard
+Name[es]=Estándares
+Name[fr]=Standards
+Name[it]=Standard
+Name[ja]=標準
+Name[ko]=표준
+Name[pt]=Padrões
+Name[ru]=Стандартные
+Name[uk]=Стандартні
+Name[zh_CN]=标准
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

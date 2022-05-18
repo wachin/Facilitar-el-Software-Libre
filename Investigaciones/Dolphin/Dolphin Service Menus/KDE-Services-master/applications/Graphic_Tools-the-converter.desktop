@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Graphic-Tools;
+Exec=which convert; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Image Converter" --passivepopup="[Error] Please install convert command and try again."; exit 1; else /usr/share/applications/The_Converter.sh;fi
+Icon=ks-image
+Name=The Converter
+Name[de]=Der Konverter
+Name[es]=El Conversor
+Name[fr]=Le Convertisseur
+Name[it]=Convertitore
+Name[ja]=変換器
+Name[ko]=변환기
+Name[pt]=O Convertedor
+Name[ru]=Конвертер
+Name[uk]=Конвертер
+Name[zh_CN]=转换器
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

@@ -1,0 +1,25 @@
+[Desktop Entry]
+Actions=ShowFileDirStatus;
+Icon=ks-info
+MimeType=all/allfiles;inode/directory;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-StartupNotify=false
+X-KDE-Submenu=KDE-Services
+X-KDE-Submenu[x-test]=xxKDE-Servicesxx
+
+[Desktop Action ShowFileDirStatus]
+Exec=/usr/share/applications/Show_file-dir_status.sh
+Icon=ks-info
+Name=Show [File|Directory] Status
+Name[de]=[Datei|Verzeichnis] Status zeigen
+Name[es]=Mostrar Estado del [Fichero|Directorio]
+Name[fr]=Afficher le Statut du [Fichier|Dossier]
+Name[it]=Mostra Stato [File|Cartella]
+Name[ja]=ショー［ファイル|∥ディレクトリ］∥ステータス∥
+Name[ko]=상태를 편애한다 [파일|디렉토리]
+Name[pt]=Mostrar Estado do [Arquivo|Diretório]
+Name[ru]=Показать статус [Файла|Папки]
+Name[uk]=Показати статус [Файлу|Теки]
+Name[zh_CN]=查看[文件|目录]状态
+Name[x-test]=xxShow [File|Directory] Statusxx

@@ -1,0 +1,67 @@
+[Desktop Entry]
+Actions=ConnectSentry;HTTP-Server;ListeningSockets;
+Icon=ks-connect-to
+Type=Service
+X-KDE-Priority=TopLevel
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Network Tools
+X-KDE-Submenu[de]=Netzwerk Werkzeuge
+X-KDE-Submenu[es]=Internet - Herramientas
+X-KDE-Submenu[fr]=Outils Réseau
+X-KDE-Submenu[it]=Rete - Strumenti
+X-KDE-Submenu[ja]=ネットワーク道具
+X-KDE-Submenu[ko]=네트워크 도구
+X-KDE-Submenu[pt]=Rede - Ferramentas
+X-KDE-Submenu[ru]=Инструменты Сети
+X-KDE-Submenu[uk]=Інструменти Мережі
+X-KDE-Submenu[zh_CN]=网络工具
+X-KDE-Submenu[x-test]=xxNetwork Toolsxx
+
+[Desktop Action ConnectSentry]
+Exec=which ss; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Connect Sentry" --passivepopup="[Error] Please install ss command and try again."; exit 1; else /usr/share/applications/Network_Tools-connect-sentry.sh %F;fi
+Icon=ks-sentry-on
+Name=Connect Sentry
+Name[de]=Verbindung überwachen
+Name[es]=Centinela de Conexiones
+Name[fr]=Sentinelle de Connexions
+Name[it]=Sentinella di Connessione
+Name[ja]=接続の衛兵
+Name[ko]=접속의 위병
+Name[pt]=Sentinela de Conexões
+Name[ru]=Сторож портов
+Name[uk]=Вартовий портів
+Name[zh_CN]=端口连接监控器
+Name[x-test]=xxConnect Sentryxx
+
+[Desktop Action HTTP-Server]
+Exec=which lsof python; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="HTTP Server" --passivepopup="[Error] Please install lsof and python command and try again."; exit 1; else kdesu -i ks-folder-public-web -d -c "/usr/share/applications/HTTP_Server.sh" %F;fi
+Icon=ks-folder-public-web
+Name=HTTP Server
+Name[de]=HTTP Server
+Name[es]=Servidor HTTP
+Name[fr]=Serveur HTTP
+Name[it]=Servizio HTTP
+Name[ja]=HTTP サーバー
+Name[ko]=HTTP 서버
+Name[pt]=Servidor de HTTP
+Name[ru]=HTTP Сервер
+Name[uk]=HTTP Сервер
+Name[zh_CN]=HTTP 服务
+Name[x-test]=xxHTTP Serverxx
+
+[Desktop Action ListeningSockets]
+Exec=which ss; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Listening Sockets" --passivepopup="[Error] Please install ss command and try again."; exit 1; else kdesu -i ks-socket -d /usr/share/applications/Network_Tools-listening-sockets.sh %F;fi
+Icon=ks-socket
+Name=Listening Sockets
+Name[de]=Listening Sockets
+Name[es]=Puertos Escuchando
+Name[fr]=Ports à l'Écoute
+Name[it]=Porte in Ascolto
+Name[ja]=港町が聞く
+Name[ko]=듣고 있는 항구
+Name[pt]=Portos Escutando
+Name[ru]=Прослушиваемые сокеты
+Name[uk]=Сокети, що прослуховуються
+Name[zh_CN]=监听 Socket 连接
+Name[x-test]=xxListening Socketsxx

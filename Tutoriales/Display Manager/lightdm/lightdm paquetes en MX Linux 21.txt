@@ -1,0 +1,14 @@
+
+
+
+sudo apt install lightdm-gtk-greeter-settings lightdm-gtk-greeter-mx21 lightdm-gtk-greeter lightdm-modified-init lightdm 
+
+
+
+
+ lightdm-gtk-greeter-settings
+ lightdm-gtk-greeter-mx21
+ lightdm-gtk-greeter 
+ lightdm-modified-init
+ lightdm 
+

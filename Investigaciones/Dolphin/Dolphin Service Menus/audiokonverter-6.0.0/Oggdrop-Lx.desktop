@@ -1,0 +1,22 @@
+[Desktop Entry]
+Comment=
+Comment[de]=
+Comment[fr]=
+Encoding=UTF-8
+Exec=/usr/bin/oggdrop-lx %F
+GenericName=
+GenericName[de]=
+GenericName[fr]=
+Icon=
+MimeType=
+Name=Oggdrop-Lx
+Name[de]=Oggdrop-Lx
+Name[fr]=Oggdrop-Lx
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DCOP-ServiceType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

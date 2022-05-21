@@ -1,0 +1,36 @@
+This is audiokonverter, a small utility to easily
+convert from MP3, AMR, OGG, AAC, M4A, FLAC, WMA, RealAudio, Musepack,
+Wavpack, WAV and movies to MP3, OGG, M4A, WAV and FLAC.
+
+For KDE3/TDE systems use installKDE3.sh!
+For KDE4 systems use installKDE4.sh!
+For KDE5 systems use installKDE5.sh!
+On some systems you may need to use "sudo ./installKDEx.sh".
+In case of double entries also remove outdated files!
+If you like, copy Oggdrop-Lx.desktop to your Desktop and drop files on it.
+
+How does it work?
+There are shell scripts that will be copied to $KDEDIR/bin or $HOME/bin.
+audioconvert.desktop is the KDE component that will be copied to the
+right place to get an extended context menu on many files.
+You can modify all files easily with any text editor.
+
+YOU NEED to make everything work:
+mplayer, ffmpeg, lame, oggenc, oggdec, flac, faac, faad, mppdec, wvunpack
+
+OPTIONAL are:
+id3lib, vorbis-tools, metaflac, apetag, id3v2
+
+NOTES: The following formats will not be officially(!) supported due to
+license issues: shorten, optimfrog, monkey.
+Type 'audioconvert -h' for more info.
+You can add options for lame in line 13 of audioconvert: $LAMEQUAL
+
+Get Musepack from http://www.musepack.net
+Get wavpack from http://www.wavpack.com
+Get apetag from http://www.muth.org/Robert/Apetag/
+Get id3lib from http://id3lib.sourceforge.net (id3lib-3.8.3-dev on debian, id3lib-examples on SuSE)
+Get vorbis-tools from http://www.xiph.org/downloads/
+Get metaflac from http://flac.sourceforge.net/download.html
+
+Jochen Puchalla: mail -at- puchalla-online.de

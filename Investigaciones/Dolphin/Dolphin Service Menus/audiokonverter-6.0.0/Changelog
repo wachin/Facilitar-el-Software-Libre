@@ -1,0 +1,179 @@
+
+version 6.0.0:
+added support for KDE5, needs more testing
+
+version 5.9.5:
+fixed paths for KDE4
+
+version 5.9.4:
+fix for ogg decoding
+
+version 5.9.3:
+fix for extract audio as file for MP3
+experimental fix for avconv in ubuntu
+
+version 5.9.2:
+uses ffmpeg only for video to MP3
+
+version 5.9.1:
+small fix for audioconvert for KDE4
+
+version 5.9:
+Added support for AMR audio files
+
+version 5.8.2:
+Many fixes for KDE4
+
+version 5.8.1:
+fixed --suseinstall
+
+version 5.8:
+adapted to KDE4
+added variable LAMEQUAL in audioconvert
+
+version 5.7.1:
+now usable with dolphin, as well
+
+version 5.7:
+length of audio extraction from movie fixed, bugreport by Tobi
+added copying of audio from movie to file
+added showing properties of audio from movie
+
+version 5.6.1:
+path name fixes by Antonio Cardoso Martins
+
+version 5.6:
+Better input file type guessing, file names with double spaces are now possible
+MP3 mime type fix for openSuSE
+inofficial program mode for audioconvert
+
+version 5.5.1:
+MP3 metadata: switched from id3tag (V1 and V2) to id3v2 (V2 only) as suggested by Robert Turnbull
+
+version 5.5a:
+FLAC metadata: in case YEAR is empty, read DATE as YEAR
+
+version 5.5:
+added runtime checks for programs
+bugfixes for user-only install
+
+version 5.4.5a:
+corrected mimetype for real media data and m4a
+
+version 5.4.5:
+improved file name handling, thanks to Dimitrios Lampridis
+added FLV audio extraction, needs MPlayer 1.0pre8!
+added spanish translation by Carlos Crist�bal Sabroe Yde
+
+version 5.4.4:
+more robust conffile error handling, thanks to Dario Banno
+
+version 5.4.3a:
+improved localization
+
+version 5.4.3:
+Now spaces are allowed in output directories, thanks to Ra�l S�nchez Siles for sending the patch
+
+version 5.4.2:
+Mono MP3 creation has been reenabled
+
+version 5.4.1:
+fixed a bug in directory choosing
+
+version 5.4:
+added commandline support to import optimfrog, shorten and monkey
+added error messages for useless conversions
+added support for apetags
+added oggdrop-lx similar to a win prog
+added -dontask mode which uses values from latest encoding or default values
+one must use wavpack 4.31 or higher
+software URLs have been mentioned in README
+
+version 5.3:
+removed lossy to lossless format conversions, they are useless
+added import from Musepack and Wavpack
+for savvy users commandline offers more possibilities than service menu
+added hidden limited support for monkey, optimfrog and shorten
+
+version 5.2.1:
+several fixes for directory conversion
+
+version 5.2:
+installer uses install instead of cp now
+directory structure will be preserved when converting directories
+added further movie mimetypes
+
+version 5.1:
+added conversion to M4A for iPod with metadata preservation
+internal code changes
+
+version 5.0:
+removed local install, does not always work
+added audio extraction from movies to any format
+
+version 4.2:
+added WMA and Real Audio as input formats
+added program checks during install
+added recognition of m4a extension for AAC
+
+version 4.1:
+added copying of genres for MP3 and OGG metadata
+added copying of metadata from OGG/MP3 to FLAC and back
+added creation of replay gain tag for FLAC encoding
+
+version 4.0:
+big rewrite, now supports converting several formats to one format in one go
+service menu has been cleaned up thanks to rewrite
+renamed to audiokonverter
+
+version 3.3:
+ID3tags and vorbis comments are being copied from/to MP3/OGG
+Latest encoding quality values are now new default values
+
+version 3.2.1:
+Missing directory creation in case of WAV->any has been added
+
+version 3.2:
+When converting a directory, the directory is created at the destination as well
+Added VBR encoding for MP3 as requested
+Fixed a serious bug in install.sh, thanks to Stephan Reuter for reporting
+more verbose install.sh
+
+version 3.1:
+added missing conversions from and to FLAC
+
+version 3.0:
+temporary files are now in /tmp
+re-uses latest encoding and decoding directories
+added support for AAC, faac and faad needed for this
+
+version 2.3:
+ID3 tags are being copied for MP3 to MP3 reencoding
+One can choose a destination directory for MP3 and OGG reencoding
+fixed oggtomp3 directory conversion bug
+
+version 2.2:
+added directory recursion, thanks to Toots
+added mp3/ogg to mp3/ogg
+now uses lame for mp3towav
+added --removeold option in install.sh
+smarter install.sh with kdialog and kdesu
+
+version 2.1:
+added support for FLAC
+
+version 2.0.1:
+added user-only install.
+
+version 2.0:
+multiple files are handled much better now, thanks to Luke Plant
+switched from xterm to konsole
+
+version 1.2:
+kdialog is now used for user defined encoding.
+Czech and slovak translations provided by Jozef Riha.
+several translations added
+
+version 1.1.1:
+Actions are now in a submenu called "MP3 / OGG".
+Spanish translation provided by Arturo Arnalich

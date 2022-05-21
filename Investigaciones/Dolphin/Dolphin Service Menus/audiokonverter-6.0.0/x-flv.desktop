@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=Flash Video
+Comment[es]=Video Flash
+Encoding=UTF-8
+Icon=video
+MimeType=video/x-flv
+Patterns=*.flv;*.FLV;
+Type=MimeType

@@ -1,0 +1,46 @@
+[Desktop Entry]
+X-TDE-ServiceTypes=audio/x-wav,audio/aac,audio/x-flac,audio/x-mp3,audio/mpeg,audio/mp3,audio/vorbis,inode/directory,audio/x-ms-wma,audio/vnd.rn-realaudio,application/vnd.rn-realaudio,audio/mp4,audio/x-musepack,audio/x-wavpack,audio/x-m4a,audio/x-real-audio,audio/amr,audio/x-amr
+Actions=mp3;ogg;ipod;flac;wav
+X-TDE-Submenu=convert to
+X-TDE-Submenu[de]=umwandeln in
+X-TDE-Submenu[nl]=zet om in
+X-TDE-Submenu[fr]=Convertir au format...
+X-TDE-Submenu[it]=convertire a
+X-TDE-Submenu[es]=Convertir al formato...
+Encoding=UTF8
+
+
+[Desktop Action mp3]
+Name=MP3
+Icon=sound
+Exec=konsole -e audioconvert -t m %F
+
+[Desktop Action ogg]
+Name=OGG
+Icon=sound
+Exec=konsole -e audioconvert -t o %F
+
+[Desktop Action flac]
+Name=FLAC
+Icon=sound
+Exec=konsole -e audioconvert -t f %F
+
+#[Desktop Action aac]
+#Name=AAC
+#Icon=sound
+#Exec=konsole -e audioconvert -t a %F
+
+[Desktop Action ipod]
+Name=M4A for iPod (AAC)
+Name[de]=M4A für iPod (AAC)
+Name[nl]=M4A voor iPod (AAC)
+Name[fr]=M4A pour iPod (AAC)
+Name[it]=M4A per iPod (AAC)
+Name[es]=M4A para iPod (AAC)
+Icon=sound
+Exec=konsole -e audioconvert -t i %F
+
+[Desktop Action wav]
+Name=WAV
+Icon=sound
+Exec=konsole -e anytowav %F

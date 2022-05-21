@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Adaptive Multi-Rate Audio
+Comment[de]=Adaptive Multi-Rate Audio
+Hidden=false
+Icon=audio-amr
+MimeType=audio/amr
+Patterns=*.amr;*.AMR
+Type=MimeType
+X-KDE-AutoEmbed=false

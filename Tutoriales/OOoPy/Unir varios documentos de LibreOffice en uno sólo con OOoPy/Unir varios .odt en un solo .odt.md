@@ -1,0 +1,131 @@
+
+
+
+How to merge odt documents from the command line?
+
+
+
+wget https://sourceforge.net/projects/ooopy/files/ooopy/2.0/OOoPy-2.0.tar.gz
+tar -xf OOoPy-2.0.tar.gz
+cd OOoPy-2.0/
+sudo python3 ./setup.py install
+
+
+sudo python3 ./setup.py remove
+
+
+
+
+ooo_as_text --output-file OUTPUTFILE INPUTFILE, INPUTFILE
+
+
+ooo_cat --output-file outputfile.odt "Alma misionera (D).odt" "Dios esta Aquí.odt" "Espíritu de Dios llena mi vida.odt" "Poema de salvación - Pablo Olivares.odt"
+
+o Resumido:
+
+ooo_cat -o unidos.odt *.odt
+
+
+
+Cómo eliminar los saltos de lineas en todos los documentos
+Ahora bien en mi documento yo tengo títulos en cada uno de ellos y al abrir el documento estarán separados por saltos de líneas, para eliminarlos
+
+    Selecciona todo el texto (con el atajo de teclado Ctrl+E o desde el menú Editar > Seleccionar todo)
+    Selecciona desde el menú Formato > Párrafo > pestaña Flujo de texto.
+    Desmarca la opción Insertar de la sección Saltos y haz clic en Aceptar.
+
+Todos los saltos de página o saltos de columna serán eliminados y sustituidos por un salto de párrafo.
+
+
+
+
+CONSULTAS
+
+LibreOffice and Apache OpenOffice at the command line, Por: Bruce Byfield (https://brucebyfield.com/)
+https://www.linux-magazine.com/index.php/layout/set/print/layout/set/print/Issues/2013/157/Libre-OpenOffice-Scripts/(tagID)/32
+
+Eliminar todos los saltos de página o columna en OpenOffice Writer
+https://blog.open-office.es/writer/eliminar-todos-los-saltos-de-pagina-o-columna-en-openoffice-writer
+
+How to merge odt documents from the command line?
+https://askubuntu.com/questions/482277/how-to-merge-odt-documents-from-the-command-line
+https://askubuntu.com/a/482926
+
+ooo_cat --help
+usage: ooo_cat [-h] [-o OUTPUT_FILE] file [file ...]
+
+positional arguments:
+  file                  Input file (mandatory)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        Output file (defaults to stdout)
+
+
+
+
+
+sudo python3 ./setup.py install
+running install
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/ooopy
+copying ooopy/Transforms.py -> build/lib/ooopy
+copying ooopy/autosuper.py -> build/lib/ooopy
+copying ooopy/Version.py -> build/lib/ooopy
+copying ooopy/Transformer.py -> build/lib/ooopy
+copying ooopy/__init__.py -> build/lib/ooopy
+copying ooopy/OOoPy.py -> build/lib/ooopy
+running build_scripts
+creating build/scripts-3.9
+copying and adjusting bin/ooo_as_text -> build/scripts-3.9
+copying and adjusting bin/ooo_cat -> build/scripts-3.9
+copying and adjusting bin/ooo_fieldreplace -> build/scripts-3.9
+copying bin/ooo_grep -> build/scripts-3.9
+copying and adjusting bin/ooo_mailmerge -> build/scripts-3.9
+changing mode of build/scripts-3.9/ooo_as_text from 644 to 755
+changing mode of build/scripts-3.9/ooo_cat from 644 to 755
+changing mode of build/scripts-3.9/ooo_fieldreplace from 644 to 755
+changing mode of build/scripts-3.9/ooo_mailmerge from 644 to 755
+running install_lib
+creating /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/Transforms.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/autosuper.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/Version.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/Transformer.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/__init__.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+copying build/lib/ooopy/OOoPy.py -> /usr/local/lib/python3.9/dist-packages/ooopy
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/Transforms.py to Transforms.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/autosuper.py to autosuper.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/Version.py to Version.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/Transformer.py to Transformer.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/__init__.py to __init__.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/ooopy/OOoPy.py to OOoPy.cpython-39.pyc
+running install_scripts
+copying build/scripts-3.9/ooo_as_text -> /usr/local/bin
+copying build/scripts-3.9/ooo_mailmerge -> /usr/local/bin
+copying build/scripts-3.9/ooo_fieldreplace -> /usr/local/bin
+copying build/scripts-3.9/ooo_cat -> /usr/local/bin
+copying build/scripts-3.9/ooo_grep -> /usr/local/bin
+changing mode of /usr/local/bin/ooo_as_text to 755
+changing mode of /usr/local/bin/ooo_mailmerge to 755
+changing mode of /usr/local/bin/ooo_fieldreplace to 755
+changing mode of /usr/local/bin/ooo_cat to 755
+changing mode of /usr/local/bin/ooo_grep to 755
+running install_data
+creating /usr/local/share/ooopy
+copying run_doctest.py -> /usr/local/share/ooopy
+copying testfiles/carta.odt -> /usr/local/share/ooopy
+copying testfiles/carta.stw -> /usr/local/share/ooopy
+copying testfiles/rechng.odt -> /usr/local/share/ooopy
+copying testfiles/rechng.sxw -> /usr/local/share/ooopy
+copying testfiles/testenum.odt -> /usr/local/share/ooopy
+copying testfiles/test.odt -> /usr/local/share/ooopy
+copying testfiles/test.sxw -> /usr/local/share/ooopy
+copying testfiles/x.csv -> /usr/local/share/ooopy
+running install_egg_info
+Writing /usr/local/lib/python3.9/dist-packages/OOoPy-2.0.egg-info
+

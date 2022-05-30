@@ -13,7 +13,17 @@ Descargar paquetes desde:
 
 Para 32 bits:
 
+libdrumstick-file2
+libdrumstick-rt2
+libdrumstick-widgets2
+dmidiplayer
 
+los descargué desde:
+
+http://www.deb-multimedia.org/dists/unstable/main/binary-i386/package/libdrumstick-file2.php
+http://www.deb-multimedia.org/dists/unstable/main/binary-i386/package/libdrumstick-rt2.php
+http://www.deb-multimedia.org/dists/unstable/main/binary-i386/package/libdrumstick-widgets2.php
+http://www.deb-multimedia.org/dists/unstable/main/binary-i386/package/dmidiplayer
 
 
 # Dependencias

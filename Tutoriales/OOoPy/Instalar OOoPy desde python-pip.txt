@@ -1,0 +1,35 @@
+
+
+sudo apt install python-pip python-setuptools
+
+
+pip install wheel
+
+add to path
+
+open
+
+gedit .bashrc
+
+set:
+
+export PATH=$PATH:/home/wachin/.local/bin
+
+save.
+
+logout session and enter again
+
+then put in a terminal:
+
+
+pip install OOoPy
+
+when install, make a test:
+
+cd /home/wachin/.local/share/ooopy/
+
+python run_doctest.py /home/wachin/.local/lib/python2.7/site-packages/ooopy/Transformer.py
+
+
+OOoPy · PyPI
+https://pypi.org/project/OOoPy/

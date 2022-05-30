@@ -1,0 +1,50 @@
+
+
+Hola Escuelas Linux sobre Scratch ya se lo que voy a tratar de hacer, voy a ver si puedo subir los deb a github en la pagina de ellos y pondré una descripción de que ustedes saben como compilarlos
+
+Por otro lado les cuento que pude instalar Deepin Linux en una nueva PC que tengo y allì instalé WeChat desde Synaptic y creé un script de descarga para ver cual era el paquete donde venía la aplicación empaquetada como deb y lo encontré, es el siguiente:
+
+wget -c https://com-store-packages.uniontech.com/appstore/pool/appstore/c/com.qq.weixin.work.deepin/com.qq.weixin.work.deepin_4.0.0.6007deepin5_i386.deb
+
+pesa 550 MB
+
+Ese paquete instala deepin-wine6
+
+wget -c https://com-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine6-stable/deepin-wine6-stable-amd64_6.0.0.19-1_amd64.deb
+wget -c https://com-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine6-stable/deepin-wine6-stable_6.0.0.19-1_amd64.deb
+
+y otros muchos paquetes
+
+y como ya sé el nombre del paquete lo busqué en Google así:
+
+com.qq.weixin.work.deepin
+
+y encontré cosas muy interesantes, esto:
+
+https://deepin-wine.i-m.dev/
+
+y allí unas instrucciones de instalación:
+
+wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
+
+y también encontré unas instrucciones:
+
+https://ubuntuhandbook.org/index.php/2021/02/install-deepin-wechat-qq-ubuntu-20-04/
+
+y tambien enncontré otras instrucciones medios extrañas de cómo hacerlo funcionar a wechat parece desde cero:
+https://bbs.deepin.org/en/post/229762
+
+pero bueno, lo que importa es que dentro de ese deb que está arriba está allí una aplicacion de wine comprimida la cual al ser ejecutada se descomprime oculta en home con el nombre:
+
+.deepinwine/Deepin-WXWork
+
+y allí dentro está toda la estructura wine quedando asi instalada en el sistema
+
+bueno me gustaria si tal vez me pudieran ayudar a ver cómo hacer algo semejante con una aplicacion de windows, puede ser alguna que ustedes tal vez necesiten, en mi caso yo quiero empaquetar e-Sword
+
+
+
+
+
+
+

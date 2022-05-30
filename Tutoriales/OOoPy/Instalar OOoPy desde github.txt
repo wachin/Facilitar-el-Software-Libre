@@ -1,18 +1,26 @@
 
 
+
 How to merge odt documents from the command line?
 
 
 
-wget https://sourceforge.net/projects/ooopy/files/ooopy/2.0/OOoPy-2.0.tar.gz
-tar -xf OOoPy-2.0.tar.gz
-cd OOoPy-2.0/
-sudo python3 ./setup.py install
+    git clone https://github.com/schlatterbeck/OOoPy
+    
+o 
+    
+    git clone https://github.com/gebi/ooopy
+    sudo python3 ./setup.py install
 
 
-sudo python3 ./setup.py uninstall
+Test:
+
+    cd /usr/local/share/ooopy
+    python3 run_doctest.py /usr/local/lib/python3.9/dist-packages/ooopy/Transformer.py
 
 
+python run_doctest.py /usr/local/lib/python2.X/site-packages/ooopy/Transformer.py
+python run_doctest.py /usr/local/lib/python2.X/site-packages/ooopy/OOoPy.py
 
 
 ooo_as_text --output-file OUTPUTFILE INPUTFILE, INPUTFILE

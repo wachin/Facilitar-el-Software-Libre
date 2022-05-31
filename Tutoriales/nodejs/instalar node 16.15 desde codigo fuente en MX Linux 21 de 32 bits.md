@@ -80,7 +80,7 @@ No se pudo compilar porque dice que falta una opcion de electron que solo es par
 
    Build MarkText binaries and packages: 
     
-   sudo yarn run build
+   yarn run build
     
    MarkText binary is located under build folder
 

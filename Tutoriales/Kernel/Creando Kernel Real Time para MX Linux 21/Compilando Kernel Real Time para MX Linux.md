@@ -185,7 +185,7 @@ y enter en la nueva configuración:
 
 ## ELEGIR LA VELOCIDAD DE COMPILACIÓN
 
-Antes de empezar la compilación del Kernel necesitamos exportar el nivel de concurrencia (Concurrencia es la acción de concurrir distintos  sucesos o cosas en un mismo lugar o tiempo),  para esto existen las siguientes opciones dependiendo de la cantidad de  procesadores que usted tenga, para esto hay una regla la de agregar el  número uno al número de núcleos que tenga su procesador, ejemplo:
+Antes de empezar la compilación del Kernel necesitamos exportar el nivel de concurrencia (Concurrencia es la acción de concurrir distintos  sucesos o cosas en un mismo lugar o tiempo),  para esto existen las siguientes opciones dependiendo de la cantidad de procesadores que usted tenga, para esto hay una regla la de agregar el número uno al número de núcleos que tenga su procesador, ejemplo:
 
  
 
@@ -197,7 +197,7 @@ export CONCURRENCY_LEVEL=5
 
  
 
-Así mi laptop es una Dell Inspiron 1750 y tiene dos núcleos así yo debo de poner así:
+Así, mi laptop es una Dell Inspiron 1750 y tiene dos núcleos así que yo debo de poner así:
 
 ```
 export CONCURRENCY_LEVEL=3
@@ -215,31 +215,26 @@ Es  posible Compilar el Kernel y ponerle una etiqueta como descripción, en el s
 make deb-pkg LOCALVERSION=-wachin KDEB_PKGVERSION=$(make kernelversion)-1
 ```
 
-si se pone eso en la terminal con esa etiqueta será compilado el Kernel y eso aparecerá en el deb. 
-
-Pero yo quiero que aparezca mi Nick Name o apodo, para eso pondré así:
-
-```
-make deb-pkg LOCALVERSION=-wachin KDEB_PKGVERSION=$(make kernelversion)-1
-```
-
-Debe ser sin ningún espacio.
+si se pone eso en la terminal con esa etiqueta será compilado el Kernel y eso aparecerá al final del nombre del deb
 
 ahora pongo una imagen de lo que sale al poner el comando:
 
-
-
 [![img](https://blogger.googleusercontent.com/img/a/AVvXsEhkv1-n-y3iXMzV7Lit9H4qcHStDQGqL_ytfSOcIJ3fhuLiRSjKj18C7VRPRi5gqKRz1nH4zP6kZAN6PlI-g1fC6U9RYZjbER9wbQ0blHDGlXDvtpTLyK4fj4dMkZuBtEvQj4gbS4O5sYnVvsEX8RcYXcfXfuj5VTJvwtU2uwb9oljyCjFsm2pH1XbU=s16000)](https://draft.blogger.com/#)
 
- 
+hay que esperar un buen rato hasta que termine la compilación, pueden ser horas
 
-y ahora si a esperar un buen rato hasta que termine la compilación, pueden ser horas
+ . . . . . 
 
-Bueno ya se compiló, quizá se demoró unas 5 horas en compilar
+Bueno, ya se compiló, quizá se demoró unas 5 horas en compilar (depende del ordenador), ahora pongo una imágen de cómo me quedó
 
+![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191531 Estos dos deb son el Kernel RT.png)
 
+los dos deb:
 
+linux-headers-5.10.109-rt65avl1-wachin_5.10.109-1_i386.deb
+linux-image-5.10.109-rt65avl1-wachin_5.10.109-1_i386.deb
 
+son el Kernel, póngalos en una carpeta aparte, y si desea los puede compartir en la Web
 
 
 

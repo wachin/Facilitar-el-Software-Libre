@@ -140,14 +140,53 @@ Ubíquese en una terminal en el lugar donde está el parche y el código fuente,
 ```tar xJvf linux-5.10.109.tar.xz
 cd linux-5.10.109
 xzcat ../patch-5.10.109-rt65.patch.xz | patch -p1
-wget https://github.com/wachin/AV-Linux-archivos-importantes/raw/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1/.config
 ```
 
-Si activamos el ver los archivos ocultos, ejemplo en Thunar con Ctrl + H vemos ahora el archivo:
+# Usando el archivo de configuración de AV Linux
+Allí mismo ponga en la terminal:
+```
+wget https://github.com/wachin/AV-Linux-archivos-importantes/raw/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1/.config
+```
+con esto colocamos allí el archivo
 
 .config
 
-este archivo tiene las configuraciones para el Kernel de AV Linux del 2021
+que contiene las siguientes configuraciones para convertirlo en un Kernel Real Time:
+
+```
+# Enable CONFIG_PREEMPT_RT
+ -> General Setup
+  -> Preemption Model (Fully Preemptible Kernel (Real-Time))
+   (X) Fully Preemptible Kernel (Real-Time)
+
+# Enable CONFIG_HIGH_RES_TIMERS
+ -> General setup
+  -> Timers subsystem
+   [*] High Resolution Timer Support
+
+# Enable CONFIG_NO_HZ_FULL
+ -> General setup
+  -> Timers subsystem
+   -> Timer tick handling (Full dynticks system (tickless))
+    (X) Full dynticks system (tickless)
+
+# Set CONFIG_HZ_1000 (note: this is no longer in the General Setup menu, go back twice)
+ -> Processor type and features
+  -> Timer frequency (1000 HZ)
+   (X) 1000 HZ
+
+# Set CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=y]
+ ->  Power management and ACPI options
+  -> CPU Frequency scaling
+   -> CPU Frequency scaling (CPU_FREQ [=y])
+    -> Default CPUFreq governor (<choice> [=y])
+     (X) performance
+```
+
+
+Si activamos el ver los archivos ocultos, ejemplo en Thunar con Ctrl + H vemos el archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 que lo extraje y lo subí a GitHub:
+
+[https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1)
 
 Ahora poner allí mismo en la terminal:
 
@@ -241,6 +280,11 @@ son el Kernel, póngalos en una carpeta aparte, y si desea los puede compartir e
 
 
 CONFIGURAR EL TIEMPO REAL
+
+
+
+Fully Preemptible Kernel (Real Time)
+
 Seleccionar en: 
 
 General setup ---> Preemption Model (xxxx)--->
@@ -259,7 +303,7 @@ File Systems ---> DOS/FAT/exFAT
 
 
 
-PONER EL TIMER A 1000 Hz
+Timer Frecuency 1000 Hz
 En:
 
 Processor type and features ---> Timer Frecuency (xxx) ---
@@ -270,9 +314,7 @@ entrar y chequear la frecuencia a 1000 Hz
 
 
 
-Con el .config del Kernel por defecto tiene 
-
-schedutil
+Default CPUFreq governor (schedutil)
 
  en:
 

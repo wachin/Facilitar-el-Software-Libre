@@ -13,6 +13,33 @@ gdiplus
 vcrun2015
 
 
+en MX Linux instalar:
+
+sudo apt install ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
+
+
+
+para desinstalar:.
+
+sudo apt remove ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
+
+
+con esto funcionan bien las tíldes en el programa
+
+
+Pero no me funciona el editor de equaciones, estoy probando instalar los siguientes componentes en PlayOnLinux
+
+msls31
+msxml6
+mfc42
+
+
+
+
+
+
+
+
 
 espero estén bien el día de hoy
 

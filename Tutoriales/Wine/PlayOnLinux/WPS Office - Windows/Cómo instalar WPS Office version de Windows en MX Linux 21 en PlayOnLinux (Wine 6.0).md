@@ -1,25 +1,32 @@
 
 
-Cómo instalar WPS Office version de Windows en MX Linux 21 en PlayOnLinux (Wine 6.0)
+# Cómo instalar WPS Office version de Windows en MX Linux 21 en PlayOnLinux (Wine 6.0)
 
 
+Probado en MX Linux 19 de 32 bits
+Probado en MX Linux 21 de 32 bits
 
-sudo apt install libvulkan1 libvulkan-dev vulkan-tools playonlinux wine ibus ibus-pinyin
 
+Instalar las dependencias:
+
+    sudo apt install libvulkan1 libvulkan-dev vulkan-tools playonlinux wine ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
+
+    
+    
+Versión de Wine probadas, y resultados
+
+wine 7.4-staging.- Rapida instalación
+wine 5.1.- Instalación un poco lenta
+    
 
 en wine instalar
 
 gdiplus
-vcrun2015
+vcrun2015 esta dando error: POL_System_cabextract failed with error 1!
 msls31
 msxml6
 mfc42
 LunaTheme
-
-
-en MX Linux instalar:
-
-sudo apt install ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
 
 
 
@@ -48,6 +55,11 @@ instarlo
 Nota: No instalar cavextract porque no funciona
 
 espero estén bien el día de hoy
+
+
+# Qué no funciona en WPS Office 2016
+Hacer login no se puede
+
 
 
 wine - How can I run DirectX games on Linux? - Super User

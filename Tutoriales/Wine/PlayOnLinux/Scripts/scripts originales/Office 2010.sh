@@ -77,7 +77,7 @@ fi
 POL_Wine "$SetupIs"
 POL_Wine_WaitExit "$TITLE"
 POL_Call POL_Install_dotnet20
-POL_Call POL_Install_gecko
+POL_Call POL_Install_gecko   (soy Wachín, este no está funcionando)
 POL_Call POL_Install_corefonts
 POL_Call POL_Install_gdiplus
 POL_Call POL_Install_riched20

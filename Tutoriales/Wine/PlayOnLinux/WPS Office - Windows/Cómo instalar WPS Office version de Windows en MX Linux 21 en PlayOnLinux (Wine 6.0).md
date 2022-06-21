@@ -21,12 +21,13 @@ wine 5.1.- Instalación un poco lenta
 
 en wine instalar
 
+FontsSmoothRGB
 gdiplus
-vcrun2015 esta dando error: POL_System_cabextract failed with error 1!
 msls31
 msxml6
 mfc42
 LunaTheme
+vcrun2015
 
 
 
@@ -73,4 +74,14 @@ https://xn--deepinenespaol-1nb.org/wiki/ibus/
 
 Install And Test Vulkan On Linux
 https://linuxconfig.org/install-and-test-vulkan-on-linux
+
+
+
+gdiplus
+vcrun2015
+msls31
+msxml6
+mfc42
+LunaTheme
+riched20
 

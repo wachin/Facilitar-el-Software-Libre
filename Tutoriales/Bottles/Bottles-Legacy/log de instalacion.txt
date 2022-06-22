@@ -1,0 +1,81 @@
+$ sudo python3 setup.py install  
+running install
+running build
+running build_py
+running build_scripts
+running install_lib
+creating /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/detail.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/list.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/helper.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/stack.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/headerbar.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/wine.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/main.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/importer.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/create.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/welcome.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/constants.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/__init__.py -> /usr/local/lib/python3.9/dist-packages/bottles
+copying build/lib/bottles/window.py -> /usr/local/lib/python3.9/dist-packages/bottles
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/detail.py to detail.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/list.py to list.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/helper.py to helper.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/stack.py to stack.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/headerbar.py to headerbar.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/wine.py to wine.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/main.py to main.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/importer.py to importer.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/create.py to create.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/welcome.py to welcome.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/constants.py to constants.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/__init__.py to __init__.cpython-39.pyc
+byte-compiling /usr/local/lib/python3.9/dist-packages/bottles/window.py to window.cpython-39.pyc
+running install_scripts
+copying build/scripts-3.9/com.github.mirkobrombin.bottles -> /usr/local/bin
+changing mode of /usr/local/bin/com.github.mirkobrombin.bottles to 755
+running install_data
+copying data/com.github.mirkobrombin.bottles.appdata.xml -> /usr/share/metainfo
+copying data/com.github.mirkobrombin.bottles.desktop -> /usr/share/applications
+copying data/com.github.mirkobrombin.bottles.svg -> /usr/share/icons/hicolor/scalable/apps
+copying data/bottles_notepad.svg -> /usr/share/icons/hicolor/scalable/apps
+copying data/bottles_wine.svg -> /usr/share/icons/hicolor/scalable/apps
+copying data/bottles_winetricks.svg -> /usr/share/icons/hicolor/scalable/apps
+copying data/bottles_wine-uninstaller.svg -> /usr/share/icons/hicolor/scalable/apps
+copying data/bottles_wine-winecfg.svg -> /usr/share/icons/hicolor/scalable/apps
+creating /usr/share/com.github.mirkobrombin.bottles
+creating /usr/share/com.github.mirkobrombin.bottles/bottles
+copying data/style.css -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/constants.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/create.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/detail.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/headerbar.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/helper.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/importer.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/list.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/main.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/stack.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/welcome.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/window.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/wine.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+copying bottles/__init__.py -> /usr/share/com.github.mirkobrombin.bottles/bottles
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/it_IT
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/it_IT/LC_MESSAGES
+copying bottles/locale/it_IT/LC_MESSAGES/bottles.mo -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/it_IT/LC_MESSAGES
+copying bottles/locale/it_IT/LC_MESSAGES/bottles.po -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/it_IT/LC_MESSAGES
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/es_ES
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/es_ES/LC_MESSAGES
+copying bottles/locale/es_ES/LC_MESSAGES/bottles.mo -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/es_ES/LC_MESSAGES
+copying bottles/locale/es_ES/LC_MESSAGES/bottles.po -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/es_ES/LC_MESSAGES
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/fr_FR
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/fr_FR/LC_MESSAGES
+copying bottles/locale/fr_FR/LC_MESSAGES/bottles.mo -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/fr_FR/LC_MESSAGES
+copying bottles/locale/fr_FR/LC_MESSAGES/bottles.po -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/fr_FR/LC_MESSAGES
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/de_DE
+creating /usr/share/com.github.mirkobrombin.bottles/bottles/locale/de_DE/LC_MESSAGES
+copying bottles/locale/de_DE/LC_MESSAGES/bottles.mo -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/de_DE/LC_MESSAGES
+copying bottles/locale/de_DE/LC_MESSAGES/bottles.po -> /usr/share/com.github.mirkobrombin.bottles/bottles/locale/de_DE/LC_MESSAGES
+running install_egg_info
+Writing /usr/local/lib/python3.9/dist-packages/Bottles-0.2.5.egg-info
+ 

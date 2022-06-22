@@ -13,41 +13,34 @@ instalar las dependencias:
 sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev libhandy-1-dev patool gir1.2-granite-1.0
 ```
 
-se podría clonar el repositorio:
-
-```
-git clone https://github.com/bottlesdevs/Bottles.git
-cd Bottles
-```
-
-pero a mi esa versión no me funcionó, así que instalé la versión:
 
 
 instalé la versión
 
-https://github.com/bottlesdevs/Bottles/releases/tag/2021.11.28-treviso
+https://github.com/bottlesdevs/Bottles/releases/tag/continuous-v1
 
-wget -c https://github.com/bottlesdevs/Bottles/archive/refs/tags/2021.11.28-treviso.tar.gz
+wget https://github.com/bottlesdevs/Bottles/archive/refs/tags/continuous-v1.tar.gz
 
 luego hay que descomprimir el tar.gz con clic derecho y 
 
 Extraer aquí
 
+Instalación
 ahora poner en la terminal:
 
 ```
-cd Bottles-2021.11.28-treviso
-mkdir build
-meson build && cd build
-ninja -j$(nproc)
-ninja install
+cd Bottles-continuous-v1
+sudo python3 setup.py install
+```
+
+# Para lanzar desde la terminal
+
+```bash
+com.github.mirkobrombin.bottles
 ```
 
 Para desinsalar (estando dentro de esa misma ruta):
 
-```
-ninja uninstall
-```
 
 
 ![Alt text](/home/wachin/Imágenes/111511.png)

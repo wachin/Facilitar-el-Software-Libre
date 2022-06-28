@@ -33,7 +33,7 @@ vcrun2015
 
 para desinstalar:.
 
-sudo apt remove ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
+sudo apt install ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
 
 
 con esto funcionan bien las tíldes en el programa

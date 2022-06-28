@@ -28,9 +28,9 @@ y cambiar con sus datos, a mi me queda así:
 
 ahora  cierro Gedit y reinicio el ordenador. 
 
-# ¿Qué versión de Kernel está instalado en este Sistema Operativo?
+# ¿Qué versión de Kernel está instalado en mi Sistema Operativo?
 
-Primero debo saber qué kernel trae esta distrubución, pongo en la terminal:
+Primero debe saber qué kernel trae su distrubución, pongo en la terminal:
 
 `uname -r` 
 
@@ -42,18 +42,18 @@ entonces se que si instalo una versión como esa debería de funcionar.
 
 # Instalar dependencias
 
-Debemos instalar las siguientes dependencias:
+Debemos instalar las siguientes dependencias para poder compilarlo:
 
 ```sudo apt-get install libncurses5-dev fakeroot wget xz-utils flex bison libssl-dev```
 
 # Elegir la versión del código fuente del Kernel a Compilar
 
-Ahora es necesario ver cual Kernel se podría instalar, y es necesario saber que en la siguiente página ellos tienen los Kernel con Soporte de Largo Plazo (LTS), para esto me dirigo a:
+Ahora es necesario ver cual Kernel se podría instalar, y es necesario saber que en la siguiente página ellos tienen los Kernel con Soporte de Largo Plazo (LTS) y nos conviene usarlos pues los mantienen actualizados en cuantos a seguridad. Diríjase a:
 
 **Longterm release kernels**
 [https://www.kernel.org/category/releases.html](https://www.kernel.org/category/releases.html)
 
-**Nota**: Si sepan Inglés les aconsejo que lean.
+**Nota**: Si sepan Inglés les aconsejo que lean, esa entrada, o que la traduzcan en [Google Traductor](https://translate.google.com/)
 
 Allí encuentro y copio la siguiente información en esta fecha 2022-06-15:
 
@@ -67,18 +67,20 @@ Version Maintainer 	                        Released 	Projected EOL
 4.9 	Greg Kroah-Hartman & Sasha Levin 	2016-12-11 	Jan, 2023
 ```
 
-entonces lo más seguro es que funcione la versión:
+entonces lo más seguro es que funcione una versión:
 
 5.10
 5.15
 
-# Versión de Kernel elegida para buscar el Parque Real Time correcto
+# Versión de Kernel elegida para buscar el Parche Real Time correcto
 
 Voy a usar una versión del Kernel:
 
 5.10
 
-entonces con esto en mente debo buscar un parque RT para esta versión, para esto me dirijo a:
+entonces con esto en mente debo buscar un parque R eal Time para esta versión, para esto me dirijo a:
+
+**Proyectos Real Time**
 
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt)
 
@@ -90,11 +92,11 @@ y allí dentro busco un patch para la versión 5.10 y a esta fecha que hago este
 
 patch-5.10.109-rt65.patch.xz                       07-Apr-2022 03:09    171K
 
-y me descargo ese. Aquí pongo el enlace:
+y me descargo ese. Aquí pongo el enlace completo:
 
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.109-rt65.patch.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.109-rt65.patch.xz)
 
-pero les explico que luego es muy posible que este enlace ya no esté disponible porque ellos generalmente andan haciendo actualizaciones
+pero les explico que luego es muy posible que este enlace ya no esté disponible porque ellos generalmente andan haciendo actualizaciones (en los Kernel que están en continuo mantenimiento LTS)
 
 # Buscar el código fuente correcto para el mismo parque RT
 
@@ -115,11 +117,9 @@ y allí dentro encuentro el código fuente que encaja con el parque:
 
 linux-5.10.109.tar.xz                              28-Mar-2022 08:03    115M
 
-pongo el enlace:
-
 [https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.109.tar.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.109.tar.xz)
 
-**Nota:** Con el paso del tiempo este archivo ya no estará disponible porque lo actualizan. En Linux es así porque cuando encuentran una vulnerabilidad la corrigen.
+**Nota:** Con el paso del tiempo este archivo ya no estará disponible porque lo actualizan en los Kernel LTS (cuando encuentran una vulnerabilidad la corrigen)
 
 # Resumen de Descarga
 
@@ -135,9 +135,16 @@ Haré un resumen de los enlaces para poner en la terminal y descargar. Le aconse
 
 # Aplicación del Parche RT
 
-Ubíquese en una terminal en el lugar donde está el parche y el código fuente, y ponga:
+Ubíquese en una terminal en el lugar donde está el parche y el código fuente:
+
+patch-5.10.109-rt65.patch.xz
+
+linux-5.10.109.tar.xz
+
+y ponga:
 
 ```tar xJvf linux-5.10.109.tar.xz
+tar xJvf linux-5.10.109.tar.xz
 cd linux-5.10.109
 xzcat ../patch-5.10.109-rt65.patch.xz | patch -p1
 ```
@@ -147,7 +154,7 @@ Allí mismo ponga en la terminal:
 ```
 wget https://github.com/wachin/AV-Linux-archivos-importantes/raw/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1/.config
 ```
-con esto colocamos allí el archivo
+con esto colocamos allí el archivo oculto (para verlo aplaste Ctrl + H):
 
 .config
 
@@ -184,7 +191,7 @@ que contiene las siguientes configuraciones para convertirlo en un Kernel Real T
 ```
 
 
-Si activamos el ver los archivos ocultos, ejemplo en Thunar con Ctrl + H vemos el archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 que lo extraje y lo subí a GitHub:
+Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje y lo subí a GitHub:
 
 [https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1)
 
@@ -192,11 +199,11 @@ Ahora poner allí mismo en la terminal:
 
 make menuconfig
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/185048 make menuconfig.png)
+![](img/185048 make menuconfig.png)
 
 y al ejecutar:
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/185049 menuconfig abierto.png)
+![](img/185049 menuconfig abierto.png)
 
 ## No hacer ningún cambio en la configuración del Kernel 
 
@@ -206,19 +213,19 @@ Presionaremos la tecla Tab o con la  flecha derecha para ubicarnos en el menú:
 
 Load
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191103 llegar hasta load.png)
+![](img/191103 llegar hasta load.png)
 
 y dar Enter cuando dice Ok
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191212 dar enter en ok.png)
+![](img/191212 dar enter en ok.png)
 
 Ahora con Tab o flecha derecha llegar hasta Exit y dar Enter:
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191320 llegar hasta exit y dar enter.png)
+![](img/191320 llegar hasta exit y dar enter.png)
 
 y enter en la nueva configuración:
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191430 enter en la nueva configuracion.png)
+![](img/191430 enter en la nueva configuracion.png)
 
 
 
@@ -266,7 +273,7 @@ hay que esperar un buen rato hasta que termine la compilación, pueden ser horas
 
 Bueno, ya se compiló, quizá se demoró unas 5 horas en compilar (depende del ordenador), ahora pongo una imágen de cómo me quedó
 
-![](/home/wachin/a-enlaces/Tutoriales/Kernel/Creando Kernel Real Time para MX Linux 21/img/191531 Estos dos deb son el Kernel RT.png)
+![](img/191531 Estos dos deb son el Kernel RT.png)
 
 los dos deb:
 

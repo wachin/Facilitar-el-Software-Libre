@@ -207,7 +207,7 @@ y al ejecutar:
 
 ## No hacer ningún cambio en la configuración del Kernel 
 
-No  es necesario hacer ningún cambio pues ese archivo .config ya tiene las  configuraciones para el Kernel RT de [AV Linux](http://www.bandshed.net/) (que yo le [extraje](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1) a la iso de la versión 2021). 
+No  es necesario hacer ningún cambio pues ese archivo .config ya tiene las configuraciones para el Kernel RT de [AV Linux](http://www.bandshed.net/) (que yo le [extraje](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1) a la iso de la versión 2021). 
 
 Presionaremos la tecla Tab o con la  flecha derecha para ubicarnos en el menú:
 
@@ -215,7 +215,7 @@ Load
 
 ![](img/191103 llegar hasta load.png)
 
-y dar Enter cuando dice Ok
+y dar Enter, y cuando dice Ok dar Enter otra vez
 
 ![](img/191212 dar enter en ok.png)
 
@@ -286,7 +286,7 @@ son el Kernel, póngalos en una carpeta aparte, y si desea los puede compartir e
 
 
 
-CONFIGURAR EL TIEMPO REAL
+VERIFICANDO EL TIEMPO REAL, SOPORTE EXFAT (OPCIONAL)
 
 
 

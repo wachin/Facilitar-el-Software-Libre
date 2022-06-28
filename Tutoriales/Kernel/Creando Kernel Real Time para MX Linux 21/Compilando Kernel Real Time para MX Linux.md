@@ -189,13 +189,23 @@ que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones 
      (X) performance
 ```
 
+Sobre estas configuraciones:
+
+| Configuración en .config                                     | Descripción                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [CONFIG_NO_HZ_IDLE](https://cateee.net/lkddb/web-lkddb/NO_HZ_IDLE.html) | Esta opción habilita un sistema inactivo sin señales: las interrupciones del temporizador solo se activarán según sea necesario cuando el sistema esté inactivo. Esto suele ser interesante para el ahorro de energía. |
+| [CONFIG_HIGH_RES_TIMERS](https://cateee.net/lkddb/web-lkddb/HIGH_RES_TIMERS.html) | Esta opción habilita la compatibilidad con el temporizador de alta resolución. Si su hardware no es compatible, esta opción solo aumenta el tamaño de la imagen del kernel. |
+| [CONFIG_PREEMPT_RT](https://rt.wiki.kernel.org/index.php/CONFIG_PREEMPT_RT_Patch) | El conjunto de parches [CONFIG_PREEMPT_RT](http://www.kernel.org/pub/linux/kernel/projects/rt/) lo mantiene un pequeño grupo de desarrolladores principales encabezado por Ingo Molnar. Este parche permite adelantarse a casi todo el kernel, con la excepción de unas pocas regiones de código muy pequeñas ("regiones críticas raw_spinlock"). Esto se hace reemplazando la mayoría de los spinlocks del kernel con mutexes que admiten la [herencia de prioridad](https://rt.wiki.kernel.org/index.php/Priority_inheritance), así como también moviendo todas las interrupciones y las interrupciones de software a los subprocesos del kernel.<br/><br/>Puede encontrar un [RT_PREEMPT_HOWTO](https://rt.wiki.kernel.org/index.php/RT_PREEMPT_HOWTO) detallado en esta página.<br/><br/>Paul McKenney ha escrito una buena [descripción general de CONFIG_PREEMPT_RT](http://lwn.net/Articles/146861/) que es una buena introducción a los cambios introducidos en el kernel por el parche CONFIG_PREEMPT_RT.<br/><br/>[Aquí](http://osadl.org/RT) se encuentra disponible una descripción general de los diversos componentes del parche CONFIG_PREEMPT_RT y su estado de fusión en el núcleo de la línea principal. |
+| [CONFIG_HZ_1000](https://cateee.net/lkddb/web-lkddb/HZ_1000.html) | 1000 Hz es la opción preferida para sistemas de escritorio y otros sistemas que requieren respuestas interactivas rápidas a eventos. |
+| [CPU_FREQ_DEFAULT_GOV_PERFORMANCE](https://www.linuxtopia.org/online_books/linux_kernel/kernel_configuration/re168.html) | Esto establece la frecuencia de forma estática a la frecuencia más alta admitida por la CPU |
+
 Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje de la ISO del mismo y lo subí a GitHub:
 
 [https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1)
 
 Ahora poner allí mismo en la terminal:
 
-make menuconfig
+`make menuconfig`
 
 ![](img/185048 make menuconfig.png)
 
@@ -278,29 +288,33 @@ los dos deb:
 linux-headers-5.10.109-rt65avl1-wachin_5.10.109-1_i386.deb
 linux-image-5.10.109-rt65avl1-wachin_5.10.109-1_i386.deb
 
-son el Kernel, póngalos en una carpeta aparte, y si desea los puede compartir en la Web
+# Instalar el Kernel RT
+
+Esos dos archivos deb son el Kernel, póngalos en una carpeta aparte e instalelos, abra una terminal allí y ponga:
+
+`sudo dpkg -i *.deb`
+
+y si desea los puede compartir en la Web
+
+Si desea puede abrir Synaptic y buscar las palabras:
+
+kernel image
+
+o:
+
+kernel header
+
+y verá su nombre, su correo, y la etiqueta:
+
+![](img/191532 Kernel con la etiqueta wachin.png)
+
+## VERIFICANDO SOPORTE EXFAT (OPCIONAL)
+
+Yo utilizo particiones exFAT y si este Kernel no tiene soporte no debo usarlo
 
 
 
 
-
-VERIFICANDO EL TIEMPO REAL, SOPORTE EXFAT (OPCIONAL)
-
-
-
-Fully Preemptible Kernel (Real Time)
-
-Seleccionar en: 
-
-General setup ---> Preemption Model (xxxx)--->
-
-elegir:
-
-- Fully Preemptible Kernel (Real Time)
-
-
-
-exFAT
 
 Este Kernel si tiene soporte:
 
@@ -308,28 +322,7 @@ File Systems ---> DOS/FAT/exFAT
 
 
 
-Timer Frecuency 1000 Hz
-En:
 
-Processor type and features ---> Timer Frecuency (xxx) ---
-
-entrar y chequear la frecuencia a 1000 Hz
-
-
-
-
-
-Default CPUFreq governor (schedutil)
-
- en:
-
-Power management and ACPI options --- 
-
-CPU Frequency scaling ---
-
-Default CPUFreq governor (schedutil)
-
-voy a ver si al usar otro .config cambia a performance
 
 
 

@@ -191,7 +191,7 @@ que contiene las siguientes configuraciones para convertirlo en un Kernel Real T
 ```
 
 
-Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje y lo subí a GitHub:
+Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje del mismo y lo subí a GitHub:
 
 [https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1)
 

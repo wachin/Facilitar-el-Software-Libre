@@ -99,12 +99,12 @@ File Systems ---> DOS/FAT/exFAT/NT
   -> Preemption Model (Fully Preemptible Kernel (Real-Time))
    (X) Fully Preemptible Kernel (Real-Time)
 
-# CONFIG_HZ_1000 
+# Enabled CONFIG_HZ_1000 
  -> Processor type and features
   -> Timer frequency (1000 HZ)
    (X) 1000 HZ
 
-# CPU_FREQ_DEFAULT_GOV_PERFORMANCE
+# Enabled CPU_FREQ_DEFAULT_GOV_PERFORMANCE
  ->  Power management and ACPI options
   -> CPU Frequency scaling
     -> Default CPUFreq governor

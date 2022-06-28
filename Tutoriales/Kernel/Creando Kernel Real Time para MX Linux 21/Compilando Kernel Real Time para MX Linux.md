@@ -161,7 +161,7 @@ con esto colocamos allí el archivo oculto (para verlo aplaste Ctrl + H):
 que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones para convertirlo en un Kernel Real Time:
 
 ```
-# Enabled CONFIG_NO_HZ_FULL
+# Enabled CCONFIG_NO_HZ_IDLE
  -> General setup
   -> Timers subsystem
    -> Timer tick handling (Full dynticks system (tickless))
@@ -177,12 +177,12 @@ que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones 
   -> Preemption Model (Fully Preemptible Kernel (Real-Time))
    (X) Fully Preemptible Kernel (Real-Time)
 
-# CONFIG_HZ_1000 (note: this is no longer in the General Setup menu, go back twice)
+# CONFIG_HZ_1000 
  -> Processor type and features
   -> Timer frequency (1000 HZ)
    (X) 1000 HZ
 
-# Set CPU_FREQ_DEFAULT_GOV_PERFORMANCE
+# CPU_FREQ_DEFAULT_GOV_PERFORMANCE
  ->  Power management and ACPI options
   -> CPU Frequency scaling
     -> Default CPUFreq governor

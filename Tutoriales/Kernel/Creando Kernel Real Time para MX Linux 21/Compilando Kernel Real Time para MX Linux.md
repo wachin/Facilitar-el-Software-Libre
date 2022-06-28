@@ -158,40 +158,38 @@ con esto colocamos allí el archivo oculto (para verlo aplaste Ctrl + H):
 
 .config
 
-que contiene las siguientes configuraciones para convertirlo en un Kernel Real Time:
+que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones para convertirlo en un Kernel Real Time:
 
 ```
-# Enable CONFIG_PREEMPT_RT
- -> General Setup
-  -> Preemption Model (Fully Preemptible Kernel (Real-Time))
-   (X) Fully Preemptible Kernel (Real-Time)
+# Enabled CONFIG_NO_HZ_FULL
+ -> General setup
+  -> Timers subsystem
+   -> Timer tick handling (Full dynticks system (tickless))
+    (X) Idle dynticks system (tickless idle)
 
-# Enable CONFIG_HIGH_RES_TIMERS
+# Enabled CONFIG_HIGH_RES_TIMERS
  -> General setup
   -> Timers subsystem
    [*] High Resolution Timer Support
 
-# Enable CONFIG_NO_HZ_FULL
- -> General setup
-  -> Timers subsystem
-   -> Timer tick handling (Full dynticks system (tickless))
-    (X) Full dynticks system (tickless)
+# Enabled CONFIG_PREEMPT_RT
+ -> General Setup
+  -> Preemption Model (Fully Preemptible Kernel (Real-Time))
+   (X) Fully Preemptible Kernel (Real-Time)
 
-# Set CONFIG_HZ_1000 (note: this is no longer in the General Setup menu, go back twice)
+# CONFIG_HZ_1000 (note: this is no longer in the General Setup menu, go back twice)
  -> Processor type and features
   -> Timer frequency (1000 HZ)
    (X) 1000 HZ
 
-# Set CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=y]
+# Set CPU_FREQ_DEFAULT_GOV_PERFORMANCE
  ->  Power management and ACPI options
   -> CPU Frequency scaling
-   -> CPU Frequency scaling (CPU_FREQ [=y])
-    -> Default CPUFreq governor (<choice> [=y])
+    -> Default CPUFreq governor
      (X) performance
 ```
 
-
-Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje del mismo y lo subí a GitHub:
+Ese archivo .config el cual tiene las configuraciones del Kernel de AV Linux del 2021 lo extraje de la ISO del mismo y lo subí a GitHub:
 
 [https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1)
 
@@ -207,7 +205,7 @@ y al ejecutar:
 
 ## No hacer ningún cambio en la configuración del Kernel 
 
-No  es necesario hacer ningún cambio pues ese archivo .config ya tiene las configuraciones para el Kernel RT de [AV Linux](http://www.bandshed.net/) (que yo le [extraje](https://github.com/wachin/AV-Linux-archivos-importantes/tree/master/AVL-MXE-2021.05.22-xfce4-openbox-i386.iso/usr/src/linux-headers-5.9.1-rt19avl1) a la iso de la versión 2021). 
+No es necesario hacer ningún cambio pues ese archivo .config ya tiene las configuraciones para el Kernel RT de [AV Linux](http://www.bandshed.net/) 2021
 
 Presionaremos la tecla Tab o con la  flecha derecha para ubicarnos en el menú:
 

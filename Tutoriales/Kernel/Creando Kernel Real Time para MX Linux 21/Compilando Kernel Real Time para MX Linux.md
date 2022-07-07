@@ -138,7 +138,6 @@ Haré un resumen de los enlaces para poner en la terminal y descargar. Le aconse
 Ubíquese en una terminal en el lugar donde está el parche y el código fuente:
 
 patch-5.10.109-rt65.patch.xz
-
 linux-5.10.109.tar.xz
 
 y ponga:
@@ -158,7 +157,7 @@ con esto colocamos allí el archivo oculto (para verlo aplaste Ctrl + H):
 
 .config
 
-que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones para convertirlo en un Kernel Real Time:
+que como hemos parchado el Kernel a RT habilita las siguientes configuraciones para convertirlo en un Kernel Real Time:
 
 ```
 # Enabled CCONFIG_NO_HZ_IDLE
@@ -189,7 +188,7 @@ que al ya estar parchado el Kernel a RT habilita las siguientes configuraciones 
      (X) performance
 ```
 
-Sobre estas configuraciones:
+Sobre estas configuraciones información:
 
 | Configuración en .config                                     | Descripción                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -212,6 +211,16 @@ Ahora poner allí mismo en la terminal:
 y al ejecutar:
 
 ![](img/185049 menuconfig abierto.png)
+
+## VERIFICANDO SOPORTE EXFAT (OPCIONAL)
+
+Yo utilizo particiones exFAT y si este Kernel no tiene soporte no me sirve, para verificar si tiene entro en:
+
+File Systems ---> DOS/FAT/exFAT 
+
+y este Kernel si tiene
+
+
 
 ## No hacer ningún cambio en la configuración del Kernel 
 
@@ -239,14 +248,14 @@ y enter en la nueva configuración:
 
 ## ELEGIR LA VELOCIDAD DE COMPILACIÓN
 
-Antes de empezar la compilación del Kernel necesitamos exportar el nivel de concurrencia (Concurrencia es la acción de concurrir distintos  sucesos o cosas en un mismo lugar o tiempo),  para esto existen las siguientes opciones dependiendo de la cantidad de procesadores que usted tenga, para esto hay una regla la de agregar el número uno al número de núcleos que tenga su procesador, ejemplo:
+Este paso es opcional, podemos exportar el nivel de concurrencia para la compilación *(Concurrencia es la acción de concurrir distintos  sucesos o cosas en un mismo lugar o tiempo)*, para esto existen las siguientes opciones dependiendo de la cantidad de procesadores que usted tenga, para esto hay una regla la de agregar el número uno al número de núcleos que tenga su procesador, ejemplo:
 
  
 
-Si usted tenga 2 debe poner
+Si usted tenga 2 núcleos debe poner
 export CONCURRENCY_LEVEL=3
 
-Si usted tenga 4 debe poner
+Si usted tenga 4 núcleos debe poner
 export CONCURRENCY_LEVEL=5
 
  
@@ -307,18 +316,6 @@ kernel header
 y verá su nombre, su correo, y la etiqueta:
 
 ![](img/191532 Kernel con la etiqueta wachin.png)
-
-## VERIFICANDO SOPORTE EXFAT (OPCIONAL)
-
-Yo utilizo particiones exFAT y si este Kernel no tiene soporte no debo usarlo
-
-
-
-
-
-Este Kernel si tiene soporte:
-
-File Systems ---> DOS/FAT/exFAT 
 
 
 

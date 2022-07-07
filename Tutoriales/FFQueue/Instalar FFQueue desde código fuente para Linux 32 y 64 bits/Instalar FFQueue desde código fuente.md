@@ -92,7 +92,7 @@ https://github.com/bswebdk/FFQueue/blob/master/BUILD-GUIDE.TXT
 
 Instalar dependencias
 
-    sudo apt install libwxgtk3.0-gtk3-dev make
+    sudo apt install libwxgtk3.0-gtk3-dev make autoconf automake
 
 **Nota:** En mi ordenador tengo instaladas otras herramientas de compilación
 

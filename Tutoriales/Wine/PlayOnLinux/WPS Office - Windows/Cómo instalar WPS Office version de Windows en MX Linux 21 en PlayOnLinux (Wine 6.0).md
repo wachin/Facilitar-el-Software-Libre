@@ -15,11 +15,12 @@ Instalar las dependencias:
     
 Versión de Wine probadas, y resultados
 
-wine 7.4-staging.- Rapida instalación
-wine 5.1.- Instalación un poco lenta
+wine 7.4
+wine 7.4-staging
+wine 5.1
     
 
-en wine instalar
+en componentes instalar:
 
 FontsSmoothRGB
 gdiplus
@@ -33,24 +34,19 @@ vcrun2015
 
 para desinstalar:.
 
-sudo apt install ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
+    sudo apt install ibus ibus-gtk3 ibus-m17n ibus-pinyin im-config
 
 
 con esto funcionan bien las tíldes en el programa
 
 
-Pero no me funciona el editor de equaciones, estoy probando instalar los siguientes componentes en PlayOnLinux: msls31 msxml6 mfc42
+Para hacer funcionar el editor de equaciones hay que crear un lanzador en PlayOnLinux y lanzarlo, después uno lo puede cerrar y lanzar WPs Office y ya funcionará
 
 
 
 
 buscar el ejecutable de:
 
-
-
-, abrirlo 
-
-instarlo
 
 
 Nota: No instalar cavextract porque no funciona

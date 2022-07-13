@@ -1,10 +1,23 @@
-## Convert Word to Markdown
+## Convertir .docx (Word) a .md (Markdown)
 
-To save images that are included in a binary container (docx, epub, or odt) - here a Microsoft Word document - to a directory use the following command. This will create a folder images/media. The media is extracted from the container and the original filenames are used.
+To save images that are included in a binary container (docx, epub, or odt) - here a Microsoft Word document - to a directory use the following command. This will create a folder images/media. The media is extracted from the container and the original filenames are used
+
+
+Para guardar imágenes que están incluidas en un contenedor binario (docx, epub u odt), aquí un documento de Microsoft Word, en un directorio, use el siguiente comando. Esto creará una carpeta de imágenes/medios. Los medios se extraen del contenedor y se utilizan los nombres de archivo originales.
+
+
+
+
 
 ```
 pandoc --extract-media=images -s mydoc.docx -t markdown -o mddoc.md
 ```
+
+ODT a md
+```
+pandoc --extract-media=Pictures -s mydoc.odt -t markdown -o mddoc.md
+```
+
 
 yo wachín cree una carpeta images y allí dentro se crearon las imagenes, y el archivo md tenía las imagenes orientadas allí y funciona, pero debo ver si no es necesario crear esa carpeta
 

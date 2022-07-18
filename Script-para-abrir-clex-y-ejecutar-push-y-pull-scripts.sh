@@ -3,6 +3,10 @@
 gnome-terminal --tab --title="tab 1" --command="bash -c 'clex; $SHELL'"
 
 
+## Requerimientos, tener instalado clex y gnome-terminal y abierta la terminal gnome
+## sudo apt install clex gnome-terminal
+## La primera vez que se abra clex debe configurarlo, sólo lea las instrucciones y acepte.
+## Script basado en:
 ## How can I make a script that opens terminal windows and executes commands in them?
 ## https://askubuntu.com/questions/46627/how-can-i-make-a-script-that-opens-terminal-windows-and-executes-commands-in-the
 ## https://askubuntu.com/a/1105741/145772

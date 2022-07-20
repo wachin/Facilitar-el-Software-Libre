@@ -1,0 +1,12 @@
+
+
+sudo apt install cpupower-gui
+
+
+GUI utility to change the CPU frequency
+
+
+
+
+Instalar Kernel Realtime (alternativa a Low Latency Kernel de UbuntuStudio) en MX Linux 19, antiX 19 o Linux Mint 4 Debbie, para usar con Jack Audio Connection Kit (JACK) + Ardour plugins
+https://facilitarelsoftwarelibre.blogspot.com/2020/10/instalar-realtime-kernel-en-mx-linux.html

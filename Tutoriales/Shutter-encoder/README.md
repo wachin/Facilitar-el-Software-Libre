@@ -3,39 +3,29 @@
 
 ![logo](/SocialBanner.png)
 
-Download required [dependencies](../master/Library/sources.txt) into "Library" folder.
 
-Include [fonts](../master/fonts) with JRE.
+# Shutter-Enconder para Linux de 32 bits
 
-I'm using [Java version 13](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot) built using jlink:
-<code>--compress 0 --strip-debug --no-header-files --no-man-pages --add-modules java.base,java.datatransfer,java.desktop,java.logging,java.security.sasl,java.xml,jdk.crypto.ec --output JRE</code>
+Para Sistemas Operativos Linux de 32 bits como son:
 
-## Official website
-
-https://www.shutterencoder.com
-
-### Builds
-
-https://www.shutterencoder.com/en/#downloads
-
-#### Changelog
-
-https://www.shutterencoder.com/changelog.html
+[MX Linux](https://mxlinux.org/)
+[Linux Mint Debian Edition](https://linuxmint.com/download_lmde.php)
+[Escuelas Linux](https://escuelaslinux.sourceforge.io/)
 
 
-
-# Cómo hacer funcionar Shutter-Enconder en MX Linux 10 y 11 de 32 bits Basado en Debian 10 y 10
-
-Dependencias
+## Dependencias
 
 ```
 sudo apt-get install default-jre libimage-exiftool-perl ffmpeg p7zip-full dcraw mkvtoolnix mediainfo youtube-dl git
 ```
 
 
-DESCARGAR EL CÓDIGO FUENTE:
+
+## Instalación
 
 ```
+mkdir AppLinux
+cd AppLinux
 git clone https://github.com/wachin/shutter-encoder
 ```
 

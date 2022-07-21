@@ -2,3 +2,4 @@
 
 https://github.com/wachin/shutter-encoder-Linux
 
+

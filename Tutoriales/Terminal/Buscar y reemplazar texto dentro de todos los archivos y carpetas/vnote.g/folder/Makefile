@@ -30,7 +30,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = vnote1.0.0
-DISTDIR = /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/build/.tmp/vnote1.0.0
+DISTDIR = /home/wachin/AppsLinux/vnote.git/build/.tmp/vnote1.0.0
 SUBTARGETS    =  \
 		sub-libs \
 		sub-src \
@@ -39,79 +39,79 @@ SUBTARGETS    =  \
 
 sub-libs-qmake_all:  FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro
+	cd libs/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro
 	cd libs/ && $(MAKE) -f Makefile qmake_all
 sub-libs: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile
 sub-libs-make_first: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile 
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile 
 sub-libs-all: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile all
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile all
 sub-libs-clean: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile clean
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile clean
 sub-libs-distclean: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile distclean
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile distclean
 sub-libs-install_subtargets: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile install
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile install
 sub-libs-uninstall_subtargets: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile uninstall
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile uninstall
 sub-src-qmake_all: sub-libs-qmake_all FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro
+	cd src/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro
 	cd src/ && $(MAKE) -f Makefile qmake_all
 sub-src: sub-libs FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile
 sub-src-make_first: sub-libs-make_first FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile 
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile 
 sub-src-all: sub-libs-all FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile all
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile all
 sub-src-clean: sub-libs-clean FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile clean
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile clean
 sub-src-distclean: sub-libs-distclean FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile distclean
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile distclean
 sub-src-install_subtargets: sub-libs-install_subtargets FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile install
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile install
 sub-src-uninstall_subtargets: sub-libs-uninstall_subtargets FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile uninstall
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile uninstall
 sub-tests-qmake_all: sub-libs-qmake_all FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro
+	cd tests/ && $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro
 	cd tests/ && $(MAKE) -f Makefile qmake_all
 sub-tests: sub-libs FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile
 sub-tests-make_first: sub-libs-make_first FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile 
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile 
 sub-tests-all: sub-libs-all FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile all
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile all
 sub-tests-clean: sub-libs-clean FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile clean
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile clean
 sub-tests-distclean: sub-libs-distclean FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile distclean
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile distclean
 sub-tests-install_subtargets: sub-libs-install_subtargets FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile install
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile install
 sub-tests-uninstall_subtargets: sub-libs-uninstall_subtargets FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile uninstall
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile uninstall
 
 Makefile: ../vnote.pro /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/i386-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -186,24 +186,24 @@ uninstall_subtargets: sub-libs-uninstall_subtargets sub-src-uninstall_subtargets
 
 sub-libs-check:
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile check
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile check
 sub-src-check: sub-libs-check
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile check
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile check
 sub-tests-check: sub-libs-check
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile check
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile check
 check: sub-libs-check sub-src-check sub-tests-check
 
 sub-libs-benchmark:
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile benchmark
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -f Makefile benchmark
 sub-src-benchmark: sub-libs-benchmark
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile benchmark
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -f Makefile benchmark
 sub-tests-benchmark: sub-libs-benchmark
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile benchmark
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -f Makefile benchmark
 benchmark: sub-libs-benchmark sub-src-benchmark sub-tests-benchmark
 install:install_subtargets  FORCE
 
@@ -220,13 +220,13 @@ distdir: sub-libs-distdir sub-src-distdir sub-tests-distdir FORCE
 
 sub-libs-distdir: FORCE
 	@test -d libs/ || mkdir -p libs/
-	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/libs
+	cd libs/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/libs/libs.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/libs
 
 sub-src-distdir: FORCE
 	@test -d src/ || mkdir -p src/
-	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/src
+	cd src/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/src/src.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/src
 
 sub-tests-distdir: FORCE
 	@test -d tests/ || mkdir -p tests/
-	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/VNOTE.GIT-TEST/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/tests
+	cd tests/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/wachin/AppsLinux/vnote.git/tests/tests.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/tests
 

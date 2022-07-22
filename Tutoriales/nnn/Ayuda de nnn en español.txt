@@ -1,4 +1,4 @@
-
+j
 Ayuda de nnn file manager 
 
 Para acceder a la ayuda de nnn, una vez ejecutado este en una terminal

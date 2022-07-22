@@ -1,29 +1,29 @@
-#!/bin/bash
+#! /bin/bash
 
-#
-# Run this to update the user name for the installation
-#
+# Run this to update the ID number of the micro SD external card into the SD card scripts
 
-APPDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-if [ -w "$APPDIR" ]; then
-	grep -RiIl ./ | xargs sed -i "s@USERX@$APPDIR@g"
+MICROSD=$(adb shell sm list-volumes public | perl -lane 'print $F[-1]')
+
+# Assign the first filename
+filename1="adb-pull-from-AndroidSD-to-Linux.sh"
+
+if [ -w "$filename1" ]; then
+	sed -i -e "s@^adb pull.*@adb pull /storage/$MICROSD/adb-SD-android/ $HOME/adb-linux-$(date '+%Y-%m-%d_%H.%M.%S')/@" $filename1
 else
-	echo "$APPDIR" is ok
+	echo "$filename1" is ok
 	exit 1
-fi	
-	
-# este script cambia en todos los archivos escribibles todas las palabras USERX por la ruta donde se encuentre
-# ejecutado el script, e incluso la cambiará en el mismo
-# How to replace a string in multiple files in linux command line
-# https://stackoverflow.com/a/57656052
-# Given you want to search for the string search and replace it with replace across multiple files, this is my battle-tested, one-line formula:
-# grep -RiIl 'search' | xargs sed -i 's/search/replace/g'
-# Quick grep explanation:
-# -R - recursive search
-# -i - case-insensitive
-# -I - skip binary files (you want text, right?)
-# -l - print a simple list as output. Needed for the other commands
-# The grep output is then piped to sed (through xargs) which is used to actually replace text. The -i flag will alter the file directly. Remove it for a kind of "dry run" mode.
+fi
+
+
+# Assign the second filename
+filename2="adb-push-from-Linux-to-AndroidSD.sh"
+
+if [ -w "$filename2" ]; then
+	sed -i -e "s@^adb push.*@adb push $HOME/adb-linux/ /storage/$MICROSD/adb-SD-android-$(date '+%Y-%m-%d_%H.%M.%S')/@" $filename2
+else
+	echo "$filename2" is yes
+	exit 1
+fi
 
 # Find and Replace String with sed
 # https://linuxize.com/post/how-to-use-sed-to-find-and-replace-string-in-files/
@@ -45,9 +45,17 @@ fi
 # Let’s see how we can use the sed command to search and replace text in files with some of its most commonly used options and flags.
 
 #
-# Tomado del orignal del colocador de la ruta del lanzador de Zotero para que funcione el Desktop
-# https://askubuntu.com/questions/84007/find-and-replace-text-within-multiple-files
-# https://askubuntu.com/a/84482
+# How to Replace a String in a File in Bash
+# Example 1: Replace File with the ‘sed’ Command
+# https://linuxhint.com/replace_string_in_file_bash/
 #
-#
-#
+
+# print last field from line + alternative for awk
+# https://unix.stackexchange.com/questions/70843/print-last-field-from-line-alternative-for-awk
+# https://unix.stackexchange.com/a/70850
+# Perl
+# The following was contributed by mr.spuratic (https://unix.stackexchange.com/users/31352/mr-spuratic) in a comment:
+# echo "foo bar baz " | perl -lane 'print $F[-1]'
+
+
+# 

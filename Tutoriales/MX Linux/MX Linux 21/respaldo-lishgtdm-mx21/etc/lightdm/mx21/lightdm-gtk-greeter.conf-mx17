@@ -1,0 +1,13 @@
+[greeter]
+background = #stretched:/usr/share/backgrounds/MXLinux/lightdm/myreflections_by_ant_ony/login.jpg
+theme-name = Blackbird
+xft-antialias = true
+xft-hintstyle = hintfull
+xft-rgba = rgb
+icon-theme-name = Papirus
+hide-user-image = false
+indicators = ~host;~spacer;~session;~a11y;~layout;~power
+keyboard = onboard
+a11y-states = ~keyboard
+position = 50%,center 65%,center
+

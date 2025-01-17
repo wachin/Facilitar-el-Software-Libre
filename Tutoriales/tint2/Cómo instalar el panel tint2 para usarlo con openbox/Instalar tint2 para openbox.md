@@ -72,5 +72,8 @@ Ahora deberías tener un icono en el extremo inferior izquierdo del panel que, a
 
 - Si necesitas iconos adicionales, puedes buscarlos en el directorio `/usr/share/icons/` buscando la palabra xfce4-appfinder pues allí hay otros bonitos del tema papirus-icon-theme, o usar tus propios iconos personalizados.
 - Para personalizar más aspectos de tint2, explora las demás opciones en la configuración.
+- Estoy también pensando en ponerle más cosas tomando como ejemplo a mi repositorio de fluxbox en el menú:
+- 
+[https://github.com/wachin/RisenPC-Fluxbox-ES/blob/main/menu](https://github.com/wachin/RisenPC-Fluxbox-ES/blob/main/menu)
 
 Espero que esta guía sea útil y fácil de seguir. 😊 Dios te bendiga.

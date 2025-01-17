@@ -1,0 +1,50 @@
+#!/usr/bin/make -f
+
+# Habilita verbose para ver los comandos que modifican archivos en el sistema de compilación
+export DH_VERBOSE = 1
+
+# Configura QMake
+override_dh_auto_configure:
+	qmake PREFIX=/usr
+
+# Compila el proyecto
+override_dh_auto_build:
+	dh_auto_build -- qmake && make
+
+# Instala el ejecutable y los archivos necesarios
+override_dh_auto_install:
+	# Instalamos el binario principal en /usr/bin
+	install -d $(DESTDIR)/usr/bin
+	install -m 755 build/src/vnote $(DESTDIR)/usr/bin/vnote
+	install -m 755 build/src/vnote_extra.rcc $(DESTDIR)/usr/bin/vnote_extra.rcc
+
+	# Instalamos las bibliotecas en /usr/lib
+	install -d $(DESTDIR)/usr/lib
+	install -m 755 build/libs/vtextedit/src/editor/libVTextEdit.so.1.0.0 $(DESTDIR)/usr/lib/libVTextEdit.so.1.0.0
+	ln -sf libVTextEdit.so.1.0.0 $(DESTDIR)/usr/lib/libVTextEdit.so
+	ln -sf libVTextEdit.so.1.0.0 $(DESTDIR)/usr/lib/libVTextEdit.so.1
+	ln -sf libVTextEdit.so.1.0.0 $(DESTDIR)/usr/lib/libVTextEdit.so.1.0
+
+	install -m 755 build/libs/vtextedit/src/libs/syntax-highlighting/libVSyntaxHighlighting.so.1.0.0 $(DESTDIR)/usr/lib/libVSyntaxHighlighting.so.1.0.0
+	ln -sf libVSyntaxHighlighting.so.1.0.0 $(DESTDIR)/usr/lib/libVSyntaxHighlighting.so
+	ln -sf libVSyntaxHighlighting.so.1.0.0 $(DESTDIR)/usr/lib/libVSyntaxHighlighting.so.1
+	ln -sf libVSyntaxHighlighting.so.1.0.0 $(DESTDIR)/usr/lib/libVSyntaxHighlighting.so.1.0
+
+	# Instalamos los iconos y el archivo .desktop en /usr/share
+	install -d $(DESTDIR)/usr/share/icons/hicolor/{16x16,32x32,48x48,64x64,128x128,256x256}/apps
+	install -m 644 src/data/core/logo/16x16/vnote.png $(DESTDIR)/usr/share/icons/hicolor/16x16/apps/vnote.png
+	install -m 644 src/data/core/logo/32x32/vnote.png $(DESTDIR)/usr/share/icons/hicolor/32x32/apps/vnote.png
+	install -m 644 src/data/core/logo/48x48/vnote.png $(DESTDIR)/usr/share/icons/hicolor/48x48/apps/vnote.png
+	install -m 644 src/data/core/logo/64x64/vnote.png $(DESTDIR)/usr/share/icons/hicolor/64x64/apps/vnote.png
+	install -m 644 src/data/core/logo/128x128/vnote.png $(DESTDIR)/usr/share/icons/hicolor/128x128/apps/vnote.png
+	install -m 644 src/data/core/logo/256x256/vnote.png $(DESTDIR)/usr/share/icons/hicolor/256x256/apps/vnote.png
+	install -d $(DESTDIR)/usr/share/icons/hicolor/scalable/apps
+	install -m 644 src/data/core/logo/vnote.svg $(DESTDIR)/usr/share/icons/hicolor/scalable/apps/vnote.svg
+
+	# Instalamos el archivo .desktop
+	install -d $(DESTDIR)/usr/share/applications
+	install -m 644 src/data/core/vnote.desktop $(DESTDIR)/usr/share/applications/vnote.desktop
+
+%:
+	dh $@
+ 

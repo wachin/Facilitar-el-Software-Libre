@@ -1,0 +1,20 @@
+
+
+**PARA CONVERTIR UN SOLO ARCHIVO**
+
+Markdown a docx
+
+    pandoc -o test.docx test.md
+    
+Ejemplo:
+   
+    pandoc -o "02. Es pertinente el Sermón I.A.docx" "02. Es pertinente el Sermón I.A.md"
+    
+    
+**CONVERSION EN MASA**    
+    
+Markdown a docx
+
+    for file in *.md; do pandoc -t docx "$file" -o "${file%.md}.docx"; done
+
+

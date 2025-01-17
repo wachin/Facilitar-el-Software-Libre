@@ -1,0 +1,16 @@
+
+
+audacious: Añadir enqueue (cola de reproducción) al menu contextual del administrador de archivos dolphin
+
+
+
+
+sudo apt-get install git
+
+
+mkdir -p ~/.local/share/kservices5/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/audacious-kde-service
+cd audacious-kde-service
+cp *.desktop ~/.local/share/kservices5/ServiceMenus
+echo "Dios les bendiga"

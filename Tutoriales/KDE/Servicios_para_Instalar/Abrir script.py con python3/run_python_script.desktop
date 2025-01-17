@@ -1,0 +1,10 @@
+[Desktop Entry]
+ServiceTypes=KonqPopupMenu/Plugin,application/x-python
+Actions=RunPythonScript
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action RunPythonScript]
+Name=Run Python Script
+Icon=python3
+Exec=python3 %f

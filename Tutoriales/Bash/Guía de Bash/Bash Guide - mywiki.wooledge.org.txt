@@ -1,0 +1,6 @@
+
+
+http://mywiki.wooledge.org/BashGuide
+
+
+https://guide.bash.academy/

@@ -1,0 +1,63 @@
+
+
+
+http://mxrepo.com/mx/repo/pool/main/m/mx-fluxbox/
+
+en el archivo:
+
+http://mxrepo.com/mx/repo/pool/main/m/mx-fluxbox/mx-fluxbox-data_22.04.02mx21_all.deb
+
+mx-fluxbox-data_22.04.02mx21_all.deb
+
+al extraerlo, en el archivo de texto:
+
+mx-fluxbox-data_22.04.02mx21_all/usr/share/mxflux/menu/menu-mx 
+
+dice:
+
+
+#the default versions of the submenus are located in /usr/share/mxflux/menu
+
+[begin] (Fluxbox)
+		[submenu] (All Apps)
+            [include] (~/.fluxbox/submenus/full_menu)
+            [separator]
+            [exec] (Update Menu)  {/usr/bin/mxfb-menu-generator}
+   [end]
+	[submenu] (Recent files) 
+			[include] (~/.fluxbox/submenus/recent_files_menu)
+			[separator]
+			[exec] (Update list) {mxfb-recent-files}
+		[end]
+	[separator]
+    [exec] (Browser) {sensible-browser}
+    [exec] (Email) {thunderbird}
+    [exec] (File manager ) {exo-open $HOME/.fluxbox} 
+    [exec] (Help ) {mxfbhelp}
+    [exec] (Music) {deadbeef}
+    [exec] (Run ) {fbrun} 
+    [exec] (Terminal) {roxterm} 
+    [separator]
+    [submenu] (Appearance)
+    [include] (~/.fluxbox/submenus/appearance)
+    [end]
+    [submenu] (Settings)
+    [include] (~/.fluxbox/submenus/settings)
+    [end]
+    [submenu] (Out of sight)
+        [include] (~/.fluxbox/submenus/out-of-sight)
+    [end]
+    [submenu] (Leave)
+        [exec] (Refresh) { fluxbox-remote restart; idesktoggle idesk refresh }
+        [exec] (Suspend ) {sudo 'pm-suspend'}
+        [exit] (Logout  ) 
+        [exec] (Reboot  ) {sudo /sbin/reboot} 
+        [exec] (Shutdown) {sudo /sbin/halt}
+    [end]
+[end]
+
+
+
+esto quiere decir que las siguientes opciones podrían funcionar
+
+

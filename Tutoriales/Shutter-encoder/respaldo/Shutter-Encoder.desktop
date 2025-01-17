@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=Shutter-Encoder
+Exec=/usr/bin/java -jar /home/wachin/AppsLinux/shutter-encoder-Linux/Shutter-Encoder.jar
+Icon=/home/wachin/AppsLinux/shutter-encoder-Linux/src/contents/icon.png
+Terminal=false

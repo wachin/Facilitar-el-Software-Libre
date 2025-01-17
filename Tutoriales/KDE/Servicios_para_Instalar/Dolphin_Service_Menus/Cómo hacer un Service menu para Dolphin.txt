@@ -1,0 +1,5 @@
+
+
+https://develop.kde.org/docs/extend/dolphin/service-menus/
+
+https://colaboratorio.net/javierinsitu/program/2017/potenciando-dolphin-mediante-los-menus-de-servicios/

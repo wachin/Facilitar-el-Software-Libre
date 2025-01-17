@@ -1,0 +1,13 @@
+
+
+
+# También estoy tratando con yarn (si un proyecto de node lo soporta tiene que tener el archivo .yarn.lock):
+
+https://classic.yarnpkg.com/en/docs/install#debian-stable
+
+Install via npm
+It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system.
+
+Once you have npm installed you can run the following both to install and upgrade Yarn:
+
+    sudo npm install --global yarn 

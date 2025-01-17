@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=searchhere;
+X-KDE-Priority=TopLevel
+
+[Desktop Action searchhere]
+Name=Buscar aquí con CatFish
+Icon=utilities-terminal
+Exec=catfish %f

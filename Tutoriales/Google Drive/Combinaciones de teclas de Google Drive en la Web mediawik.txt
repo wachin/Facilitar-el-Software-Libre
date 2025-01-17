@@ -1,0 +1,500 @@
+<div style="margin-left:0cm;margin-right:0cm;"></div>
+
+<div style="margin-left:0cm;margin-right:0cm;">'''Combinaciones de teclas de Google Drive en la Web'''</div>
+
+<div style="margin-left:0cm;margin-right:0cm;">Puedes usar combinaciones de teclas en Google Drive para desplazarte, seleccionar y editar elementos.</div>
+
+
+<div style="margin-left:0cm;margin-right:0cm;">Nota: Es posible que algunas combinaciones no funcionen en todos los teclados o idiomas.</div>
+
+<div style="margin-left:0cm;margin-right:0cm;">[https://support.google.com/drive/answer/2563044?hl=es&visit_id=638624699894620355-1033521224&p=docslist_shortcuts&rd=1&co=GENIE.Platform%3DDesktop&oco=1 https://support.google.com/drive/answer/2563044?hl=es&visit_id=638624699894620355-1033521224&p=docslist_shortcuts&rd=1&co=GENIE.Platform%3DDesktop&oco=1]</div>
+
+<div style="margin-left:0cm;margin-right:0cm;">A continuación,&nbsp;, encontrarás una lista de las combinaciones de teclas que puedes usar con Google Drive en la Web.</div><div style="color:#1f1f1f;">Para mostrar la lista de combinaciones de teclas en Google Drive, pulsa Ctrl + / (Windows y ChromeOS) o Comando + / (Mac).</div>
+
+<span style="color:#1f1f1f;">'''Importante:'''</span><span style="color:#1f1f1f;">&nbsp;Google Drive ha actualizado las combinaciones de teclas para que sea más fácil desplazarte por las primeras letras. Utiliza la siguiente tabla para ver los accesos directos antiguos y nuevos para Windows/ChromeOS y Mac OS.</span>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Navegación y vistas'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir al panel de navegación (lista de carpetas)
+|| '''g&nbsp;'''y luego&nbsp;'''ng'''&nbsp;y luego&nbsp;'''f'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''nAlt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''f'''
+|| '''Opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''nOpción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''f'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir a la vista de elementos
+|| '''g'''&nbsp;y luego&nbsp;'''l'''
+|| '''Alt'''&nbsp;+&nbsp;'''g&nbsp;'''y luego&nbsp;'''i'''
+|| '''opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''i'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Alternar entre la cuadrícula y la lista en la vista de elementos
+|| '''v'''
+|| '''Alt'''&nbsp;+&nbsp;'''v&nbsp;'''y luego&nbsp;'''l'''
+|| '''Opción'''&nbsp;+&nbsp;'''v'''&nbsp;y luego'''l'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir al contenido de la página
+|| '''g'''&nbsp;y luego&nbsp;'''c'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''c'''
+|| '''Opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''c'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir al panel de detalles
+|| '''g'''&nbsp;y luego&nbsp;'''d'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''d'''
+|| '''Opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''d'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir a la parte superior de la aplicación (barra Google)
+|| '''g'''&nbsp;y luego&nbsp;'''t'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''t'''
+|| '''Opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''t'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir al estado de la descarga
+|| '''g'''&nbsp;y luego&nbsp;'''a'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''a'''
+|| '''opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''a'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir al estado de la subida
+|| '''g'''&nbsp;y luego&nbsp;'''u'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''u'''
+|| '''opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''u'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mostrar u ocultar el panel de aprobaciones
+|| '''c'''
+|| '''Alt'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''e'''
+|| '''opción'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''e'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mostrar u ocultar el panel de detalles
+|| '''d'''
+|| '''Alt'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''d'''
+|| '''opción'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''d'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mostrar u ocultar el panel de actividad
+|| '''n'''
+|| '''Alt'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''a'''
+|| '''opción'''&nbsp;+&nbsp;'''v'''&nbsp;y luego&nbsp;'''a'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Seleccionar elementos'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar o desmarcar un elemento
+|| '''x'''
+|| '''Mayús'''&nbsp;+&nbsp;'''espacio'''
+|| '''Mayús'''&nbsp;+&nbsp;'''espacio'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar el elemento siguiente de debajo
+|| '''jflecha hacia abajo'''
+|| '''flecha hacia abajo'''
+|| '''flecha hacia abajo'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar el elemento siguiente de encima
+|| '''kflecha hacia arriba'''
+|| '''flecha hacia arriba'''
+|| '''flecha hacia arriba'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar el elemento siguiente de la izquierda
+|| '''hflecha hacia la izquierda'''
+|| '''flecha hacia la izquierda'''
+|| '''flecha hacia la izquierda'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar el elemento siguiente de la derecha
+|| '''lflecha hacia la derecha'''
+|| '''flecha hacia la derecha'''
+|| '''flecha hacia la derecha'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ampliar la selección hacia abajo
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia abajo'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia abajo'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia abajo'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ampliar la selección hacia arriba
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia arriba'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia arriba'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia arriba'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ampliar la selección hacia la izquierda
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ampliar la selección hacia la derecha
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la derecha'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la derecha'''
+|| '''Mayús'''&nbsp;+&nbsp;'''flecha hacia la derecha'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar todos los elementos visibles
+|| '''Mayús'''&nbsp;+&nbsp;'''a'''
+|| '''Ctrl'''&nbsp;+&nbsp;'''a'''
+|| '''Comando'''&nbsp;+&nbsp;'''a'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Anular todas las selecciones
+|| '''Mayús'''&nbsp;+&nbsp;'''n'''
+|| '''Esc'''
+|| '''Esc'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Pasar de un elemento a otro'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir hacia abajo sin cambiar la selección
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia abajo'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''flecha hacia abajo'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia abajo'''
+|| '''Comando'''&nbsp;+&nbsp;'''flecha hacia abajo'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir hacia arriba sin cambiar la selección
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia arriba'''(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''flecha hacia arriba'''&nbsp;(Mac)
+|| '''ctrl'''&nbsp;+&nbsp;'''flecha hacia arriba'''
+|| '''Comando'''&nbsp;+&nbsp;'''flecha hacia arriba'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir hacia la izquierda sin cambiar la selección
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''&nbsp;(Mac)
+|| '''ctrl'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''
+|| '''Comando'''&nbsp;+&nbsp;'''flecha hacia la izquierda'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ir hacia la derecha sin cambiar la selección
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia la derecha'''(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''flecha hacia la derecha'''&nbsp;(Mac
+|| '''Ctrl'''&nbsp;+&nbsp;'''flecha hacia la derecha'''
+|| '''Comando'''&nbsp;+&nbsp;'''flecha hacia la derecha'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Realizar una acción con los elementos seleccionados'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Abrir los elementos seleccionados
+|| '''Introo'''
+|| '''intro'''
+|| '''intro'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Abrir los elementos seleccionados en una pestaña nueva
+|| '''Ctrl'''&nbsp;+&nbsp;'''Intro'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''return'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Intro'''
+|| '''Comando'''&nbsp;+&nbsp;'''Intro'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Cambiar el nombre de los elementos seleccionados
+|| '''d'''
+|| '''F2'''
+|| '''F2'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Compartir los elementos seleccionados
+|| '''.'''&nbsp;(punto)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''a'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''a'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mover los elementos seleccionados a una carpeta nueva
+|| '''z'''
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''m'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''m'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Destacar o dejar de destacar los elementos seleccionados
+|| '''s'''
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''s'''
+|| '''Comando'''&nbsp;+&nbsp;'''Opción'''&nbsp;+&nbsp;'''s'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Crear accesos directos a los elementos seleccionados
+|| '''Mayús'''&nbsp;+&nbsp;'''z'''
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''r'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''r'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Eliminar los elementos seleccionados
+|| '''<nowiki>#</nowiki>'''&nbsp;o&nbsp;'''Alt'''&nbsp;+&nbsp;'''Retroceso'''&nbsp;(Chrome OS)
+
+'''<nowiki>#</nowiki>'''&nbsp;o&nbsp;'''Supr'''&nbsp;(Windows)
+
+'''<nowiki>#</nowiki>'''&nbsp;o&nbsp;'''Fn'''&nbsp;+&nbsp;'''Supr'''&nbsp;(Mac)
+|| '''Supr'''&nbsp;o&nbsp;'''<nowiki>#</nowiki>'''
+|| '''Supr'''&nbsp;o&nbsp;'''<nowiki>#</nowiki>'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Copiar URLs de los elementos seleccionados en el portapapeles
+|| '''Ctrl'''&nbsp;+&nbsp;'''c'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''c'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''l'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''l'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Copiar títulos de los elementos seleccionados en el portapapeles
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''c'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''c'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''c'''
+|| '''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''c'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Cortar los elementos seleccionados en el portapapeles
+|| '''Ctrl'''&nbsp;+&nbsp;'''x'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''x'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''x'''
+|| '''Comando'''&nbsp;+&nbsp;'''x'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Pegar elementos desde el portapapeles como un acceso directo
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''
+|| '''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Pegar o mover los elementos seleccionadosdesde portapapeles
+|| '''Ctrl'''&nbsp;+&nbsp;'''v'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''v'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''
+|| '''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Crear un acceso directo del elemento seleccionado
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''v'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''r'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''r'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Rehacer la última acción deshecha
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''z'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''z'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''y'''
+|| '''Comando'''&nbsp;+&nbsp;'''y'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Subir archivo
+|| '''Mayús'''&nbsp;+&nbsp;'''u'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''u'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''u'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Subir carpeta
+|| '''Mayús'''&nbsp;+&nbsp;'''i'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''i'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''i'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Crear elementos'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Documento
+|| '''Mayús'''&nbsp;+&nbsp;'''t'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''t'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''t'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Presentación
+|| '''Mayús'''&nbsp;+&nbsp;'''p'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''p'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''p'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Hoja de cálculo
+|| '''Mayús'''&nbsp;+&nbsp;'''s'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''s'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''s'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Dibujo
+|| '''Mayús'''&nbsp;+&nbsp;'''d'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''d'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''d'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Carpeta
+|| '''Mayús'''&nbsp;+&nbsp;'''f'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''f'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''f'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Formulario
+|| '''Mayús'''&nbsp;+&nbsp;'''o'''
+|| '''Alt'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''o'''
+|| '''Control'''&nbsp;+&nbsp;'''c'''&nbsp;y luego&nbsp;'''o'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Abrir menús'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Menú Crear
+|| '''t'''
+|| '''Alt'''&nbsp;+&nbsp;'''n'''
+|| '''Control'''&nbsp;+&nbsp;'''n'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Menú Más acciones
+|| '''a'''
+|| '''Mayús'''&nbsp;+&nbsp;'''F10'''
+
+'''Alt'''&nbsp;+&nbsp;'''a'''
+|| '''Mayús'''&nbsp;+&nbsp;'''F10'''
+
+'''Control'''&nbsp;+&nbsp;'''a'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Menú Acciones de carpeta actual
+|| '''f'''
+|| '''Alt'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''a'''
+|| '''Control'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''a'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Menú Ordenar
+|| '''r'''
+|| '''Alt'''&nbsp;+&nbsp;'''r'''
+|| '''Control'''&nbsp;+&nbsp;'''r'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Menú Configuración
+|| '''t'''
+|| '''Control'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''s'''
+|| '''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''s'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Acciones de la aplicación'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mostrar la lista de combinaciones de teclas
+|| '''Mayús'''&nbsp;+&nbsp;'''/'''
+
+'''Ctrl'''&nbsp;+&nbsp;'''/'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''/'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''/'''
+|| '''Comando'''&nbsp;+&nbsp;'''/'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Seleccionar la siguiente densidad visual(altura de filas y espacio entre elementos de la vista de lista)
+|| '''q'''&nbsp;y luego&nbsp;'''q'''
+|| '''Alt'''&nbsp;+&nbsp;'''t'''&nbsp;y luego&nbsp;'''q'''
+|| '''Control'''&nbsp;+&nbsp;'''t'''&nbsp;y luego&nbsp;'''q'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Buscar/buscar siguiente
+|| '''Ctrl'''&nbsp;+&nbsp;'''f'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''f'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''f'''
+|| '''Comando'''&nbsp;+&nbsp;'''f'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Imprimir
+|| '''Ctrl'''&nbsp;+&nbsp;'''p'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''p'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''p'''
+|| '''Comando'''&nbsp;+&nbsp;'''p'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Deshacer la última acción
+|| '''Ctrl'''&nbsp;+&nbsp;'''z'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''z'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''z'''
+|| '''Comando'''&nbsp;+&nbsp;'''z'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Rehacer la última acción deshecha
+|| '''Ctrl'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''z'''&nbsp;(Windows y ChromeOS)
+
+'''Comando'''&nbsp;+&nbsp;'''Mayús'''&nbsp;+&nbsp;'''z'''&nbsp;(Mac)
+|| '''Ctrl'''&nbsp;+&nbsp;'''y'''
+|| '''Comando'''&nbsp;+&nbsp;'''y'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Mostrar el último mensaje
+|| '''m'''
+|| '''Alt'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''k'''
+|| '''Opción'''&nbsp;+&nbsp;'''g'''&nbsp;y luego&nbsp;'''k'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Buscar en tu unidad de Drive
+|| '''/'''
+|| '''/'''
+|| '''/'''
+|-
+|}
+<div style="color:#1f1f1f;">&nbsp;</div>
+
+
+{| style="border-spacing:0;width:17cm;"
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| '''Descripción del acceso directo'''
+|| '''Acceso directo antiguo'''
+|| '''Nuevo acceso directo de teclas para Windows y ChromeOS'''
+|| '''Nuevo acceso directo para macOS'''
+|- style="background-color:#e3e3e3;border:0.5pt solid #a9acaa;padding:0.049cm;"
+| colspan="4"  style="color:#1f1f1f;" | '''Acciones en modo de vista previa'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Previsualizar los elementos
+|| '''p'''
+|| '''Ctrl'''&nbsp;+&nbsp;'''Alt'''&nbsp;+&nbsp;'''p'''
+|| '''Comando'''&nbsp;+&nbsp;'''opción'''&nbsp;+&nbsp;'''p'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Cerrar
+|| '''Esc'''
+|| '''Esc'''
+|| '''Esc'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Reproducir y pausar
+|| '''espacio'''
+|| '''espacio'''
+|| '''espacio'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Ampliar
+|| '''+'''&nbsp;o&nbsp;'''<nowiki>=</nowiki>'''
+|| '''+'''&nbsp;o&nbsp;'''<nowiki>=</nowiki>'''
+|| '''+'''&nbsp;o&nbsp;'''<nowiki>=</nowiki>'''
+|- style="background-color:#ffffff;border:0.5pt solid #a9acaa;padding:0.049cm;"
+|| Alejar
+|| '''-'''
+|| '''-'''
+|| '''-'''
+|-
+|}
+<div style="color:#1f1f1f;"></div><div style="color:#1f1f1f;margin-left:0cm;margin-right:0cm;">Envía tus comentarios sobre este artículo</div>
+
+
+

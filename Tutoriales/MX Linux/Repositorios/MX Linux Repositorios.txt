@@ -1,0 +1,23 @@
+
+
+Repos — MX-21 – MX Linux
+https://mxlinux.org/uncategorized/repos-mx-21/
+
+
+
+
+http://mxrepo.com/mx/repo/pool/main/
+
+
+Ejemplo de un paquete especial:
+
+mx-fluxbox-data
+
+
+http://mxrepo.com/mx/repo/pool/main/m/mx-fluxbox/
+http://mxrepo.com/mx/repo/pool/main/m/mx-fluxbox/mx-fluxbox-data_22.04.02mx21_all.deb
+
+
+repositorios para MX Linux de antiX
+
+http://iso.mxrepo.com/antix/buster/pool/main/l/

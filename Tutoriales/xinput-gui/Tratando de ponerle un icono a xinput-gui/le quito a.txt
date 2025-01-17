@@ -1,0 +1,8 @@
+
+
+
+/home/wachin/Dev-wachin/xinput-gui/xinput_gui/gui/win_main.py
+
+
+
+        self.win.iconbitmap('xinput-gui.png')

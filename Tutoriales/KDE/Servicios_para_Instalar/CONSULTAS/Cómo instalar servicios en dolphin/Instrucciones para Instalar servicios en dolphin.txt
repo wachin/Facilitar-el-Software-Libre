@@ -1,0 +1,14 @@
+ 
+
+Para instalar servicios de dolphin en Xubuntu 18.04 debemos de entender que son para KDE5 y sedeben instalar en:
+
+/usr/share/kservices5/ServiceMenus/
+
+como root
+
+Algunas aplicaciones (ejem. Peazip) puede que hayan instalado servicios para KDE4 en:
+
+/usr/share/kde4/services/ServiceMenus/
+
+para que funcionen en KDE5 hay que copiarlas de allí y pegarlas en la anterior ruta mencionada, como root.
+ 

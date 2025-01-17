@@ -1,0 +1,56 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: vnote
+Source: https://github.com/vnotex/vnote/
+
+Files: *
+Copyright: COPYING.LESSER
+
+vnotex/vnote is licensed under the
+GNU Lesser General Public License v3.0
+
+Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.
+
+Permissions
+
+- Commercial use
+- Modification
+- Distribution
+- Patent use
+- Private use 
+
+
+Limitations
+
+x Liability
+x Warranty 
+
+
+Conditions
+
+- License and copyright notice
+- Disclose source
+- State changes
+- Same license (library) 
+
+Full license version can be found in:
+https://github.com/vnotex/vnote/blob/master/COPYING.LESSER
+
+
+Files: debian/*
+Copyright: 2022 Washington Indacochea Delgado <wachin.id@gmail.com>
+License: LGPL-3.0+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-3".

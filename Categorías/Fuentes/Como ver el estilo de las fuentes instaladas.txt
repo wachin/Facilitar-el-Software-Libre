@@ -1,0 +1,14 @@
+
+
+Installed fonts can be filtered also on the base of a specific property. For example, suppose we want to get information only about fonts which has the “DemiLight” style. We would run:
+
+
+Ejemplo para la fuente iosevka poner:
+
+
+$ fc-list :style=Extended
+
+
+
+How to install and manage fonts on Linux - Linux Tutorials - Learn Linux Configuration
+https://linuxconfig.org/how-to-install-and-manage-fonts-on-linux

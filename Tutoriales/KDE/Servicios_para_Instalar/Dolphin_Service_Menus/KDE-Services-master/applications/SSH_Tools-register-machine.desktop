@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=SSH-Tools;Dolphin-Tools;
+Exec=/usr/share/applications/SSH_Tools-register-machine.sh
+Icon=ks-server
+Name=Registered Servers
+Name[de]=Registrierte Server
+Name[es]=Servidores Registrados
+Name[fr]=Serveurs Enregistrés
+Name[it]=Server Registrati
+Name[ja]=登録された使用人
+Name[ko]=등록 하인
+Name[pt]=Servidores Registrados
+Name[ru]=Зарегестрированные серверы
+Name[uk]=Зареєстровані сервери
+Name[zh_CN]=已注册服务器
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

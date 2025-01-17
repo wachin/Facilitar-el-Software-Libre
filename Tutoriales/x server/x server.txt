@@ -1,0 +1,16 @@
+
+
+Problems updating
+https://www.q4os.org/forum/viewtopic.php?id=3225
+https://www.q4os.org/forum/viewtopic.php?pid=18566#p18566<  
+
+sudo systemctl unmask acpi-support.service
+sudo systemctl unmask acpid.service
+
+
+
+X server not running [SOLVED]
+https://www.linux.org/threads/x-server-not-running-solved.41002/
+<   
+
+sudo apt install xserver-xorg x11-xserver-utils xfonts-base x11-utils xinit

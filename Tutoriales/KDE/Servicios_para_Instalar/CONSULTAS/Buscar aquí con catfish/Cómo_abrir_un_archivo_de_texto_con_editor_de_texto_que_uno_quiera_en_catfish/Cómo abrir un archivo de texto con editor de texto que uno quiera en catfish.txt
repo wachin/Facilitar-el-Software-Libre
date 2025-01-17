@@ -1,0 +1,42 @@
+
+
+
+
+
+Poner en la terminal:
+
+sudo gedit /usr/share/applications/defaults.list
+
+Si usted tiene instalado gedit busque allí la siguiente línea:
+
+text/plain
+
+yo tengo instalado gedit y me aparece:
+
+text/plain=gedit.desktop
+
+cambiela por el nombre del archivo desktop del editor de texto que usted quiera, que tenga instalado en: 
+
+/usr/share/applications/ 
+
+ejemplo:
+
+
+para pluma
+Si es que usted lo tiene instalado, el archvio desktop es este:
+
+/usr/share/applications/pluma.desktop
+
+entonces usted tiene que poner así:
+
+text/plain=pluma.desktop
+
+
+
+EXPERIMENTAL:
+
+He creado una copia del archivo y lo he puesto en:
+
+/home/wachin/.local/share/applications/defaults.list
+
+allí lo estoy modificando a ver que pasa

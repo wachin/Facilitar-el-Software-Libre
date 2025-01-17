@@ -1,0 +1,23 @@
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│ Proyecto Facilitar el Software Libre en el Ecuador      │
+#	│   http://facilitarelsoftwarelibre.blogspot.com/         │
+#	│      por Washington Indacochea Delgado (Wachín)         │
+#	│       E-Mail: wachin.id@gmail.com en Ecuador            │
+#	│     Licencia Pública General de GNU version 2           │    
+#	│  En español: http://es.tldp.org/Otros/gples/gples.html  │
+#	│  en inglés: https://www.gnu.org/licenses/gpl-2.0.html   │
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+[Desktop Entry]
+Type=Action
+Tooltip=Enivar a KDEconnect
+Name=KDEconnect-Send 
+Profiles=profile-zero;
+Icon=kdeconnect
+
+[X-Action-Profile profile-zero]
+MimeTypes=all/all;
+Exec=kdeconnect-handler %F
+Name=Default profile
+
+

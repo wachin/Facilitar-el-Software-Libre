@@ -1,0 +1,6 @@
+
+
+Si el resultado de tree es muy grande no se podría ver todo en una terminal así que lo mejor es pasarlo a un archivo para luego verlo en un editor d etextos
+
+$ tree > resultado.txt
+

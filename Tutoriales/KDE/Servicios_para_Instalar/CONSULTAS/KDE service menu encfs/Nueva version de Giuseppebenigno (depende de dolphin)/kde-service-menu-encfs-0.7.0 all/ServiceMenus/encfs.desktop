@@ -1,0 +1,72 @@
+#
+# 	Part of kde-service-menu-encfs Version 0.7.0
+# 	Copyright (C) 2007-2018 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Icon=folder-locked
+TryExec=encfs-kdialog
+Actions=mount_umount_create;_SEPARATOR_;changePasswd;info;configure;
+Name=encfs service menu
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=&encFS
+
+################################################################################
+
+[Desktop Action mount_umount_create]
+Icon=preferences-desktop-cryptography
+Name=Mount, unmount or create
+Name[ar]=ضم، ألغ الضم أو أنشئ
+Name[de]=Einbinden, lösen oder schaffen
+Name[fr]=Monter, démonter ou créer
+Name[it]=Monta, smonta o crea
+Name[ru]=Монтировать, размонтировать или создавать
+Exec=encfs-kdialog manage %f
+
+################################################################################
+
+[Desktop Action changePasswd]
+Icon=dialog-password
+Name=Change password
+Name[ar]=غيّر كلمة المرور
+Name[de]=Passwort ändern
+Name[fr]=Changer le mot de passe
+Name[it]=Cambia password
+Name[ru]=Сменить пароль
+Exec=encfs-kdialog chpassword %f
+
+[Desktop Action info]
+Icon=help-about
+Name=Information
+Name[ar]=معلومات
+Name[de]=Informationen
+Name[fr]=Informations
+Name[it]=Informazioni
+Name[ru]=Информация
+Exec=encfs-kdialog info %f
+
+[Desktop Action configure]
+Icon=configure
+Name=Configure
+Name[ar]=إعدادات
+Name[de]=einrichten
+Name[fr]=Configuration
+Name[it]=Configura
+Name[ru]=конфигурировать
+Exec=encfs-kdialog configure

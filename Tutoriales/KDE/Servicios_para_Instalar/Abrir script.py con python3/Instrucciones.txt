@@ -1,0 +1,6 @@
+
+
+
+mkdir -p ~/.local/share/kservices5/ServiceMenus
+
+

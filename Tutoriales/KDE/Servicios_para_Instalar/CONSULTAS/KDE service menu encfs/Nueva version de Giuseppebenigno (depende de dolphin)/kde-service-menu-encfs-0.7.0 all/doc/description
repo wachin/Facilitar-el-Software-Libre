@@ -1,0 +1,9 @@
+One KDE service menu for encFS encrypted directories.
+
+With this script you can:
+- (automagic) mount / unmount / create an directory with encFS
+- change password of an encFS encrypted directory
+- retrieve information of encFS directory
+- configure this script
+
+Enjoy

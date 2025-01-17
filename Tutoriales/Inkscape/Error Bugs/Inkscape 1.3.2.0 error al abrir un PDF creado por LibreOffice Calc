@@ -1,0 +1,34 @@
+Estoy usando Debian 12 de 32 bit donde tengo instalado Inkscape 1.3.2.0 y me ha salido este mensaje de error:
+<pre>
+ 0# Inkscape::Application::crash_handler(int) in /usr/bin/../lib/i386-linux-gnu/inkscape/libinkscape_base.so.1.3.2.0
+ 1# 0xB7F73554 in linux-gate.so.1
+ 2# SPItem::invoke_show(Inkscape::Drawing&, unsigned int, unsigned int) in /usr/bin/../lib/i386-linux-gnu/inkscape/libinkscape_base.so.1.3.2.0
+ 3# Inkscape::UI::Dialog::PreviewDrawing::construct() in /usr/bin/../lib/i386-linux-gnu/inkscape/libinkscape_base.so.1.3.2.0
+ 4# 0xB748C72A in /usr/bin/../lib/i386-linux-gnu/inkscape/libinkscape_base.so.1.3.2.0
+ 5# 0xB5FAEA5E in /lib/i386-linux-gnu/libglibmm-2.4.so.1
+ 6# 0xB620F0C1 in /lib/i386-linux-gnu/libglib-2.0.so.0
+ 7# g_main_context_dispatch in /lib/i386-linux-gnu/libglib-2.0.so.0
+ 8# 0xB620E879 in /lib/i386-linux-gnu/libglib-2.0.so.0
+ 9# g_main_context_iteration in /lib/i386-linux-gnu/libglib-2.0.so.0
+10# g_application_run in /usr/bin/../lib/i386-linux-gnu/inkscape/../libgio-2.0.so.0
+11# Gio::Application::run(int, char**) in /lib/i386-linux-gnu/libgiomm-2.4.so.1
+12# main in inkscape
+13# __libc_start_call_main at ../sysdeps/nptl/libc_start_call_main.h:58
+14# __libc_start_main at ../csu/libc-start.c:347
+15# _start in inkscape
+</pre>
+<details><summary>System info</summary>
+Inkscape 1.3.2 (091e20ef0f, 2023-11-25)
+
+    GLib version:     2.74.6
+    GTK version:      3.24.38
+    glibmm version:   2.66.5
+    gtkmm version:    3.24.7
+    libxml2 version:  2.9.14
+    libxslt version:  1.1.35
+    Cairo version:    1.16.0
+    Pango version:    1.50.12
+    HarfBuzz version: 6.0.0
+
+    OS version:       Debian GNU/Linux 12 (bookworm)
+</details>

@@ -1,0 +1,3 @@
+/usr/share/Thunar
+/usr/share/Thunar/sendto
+/usr/share/Thunar/sendto/kdeconnect-send-thunar.desktop 

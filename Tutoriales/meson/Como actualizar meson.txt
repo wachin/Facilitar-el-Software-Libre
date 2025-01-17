@@ -1,0 +1,44 @@
+
+
+
+Como actualizar meson
+
+sudo apt remove meson
+
+sudo apt install python3-pip
+
+
+pip3 install --user meson
+
+
+
+Actualizar el path cambiando tuusuario por su nombre de usuario
+
+export PATH=$PATH:/home/tuusuario/.local/bin
+
+en mi caso así:
+
+export PATH=$PATH:/home/wachin/.local/bin
+
+Abrir el archivo
+
+.bashrc 
+
+y pegarlo allí, guardar y cerrar, y REINICIAR EL ORDENADOR
+
+
+y entrar otra vez y para comprobar poner:
+
+meson --version
+
+
+
+CONSULTAS:
+
+Update meson on Ubuntu 18.04.4 LTS -- force update
+https://askubuntu.com/a/1216209/145772
+
+Using Meson
+https://mesonbuild.com/Quick-guide.html
+
+

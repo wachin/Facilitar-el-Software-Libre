@@ -1,0 +1,27 @@
+
+
+Poner en la terminal:
+
+sudo gedit /usr/share/applications/defaults.list
+
+Si usted tiene instalado nautilus busque allí la siguiente línea:
+
+inode/directory=nautilus-folder-handler.desktop
+
+cambiela por el nombre del archivo desktop que tenga instalado en: 
+
+/usr/share/applications/ 
+
+ejemplo:
+
+
+para Dolphin
+Si es que usted lo tiene instalado, el archvio desktop es este:
+
+/usr/share/applications/org.kde.dolphin.desktop
+
+entonces usted tiene que poner así:
+
+inode/directory=org.kde.dolphin.desktop
+
+

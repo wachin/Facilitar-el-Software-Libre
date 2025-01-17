@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Bash
+Name[es]=Bas
+Comment=Bash
+Comment[es]=Bash
+Exec=/bin/bash
+Icon=application-x-shellscript
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;System;
+Keywords=console;

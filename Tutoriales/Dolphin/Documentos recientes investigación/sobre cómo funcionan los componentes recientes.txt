@@ -1,0 +1,14 @@
+wachin@mx21:~
+$ /usr/bin/systemsettings5
+file:///usr/share/kpackage/genericqml/org.kde.systemsettings.sidebar/contents/ui/SubCategoryPage.qml:142:9: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+file:///usr/share/kpackage/genericqml/org.kde.systemsettings.sidebar/contents/ui/SubCategoryPage.qml:132:9: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+file:///usr/lib/i386-linux-gnu/qt5/qml/org/kde/kirigami.2/private/RefreshableScrollView.qml:137:13: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+file:///usr/lib/i386-linux-gnu/qt5/qml/org/kde/kirigami.2/private/RefreshableScrollView.qml:137:13: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+kf.activitiesstats: KActivities: Database is not open:  "kactivities_db_resources_2982650816_readonly" "/home/wachin/.local/share/kactivitymanagerd/resources/database" QSqlError("14", "Error al abrir la base de datos", "unable to open database file")
+QSqlDatabasePrivate::database: unable to open database: "unable to open database file Error al abrir la base de datos"
+kf.activitiesstats: KActivities: Database is not open:  "kactivities_db_resources_2982650816_readonly" "/home/wachin/.local/share/kactivitymanagerd/resources/database" QSqlError("14", "Error al abrir la base de datos", "unable to open database file")
+kf.activitiesstats: KActivities ERROR: There is no database. This probably means that you do not have the Activity Manager running, or that something else is broken on your system. Recent documents and alike will not work!
+"audio/mp4" hasDefinitionFile: false
+QQmlComponent: Must provide an engine before calling setData
+QQmlComponent: Must provide an engine before calling create
+Violación de segmento

@@ -1,0 +1,9 @@
+ 
+
+ En Debin 11 dejaron de aparecer los iconos de minimizar y maximizar en Dolphin usando Fluxbox, y hasta el 2024 en Debian 12 no aparecen, he pasado muchas horas buscando en internet alguna solucion pero no la encuentro, ninguna funciona.
+
+In Debin 11 the minimize and maximize icons stopped appearing in Dolphin using Fluxbox, and they do not appear in Debian 12 until 2024. I have spent many hours searching the internet for a solution but I can't find it, none works
+
+
+20240907 Missing minimize and maximize buttons Dolphin in Fluxbox Debian 12
+https://imgur.com/a/ccuBaa9

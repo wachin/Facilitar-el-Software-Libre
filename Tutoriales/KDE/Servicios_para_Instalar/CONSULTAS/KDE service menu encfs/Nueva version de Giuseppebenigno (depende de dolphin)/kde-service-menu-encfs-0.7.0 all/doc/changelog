@@ -1,0 +1,84 @@
+kde-service-menu-encfs (0.7) unstable; urgency=medium
+
+  * Kde 5
+  * Work with directories whose names have spaces
+  * Fixed many little bugs
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Wed, 25 Apr 2018 19:16:07 +0200
+
+kde-service-menu-encfs (0.6) unstable; urgency=medium
+
+  * Added 4th argument in script (destination directory) for use in your custom desktop files.
+  * Added option for open or no file manager after mount operation.
+  * Added help screen in text mode.
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Thu, 21 Feb 2013 19:16:07 +0200
+
+kde-service-menu-encfs (0.5.2) unstable; urgency=medium
+
+  * Added arabic translation tnx to Fayssal Chamekh
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Fri, 28 Dec 2012 19:16:07 +0200
+
+kde-service-menu-encfs (0.5.1) unstable; urgency=medium
+
+  * Fix errors in the French translation
+  * Very small changes in the script to work better and reduce code.
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Fri, 27 Gen 2012 19:16:07 +0200
+
+kde-service-menu-encfs (0.5) unstable; urgency=medium
+
+  * Now, the destination directory is in same parent of source directory (if it is writable, otherwise is $HOME).
+  * Changed desktop menu entry from "Mount, unmount or encrypt" to "Mount, unmount or create".
+  * Modified install script, now make doc directory if not already exist.
+  * Added french translation tnx to hcartiaux (Hyacinthe Cartiaux)
+  * Added support for distro where there is not fuse group.
+  * Added German translation tnx to Oliver Koch
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Fri, 20 Gen 2012 19:16:07 +0200
+
+kde-service-menu-encfs (0.4) unstable; urgency=medium
+
+  * Added configure menu (encryption mode, auto unmount when close file manager).
+  * Changed internal variable names for better shell's compatibility.
+  * Changed package name: from servicemenu-encfs to kde-service-menu-encfs.
+  * No more errors when you decrypt directories name with spaces.
+  * No more errors when you abort operation.
+  * Added russian translation tnx to SaloLove (Igor Pavlov)
+  * For deb package: removed Konqueror dependency (Konqueror now is only an alternative of Dolphin).
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Fri, 09 Dec 2011 19:16:07 +0200
+
+servicemenu-encfs (0.3) unstable; urgency=medium
+
+  * Changed some icons
+  * Removed "mount with auto-unmount after 10 min"
+  * Actions "mount", "unmount" and "create" merged in only one action voice
+  * The rigth action is now automagic (I hope :-)
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Tue, 17 Aug 2010 19:16:07 +0200
+
+servicemenu-encfs (0.2) unstable; urgency=medium
+
+  * Added "mount with auto-unmount after 10 min"
+  * Added "create from here"
+  * Added "change password"
+  * Added "informations"
+  * Now you can unmount from destination dir too.
+  * Window dialog if fuse module not loaded.
+  * Window dialog if you not have permission for using encfs.
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Tue, 16 Jun 2009 19:16:07 +0200
+
+servicemenu-encfs (0.1.1) unstable; urgency=medium
+
+  * Fixed a little typo. (thanks to Vitormp)
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Wed, 13 May 2009 19:16:07 +0200
+
+servicemenu-encfs (0.1) unstable; urgency=medium
+
+  * First release :-)
+
+ -- Giuseppe Benigno <giuseppe.benigno@gmail.com>  Tue, 12 May 2009 19:16:07 +0200

@@ -1,0 +1,7 @@
+
+
+sudo apt install lxdm
+
+
+
+

@@ -1,0 +1,171 @@
+
+
+
+11/04/24 08:17:06] - Running wine-9.0 tuner.exe (Working directory : /home/wachin/.PlayOnLinux/wineprefix/APGuitarTuner39wine90/drive_c/Program Files/AP Tuner/AP Tuner 3.09)
+0080:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0080:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0080:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0080:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0054:err:module:import_dll Library dnsapi.dll (which is needed by L"C:\\windows\\system32\\iphlpapi.dll") not found
+0054:err:module:import_dll Library iphlpapi.dll (which is needed by L"C:\\windows\\system32\\drivers\\ndis.sys") not found
+0054:err:ntoskrnl:ZwLoadDriver failed to create driver L"\\Registry\\Machine\\System\\CurrentControlSet\\Services\\NDIS": c0000142
+003c:fixme:service:scmdatabase_autostart_services Auto-start service L"NDIS" failed to start: 1114
+0024:err:module:import_dll Loading library gdiplus.dll (which is needed by L"C:\\Program Files\\AP Tuner\\AP Tuner 3.09\\tuner.exe") failed (error c000035a).
+0024:err:module:loader_init Importing dlls for L"C:\\Program Files\\AP Tuner\\AP Tuner 3.09\\tuner.exe" failed, status c0000135
+
+
+
+$ winetricks gdiplus
+Using winetricks 20230212 - sha256sum: 14afe10e8858e47f95fc6f02015003a6ffd8cd438249b25b85e1078e8e326949 with wine-8.0 (Debian 8.0~repack-4) and WINEARCH=win32
+Executing w_do_call gdiplus
+Executing load_gdiplus
+Executing mkdir -p /home/wachin/.cache/winetricks/win7sp1
+Executing cd /home/wachin/.cache/winetricks/win7sp1
+Downloading http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe to /home/wachin/.cache/winetricks/win7sp1
+--2024-11-04 08:25:23--  http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe
+Resolviendo download.windowsupdate.com (download.windowsupdate.com)... 2801:114:7:a200::, 2801:114:7:a200::8000, 41.63.111.56
+Conectando con download.windowsupdate.com (download.windowsupdate.com)[2801:114:7:a200::]:80... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 563934504 (538M) [application/octet-stream]
+Grabando a: «windows6.1-KB976932-X86.exe»
+
+
+
+ya hice esto `winetricks gdiplus`, además AP Tuner tiene ese archivo en su directorio:
+
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/GdiPlus.dll
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner_config.xml
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner_presets.xml
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner_stretch.xml
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner_temperament.xml
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.chm
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.exe
+/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/uninstall.exe
+
+
+
+Si los pasos anteriores no han resuelto el problema, aquí hay algunas alternativas adicionales que podrían ayudar:
+
+1. **Prueba con una versión diferente de Wine**:
+   En algunos casos, ciertas aplicaciones funcionan mejor en versiones específicas de Wine. Si estás usando una versión reciente de Wine, intenta instalar una versión anterior o estable de Wine para ver si el error persiste.
+
+   Por ejemplo, si tienes Wine en la versión estándar del repositorio, podrías probar con Wine Staging (o viceversa). También podrías probar con una versión antigua como Wine 5.x o 6.x, ya que a veces las aplicaciones más antiguas funcionan mejor en versiones de Wine que tienen mayor compatibilidad.
+
+2. **Forzar el prefijo de Wine en 32 bits desde cero**:
+   Si AP Tuner es una aplicación de 32 bits, puedes intentar crear un nuevo prefijo de Wine de 32 bits para asegurarte de que no haya configuraciones conflictivas en el prefijo actual. Esto recreará el entorno Wine desde cero y aplicará una configuración limpia.
+
+   ```bash
+   export WINEPREFIX=~/.wine32
+   WINEARCH=win32 wineboot
+   ```
+
+   Luego, instala `gdiplus` en este nuevo prefijo:
+
+   ```bash
+   WINEPREFIX=~/.wine32 winetricks gdiplus
+   ```
+
+   Después, intenta ejecutar AP Tuner en este nuevo prefijo:
+
+   ```bash
+   WINEPREFIX=~/.wine32 wine '/home/wachin/.wine32/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.exe'
+   ```
+
+3. **Instala todos los componentes recomendados para compatibilidad**:
+   Algunas aplicaciones requieren más dependencias de las que `winetricks gdiplus` instala por sí sola. Prueba ejecutando:
+
+   ```bash
+   WINEPREFIX=~/.wine winetricks -q corefonts vcrun6 vcrun2005 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015
+   ```
+
+   Esto instalará varias bibliotecas de Microsoft Visual C++ que podrían ayudar a mejorar la compatibilidad.
+
+4. **Desactiva las optimizaciones de gráficos avanzados en Wine**:
+   Algunos problemas de DLL pueden ser causados por configuraciones avanzadas de gráficos en Wine. Puedes desactivar la configuración de DirectX y otras opciones gráficas desde `winecfg`. Entra en la pestaña **Gráficos** de `winecfg` y prueba desmarcando opciones como **Emular un escritorio virtual** y cambiando la configuración de **DirectDraw**.
+
+5. **Ejecuta Wine en modo depuración**:
+   Para obtener más detalles sobre el error, ejecuta Wine en modo de depuración:
+
+   ```bash
+   WINEDEBUG=+loaddll wine '/home/wachin/.wine/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.exe'
+   ```
+
+   Esto generará más información sobre los módulos que está intentando cargar y puede proporcionar pistas adicionales sobre por qué falla `gdiplus.dll`.
+
+Si sigues teniendo problemas después de intentar estas soluciones, es posible que AP Tuner no sea totalmente compatible con Wine. En ese caso, alternativas como **AP Tuner en una máquina virtual de Windows** o **utilizar una aplicación de afinación similar compatible con Linux** (como **Lingot** o **GTune**) podrían ser una opción adecuada.
+
+
+ python3-ldb python3-samba python3-talloc python3-tdb samba-common samba-common-bin samba-dsdb-modules
+  winbind
+
+
+  me sale este error: wachin@netinst:~
+$ export WINEPREFIX=~/.wine32
+WINEARCH=win32 wineboot
+wine: created the configuration directory '/home/wachin/.wine32'
+0050:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0050:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0050:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0050:err:ole:start_rpcss Failed to open RpcSs service
+0048:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0048:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0048:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0094:err:mscoree:LoadLibraryShim error reading registry key for installroot
+0094:err:mscoree:LoadLibraryShim error reading registry key for installroot
+0094:err:mscoree:LoadLibraryShim error reading registry key for installroot
+0094:err:mscoree:LoadLibraryShim error reading registry key for installroot
+0024:err:environ:run_wineboot boot event wait timed out
+wachin@netinst:~
+$ 00ac:err:mscoree:LoadLibraryShim error reading registry key for installroot
+00ac:err:mscoree:LoadLibraryShim error reading registry key for installroot
+00ac:err:mscoree:LoadLibraryShim error reading registry key for installroot
+00ac:err:mscoree:LoadLibraryShim error reading registry key for installroot
+wine: configuration in L"/home/wachin/.wine32" has been updated.
+
+El error que estás viendo generalmente está relacionado con la configuración de algunos componentes de Wine, en especial el servicio RPC (Remote Procedure Call) y ciertos componentes de `.NET` que pueden ser necesarios para que Wine funcione correctamente en un prefijo de 32 bits. Aquí hay algunos pasos adicionales que pueden ayudarte a resolver este problema:
+
+1. **Instala `winbind`**:
+   Wine a menudo depende de `winbind`, que proporciona ciertas funcionalidades para que Wine maneje servicios de red y autenticación, incluso si no necesitas específicamente estos servicios para AP Tuner.
+
+   ```bash
+   sudo apt update
+   sudo apt install winbind
+   ```
+
+2. **Forza la configuración inicial de Wine**:
+   Si Wine no finalizó correctamente la configuración inicial de tu nuevo prefijo de 32 bits, puedes intentar forzarla nuevamente con:
+
+   ```bash
+   WINEPREFIX=~/.wine32 wineboot --init
+   ```
+
+3. **Instala el paquete `dotnet20` en el prefijo de Wine**:
+   Algunas aplicaciones de Windows requieren el .NET Framework para funcionar correctamente, y Wine suele instalar `.NET 2.0` para proporcionar compatibilidad. Usa `winetricks` para instalarlo:
+
+   ```bash
+   WINEPREFIX=~/.wine32 winetricks -q dotnet20
+   ```
+
+4. **Reinicia Wine después de instalar .NET**:
+   Después de instalar `dotnet20`, reinicia el prefijo de Wine para asegurarte de que los cambios surtan efecto.
+
+   ```bash
+   WINEPREFIX=~/.wine32 wineboot
+   ```
+
+5. **Ejecuta AP Tuner desde el nuevo prefijo**:
+   Una vez que todo esté configurado, intenta ejecutar AP Tuner nuevamente desde el nuevo prefijo:
+
+   ```bash
+   WINEPREFIX=~/.wine32 wine '/home/wachin/.wine32/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.exe'
+   ```
+
+6. **Verifica el registro de errores**:
+   Si el problema persiste, puedes ejecutar Wine en modo depuración para obtener un registro más detallado. Esto puede dar más pistas sobre lo que está fallando:
+
+   ```bash
+   WINEDEBUG=+loaddll WINEPREFIX=~/.wine32 wine '/home/wachin/.wine32/drive_c/Program Files/AP Tuner/AP Tuner 3.09/tuner.exe'
+   ```
+
+Si continúas experimentando el mismo problema, puede ser útil considerar ejecutar AP Tuner en un entorno virtualizado de Windows (por ejemplo, usando VirtualBox) o explorar una alternativa nativa en Linux como **Lingot** para afinación de instrumentos.
+

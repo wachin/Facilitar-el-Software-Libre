@@ -1,0 +1,6 @@
+# MX Community Main and Test Repos
+deb http://mirror.cedia.org.ec/mx-workspace/mx/repo/ bullseye main non-free
+#deb http://mirror.cedia.org.ec/mx-workspace/mx/testrepo/ bullseye test
+
+#ahs hardware stack repo
+#deb http://mirror.cedia.org.ec/mx-workspace/mx/repo/ bullseye ahs

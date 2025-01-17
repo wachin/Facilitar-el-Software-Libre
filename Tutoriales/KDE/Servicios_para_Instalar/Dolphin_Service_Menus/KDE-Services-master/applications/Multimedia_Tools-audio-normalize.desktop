@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Multimedia-Tools;
+Exec=which mp3gain; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Volume Normalize of MP3 Files" --passivepopup="[Error] Please install mp3gain command and try again."; exit 1; else /usr/share/applications/Multimedia_Tools-audio-normalize.sh %F;fi
+Icon=ks-audio-normalize
+Name=Volume Normalize of MP3 Files
+Name[de]=Lautstärke von MP3s normalisieren
+Name[es]=Normalizar Volumen de Ficheros MP3
+Name[fr]=Normaliser le Volume des Fichiers MP3
+Name[it]=Normalizza Volume dei File MP3
+Name[ja]=ボリュームが MP3 ファイルについて正常化する
+Name[ko]=책이 MP3 파일의 안에서 표준화한다
+Name[pt]=Volume Normaliza de Arquivos de MP3
+Name[ru]=Объем Нормализация MP3 Файлы
+Name[uk]=Обсяг Нормалізація MP3 Файли
+Name[zh_CN]=MP3 文件音量标准化
+Path=/usr/share/applications
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

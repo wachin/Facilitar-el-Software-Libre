@@ -1,0 +1,20 @@
+
+Buscar en google
+
+self.win.set_icon_from_file("icon.png")
+
+
+https://github.com/mervick/google-translate-widget/blob/master/google-tr.py
+
+
+        """ :type: Gtk.Window """
+        self.win.set_title('Google Translate')
+        self.win.set_icon_from_file(get_resource_path('icon.png'))
+        self.src_lang_combo = builder.get_object("src_lang")
+        """ :type: Gtk.ComboBoxText """
+        
+        
+https://github.com/mervick/google-translate-widget/
+google-tr.py
+icon.png
+ui.glade

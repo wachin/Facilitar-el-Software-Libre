@@ -1,0 +1,38 @@
+Comandos:
+-c|--clean-head        Limpia el cabezal de impresión.
+-n|--nozzle-check      Imprime un patrón de prueba de inyectores.
+                       Las boquillas sucias u obstruidas se mostrarán
+                       como espacios en el patrón. Si ve algún hueco, 
+                       debe limpiar el cabezal de impresión.
+-a|--align-head        Alinea el cabezal de impresión. PRECAUCIÓN: 
+                       Mal uso de esta utilidad puede dar como resultado 
+                       una mala calidad de impresión y/o daño a la impresora.
+-s|--status            Recupera el estado de la impresora.
+-i|--ink-level         Obtiene el nivel de tinta de la impresora. 
+                       Esto requiere acceso de lectura/escritura al 
+                       dispositivo
+-e|--extended-ink-info Obtenga la información extendida de la tinta desde 
+                       la impresora. Esto requiere acceso de 
+                       lectura/escritura al dispositivo
+-d|--identificar       Consultar la impresora para obtener información 
+                       sobre la marca y el modelo. Esto requiere acceso de 
+                       lectura/escritura al dispositivo
+-X|--reset-ink         Restablece los niveles de tinta. Esto requiere acceso 
+                       de lectura/escritura al dispositivo.
+-l|--license           Muestra los términos de licencia/garantía de este programa.
+-M|--list-models       Muestra los modelos de impresora disponibles.
+-h|--help              Imprime este mensaje de ayuda.
+
+Opciones:
+-P|--printer-name  Especifique el nombre de la cola de impresión en la que operar.
+                   Default es la impresora del sistema predeterminada.
+-r|--raw-device    Especifique el nombre del dispositivo para escribir 
+                   directamente en lugar de pasar por una cola de impresión.
+-m|--model         Especifique el modelo de impresora.
+-u|--new           La impresora es una impresora nueva (Stylus Color 740 o
+                   más nuevo). Solo se necesita cuando no se usa un dispositivo
+                   sin formato o cuando no se especifica el modelo.
+-q|--quiet         Suprime el banner.
+-S|--short-name    Imprime el nombre corto de la impresora con --identify.
+-C|--choices       Especifique el número de opciones de patrón para la alineación
+-p|--patterns      Especifique el número de conjuntos de patrones para la alineación 

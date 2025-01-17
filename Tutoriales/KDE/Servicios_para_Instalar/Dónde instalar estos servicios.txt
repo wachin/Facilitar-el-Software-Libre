@@ -1,0 +1,40 @@
+
+Primero saber dónde están ubicados los servicios en su Linux
+
+
+kf5-config --path services
+
+estoy en Debian 12 y me da:
+
+$ kf5-config --path services
+/home/wachin/.local/share/kservices5/:/usr/share/kservices5/
+
+
+INSTALACIÓN DE LOS SERVICIOS KDE5
+
+User servicemenus are:
+
+$HOME/.local/share/kservices5/ServiceMenus/
+
+Nota: Si no se ha instalado ningún servicio esa carpeta no estará, habrá que crearla. Sino al instalar servicios como Dolphin-Folder-Color se creará.
+
+System servicemenus are at
+
+/usr/share/kservices5/ServiceMenus/
+
+scripts - How do I add custom items to the context menu in Dolphin in KDE 5? - Ask Ubuntu
+https://askubuntu.com/questions/719262/how-do-i-add-custom-items-to-the-context-menu-in-dolphin-in-kde-5
+
+
+
+DESCARGA DE SERVICIOS EN LA OPCIÓN DE DOLPHIN
+En UbuntuStudio 13.10 los servicios de descargan en:
+
+/home/wachin-id/.kde/share/apps/servicemenu-download/ 
+
+Allí uno los puede coger e instalar si es que no instalaron. 
+
+
+
+
+

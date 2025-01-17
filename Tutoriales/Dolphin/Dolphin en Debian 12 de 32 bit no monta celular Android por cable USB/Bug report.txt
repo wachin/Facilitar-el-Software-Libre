@@ -1,0 +1,38 @@
+SUMMARY
+Dolphin File Manager in 32-bit Debian 12 cannot access Android devices via USB
+
+STEPS TO REPRODUCE
+1. Install Dolphin file manager 12 (32-bit version)
+2. Connect an Android phone (e.g., Redmi Note 11) via USB cable
+3. Attempt to access the phone through Dolphin
+
+OBSERVED RESULT
+Dolphin cannot mount or access the Android device. The device is not recognized or accessible through the file manager.
+
+EXPECTED RESULT
+Dolphin should be able to mount and access the Android device, allowing file management and transfer.
+
+SOFTWARE/OS VERSIONS
+Windows: N/A
+macOS: N/A
+Linux/KDE Plasma: Debian 12 (32-bit)
+KDE Frameworks Versión 5.103.0
+Qt Version: Qt version 5.15.8 in /usr/lib/i386-linux-gnu
+
+ADDITIONAL INFORMATION
+The issue appears to be caused by an incorrect path in the file:
+/usr/share/dbus-1/services/org.kde.kmtpd5.service
+
+The file contains the incorrect path:
+/usr/lib/x86_64-linux-gnu/libexec/kf5/kiod5
+
+This path does not exist in 32-bit systems. The correct path should be:
+/usr/lib/i386-linux-gnu/libexec/kf5/kiod5
+
+Manually correcting this path resolves the issue, allowing Dolphin to access Android devices via USB.
+
+This bug affects 32-bit Debian-based systems using Dolphin file manager. It may impact other 32-bit distributions as well.
+
+A temporary workaround is to manually edit the file using a text editor with root privileges and replace the incorrect path with the correct one.
+
+It's recommended to update the package to automatically use the correct path based on the system architecture to prevent this issue in future installations.

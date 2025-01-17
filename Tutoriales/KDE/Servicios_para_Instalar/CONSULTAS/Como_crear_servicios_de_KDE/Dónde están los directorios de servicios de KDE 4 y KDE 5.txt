@@ -1,0 +1,18 @@
+
+Development/Tutorials/Creating Konqueror Service Menus - KDE TechBase
+https://techbase.kde.org/Development/Tutorials/Creating_Konqueror_Service_Menus
+
+
+Tip
+$KDEHOME defaults to ~/.kde when it isn't set or defined. You can find all the services directories by running
+
+
+kde4-config --path services
+
+ # for kde4
+
+kf5-config --path services
+
+ # for kf5
+
+from a Konsole window.

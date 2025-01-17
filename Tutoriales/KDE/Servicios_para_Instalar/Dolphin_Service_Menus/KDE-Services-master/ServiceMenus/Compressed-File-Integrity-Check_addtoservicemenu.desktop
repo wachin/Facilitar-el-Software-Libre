@@ -1,0 +1,25 @@
+[Desktop Entry]
+Actions=CompressedFileIntegrityCheck;
+Icon=ks-compressed-file
+MimeType=application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/x-tarz;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;application/x-deb;application/x-cd-image;application/x-bcpio;application/x-cpio;application/x-cpio-compressed;application/x-sv4cpio;application/x-sv4crc;application/x-rpm;application/x-source-rpm;application/vnd.ms-cab-compressed;application/x-servicepack;application/x-rar;application/x-7z-compressed;application/x-java-archive;application/zip;application/x-compress;application/x-gzip;application/x-bzip;application/x-bzip2;application/x-lzma;application/x-xz;application/lha;application/x-lha;application/maclha;application/x-cd-image;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-StartupNotify=false
+X-KDE-Submenu=KDE-Services
+X-KDE-Submenu[x-test]=xxKDE-Servicesxx
+
+[Desktop Action CompressedFileIntegrityCheck]
+Exec=which lsar; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Compressed File Integrity Check" --passivepopup="[Error] Please install lsar command and try again."; exit 1; else /usr/share/applications/Compressed_file_integrity_check.sh %F;fi
+Icon=ks-compressed-file
+Name=Compressed File Integrity Check
+Name[de]=Komprimierte Datenintegrität prüfen
+Name[es]=Chequeo de Integridad de Archivo Comprimido
+Name[fr]=Tester l'Intégrité de l'Archive
+Name[it]=Verifica Integrità dei File Compressi
+Name[ja]=ファイル錠剤の完全性の健康診断
+Name[ko]=파일 알약의 성실의 검사
+Name[pt]=Exame de Integridade de Tablete de Arquivo
+Name[ru]=Сжал Проверку Целостности Файла
+Name[uk]=Стиснув Перевірку Цілісності Файлу
+Name[zh_CN]=压缩包完整性检查
+Name[x-test]=xxCompressed File Integrity Checkxx

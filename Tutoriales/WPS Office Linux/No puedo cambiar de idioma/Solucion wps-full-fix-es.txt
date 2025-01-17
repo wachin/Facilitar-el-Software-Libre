@@ -1,0 +1,32 @@
+
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-full-fix-es/
+
+
+TRADUCIR WPS VERSIÓN 11.1.0.9126 - DEEPIN EN ESPAÑOL
+https://xn--deepinenespaol-1nb.org/traducir-wps-version-11-1-0-9126/
+
+
+
+TRADUCIR WPS VERSIÓN 11.1.0.9126
+Car 2 años atrás 17 comentarios
+
+PREVIO PRÓXIMO
+
+Este es un tutorial muy simple que permitirá traducir WPS versión 11.1.0.9129 al Español, actualmente la versión más reciente de la suite informática distribuida por defecto en Deepin OS.
+
+Sabido es que Deepin 20 vera la luz, el corriente mes pero aquellos que utilizan 15.11 comenzaron a recibir «avisos de nueva versión» en WPS; algunos para solventar esto, hicieron descarga directa desde la web de la aplicación y se encuentran con que la interfaz no esta traducida, aun habiendo aplicado nuestro parche de idioma wps-full-fix-es como explicamos en el artículo TRADUCIR COMPLETAMENTE WPS.
+
+    A) Luego de actualizar la aplicación, instalar el parche de idioma desde deepines utilizando el comando: sudo apt update && sudo apt install wps-full-fix-es
+    B) Abrir la misma y dirigirse a Configuración en la zona superior derecha, en la pantalla de bienvenida.
+    C ) Buscar en la configuraciones el valor setting.otherOptions.popupComponent
+    D) Cambiar el valor por defecto de All-in-One Mode a Multi-Module Mode como las muestran las imágenes.
+
+    E) Reiniciar WPS abrir un documento nuevo e ir a la configuración de idioma y seleccionar Spanish y aceptar.
+
+Clic para ver la imagen a tamaño completo
+
+Después de reiniciar WPS podrás utilizar la interfaz clásica y traducida mas los diccionarios en Español.
+Clic para ver la imagen a tamaño completo
+
+Nota: En el día de la fecha hemos decidido agregar a nuestro repositorio deepines la versión 11.1.0.9126 de WPS para facilitar la actualización a los usuarios que lo utilicen. 

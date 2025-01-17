@@ -1,0 +1,91 @@
+#!/bin/bash
+
+if type kf5-config &>/dev/null;then
+    services_dirs="$(kf5-config --path services)"
+    target_dir="${services_dirs%:*}ServiceMenus/DoAllWithPDF"
+elif type kde4-config &>/dev/null;then
+    target_dir="$(kde4-config --localprefix)share/kde4/services/ServiceMenus/DoAllWithPDF"
+else
+    echo "This is a service menu for KDE, you can't install it !"
+fi
+
+
+# Translations:
+default_language(){
+    uninstallation="Uninstallation"
+    message_uninstallation_completed="Uninstallation completed."
+    message_uninstallation_failed="Uninstallation failed!"
+    system_uninstallation(){
+        echo "Do you want to uninstall $1 service menu for all users ?"
+    }
+}
+
+other_languages(){
+    case ${LANG%_*} in
+        fi )
+            uninstallation="Asennuksen poisto"
+            message_uninstallation_completed="Asennuksen poisto onnistui."
+            message_uninstallation_failed="Asennuksen poisto epäonnistui!"
+            system_uninstallation(){
+                echo "Do you want to uninstall $1 service menu for all users ?"
+            }
+        ;;
+        fr )
+            uninstallation="Désinstallation"
+            message_uninstallation_completed="Désinstallation terminée."
+            message_uninstallation_failed="Échec de la désinstallation!"
+            system_uninstallation(){
+                echo "Voulez-vous désinstaller $1 service menu pour tous les utilisateurs ?"
+            }
+        ;;
+        xx )
+            #TRANSLATE HERE
+        ;;
+    esac
+}
+uninstall_failure(){
+    kdialog --caption "$script_name" --error "$message_uninstallation_failed"$'\n'"code: $1"
+    exit $1
+}
+
+# End of translations
+default_language
+other_languages
+
+cd "$(dirname "$0")"
+cd data || ( kdialog --caption "$script_name" --error "$message_incorrect_working_dir" ; exit 1 )
+source common_vars || uninstall_failure 6
+script_name="\"$pretty_name\" $uninstallation"
+
+input_directory="$pretty_name"
+[ -z "$input_directory" ] && uninstall_failure 7
+
+type kf5-config  &>/dev/null &&  kf5_service_dirs=$(kf5-config  --path services)
+type kde4-config &>/dev/null && kde4_service_dirs=$(kde4-config --path services)
+[ -z "$kf5_service_dirs" ] && [ -z "$kde4_service_dirs" ] && uninstall_failure 11
+
+system_remove=false
+
+for service_dir in "$kf5_service_dirs" "$kde4_service_dirs";do
+    [ -z "$service_dir" ] && continue
+    echo "${service_dir%:*}ServiceMenus/$input_directory"
+    if [ -d "${service_dir%:*}ServiceMenus/$input_directory" ];then
+        rm -R "${service_dir%:*}ServiceMenus/$input_directory" || uninstall_failure 21
+        
+        if [ -d share ];then
+            for share_dir in share/*;do
+                [ -e "$HOME/.local/$share_dir" ] || ( rm -R "$HOME/.local/$share_dir" || uninstall_failure 31 )
+            done
+        fi
+        
+    fi
+    echo "${service_dir##*:}ServiceMenus/${input_directory}"
+    [ -d "${service_dir##*:}ServiceMenus/${input_directory}" ] && system_remove=true
+done
+
+if $system_remove && kdialog --caption "$script_name" --yesno "$(system_uninstallation "$pretty_name")";then
+    kdesudo ./install-systemwide.sh uninstall || uninstall_failure $?
+fi
+
+kdialog --caption "$script_name" --icon "info" --msgbox "$message_uninstallation_completed"	#Information dialog.
+exit 0

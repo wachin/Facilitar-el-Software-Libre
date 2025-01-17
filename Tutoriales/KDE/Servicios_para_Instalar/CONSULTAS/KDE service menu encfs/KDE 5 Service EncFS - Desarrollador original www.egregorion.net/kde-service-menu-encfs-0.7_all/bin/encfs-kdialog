@@ -1,0 +1,430 @@
+#! /bin/sh
+#
+# 	Part of kde-service-menu-encfs Version 0.7.0
+# 	Copyright (C) 2007-2018 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+if [ ${#} -eq 0 ] || [ "${1}" = "-h" ] || [ "${1}" = "--help" ]; then
+	echo
+	echo "USE: ${0##*/} action src_dir [dst_dir]"
+	echo
+	echo "\taction\t\tmanage, chpassword, info, configure"
+	echo "\tsrc_dir\t\tis the existent encrypted/empty directory"
+	echo "\tdst_dir\t\tis the destination directory (optional, default src_dir_encfs)"
+	echo
+	exit 0
+fi
+
+action="${1}"
+shift
+
+#### languages strings messages #################
+# Syntax for strings name is: msg_[$action]_$window_[$section]
+# For languages as sr@Latn use srLatn
+
+load_language_ar () {
+	msg_error_title="EncFS: خطأ!"
+	msg_warning_title="EncFS: تحذير!"
+	msg_info_title="EncFS: معلومة"
+	msg_config_title="EncFS: إعدادات"
+	msg_checkFuseModule="تحقق من تحميل الوحدة fuse"
+	msg_checkFusePermission="تحقق من أنك ضمن المجموعة fuse. أكتب في الطرفية: \"sudo adduser $USER fuse\""
+	msg_checkDestDir="المعذرة، دليل الوجهة \"${destination_directory}\" موجود مسبقا!"
+	msg_mkDestDir="تعذر إنشاء دليل الوجهة \"${destination_directory}\""
+	msg_askPassword_title="encFS: إدخال كلمة المرور ..."
+	msg_askPassword_text="أدخل كلمة المرور لـ \"${source_directory_name}\":"
+	msg_mount_abort="تم إلغاء العملية"
+	msg_mountError="تعذر ضم دليل الوجهة \"${destination_directory_name}\""
+	msg_mount_finish="الدليل \"${source_directory_name}\" ضُم في الدليل \"${destination_directory}\""
+	msg_umount_finish="الدليل \"${destination_directory}\" أُلغي ضمه وحُذف"
+	msg_preCreate="هذا الدليل غير مشفر حاليا، هل تريد تشفيره؟"
+	msg_preCreate_cancel="عملية تشفير الدليل \"${source_directory_name}\" قد ألغيت."
+	msg_change_password_error="تعذر تغيير كلمة السر لـ \"${source_directory_name}\"!\n فهو ليس ملفا مشفرا بـ encFS"
+	msg_change_password_konsole_title="تغيير كلمة السر لـ \"${source_directory_name}\""
+	msg_get_information_title="معلومات عن \"${source_directory_name}\""
+	msg_get_informations_problem="تعذر الوصول إلى المعلومات .\nتأكد أن \"${source_directory_name}\" دليل مشفر بـ encFS."
+	msg_config_cryptMode="نوع التشفير المفضل: (اضغط نعم للمواصلة)"
+	msg_config_cryptMode_standard="قياسي، آمن و متوافق."
+	msg_config_cryptMode_paranoia="Paranoia، أكثر أمنا لكن أقل توافقية."
+	msg_config_openFileManagerOnMount="Open automatically file manager on mounted directory?"
+	msg_config_openFileManagerOnMount_yes="Yes."
+	msg_config_openFileManagerOnMount_no="No."
+	msg_config_unmountOnCloseFileManager="إلغاء ضم تلقائي للدليل؟"
+	msg_config_unmountOnCloseFileManager_yes="نعم، بعد غلق  مدير الملفات."
+	msg_config_unmountOnCloseFileManager_no="لا، أقوم بها يدويا"
+	msg_config_saved="تم حفظ الخيارات."
+	msg_save_config_failed="لم يتم حفظ الخيارات!"
+}
+
+load_language_de () {
+	msg_error_title="encFS Fehler!"
+	msg_warning_title="encFS Warnung!"
+	msg_info_title="encFS Information"
+	msg_config_title="encFS: Konfiguration"
+	msg_checkFuseModule="Bitte überprüfen, ob das fuse Modul geladen ist."
+	msg_checkFusePermission="Bitte überprüfen, ob Mitgliedschaft in der Gruppe fuse nötig ist. Folgendes shell-Kommando könnte helfen: \"sudo adduser $USER fuse\""
+	msg_checkDestDir="Das Zielverzeichnis \"${destination_directory}\" existiert bereits!."
+	msg_mkDestDir="Konnte das Zielverzeichnis \"${destination_directory}\" nicht erstellen!"
+	msg_askPassword_title="encFS: Passphrase eingeben ..."
+	msg_askPassword_text="Passphrase für \"${source_directory_name}\" eingeben:"
+	msg_mount_abort="Operation abgebrochen."
+	msg_mountError="Konnte das Zielverzeichnis \"${destination_directory}\" nicht einbinden."
+	msg_mount_finish="Verzeichnis \"${source_directory_name}\" in \"${destination_directory}\" eingebunden."
+	msg_umount_finish="Einbindung des Verzeichnisses \"${destination_directory}\" gelöst und Verzeichnis entfernt."
+	msg_preCreate="Das Verzeichnis scheint unverschlüsselt, soll es verschlüsselt werden?"
+	msg_preCreate_cancel="Verschlüsselung des Verzeichnisses \"${source_directory_name}\" fehlgeschlagen."
+	msg_change_password_error="Passphrase von \"${source_directory_name}\" konnte nicht geändert werden!\nKein encFS verschlüsseltes Verzeichnis."
+	msg_change_password_konsole_title="Änderung der Passphrase von \"${source_directory_name}\""
+	msg_get_information_title="Informationen zu \"${source_directory_name}\""
+	msg_get_informations_problem="Keine Informationen gefunden.\nÜberprüpfen, ob \"${source_directory_name}\" ein encFS verschlüsseltes Verzeichnis ist."
+	msg_config_cryptMode="Bevorzugte Methode der Verschlüsselung: (OK auswählen um zur nächsten Seite zu gelangen.)"
+	msg_config_cryptMode_standard="Standard: sicher und kompatibel."
+	msg_config_cryptMode_paranoia="Paranoia: sicherer, aber weniger kompatibel."
+	msg_config_openFileManagerOnMount="Open automatically file manager on mounted directory?"
+	msg_config_openFileManagerOnMount_yes="Ja."
+	msg_config_openFileManagerOnMount_no="Nein."
+	msg_config_unmountOnCloseFileManager="Verzeichniseinbindung automatisch lösen?"
+	msg_config_unmountOnCloseFileManager_yes="Ja, nach dem Schließen des Dateimanagers."
+	msg_config_unmountOnCloseFileManager_no="Nein, ich löse die Einbindung manuell."
+	msg_config_saved="Einstellungen gespeichert."
+	msg_save_config_failed="Einstellungen nicht gespeichert!"
+}
+
+load_language_en () {
+	msg_alert_encfs_not_found_title="Component not found"
+	msg_alert_encfs_not_found_text="Software encfs not found! Install it, please."
+	msg_source_dir_invalid="Source directory is not valid."
+	msg_dest_dir_invalid="Destination directory is not valid."
+	msg_dest_dir_no_writable="Destination directory is not writable."
+	msg_action_does_not_exist="Selected action parameter does not exist."
+	msg_error_password_empty="The password can not be empty."
+
+	msg_error_title="encFS error!"
+	msg_warning_title="encFS warning!"
+	msg_info_title="encFS information"
+	msg_config_title="encFS: configuration"
+	msg_checkFuseModule="Check if fuse module is loaded"
+	msg_checkFusePermission="Check if you need to be in fuse group. From console you can type: \"sudo adduser $USER fuse\""
+	msg_checkDestDir="Sorry, destination directory \"${destination_directory}\" already exists!."
+	msg_mkDestDir="Can't create the destination directory \"${destination_directory}\""
+	msg_askPassword_title="encFS: enter passphase ..."
+	msg_askPassword_text="Enter passphrase for \"${source_directory_name}\":"
+	msg_mount_abort="Operation aborted"
+	msg_mountError="Can't mount the destination directory \"${destination_directory_name}\""
+	msg_mount_finish="Directory \"${source_directory_name}\" mounted in \"${destination_directory}\""
+	msg_umount_finish="Directory \"${destination_directory}\" umounted and removed"
+	msg_preCreate="The directory appears unencrypted, do you want encrypt it?"
+	msg_preCreate_cancel="Encryption of directory \"${source_directory_name}\" aborted."
+	msg_change_password_error="There are problems changing the password of \"${source_directory_name}\"!\nIt is not an encFS encrypted directory."
+	msg_change_password_konsole_title="Changing password of \"${source_directory_name}\""
+	msg_get_information_title="Information of \"${source_directory_name}\""
+	msg_get_informations_problem="There is a problem getting information.\nCheck if \"${source_directory_name}\" is an encFS encrypted directory."
+	msg_config_cryptMode="Preferred crypt mode: (Click OK for next page)"
+	msg_config_cryptMode_standard="Standard, secure and compatible."
+	msg_config_cryptMode_paranoia="Paranoia, more secure but less compatible."
+	msg_config_openFileManagerOnMount="Open automatically file manager on mounted directory?"
+	msg_config_openFileManagerOnMount_yes="Yes."
+	msg_config_openFileManagerOnMount_no="No."
+	msg_config_unmountOnCloseFileManager="Automatically unmount directory?"
+	msg_config_unmountOnCloseFileManager_yes="Yes, after closed file manager."
+	msg_config_unmountOnCloseFileManager_no="No, I do it manually."
+	msg_config_saved="Settings saved."
+	msg_save_config_failed="Settings not saved!"
+}
+
+load_language_fr () {
+	msg_error_title="encFS erreur !"
+	msg_warning_title="encFS avertissement !"
+	msg_info_title="encFS information"
+	msg_config_title="encFS : configuration"
+	msg_checkFuseModule="Vérifiez que fuse est chargé."
+	msg_checkFusePermission="Vérifiez si vous appartenez au groupe fuse. Dans une console, vous pouvez taper : \"sudo adduser $USER fuse\""
+	msg_checkDestDir="Désolé, le répertoire de destination \"${destination_directory}\" existe déjà !"
+	msg_mkDestDir="Le répertoire de destination \"${destination_directory}\" ne peut pas être créé."
+	msg_askPassword_title="encFS : entrez votre phrase de passe ..."
+	msg_askPassword_text="Entrez votre phrase de passe pour le répertoire \"${source_directory_name}\""
+	msg_mount_abort="Opération annulée"
+	msg_mountError="Le répertoire \"${destination_directory_name}\" ne peut pas être monté"
+	msg_mount_finish="Répertoire \"${source_directory_name}\" monté dans \"${destination_directory}\""
+	msg_umount_finish="Répertoire \"${destination_directory}\" démonté et supprimé"
+	msg_preCreate="Le répertoire semble non chiffré, voulez-vous continuer?"
+	msg_preCreate_cancel="La création du répertoire chiffré a été annulée."
+	msg_change_password_error="Problème lors du changement de mot de passe de \"${source_directory_name}\"!\nCe n'est pas un répertoire chiffré avec encFS."
+	msg_change_password_konsole_title="Changer le mot de passe \"${source_directory_name}\""
+	msg_get_information_title="Informations de \"${source_directory_name}\""
+	msg_get_informations_problem="Problème lors de la récupération des informations de \"${source_directory_name}\""
+	msg_config_cryptMode="Mode Crypt préféré : "
+	msg_config_cryptMode_standard="Standard, sécurisé et compatible."
+	msg_config_cryptMode_paranoia="Paranoïa, plus sûr mais moins compatible."
+	msg_config_openFileManagerOnMount="Open automatically file manager on mounted directory?"
+	msg_config_openFileManagerOnMount_yes="Oui."
+	msg_config_openFileManagerOnMount_no="Non."
+	msg_config_unmountOnCloseFileManager="Démonter automatiquement le répertoire ?"
+	msg_config_unmountOnCloseFileManager_yes="Oui, après la fermeture du gestionnaire de fichiers."
+	msg_config_unmountOnCloseFileManager_no="Non, je le ferai manuellement."
+	msg_config_saved="Paramètres enregistrés."
+	msg_save_config_failed="Réglages non enregistrés !"
+}
+
+load_language_it () {
+	msg_alert_encfs_not_found_title="Software non trovato"
+	msg_alert_encfs_not_found_text="Il software encfs non è stato trovato! Installalo, per favore."
+	msg_source_dir_invalid="La directory selezionata  non è valida."
+	msg_dest_dir_invalid="La directory di destinazione non è valida."
+	msg_dest_dir_no_writable="La directory di destinazione ha permessi di sola lettura."
+	msg_action_does_not_exist="Il parametro selezionato non è implementato."
+	msg_error_password_empty="La password non può essere vuota."
+
+	msg_error_title="Errore encfs!"
+	msg_warning_title="Avviso encFS!"
+	msg_info_title="Informazione encFS"
+	msg_config_title="encFS: configurazione"
+	msg_checkFuseModule="Controllare che il modulo fuse sia caricato"
+	msg_checkFusePermission="Controllare di appartenere al gruppo fuse. Dal terminale puoi digitare: \"sudo adduser $USER fuse\""
+	msg_checkDestDir="Spiacente, la directory di destinazione \"${destination_directory}\" esiste già!."
+	msg_mkDestDir="Non è possibile creare la directory di destinazione \"${destination_directory}\"."
+	msg_askPassword_title="encFS: inserisci password ..."
+	msg_askPassword_text="Digita la password per \"${source_directory_name}\":"
+	msg_mount_abort="Operazione annullata"
+	msg_mount_finish="Directory \"${source_directory_name}\" montata in \"${destination_directory}\""
+	msg_mountError="Si è verificato un errore durante il montaggio della directory \"${destination_directory_name}\""
+	msg_umount_finish="Directory \"${destination_directory}\" smontata e rimossa."
+	msg_preCreate="Sembra che la cartella non sia cifrata, vuoi cifrarla?"
+	msg_preCreate_cancel="La cifratura della cartella \"${source_directory_name}\" è stata annullata."
+	msg_change_password_error="Problemi cambiando la password di \"${source_directory_name}\"!\nLa directory non sembra essere cifrata con encFS."
+	msg_change_password_konsole_title="Cambio password di \"${source_directory_name}\""
+	msg_get_information_title="Informazioni su \"${source_directory_name}\""
+	msg_get_informations_problem="Problema nel caricamento delle informazioni.\nAssicurati che \"${source_directory_name}\" sia una directory cifrata con encfs."
+	msg_config_cryptMode="Modo di cifratura preferito:"
+	msg_config_cryptMode_standard="Predefinito, sicuro e compatibile"
+	msg_config_cryptMode_paranoia="Paranoia, più sicuro ma meno compatibile."
+	msg_config_openFileManagerOnMount="Aprire automaticamente il file manager sulla cartella montata?"
+	msg_config_openFileManagerOnMount_yes="Si."
+	msg_config_openFileManagerOnMount_no="No."
+	msg_config_unmountOnCloseFileManager="Smonta automaticamente la cartella?"
+	msg_config_unmountOnCloseFileManager_yes="Si, non appena il file manager viene chiuso."
+	msg_config_unmountOnCloseFileManager_no="No, lo faccio io manualmente."
+	msg_config_saved="Impostazioni salvate."
+	msg_save_config_failed="Impossibile salvare le impostazioni!"
+}
+
+load_language_ru () {
+	msg_error_title="Ошибка encFS"
+	msg_warning_title="Внимание encFS"
+	msg_info_title="Информация encFS"
+	msg_config_title="encFS: конфигурация"
+	msg_checkFuseModule="Проверьте, загружен ли модуль fuse"
+	msg_checkFusePermission="Проверьте: вы должны быть в группе fuse. Наберите в консоле: \"sudo adduser $USER fuse\""
+	msg_checkDestDir="Целевая директория \"${destination_directory}\" уже существует!"
+	msg_mkDestDir="Невозможно создать целевую директорию \"${destination_directory}\""
+	msg_askPassword_title="encFS: введите пароль ..."
+	msg_askPassword_text="Введите пароль для \"${source_directory_name}\":"
+	msg_mount_abort="Операция отменена"
+	msg_mountError="Невозможно монтировать целевую директорию \"${destination_directory_name}\""
+	msg_mount_finish="Директория \"${source_directory_name}\" смонтирована в \"${destination_directory}\""
+	msg_umount_finish="Директория \"${destination_directory}\" размонтирована и удалена"
+	msg_preCreate="Директория не зашифрована, продолжить?"
+	msg_preCreate_cancel="Создание зашифрованной директории отменено."
+	msg_change_password_error="Есть проблемы, изменение пароля \"${source_directory_name}\"!\nЭто не EncFS зашифрованных каталогов."
+	msg_change_password_konsole_title="Изменение пароля для \"${source_directory_name}\""
+	msg_get_information_title="Информация о \"${source_directory_name}\""
+	msg_get_informations_problem="Проблема при получении информации о \"${source_directory_name}\"."
+	msg_config_cryptMode="Шифрование режим предпочтителен:"
+	msg_config_cryptMode_standard="Стандартный, безопасной и совместимой."
+	msg_config_cryptMode_paranoia="Паранойя, более безопасный, но менее совместимыми."
+	msg_config_openFileManagerOnMount="Open automatically file manager on mounted directory?"
+	msg_config_openFileManagerOnMount_yes="Да."
+	msg_config_openFileManagerOnMount_no="Нет."
+	msg_config_unmountOnCloseFileManager="Автоматически размонтировать каталог?"
+	msg_config_unmountOnCloseFileManager_yes="Да, после закрытого файловый менеджер."
+	msg_config_unmountOnCloseFileManager_no="Нет, я делаю это вручную."
+	msg_config_saved="Настройки сохранены."
+	msg_save_config_failed="Настройки не сохраняются!"
+}
+
+load_language () {
+	## Load localized strings AFTER english strings
+	## - if localized strings not found use english for default
+	## - if localized strings are incomplete use english only fot missing strings :-)
+	load_language_en && [ "${lang}" != "en" ] && load_language_${lang}
+}
+
+lang=${LANGUAGE%%:*} && lang=$(echo ${lang} | sed "s/@//")
+type load_language_${lang} 1> /dev/null || lang='en'
+load_language
+
+################################################
+
+kdialog_bin=$(which kdialog)
+[ -z "${kdialog_bin}" ] && echo "kdialog not found!" && exit 1
+
+encfs_bin=$(which encfs)
+[ -z "${encfs_bin}" ] && "${kdialog_bin}" --title "${msg_alert_encfs_not_found_title}" --icon configure --error "${msg_alert_encfs_not_found_text}" && exit 2
+
+filemanager_bin="$(which dolphin)"
+
+################################################
+
+checkFuse () {
+	[ -c /dev/fuse ] || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_checkFuseModule}"; exit 3; }
+	[ -r /dev/fuse ] && [ -w /dev/fuse ] || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_checkFusePermission}"; exit 4; }
+}
+
+readConfig () {
+	config_directory="$(kf5-config --path config | sed "s/:.*/kde-service-menu/")"
+	config_file="${config_directory}/encfs.conf"
+
+	if [ -f "${config_file}" ]
+		then
+			cryptMode=$(grep -i "cryptMode" "${config_file}" | sed "s/.*= *//")
+			openFileManagerOnMount=$(grep -i "OpenFileManagerOnMount" "${config_file}" | sed "s/.*= *//")
+			unmountOnCloseFileManager=$(grep -i "UnmountOnCloseFileManager" "${config_file}" | sed "s/.*= *//")
+		else # load standard values
+			cryptMode="standard"
+			openFileManagerOnMount="yes"
+			unmountOnCloseFileManager="yes"
+	fi
+}
+
+askConfig () {
+	cryptMode=$("${kdialog_bin}" --title "${msg_config_title} 1/3" --icon configure --radiolist "${msg_config_cryptMode}" "standard" "${msg_config_cryptMode_standard}" $([ "x${cryptMode}" = "xstandard" ] && echo "on" || echo "off") "paranoia" "${msg_config_cryptMode_paranoia}" $([ "x${cryptMode}" = "xparanoia" ] && echo "on" || echo "off")) || exit 5
+	openFileManagerOnMount=$("${kdialog_bin}" --title "${msg_config_title} 2/3" --icon configure --radiolist "${msg_config_openFileManagerOnMount}" "yes" "${msg_config_openFileManagerOnMount_yes}" $([ "x${openFileManagerOnMount}" = "xyes" ] && echo "on" || echo "off") "no" "${msg_config_openFileManagerOnMount_no}" $([ "x${openFileManagerOnMount}" = "xno" ] && echo "on" || echo "off")) || exit 6
+	[ x"${openFileManagerOnMount}" = x"yes" ] && {
+		unmountOnCloseFileManager=$("${kdialog_bin}" --title "${msg_config_title} 3/3" --icon configure --radiolist "${msg_config_unmountOnCloseFileManager}" "yes" "${msg_config_unmountOnCloseFileManager_yes}" $([ "x${unmountOnCloseFileManager}" = "xyes" ] && echo "on" || echo "off") "no" "${msg_config_unmountOnCloseFileManager_no}" $([ "x${unmountOnCloseFileManager}" = "xno" ] && echo "on" || echo "off")) || exit 7
+	}
+}
+
+writeConfig () {
+	[ -d "${config_directory}" ] || mkdir -p "${config_directory}"
+	:> "${config_file}" && \
+	echo "CryptMode=${cryptMode}" >> "${config_file}" && \
+	echo "OpenFileManagerOnMount=${openFileManagerOnMount}" >> "${config_file}" && \
+	echo "UnmountOnCloseFileManager=${unmountOnCloseFileManager}" >> "${config_file}" && \
+	"${kdialog_bin}" --title "${msg_info_title}" --passivepopup "${msg_config_saved}" 5 || \
+	"${kdialog_bin}" --title "${msg_error_title}" --icon error --msgbox "${msg_save_config_failed}"
+}
+
+configure () {
+	askConfig
+	writeConfig
+}
+
+setSourceDirectory () {
+	source_directory="${1%%/}"
+	[ -d "${source_directory}" ] || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_source_dir_invalid}"; exit 8; }
+
+	source_directory_name="${source_directory##*/}"
+	parent_source_directory=$(dirname -- "${source_directory}");
+	encoded_source_directory=$(echo "${source_directory}" | sed "s/ /\\\\\\\\\\\040/g")
+}
+
+setDestinationDirectory () {
+	if [ -z "${1%%/}" ]; then
+		parent_destination_directory="${parent_source_directory}"
+		destination_directory="${source_directory}_encfs"
+	else
+		destination_directory="${1%%/}"
+		shift
+		[ -d "${destination_directory}" ] || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_dest_dir_invalid}"; exit 9; }
+		[ -w "${destination_directory}" ] || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_dest_dir_no_writable}"; exit 10; }
+		parent_destination_directory=$(dirname -- "${destination_directory}");
+	fi
+
+	destination_directory_name="${destination_directory##*/}"
+	encoded_destination_directory=$(echo "${destination_directory}" | sed "s/ /\\\\\\\\\\\040/g")
+}
+
+# this function is used when this call itself recursively for print password (encfs --extpass option, want argument an extern program)
+# warning: do not print other information from script otherwise break decrypt of source directory because output is not only and clean password!!!
+askPassword () {
+	echo "${2}"
+}
+
+encMount () {
+	password=$("${kdialog_bin}" --title "${msg_askPassword_title}" --password "${msg_askPassword_text}") || {
+		"${kdialog_bin}" --title "${msg_warning_title}" --passivepopup "${msg_mount_abort}" 5
+		exit 11
+		}
+	[ -z "${password}" ] && { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_error_password_empty}"; exit 12; }
+
+	# Check destination directory
+	[ -d "${destination_directory}" ] && { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_checkDestDir}"; exit 13; }
+
+	# Make destination directory
+	mkdir -p "${destination_directory}" || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --error "${msg_mkDestDir}"; exit 14; }
+
+	# var $cryptMode: encfs use only first letter of $cryptMode but I used long names for more readability.
+	echo "${cryptMode}" | encfs --extpass="$0 askPassword ${source_directory} '${password}'" "${source_directory}" "${destination_directory}" || {
+		"${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --error "${msg_mountError}"
+		rm -r "${destination_directory}"
+		exit 15
+		}
+	"${kdialog_bin}" --title "${msg_info_title}" --passivepopup "${msg_mount_finish}" 5
+	[ "x${openFileManagerOnMount}" = "xyes" ] && "${filemanager_bin}" "${destination_directory}" && [ "x${unmountOnCloseFileManager}" = "xyes" ] && manage "${source_directory}"
+	exit 16
+}
+
+manage () {
+	setSourceDirectory "${1}"
+	shift
+	setDestinationDirectory  "${1}"
+	load_language
+	## In the /proc/mounts, there is the name of the destination directory.
+	if [ -n "$(grep "encfs ${encoded_source_directory} fuse.encfs" /proc/mounts)" ]; then
+		## If the directory is mounted (In this case, you've clicked on the destination directory)
+		## then unmount it.
+		fusermount -u "${source_directory}" && rm -r "${source_directory}" && "${kdialog_bin}" --title "${msg_info_title}" --passivepopup "${msg_umount_finish}" 5
+	else
+		## else, if the directory is mounted (In this case, you've clicked on the source directory)
+		if [ -n "$(grep "encfs ${encoded_destination_directory} fuse.encfs" /proc/mounts)" ]; then
+			## then unmount it.
+			fusermount -u "${destination_directory}" && rm -r "${destination_directory}" && "${kdialog_bin}" --title "${msg_info_title}" --passivepopup "${msg_umount_finish}" 5
+		else
+			## else mount or encrypt it.
+			## if already encfs encrtpted, mount it
+			encfsctl info "${source_directory}" > /dev/null && encMount || \
+			{
+				## if not an encfs encrypted, ask if you want encrypt it
+				"${kdialog_bin}" --title "${msg_warning_title}" --icon preferences-desktop-cryptography --warningyesno "${msg_preCreate}" && encMount || \
+				"${kdialog_bin}" --title "${msg_info_title}" --passivepopup "${msg_preCreate_cancel}" 5
+			}
+		fi
+	fi
+}
+
+chpassword () {
+	setSourceDirectory "${1}"
+	load_language
+	encfsctl info "${source_directory}" > /dev/null && \
+	konsole --title "${msg_change_password_konsole_title}" --icon dialog-password -e encfsctl passwd "${source_directory}" || \
+	"${kdialog_bin}" --title "${msg_error_title}" --icon error --error "${msg_change_password_error}"
+}
+
+info () {
+	setSourceDirectory "${1}"
+	load_language
+	infoMsg=$(encfsctl info "${source_directory}") || infoMsg="${msg_get_informations_problem}"
+	"${kdialog_bin}" --title "${msg_get_information_title}" --icon help-about --msgbox "${infoMsg}"
+}
+
+################################################ main
+
+checkFuse
+readConfig
+
+type "${action}" 1> /dev/null || { "${kdialog_bin}" --title "${msg_error_title}" --icon dialog-cancel --sorry "${msg_action_does_not_exist}"; exit 16; }
+
+"${action}" "${@}" && exit 0

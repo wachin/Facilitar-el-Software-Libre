@@ -1,0 +1,65 @@
+Cambiar colores en carpetas de Dolphin(Administrador de archivos) en Ubuntu, Debian, etc con "Dolphin Folder Color"
+https://facilitarelsoftwarelibre.blogspot.com/2019/10/cambiar-colores-en-carpetas-de.html
+
+Administrador de Archivos · Color Folder · Colores en Carpetas · Dolphin
+TUTORIAL APLICABLE A:
+- Ubuntu y todos sus derivados oficiales: Lubuntu, Ubuntu Budgie, Ubuntu Kylin, Ubuntu MATE, Ubuntu Studio, Xubuntu
+- Otros Linux que también usan la administración de paquetes DEB como: Linux Mint, Trisquel, Elementary OS, Zorin OS, Bodhi, Deepin Linux, MX Linux, etc
+y tal vez debería de funcionar en:
+distribuciones que usan la administración de paquetes RPM como Fedora, Red Hat, OpenSUSE, CentOS, Scientific, etc. y oros Linux basados en Arch Linux como: Antergos, Manjaro, ArchBang - y otras distribuciones independientes de Linux como: Gentoo, Mageia, Quirky, Solus, etc. Pero allí se usan otros comandos para instalar aplicaciones y ejecutar un programa como ROOT  (Superusuario) en la terminal, comandos los cuales usted deberá de buscar y cambiar en los comandos para terminal que yo he hecho.
+
+
+A tener en cuenta: Este tutorial lo hago pensado en Distribuciones Linux que NO son basadas en KDE(Kubuntu, KDE Neon, etc) ya que allí vienen instaladas todas las dependencias para que funcione bien Dolphin. Este tutorial es para que puedan usar Color Folder en otras Distribuciones Linux
+
+
+
+INSTRUCCIONES PARA DOLPHIN
+
+1.- Para Dolphin ponga estos comandos en la terminal:
+
+sudo apt-get install dolphin kde-baseapps kde-l10n-es konsole kde-cli-tools kio-extras kde-runtime
+
+
+Una vez instalado este programa, pondrá un icono entre todas sus aplicaciones, ejemplo en antiX Linux:
+
+
+
+
+ INSTALACIÓN:
+Copie todo el siguiente código y peguelo en una terminal:
+
+mkdir -p ~/.local/share/kservices5/ServiceMenus
+cd /tmp
+wget -c https://github.com/audoban/dolphin-folder-color/archive/v1.9.tar.gz
+tar -xzvf v1.9.tar.gz
+cd dolphin-folder-color-1.9
+cp *.desktop ~/.local/share/kservices5/ServiceMenus
+sudo ./install.sh
+echo "Dios les bendiga"
+
+y aparecerá una ventana que tiene una opción "Plasma 5", de clic en Ok, luego le aparecerá otra ventana, de clic en OK, de Enter en la terminal y Reinicie Dolphin(cierrelo si lo tenía abierto y vuelvalo a abrri) y al dar clic derecho en una carpeta le aparecerán las opciones:
+
+
+
+Explicación.- He hecho esto de poner tantos comandos porque el desarrollador original del programa dejó de actualizarlo en el 2017 y a este año 2019 algo cambió en las nuevas distribuciones con KDE 5 y no funciona en el script el comando:
+
+ kf5-config --path services
+
+
+ese comando era necesario para ubicar en el sistema operativo el lugar donde estaban los servicios de KDE5 y antes funcionaba en versiones de Linux del 2017 pero ahora 2019 no funciona:
+
+
+
+y por esa razón, como el escript no encuentra la ruta he hecho esta solución para instalar los archivos necesarios en la ruta correcta
+
+Que Dios les bendiga
+
+Alguna pregunta me dicen
+
+Print Friendly and PDF
+Por Washington Indacochea Delgado en 08:34:00
+    
+No hay comentarios.:
+Publicar un comentario
+
+Cómo instalar diccionario de sinónimos en español para Lyx en Ubuntu, Debian, antiX

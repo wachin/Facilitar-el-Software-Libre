@@ -1,0 +1,59 @@
+# Author: Fabio Mucciante
+# Last Update: 2022/04/25
+# Version: 1.3.0
+#
+# Manual Install:
+#   - KDE4: Copy this file under: ~/.kde4/share/kde4/services/ServiceMenus/
+#   - KDE5: Copy this file under: ~/.local/share/kservices5/ServiceMenus/
+#
+# References:
+#   - https://freeaptitude.altervista.org/downloads/open-with-gvim.html
+#   - https://github.com/fabiomux/kde-servicemenus
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+Icon=gvim
+MimeType=all/allfiles
+X-KDE-Priority=TopLevel
+Actions=open_with_gvim;open_with_vim;open_with_gvimdiff;open_with_vimdiff
+
+[Desktop Action open_with_gvim]
+Name=Open with gVIM
+Name[it]=Apri con gVIM
+Name[fr]=Ouvrir avec gVIM
+Name[es]=Abrir con gVIM
+Name[nl]=Openen met gVIM
+Name[de]=Mit gVIM öffnen
+Icon=gvim
+Exec=gvim -p %F
+
+[Desktop Action open_with_vim]
+Name=Open with VIM (Konsole)
+Name[it]=Apri con VIM (Konsole)
+Name[fr]=Ouvrir avec VIM (Konsole)
+Name[es]=Abrir con VIM (Konsole)
+Name[nl]=Openen met VIM (Konsole)
+Name[de]=Mit VIM öffnen (Konsole)
+Icon=gvim
+Exec=konsole -e vim -p %F
+
+[Desktop Action open_with_gvimdiff]
+Name=Open with gVIMdiff
+Name[it]=Apri con gVIMdiff
+Name[fr]=Ouvrir avec gVIMdiff
+Name[es]=Abrir con gVIMdiff
+Name[nl]=Openen met gVIMdiff
+Name[de]=Mit gVIMdiff öffnen
+Icon=gvim
+Exec=gvimdiff %F
+
+[Desktop Action open_with_vimdiff]
+Name=Open with VIMdiff (Konsole)
+Name[it]=Apri con VIMdiff (Konsole)
+Name[fr]=Ouvrir avec VIMdiff (Konsole)
+Name[es]=Abrir con VIMdiff (Konsole)
+Name[nl]=Openen met VIMdiff (Konsole)
+Name[de]=Mit VIMdiff öffnen (Konsole)
+Icon=gvim
+Exec=konsole -e vimdiff %F

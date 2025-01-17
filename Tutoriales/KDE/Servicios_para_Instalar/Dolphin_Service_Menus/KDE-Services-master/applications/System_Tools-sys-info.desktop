@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=System-Tools;
+Exec=which dmidecode; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="System Information" --passivepopup="[Error] Please install dmidecode command and try again."; exit 1; else /usr/share/applications/System_Tools-sys-info.sh;fi
+Icon=ks-hwinfo
+Name=System Information
+Name[de]=System Info
+Name[es]=Información del Sistema
+Name[fr]=Informations Système
+Name[it]=Informazione del Sistema
+Name[ja]=システムのインフォメーション
+Name[ko]=체내의 정보
+Name[pt]=Informação do Sistema
+Name[ru]=Информация о системе
+Name[uk]=Інформація про систему
+Name[zh_CN]=系统信息
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

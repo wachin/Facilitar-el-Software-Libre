@@ -1,0 +1,20 @@
+
+
+Convert the file
+https://www.epiphanydigest.com/2020/06/12/how-to-convert-a-word-document-to-markdown-format/
+
+Running pandoc is relatively straightforward for a job like this:
+
+pandoc MyWordDoc.docx -f docx -t markdown -o MyWordDoc.md
+
+where MyWordDoc.docx is the name of the Word document you want to convert and MyWordDoc.md is the name of the output file (call yours anything you want, but it’s useful to name it with a .md file extension).
+
+ejemplo:
+
+CURSO DE FORMACION TEOLOGICA EVANGELICA - Francisco LaCueva.docx
+
+pandoc "CURSO DE FORMACION TEOLOGICA EVANGELICA - Francisco LaCueva.odt" -f odt -t markdown -o "MyWordDoc-odt.md"
+
+
+
+pandoc "001_78-80 Evangelismo Explosivo.docx" -f docx -t markdown -o "78-80 Evangelismo Explosivo.md"

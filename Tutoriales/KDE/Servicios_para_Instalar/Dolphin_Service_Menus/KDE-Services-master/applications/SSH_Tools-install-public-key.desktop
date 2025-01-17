@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=SSH-Tools;
+Exec=/usr/share/applications/SSH_Tools-copy-id.sh
+Icon=ks-key
+Name=Install Public Key
+Name[de]=Öffentlichen Schlüssel installieren
+Name[es]=Instalar Llave Publica
+Name[fr]=Installer la Clé Publique
+Name[it]=Installa Chiave Pubblica
+Name[ja]=キーをインストールすることは出版します
+Name[ko]=Key Publishes 를 인스톨한다
+Name[pt]=Instalar Chave Publica
+Name[ru]=Установить открытый ключ
+Name[uk]=Встановити відкритий ключ
+Name[zh_CN]=安装公钥
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

@@ -1,0 +1,71 @@
+Agregue la carpeta abierta como raíz al menú contextual del Administrador de archivos de PCMan
+10
+https://qastack.mx/ubuntu/444305/add-open-folder-as-root-to-pcman-file-managers-context-menu
+
+En la última versión de PCManFM, la opción en Herramientas-Abrir carpeta actual como raíz se ha eliminado. ¿Hay alguna manera de volver a agregar la opción? Sé que puedo abrir PCManFM como Root a través de la Terminal, pero fue útil abrir la carpeta específica en la opción Herramientas. ¿También hay una manera de agregar la opción como una entrada del menú contextual?
+
+No entendí la extensión de especificación del archivo de escritorio (DES-EMA).
+
+Encontré esto:
+
+[Desktop Entry]
+Name = Open as Root
+Tooltip = Open the folder as root
+Icon = terminal
+Profiles = on_folder;
+
+[X-Action-Profile on_folder]
+Name = Open as Root
+MimeTypes = inode/directory;
+SelectionCount = 1
+Exec = gksudo pcmanfm %s
+
+Entonces nombrar los pcman_root.desktop archivo y colocará el archivo en: ~/.local/share/file-manager/actions. Desafortunadamente, no tengo la carpeta file-manager/actionsdebajo del ~/.local/sharedirectorio. ¿Se supone que debo crear esa carpeta específica?
+lubuntu 
+— usuario236378
+fuente
+No es la respuesta, pero se recomienda no abrir un administrador de archivos GUI con permisos de root. Dichas tareas deben realizarse utilizando la terminal. Tal vez los desarrolladores de PCManFM eliminaron la función ya que entendieron la amenaza. Simplemente adivinen.
+— Usuario registrado
+Gracias por su aporte. Creo que tienes razón en lo que respecta a eliminar la función. Sin embargo, debe haber una manera de volver a agregar la opción de alguna forma en lugar de utilizar la Terminal. Supuestamente, el archivo como se describe anteriormente proporcionará la opción, pero no tengo la carpeta 'file-manager / actions' en la ubicación ~ .local / share. Gracias de nuevo por tu aportación.
+— user236378
+
+Respuestas:
+7
+
+Estás en el camino correcto.
+
+Crear ~/.local/share/file-manager/actions.
+
+En esa carpeta, cree root.desktop(no pcman_root.desktop o cualquier otra cosa).
+
+Agregue este contenido:
+
+[Desktop Entry]
+Type=Action
+Tooltip=Open Folder As Root
+Name=Open Folder As Root
+Profiles=profile-zero;
+Icon=gtk-dialog-authentication
+
+[X-Action-Profile profile-zero]
+MimeTypes=inode/directory;
+Exec=/usr/bin/gksu /usr/bin/pcmanfm %u
+Name=Default profile
+
+Guarda el archivo.
+
+(O descargue el script desde aquí ).
+
+Reinicie PCManFM (Herramientas del sistema, Administrador de tareas, finalice o elimine pcmanfm, luego vuelva a iniciarlo). Ahora, cuando hace clic derecho en una carpeta, debería ver la opción "Abrir como root" en el menú contextual.
+
+ingrese la descripción de la imagen aquí
+
+Como han dicho otros, esta característica puede ser peligrosa, por lo que no está allí por defecto.
+
+Y esto es lo que un desarrollador asociado con el proyecto PCManFM tiene que decir en respuesta a una " solicitud " de restauración de la función:
+
+    Ejecutar pcmanfm como root significa que todas las aplicaciones se ejecutarán bajo root, lo que no es seguro, ya sabes (bueno, si quieres arriesgar tu sistema y caminar sobre el blade, entonces puedo ver la razón) y nunca vi ninguna razón para ejecutar el editor / navegador / vino / etc. bajo raíz (y quieres exactamente esto, ¿no?)
+
+    Pero de todos modos, si tanto quieres hacer estas cosas arriesgadas, ¿por qué nunca lees la página http://wiki.lxde.org/en/PCManFM#Run_as_root ? Sí, se modificó últimamente pero todavía está disponible, bajo su propio riesgo.
+
+

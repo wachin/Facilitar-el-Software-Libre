@@ -1,0 +1,37 @@
+
+
+Depende de la versión de wine que tenga instalada, yo tengo wine-stable y es la versión 3 en xubuntu 18.04
+
+En synaptic están estos archivos
+
+se puede lanzar este:
+
+winecfg-stable
+
+
+/.
+/usr
+/usr/bin
+/usr/bin/msiexec-stable
+/usr/bin/regedit-stable
+/usr/bin/regsvr32-stable
+/usr/bin/wine-stable
+/usr/bin/wineboot-stable
+/usr/bin/winecfg-stable
+/usr/bin/wineconsole-stable
+/usr/bin/winedbg-stable
+/usr/bin/winefile-stable
+/usr/bin/winepath-stable
+/usr/bin/wineserver-stable
+
+
+
+wineconsole
+winedbg
+winefile
+winepath
+wineserver
+
+Para desinstalar:
+
+wine uninstaller

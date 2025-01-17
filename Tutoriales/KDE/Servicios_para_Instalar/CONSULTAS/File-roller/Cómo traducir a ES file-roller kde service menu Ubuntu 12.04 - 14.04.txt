@@ -1,0 +1,32 @@
+
+En el archivo:
+
+fileroller_addtoservicemenu.desktop
+
+hay que cambiar esto:
+
+Name=Compress...
+
+a:
+
+Name=Comprimir...
+
+En el archivo:
+
+fileroller_servicemenu.desktop
+
+Cambiar estos:
+
+Name=Extract Archive To...
+
+Name=Extract Archive Here
+
+por:
+
+Name=Extraer Archivo a...
+
+Name=Extraer Aqui
+
+Por: Washington I.D.
+
+

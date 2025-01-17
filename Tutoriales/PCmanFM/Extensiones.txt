@@ -1,0 +1,14 @@
+
+
+
+
+https://wiki.lxde.org/en/Extension_modules_for_LibFM
+
+https://wiki.lxde.org/en/Extension_modules_for_LibFM#How_to_create_a_plugin
+
+https://wiki.lxde.org/en/Extension_modules_for_LibFM#Types_of_plugins_supported_by_LibFM
+
+sudo apt install libfm-modules libfm-tools
+
+
+https://qastack.mx/ubuntu/444305/add-open-folder-as-root-to-pcman-file-managers-context-menu

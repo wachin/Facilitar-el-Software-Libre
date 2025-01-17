@@ -1,0 +1,101 @@
+# Dolphin Administrador de Archivos en Debian 12 de 32 bit (Ejm MX Linux 23, etc) no monta / tiene acceso/ puede acceder / al teléfono / Dispositivo Android por cable USB
+
+https://facilitarelsoftwarelibre.blogspot.com/2024/07/dolphin-administrador-de-archivos-no-monta-el-telefono-android-en-debian-12-de-32-bit.html
+
+A esta fecha 22 de Julio de 2024 he instalado [Debian 12 NetInstall CD ](https://www.debian.org/CD/netinst/) de 32 bit y dentro he instalado el administrador de archivos Dolphin según[ mi tutorial](https://facilitarelsoftwarelibre.blogspot.com/2019/11/instalar-correctamente-dolphin-en-entornos-no-kde.html) y tengo un celular [Redmi Note 11](https://www.mi.com/global/product/redmi-note-11/) y al conectarlo al ordenador no se monta, aparece así:
+
+esta es la solución para este caso y otros Sistemas Operativos debian 12 de 32 bit en que quieran usar Dolphin y no puedan acceder al Celular por medio del Cable USB
+
+**Nota**: Puede que luego envíen una actualización con la corrección y este tutorial ya no sea necesario.
+
+La solución la encontré buscando en inglés y me encontré esta entrada:
+
+**KDE not mounting Android Phone**<https://forums.raspberrypi.com/viewtopic.php?t=359400>
+
+y allí dice que hay un archivo que apunta mal, en una terminal ponga para abrir el archivo:
+
+kate /usr/share/dbus-1/services/org.kde.kmtpd5.service
+
+
+a continuación le indico cual es el error:
+
+
+como le indico, en Debian 12 está mal, esa ruta:
+
+/usr/lib/x86_64-linux-gnu/libexec/kf5/kiod5
+
+pues no existe en el sistema operativo de 32 bit
+
+la ruta correcta es:
+
+
+
+/usr/lib/i386-linux-gnu/libexec/kf5/kiod5
+
+que lleva al archivo:
+
+kiod5
+
+
+entonces debemos de corregir eso, usemos nano, desde la terminal, poner:
+
+```
+sudo nano /usr/share/dbus-1/services/org.kde.kmtpd5.service
+```
+
+
+le preguntará:
+
+y escriba:
+
+
+s
+
+
+y aparece así:
+
+
+con las flechas del teclado ubíquese a la derecha del texto:
+
+kiod5
+
+y con la tecla "Retroceso" o "BackSpace" borre toda esa línea hacia la izquierda, debe quedar así:
+
+y copie la línea:
+
+i386-linux-gnu/libexec/kf5/kiod5
+
+y peguela allí con clic derecho, debe de quedar así:
+
+**GUARDAR CAMBIOS**.- Nano abrevia CTRL con ^, así CTRL + O es igual a:
+
+^O
+
+y en nano aparece así:
+
+^O Guardar
+
+para indicar que es el comando para escribir.
+
+**Nota:** Es importante hacer notar que es la letra "o", no es "cero" o sea "0"
+
+Para guardar aplaste:
+
+CTRL + O
+
+y le aparece un mensaje que dice:
+
+de Enter:
+
+para escribir en el archivo:
+
+org.kde.kmtpd5.service
+
+**Cómo salir de nano.-** Aplaste CTRL + X (Nota: Si Ud está escribiendo algo y ha aplastado CTRL + O la opción CTRL + X no estará disponible hasta que Ud de ENTER)
+
+y ya está. Reinicie el Sistema Operativo
+
+y al entrar ahora si puedo acceder desde Dolphin a mi celular Android Redmi Note 11:
+
+
+Dios les bendiga

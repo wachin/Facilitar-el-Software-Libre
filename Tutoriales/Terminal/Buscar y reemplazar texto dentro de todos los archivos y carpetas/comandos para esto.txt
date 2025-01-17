@@ -1,0 +1,6 @@
+
+
+
+grep -RiIl ./ | xargs sed -i 's/antiguo/nuevo/g'
+
+

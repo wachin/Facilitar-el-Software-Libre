@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+# debian/rules for alien
+
+PACKAGE=$(shell dh_listpackages)
+
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean -d
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+
+override_dh_auto_install:
+	mkdir -p debian/$(PACKAGE)
+	# Copy the packages's files.
+	find ./ -type d -name "usr" -not -name debian -print0 | \
+		sed -e s#'./'##g | \
+		xargs -0 -r -i cp -a ./{} debian/$(PACKAGE)/{}
+#
+# If you need to move files around in debian/$(PACKAGE) or do some
+# binary patching, do it here
+#
+
+# Ecuador, 29 de Octubre de 2022
+# Este archvio ha sido modificado por Washington Indacochea wachin.id@gmail.com
+# para poder usar este método que usa Alien para convertir paquetes 
+# rpm a debian en el cual crea un archivo rules generico 
+# para empaquetar toda clase de programas
+
+# Ecuador, October 29, 2022 
+# This file has been modified by Washington Indacochea wachin.id@gmail.com 
+# in order to use this method that Alien uses to convert rpm
+# to debian, in which it creates a generic rules 
+# file to package all kinds of programs
+
+override_dh_strip:
+# This has been known to break on some wacky binaries.
+	#	dh_strip
+
+override_dh_fixperms:
+#	dh_fixperms
+
+override_dh_shlibdeps:
+	-dh_shlibdeps
+

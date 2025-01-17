@@ -1,0 +1,117 @@
+
+Extraer aquí y Comprimir con Engrampa en español para Dolphin o Dolphin4 en Ubuntu 16.04, 18.04+, derivados Debian(ejem: antiX)
+Dolphin · Dolphin4 · IMPRESCINDIBLES · KDE Services
+Un buen administrador de archivos en Ubuntu y derivados (y en otros Linux) es Dolphin y Dolphin4; Para mi es muy rapido, personalizable, muestra bien las imagenes y los textos y tiene activada la opción buscar, pero no trae la opción: 'Extraer aquí' y 'Comprimir' tal como en nautilus, pero eso en Entornos de Escritorio que no son basados en KDE como Kubuntu o KDE Neon donde si viene en español y no es necesario hacer esto, es decir lo siguiente para que pueda funcionar
+
+TUTORIAL APLICABLE A:
+- Ubuntu y todos sus derivados oficiales: Lubuntu, Ubuntu Budgie, Ubuntu Kylin, Ubuntu MATE, Ubuntu Studio, Xubuntu
+- Otros Linux que también usan la administración de paquetes DEB como: Linux Mint, Trisquel, Elementary OS, Zorin OS, Bodhi, Deepin Linux, MX Linux, etc y debería de funcionar en:
+distribuciones que usan la administración de paquetes RPM como Fedora, Red Hat, OpenSUSE, CentOS, Scientific, etc
+- Otros Linux basados en Arch Linux como: Antergos, Manjaro, ArchBang - y otras distribuciones independientes de Linux como: Gentoo, Mageia, Quirky, Solus, etc. Pero allí se usan otros comandos de instalación los cuales usted deberá de buscar
+
+
+Nota: En realidad la opción "Extraer aquí" si se la puede instalar si uno instala el paquete "ark" que está en los repositorios, pero no está en español, así que creé la opción "Extraer aquí" en español en mi cuenta de GitHub usando la del paquete engrampa que es el programa para extraer aquí del administrador de archivos Caja
+
+Nota 2: Necesita tener instalado git, si no lo tiene instalelo:
+sudo apt-get install git
+
+
+
+INSTRUCCIONES para Dolphin
+
+Ponga en la terminal
+sudo apt-get install dolphin engrampa rar unrar p7zip-full zip
+
+Explicaciones:
+dolphin.- El administrador de archivos
+engrampa.- Herramienta de caja para extraer o comprimir archivos
+rar.- Compresión RAR
+unrar.- Descompresión RAR
+p7zip-full.- Compresión y descompresión 7z
+zip.- Compresión zip
+
+Ahora poner en la terminal, cópielo todo, lo he preparado para que lo pueda copiar todo y se ejecute automáticamente :
+
+mkdir -p ~/.local/share/kservices5/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/engrampa-kde-service
+cd engrampa-kde-service
+cp *.desktop ~/.local/share/kservices5/ServiceMenus
+echo "Dios les bendiga"
+
+Quedará una ultima linea en la terminal, dar Enter, y funcionará.
+
+Explicaciones:
+mkdir -p ~/.local/share/kservices5/ServiceMenus/.- Creamos la carpeta ServiceMenus si es que no está creada en esa ruta y si si está no pasa nada
+cd /tmp.- Nos colocamos en la carpeta temporal
+git clone https://github.com/wachin/engrampa-kde-service.- Descargamos el servicio KDE que hice para instalación rapida de la opción Extraer aquí de Engrampa
+cd engrampa-kde-service.- Nos ubicamos en el directorio donde están los archivos
+cp *.desktop ~/.local/share/kservices5/ServiceMenus/ .- Copiamos todos los archivos .desktop (sólo hay dos) y los pegamos al lugar donde deben estar los servicios de KDE 5 para que funcione
+echo "Dios les bendiga".- Es para terminar la ejecución de la última línea.
+
+Bien, ahora cierre Dolphin y vuelvalo a abrir. Le quedará así:
+
+
+
+
+Nota: Dolphin debería quedar instalado entre los otros programas instalados, ejemplo en antiX 9:
+
+
+
+o se desea también lo puede lanzar desde la terminal así:
+
+dolphin
+
+INSTRUCCIONES para Dolphin 4
+Por si alguien lo usa aún (en versiones nuevas de Sistemas Operativos Linux anteriores al 2019 ya lo están sacando de los repositorios) estas son las instrucciones, ponga en la terminal:
+sudo apt-get install dolphin4 engrampa rar unrar p7zip-full zip
+
+Explicaciones:
+dolphin4.- El administrador de archivos
+engrampa.- Herramienta de caja para extraer o comprimir archivos 
+rar.- Compresión RAR
+unrar.- Descompresión RAR
+p7zip-full.- Compresión y descompresión 7z
+zip.- Compresión zip
+
+Ahora ponga en la terminal :
+
+mkdir -p ~/.kde/share/kde4/services/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/engrampa-kde-service
+cd engrampa-kde-service
+cp *.desktop ~/.kde/share/kde4/services/ServiceMenus
+echo "Dios les bendiga"
+
+Quedará una ultima linea en la terminal, dar Enter, y funcionará.
+
+Explicaciones:
+mkdir -p ~/.kde/share/kde4/services/ServiceMenus.- Creamos la carpeta ServiceMenus si es que no está creada en esa ruta y si si está no pasa nada
+cd /tmp.- Nos colocamos en la carpeta temporal
+git clone https://github.com/wachin/engrampa-kde-service.- Descargamos el servicio KDE que hice para instalación rapida de la opción Extraer aquí de Engrampa
+cd engrampa-kde-service.- Nos ubicamos en el directorio donde están los archivos
+cp *.desktop ~/.kde/share/kde4/services/ServiceMenus.- Copiamos todos los archivos .desktop (sólo hay dos) y los pegamos al lugar donde deben estar los servicios de KDE 4 para que funcione
+echo "Dios les bendiga".- Es para terminar la ejecución de la última línea. 
+
+Bien, ahora cierre Dolphin4 y vuelvalo a abrir. Le quedará así:
+
+
+
+
+Nota: Dolphin4 no crea un icono entre todas sus aplicaciones instaladas por lo cual debe ejecutarlo desde la terminal así: dolphin4
+dolphin4
+
+  Dios les bendiga, me escriben alguna consulta
+Print Friendly and PDF
+Por Washington Indacochea Delgado en 20:29:00
+    
+No hay comentarios.:
+Publicar un comentario
+
+Cambiar colores en carpetas de Dolphin(Administrador de archivos) en Ubuntu, Debian, etc con 
+Cambiar colores en carpetas de Dolphin(Administrador de archivos) en Ubuntu, Debian, etc con "Dolphin Folder Color"
+Instalar WPS Office 2019, poner en español + Diccionario de Corrección Ortográfica Español-España en Linux (Ubuntu, Debian, Fedora, OpenSuse, etc)
+Instalar WPS Office 2019, poner en español + Diccionario de Corrección Ortográfica Español-España en Linux (Ubuntu, Debian, Fedora, OpenSuse, etc)
+Sobre mi
+
+ 

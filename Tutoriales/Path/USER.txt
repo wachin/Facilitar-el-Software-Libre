@@ -1,0 +1,12 @@
+
+
+How to Change Folder Colors in Dolphin (KDE File Manager) - Make Tech Easier
+https://www.maketecheasier.com/change-folder-colors-kde-dolphin/
+
+
+If you want to change the icon size in Dolphin’s Places panel, you can do it by editing the “dolphinrc” configuration file. This file is usually found in the 
+
+/home/$USER/.kde/share/config
+
+
+ folder. Open it in a text editor and search for the following text: 

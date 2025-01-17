@@ -1,0 +1,10 @@
+
+El repositorio está en:
+
+https://github.com/geobarrod/KDE-Services 
+
+lo he clonado pero le he borrado la carpeta oculta:
+
+.git
+
+para poder tenerlo dentro de mi repositorio e investigar su contenido

@@ -1,0 +1,41 @@
+
+Cómo instalar Brackets (Fork Quadre) en MX Linux 21 de 32 bits
+Han hecho un Fork de Brackets para seguirle dando mantenimiento y que se pueda usar. Yo lo he compilado en MX Linux 21 de 32 bits y he creado un Fork y allí lo he subido par Linux 32 bits
+
+#DEPENDENCIAS
+
+sudo apt install npm
+
+
+
+#DESCARGA:
+
+
+git clone https://github.com/quadre-code/quadre
+cd quadre
+git submodule update --init
+npm install
+npm run dist
+
+
+
+
+Corregir para la vista previa en 32 bits
+
+sudo apt install chromium chromium-l10n chromium-shell chromium-driver chromium-sandbox
+
+
+
+sudo ln -s /usr/bin/chromium /bin/google-chrome
+ 
+
+
+
+
+
+Enhacement: Chromium-based forks for live preview · Issue #13010 · adobe/brackets
+https://github.com/adobe/brackets/issues/13010
+
+Live preview doesn't work on archlinux · Issue #9562 · adobe/brackets
+https://github.com/adobe/brackets/issues/9562
+

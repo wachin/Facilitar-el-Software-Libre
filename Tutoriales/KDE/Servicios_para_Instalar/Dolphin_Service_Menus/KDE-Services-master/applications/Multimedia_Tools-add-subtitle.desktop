@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Multimedia-Tools;
+Exec=which ffmpeg; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Add Subtitle to MP4 File" --passivepopup="[Error] Please install ffmpeg command and try again."; exit 1; else /usr/share/applications/ffmpeg_multifile-add-subtitle.sh %F;fi
+Icon=ks-add-subs
+Name=Add Subtitle to MP4 Files
+Name[de]=Untertitel zu MP4s hinzufügen
+Name[es]=Agregar Subtitulo a Ficheros MP4
+Name[fr]=Ajouter le Sous-titre à des Fichiers MP4
+Name[it]=Aggiungi Sottotitolo ai File MP4
+Name[ja]=MP4 ファイルに字幕を加えなさい
+Name[ko]=MP4 파일에서 추가 원고 부제
+Name[pt]=Acrescente Subtítulo a Arquivos de MP4
+Name[ru]=Добавьте Подзаголовок к MP4 Файлы
+Name[uk]=Додайте Подзаголовок MP4 Файли
+Name[zh_CN]=给 MP4 文件添加字幕
+Path=/usr/share/applications
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

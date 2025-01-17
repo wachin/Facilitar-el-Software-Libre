@@ -1,0 +1,23 @@
+
+Cómo pasar markdown desde ChatGPT a Blogger con Typora arreglando numerales con "1.)" y guiones con "─"
+
+El siguiente es un ejemplo de lo que me da ChatGPT:
+
+4. **Agregar el HTML a Blogger**:
+   - Inicia sesión en tu cuenta de Blogger y ve a la sección de entradas.
+   - Crea una nueva entrada o edita una existente.
+   - Cambia a la vista HTML en el editor de entradas de Blogger.
+
+Para poder copiarlo bien desde Typora debo editarlo en Typora cambiando el guión por "─", así:
+
+4.) **Agregar el HTML a Blogger**:
+   ─ Inicia sesión en tu cuenta de Blogger y ve a la sección de entradas.
+   ─ Crea una nueva entrada o edita una existente.
+   ─ Cambia a la vista HTML en el editor de entradas de Blogger.
+
+allí si copiar desde Typora se pegará bien en Blogger
+
+La descripción del simbolo usado:
+
+─      U+2500 (alt-09472)    BOX DRAWINGS LIGHT HORIZONTAL = Videotex Mosaic DG 15
+

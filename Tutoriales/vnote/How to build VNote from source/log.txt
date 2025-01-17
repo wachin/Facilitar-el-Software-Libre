@@ -1,0 +1,19 @@
+
+wachin@mx21:~/Dev-wachin/vnote
+
+git submodule update --init --recursive
+Submódulo 'libs/QHotkey' (https://github.com/vnotex/QHotkey.git) registrado para ruta 'libs/QHotkey'
+Submódulo 'libs/vtextedit' (https://github.com/vnotex/vtextedit.git) registrado para ruta 'libs/vtextedit'
+Clonando en '/home/wachin/Dev-wachin/vnote/libs/QHotkey'...
+Clonando en '/home/wachin/Dev-wachin/vnote/libs/vtextedit'...
+Ruta de submódulo 'libs/QHotkey': check out realizado a '18ac011008d3ae55abc19233ba94fad1ea9801d8'
+Ruta de submódulo 'libs/vtextedit': check out realizado a 'e6591f8bda53ecbdbac8d7aae4be80aa6f198017'
+Submódulo 'src/libs/hunspell' (https://github.com/vnotex/hunspell.git) registrado para ruta 'libs/vtextedit/src/libs/hunspell'
+Submódulo 'src/libs/sonnet' (https://github.com/vnotex/sonnet.git) registrado para ruta 'libs/vtextedit/src/libs/sonnet'
+Submódulo 'src/libs/syntax-highlighting' (https://github.com/vnotex/syntax-highlighting.git) registrado para ruta 'libs/vtextedit/src/libs/syntax-highlighting'
+Clonando en '/home/wachin/Dev-wachin/vnote/libs/vtextedit/src/libs/hunspell'...
+Clonando en '/home/wachin/Dev-wachin/vnote/libs/vtextedit/src/libs/sonnet'...
+Clonando en '/home/wachin/Dev-wachin/vnote/libs/vtextedit/src/libs/syntax-highlighting'...
+Ruta de submódulo 'libs/vtextedit/src/libs/hunspell': check out realizado a 'efb0389dbd3cb4c9634e1df73bacb5a290dd9311'
+Ruta de submódulo 'libs/vtextedit/src/libs/sonnet': check out realizado a '403863fc499c58677c9b0b25f820d0baa9186a07'
+Ruta de submódulo 'libs/vtextedit/src/libs/syntax-highlighting': check out realizado a '807895fcc897b94e731d91c7e92ee27e61aaeed9'

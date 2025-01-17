@@ -1,0 +1,32 @@
+
+
+wachin@mx21:~
+$ sudo gdebi '/home/wachin/Dev-wachin/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick1_2.7.2-1_i386.deb' 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Reading state information... Done
+
+Qt5/C++ wrapper for ALSA Sequencer (shared library)
+ This library is a C++ wrapper around the ALSA library sequencer interface,
+ using Qt5 objects, idioms and style. ALSA sequencer provides software
+ support for MIDI technology on Linux. Complementary classes for OVE and WRK
+ file processing are also included.
+ .
+ This package provides the shared library.
+¿Quiere instalar el paquete de software? [s/N]:s
+/usr/bin/gdebi:113: FutureWarning: Possible nested set at position 1
+  c = findall("[[(](\S+)/\S+[])]", msg)[0].lower()
+(Leyendo la base de datos ... 561435 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../drumstick1_2.7.2-1_i386.deb ...
+Desempaquetando drumstick1:i386 (2.7.2-1) ...
+dpkg: error al procesar el archivo /home/wachin/Dev-wachin/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick1_2.7.2-1_i386.deb (--install):
+ intentando sobreescribir `/usr/lib/i386-linux-gnu/libdrumstick-alsa.so.2', que está también en el paquete libdrumstick-alsa2:i386 1:2.6.0-dmo1
+Procesando disparadores para libc-bin (2.31-13+deb11u3) ...
+Procesando disparadores para mailcap (3.69) ...
+Procesando disparadores para desktop-file-utils (0.26-1) ...
+Procesando disparadores para hicolor-icon-theme (0.17-2) ...
+Procesando disparadores para man-db (2.9.4-2) ...
+Procesando disparadores para shared-mime-info (2.0-1) ...
+Se encontraron errores al procesar:
+ /home/wachin/Dev-wachin/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick1_2.7.2-1_i386.deb

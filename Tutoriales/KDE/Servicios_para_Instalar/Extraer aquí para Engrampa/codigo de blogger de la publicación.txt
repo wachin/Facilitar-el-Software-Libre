@@ -1,0 +1,114 @@
+
+
+Un&nbsp;<a href="http://www.malavida.com/listas/los-mejores-programas-linux-del-ano-2014-004850" target="_blank">buen</a>
+ administrador de archivos en Ubuntu y derivados (y en otros Linux) es Dolphin y Dolphin4; Para mi es
+ muy rapido, personalizable, muestra bien las imagenes y los textos y 
+tiene activada la opción buscar, pero&nbsp;no trae la opción: 'Extraer aquí' y 'Comprimir' tal como en nautilus, pero eso en Entornos de Escritorio que no son basados en KDE como Kubuntu o KDE Neon donde si viene en español y no es necesario hacer esto, es decir lo siguiente para que pueda funcionar<br />
+<br />
+<b>TUTORIAL APLICABLE A:</b><br />
+-&nbsp;<a href="https://distrowatch.com/table.php?distribution=ubuntu" target="_blank">Ubuntu</a>&nbsp;y todos sus&nbsp;<a href="https://www.ubuntu.com/about/about-ubuntu/flavours" target="_blank">derivados oficiales</a>:&nbsp;<a href="http://lubuntu.me/" target="_blank">Lubuntu</a>,&nbsp;<a href="https://ubuntubudgie.org/" target="_blank">Ubuntu Budgie</a>,&nbsp;<a href="http://www.ubuntukylin.com/" target="_blank">Ubuntu Kylin</a>,&nbsp;<a href="https://ubuntu-mate.org/" target="_blank">Ubuntu MATE</a>,&nbsp;<a href="http://ubuntustudio.org/" target="_blank">Ubuntu Studio</a>,&nbsp;<a href="https://xubuntu.org/" target="_blank">Xubuntu</a><br />
+- Otros Linux que también usan la administración de paquetes&nbsp;<a href="https://es.wikipedia.org/wiki/Deb" target="_blank">DEB</a>&nbsp;como:&nbsp;<a href="https://distrowatch.com/table.php?distribution=mint" target="_blank">Linux Mint</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=trisquel" target="_blank">Trisquel</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=elementary" target="_blank">Elementary OS</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=zorin" target="_blank">Zorin OS</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=bodhi" target="_blank">Bodhi</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=deepin" target="_blank">Deepin Linux</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=mx" target="_blank">MX Linux</a>, etc
+<b>y debería de funcionar en:</b><br />
+distribuciones que usan la administración de paquetes&nbsp;<a href="https://es.wikipedia.org/wiki/RPM_Package_Manager" target="_blank">RPM</a>&nbsp;como&nbsp;<a href="https://distrowatch.com/table.php?distribution=fedora" target="_blank">Fedora</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=redhat" target="_blank">Red Hat</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=opensuse" target="_blank">OpenSUSE</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=centos" target="_blank">CentOS</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=scientific" target="_blank">Scientific</a>, etc<br />
+- Otros Linux basados en&nbsp;<a href="https://distrowatch.com/table.php?distribution=arch" target="_blank">Arch Linux</a>&nbsp;como:&nbsp;<a href="https://distrowatch.com/table.php?distribution=antergos" target="_blank">Antergos</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=manjaro" target="_blank">Manjaro</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=archbang" target="_blank">ArchBang</a>
+- y otras distribuciones independientes de Linux como:&nbsp;<a href="https://distrowatch.com/table.php?distribution=gentoo" target="_blank">Gentoo</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=mageia" target="_blank">Mageia</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=quirky" target="_blank">Quirky</a>,&nbsp;<a href="https://distrowatch.com/table.php?distribution=solus" target="_blank">Solus</a>, etc.&nbsp;<b><i>Pero allí se usan otros comandos de instalación los cuales usted deberá de buscar</i></b><br />
+<br />
+<br />
+<b>Nota: </b>En realidad la opción "Extraer aquí" si se la puede instalar si uno instala el paquete "ark" que está en los repositorios, pero no está en español, así que creé la opción "Extraer aquí" en español en mi cuenta de <a href="https://github.com/wachin/engrampa-kde-service" target="_blank">GitHub</a> usando la del paquete engrampa que es el programa para extraer aquí del administrador de archivos Caja<br />
+<br />
+<b>Nota 2:</b> Necesita tener instalado git, si no lo tiene instalelo:<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>sudo apt-get install git</code></span></pre>
+<br />
+<br />
+<br />
+<span style="color: red;"><span style="font-size: large;"><b><span style="font-family: inherit;"><span arial="" font-size:="" helvetica="" sans-serif="" small=""><b><span style="font-family: inherit;"><span arial="" font-size:="" helvetica="" sans-serif="" small="">INSTRUCCIONES </span></span></b>para Dolphin </span></span></b></span></span><br />
+<br />
+<b>
+</b>
+Ponga en la terminal<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>sudo apt-get install dolphin engrampa rar unrar p7zip-full zip</code></span></pre>
+<br />
+<b>Explicaciones:</b><br />
+<b>dolphin.-</b> El administrador de archivos<br />
+<b>engrampa</b>.- Herramienta de caja para extraer o comprimir archivos <br />
+<b>rar</b>.- Compresión RAR<br />
+<b>unrar</b>.- Descompresión RAR<br />
+<b>p7zip-full</b>.- Compresión y descompresión 7z<br />
+<b>zip</b>.- Compresión zip<br />
+<br />
+Ahora poner en la terminal, cópielo todo, lo he preparado para que lo pueda copiar todo y se ejecute automáticamente :<br />
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>mkdir -p ~/.local/share/kservices5/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/engrampa-kde-service
+cd engrampa-kde-service
+cp *.desktop ~/.local/share/kservices5/ServiceMenus</code></span><span style="font-size: medium;"><code>echo "Dios les bendiga"</code></span>
+<span style="font-size: medium;"><code></code></span></pre>
+Quedará una ultima linea en la terminal, dar Enter, y funcionará.<br />
+<br />
+<span style="color: blue;"><b>Explicaciones:</b></span><br />
+<b>mkdir -p ~/.local/share/kservices5/ServiceMenus/.- </b>Creamos la carpeta ServiceMenus si es que no está creada en esa ruta y si si está no pasa nada<br />
+<b>cd /tmp.-</b> Nos colocamos en la carpeta temporal<br />
+<b>git clone https://github.com/wachin/engrampa-kde-service.-</b> Descargamos el servicio KDE que hice para instalación rapida de la opción Extraer aquí de Engrampa<br />
+<b>cd engrampa-kde-service.-</b> Nos ubicamos en el directorio donde están los archivos<br />
+<b>cp *.desktop ~/.local/share/kservices5/ServiceMenus/ .-</b>
+ Copiamos todos los archivos .desktop (sólo hay dos) y los pegamos al 
+lugar donde deben estar los servicios de KDE 5 para que funcione<br />
+<b>echo "Dios les bendiga".-</b> Es para terminar la ejecución de la última línea. <br />
+<br />
+Bien, ahora cierre Dolphin y vuelvalo a abrir. Le quedará así:<br />
+<br />
+<a href="http://1.bp.blogspot.com/-BZZEbL-U7b8/XYRGdbIN-UI/AAAAAAAATRk/4xD6hkcQXWQo-7CXeICNRZI1Evoo7awzACK4BGAYYCw/s1600/%25C3%2581rea%2Bde%2Btrabajo%2B1_092.png"><img border="0" height="514" src="https://1.bp.blogspot.com/-BZZEbL-U7b8/XYRGdbIN-UI/AAAAAAAATRk/4xD6hkcQXWQo-7CXeICNRZI1Evoo7awzACK4BGAYYCw/s640/%25C3%2581rea%2Bde%2Btrabajo%2B1_092.png" width="640" /></a><br />
+<br />
+<!--more--><br />
+<b>Nota:</b> Dolphin debería quedar instalado entre los otros programas instalados, ejemplo en antiX 9:<br />
+<br />
+<br />
+
+<a href="http://1.bp.blogspot.com/-58VqCR6tnMA/XbHSq3FSfDI/AAAAAAAAUO0/JwUqP_k_iyYFF4BnK3vRq7WUXdB0FMgSACK4BGAYYCw/s1600/ksnip_20191024-113420.png" imageanchor="1"><img border="0" height="640" src="https://1.bp.blogspot.com/-58VqCR6tnMA/XbHSq3FSfDI/AAAAAAAAUO0/JwUqP_k_iyYFF4BnK3vRq7WUXdB0FMgSACK4BGAYYCw/s640/ksnip_20191024-113420.png" width="582" /></a><br />
+<br />
+o se desea también lo puede lanzar desde la terminal así:<br />
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>dolphin</code></span></pre>
+<br />
+<span style="color: red;"><span style="font-size: large;"><b><span style="font-family: inherit;"><span arial="" font-size:="" helvetica="" sans-serif="" small=""><b><span style="font-family: inherit;"><span arial="" font-size:="" helvetica="" sans-serif="" small="">INSTRUCCIONES </span></span></b>para Dolphin 4 </span></span></b></span></span><br />
+Por si alguien lo usa aún (en versiones nuevas de Sistemas Operativos Linux anteriores al 2019 ya lo están sacando de los repositorios) estas son las instrucciones, ponga en la terminal: <br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>sudo apt-get install dolphin4 engrampa rar unrar p7zip-full zip</code></span></pre>
+<br />
+<b>Explicaciones:</b><br />
+<b>dolphin4</b>.- El administrador de archivos<br />
+<b>engrampa</b>.- Herramienta de caja para extraer o comprimir archivos&nbsp; <br />
+<b>rar</b>.- Compresión RAR<br />
+<b>unrar</b>.- Descompresión RAR<br />
+<b>p7zip-full</b>.- Compresión y descompresión 7z<br />
+<b>zip</b>.- Compresión zip<br />
+<br />
+Ahora ponga en la terminal :<br />
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>mkdir -p ~/.kde/share/kde4/services/ServiceMenus
+cd /tmp
+git clone https://github.com/wachin/engrampa-kde-service
+cd engrampa-kde-service
+cp *.desktop ~/.kde/share/kde4/services/ServiceMenus
+echo "Dios les bendiga"</code></span></pre>
+Quedará una ultima linea en la terminal, dar Enter, y funcionará.<br />
+<br />
+<span style="color: blue;"><b>Explicaciones:</b></span><br />
+<b>mkdir -p ~/.kde/share/kde4/services/ServiceMenus.- </b>Creamos la carpeta ServiceMenus si es que no está creada en esa ruta y si si está no pasa nada<br />
+<b>cd /tmp.-</b> Nos colocamos en la carpeta temporal<br />
+<b>git clone https://github.com/wachin/engrampa-kde-service.-</b> Descargamos el servicio KDE que hice para instalación rapida de la opción Extraer aquí de Engrampa<br />
+<b>cd engrampa-kde-service.-</b> Nos ubicamos en el directorio donde están los archivos<br />
+<b>cp *.desktop ~/.kde/share/kde4/services/ServiceMenus.-</b>
+ Copiamos todos los archivos .desktop (sólo hay dos) y los pegamos al 
+lugar donde deben estar los servicios de KDE 4 para que funcione<br />
+<b>echo "Dios les bendiga".-</b> Es para terminar la ejecución de la última línea.&nbsp; <br />
+<br />
+Bien, ahora cierre Dolphin4 y vuelvalo a abrir. Le quedará así:<br />
+<br />
+<a href="http://1.bp.blogspot.com/-H5yxmsUWAcQ/XYRECXzt91I/AAAAAAAATRY/9ZnBAtX8j7YvZ7gJ8wCc28M9G6hqEbJIACK4BGAYYCw/s1600/%25C3%2581rea%2Bde%2Btrabajo%2B1_091.png" imageanchor="1"><img border="0" height="498" src="https://1.bp.blogspot.com/-H5yxmsUWAcQ/XYRECXzt91I/AAAAAAAATRY/9ZnBAtX8j7YvZ7gJ8wCc28M9G6hqEbJIACK4BGAYYCw/s640/%25C3%2581rea%2Bde%2Btrabajo%2B1_091.png" width="640" /></a><br />
+<b></b><br />
+<br />
+<b>Nota:</b> Dolphin4 no crea un icono entre todas sus aplicaciones instaladas por lo cual debe ejecutarlo desde la terminal así: dolphin4<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'UbuntuBeta Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="font-size: medium;"><code>dolphin4</code></span></pre>
+<br />
+&nbsp; Dios les bendiga, me escriben alguna consulta 

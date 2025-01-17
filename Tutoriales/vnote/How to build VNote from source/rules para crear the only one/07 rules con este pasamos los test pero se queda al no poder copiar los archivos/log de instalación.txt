@@ -1,0 +1,116 @@
+wachin@netinst:~/Dev/vnote-build-releases/vnote-3.17.0/build
+$ sudo make install
+cd libs/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/libs.pro ) && make -f Makefile install
+make[1]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs'
+cd vtextedit/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/vtextedit.pro ) && make -f Makefile install
+make[2]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit'
+cd src/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/src.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src'
+cd libs/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/libs.pro ) && make -f Makefile install
+make[4]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs'
+cd syntax-highlighting/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/syntax-highlighting/syntax-highlighting.pro ) && make -f Makefile install
+make[5]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/syntax-highlighting'
+/usr/lib/qt5/bin/qmake -install qinstall -exe libVSyntaxHighlighting.so.1.0.0 /usr/lib/libVSyntaxHighlighting.so.1.0.0
+strip --strip-unneeded /usr/lib/libVSyntaxHighlighting.so.1.0.0
+ln -f -s libVSyntaxHighlighting.so.1.0.0 /usr/lib/libVSyntaxHighlighting.so
+ln -f -s libVSyntaxHighlighting.so.1.0.0 /usr/lib/libVSyntaxHighlighting.so.1
+ln -f -s libVSyntaxHighlighting.so.1.0.0 /usr/lib/libVSyntaxHighlighting.so.1.0
+make[5]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/syntax-highlighting'
+cd katevi/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/katevi/katevi.pro ) && make -f Makefile install
+make[5]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/katevi'
+make[5]: No se hace nada para 'install'.
+make[5]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/katevi'
+cd peg-markdown-highlight/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/peg-markdown-highlight/peg-markdown-highlight.pro ) && make -f Makefile install
+make[5]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/peg-markdown-highlight'
+make[5]: No se hace nada para 'install'.
+make[5]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/peg-markdown-highlight'
+cd sonnet/data/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/sonnet/data/data.pro ) && make -f Makefile install
+make[5]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data'
+cd parsetrigrams/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/sonnet/data/parsetrigrams/parsetrigrams.pro ) && make -f Makefile install
+make[6]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data/parsetrigrams'
+make[6]: No se hace nada para 'install'.
+make[6]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data/parsetrigrams'
+cd gentrigrams/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/sonnet/data/gentrigrams/gentrigrams.pro ) && make -f Makefile install
+make[6]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data/gentrigrams'
+make[6]: No se hace nada para 'install'.
+make[6]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data/gentrigrams'
+make[5]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/data'
+cd sonnet/src/core/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/libs/sonnet/src/core/core.pro ) && make -f Makefile install
+make[5]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/src/core'
+make[5]: No se hace nada para 'install'.
+make[5]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs/sonnet/src/core'
+make[4]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/libs'
+cd editor/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/src/editor/editor.pro ) && make -f Makefile install
+make[4]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/editor'
+/usr/lib/qt5/bin/qmake -install qinstall -exe libVTextEdit.so.1.0.0 /usr/lib/libVTextEdit.so.1.0.0
+strip --strip-unneeded /usr/lib/libVTextEdit.so.1.0.0
+ln -f -s libVTextEdit.so.1.0.0 /usr/lib/libVTextEdit.so
+ln -f -s libVTextEdit.so.1.0.0 /usr/lib/libVTextEdit.so.1
+ln -f -s libVTextEdit.so.1.0.0 /usr/lib/libVTextEdit.so.1.0
+make[4]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src/editor'
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/src'
+cd tests/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/tests/tests.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests'
+cd test_textfolding/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/tests/test_textfolding/test_textfolding.pro ) && make -f Makefile install
+make[4]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests/test_textfolding'
+make[4]: No se hace nada para 'install'.
+make[4]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests/test_textfolding'
+cd test_utils/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/tests/test_utils/test_utils.pro ) && make -f Makefile install
+make[4]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests/test_utils'
+make[4]: No se hace nada para 'install'.
+make[4]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests/test_utils'
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/tests'
+cd demo/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/vtextedit/demo/demo.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/demo'
+make[3]: No se hace nada para 'install'.
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit/demo'
+make[2]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/vtextedit'
+cd QHotkey/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/QHotkey/QHotkey.pro ) && make -f Makefile install
+make[2]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey'
+cd HotkeyTest/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/QHotkey/HotkeyTest/HotkeyTest.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey/HotkeyTest'
+make[3]: No se hace nada para 'install'.
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey/HotkeyTest'
+cd QHotkey/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/libs/QHotkey/QHotkey/QHotkey.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey/QHotkey'
+make[3]: No se hace nada para 'install'.
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey/QHotkey'
+make[2]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs/QHotkey'
+make[1]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/libs'
+cd src/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/src.pro ) && make -f Makefile install
+make[1]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/src'
+/usr/lib/qt5/bin/qmake -install qinstall -exe vnote /usr/bin/vnote
+strip /usr/bin/vnote
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/vnote.desktop /usr/share/applications/vnote.desktop
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/16x16/vnote.png /usr/share/icons/hicolor/16x16/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/32x32/vnote.png /usr/share/icons/hicolor/32x32/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/48x48/vnote.png /usr/share/icons/hicolor/48x48/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/64x64/vnote.png /usr/share/icons/hicolor/64x64/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/128x128/vnote.png /usr/share/icons/hicolor/128x128/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/256x256/vnote.png /usr/share/icons/hicolor/256x256/apps/vnote.png
+/usr/lib/qt5/bin/qmake -install qinstall /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/src/data/core/logo/vnote.svg /usr/share/icons/hicolor/scalable/apps/vnote.svg
+cp /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/src/vnote_extra.rcc /usr/bin/vnote_extra.rcc
+make[1]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/src'
+cd tests/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/tests.pro ) && make -f Makefile install
+make[1]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests'
+cd test_utils/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/test_utils/test_utils.pro ) && make -f Makefile install
+make[2]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_utils'
+make[2]: No se hace nada para 'install'.
+make[2]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_utils'
+cd test_core/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/test_core/test_core.pro ) && make -f Makefile install
+make[2]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core'
+cd test_notebook/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/test_core/test_notebook/test_notebook.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core/test_notebook'
+make[3]: No se hace nada para 'install'.
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core/test_notebook'
+cd test_theme/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/test_core/test_theme/test_theme.pro ) && make -f Makefile install
+make[3]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core/test_theme'
+make[3]: No se hace nada para 'install'.
+make[3]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core/test_theme'
+make[2]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_core'
+cd test_task/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-build-releases/vnote-3.17.0/tests/test_task/test_task.pro ) && make -f Makefile install
+make[2]: se entra en el directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_task'
+make[2]: No se hace nada para 'install'.
+make[2]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests/test_task'
+make[1]: se sale del directorio '/home/wachin/Dev/vnote-build-releases/vnote-3.17.0/build/tests'
+ 

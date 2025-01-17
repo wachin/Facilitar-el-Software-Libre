@@ -1,0 +1,11 @@
+
+
+
+https://github.com/settings/installations
+
+https://intercom.help/appcenter/en/articles/1339659-i-have-connected-to-the-wrong-github-account-how-can-i-re-connect-to-the-correct-one
+
+https://docs.microsoft.com/en-us/appcenter/build/images/remove-github-oauth-token.jpg
+
+
+

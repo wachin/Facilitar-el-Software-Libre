@@ -1,0 +1,167 @@
+#!/bin/sh
+wget -c http://deb.debian.org/debian/pool/main/k/kwayland/libkf5waylandserver5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kscreenlocker/libkscreenlocker5_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/q/qtscript-opensource-src/libqt5script5_5.15.2%2bdfsg-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/d/drkonqi/drkonqi_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/a/appstream/libappstream4_0.14.4-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/a/appstream/libappstreamqt2_0.14.4-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/f/frameworkintegration/frameworkintegration_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/e/elfutils/libdebuginfod1_0.183-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/i/intel-processor-trace/libipt2_2.0.3-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/g/gdb/gdb-minimal_10.1-1.7_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/g/go-mtpfs/go-mtpfs_1.0.0-1%2bb5_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/u/usb.ids/usb.ids_2022.05.20-0%2bdeb11u1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/h/hwdata/hwdata_0.345-1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kactivitymanagerd/kactivitymanagerd_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/kwin-data_5.20.5-1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwayland-server/libkwaylandserver5_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/libkwinglutils12_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/libkwinxrenderutils12_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/libkwineffects12a_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/libkwin4-effect-builtins1_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kwin/kwin-common_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libcolorcorrect5_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libd/libdmtx/libdmtx0b_0.7.5-3%2bb1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/g/gpsd/libgps28_3.22-4_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kconfig/libkf5config-bin_5.78.0-4_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kholidays/libkf5holidays-data_5.78.0-2_all.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kholidays/libkf5holidays5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kitemmodels/libkf5itemmodels5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kirigami2/libkf5kirigami2-5_5.78.0-3_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/n/networkmanager-qt/libkf5networkmanagerqt6_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kpeople/libkf5people-data_5.78.0-2_all.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kpeople/libkf5peoplebackend5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kpeople/libkf5people5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kpeople/libkf5peoplewidgets5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/q/qrencode/libqrencode4_4.1.1-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/prison-kf5/libkf5prison5_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/krunner/libkf5runner5_5.78.0-3_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libkscreen/libkf5screen7_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libkscreen/libkf5screen-bin_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libkf5sysguard-data_5.20.5-1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libkfontinst5_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libkfontinstui5_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libksgrd9_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libksysguardformatter1_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libksysguardsensors1_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libksysguardsensorfaces1_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libnotificationmanager1_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libplasma-geolocation-interface5_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libprocesscore9_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/libprocessui9_5.20.5-1_i386.deb
+wget -c http://mxlinux.mirrors.tds.net/mxlinux/mx/repo/pool/main/libq/libqalculate/libqalculate-data_3.22.0-1%7emx21%2b1_all.deb
+wget -c http://mxlinux.mirrors.tds.net/mxlinux/mx/repo/pool/main/libq/libqalculate/libqalculate20-data_3.22.0-1%7emx21%2b1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/libq/libqalculate/libqalculate20_2.8.2-1.1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/s/scim/libscim8v5_1.4.18-2.2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libtaskmanager6abi1_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/libweather-ion7_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/m/milou/milou_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/o/oxygen/oxygen-sounds_5.20.5-1_all.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-desktop/plasma-desktop-data_5.20.5-4_all.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kirigami2/qml-module-org-kde-kirigami2_5.78.0-3_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/q/qqc2-desktop-style/qml-module-org-kde-qqc2desktopstyle_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-integration/plasma-integration_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/plasma-workspace-data_5.20.5-6_all.deb
+wget -c http://deb.debian.org/debian/pool/main/q/qttools-opensource-src/qdbus-qt5_5.15.2-5_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kdeclarative/qml-module-org-kde-draganddrop_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kdeclarative/qml-module-org-kde-kcoreaddons_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kholidays/qml-module-org-kde-kholidays_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kquickcharts/qml-module-org-kde-quickcharts_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/libk/libksysguard/qml-module-org-kde-ksysguard_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kdeclarative/qml-module-org-kde-kwindowsystem_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/prison-kf5/qml-module-org-kde-prison_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/s/solid/qml-module-org-kde-solid_5.78.0-2_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/k/kuserfeedback/qml-module-org-kde-userfeedback_1.0.0-3_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-workspace/plasma-workspace_5.20.5-6_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/polkit-kde-agent-1/polkit-kde-agent-1_5.20.5-1_i386.deb
+wget -c http://deb.debian.org/debian/pool/main/p/plasma-desktop/plasma-desktop_5.20.5-4_i386.deb
+
+
+
+
+sudo apt install plasma
+Paquetes sugeridos:
+  kwin-addons gpsd
+Paquetes recomendados:
+  qml-module-qtquick-virtualkeyboard qml-module-org-kde-runnermodel
+  kde-config-screenlocker bluedevil kde-config-sddm kgamma5 khelpcenter
+  khotkeys kinfocenter kmenuedit kscreen ksshaskpass ksysguard kwin-x11 | kwin
+  kwrited libpam-kwallet5 plasma-discover plasma-disks plasma-pa powerdevil
+  systemsettings qml-module-org-kde-activities qml-module-org-kde-newstuff
+  fonts-noto-hinted ksysguardd
+Se instalarán los siguientes paquetes NUEVOS:
+  drkonqi frameworkintegration gdb-minimal hwdata kactivitymanagerd
+  kwin-common kwin-data libappstream4 libappstreamqt2 libcolorcorrect5
+  libdebuginfod1 libdmtx0b libgps28 libipt2 libkf5config-bin
+  libkf5holidays-data libkf5holidays5 libkf5itemmodels5 libkf5kirigami2-5
+  libkf5networkmanagerqt6 libkf5people-data libkf5people5 libkf5peoplebackend5
+  libkf5peoplewidgets5 libkf5prison5 libkf5runner5 libkf5screen-bin
+  libkf5screen7 libkf5sysguard-data libkf5waylandserver5 libkfontinst5
+  libkfontinstui5 libkscreenlocker5 libksgrd9 libksysguardformatter1
+  libksysguardsensorfaces1 libksysguardsensors1 libkwaylandserver5
+  libkwin4-effect-builtins1 libkwineffects12a libkwinglutils12
+  libkwinxrenderutils12 libnotificationmanager1
+  libplasma-geolocation-interface5 libprocesscore9 libprocessui9
+  libqalculate-data libqalculate20 libqalculate20-data libqrencode4
+  libqt5script5 libscim8v5 libtaskmanager6abi1 libweather-ion7 milou
+  oxygen-sounds plasma-desktop plasma-desktop-data plasma-integration
+  plasma-workspace plasma-workspace-data polkit-kde-agent-1 qdbus-qt5
+  qml-module-org-kde-draganddrop qml-module-org-kde-kholidays
+  qml-module-org-kde-kirigami2 qml-module-org-kde-ksysguard
+  qml-module-org-kde-kwindowsystem qml-module-org-kde-prison
+  qml-module-org-kde-qqc2desktopstyle qml-module-org-kde-quickcharts
+  qml-module-org-kde-solid qml-module-org-kde-userfeedback
+  
+  probando
+  
+  
+  
+sudo apt install systemsettings
+
+commit en synaptic:
+
+Commit Log for Sat Jul 30 08:23:21 2022
+
+Instaló los siguientes paquetes:
+libkf5itemmodels5 (5.78.0-2)
+libkf5kirigami2-5 (5.78.0-3)
+qml-module-org-kde-kcm (5.78.0-2)
+qml-module-org-kde-kirigami2 (5.78.0-3)
+qml-module-org-kde-kitemmodels (5.78.0-2)
+systemsettings (4:5.20.5-2)
+
+
+ahora pruebo los paquetes:
+  
+  frameworkintegration
+  
+   qml-module-org-kde-solid
+   
+   qml-module-org-kde-kwindowsystem
+   provides integration of QML and KDE frameworks - kwindowsystem
+   
+   qml-module-org-kde-draganddrop
+   provides integration of QML and KDE frameworks - draganddrop
+  
+  
+  https://packages.ubuntu.com/focal/dolphin
+  
+  descargue y descomprimi el 
+  
+  control y dice:
+  
+  
+  Depends: baloo-kf5, kinit, kio, libc6 (>= 2.14), libdolphinvcs5 (= 4:19.12.3-0ubuntu1), libkf5activities5 (>= 4.96.0), libkf5baloo5 (>= 5.3.0+git20150512), libkf5baloowidgets5 (>= 4:19.07.80), libkf5bookmarks5 (>= 4.96.0), libkf5codecs5 (>= 4.96.0), libkf5completion5 (>= 4.97.0), libkf5configcore5 (>= 4.98.0), libkf5configgui5 (>= 5.25.0), libkf5configwidgets5 (>= 5.23.0), libkf5coreaddons5 (>= 5.63.0), libkf5crash5 (>= 5.15.0), libkf5dbusaddons5 (>= 4.97.0), libkf5filemetadata3 (>= 5.56.0), libkf5i18n5 (>= 4.97.0), libkf5iconthemes5 (>= 5.39.0), libkf5itemviews5 (>= 4.96.0), libkf5jobwidgets5 (>= 4.96.0), libkf5kcmutils5 (>= 4.96.0), libkf5kiocore5 (>= 5.44.0), libkf5kiofilewidgets5 (>= 5.53.0), libkf5kiowidgets5 (>= 5.40.0), libkf5newstuff5 (>= 5.37.0), libkf5notifications5 (>= 5.3.0+git20141030.0311), libkf5parts5 (>= 4.96.0), libkf5service-bin, libkf5service5 (>= 4.99.0), libkf5solid5 (>= 4.97.0), libkf5textwidgets5 (>= 4.96.0), libkf5widgetsaddons5 (>= 5.30.0), libkf5windowsystem5 (>= 5.62.0), libkf5xmlgui-bin, libkf5xmlgui5 (>= 4.98.0), libphonon4qt5-4 (>= 4:4.8.0), libqt5core5a (>= 5.12.2), libqt5dbus5 (>= 5.8.0~), libqt5gui5 (>= 5.8.0) | libqt5gui5-gles (>= 5.8.0), libqt5widgets5 (>= 5.8.0~), libqt5xml5 (>= 5.8.0~), libstdc++6 (>= 4.5), phonon4qt5
+  
+  
+  
+  
+  preparo un script de instalación:
+  
+  
+  sudo apt install baloo-kf5 kinit kio libc6 libdolphinvcs5 libkf5activities5 libkf5baloo5 libkf5baloowidgets5 libkf5bookmarks5 libkf5codecs5  libkf5completion5 libkf5configcore5 libkf5configgui5 libkf5configwidgets5 libkf5coreaddons5 libkf5crash5 libkf5dbusaddons5 libkf5filemetadata3 libkf5i18n5 libkf5iconthemes5 libkf5itemviews5 libkf5jobwidgets5 libkf5kcmutils5 libkf5kiocore5 libkf5kiofilewidgets5 libkf5kiowidgets5 libkf5newstuff5 libkf5notifications5 libkf5parts5 libkf5service-bin libkf5service5 libkf5solid5 libkf5textwidgets5 libkf5widgetsaddons5 libkf5windowsystem5 libkf5xmlgui-bin libkf5xmlgui5 libphonon4qt5-4 libqt5core5a libqt5dbus5 libqt5gui5 libqt5widgets5 libqt5xml5 libstdc++6 phonon4qt5
+  
+  
+  libqt5gui5-gles (>= 5.8.0),
+  
+  

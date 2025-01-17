@@ -1,0 +1,17 @@
+
+
+KDE Frameworks 5 is looking services from:
+
+kf5-config --path services
+Executing:
+
+$ kf5-config --path services
+/home/user26687/.local/share/kservices5/:/usr/share/kservices5/
+That is:
+
+User servicemenus are:
+
+$HOME/.local/share/kservices5/ServiceMenus/
+System servicemenus are at
+
+/usr/share/kservices5/ServiceMenus/ 

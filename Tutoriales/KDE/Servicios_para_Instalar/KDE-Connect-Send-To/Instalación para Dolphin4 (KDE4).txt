@@ -1,0 +1,31 @@
+
+Con estos archivos se le añadirá al administrador de archivos dolphin en clic derecho la opcione: 'Enviar a KDEConnect'
+
+Soy Wachín, lo subí a:
+
+KDE Connect Enviar a Menu - www.opendesktop.org
+https://www.opendesktop.org/p/1282330/
+
+INSTRUCCIONES:
+Ponga en la terminal:
+
+
+mkdir -p ~/.kde/share/kde4/services/
+cd /tmp
+git clone https://github.com/wachin/KDE-Connect-Enviar-a-Menu
+cd KDE-Connect-Enviar-a-Menu
+chmod 755 kdeconnect-send-dolphin.desktop
+mv kdeconnect-send-dolphin.desktop ~/.kde/share/kde4/services/
+exit
+   
+
+En su HOME entre en esta ruta(en dolphin aplaste las teclas 'Alt+.' para ver los archivos ocultos):
+
+Allí copie el archivo:
+
+kdeconnect-send-dolphin.desktop
+
+Cierre el dolphin4 y vuelvalo a abrir (esto se llama reiniciarlo), pero si no aparece el servicio al dar clic derecho encima de cualquier archivo deberá de reiniciar la computadora.
+
+
+

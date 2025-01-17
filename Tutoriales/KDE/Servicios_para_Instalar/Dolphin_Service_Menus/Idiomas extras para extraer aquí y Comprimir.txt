@@ -1,0 +1,7 @@
+
+Dolphin extract here
+https://github.com/Merrit/dolphin-extract-here/blob/main/extract_here.desktop
+
+
+Compressto ark
+https://github.com/thevladsoft/compressto/blob/master/ark_addtoservicemenu.desktop 

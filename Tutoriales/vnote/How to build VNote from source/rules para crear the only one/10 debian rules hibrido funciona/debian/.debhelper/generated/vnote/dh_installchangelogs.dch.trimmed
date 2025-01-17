@@ -1,0 +1,5 @@
+vnote (3.17.0) UNRELEASED; urgency=medium
+
+  * Building the 32 bit debian deb package for Debian 12
+
+ -- Washington Indacochea Delgado <wachin.id@gmail.com>  Tue, 17 Sep 2024 21:32:10 -0500

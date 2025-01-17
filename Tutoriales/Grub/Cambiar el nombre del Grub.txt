@@ -1,0 +1,53 @@
+
+How can I change the OS name from Ubuntu to something else?
+https://askubuntu.com/a/181185
+
+What Mughil said works and to make the software center work, I would do that in another way.
+
+Sample File for lsb-release:
+
+cat /etc/lsb-release 
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=10.04
+DISTRIB_CODENAME=lucid
+DISTRIB_DESCRIPTION="Ubuntu 10.04.2 LTS"
+
+Just change the DESCRIPTION but not ID, RELEASE and CODENAME. And also do no modify /etc/issue file.
+
+
+
+
+sudo gedit /etc/lsb-release
+
+
+
+PRETTY_NAME="MX 21.2.1 Wildflower"
+DISTRIB_ID=MX
+DISTRIB_RELEASE=21.2.1 
+DISTRIB_CODENAME="Wildflower"
+DISTRIB_DESCRIPTION="MX 21.2.1 Wildflower"
+
+por:
+
+PRETTY_NAME="MX 21.2.1 Wildflower"
+DISTRIB_ID=MX
+DISTRIB_RELEASE=21.2.1 
+DISTRIB_CODENAME="Wildflower"
+DISTRIB_DESCRIPTION="MX 21.2.1 Audio"
+
+luego:
+
+sudo gedit /etc/hostname
+
+cambiar:
+
+mx21
+
+por
+
+mxde21
+
+
+luego
+
+sudo grub-update

@@ -1,0 +1,9 @@
+
+
+Estos archivos están hechos para algun tipo de linux que no se cual es pero no funciona en Ubuntu al instalarlo donde dice. Para Ubuntu 14.04 o 16.04 solo hay que poner todos los archivos (incluidos los ocultos) en la carpeta:
+
+/usr/share/templates/
+
+o 
+
+.kde/share/templates

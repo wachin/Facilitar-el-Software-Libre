@@ -1,0 +1,11 @@
+[Desktop Entry]
+ServiceTypes=KonqPopupMenu/Plugin,audio/*
+Actions=EnqueueAudacious
+Type=Service
+/* X-KDE-Submenu=Audacious */
+X-KDE-Priority=TopLevel
+
+[Desktop Action EnqueueAudacious]
+Name=Enqueue
+Icon=audacious
+Exec=audacious --enqueue -m

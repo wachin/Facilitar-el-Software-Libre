@@ -1,0 +1,16 @@
+
+
+Cómo crear carpetas y subcarpetas al mismo tiempo con un sólo comando en Linux desde la terminal
+
+
+Para esto se usa -p para mkdir
+
+ejemplo:
+
+mkdir -p .local/share/mime/packages/
+
+Con esto se crearán las carpetas que falten hasta la carpeta packages
+
+
+Creating a Directory Structure in Linux
+https://www.pluralsight.com/cloud-guru/labs/aws/creating-a-directory-structure-in-linux

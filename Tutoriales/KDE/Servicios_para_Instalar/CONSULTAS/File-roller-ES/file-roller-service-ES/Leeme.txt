@@ -1,0 +1,50 @@
+
+Con estos archivos se le añadirá al administrador de archivos dolphin en clic derecho las opciones: 'Extraer aquí' y 'Comprimir' tal como en nautilus (en Español). La ventaja es que File-Roller tiene más opciones y puedes poner la contraseña.
+
+Nota: Estos archivos son mi traducción al español del trabajo del usuario LDCDC en:
+
+Extract Here and Compress - File-roller
+https://www.kde-look.org/p/998273/
+
+INSTRUCCIONES:
+
+Extraiga el contenido de este paquete.
+
+Es necesario que este instalado File-Roller
+
+sudo apt-get install file-roller
+
+Bien, en su HOME entre en esta ruta(en dolphin aplaste las teclas 'Alt+.' para ver los archivos ocultos):
+
+navegue hasta aquí:
+
+.kde/share/
+
+Dentro de allí deberá crear la carpeta: "kde4" porque es posible que no esté. La razón es que esa carpeta la crean algunos programas de KDE y si no los ha instalado puede que no esté, debe quedar así:
+
+.kde/share/kde4/
+
+Entre allí y cree la carpeta "services", debe quedar así:
+
+.kde/share/kde4/services/
+
+cree la siguiente carpeta allí:
+
+ServiceMenus
+
+debe quedar así:
+
+.kde/share/kde4/services/ServiceMenus
+
+Nota: Esta ultima carpeta tiene dos letras mayusculas, así debe quedar.
+
+Allí copie estos dos archivos que antes usted descomprimió:
+
+fileroller_addtoservicemenu.desktop
+fileroller_servicemenu.desktop
+
+Cierre el dolphin4 y vuelvalo a abrir (esto se llama reiniciarlo). Desde ahora al dar clic derecho sobre algún archivo comprimido aparecerá la opción extraer aquí.
+
+Si le parece dificil, hice un post con imágenes: http://facilitarelsoftwarelibre.blogspot.com/2014/11/extraer-aqui-comprimir-file-roller-para.html
+
+OPCIONAL: Si estas usando Kubuntu y quieres usar file-roller desinstala 'ark' desde synaptic(allí lo busca), y tiene que eliminar las opciones que vienen para extraer y comprimir archivos en el dolphin(estarán en el mismo lugar donde estamos instalando los archivos de este tutorial) y siga este tutorial

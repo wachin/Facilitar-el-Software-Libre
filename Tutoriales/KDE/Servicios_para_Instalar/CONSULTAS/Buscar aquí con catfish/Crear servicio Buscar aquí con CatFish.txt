@@ -1,0 +1,23 @@
+
+
+Lo he construido tomando en cuenta los servicios instalados en:
+
+/usr/share/kservices5/ServiceMenus/slideshow.desktop
+
+en especial el de 
+
+/usr/share/kservices5/ServiceMenus/konsolehere.desktop
+
+y así me ha quedado y si funciona:
+
+
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=searchhere;
+
+[Desktop Action searchhere]
+Name=Buscar aquí con CatFish
+Icon=utilities-terminal
+Exec=catfish %f

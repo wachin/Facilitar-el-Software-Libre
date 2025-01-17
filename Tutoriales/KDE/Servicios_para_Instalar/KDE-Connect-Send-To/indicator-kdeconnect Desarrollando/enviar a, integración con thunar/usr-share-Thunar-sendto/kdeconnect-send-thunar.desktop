@@ -1,0 +1,10 @@
+# kdeconnect-send-thunar.desktop - Integrate kdeconnect-send into
+#                 		   the "Send To" menu.
+[Desktop Entry]
+Type=Application
+Version=0.8
+Encoding=UTF-8
+TryExec=kdeconnect-send
+Exec=kdeconnect-send %F
+Icon=kdeconnect
+Name=KDEconnect-Send 

@@ -1,0 +1,6 @@
+Kbd Generator - Quickly generate kbd tags by keyboard shortcuts
+https://kbd.hsuan.xyz/
+
+
+<kbd> elements are way too intrusive - Meta Stack Exchange
+https://meta.stackexchange.com/questions/1939/kbd-elements-are-way-too-intrusive

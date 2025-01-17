@@ -1,0 +1,48 @@
+
+
+
+
+
+$ git status
+En la rama avl
+Tu rama está actualizada con 'origin/avl'.
+
+
+$ git branch -r
+  origin/HEAD -> origin/avl
+  origin/avl
+  origin/master
+
+  
+$ git branch -a
+* avl
+  remotes/origin/HEAD -> origin/avl
+  remotes/origin/avl
+  remotes/origin/master
+
+
+  Ver el tag en github que uno quiera usar, ejemplo:
+  
+  https://github.com/wachin/linux-avl/tree/v5.4.28-rt19-avl2
+  
+y con ese poner así en la terminal:  
+
+git checkout tags/v5.4.28-rt19-avl2
+
+allí dirá algunas cosas, luego poner:
+
+
+$ git branch -a
+* (HEAD desacoplado en v5.4.28-rt19-avl2)
+  avl
+  remotes/origin/HEAD -> origin/avl
+  remotes/origin/avl
+  remotes/origin/master
+
+
+
+
+
+
+
+

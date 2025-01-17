@@ -1,0 +1,12 @@
+
+
+To view kernel messages...
+
+dmesg
+
+or to page through the messages...
+
+dmesg | less
+
+    The program helps users to print out their kernel messages. Instead of copying the messages by hand, the user only needs to enter at the console: $ dmesg > kernel.messages and mail the kernel.messages file to whoever can debug their problem.
+

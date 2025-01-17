@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=System-Tools;
+Exec=which ccache gcc make pidof rpm rpmdev-setuptree setterm yum yumdownloader; if [ "$?" != "0" ];then kdialog --icon=ks-error --title="Rebuild RPM Package" --passivepopup="[Error] Please install ccache, gcc, make, pidof, rpm, rpmdev-setuptree, setterm, yum and yumdownloader command and try again."; exit 1; else xterm -hold -si -s -sl 1000000 -sb -T "Rebuild RPM Package" -bg black -fg white -e /usr/share/applications/System_Tools-rebuild-package.sh;fi
+Icon=ks-rebuild-rpm
+Name=Rebuild RPM Package
+Name[de]=RPM Pakete erneut bauen
+Name[es]=Reconstruir Paquete RPM
+Name[fr]=Reconstruire le Paquet RPM
+Name[it]=Ricrea Pacchetto RPM
+Name[ja]=パッケージ RPM を再構築するために
+Name[ko]=꾸러미 RPM 를 재건한다
+Name[pt]=Reconstruir RPM de Pacote
+Name[ru]=Пересобрать пакет RPM
+Name[uk]=Перезібрати пакунок RPM
+Name[zh_CN]=重建 RPM 软件包
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false

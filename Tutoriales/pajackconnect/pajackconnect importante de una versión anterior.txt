@@ -1,0 +1,2 @@
+Se puede usar una versión anterior de pajackconnect
+En AV Linux la versión AVL-MXE 2021 el script tiene algunas lineas menos así que vamos a usar ese pues es el que Glen MacArthur usa (él es el desarrollador de AV Linux), y lo he subido a GitHub donde he creando un Fork desde el repositorio de Hermann y he añadido los cambios que hizo Glen MacArthur

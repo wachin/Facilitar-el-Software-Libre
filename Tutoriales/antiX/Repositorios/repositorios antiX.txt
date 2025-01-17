@@ -1,0 +1,6 @@
+
+
+http://repo.antixlinux.com/bullseye/pool/
+
+
+

@@ -1,0 +1,11 @@
+
+
+
+
+Code Fences	Ctrl + Shift + K
+
+Code	Ctrl + Shift + `
+
+Source Code Mode	Ctrl + /
+
+https://support.typora.io/Shortcut-Keys/ 

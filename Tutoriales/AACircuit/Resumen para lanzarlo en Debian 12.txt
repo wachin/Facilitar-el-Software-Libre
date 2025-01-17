@@ -1,0 +1,6 @@
+wachin@netinst:~
+$ source .venv/bin/activate
+
+$ cd /home/wachin/Dev/AACircuit/
+
+$ python3 aacircuit.py

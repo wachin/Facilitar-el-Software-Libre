@@ -10,12 +10,14 @@ Este tutorial está diseñado para usuarios de **MX Linux 23 KDE** que desean in
 1. Abre una terminal.
 2. Ejecuta el siguiente comando para instalar Openbox y tint2:
    ```bash
-   sudo apt install tint2 openbox
+   sudo apt install tint2 openbox nitrogen
    ```
 esto es lo más básico, pero guíate en mi repositorio:
 
 [https://github.com/wachin/openbox-kde-session-MX-Linux-KDE-23
 ](https://github.com/wachin/openbox-kde-session-MX-Linux-KDE-23)
+
+pues son necesarias más cosas para que funcione.
 
 3. Una vez instalados, cierra la sesión actual.
 4. En la pantalla de inicio de sesión, selecciona **Openbox** como tu entorno de escritorio y accede con tu usuario.
@@ -61,6 +63,7 @@ Por defecto, tint2 no incluye un botón lanzador de aplicaciones en su panel. A 
 3. Haz clic en **Aplicar** y luego en **Aceptar** para guardar los cambios.
 
 ---
+
 
 ## **3. ¡Listo!**
 

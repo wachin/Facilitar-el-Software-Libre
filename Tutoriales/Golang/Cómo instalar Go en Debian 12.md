@@ -97,10 +97,10 @@ Extrae el archivo descargado (por ejemplo, `go1.xx.linux-386.tar.gz`) y muévelo
    sudo tar -C /usr/local -xzf go1*.*.*.linux-386.tar.gz
    ```
    
-3. Agrega la ruta de Go a tu variable de entorno `PATH` editando el archivo `~/.profile`:
+3. Agrega la ruta de Go a tu variable de entorno `PATH` editando el archivo `~/.bashrc`:
    ```bash
-   echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-   source ~/.profile
+   echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc
+   source ~/.bashrc
    ```
 
 4. Verifica la instalación con:

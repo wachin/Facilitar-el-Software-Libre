@@ -10,7 +10,7 @@ Este tutorial está diseñado para usuarios de **MX Linux 23 KDE** que desean in
 1. Abre una terminal.
 2. Ejecuta el siguiente comando para instalar Openbox y tint2:
    ```bash
-   sudo apt install tint2 openbox nitrogen xfce4-appfinder lxsession-logout
+   sudo apt install tint2 openbox nitrogen xfce4-appfinder 
    ```
 esto es lo más básico, pero guíate en mi repositorio con las demás configuraciones:
 
@@ -80,7 +80,7 @@ Por defecto, tint2 no incluye un botón lanzador de aplicaciones en su panel. A 
 ### **3.1 Configura el botón**
 1. Haz clic en **Botón 2** en la lista de elementos seleccionados.
 2. En el panel de configuración, ajusta lo siguiente:
-3.    - **Icono**:
+     - **Icono**:
      - Selecciona un icono para el botón. Puedes elegir uno existente o especificar la ruta a un archivo de icono, como:
        ```
        /usr/share/icons/Papirus-Light/24x24/panel/system-shutdown-panel-restart.svg
@@ -91,10 +91,7 @@ Por defecto, tint2 no incluye un botón lanzador de aplicaciones en su panel. A 
      ```bash
      /usr/bin/lxsession-logout
      ```
-     
-
-       ```
-4. Aplicar y Aceptar
+3. Haz clic en **Aplicar** y luego en **Aceptar** para guardar los cambios.
 
 ---
 

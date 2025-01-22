@@ -10,7 +10,7 @@ Este tutorial está diseñado para usuarios de **MX Linux 23 KDE** que desean in
 1. Abre una terminal.
 2. Ejecuta el siguiente comando para instalar Openbox y tint2:
    ```bash
-   sudo apt install tint2 openbox nitrogen xfce4-appfinder
+   sudo apt install tint2 openbox nitrogen xfce4-appfinder lxsession-logout
    ```
 esto es lo más básico, pero guíate en mi repositorio con las demás configuraciones:
 

@@ -172,3 +172,9 @@ Por defecto, Hugo se instala en `$HOME/go/bin`, pero este directorio no está en
 - Usa la **Extended Edition** si necesitas procesar SCSS/Sass.
 
 ¡Dios te bendiga! 🎉
+
+# Consultas
+
+**Hugo | The world’s fastest framework for building websites.**  
+https://github.com/gohugoio/hugo  
+

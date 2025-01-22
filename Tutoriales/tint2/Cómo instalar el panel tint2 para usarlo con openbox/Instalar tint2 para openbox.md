@@ -31,7 +31,7 @@ Por defecto, tint2 no incluye un botón lanzador de aplicaciones en su panel. A 
 ### **2.1. Abrir las configuraciones de tint2**
 
 1. Haz clic en el extremo inferior izquierdo del panel (en el área donde normalmente aparece un botón vacío).
-2. Se abrirá la ventana de configuración de tint2.
+2. Se abrirá además la ventana de configuración de tint2 (en caso de que sin querer se cierre, para abrirla dar clic a las tres rayitas arriba a la izquierda).
 
 ---
 

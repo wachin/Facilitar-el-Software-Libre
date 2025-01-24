@@ -7,15 +7,15 @@ This is a step-by-step tutorial on how to install Hugo, set up a GitHub Pages si
 ### **Option 1: Install Hugo via `.deb` File (Recommended)**
 1. **Download the latest Hugo `.deb` file:**
    - Visit the [Hugo GitHub Releases page](https://github.com/gohugoio/hugo/releases).
-   - Find the latest version for Linux (e.g., `hugo_*.*.*_Linux-64bit.deb`).
-   - Download it  example using `wget`:
+   - Find the latest version for Linux (e.g., `hugo_extended_withdeploy_*.*.*_Linux-64bit.deb`).
+   - Download it example using `wget`:
      ```bash
-     wget https://github.com/gohugoio/hugo/releases/download/v0.141.0/hugo_0.141.0_linux-amd64.deb
+     wget https://github.com/gohugoio/hugo/releases/download/v0.141.0/hugo_extended_withdeploy_0.141.0_linux-amd64.deb
      ```
 
 2. **Install the `.deb` file:**
    ```bash
-   sudo dpkg -i hugo_*.*.*_linux-amd64.deb
+   sudo dpkg -i hugo_extended_withdeploy_*.*.*_linux-amd64.deb
    ```
 
 3. **Verify the installation:**
@@ -160,6 +160,20 @@ lastmod = "2025-01-21"  # Replace with the current date or the last modified dat
    ```
    Edit the generated Markdown file in `content/posts/` to add your content.
 
+   Luego abre el archivo:
+   
+   my-first-post.md
+   
+   y donde dice: 
+   
+   draft: true
+   
+   cambialo por:
+   
+   draft: false
+   
+   para que no sea un borrador y se pueda publciar en https://wachin.github.io/ exactamente en: https://wachin.github.io/posts/
+   
 ---
 
 ## **Step 6: Test Your Site Locally**

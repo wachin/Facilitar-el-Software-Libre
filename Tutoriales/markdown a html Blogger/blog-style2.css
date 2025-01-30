@@ -1,0 +1,42 @@
+/* Blogger Post Styles */
+.post-content {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.post-content table {
+    border: 2px solid #2c3e50 !important;
+    border-collapse: collapse !important;
+    margin: 1.5rem 0 !important;
+    width: 100% !important;
+}
+
+.post-content th,
+.post-content td {
+    border: 1px solid #2c3e50 !important;
+    padding: 0.75rem !important;
+}
+
+.post-content pre {
+    border: 2px solid #3498db !important;
+    background: #f8f9fa !important;
+    padding: 1rem !important;
+    margin: 1.5rem 0 !important;
+    border-radius: 4px !important;
+    overflow-x: auto !important;
+    white-space: pre-wrap;
+}
+
+.post-content code {
+    font-family: 'Fira Code', monospace !important;
+    background: #f8f9fa !important;
+    padding: 0.2em 0.4em !important;
+}
+
+.post-content .math {
+    font-size: 1.1rem;
+}

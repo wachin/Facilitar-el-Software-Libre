@@ -14,7 +14,12 @@ El efecto **"Crop, Scale and Tilt"** se encuentra en:
 - **Scale X / Scale Y** – Escala la imagen.
 - **Tilt Y** – Inclina la imagen.
 
-👉 Esto es útil para eliminar bordes, pero **no sirve para recortar un objeto en el centro del video**.
+👉 Esto es útil para eliminar bordes, lo cual se hace así:
+- Arrástra el efecto:  "**Crop, Scale and Tilt**"  al clip en la línea de tiempo.
+- Dale clic en el video y a la derecha aparecerán los controles
+- Ejemplo para quitar parte del video a la derecha se usa "**crop right**", y para quitar parte del video abajo se usa "**crop bottom**"
+
+Pero esto **no sirve para recortar un objeto en el centro del video**.
 
 ---
 

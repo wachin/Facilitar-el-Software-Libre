@@ -1,0 +1,823 @@
+<p>Esta guía asume que estás usando <strong>Debian 12</strong> (o una
+distribución de Linux similar como <strong>Ubuntu 24.04</strong>, pero
+podría servir en otro Linux)</p>
+<h2
+id="paso-1-instalar-hugo-versión-extendida-a-través-del-archivo-.deb-64-bit">Paso
+1: Instalar Hugo versión extendida a través del archivo
+<code>.deb</code> (64 bit)</h2>
+<p>No uses la versión de los repositorios pues se necesita la versión
+extendida</p>
+<ol class="incremental" type="1">
+<li><p><strong>Descargar el archivo <code>.deb</code> más reciente de
+Hugo:</strong></p>
+<ul class="incremental">
+<li>Visita la <a href="https://github.com/gohugoio/hugo/releases">página
+de lanzamientos de Hugo en GitHub</a>.</li>
+<li>Encuentra la última versión para Linux (por ejemplo,
+<code>hugo_extended_withdeploy_*.*.*_Linux-64bit.deb</code>).</li>
+<li>Descárgalo, por ejemplo, usando <code>wget</code>:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/gohugoio/hugo/releases/download/v0.141.0/hugo_extended_withdeploy_0.141.0_linux-amd64.deb</span></code></pre></div></li>
+<li><p><strong>Instalar el archivo <code>.deb</code>:</strong>
+<code>bash     sudo dpkg -i hugo_*.*.*_linux-amd64.deb</code></p></li>
+<li><p><strong>Verificar la instalación:</strong></p></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> version</span></code></pre></div>
+<p>Deberías ver la versión de Hugo instalada.</p>
+<hr />
+<h2 id="paso-2-configurar-un-sitio-de-github-pages">Paso 2: Configurar
+un sitio de GitHub Pages</h2>
+<h3 id="crear-un-repositorio-en-github">1. Crear un repositorio en
+GitHub:</h3>
+<ul class="incremental">
+<li>Ve a <a href="https://github.com">GitHub</a> y crea un nuevo
+repositorio llamado <code>username.github.io</code>, donde
+<code>username</code> es tu nombre de usuario en GitHub (por ejemplo,
+<code>wachin.github.io</code>).</li>
+</ul>
+<h3 id="clonar-el-repositorio-a-tu-máquina-local">2. Clonar el
+repositorio a tu máquina local:</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/username.github.io</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> username.github.io</span></code></pre></div>
+<h3 id="crear-un-archivo-index.html-simple-para-probar-github-pages">3.
+Crear un archivo <code>index.html</code> simple para probar GitHub
+Pages:</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hi World&quot;</span> <span class="op">&gt;</span> index.html</span></code></pre></div>
+<h3 id="realizar-commit-y-hacer-push-de-los-cambios">4. Realizar commit
+y hacer push de los cambios:</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Commit inicial&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div>
+<h3 id="configura-tu-repositorio-en-github-por-ejemplo">5. Configura tu
+repositorio en GitHub, por ejemplo:</h3>
+<pre class="plaintext"><code>https://github.com/username/username.github.io/settings</code></pre>
+<p>donde <code>username</code> es tu nombre de usuario en GitHub y el
+nombre de tu página de GitHub. Luego, haz clic en <strong>Pages</strong>
+en la parte inferior izquierda o ve a:</p>
+<pre class="plaintext"><code>https://github.com/username/username.github.io/settings/pages</code></pre>
+<p>donde <code>username</code> es tu nombre de usuario en GitHub y el
+nombre de tu página de GitHub, y asegúrate de que el nombre de tu página
+aparezca allí y que la rama configurada esté en “main”.</p>
+<h3 id="verificar-tu-sitio-en-github-pages">6. Verificar tu sitio en
+GitHub Pages:</h3>
+<ul class="incremental">
+<li>Visita <code>https://username.github.io</code> en tu navegador.</li>
+<li>Deberías ver “Hi World” mostrado.</li>
+</ul>
+<hr />
+<h2 id="paso-3-inicializar-un-sitio-hugo">Paso 3: Inicializar un sitio
+Hugo</h2>
+<ol class="incremental" type="1">
+<li><strong>Navega al directorio de tu repositorio:</strong></li>
+</ol>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> username.github.io</span></code></pre></div>
+<ol class="incremental" start="2" type="1">
+<li><strong>Inicializa un nuevo sitio Hugo:</strong></li>
+</ol>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> new site . <span class="at">--force</span></span></code></pre></div>
+<p>La bandera <code>--force</code> se usa porque el directorio no está
+vacío (contiene <code>index.html</code>).</p>
+<ol class="incremental" start="3" type="1">
+<li><strong>Eliminar el archivo <code>index.html</code>:</strong></li>
+</ol>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> index.html</span></code></pre></div>
+<hr />
+<h2 id="paso-4-instalar-el-tema-arberia">Paso 4: Instalar el tema
+Arberia</h2>
+<p>Estas son las instrucciones de instalación del tema Arberia
+personalizadas para mi</p>
+<h3 id="no-inicializar-el-repositorio">1. No inicializar el
+repositorio</h3>
+<p>En las instrucciones de instalación del tema en el sitio web indican
+inicializar el repositorio:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div>
+<p>pero ya lo hemos inicializado, por lo que no será necesario
+hacerlo.</p>
+<h3 id="haz-un-fork-del-repositorio-del-tema-arberia">2. Haz un Fork del
+repositorio del tema Arberia:</h3>
+<p>Yo voy a configurar Google Analytics y además hacer otros arreglos y
+para que estos sean aplicables debo hacer un fork del repositorio. Entro
+en:</p>
+<p><a
+href="https://github.com/antedoro/arberia">https://github.com/antedoro/arberia</a></p>
+<p>y clic en el botón “Fork”</p>
+<p><a
+href="https://github.com/wachin/arberia">https://github.com/wachin/arberia</a></p>
+<h3 id="agregar-el-tema-arberia-como-submódulo">3. Agregar el tema
+Arberia como submódulo:</h3>
+<p>Para cambiar el submódulo a tu fork, debes actualizar su
+configuración. Aquí están los pasos:</p>
+<hr />
+<h4 id="eliminar-la-configuración-del-submódulo-existente">1. Eliminar
+la configuración del submódulo existente</h4>
+<p>Primero, elimina el submódulo existente del índice de Git sin borrar
+los archivos:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule deinit <span class="at">-f</span> themes/arberia</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-f</span> themes/arberia</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> .git/modules/themes/arberia</span></code></pre></div>
+<p>Esto elimina la referencia del submódulo original del repositorio y
+la configuración de Git.</p>
+<hr />
+<h4 id="agregar-tu-fork-como-submódulo">2. Agregar tu fork como
+submódulo</h4>
+<p>Ahora puedes añadir tu fork como submódulo correctamente, el
+siguiente es el mío, usted debe cambiar “wachin” por su nombre de
+usuario:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/wachin/arberia.git themes/arberia</span></code></pre></div>
+<hr />
+<h4 id="verifica-y-actualiza-.gitmodules">3. Verifica y actualiza
+<code>.gitmodules</code></h4>
+<p>Abre el archivo <code>.gitmodules</code> y verifica que la URL sea
+correcta, usted debe ver en “wachin” el nombre de su usuario:</p>
+<pre class="plaintext"><code>[submodule &quot;themes/arberia&quot;]
+    path = themes/arberia
+    url = https://github.com/wachin/arberia.git</code></pre>
+<p>Si necesitas corregir algo, edita el archivo y guarda los
+cambios.</p>
+<hr />
+<h4 id="inicializa-y-actualiza-el-submódulo">4. Inicializa y actualiza
+el submódulo</h4>
+<p>Asegúrate de inicializar y actualizar el submódulo con los nuevos
+cambios:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span> <span class="at">--recursive</span></span></code></pre></div>
+<hr />
+<h4 id="confirma-los-cambios">5. Confirma los cambios</h4>
+<p>Finalmente, añade y confirma los cambios en tu repositorio:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Cambio el tema Arberia por mi fork&quot;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<p>El submódulo ahora apunta a al fork, en este caso al mío
+(<code>wachin/arberia</code>). Si necesitas realizar personalizaciones,
+puedes hacerlo directamente en tu fork. 😊</p>
+<h3 id="actualizar-el-archivo-config.toml-para-usar-el-tema-arberia">4.
+Actualizar el archivo <code>config.toml</code> para usar el tema
+Arberia:</h3>
+<p>En el sitio del tema <a
+href="https://themes.gohugo.io/themes/arberia/">https://themes.gohugo.io/themes/arberia/</a>
+dice que hay que abrir el archivo <code>config.toml</code> y agregar la
+siguiente línea:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">theme</span> <span class="op">=</span> <span class="st">&quot;arberia&quot;</span></span></code></pre></div>
+<p>esta configuración ya está añadida en el siguiente ejemplo, junto con
+otras importantes:</p>
+<hr />
+<h2 id="paso-5-configurar-con-ejemplo-config.toml">Paso 5: Configurar
+con ejemplo config.toml</h2>
+<h3 id="crear-un-archivo-básico-config.toml">1. Crear un archivo básico
+<code>config.toml</code>:</h3>
+<p>Abre el archivo <code>config.toml</code> y agrega la siguiente
+configuración, porque con esto funcionará:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">title</span> <span class="op">=</span> <span class="st">&#39;</span><span class="vs">Respuestas AI</span><span class="st">&#39;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="dt">baseURL</span> <span class="op">=</span> <span class="st">&quot;https://wachin.github.io/&quot;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="dt">relativeURLs</span> <span class="op">=</span> <span class="st">&quot;True&quot;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="dt">languageCode</span> <span class="op">=</span> <span class="st">&#39;</span><span class="vs">en-us</span><span class="st">&#39;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="dt">defaultContentLanguage</span> <span class="op">=</span> <span class="st">&#39;</span><span class="vs">en</span><span class="st">&#39;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="dt">theme</span> <span class="op">=</span> <span class="st">&quot;arberia&quot;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Format date. See https://gohugo.io/functions/format/</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="dt">dateformat</span> <span class="op">=</span> <span class="st">&quot;Monday, January 2, 2006&quot;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">#lastmod = &quot;2025-01-21&quot;  # Replace with the current date or the last modified date of your site</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># To list the most relevant pages on the front page or similar, </span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># you should use the site.Params.mainSections list instead of comparing </span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co"># section names to hard-coded values like &quot;posts&quot; or &quot;post&quot;.</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">mainSections</span> <span class="op">=</span> <span class="op">[</span><span class="st">&#39;</span><span class="vs">posts</span><span class="st">&#39;</span><span class="op">]</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">dateFormat</span> <span class="op">=</span> <span class="st">&quot;January 2, 2006&quot;</span>  <span class="co"># Date format for posts</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">footerMenu</span> <span class="op">=</span> <span class="cn">false</span>              <span class="co"># Set to true if you want a footer menu</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">socialIcons</span> <span class="op">=</span> <span class="cn">false</span>             <span class="co"># Set to true if you want social icons</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showReadingTime</span> <span class="op">=</span> <span class="cn">true</span>          <span class="co"># Show estimated reading time for posts</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showWordCount</span> <span class="op">=</span> <span class="cn">true</span>            <span class="co"># Show word count for posts</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showAuthor</span> <span class="op">=</span> <span class="cn">true</span>               <span class="co"># Show author name in posts</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showDate</span> <span class="op">=</span> <span class="cn">true</span>                 <span class="co"># Show date in posts</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">googleAnalytics</span> <span class="op">=</span> <span class="st">&quot;G-R0L8R30ZCR&quot;</span>  <span class="co"># Leave this empty to disable Google Analytics</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">taxonomies</span><span class="kw">]</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">tag</span> <span class="op">=</span> <span class="st">&quot;tags&quot;</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">category</span> <span class="op">=</span> <span class="st">&quot;categories&quot;</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">outputs</span><span class="kw">]</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">home</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;HTML&quot;</span><span class="op">,</span> <span class="st">&quot;JSON&quot;</span><span class="op">,</span> <span class="st">&quot;RSS&quot;</span><span class="op">,</span> <span class="st">&quot;AMP&quot;</span><span class="op">]</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">page</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;HTML&quot;</span><span class="op">]</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>  <span class="dt">section</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;HTML&quot;</span><span class="op">,</span> <span class="st">&quot;RSS&quot;</span><span class="op">]</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>  <span class="dt">taxonomy</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;HTML&quot;</span><span class="op">,</span> <span class="st">&quot;RSS&quot;</span><span class="op">]</span></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">markup</span><span class="kw">]</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">tableOfContents</span><span class="kw">]</span></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">startLevel</span> <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">endLevel</span> <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ordered</span> <span class="op">=</span> <span class="cn">false</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>    <span class="dt">tocMinWordCount</span> <span class="op">=</span> <span class="dv">100</span> <span class="co"># Minimum word count to display the Table of Contents</span></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">goldmark</span><span class="kw">]</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">goldmark</span><span class="kw">.</span><span class="dt">renderer</span><span class="kw">]</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>      <span class="dt">unsafe</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">highlight</span><span class="kw">]</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>    <span class="dt">codeFences</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">permalinks</span><span class="kw">]</span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">posts</span> <span class="op">=</span> <span class="st">&quot;/:title/&quot;</span></span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">minify</span><span class="kw">]</span></span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">minifyOutput</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a><span class="dt">enableRobotsTXT</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a><span class="co">############################# Plugins ##############################</span></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="co"># CSS Plugins</span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="co"># [[params.plugins.css]]</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a><span class="co"># link = &quot;css/Custom.css&quot;</span></span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a><span class="co"># [[params.plugins.css]]</span></span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a><span class="co"># link = &quot;https://pro.fontawesome.com/releases/v5.10.0/css/all.css&quot;</span></span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a><span class="co"># JS Plugins</span></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a><span class="co"># [[params.plugins.js]]</span></span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a><span class="co"># link = &quot;js/customJS.js&quot;</span></span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate favicon with https://realfavicongenerator.net/</span></span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a><span class="co"># and copy favicon folder (name it favicon) to static/ folder</span></span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">assets</span><span class="kw">]</span></span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">favicon</span> <span class="op">=</span> <span class="st">&quot;favicon/favicon.ico&quot;</span></span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">favicon16x16</span> <span class="op">=</span> <span class="st">&quot;favicon/favicon-16x16.png&quot;</span></span>
+<span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">favicon32x32</span> <span class="op">=</span> <span class="st">&quot;favicon/favicon-32x32.png&quot;</span></span>
+<span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">apple_touch_icon</span> <span class="op">=</span> <span class="st">&quot;favicon/apple-touch-icon.png&quot;</span></span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">safari_pinned_tab</span> <span class="op">=</span> <span class="st">&quot;favicon/safari-pinned-tab.svg&quot;</span></span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a>  <span class="co"># safari_color = &quot;18354c&quot;</span></span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a>  <span class="co"># theme_color = &quot;#18354c&quot;</span></span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a>  <span class="co"># msapplication_TileColor = &quot;#ffc40d&quot;</span></span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a><span class="co">######################################</span></span>
+<span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">menu</span><span class="kw">]</span></span>
+<span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;home&quot;</span></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Home&quot;</span></span>
+<span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/&quot;</span></span>
+<span id="cb18-89"><a href="#cb18-89" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-90"><a href="#cb18-90" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-91"><a href="#cb18-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-92"><a href="#cb18-92" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-93"><a href="#cb18-93" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;start_here&quot;</span></span>
+<span id="cb18-94"><a href="#cb18-94" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-drafting-compass&quot;</span></span>
+<span id="cb18-95"><a href="#cb18-95" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-96"><a href="#cb18-96" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Start Here&quot;</span></span>
+<span id="cb18-97"><a href="#cb18-97" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/start-here&quot;</span></span>
+<span id="cb18-98"><a href="#cb18-98" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-99"><a href="#cb18-99" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb18-100"><a href="#cb18-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-101"><a href="#cb18-101" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-102"><a href="#cb18-102" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-103"><a href="#cb18-103" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-th-large&quot;</span></span>
+<span id="cb18-104"><a href="#cb18-104" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-105"><a href="#cb18-105" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;View&quot;</span></span>
+<span id="cb18-106"><a href="#cb18-106" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-107"><a href="#cb18-107" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-108"><a href="#cb18-108" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb18-109"><a href="#cb18-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-110"><a href="#cb18-110" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-111"><a href="#cb18-111" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;list_view&quot;</span></span>
+<span id="cb18-112"><a href="#cb18-112" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-list&quot;</span></span>
+<span id="cb18-113"><a href="#cb18-113" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Post list view of all posts&quot;</span></span>
+<span id="cb18-114"><a href="#cb18-114" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;List View →&quot;</span></span>
+<span id="cb18-115"><a href="#cb18-115" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/posts/&quot;</span></span>
+<span id="cb18-116"><a href="#cb18-116" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-117"><a href="#cb18-117" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb18-118"><a href="#cb18-118" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-119"><a href="#cb18-119" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-120"><a href="#cb18-120" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#ff7e73&quot;</span></span>
+<span id="cb18-121"><a href="#cb18-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-122"><a href="#cb18-122" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-123"><a href="#cb18-123" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;grid_view&quot;</span></span>
+<span id="cb18-124"><a href="#cb18-124" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-th&quot;</span></span>
+<span id="cb18-125"><a href="#cb18-125" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Post grid view of all posts&quot;</span></span>
+<span id="cb18-126"><a href="#cb18-126" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Grid View →&quot;</span></span>
+<span id="cb18-127"><a href="#cb18-127" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/portfolio/&quot;</span></span>
+<span id="cb18-128"><a href="#cb18-128" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-129"><a href="#cb18-129" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb18-130"><a href="#cb18-130" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-131"><a href="#cb18-131" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-132"><a href="#cb18-132" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#abe5b1&quot;</span></span>
+<span id="cb18-133"><a href="#cb18-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-134"><a href="#cb18-134" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-135"><a href="#cb18-135" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;post_view_sidebar&quot;</span></span>
+<span id="cb18-136"><a href="#cb18-136" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-file-text-o&quot;</span></span>
+<span id="cb18-137"><a href="#cb18-137" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Single post view with sidebar&quot;</span></span>
+<span id="cb18-138"><a href="#cb18-138" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Single Post View With Sidebar&quot;</span></span>
+<span id="cb18-139"><a href="#cb18-139" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/post-with-sidebar/&quot;</span></span>
+<span id="cb18-140"><a href="#cb18-140" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-141"><a href="#cb18-141" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb18-142"><a href="#cb18-142" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-143"><a href="#cb18-143" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-144"><a href="#cb18-144" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#ffc873&quot;</span></span>
+<span id="cb18-145"><a href="#cb18-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-146"><a href="#cb18-146" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-147"><a href="#cb18-147" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;post_view_no_sidebar&quot;</span></span>
+<span id="cb18-148"><a href="#cb18-148" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-file-text-o&quot;</span></span>
+<span id="cb18-149"><a href="#cb18-149" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Single post view without sidebar&quot;</span></span>
+<span id="cb18-150"><a href="#cb18-150" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Single Post View Without Sidebar&quot;</span></span>
+<span id="cb18-151"><a href="#cb18-151" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/post-without-sidebar/&quot;</span></span>
+<span id="cb18-152"><a href="#cb18-152" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-153"><a href="#cb18-153" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb18-154"><a href="#cb18-154" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-155"><a href="#cb18-155" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-156"><a href="#cb18-156" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#ffc873&quot;</span></span>
+<span id="cb18-157"><a href="#cb18-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-158"><a href="#cb18-158" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-159"><a href="#cb18-159" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;post_view_cover&quot;</span></span>
+<span id="cb18-160"><a href="#cb18-160" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-picture-o&quot;</span></span>
+<span id="cb18-161"><a href="#cb18-161" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Single post view with cover image&quot;</span></span>
+<span id="cb18-162"><a href="#cb18-162" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Single Post View with Cover&quot;</span></span>
+<span id="cb18-163"><a href="#cb18-163" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/post-with-cover-image/&quot;</span></span>
+<span id="cb18-164"><a href="#cb18-164" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-165"><a href="#cb18-165" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb18-166"><a href="#cb18-166" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-167"><a href="#cb18-167" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-168"><a href="#cb18-168" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#abe0e5&quot;</span></span>
+<span id="cb18-169"><a href="#cb18-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-170"><a href="#cb18-170" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-171"><a href="#cb18-171" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;video_post&quot;</span></span>
+<span id="cb18-172"><a href="#cb18-172" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-film&quot;</span></span>
+<span id="cb18-173"><a href="#cb18-173" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Single post view of video post&quot;</span></span>
+<span id="cb18-174"><a href="#cb18-174" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Video Post&quot;</span></span>
+<span id="cb18-175"><a href="#cb18-175" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/video-post-view/&quot;</span></span>
+<span id="cb18-176"><a href="#cb18-176" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-177"><a href="#cb18-177" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb18-178"><a href="#cb18-178" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-179"><a href="#cb18-179" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-180"><a href="#cb18-180" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;#abe0e5&quot;</span></span>
+<span id="cb18-181"><a href="#cb18-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-182"><a href="#cb18-182" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-183"><a href="#cb18-183" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;landinpage&quot;</span></span>
+<span id="cb18-184"><a href="#cb18-184" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;fa fa-star text-warning&quot;</span></span>
+<span id="cb18-185"><a href="#cb18-185" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;Insert html on index.md file&quot;</span></span>
+<span id="cb18-186"><a href="#cb18-186" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Landing Page&quot;</span></span>
+<span id="cb18-187"><a href="#cb18-187" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/landingpage/&quot;</span></span>
+<span id="cb18-188"><a href="#cb18-188" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-189"><a href="#cb18-189" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb18-190"><a href="#cb18-190" aria-hidden="true" tabindex="-1"></a>    <span class="dt">parent</span> <span class="op">=</span> <span class="st">&quot;view&quot;</span></span>
+<span id="cb18-191"><a href="#cb18-191" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">.</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb18-192"><a href="#cb18-192" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-193"><a href="#cb18-193" aria-hidden="true" tabindex="-1"></a>      <span class="dt">bordertop</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb18-194"><a href="#cb18-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-195"><a href="#cb18-195" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-196"><a href="#cb18-196" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;contact&quot;</span></span>
+<span id="cb18-197"><a href="#cb18-197" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-198"><a href="#cb18-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-199"><a href="#cb18-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Contact&quot;</span></span>
+<span id="cb18-200"><a href="#cb18-200" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/contact/&quot;</span></span>
+<span id="cb18-201"><a href="#cb18-201" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-202"><a href="#cb18-202" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb18-203"><a href="#cb18-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-204"><a href="#cb18-204" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">main</span><span class="kw">]]</span></span>
+<span id="cb18-205"><a href="#cb18-205" aria-hidden="true" tabindex="-1"></a>    <span class="dt">identifier</span> <span class="op">=</span> <span class="st">&quot;about&quot;</span></span>
+<span id="cb18-206"><a href="#cb18-206" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pre</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-207"><a href="#cb18-207" aria-hidden="true" tabindex="-1"></a>    <span class="dt">post</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-208"><a href="#cb18-208" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;About&quot;</span></span>
+<span id="cb18-209"><a href="#cb18-209" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/about/&quot;</span></span>
+<span id="cb18-210"><a href="#cb18-210" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb18-211"><a href="#cb18-211" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">13</span></span>
+<span id="cb18-212"><a href="#cb18-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-213"><a href="#cb18-213" aria-hidden="true" tabindex="-1"></a><span class="co"># Footer config</span></span>
+<span id="cb18-214"><a href="#cb18-214" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">footer</span><span class="kw">]</span></span>
+<span id="cb18-215"><a href="#cb18-215" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">footer</span><span class="kw">]]</span></span>
+<span id="cb18-216"><a href="#cb18-216" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Privacy Policy&quot;</span></span>
+<span id="cb18-217"><a href="#cb18-217" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/policy-privacy&quot;</span></span>
+<span id="cb18-218"><a href="#cb18-218" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-219"><a href="#cb18-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-220"><a href="#cb18-220" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">footer</span><span class="kw">]]</span></span>
+<span id="cb18-221"><a href="#cb18-221" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span> <span class="op">=</span> <span class="st">&quot;Contact&quot;</span></span>
+<span id="cb18-222"><a href="#cb18-222" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> <span class="op">=</span> <span class="st">&quot;/contact&quot;</span></span>
+<span id="cb18-223"><a href="#cb18-223" aria-hidden="true" tabindex="-1"></a>    <span class="dt">weight</span> <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb18-224"><a href="#cb18-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-225"><a href="#cb18-225" aria-hidden="true" tabindex="-1"></a><span class="co">############################# social site ########################</span></span>
+<span id="cb18-226"><a href="#cb18-226" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-227"><a href="#cb18-227" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;medium&quot;</span></span>
+<span id="cb18-228"><a href="#cb18-228" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-medium-m&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-229"><a href="#cb18-229" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://medium.com/@antedoro&quot;</span></span>
+<span id="cb18-230"><a href="#cb18-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-231"><a href="#cb18-231" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-232"><a href="#cb18-232" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;facebook&quot;</span></span>
+<span id="cb18-233"><a href="#cb18-233" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-facebook-f&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-234"><a href="#cb18-234" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://www.facebook.com/antedoroguitars&quot;</span></span>
+<span id="cb18-235"><a href="#cb18-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-236"><a href="#cb18-236" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-237"><a href="#cb18-237" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;twitter&quot;</span></span>
+<span id="cb18-238"><a href="#cb18-238" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-twitter&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-239"><a href="#cb18-239" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://twitter.com/AntedoroGuitars&quot;</span></span>
+<span id="cb18-240"><a href="#cb18-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-241"><a href="#cb18-241" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-242"><a href="#cb18-242" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;instagram&quot;</span></span>
+<span id="cb18-243"><a href="#cb18-243" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-instagram&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-244"><a href="#cb18-244" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://www.instagram.com/antedoroguitars/&quot;</span></span>
+<span id="cb18-245"><a href="#cb18-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-246"><a href="#cb18-246" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-247"><a href="#cb18-247" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;pinterest&quot;</span></span>
+<span id="cb18-248"><a href="#cb18-248" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-pinterest-p&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-249"><a href="#cb18-249" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://www.pinterest.it/antedoroguitars&quot;</span></span>
+<span id="cb18-250"><a href="#cb18-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-251"><a href="#cb18-251" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">params</span><span class="kw">.</span><span class="dt">social</span><span class="kw">]]</span></span>
+<span id="cb18-252"><a href="#cb18-252" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">&quot;telegram&quot;</span></span>
+<span id="cb18-253"><a href="#cb18-253" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span> <span class="op">=</span> <span class="st">&quot;fab fa-telegram-plane&quot;</span> <span class="co"># fontawesome icon : https://fontawesome.com/</span></span>
+<span id="cb18-254"><a href="#cb18-254" aria-hidden="true" tabindex="-1"></a>  <span class="dt">link</span> <span class="op">=</span> <span class="st">&quot;https://telegram.me/antedoroguitars&quot;</span></span></code></pre></div>
+<h3 id="crear-cuenta-en-google-analytics">3. Crear cuenta en Google
+Analytics**</h3>
+<p><a
+href="https://analytics.google.com/">https://analytics.google.com/</a></p>
+<p>crea la cuenta y añade tu sitio ejemplo:</p>
+<p>tusitio.github.io</p>
+<p>y en resumen te darán un código como este:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Google tag (gtag.js) --&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">async</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://www.googletagmanager.com/gtag/js?id=G-R8H5K6J6KU&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">||</span> []<span class="op">;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">gtag</span>(){dataLayer<span class="op">.</span><span class="fu">push</span>(<span class="kw">arguments</span>)<span class="op">;</span>}</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gtag</span>(<span class="st">&#39;js&#39;</span><span class="op">,</span> <span class="kw">new</span> <span class="bu">Date</span>())<span class="op">;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gtag</span>(<span class="st">&#39;config&#39;</span><span class="op">,</span> <span class="st">&#39;G-R8H5K6J6KU&#39;</span>)<span class="op">;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<p>ese número:</p>
+<p>G-R8H5K6J6KU</p>
+<p>es necesario.</p>
+<h3 id="poner-el-id-g.-analytics-en-config.toml">4. Poner el ID G.
+Analytics en config.toml</h3>
+<p>Para usar Google Analytics, asegúrate de configurar el ID en
+config.toml ejemplo:</p>
+<p>googleAnalytics = “G-R8H5K6J6KU”</p>
+<p>Reemplaza G-R8H5K6J6KU con tu ID de Google Analytics.</p>
+<h3
+id="configurar-el-archivo-themesarberialayoutspartialshead.html-para-google-analytics">5.
+Configurar el archivo
+<code>/themes/arberia/layouts/partials/head.html para Google Analytics</code></h3>
+<p>Yo deseo usar Google Alalytics así que en el archivo:</p>
+<pre class="plaintext"><code>/home/wachin/Dev/wachin.github.io/themes/arberia/layouts/partials/head.html</code></pre>
+<p>en su caso en:</p>
+<pre class="plaintext"><code>/home/suusuario/Dev/suusuario.github.io/themes/arberia/layouts/partials/head.html</code></pre>
+<p>en la parte de abajo a la línea:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>{{ &quot;<span class="co">&lt;!-- OpenGraph + Twitter + Analytics + Disqus --&gt;</span>&quot; | safeHTML }}</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a># Resto del código</span></code></pre></div>
+<p>junto con el resto de su contenido de su contenido lo reemplazo
+por:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>    {{ &quot;<span class="co">&lt;!-- OpenGraph + Twitter + Analytics + Disqus --&gt;</span>&quot; | safeHTML }}</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    {{- if hugo.IsProduction | or (eq .Site.Params.env &quot;production&quot;) }}</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    {{ with .Params.Image }}</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">property</span><span class="ot">=</span><span class="st">&quot;og:image&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;{{ . | absURL }}&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    {{ end }}</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    {{ template &quot;_internal/opengraph.html&quot; . }}</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    {{ template &quot;_internal/twitter_cards.html&quot; . }}</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    {{ template &quot;_internal/schema.html&quot; . }}</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    {{/* {{ template &quot;_internal/google_news.html&quot; . }} */}}</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    {{ if .Site.Params.googleAnalytics }}</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Google tag (gtag.js) --&gt;</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script</span> <span class="er">async</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://www.googletagmanager.com/gtag/js?id=G-R8H5K6J6KU&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script&gt;</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">||</span> []<span class="op">;</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">function</span> <span class="fu">gtag</span>(){dataLayer<span class="op">.</span><span class="fu">push</span>(<span class="kw">arguments</span>)<span class="op">;</span>}</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">gtag</span>(<span class="st">&#39;js&#39;</span><span class="op">,</span> <span class="kw">new</span> <span class="bu">Date</span>())<span class="op">;</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">gtag</span>(<span class="st">&#39;config&#39;</span><span class="op">,</span> <span class="st">&#39;G-R8H5K6J6KU&#39;</span>)<span class="op">;</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>    {{ end }} <span class="co">&lt;!-- Cierra el if para .Site.Params.googleAnalytics --&gt;</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    {{ template &quot;_internal/disqus.html&quot; . }}</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    {{- end -}}</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<p>donde en el número G-R8H5K6J6KU debe reemplazarlo por el suyo, esto
+debe hacerlo en las líneas:</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>    # Resto del código</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script</span> <span class="er">async</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://www.googletagmanager.com/gtag/js?id=G-R8H5K6J6KU&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    # Resto del código</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>        gtag(&#39;config&#39;, &#39;G-R8H5K6J6KU&#39;);</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    # Resto del código</span></code></pre></div>
+<p>Además, observe como está la identación, debe quedar igual.</p>
+<p>y también debe añadirlo al archivo <code>config.toml</code> en la
+sección “googleAnalytics”, bueno debe poner el suyo en vez del que está
+allí:</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">params</span><span class="kw">]</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">mainSections</span> <span class="op">=</span> <span class="op">[</span><span class="st">&#39;</span><span class="vs">posts</span><span class="st">&#39;</span><span class="op">]</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">dateFormat</span> <span class="op">=</span> <span class="st">&quot;January 2, 2006&quot;</span>  <span class="co"># Date format for posts</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">footerMenu</span> <span class="op">=</span> <span class="cn">false</span>              <span class="co"># Set to true if you want a footer menu</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">socialIcons</span> <span class="op">=</span> <span class="cn">false</span>             <span class="co"># Set to true if you want social icons</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showReadingTime</span> <span class="op">=</span> <span class="cn">true</span>          <span class="co"># Show estimated reading time for posts</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showWordCount</span> <span class="op">=</span> <span class="cn">true</span>            <span class="co"># Show word count for posts</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showAuthor</span> <span class="op">=</span> <span class="cn">true</span>               <span class="co"># Show author name in posts</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">showDate</span> <span class="op">=</span> <span class="cn">true</span>                 <span class="co"># Show date in posts</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">googleAnalytics</span> <span class="op">=</span> <span class="st">&quot;G-R0L8R30ZCR&quot;</span>  <span class="co"># Leave this empty to disable Google Analytics</span></span></code></pre></div>
+<h3 id="crea-tu-primera-entrada">2. Crea tu primera entrada:</h3>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
+<p>Edita el archivo markdown generado <code>content/posts/</code> para
+añadir a tu contenido.</p>
+<p>Luego abre el archivo:</p>
+<p>my-first-post.md</p>
+<p>y donde dice:</p>
+<p>draft: true</p>
+<p>cambialo por:</p>
+<p>draft: false</p>
+<p>para que no sea un borrador y se pueda publicar en <a
+href="https://wachin.github.io/">https://wachin.github.io/</a>
+exactamente en: <a
+href="https://wachin.github.io/posts/">https://wachin.github.io/posts/</a></p>
+<p>Además si va a usar Mermaid debe añadir:</p>
+<p>mermaid: true</p>
+<p>Ejemplo:</p>
+<pre class="plaintext"><code>---
+title: &quot;Ejemplo De Archivo Markdown Complejo&quot;
+date: 2025-01-22T13:34:57-05:00
+draft: false
+mermaid: true
+---</code></pre>
+<hr />
+<h2 id="paso-6-prueba-tu-sitio-localmente">Paso 6: Prueba tu sitio
+localmente</h2>
+<h3 id="inicia-el-servidor-de-hugo">1. Inicia el servidor de Hugo:</h3>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> server <span class="at">-D</span></span></code></pre></div>
+<h3 id="previsualiza-tu-sitio">2. Previsualiza tu sitio:</h3>
+<ul class="incremental">
+<li>Abre tu navegador y ve a <code>http://localhost:1313</code>.</li>
+<li>Deberías ver tu sitio Hugo con el tema Arberia aplicado.</li>
+</ul>
+<hr />
+<h2 id="paso-7-desplegar-a-github-pages">Paso 7: Desplegar a GitHub
+Pages</h2>
+<p>Hugo es un <strong>generador de sitios estáticos</strong>. Esto
+significa que toma tu contenido (como archivos Markdown) y lo convierte
+en un conjunto de <strong>archivos estáticos</strong> (HTML, CSS,
+JavaScript, etc.). Desplegar un sitio significa hacerlo disponible en
+internet para que cualquier persona pueda visitarlo utilizando un
+navegador web (como Chrome, Firefox o Safari). Cuando despliegas un
+sitio, básicamente estás tomando los archivos que has creado (como HTML,
+CSS e imágenes) y los pones en un servidor conectado a internet. Este
+servidor “alberga” tu sitio, lo que significa que almacena los archivos
+y los entrega a los visitantes cuando escriben la dirección de tu sitio
+web. En este caso, GitHub Pages es el servidor.</p>
+<h3 id="construye-tu-sitio">1. Construye tu sitio:</h3>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span></span></code></pre></div>
+<p>Esto genera archivos estáticos en el directorio
+<code>public/</code>.</p>
+<h3
+id="copia-el-contenido-del-directorio-public-a-la-raíz-de-tu-repositorio">2.
+Copia el contenido del directorio <code>public/</code> a la raíz de tu
+repositorio:</h3>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> public/<span class="pp">*</span> .</span></code></pre></div>
+<p><strong>¿Por qué usamos la carpeta <code>public/</code>?</strong></p>
+<p>La carpeta <code>public/</code> es donde Hugo almacena la versión
+final de tu sitio después de haber sido construido. Contiene: -
+<strong>Archivos HTML</strong>: Estos definen la estructura de tus
+páginas web. - <strong>Archivos CSS</strong>: Estos controlan el estilo
+(colores, fuentes, diseño, etc.). - <strong>Archivos
+JavaScript</strong>: Estos añaden interactividad (como botones o
+animaciones). - <strong>Imágenes y otros recursos</strong>: Estos son
+los elementos visuales de tu sitio.</p>
+<p>Cuando despliegas tu sitio, básicamente estás subiendo el contenido
+de esta carpeta <code>public/</code> a un servidor.</p>
+<h3 id="realiza-commit-y-haz-push-de-los-cambios">3. Realiza commit y
+haz push de los cambios:</h3>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Desplegar sitio Hugo con el tema Arberia&quot;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div>
+<h3 id="verifica-tu-sitio-en-github-pages">4. Verifica tu sitio en
+GitHub Pages:</h3>
+<ul class="incremental">
+<li>Visita <code>https://username.github.io</code> en tu navegador.</li>
+<li>Deberías ver tu sitio Hugo en vivo.—</li>
+</ul>
+<h2 id="step-8-limpiar-el-cache">Step 8: Limpiar el cache</h2>
+<p>Es necesario absolutamente limmpiar el cache pues de lo contrario al
+subir los cambios con git add git commit git push los cambios no se
+aplicarán:</p>
+<p><strong>Clear Hugo cache:</strong></p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> <span class="at">--gc</span></span></code></pre></div>
+<p>una vez limpiado el cache ya se pueden subir los cambios.</p>
+<h2 id="paso-9-edición-de-archivos">Paso 9: Edición de archivos</h2>
+<h3 id="al-editar-algún-archivo-hay-que-limpiar-el-cache">1. Al editar
+algún archivo hay que limpiar el cache</h3>
+<p>Ejemplo al editar los archivos:</p>
+<pre class="plaintext"><code>/home/wachin/Dev/wachin.github.io/config.toml
+
+/home/wachin/Dev/wachin.github.io/content/
+/home/wachin/Dev/wachin.github.io/content/posts/</code></pre>
+<p>después de editados hay que limpiar el cache con:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> <span class="at">--gc</span></span></code></pre></div>
+<p>y luego construir el sitio</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span></span></code></pre></div>
+<p>Esto genera archivos estáticos en el directorio
+<code>public/</code>.</p>
+<h3
+id="copie-el-contenido-del-directorio-public-a-la-raíz-de-su-repositorio">2.
+Copie el contenido del directorio <code>public/</code> a la raíz de su
+repositorio:</h3>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> public/<span class="pp">*</span> .</span></code></pre></div>
+<h3 id="suba-los-cambios">3. Suba los cambios</h3>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;update the site&quot;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<h3 id="resumen-comandos-subida">4. Resumen comandos subida</h3>
+<p>Si deseas resumir todo puedes poner:</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> <span class="at">--gc</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> public/<span class="pp">*</span> .</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;update the site&quot;</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<h2 id="paso-10.-cómo-realizar-cambios-al-fork-del-tema-arberia">Paso
+10. Cómo realizar cambios al Fork del Tema Arberia</h2>
+<p>Aquí están los pasos para actualizar tu fork de Arberia si sólo si
+haz hecho algún cambio en algún archivo en:</p>
+<p>themes/arberia</p>
+<h3 id="moverse-al-directorio-del-submódulo">1. Moverse al directorio
+del submódulo</h3>
+<p>Cambia al directorio del submódulo para gestionar sus cambios
+directamente:</p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> themes/arberia</span></code></pre></div>
+<h3 id="revisar-y-confirmar-los-cambios">2. Revisar y confirmar los
+cambios</h3>
+<p>Revisa los cambios realizados en el submódulo:</p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Si estás satisfecho con los cambios, añádelos y confirma:</p>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Personalizaciones en el tema Arberia&quot;</span></span></code></pre></div>
+<h3 id="subir-los-cambios-a-tu-fork">3. Subir los cambios a tu fork</h3>
+<p>Sube los cambios al repositorio del submódulo (tu fork en
+GitHub):</p>
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<h3 id="volver-al-repositorio-principal">4. Volver al repositorio
+principal</h3>
+<p>Regresa al directorio principal de tu sitio:</p>
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../../</span></code></pre></div>
+<h3 id="resumen-comandos-actualizar-fork-arberia">5. Resumen comandos
+actualizar Fork Arberia</h3>
+<p>Los siguientes comandos se puedes poner si no hay ningun conflicto en
+el repositorio, y se puedes copiar todos y ponerlos todos de una sola
+vez, pero cambia el commit por lo que hayas hecho:</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> themes/arberia</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Personalizaciones en el tema Arberia&quot;</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../../</span></code></pre></div>
+<h3 id="actualizar-el-submódulo-en-el-repositorio-principal">6.
+Actualizar el submódulo en el repositorio principal</h3>
+<p>Ahora, registra la nueva referencia del submódulo en el repositorio
+principal:</p>
+<p>Para hacer esto repite el <strong>“Paso 10”</strong> en: <strong>“4.
+Resumen comandos de subida”</strong></p>
+<hr />
+<h2 id="añado-soporte-para-mermaid">Añado soporte para Mermaid</h2>
+<ol class="incremental" type="1">
+<li>Actualizar <code>config.toml</code>:</li>
+</ol>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">markup</span><span class="kw">]</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Resto del código</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">highlight</span><span class="kw">]</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">codeFences</span> <span class="op">=</span> <span class="cn">true</span></span></code></pre></div>
+<ol class="incremental" start="2" type="1">
+<li>Crear archivo de gancho de renderizado
+<code>/layouts/_default/_markup/render-codeblock-mermaid.html</code>:</li>
+</ol>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;mermaid&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  {{- .Inner | safeHTML }}</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<ol class="incremental" start="3" type="1">
+<li>Añadir Mermaid script a
+<code>/themes/arberia/layouts/partials/head.html</code>:</li>
+</ol>
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script&gt;</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    mermaid<span class="op">.</span><span class="fu">initialize</span>({ <span class="dt">startOnLoad</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<ol class="incremental" start="4" type="1">
+<li>Mantenga un archivo de código corto mínimo
+<code>/layouts/shortcodes/mermaid.html</code>:</li>
+</ol>
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>{{ .Inner }}</span></code></pre></div>
+<p>Ahora puedes usar diagramas de sirena directamente en Markdown:</p>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="in">```mermaid</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="in">graph TD;</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="in">    A--&gt;B;</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="in">    A--&gt;C;</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="in">    B--&gt;D;</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<p>y se verá así:</p>
+<pre class="mermaid"><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;</code></pre>
+<h2 id="añado-soporte-para-mathjax">Añado soporte para Mathjax</h2>
+<ol class="incremental" type="1">
+<li>En <code>config.toml</code>, asegúrese de que el renderizador
+Goldmark esté configurado como inseguro:</li>
+</ol>
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">markup</span><span class="kw">]</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Resto del código</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">goldmark</span><span class="kw">]</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">[</span><span class="dt">markup</span><span class="kw">.</span><span class="dt">goldmark</span><span class="kw">.</span><span class="dt">renderer</span><span class="kw">]</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">unsafe</span> <span class="op">=</span> <span class="cn">true</span></span></code></pre></div>
+<ol class="incremental" start="2" type="1">
+<li>Añadir script MathJax a:
+<code>/themes/arberia/layouts/partials/head.html</code>:</li>
+</ol>
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Mathjax Support --&gt;</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script&gt;</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span> <span class="op">=</span> {</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tex</span><span class="op">:</span> {</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>                <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]<span class="op">,</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>                <span class="dt">displayMath</span><span class="op">:</span> [[<span class="st">&#39;$$&#39;</span><span class="op">,</span> <span class="st">&#39;$$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">[&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">]&#39;</span>]]</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<ol class="incremental" start="3" type="1">
+<li>Ejemplos de uso de MathJax en Markdown:</li>
+</ol>
+<ul class="incremental">
+<li>Fórmula matemáticas en línea: <code>$E = mc^2$</code></li>
+<li>Fórmula matemáticas en bloque:</li>
+</ul>
+<p><code>$$ \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi} $$</code></p>
+<p>esto se verá así: - Fórmula matemáticas en línea: <span
+class="math inline"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
+<ul class="incremental">
+<li>Fórmula matemáticas en bloque:</li>
+</ul>
+<p><span class="math display">$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$</span></p>
+<h2
+id="paso-6.-actualizar-fork-del-tema-arberia-desde-otro-ordenador">Paso
+6. Actualizar Fork del Tema Arberia desde otro ordenador</h2>
+<p>En un caso remoto de que el repositorio de tu fork, ejemplo el mío <a
+href="https://github.com/wachin/arberia">https://github.com/wachin/arberia</a>
+lo desees clonar y editar en otro ordenador, para actualizar los cambios
+en el ordenador donde primero lo estabas editando, debes poner:</p>
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--remote</span> <span class="at">--merge</span></span></code></pre></div>
+<p>Esto actualizará el submódulo del tema a su última versión si fue
+editado en otro ordenador.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD # Consultas</p>
+<p><strong>https://github.com/antedoro/arberia</strong> <a
+href="https://github.com/antedoro/arberia">https://github.com/antedoro/arberia</a></p>
+<p>=======</p>
+<h1
+id="descargar-en-otro-ordenador-el-repositorio-username.github.io">Descargar
+en otro ordenador el repositorio username.github.io</h1>
+<p>Si deseas descargar en otro ordenador el respositorio para usarlo
+allí debes hacer lo siguiente:</p>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/username.github.io</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> username.github.io</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span> <span class="at">--recursive</span></span></code></pre></div>
+<p>remplaza con tus datos. Al hacer esto se descargará además en
+username.github.io/themes/arberia/ todo el repositorio del tema
+arberia.</p>
+<p>en mi caso es así:</p>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/wachin/wachin.github.io</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> wachin.github.io/</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span> <span class="at">--recursive</span></span></code></pre></div>
+<h1 id="revisar-el-tutorial-de-hugo">Revisar el tutorial de Hugo</h1>
+<p>También es importante revisar en la siguiente dirección pues está
+cómo crear un sitio y todo lo necesario con Hugo:</p>
+<p><a
+href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/origin/main</p>

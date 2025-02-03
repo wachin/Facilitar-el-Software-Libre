@@ -83,7 +83,21 @@ Para cambiar el color o la saturación de una parte específica del video:
 5. **Agrega un efecto** (por ejemplo, balance de color).
 6. **Aplica la máscara** arrastrándola al clip.
 
-💡 Esto permite modificar solo el área seleccionada, sin afectar el resto del video.
+💡 Esto es útil para eliminar bordes, lo cual se hace así:
+
+* Arrástra el efecto: "Crop, Scale and Tilt" al clip en la línea de tiempo.
+* Dale clic en el video y a la derecha aparecerán los controles
+* Ejemplo para quitar parte del video a la derecha se usa "crop right", y para quitar parte del video abajo se usa "crop bottom"
+
+como en el siguiente ejemplo:
+
+![pebble](vx_images/333334832121053.png)
+
+y queda así:
+
+![Pebble Keys recortada parte del video](vx_images/176013695402373.png)
+
+Pero esto **no sirve para recortar un objeto en el centro del video.**
 
 ---
 

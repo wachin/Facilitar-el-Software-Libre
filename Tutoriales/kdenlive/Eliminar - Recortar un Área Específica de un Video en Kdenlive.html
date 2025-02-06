@@ -1,0 +1,132 @@
+<h1 id="eliminar-recortar-un-área-específica-de-un-video-en-kdenlive">📹
+Eliminar / Recortar un Área Específica de un Video en Kdenlive</h1>
+<p>En este tutorial, aprenderás a eliminar o modificar un elemento
+dentro de un video en <strong>Kdenlive</strong> basado en su posición,
+sin depender únicamente del color.</p>
+<hr />
+<h2 id="usando-el-efecto-crop-scale-and-tilt">🛠️ Usando el efecto
+<em>Crop, Scale and Tilt</em></h2>
+<p>El efecto <strong>“Crop, Scale and Tilt”</strong> se encuentra
+en:</p>
+<blockquote>
+<p><code>Transformación, distorsión y perspectiva &gt; Crop, Scale and Tilt</code></p>
+</blockquote>
+<h3 id="opciones-disponibles">Opciones disponibles:</h3>
+<ul class="incremental">
+<li><strong>Crop left / Crop right / Crop top / Crop bottom</strong> –
+Recorta los bordes del video.</li>
+<li><strong>Scale X / Scale Y</strong> – Escala la imagen.</li>
+<li><strong>Tilt Y</strong> – Inclina la imagen.</li>
+</ul>
+<p>👉 Esto es útil para eliminar bordes, pero <strong>no sirve para
+recortar un objeto en el centro del video</strong>.</p>
+<hr />
+<h2 id="uso-de-la-clave-cromática-chroma-key">🔑 Uso de la Clave
+Cromática (<em>Chroma Key</em>) 🎨</h2>
+<p>Para eliminar un color específico (como una pantalla verde): <img
+src="vx_images/238233364882567.png" /></p>
+<ol class="incremental" type="1">
+<li>Ve a la pestaña de <strong>Efectos</strong> y busca <strong>“Chroma
+Key”</strong>.</li>
+<li>Arrástralo al clip en la línea de tiempo.</li>
+<li>Usa el <strong>cuentagotas</strong> para seleccionar el color que
+quieres eliminar.</li>
+<li>Ajusta la tolerancia para evitar que se eliminen partes no
+deseadas.</li>
+</ol>
+<p>❗ <strong>Problema</strong>: Si intentamos eliminar un color similar
+al de la piel, puede afectar otras partes del video.</p>
+<h3 id="qué-es-chroma-y-chroma-key">🎨 ¿Qué es <em>Chroma</em> y
+<em>Chroma Key</em>?</h3>
+<p><strong>1️⃣ Chroma</strong><br />
+El término <em>Chroma</em> se refiere al <strong>color</strong> en un
+video o imagen.</p>
+<p><strong>2️⃣ Chroma Key</strong> (<em>Clave de Croma</em>)<br />
+Es una técnica de edición de video que permite <strong>eliminar un color
+específico de una imagen o video</strong> y reemplazarlo con otro
+fondo.</p>
+<h3 id="cómo-funciona">🏗️ ¿Cómo funciona?</h3>
+<p>El proceso consiste en:<br />
+1. <strong>Grabar el video con un fondo de color sólido</strong>,
+generalmente <strong>verde</strong> o <strong>azul</strong>.<br />
+2. <strong>Usar un efecto de Chroma Key en un software de
+edición</strong> (como Kdenlive, Premiere Pro o After Effects).<br />
+3. <strong>Eliminar el color seleccionado</strong> y reemplazarlo con
+otro video, imagen o fondo.</p>
+<h3 id="ejemplos-de-uso">🎬 Ejemplos de uso:</h3>
+<p>✅ <strong>Noticias y meteorología</strong> – Donde el presentador
+está frente a un mapa virtual.<br />
+✅ <strong>Efectos de cine</strong> – Para crear escenas con mundos
+ficticios.<br />
+✅ <strong>Streaming y videojuegos</strong> – Para eliminar el fondo y
+mostrar solo al jugador.</p>
+<p>📌 <strong>Dato clave</strong>: Se usa <strong>verde o azul</strong>
+porque estos colores contrastan con el tono de piel y la ropa de la
+mayoría de las personas.</p>
+<hr />
+<h2 id="eliminación-basada-en-posición-alpha-shapes">🏗️ Eliminación
+Basada en Posición 📍 (<em>Alpha Shapes</em>)</h2>
+<p>Si necesitas eliminar un objeto sin depender del color:</p>
+<ol class="incremental" type="1">
+<li>Ve a <strong>Efectos</strong> y busca <strong>“Alpha
+Shapes”</strong>.</li>
+<li>Arrástralo al clip.</li>
+<li>Ajusta la forma (<strong>rectángulo, elipse, triángulo,
+diamante</strong>) para cubrir el área a eliminar.</li>
+<li>En la configuración del efecto, cambia la <strong>operación</strong>
+de <code>"Write on"</code> a <code>"Subtract"</code>.</li>
+</ol>
+<p>✔ Esto elimina <strong>todo dentro de la forma</strong>, sin importar
+el color.</p>
+<hr />
+<h2 id="aplicar-efectos-a-un-área-específica-rotoscopía">🖌️ Aplicar
+Efectos a un Área Específica 🖍️ (<em>Rotoscopía</em>)</h2>
+<p>Para cambiar el color o la saturación de una parte específica del
+video:</p>
+<ol class="incremental" type="1">
+<li>Ve a <strong>Efectos</strong> y busca <strong>“Rotoscoping
+Mask”</strong>.</li>
+<li>Agrégalo al clip.</li>
+<li><strong>Haz clic derecho</strong> para crear los puntos de la
+máscara.</li>
+<li>Ajusta los puntos para rodear el área deseada.</li>
+<li><strong>Agrega un efecto</strong> (por ejemplo, balance de
+color).</li>
+<li><strong>Aplica la máscara</strong> arrastrándola al clip.</li>
+</ol>
+<p>💡 Esto permite modificar solo el área seleccionada, sin afectar el
+resto del video.</p>
+<hr />
+<h2 id="ejemplo-reemplazar-una-pantalla-en-un-video">🎬 Ejemplo:
+Reemplazar una Pantalla en un Video 📺</h2>
+<ol class="incremental" type="1">
+<li>Usa <strong>“Alpha Shapes”</strong> para eliminar la pantalla de una
+TV en el video.</li>
+<li>Inserta el clip del video que quieres mostrar en la pantalla.</li>
+<li>Usa el efecto <strong>“Transform”</strong> para ajustar la nueva
+imagen dentro del marco de la TV.</li>
+</ol>
+<hr />
+<h3 id="conclusión">📢 Conclusión 🎥</h3>
+<p>Este método es útil para: ✅ Eliminar objetos no deseados. ✅
+Modificar colores y efectos en zonas específicas. ✅ Crear efectos
+visuales avanzados sin depender del croma.</p>
+<hr />
+<h2 id="referencias">Referencias</h2>
+<p><strong>Remove Specific Area of Video - Kdenlive
+Tutorial!</strong><br />
+<a
+href="https://www.youtube.com/watch?v=2XMU2yGKpA0&amp;list=PLnLd9ezaWbnxoyuP73TTRLaE9Cr3QwLRz&amp;index=13">https://www.youtube.com/watch?v=2XMU2yGKpA0&amp;list=PLnLd9ezaWbnxoyuP73TTRLaE9Cr3QwLRz&amp;index=13</a></p>
+<p><img src="vx_images/271763954660642.png" /></p>
+<p><strong>croma</strong><br />
+<a
+href="https://dle.rae.es/croma?utm_source=chatgpt.com">https://dle.rae.es/croma?utm_source=chatgpt.com</a></p>
+<p><strong>¿Qué es el croma?</strong><br />
+<a
+href="https://www.adobe.com/es/creativecloud/video/discover/what-is-chroma-key.html">https://www.adobe.com/es/creativecloud/video/discover/what-is-chroma-key.html</a></p>
+<p><strong>Croma</strong><br />
+<a
+href="https://es.wikipedia.org/wiki/Croma">https://es.wikipedia.org/wiki/Croma</a></p>
+<p><strong>Croma Key ¿Qué es y para qué sirve?</strong><br />
+<a
+href="https://www.monsuton.com/croma-key/">https://www.monsuton.com/croma-key/</a></p>

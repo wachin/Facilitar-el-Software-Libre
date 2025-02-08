@@ -54,9 +54,14 @@ entonces en Ubuntu 24.04 se lo puede instalar así:
     go version
     ```
 
+**En 64 bit:**
    Esto debería devolver algo como: 
     
    `go version go1.22 linux/amd64`.
+
+**En 32 bit:**
+
+    `go version go1.23.5 linux/386`
 
 2. Asegúrate de que las variables de entorno estén configuradas correctamente:
 
@@ -107,8 +112,9 @@ Extrae el archivo descargado (por ejemplo, `go1.xx.linux-386.tar.gz`) y muévelo
 - **Standard Edition**:
   - Requiere únicamente Go 1.20 o superior.
   - No incluye soporte para SCSS/Sass.
-  - Tamaño aproximado: **~260 MB** in /home/tuusuario/go
-  - Comando de instalación:
+  - Tamaño aproximado: **~260 MB** en /home/tuusuario/go
+
+Para **instalar Hugo Standard Edition** el comando de instalación es:
 
     ```bash
     go install github.com/gohugoio/hugo@latest
@@ -117,8 +123,9 @@ Extrae el archivo descargado (por ejemplo, `go1.xx.linux-386.tar.gz`) y muévelo
 - **Extended Edition**:
   - Requiere Go 1.20 o superior y un compilador C como GCC.
   - Incluye soporte para SCSS/Sass.
-  - Tamaño aproximado: **~460 MB** in /home/tuusuario/go
-  - Comando de instalación:
+  - Tamaño aproximado: **~460 MB** en /home/tuusuario/go
+
+Para **instalar Hugo Extended Edition** el comando de instalación es:
 
     ```bash
     CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
@@ -184,9 +191,69 @@ Por defecto, Hugo se instala en `$HOME/go/bin`, pero este directorio no está en
 
 ---
 
-# **Notas Finales**
+# **Notas sobre versiones de Hugo**
 - Usa la **Standard Edition** para proyectos simples.
 - Usa la **Extended Edition** si necesitas procesar SCSS/Sass.
+
+
+# Desinstalar Hugo
+Para desinstalar Hugo en Debian 12 después de haberlo instalado utilizando `go install`, puedes seguir estos pasos:
+
+## 1. Eliminar el archivo ejecutable de Hugo
+
+Cuando instalas Hugo con `go install`, el binario se coloca en el directorio `GOPATH/bin` o, si no tienes configurado `GOPATH`, se colocará en el directorio predeterminado de Go (`$HOME/go/bin`).
+
+El primer paso es eliminar el archivo ejecutable de Hugo. Abre una terminal y ejecuta:
+
+```bash
+rm -f $HOME/go/bin/hugo
+```
+
+Este comando elimina el binario de Hugo de la ubicación predeterminada de Go.
+
+## 2. Eliminar las dependencias de Go
+
+Si solo deseas eliminar Hugo y no quieres desinstalar Go, puedes omitir este paso. Sin embargo, si quieres eliminar todos los rastros relacionados con la instalación de Hugo, puedes eliminar los paquetes o dependencias que se descargaron durante el proceso de instalación:
+
+```bash
+go clean -i github.com/gohugoio/hugo
+```
+
+Este comando eliminará las dependencias de Hugo que se hayan descargado en tu sistema.
+
+## 3. Verificar que Hugo ha sido desinstalado
+
+Para asegurarte de que Hugo ha sido completamente desinstalado, puedes intentar verificar la versión de Hugo. Si todo ha sido eliminado correctamente, no debería devolver nada:
+
+```bash
+hugo version
+```
+
+Si ves un error como `command not found`, entonces Hugo se ha desinstalado correctamente.
+
+---
+
+### Resumen
+
+1. Elimina el archivo ejecutable de Hugo:
+
+   ```bash
+   rm -f $HOME/go/bin/hugo
+   ```
+
+2. (Opcional) Elimina las dependencias descargadas por Go:
+
+   ```bash
+   go clean -i github.com/gohugoio/hugo
+   ```
+
+3. Verifica que Hugo ha sido desinstalado:
+
+   ```bash
+   hugo version
+   ```
+
+Esto debería ser suficiente para desinstalar Hugo si lo instalaste de esa manera. Si necesitas más ayuda, no dudes en preguntar.
 
 ¡Dios te bendiga! 🎉
 

@@ -2,184 +2,181 @@
 Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zotero para insertarlos en LibreOffice, lo siguiente es lo que he hecho
 
 
-## Instalar Zotero
+## Instalar Zotero en Debian, Ubuntu
 
-Como ejemplo instalar **Zotero** en Debian 12. Zotero es una herramienta excelente para la gestión de referencias bibliográficas y citas. 
+Zotero es una herramienta excelente para la gestión de referencias bibliográficas y citas. A continuación, se presentan dos formas de instalación: una sin elevación de permisos y otra con permisos de superusuario.
 
-### Paso 1: Preparar el sistema
-Primero, asegúrate de tener el sistema actualizado. Abre una terminal y ejecuta el siguiente comando:
+### **Forma 1: Instalación manual sin elevación de permisos**
 
-```bash
-sudo apt update && sudo apt upgrade -y
-```
+En esta forma, instalaremos Zotero en una carpeta dentro del directorio del usuario sin necesidad de permisos de superusuario.
 
-Esto actualizará todos los paquetes de tu sistema a la última versión disponible.
-
-### Paso 2: Verifica dependencias necesarias de Zotero
-Zotero requiere algunas bibliotecas y dependencias para funcionar correctamente, deberían estar instaladas, pero con todo intentalo con el siguiente comando:
-
-```bash
-sudo apt install libx11-xcb1 libdbus-glib-1-2 libgtk-3-0 libasound2 libxt6
-```
-
-si están instaladas te lo dirá, y si faltare alguna te preguntará si deseas instalarlas.
-
-### Paso 3: Descargar Zotero
-La forma recomendada de instalar Zotero en Linux es descargando el archivo comprimido directamente desde el sitio oficial. Usa el siguiente comando para descargar el archivo comprimido desde el servidor de Zotero:
+#### Paso 1: Descargar Zotero
+Descarga el archivo desde la página oficial:
 
 [https://www.zotero.org/download/](https://www.zotero.org/download/)
 
-### Paso 4: Extraer el archivo
-Una vez descargado el archivo, necesitarás extraerlo. Puedes hacerlo manualmente con clic derecho extraer aquí o ejemplo con el siguiente comando donde debes modificarlo según el nombre de tu archivo descargado:
+#### Paso 2: Extraer el archivo
+Ve a la carpeta donde se descargó el archivo comprimido, cortado con clic derecho cortar y llevalo alguna carpeta donde tengas instaladores de Linux ejemplo:
+
+/AppsLinux
+
+y puedes extraerlo de dos formas:
+
+1. **Extracción manual.-** En un administrador de archivos da clic derecho y Extraer aquí y se extraerá.
+2. **Extracción desde la línea de comandos**.- Abre una terminal y pon:
 
 ```bash
-tar -xvjf Zotero-5.0.97.2_linux-x86_64.tar.bz2
+cd ~/AppsLinux
+tar -xvjf Zotero-*.*.*_linux-*.tar.bz2
 ```
 
-Esto extraerá el contenido en una carpeta llamada `Zotero_linux-x86_64`.
+Esto creará la carpeta `Zotero_linux-*` en `~/AppsLinux/`.
 
-### Paso 5: Mover a una ubicación adecuada
-Es recomendable mover la carpeta extraída a un directorio adecuado, como `/opt`, que es donde se suelen colocar las aplicaciones en Linux.
+#### Paso 3: Configurar el icono
+Accede a la carpeta extraída y ejecuta el script con doble clic `set_launcher_icon` o sino desde la terminal donde estabas ubicado:
 
 ```bash
-sudo mv Zotero_linux-x86_64 /opt/zotero
+./set_launcher_icon
 ```
 
-### Paso 6: Crear un acceso directo
-Para facilitar el acceso a Zotero, puedes crear un acceso directo en el menú de aplicaciones. Para ello, crea un archivo `.desktop` en el directorio adecuado:
+si no estaba allí entre con:
 
 ```bash
-sudo nano /usr/share/applications/zotero.desktop
+cd ~/AppsLinux/Zotero_linux-*
 ```
 
-Dentro del archivo, pega el siguiente contenido:
+Este script actualizará el archivo `zotero.desktop` con la ruta correcta del icono.
 
-```ini
-[Desktop Entry]
-Name=Zotero
-Comment=Zotero
-Exec=/opt/zotero/zotero
-Icon=/opt/zotero/chrome/icons/default/default256.png
-Terminal=false
-Type=Application
-Categories=Office;Education;
-```
+#### Paso 4: Crear un acceso directo
+Para que Zotero aparezca en el menú de aplicaciones, crea un enlace simbólico del archivo `zotero.desktop` en `~/.local/share/applications/`:
 
-Guarda y cierra el archivo presionando `Ctrl + O` y luego `Ctrl + X`.
-
-### Paso 7: Ejecutar Zotero
-Ahora puedes buscar Zotero en tu menú de aplicaciones y ejecutarlo.
-
-Si prefieres lanzarlo desde la terminal, simplemente puedes escribir:
+Primero asegúrate de que la carpeta **applications** esté en el lugar correcto:
 
 ```bash
-/opt/zotero/zotero
+mkdir -p ~/.local/share/applications
 ```
 
-una vez lanzado haz login con tus datos y sincronizalos
-
-Se creará un carpeta con el nombre:
-
-Zotero
-
-en tus archivos de usuario (al lado de Descargas, Documentos, Música, etc)
-
-### Paso 8: Crear un acceso directo en el escritorio (opcional)
-Si quieres tener un acceso directo en el escritorio, puedes crear un enlace simbólico o copiar el archivo `.desktop` a tu escritorio:
+luego si crea el enlace simbólico:
 
 ```bash
-cp /usr/share/applications/zotero.desktop ~/Escritorio/
+ln -s ~/AppsLinux/Zotero_linux-*/zotero.desktop ~/.local/share/applications/
 ```
 
-Esto te permitirá iniciar Zotero directamente desde el escritorio.
+Ahora Zotero estará disponible en el menú de aplicaciones y podrá ser lanzado desde allí.
 
----
+### **Forma 2: Instalación con elevación de permisos**
 
-## **1. Actualizar Zotero en Debian**
+En esta forma, instalaremos Zotero en el directorio `/opt/` y configuraremos el acceso desde la línea de comandos.
 
-Zotero no tiene un gestor de actualizaciones automático en Linux, por lo que para actualizarlo, debes hacerlo manualmente descargando la última versión desde su página oficial. Aquí tienes los pasos:
+#### Paso 1: Descargar Zotero
+Este paso es el mismo que en la forma manual
 
-### Paso 1: Eliminar la versión anterior (opcional)
-Antes de instalar la nueva versión, puedes eliminar la versión actual si lo deseas. Sin embargo, si prefieres mantener tus datos (bibliografía y preferencias), no es necesario eliminarlo, ya que la información se guarda en tu carpeta de usuario.
+#### Paso 2: Extraer y mover a `/opt/`
+Este paso es el mismo que en la forma manual
 
-Para eliminar la instalación de Zotero de la versión anterior:
+#### Paso 3: Configurar el icono
+Ejecuta el script `set_launcher_icon` dentro del directorio de instalación:
 
 ```bash
-sudo rm -rf /opt/zotero
+cd /opt/zotero
+sudo ./set_launcher_icon
 ```
 
-### Paso 2: Descargar la nueva versión
-Ve a la página de descarga de Zotero (en este caso, usa el enlace directo para la última versión disponible):
+Esto actualizará el archivo `zotero.desktop` con la ruta correcta del icono.
+
+#### Paso 4: Crear acceso en el sistema
+Para que Zotero esté disponible en el menú de aplicaciones, mueve el archivo `zotero.desktop` a `/usr/share/applications/`:
 
 ```bash
-wget https://download.zotero.org/client/release/5.0.97.2/Zotero-5.0.97.2_linux-x86_64.tar.bz2
+sudo mv /opt/zotero/zotero.desktop /usr/share/applications/
 ```
 
-Nota: Asegúrate de comprobar que estás descargando la última versión (puedes visitar el [sitio oficial](https://www.zotero.org/download/) para ver si la versión ha cambiado).
+### **Ejecutar Zotero**
 
-### Paso 3: Extraer la nueva versión
-Una vez descargado el archivo, descomprímelo con:
-
-```bash
-tar -xvjf Zotero-5.0.97.2_linux-x86_64.tar.bz2
-```
-
-### Paso 4: Mover la nueva versión a la ubicación de instalación
-Mover la nueva carpeta extraída al directorio `/opt/zotero` (o donde lo prefieras):
-
-```bash
-sudo mv Zotero_linux-x86_64 /opt/zotero
-```
-
-### Paso 5: Verificar el acceso directo
-Tu acceso directo (el archivo `.desktop` que creamos en el tutorial anterior) no necesitaría modificación, ya que sigue apuntando a la misma ubicación de la instalación en `/opt/zotero/`. Solo asegúrate de que el acceso directo sigue funcionando.
-
-### Paso 6: Ejecutar Zotero
-Ahora puedes iniciar Zotero con:
+- Desde el menú de aplicaciones
+- Desde la terminal:
 
 ```bash
 /opt/zotero/zotero
 ```
 
-O bien, buscarlo en el menú de aplicaciones.
-
----
-
-### **2. Desinstalar Zotero en Debian 12**
-
-Para desinstalar Zotero, solo necesitas eliminar la carpeta donde se instaló, que es `/opt/zotero`, y el acceso directo si lo creaste.
-
-#### Paso 1: Eliminar la carpeta de Zotero
-
-Elimina la carpeta donde se encuentra Zotero, que por defecto es `/opt/zotero`:
+O si lo instalaste en tu carpeta de usuario:
 
 ```bash
-sudo rm -rf /opt/zotero
+~/AppsLinux/Zotero_linux-*/zotero
 ```
 
-#### Paso 2: Eliminar el acceso directo
+Ahora Zotero estará correctamente instalado y accesible desde tu sistema.
 
-Si creaste un acceso directo `.desktop` en el menú de aplicaciones, puedes eliminarlo también. El archivo de acceso directo se encuentra en `/usr/share/applications/`, por lo que puedes eliminarlo con:
+
+## **Actualizar Zotero**
+
+### **Actualizar Zotero sin elevación de permisos**
+
+1. Elimina la versión anterior (opcional, si prefieres conservar configuraciones y bibliografía, solo sobrescribe):
+
+   ```bash
+   rm -rf ~/AppsLinux/Zotero_linux-*
+   ```
+
+2. Descarga la nueva versión y extráela siguiendo los pasos de la instalación manual.
+3. Ejecuta `set_launcher_icon` nuevamente, manualmente o desde la terminal:
+
+   ```bash
+   cd ~/AppsLinux/Zotero_linux-*
+   ./set_launcher_icon
+   ```
+
+### **Actualizar Zotero con permisos de superusuario**
+
+1. Elimina la versión anterior:
+
+   ```bash
+   sudo rm -rf /opt/zotero
+   ```
+
+2. Descarga la nueva versión y extráela siguiendo los pasos de la instalación en `/opt/`.
+3. Ejecuta `set_launcher_icon` nuevamente:
+
+   ```bash
+   cd /opt/zotero
+   sudo ./set_launcher_icon
+   ```
+
+## **Desinstalar Zotero**
+
+### **Desinstalar Zotero sin elevación de permisos**
+
+Para eliminar Zotero instalado manualmente en tu carpeta de usuario:
 
 ```bash
-sudo rm /usr/share/applications/zotero.desktop
+rm -rf ~/AppsLinux/Zotero_linux-*
+rm ~/.local/share/applications/zotero.desktop
 ```
 
-Si también creaste un acceso directo en el escritorio, elimínalo de la carpeta `~/Escritorio/`:
-
-```bash
-rm ~/Escritorio/zotero.desktop
-```
-
-#### Paso 3: Borrar configuraciones (opcional)
-
-Si deseas eliminar también las configuraciones de Zotero y los datos de bibliografía (ten en cuenta que esto eliminará todos tus datos), puedes borrar la carpeta de configuración que se encuentra en tu directorio de usuario:
+Si deseas eliminar configuraciones y datos de usuario:
 
 ```bash
 rm -rf ~/.zotero
 ```
 
----
+### **Desinstalar Zotero con permisos de superusuario**
+
+Para eliminar Zotero instalado en `/opt/`:
+
+```bash
+sudo rm -rf /opt/zotero
+sudo rm /usr/share/applications/zotero.desktop
+```
+
+Si deseas eliminar configuraciones y datos de usuario:
+
+```bash
+rm -rf ~/.zotero
+```
+
+Ahora Zotero estará completamente eliminado de tu sistema.
+
 
 
 

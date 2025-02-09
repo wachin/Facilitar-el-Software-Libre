@@ -220,7 +220,7 @@ además la extensión se la puede mover de lugar en caso de que desee que esté 
 
 `Bloquear posición de barra de herramientas`
 
-
+y aparecerán tres puntitos verticales, darles clic y se puede mover la extensión.
 
 **Nota:** En LibreOffice con la Interfaz de Ribbon "Cinta" es posible no se integre bien, pero deben arreglarlo en cualquier momento.
 

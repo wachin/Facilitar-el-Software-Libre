@@ -276,6 +276,7 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
    - **Editor/Editorial**: (Como no tiene dejala vacía)
    - **Fecha de publicación**: "1810–1826"
    - **Páginas**: Génesis 25:26
+   - **Derechos**: Public Domain
 
 #### **En LibreOffice:**
 - Inserta la cita con Zotero. 
@@ -303,14 +304,6 @@ Para versículos bíblicos, lo más común es tratarlos como una fuente personal
 - Inserta la cita en el texto utilizando Zotero, para hacerlo dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
 - Configura el estilo de citación (como *Chicago* o *SBL* si usas estándares bíblicos).
 
-
----
-
-### 2. **Citando comentarios bíblicos (como Adam Clarke's Commentary)**  
-Los comentarios suelen citarse como libros o capítulos de libros.
-
-
-
 ---
 
 ### 3. **Estilos de citación recomendados**
@@ -320,7 +313,7 @@ Los comentarios suelen citarse como libros o capítulos de libros.
 ---
 
 ### 4. **Notas personalizadas (opcional)**
-Si necesitas incluir detalles específicos (como "public domain"), puedes añadirlos en el campo *Extra* de Zotero o directamente en el documento después de insertar la cita.
+Si necesitas incluir detalles específicos (como "public domain"), puedes añadirlos en el campo *Derechos* de Zotero o directamente en el documento después de insertar la cita.
 
 Por ejemplo:
 ```  

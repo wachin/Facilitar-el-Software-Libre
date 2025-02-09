@@ -230,15 +230,15 @@ Ahora, Zotero estará completamente integrado con LibreOffice, permitiéndote ge
 ## Desinstalar plugin de Zotero en LibreOffice
 Si alguna vez necesitas desinstalarlo, en LibreOffice:
 
-Herramientas > Gestor de extensiones
+`Herramientas > Gestor de extensiones`
 
 da clic en:
 
-Zotero LibreOffice Integration
+`Zotero LibreOffice Integration`
 
 y da clic en:
 
-Quitar
+`Quitar`
 
 y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 
@@ -248,21 +248,38 @@ y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 
 En e-Sword en el menú:
 
-Descargar > Comentarios
+`Descargar > Comentarios`
 
-Ejemplo: Adam Clarke, Adam Clarke's Commentary on the Bible
+Ejemplo he instalado el comentario: 
+
+**"Adam Clarke, Adam Clarke's Commentary on the Bible"**
 
 Luego de instalado, cerré e-Sword y lo volví a abrir y dí clic en e-Sword en la pestaña en el menú:
 
-Comentario > Información...
+`Comentario > Información...`
 
 y selecciono allí lo que me parece importante y lo pego aquí:
 
-Adam Clarke's Commentary on the Bible
-Adam Clarke, LL.D., F.S.A., (1715-1832)
-Published in 1810-1826; public domain.
+    Adam Clarke's Commentary on the Bible  
+    Adam Clarke, LL.D., F.S.A., (1715-1832)  
+    Published in 1810-1826; public domain.   
 
-En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Adam Clarke's Commentary on the Bible** en LibreOffice utilizando los campos personalizados de Zotero. Aquí hay un paso a paso:
+En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Adam Clarke's Commentary on the Bible** en LibreOffice utilizando los campos personalizados de Zotero:
+
+#### **En Zotero:**
+1. **Crear una entrada nueva**
+    Da clic en:
+    `Archivo > Nuevo Elemento > Sección de un libro`
+2. Completa los campos:
+   - **Título**: "Adam Clarke's Commentary on the Bible".
+   - **Autor**: "Clarke, Adam"
+   - **Editor/Editorial**: (Como no tiene dejala vacía)
+   - **Fecha de publicación**: "1810–1826"
+   - **Páginas**: Génesis 25:26
+
+#### **En LibreOffice:**
+- Inserta la cita con Zotero. 
+- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero).
 
 ---
 
@@ -282,28 +299,17 @@ Para versículos bíblicos, lo más común es tratarlos como una fuente personal
    - Usa el campo *Número de página* para especificar el libro, capítulo y versículo. Por ejemplo: *Juan 3:16*. 
 
 #### **En LibreOffice:**
-- Inserta la cita en el texto utilizando Zotero. Configura el estilo de citación (como *Chicago* o *SBL* si usas estándares bíblicos).
-- Ajusta manualmente para incluir abreviaciones específicas de la Biblia si no se generan automáticamente.
+- Por cierto, esto sólo funciona si uno guarda y usa el formato nativo de LibreOffice **"odt"**.
+- Inserta la cita en el texto utilizando Zotero, para hacerlo dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
+- Configura el estilo de citación (como *Chicago* o *SBL* si usas estándares bíblicos).
+
 
 ---
 
 ### 2. **Citando comentarios bíblicos (como Adam Clarke's Commentary)**  
 Los comentarios suelen citarse como libros o capítulos de libros.
 
-#### **En Zotero:**
-1. **Crear una entrada nueva**:
-   - Tipo: *Libro* o *Capítulo de libro* (si citas un comentario específico de un pasaje).
-2. Completa los campos:
-   - **Autor**: "Adam Clarke, LL.D., F.S.A."
-   - **Título**: "Adam Clarke's Commentary on the Bible".
-   - **Editor/Editorial**: Si es una edición específica, como *Abingdon Press*.
-   - **Fecha de publicación**: "1810–1826" o la edición específica que tengas.
-   - **Volumen**: Si aplicable, escribe el volumen que contiene el comentario del versículo.
-   - **Número de página**: Especifica la página donde está el comentario.
 
-#### **En LibreOffice:**
-- Inserta la cita con Zotero. 
-- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero).
 
 ---
 

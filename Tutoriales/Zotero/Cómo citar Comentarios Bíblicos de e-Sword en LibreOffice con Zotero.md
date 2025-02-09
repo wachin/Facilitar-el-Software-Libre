@@ -209,7 +209,20 @@ Si el complemento no aparece, revisa la sección de extensiones de LibreOffice:
 2. Busca `Zotero LibreOffice Integration` y verifica que esté activado.
 3. Si no aparece, intenta reinstalarlo desde Zotero siguiendo los pasos anteriores.
 
-**Nota:** Si usas LibreOffice con la Interfaz de Ribbon "Cinta" es posible no se integre bien, pero deben arreglarlo en cualquier momento.
+## **Paso 4: Verifica el tamaño de los iconos de LibreOffice
+En LibreOffice con la Interfaz de usuario normal (Barras de herramientas convencionales) siempre me gusta ponerle el tamaño de los inocos de LibreOffice de tamaño pequeño para que entre bien la extensión de Zotero, esto lo hago en:
+
+`Herramientas > Opciones > Ver`
+
+allí en "Tamaño de iconos" a todos les pongo `Pequeño` y clic en `Aplicar` y `Aceptar`
+
+además la extensión se la puede mover de lugar en caso de que desee que esté en otro lado, para hacerlo darle clic derecho y desmarcar:
+
+`Bloquear posición de barra de herramientas`
+
+
+
+**Nota:** En LibreOffice con la Interfaz de Ribbon "Cinta" es posible no se integre bien, pero deben arreglarlo en cualquier momento.
 
 Ahora, Zotero estará completamente integrado con LibreOffice, permitiéndote gestionar referencias de manera sencilla.
 

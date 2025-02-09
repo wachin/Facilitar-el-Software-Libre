@@ -62,7 +62,9 @@ luego si crea el enlace simbólico:
 ln -s ~/AppsLinux/Zotero_linux-*/zotero.desktop ~/.local/share/applications/
 ```
 
-Ahora Zotero estará disponible en el menú de aplicaciones y podrá ser lanzado desde allí.
+**Nota:** Debes verificar que los nombres de las carpetas son exactamente los mismos que aquí, de lo contrario se creará un archivo erroneo en "~/.local/share/applications/" y deberá borrarlo manualmente y corregir algún error para volver a intentarlo.
+
+Si todo lo hizo bien hora Zotero estará disponible en el menú de aplicaciones y podrá ser lanzado desde allí.
 
 ### **Forma 2: Instalación con elevación de permisos**
 

@@ -1,4 +1,4 @@
-# Como citar Comentarios Bíblicos de e-Sword en LibreOffice con Zotero
+# Cómo Instalar Zotero y con LibreOffice citar Comentarios Bíblicos de e-Sword
 Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zotero para insertarlos en LibreOffice, lo siguiente es lo que he hecho
 
 
@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y
 
 Esto actualizará todos los paquetes de tu sistema a la última versión disponible.
 
-### Paso 2: Verifica dependencias necesarias
+### Paso 2: Verifica dependencias necesarias de Zotero
 Zotero requiere algunas bibliotecas y dependencias para funcionar correctamente, deberían estar instaladas, pero con todo intentalo con el siguiente comando:
 
 ```bash
@@ -179,17 +179,7 @@ Si deseas eliminar también las configuraciones de Zotero y los datos de bibliog
 rm -rf ~/.zotero
 ```
 
-**¡Listo!** Ahora Zotero está completamente desinstalado de tu sistema.
-
 ---
-
-Si necesitas alguna aclaración o más detalles, no dudes en preguntar. ¡Estoy aquí para ayudarte!
-
-
-
-
-
-
 
 
 

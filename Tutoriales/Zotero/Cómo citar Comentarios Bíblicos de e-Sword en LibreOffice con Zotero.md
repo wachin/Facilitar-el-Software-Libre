@@ -187,7 +187,7 @@ Ahora Zotero estará completamente eliminado de tu sistema.
 
 Zotero ofrece un complemento para LibreOffice que permite gestionar citas y bibliografía de manera eficiente. Para instalarlo, sigue estos pasos:
 
-### **Paso 1: Abrir Zotero y acceder a la configuración**
+## **Paso 1: Abrir Zotero y acceder a la configuración**
 
 1. Abre Zotero.
 2. Dirígete al menú `Editar > Ajustes`.
@@ -195,11 +195,11 @@ Zotero ofrece un complemento para LibreOffice que permite gestionar citas y bibl
 4. En la parte inferior, localiza la sección `Procesador de texto`.
 5. Haz clic en el botón `Instalar complemento LibreOffice`.
 
-### **Paso 2: Seguir las instrucciones de instalación**
+## **Paso 2: Seguir las instrucciones de instalación**
 
 Aparecerá una ventana de instalación, sigue las instrucciones en pantalla.
 
-### **Paso 3: Reiniciar LibreOffice**
+## **Paso 3: Reiniciar LibreOffice**
 
 Antes de usar el complemento, cierra LibreOffice si estaba abierto y vuelve a iniciarlo. Ahora deberías ver la barra de herramientas de Zotero en LibreOffice.
 
@@ -209,20 +209,13 @@ Si el complemento no aparece, revisa la sección de extensiones de LibreOffice:
 2. Busca `Zotero LibreOffice Integration` y verifica que esté activado.
 3. Si no aparece, intenta reinstalarlo desde Zotero siguiendo los pasos anteriores.
 
+**Nota:** Si usas LibreOffice con la Interfaz de Ribbon "Cinta" es posible no se integre bien, pero deben arreglarlo en cualquier momento.
+
 Ahora, Zotero estará completamente integrado con LibreOffice, permitiéndote gestionar referencias de manera sencilla.
 
 
-
-
-
-
-
-
-
-
-
-### Wachi Paso 9: Desinstalar plugin de Zotero
-Si alguna vez necesitas desinstalarlo, primero desinstala el plugin de Zotero, en LibreOffice:
+## Desinstalar plugin de Zotero en LibreOffice
+Si alguna vez necesitas desinstalarlo, en LibreOffice:
 
 Herramientas > Gestor de extensiones
 
@@ -238,7 +231,7 @@ y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 
 ---
 
-
+# Cómo citar Comentarios Bíblicos de e-Sword en LibreOffice con Zotero
 
 En e-Sword en el menú:
 

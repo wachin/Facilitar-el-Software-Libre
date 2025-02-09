@@ -181,12 +181,47 @@ Ahora Zotero estará completamente eliminado de tu sistema.
 
 
 
+---
+
+# **Instalar el complemento de Zotero para LibreOffice**
+
+Zotero ofrece un complemento para LibreOffice que permite gestionar citas y bibliografía de manera eficiente. Para instalarlo, sigue estos pasos:
+
+### **Paso 1: Abrir Zotero y acceder a la configuración**
+
+1. Abre Zotero.
+2. Dirígete al menú `Editar > Ajustes`.
+3. Selecciona la pestaña `Citar`.
+4. En la parte inferior, localiza la sección `Procesador de texto`.
+5. Haz clic en el botón `Instalar complemento LibreOffice`.
+
+### **Paso 2: Seguir las instrucciones de instalación**
+
+Aparecerá una ventana de instalación, sigue las instrucciones en pantalla.
+
+### **Paso 3: Reiniciar LibreOffice**
+
+Antes de usar el complemento, cierra LibreOffice si estaba abierto y vuelve a iniciarlo. Ahora deberías ver la barra de herramientas de Zotero en LibreOffice.
+
+Si el complemento no aparece, revisa la sección de extensiones de LibreOffice:
+
+1. Abre LibreOffice y ve a `Herramientas > Gestor de extensiones`.
+2. Busca `Zotero LibreOffice Integration` y verifica que esté activado.
+3. Si no aparece, intenta reinstalarlo desde Zotero siguiendo los pasos anteriores.
+
+Ahora, Zotero estará completamente integrado con LibreOffice, permitiéndote gestionar referencias de manera sencilla.
 
 
 
 
 
-### Paso 9: Desinstalar
+
+
+
+
+
+
+### Wachi Paso 9: Desinstalar plugin de Zotero
 Si alguna vez necesitas desinstalarlo, primero desinstala el plugin de Zotero, en LibreOffice:
 
 Herramientas > Gestor de extensiones

@@ -1,4 +1,4 @@
-# Cómo Instalar Zotero y con LibreOffice citar Comentarios Bíblicos de e-Sword
+# Cómo Instalar Zotero y con LibreOffice citar Comentarios Bíblicos de e-Sword, y versículos
 Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zotero para insertarlos en LibreOffice, lo siguiente es lo que he hecho
 
 
@@ -162,6 +162,10 @@ Si deseas eliminar configuraciones y datos de usuario:
 rm -rf ~/.zotero
 ```
 
+y la carpeta en tu usuario:
+
+Zotero
+
 ### **Desinstalar Zotero con permisos de superusuario**
 
 Para eliminar Zotero instalado en `/opt/`:
@@ -176,6 +180,10 @@ Si deseas eliminar configuraciones y datos de usuario:
 ```bash
 rm -rf ~/.zotero
 ```
+
+y la carpeta en tu usuario:
+
+Zotero
 
 Ahora Zotero estará completamente eliminado de tu sistema.
 
@@ -244,9 +252,60 @@ y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 
 ---
 
+# Instalar el **Zotero Connector** en tu navegador y configurarlo para que funcione con **Google Docs**.
+Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft Edge) o Firefox
+
+---
+
+# **Paso 1: Instalar Zotero Connector en tu navegador**
+1. **Abre tu navegador** (Chrome, Edge, Firefox, etc.).
+2. **Visita la página de Zotero Connector**:
+   - Ve a [https://www.zotero.org/download/connectors](https://www.zotero.org/download/connectors).
+3. **Selecciona tu navegador**:
+   - Si usas **Chrome** o **Edge**, haz clic en el botón **"Install Chrome Connector"**.
+   - Si usas **Firefox**, haz clic en **"Install Firefox Connector"**.
+4. **Sigue las instrucciones**:
+   - Se te redirigirá a la tienda de extensiones de tu navegador (Chrome Web Store o Firefox Add-ons).
+   - Haz clic en **"Agregar"** o **"Instalar"** para agregar la extensión a tu navegador.
+
+---
+
+### **Paso 2: Conectar Zotero Connector con Zotero**
+1. **Abre Zotero** en tu sistema (asegúrate de que esté en ejecución).
+2. **Haz clic en el ícono de Zotero Connector** en la barra de herramientas de tu navegador (es un ícono que parece una hoja de papel).
+3. **Conecta Zotero Connector con Zotero**:
+   - Si es la primera vez que lo usas, Zotero Connector te pedirá que lo conectes con la aplicación Zotero.
+   - Sigue las instrucciones en pantalla para completar la conexión.
+
+---
+
+### **Paso 3: Configurar Zotero Connector en Google Docs**
+1. **Abre Google Docs**:
+   - Ve a [https://docs.google.com/](https://docs.google.com/) y abre un documento nuevo o existente.
+2. **Habilita la integración de Zotero**:
+   - En la barra de menú de Google Docs, haz clic en **"Extensiones"** > **"Zotero Connector"** > **"Add/Edit Bibliography"**.
+3. **Inserta citas o bibliografía**:
+   - Zotero Connector te permitirá buscar referencias desde tu biblioteca de Zotero y agregarlas directamente en tu documento de Google Docs.
+   - También puedes generar una bibliografía automáticamente.
+
+---
+
+### **Paso 4: Verificar la instalación**
+1. **Prueba la integración**:
+   - Abre un artículo o página web en tu navegador y haz clic en el ícono de Zotero Connector para guardar la referencia en tu biblioteca de Zotero.
+   - Luego, abre Google Docs y verifica que puedas insertar citas y bibliografías sin problemas.
+
+---
+
+### **Notas adicionales**
+- **Sincronización**: Si usas Zotero Sync, asegúrate de que tu biblioteca esté sincronizada para acceder a tus referencias desde cualquier dispositivo.
+- **LibreOffice**: Si también quieres usar Zotero con LibreOffice, asegúrate de que el complemento de Zotero esté instalado y activado en LibreOffice (esto ya lo tienes configurado según mencionaste).
+
+---
+
 # Cómo citar Comentarios Bíblicos de e-Sword en LibreOffice con Zotero
 
-En e-Sword en el menú:
+En `e-Sword` en el menú:
 
 `Descargar > Comentarios`
 
@@ -254,7 +313,7 @@ Ejemplo he instalado el comentario:
 
 **"Adam Clarke, Adam Clarke's Commentary on the Bible"**
 
-Luego de instalado, cerré e-Sword y lo volví a abrir y dí clic en e-Sword en la pestaña en el menú:
+Luego de instalado, cerré `e-Sword` y lo volví a abrir y dí clic en `e-Sword` en la pestaña en el menú:
 
 `Comentario > Información...`
 
@@ -264,9 +323,9 @@ y selecciono allí lo que me parece importante y lo pego aquí:
     Adam Clarke, LL.D., F.S.A., (1715-1832)  
     Published in 1810-1826; public domain.   
 
-En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Adam Clarke's Commentary on the Bible** en LibreOffice utilizando los campos personalizados de Zotero:
+En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Adam Clarke's Commentary on the Bible** en LibreOffice utilizando el campos personalizados de Zotero:
 
-#### **En Zotero:**
+## **En Zotero:**
 1. **Crear una entrada nueva**
     Da clic en:
     `Archivo > Nuevo Elemento > Sección de un libro`
@@ -278,16 +337,16 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
    - **Páginas**: Génesis 25:26
    - **Derechos**: Public Domain
 
-#### **En LibreOffice:**
-- Inserta la cita con Zotero. 
-- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero).
+## **En LibreOffice:**
+- Inserta la cita con Zotero, en el primer icono que al pasar el cursor dice: **"Add/Edit Citation"**  
+- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono Tuerca), yo lo he dejado en *Chicago Manual of Style (Full Note)*
 
 ---
 
-### 1. **Citando versículos bíblicos**  
-Para versículos bíblicos, lo más común es tratarlos como una fuente personalizada. Sigue estos pasos:
+# **Citando versículos bíblicos**   
+Para versículos bíblicos:
 
-#### **En Zotero:**
+## **En Zotero:**
 1. **Crear una entrada nueva**:
    - Tipo: *Libro* (para versiones de la Biblia) o *Manuscrito* (para notas específicas sobre un versículo).
 2. Completa los campos clave:
@@ -299,14 +358,14 @@ Para versículos bíblicos, lo más común es tratarlos como una fuente personal
 3. **Citar un versículo específico**:
    - Usa el campo *Número de página* para especificar el libro, capítulo y versículo. Por ejemplo: *Juan 3:16*. 
 
-#### **En LibreOffice:**
+## **En LibreOffice:**
 - Por cierto, esto sólo funciona si uno guarda y usa el formato nativo de LibreOffice **"odt"**.
 - Inserta la cita en el texto utilizando Zotero, para hacerlo dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
 - Configura el estilo de citación (como *Chicago* o *SBL* si usas estándares bíblicos).
 
 ---
 
-### 3. **Estilos de citación recomendados**
+# 3. **Estilos de citación recomendados**
 - Usa el estilo *Chicago Manual of Style (Full Note)* para notas completas. Este estilo permite manejar citaciones complejas como las de la Biblia.
 - Si trabajas con estudios bíblicos, utiliza el estilo *Society of Biblical Literature (SBL)*, que está diseñado específicamente para este tipo de textos.
 

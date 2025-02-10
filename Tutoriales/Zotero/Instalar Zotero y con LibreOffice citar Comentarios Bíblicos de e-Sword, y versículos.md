@@ -1,8 +1,10 @@
 # Cómo Instalar Zotero y con LibreOffice citar Comentarios Bíblicos de e-Sword, y versículos
-Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zotero para insertarlos en LibreOffice, lo siguiente es lo que he hecho
+Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zotero para insertarlos en LibreOffice (Ambos son multiplataforma, disponibles para Windows, MAC OS X, Linux), lo siguiente es lo que he hecho
 
 
-## Instalar Zotero en Debian, Ubuntu
+## Instalar Zotero en Debian
+
+Este tutorial lo hago en Debian 12 así que también debe servir para Linux basados en este como lo es Ubuntu y todos sus sabores y otros muchos. 
 
 Zotero es una herramienta excelente para la gestión de referencias bibliográficas y citas. A continuación, se presentan dos formas de instalación: una sin elevación de permisos y otra con permisos de superusuario.
 

@@ -6,7 +6,7 @@ Me he preguntado cómo poder citar Comentarios Bíblicos de e-Sword usando Zoter
 
 Zotero es una herramienta excelente para la gestión de referencias bibliográficas y citas. A continuación, se presentan dos formas de instalación: una sin elevación de permisos y otra con permisos de superusuario.
 
-### **Forma 1: Instalación manual sin elevación de permisos**
+### Forma 1: Instalación manual sin elevación de permisos
 
 En esta forma, instalaremos Zotero en una carpeta dentro del directorio del usuario sin necesidad de permisos de superusuario.
 
@@ -66,7 +66,7 @@ ln -s ~/AppsLinux/Zotero_linux-*/zotero.desktop ~/.local/share/applications/
 
 Si todo lo hizo bien hora Zotero estará disponible en el menú de aplicaciones y podrá ser lanzado desde allí.
 
-### **Forma 2: Instalación con elevación de permisos**
+### Forma 2: Instalación con elevación de permisos
 
 En esta forma, instalaremos Zotero en el directorio `/opt/` y configuraremos el acceso desde la línea de comandos.
 
@@ -93,10 +93,10 @@ Para que Zotero esté disponible en el menú de aplicaciones, mueve el archivo `
 sudo mv /opt/zotero/zotero.desktop /usr/share/applications/
 ```
 
-### **Ejecutar Zotero**
+### Ejecutar Zotero
 
 - Desde el menú de aplicaciones
-- Desde la terminal:
+- O tambén desde la terminal:
 
 ```bash
 /opt/zotero/zotero
@@ -111,9 +111,9 @@ O si lo instalaste en tu carpeta de usuario:
 Ahora Zotero estará correctamente instalado y accesible desde tu sistema.
 
 
-## **Actualizar Zotero**
+## Actualizar Zotero
 
-### **Actualizar Zotero sin elevación de permisos**
+### Actualizar Zotero sin elevación de permisos
 
 1. Elimina la versión anterior (opcional, si prefieres conservar configuraciones y bibliografía, solo sobrescribe):
 
@@ -129,7 +129,7 @@ Ahora Zotero estará correctamente instalado y accesible desde tu sistema.
    ./set_launcher_icon
    ```
 
-### **Actualizar Zotero con permisos de superusuario**
+### Actualizar Zotero con permisos de superusuario
 
 1. Elimina la versión anterior:
 
@@ -145,9 +145,9 @@ Ahora Zotero estará correctamente instalado y accesible desde tu sistema.
    sudo ./set_launcher_icon
    ```
 
-## **Desinstalar Zotero**
+## Desinstalar Zotero
 
-### **Desinstalar Zotero sin elevación de permisos**
+### Desinstalar Zotero sin elevación de permisos
 
 Para eliminar Zotero instalado manualmente en tu carpeta de usuario:
 
@@ -166,7 +166,7 @@ y la carpeta en tu usuario:
 
 Zotero
 
-### **Desinstalar Zotero con permisos de superusuario**
+### Desinstalar Zotero con permisos de superusuario
 
 Para eliminar Zotero instalado en `/opt/`:
 
@@ -187,15 +187,13 @@ Zotero
 
 Ahora Zotero estará completamente eliminado de tu sistema.
 
-
-
 ---
 
-# **Instalar el complemento de Zotero para LibreOffice**
+# Instalar el complemento de Zotero para LibreOffice
 
 Zotero ofrece un complemento para LibreOffice que permite gestionar citas y bibliografía de manera eficiente. Para instalarlo, sigue estos pasos:
 
-## **Paso 1: Abrir Zotero y acceder a la configuración**
+## Paso 1: Abrir Zotero y acceder a la configuración
 
 1. Abre Zotero.
 2. Dirígete al menú `Editar > Ajustes`.
@@ -203,11 +201,11 @@ Zotero ofrece un complemento para LibreOffice que permite gestionar citas y bibl
 4. En la parte inferior, localiza la sección `Procesador de texto`.
 5. Haz clic en el botón `Instalar complemento LibreOffice`.
 
-## **Paso 2: Seguir las instrucciones de instalación**
+## Paso 2: Seguir las instrucciones de instalación
 
 Aparecerá una ventana de instalación, sigue las instrucciones en pantalla.
 
-## **Paso 3: Reiniciar LibreOffice**
+## Paso 3: Reiniciar LibreOffice
 
 Antes de usar el complemento, cierra LibreOffice si estaba abierto y vuelve a iniciarlo. Ahora deberías ver la barra de herramientas de Zotero en LibreOffice.
 
@@ -217,7 +215,7 @@ Si el complemento no aparece, revisa la sección de extensiones de LibreOffice:
 2. Busca `Zotero LibreOffice Integration` y verifica que esté activado.
 3. Si no aparece, intenta reinstalarlo desde Zotero siguiendo los pasos anteriores.
 
-## **Paso 4: Verifica el tamaño de los iconos de LibreOffice
+## Paso 4: Verifica el tamaño de los iconos de LibreOffice
 En LibreOffice con la Interfaz de usuario normal (Barras de herramientas convencionales) siempre me gusta ponerle el tamaño de los inocos de LibreOffice de tamaño pequeño para que entre bien la extensión de Zotero, esto lo hago en:
 
 `Herramientas > Opciones > Ver`
@@ -252,7 +250,7 @@ y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 
 ---
 
-# Instalar el **Zotero Connector** en tu navegador y configurarlo para que funcione con **Google Docs**.
+# Instalar el "Zotero Connector" en tu navegador y configurarlo para que funcione con "Google Docs".
 Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft Edge, o Chromium mismo) o Firefox
 
 ---
@@ -270,7 +268,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-## **Paso 2: Conectar Zotero Connector con Zotero**
+## Paso 2: Conectar Zotero Connector con Zotero
 1. **Abre Zotero** en tu sistema (asegúrate de que esté en ejecución).
 2. **En el Navegador Web haz clic en el complemento del ícono de Zotero Connector** en la barra de herramientas de tu navegador, es un ícono que parece una hoja de papel, sino aparece ve las configuraciones de las extensiones y hazlo visible.
 3. **Conecta Zotero Connector con Zotero**:
@@ -279,7 +277,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-## **Paso 3: Configurar Zotero Connector en Google Docs**
+## Paso 3: Configurar Zotero Connector en Google Docs
 1. **Abre Google Docs**:
    - Ve a [https://docs.google.com/](https://docs.google.com/) y abre un documento nuevo o existente.
 2. **Habilita la integración de Zotero**:
@@ -290,14 +288,14 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-## **Paso 4: Verificar la instalación**
+## Paso 4: Verificar la instalación
 1. **Prueba la integración**:
    - Abre un artículo o página web en tu navegador y haz clic en el ícono de Zotero Connector para guardar la referencia en tu biblioteca de Zotero.
    - Luego, abre Google Docs y verifica que puedas insertar citas y bibliografías sin problemas.
 
 ---
 
-## **Notas adicionales**
+## Notas adicionales
 - **Sincronización**: Si usas Zotero Sync, asegúrate de que tu biblioteca esté sincronizada para acceder a tus referencias desde cualquier dispositivo.
 - **LibreOffice**: Si también quieres usar Zotero con LibreOffice, asegúrate de que el complemento de Zotero esté instalado y activado en LibreOffice (esto ya lo tienes configurado según mencionaste).
 
@@ -325,7 +323,7 @@ y selecciono allí lo que me parece importante y lo pego aquí:
 
 En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Adam Clarke's Commentary on the Bible** en LibreOffice utilizando el campos personalizados de Zotero:
 
-## **En Zotero:**
+## En Zotero:
 1. **Crea una nueva colección**
    - Da clic derecho a "**Mi Biblioteca**" y clic en "**Nueva Colección**" y ponle ejemplo el nombre: "**Comentarios Bíblicos**" y estando ubicado en él:
 2. **Crear Nuevo Elemento**
@@ -339,16 +337,16 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
    - **Páginas**: Génesis 25:26
    - **Derechos**: Public Domain
 
-## **En LibreOffice:**
+## En LibreOffice:
 - Inserta la cita con Zotero, en el primer icono que al pasar el cursor dice: **"Add/Edit Citation"** dale clic  
 - Verifica que el **formato del estilo** cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono **Tuerca** en el complemento de LibreOffice o en Zotero en `Editar > Ajustes > Citar`), yo lo he dejado en **Chicago Manual of Style (Full Note)** el cual deja en la misma hoja abajo más información de la cita, pero cada cita tendrá un número en exponente, ejemplo: **¹**, pero si prefiere que cada cita tenga el nombre del autor y la fecha use **Chicago Manual of Style (author-date)** con lo que quedará en cada cita ejemplo: **(Clarke 1810)**
 
 ---
 
-# **Citando versículos bíblicos**   
+# Citando versículos bíblicos   
 Citar versículos bíblicos en **Zotero** y luego insertarlos en **LibreOffice** es posible, pero requiere un poco de configuración, ya que Zotero no tiene un estilo de cita predefinido exclusivo para la Biblia. Sin embargo, puedes lograrlo así:
 
-## **En Zotero:**
+## En Zotero:
 1. **Crea una nueva colección**
    - Da clic derecho a "**Mi Biblioteca**" y clic en "**Nueva Colección**" y ponle ejemplo el nombre: "**Versículos Bíblicos**" y estando ubicado en él:
 2. **Crear Nuevo Elemento**
@@ -363,7 +361,7 @@ Citar versículos bíblicos en **Zotero** y luego insertarlos en **LibreOffice**
    - **Editorial**: "Sociedades Bíblicas Unidas".
    - **Derechos**: © 1960 Sociedades Bíblicas Unidas.
 
-## **En LibreOffice:**
+## En LibreOffice:
 - Asegúrate de usar el formato nativo de LibreOffice **"odt"**.
 - Inserta la cita en el texto utilizando la extensión o complemento Zotero, para hacerlo, en LibreOffice dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
 - Verifica que el **formato del estilo** como en el caso anterior.

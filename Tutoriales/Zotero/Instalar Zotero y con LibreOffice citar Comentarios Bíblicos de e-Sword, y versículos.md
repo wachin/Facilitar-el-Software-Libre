@@ -328,20 +328,20 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
 ## **En Zotero:**
 1. **Crea una nueva colección**
    - Da clic derecho a "**Mi Biblioteca**" y clic en "**Nueva Colección**" y ponle ejemplo el nombre: "**Comentarios Bíblicos**" y estando ubicado en él:
-1. **Crear Nuevo Elemento**
+2. **Crear Nuevo Elemento**
     Da clic en:
     `Archivo > Nuevo Elemento > Sección de un libro`
-2. Completa los campos:
+3. Completa los campos:
    - **Título**: "Adam Clarke's Commentary on the Bible".
    - **Autor**: "Clarke, Adam"
-   - **Editor/Editorial**: (Como no tiene dejala vacía)
+   - **Editorial**: (Como no tiene dejala vacía)
    - **Fecha de publicación**: "1810–1826"
    - **Páginas**: Génesis 25:26
    - **Derechos**: Public Domain
 
 ## **En LibreOffice:**
 - Inserta la cita con Zotero, en el primer icono que al pasar el cursor dice: **"Add/Edit Citation"**  
-- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono Tuerca en el complemento de LibreOffice o en Zotero en `Editar > Ajustes > Citar`), yo lo he dejado en **Chicago Manual of Style (Full Note)** el cual deja en la misma hoja abajo más información de la cita, pero cada cita tendrá un número en exponente, ejemplo: ¹, pero si prefiere que cada cita tenga el nombre del autor y la fecha use **Chicago Manual of Style (author-date)** con lo que quedará en cada cita ejemplo: (Clarke 1810)
+- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono Tuerca en el complemento de LibreOffice o en Zotero en `Editar > Ajustes > Citar`), yo lo he dejado en **Chicago Manual of Style (Full Note)** el cual deja en la misma hoja abajo más información de la cita, pero cada cita tendrá un número en exponente, ejemplo: **¹**, pero si prefiere que cada cita tenga el nombre del autor y la fecha use **Chicago Manual of Style (author-date)** con lo que quedará en cada cita ejemplo: **(Clarke 1810)**
 
 ---
 
@@ -349,31 +349,36 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
 Para versículos bíblicos:
 
 ## **En Zotero:**
-1. **Crear una entrada nueva**:
-   - Tipo: *Libro* (para versiones de la Biblia) o *Manuscrito* (para notas específicas sobre un versículo).
-2. Completa los campos clave:
-   - **Título**: Por ejemplo, "Santa Biblia, Reina-Valera 1960" o "Biblia NVI".
-   - **Autor**: Por ejemplo, "Dios" o "Varios autores" (según el formato que uses).
-   - **Fecha de publicación**: Año de publicación.
-   - **Editor/Editorial**: Nombre de la editorial, como "Sociedades Bíblicas Unidas".
-   - **Lugar de publicación**: Si lo sabes.
-3. **Citar un versículo específico**:
+1. **Crea una nueva colección**
+   - Da clic derecho a "**Mi Biblioteca**" y clic en "**Nueva Colección**" y ponle ejemplo el nombre: "**Versículos Bíblicos**" y estando ubicado en él:
+2. **Crear Nuevo Elemento**
+    Da clic en:
+    `Archivo > Nuevo Elemento > Libro`
+3. Completa los campos clave:
+   - **Título**: Juan 3:16.
+   - **Autor**: Da clic en el botón "Cambiar a campo único" y escribir "Reina-Valera 1960".
+   - **Lugar**: México
+   - **Fecha de publicación**: 1960.
+   - **ISBN**: Si lo tiene coloquelo.
+   - **Editorial**: "Sociedades Bíblicas Unidas".
+   - **Derechos**: © 1960 Sociedades Bíblicas Unidas.
+4. **Citar un versículo específico**:
    - Usa el campo *Número de página* para especificar el libro, capítulo y versículo. Por ejemplo: *Juan 3:16*. 
 
 ## **En LibreOffice:**
-- Por cierto, esto sólo funciona si uno guarda y usa el formato nativo de LibreOffice **"odt"**.
-- Inserta la cita en el texto utilizando Zotero, para hacerlo dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
-- Configura el estilo de citación (como *Chicago* o *SBL* si usas estándares bíblicos).
+- Asegúrate de usar el formato nativo de LibreOffice **"odt"**.
+- Inserta la cita en el texto utilizando la extensión o complemento Zotero, para hacerlo, en LibreOffice dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
+- Configura el estilo de citación, como *Chicago*
 
 ---
 
-# 3. **Estilos de citación recomendados**
+## **Estilos de citación recomendados**
 - Usa el estilo *Chicago Manual of Style (Full Note)* para notas completas. Este estilo permite manejar citaciones complejas como las de la Biblia.
 - Si trabajas con estudios bíblicos, utiliza el estilo *Society of Biblical Literature (SBL)*, que está diseñado específicamente para este tipo de textos.
 
 ---
 
-### 4. **Notas personalizadas (opcional)**
+## 4. **Notas personalizadas (opcional)**
 Si necesitas incluir detalles específicos (como "public domain"), puedes añadirlos en el campo *Derechos* de Zotero o directamente en el documento después de insertar la cita.
 
 Por ejemplo:

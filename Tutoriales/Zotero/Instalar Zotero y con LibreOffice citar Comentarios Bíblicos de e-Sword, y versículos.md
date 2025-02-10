@@ -253,12 +253,12 @@ y aparecerá un mensaje que te pregunta por si deseas reiniciar, pon que si.
 ---
 
 # Instalar el **Zotero Connector** en tu navegador y configurarlo para que funcione con **Google Docs**.
-Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft Edge) o Firefox
+Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft Edge, o Chromium mismo) o Firefox
 
 ---
 
 # **Paso 1: Instalar Zotero Connector en tu navegador**
-1. **Abre tu navegador** (Chrome, Edge, Firefox, etc.).
+1. **Abre tu navegador** (Chrome, Edge, Firefox, Chromium, etc.).
 2. **Visita la página de Zotero Connector**:
    - Ve a [https://www.zotero.org/download/connectors](https://www.zotero.org/download/connectors).
 3. **Selecciona tu navegador**:
@@ -272,7 +272,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ### **Paso 2: Conectar Zotero Connector con Zotero**
 1. **Abre Zotero** en tu sistema (asegúrate de que esté en ejecución).
-2. **Haz clic en el ícono de Zotero Connector** en la barra de herramientas de tu navegador (es un ícono que parece una hoja de papel).
+2. **En el Navegador Web haz clic en el complemento del ícono de Zotero Connector** en la barra de herramientas de tu navegador, es un ícono que parece una hoja de papel, sino aparece ve las configuraciones de las extensiones y hazlo visible.
 3. **Conecta Zotero Connector con Zotero**:
    - Si es la primera vez que lo usas, Zotero Connector te pedirá que lo conectes con la aplicación Zotero.
    - Sigue las instrucciones en pantalla para completar la conexión.
@@ -283,7 +283,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 1. **Abre Google Docs**:
    - Ve a [https://docs.google.com/](https://docs.google.com/) y abre un documento nuevo o existente.
 2. **Habilita la integración de Zotero**:
-   - En la barra de menú de Google Docs, haz clic en **"Extensiones"** > **"Zotero Connector"** > **"Add/Edit Bibliography"**.
+   - En la barra de menú de Google Docs, haz clic en  **"Zotero"** > **"Add/Edit Bibliography"** y se abrirá una ventana preguntadote para conectarse con una cuenta, yo elegí una de Google mía.
 3. **Inserta citas o bibliografía**:
    - Zotero Connector te permitirá buscar referencias desde tu biblioteca de Zotero y agregarlas directamente en tu documento de Google Docs.
    - También puedes generar una bibliografía automáticamente.

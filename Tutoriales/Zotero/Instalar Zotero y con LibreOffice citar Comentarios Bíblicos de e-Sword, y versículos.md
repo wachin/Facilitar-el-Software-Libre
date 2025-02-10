@@ -257,7 +257,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-# **Paso 1: Instalar Zotero Connector en tu navegador**
+# Instalar Zotero Connector en tu navegador
 1. **Abre tu navegador** (Chrome, Edge, Firefox, Chromium, etc.).
 2. **Visita la página de Zotero Connector**:
    - Ve a [https://www.zotero.org/download/connectors](https://www.zotero.org/download/connectors).
@@ -270,7 +270,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-### **Paso 2: Conectar Zotero Connector con Zotero**
+## **Paso 2: Conectar Zotero Connector con Zotero**
 1. **Abre Zotero** en tu sistema (asegúrate de que esté en ejecución).
 2. **En el Navegador Web haz clic en el complemento del ícono de Zotero Connector** en la barra de herramientas de tu navegador, es un ícono que parece una hoja de papel, sino aparece ve las configuraciones de las extensiones y hazlo visible.
 3. **Conecta Zotero Connector con Zotero**:
@@ -279,7 +279,7 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-### **Paso 3: Configurar Zotero Connector en Google Docs**
+## **Paso 3: Configurar Zotero Connector en Google Docs**
 1. **Abre Google Docs**:
    - Ve a [https://docs.google.com/](https://docs.google.com/) y abre un documento nuevo o existente.
 2. **Habilita la integración de Zotero**:
@@ -290,14 +290,14 @@ Esto es para Navegadores Web basados en Chromium (como Google Chrome o Microsoft
 
 ---
 
-### **Paso 4: Verificar la instalación**
+## **Paso 4: Verificar la instalación**
 1. **Prueba la integración**:
    - Abre un artículo o página web en tu navegador y haz clic en el ícono de Zotero Connector para guardar la referencia en tu biblioteca de Zotero.
    - Luego, abre Google Docs y verifica que puedas insertar citas y bibliografías sin problemas.
 
 ---
 
-### **Notas adicionales**
+## **Notas adicionales**
 - **Sincronización**: Si usas Zotero Sync, asegúrate de que tu biblioteca esté sincronizada para acceder a tus referencias desde cualquier dispositivo.
 - **LibreOffice**: Si también quieres usar Zotero con LibreOffice, asegúrate de que el complemento de Zotero esté instalado y activado en LibreOffice (esto ya lo tienes configurado según mencionaste).
 
@@ -340,13 +340,13 @@ En Zotero, puedes citar versículos bíblicos y comentarios bíblicos como **Ada
    - **Derechos**: Public Domain
 
 ## **En LibreOffice:**
-- Inserta la cita con Zotero, en el primer icono que al pasar el cursor dice: **"Add/Edit Citation"**  
-- Verifica que el formato cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono Tuerca en el complemento de LibreOffice o en Zotero en `Editar > Ajustes > Citar`), yo lo he dejado en **Chicago Manual of Style (Full Note)** el cual deja en la misma hoja abajo más información de la cita, pero cada cita tendrá un número en exponente, ejemplo: **¹**, pero si prefiere que cada cita tenga el nombre del autor y la fecha use **Chicago Manual of Style (author-date)** con lo que quedará en cada cita ejemplo: **(Clarke 1810)**
+- Inserta la cita con Zotero, en el primer icono que al pasar el cursor dice: **"Add/Edit Citation"** dale clic  
+- Verifica que el **formato del estilo** cumple con tus necesidades (puedes personalizarlo en las preferencias de Zotero en el icono **Tuerca** en el complemento de LibreOffice o en Zotero en `Editar > Ajustes > Citar`), yo lo he dejado en **Chicago Manual of Style (Full Note)** el cual deja en la misma hoja abajo más información de la cita, pero cada cita tendrá un número en exponente, ejemplo: **¹**, pero si prefiere que cada cita tenga el nombre del autor y la fecha use **Chicago Manual of Style (author-date)** con lo que quedará en cada cita ejemplo: **(Clarke 1810)**
 
 ---
 
 # **Citando versículos bíblicos**   
-Para versículos bíblicos:
+Citar versículos bíblicos en **Zotero** y luego insertarlos en **LibreOffice** es posible, pero requiere un poco de configuración, ya que Zotero no tiene un estilo de cita predefinido exclusivo para la Biblia. Sin embargo, puedes lograrlo así:
 
 ## **En Zotero:**
 1. **Crea una nueva colección**
@@ -356,106 +356,27 @@ Para versículos bíblicos:
     `Archivo > Nuevo Elemento > Libro`
 3. Completa los campos clave:
    - **Título**: Juan 3:16.
-   - **Autor**: Da clic en el botón "Cambiar a campo único" y escribir "Reina-Valera 1960".
+   - **Autor**: Da clic en el botón "Cambiar a campo único" y escribir ejemplo: "Reina-Valera 1960".
    - **Lugar**: México
    - **Fecha de publicación**: 1960.
    - **ISBN**: Si lo tiene coloquelo.
    - **Editorial**: "Sociedades Bíblicas Unidas".
    - **Derechos**: © 1960 Sociedades Bíblicas Unidas.
-4. **Citar un versículo específico**:
-   - Usa el campo *Número de página* para especificar el libro, capítulo y versículo. Por ejemplo: *Juan 3:16*. 
 
 ## **En LibreOffice:**
 - Asegúrate de usar el formato nativo de LibreOffice **"odt"**.
 - Inserta la cita en el texto utilizando la extensión o complemento Zotero, para hacerlo, en LibreOffice dale clic al icono que al pasar el cursor dice: **"Add/Edit Citation"**. 
-- Configura el estilo de citación, como *Chicago*
+- Verifica que el **formato del estilo** como en el caso anterior.
 
 ---
 
-## **Estilos de citación recomendados**
-- Usa el estilo *Chicago Manual of Style (Full Note)* para notas completas. Este estilo permite manejar citaciones complejas como las de la Biblia.
-- Si trabajas con estudios bíblicos, utiliza el estilo *Society of Biblical Literature (SBL)*, que está diseñado específicamente para este tipo de textos.
-
----
-
-## 4. **Notas personalizadas (opcional)**
-Si necesitas incluir detalles específicos (como "public domain"), puedes añadirlos en el campo *Derechos* de Zotero o directamente en el documento después de insertar la cita.
-
-Por ejemplo:
-```  
-Adam Clarke, *Adam Clarke's Commentary on the Bible*, vol. 1 (1810–1826), comentario sobre Juan 3:16.
-``` 
-
-
-
-
-
-
-
-Citar versículos bíblicos en **Zotero** y luego insertarlos en **LibreOffice** es posible, pero requiere un poco de configuración, ya que Zotero no tiene un estilo de cita predefinido exclusivo para la Biblia. Sin embargo, puedes lograrlo utilizando un estilo de cita personalizado o adaptando uno existente. Aquí te explico cómo hacerlo paso a paso:
-
----
-
-### **Paso 1: Agregar la Biblia como fuente en Zotero**
-1. **Abre Zotero**.
-2. **Crea una nueva entrada manual**:
-   - Haz clic en el botón verde **"Nuevo elemento"** en la barra de herramientas y selecciona **"Libro"** (o **"Manuscrito"**).
-3. **Completa los detalles**:
-   - En el panel derecho, completa los campos con la información de la Biblia que estás utilizando. Por ejemplo:
-     - **Título**: "La Santa Biblia".
-     - **Autor**: Deja este campo en blanco o escribe "Varios autores".
-     - **Editorial**: Coloca la editorial (por ejemplo, "Sociedades Bíblicas Unidas").
-     - **Año**: Año de publicación.
-     - **ISBN**: Si lo tienes, agrégalo.
-   - Si estás citando una versión específica de la Biblia (por ejemplo, Reina-Valera 1960), asegúrate de incluir esa información en el campo **"Edición"**.
-
----
-
-### **Paso 2: Citar versículos específicos**
-1. **Abre LibreOffice** y asegúrate de que el complemento de Zotero esté activado.
-2. **Inserta una cita**:
-   - Coloca el cursor en el lugar donde deseas insertar el versículo.
-   - Ve a **"Complementos"** > **"Zotero"** > **"Insertar cita"**.
-   - Busca la entrada de la Biblia que creaste en Zotero y selecciónala.
-3. **Agrega el versículo manualmente**:
-   - Después de insertar la cita, edita la referencia en LibreOffice para agregar el versículo específico. Por ejemplo:
-     - Si citas Juan 3:16, la cita podría quedar así: `(La Santa Biblia, Juan 3:16)`.
-
----
-
-### **Paso 3: Usar un estilo de cita personalizado (opcional)**
-Si deseas un formato específico para citas bíblicas, puedes crear o modificar un estilo de cita en Zotero:
-1. **Ve al editor de estilos de Zotero**:
-   - Abre el [Editor de estilos de Zotero](https://www.zotero.org/styles).
-   - Busca un estilo que se acerque a lo que necesitas (por ejemplo, "Chicago Manual of Style" o "APA").
-   - Descárgalo y ábrelo en el editor de estilos de Zotero.
-2. **Personaliza el estilo**:
-   - Agrega un nuevo tipo de elemento llamado **"Libro de la Biblia"**.
-   - Define cómo deseas que se muestren las citas bíblicas. Por ejemplo:
-     - Formato corto: `(Libro Capítulo:Versículo)`.
-     - Formato largo: `(Libro Capítulo:Versículo, Año)`.
-3. **Guarda y usa el estilo**:
-   - Guarda el estilo personalizado y selecciónalo en Zotero como tu estilo predeterminado.
-
----
-
-### **Paso 4: Insertar la bibliografía**
-1. **Inserta la bibliografía en LibreOffice**:
-   - Ve a **"Complementos"** > **"Zotero"** > **"Insertar bibliografía"**.
+# Insertar la bibliografía
+1. Debes tener ya completado bastante del documento y dar clic en LibreOffic en en el complemento Zotero en icono que al pasar el cursor dice: **Add/Edit Bibliography**
+1. Espera y se insertará, además si necesitas actualizar la Bibliografía da clic en el botón "**Refresh**"
    - Esto generará una lista de todas las fuentes citadas, incluyendo la Biblia.
 
 ---
 
-### **Ejemplo práctico**
-Supongamos que estás citando Juan 3:16 de la Reina-Valera 1960:
-1. En Zotero, creas una entrada para la Biblia con los detalles mencionados.
-2. En LibreOffice, insertas la cita y la editas manualmente para que quede así: `(Reina-Valera 1960, Juan 3:16)`.
-3. Si usas un estilo personalizado, la cita podría generarse automáticamente en el formato que definiste.
+Si encuentras que en esta entrada hay algún error, escríbelo en los comentarios para arreglarlo
 
----
-
-### **Notas adicionales**
-- Si citas la Biblia con frecuencia, considera crear una plantilla en Zotero para agilizar el proceso.
-- Asegúrate de que el estilo de cita que uses sea consistente con las normas de tu trabajo (APA, Chicago, MLA, etc.).
-
-Si necesitas más ayuda o tienes dudas sobre cómo personalizar el estilo de cita, ¡avísame! 😊
+Dios te bendiga

@@ -86,7 +86,7 @@ Este es un punto de partida; puedes ajustar el CSS y los parámetros según el e
 
 
 
-Aquí te dejo un archivo `styles.css` mejorado, diseñado para un blog de tecnología moderna, con énfasis en la presentación de código y notas de manera atractiva:
+archivo `styles.css` mejorado, diseñado para un blog de tecnología moderna, con énfasis en la presentación de código y notas de manera atractiva:
 
 ```css
 /* General Styles */

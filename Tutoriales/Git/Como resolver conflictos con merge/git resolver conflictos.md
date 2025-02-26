@@ -73,3 +73,25 @@ git commit
 ```
 
 Siguiendo estos pasos, deberías poder verificar y fusionar los cambios del repositorio remoto en tu rama local sin problemas.
+
+Si alguna vez se daña un repositorio y te sale algún mensaje como este:
+
+```bash
+wachin@mx23KDE:~/Dev/wa21
+$ git status
+fatal: objeto suelto 692e0a3c4b6e4a93f23e0df85333416686ffc6ce (guardado en .git/objects/69/2e0a3c4b6e4a93f23e0df85333416686ffc6ce) está corrompido
+```
+
+lo que hago yo es dejarlo allí como está, y descargar el repositorio otra vez pero en otra carpeta:
+
+```bash
+git clone https://github.com/wachin/wi21
+```
+y luego abrir meld (hay que tenerlo instalado) y comparar las dos carpetas y copiar los cambios que no pude enviar del repositorio dañado y sincronizarlos, y cuando esté, borrar el repositorio dañado.
+
+
+
+
+
+
+

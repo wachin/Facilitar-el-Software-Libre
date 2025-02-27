@@ -16,7 +16,13 @@ Obtén los cambios más recientes del repositorio remoto sin aplicarlos todavía
 git fetch origin
 ```
 
-## 3. Verificar las diferencias
+Si solo tienes una rama pon:
+
+```bash
+git fetch
+```
+
+## 3. Verificar las diferencias (opcional)
 Para ver las diferencias entre tu rama local y la rama remota, puedes usar `git diff`. Asumiendo que estás en la rama `main`:
 
 ```bash
@@ -39,27 +45,13 @@ Si estás listo para fusionar los cambios del repositorio remoto en tu rama loca
 ```bash
 git merge origin/main
 ```
-
-## Ejemplo Completo
-A continuación, un ejemplo completo de todos los pasos juntos:
+Si solo tienes una rama pon:
 
 ```bash
-# Clonar el repositorio (si no lo has hecho)
-git clone https://github.com/wachin/RisenPC-Fluxbox-ES
-cd RisenPC-Fluxbox-ES
-
-# Hacer fetch para obtener los cambios más recientes
-git fetch origin
-
-# Verificar las diferencias entre tu rama local y la rama remota
-git diff main origin/main
-
-# Fusionar los cambios de la rama remota en tu rama local
-git merge origin/main
-
-# Verificar el estado de tu repositorio
-git status
+git merge
 ```
+
+---
 
 ## Resolver Conflictos (si los hay)
 Si hay conflictos durante el merge, Git te avisará y tendrás que resolverlos manualmente. Abre los archivos con conflictos, realiza los cambios necesarios y luego marca los archivos como resueltos:
@@ -89,7 +81,7 @@ lo que hago yo es dejarlo allí como está, y descargar el repositorio otra vez 
 ```bash
 git clone https://github.com/wachin/mirepo
 ```
-y luego abrir meld (hay que tenerlo instalado) y comparar las dos carpetas y copiar los cambios que no pudes enviar (git push) del repositorio dañado al repositorio bueno, y en el repositorio bueno has git add . git commit git push para sincronizarlos, y cuando esté listo, borrar el repositorio dañado.
+y luego abrir meld (hay que tenerlo instalado) y comparar las dos carpetas del repositorio y copiar los cambios que no pudes enviar (git push) del repositorio dañado al repositorio bueno, y en el repositorio bueno has git add . git commit git push para sincronizarlos, y cuando esté listo, borrar el repositorio dañado.
 
 # Cómo evitar problemas futuros en los repositorios
 
@@ -111,11 +103,7 @@ abrelo y dale clic a la partición de tu ordenador y luego clic en la tuerca y b
 ---
 
 ## **2. Asegúrate de cerrar correctamente Git antes de apagar el sistema** 🖥️  
-Si apagas la PC mientras Git está ejecutando operaciones (como `commit`, `pull`, `push`, `gc`, etc.), el repositorio puede quedar en un estado inconsistente. Antes de apagar, asegúrate de que no haya procesos de Git activos con:  
-```sh
-ps aux | grep git
-```
-Si hay procesos activos, espera a que terminen o ciérralos de manera segura.
+Si apagas la PC mientras Git está ejecutando operaciones (como `commit`, `pull`, `push`, `gc`, etc.), el repositorio puede quedar en un estado inconsistente. Antes de apagar, asegúrate de que no haya procesos de Git activos, revisa la terminal.
 
 ---
 
@@ -176,7 +164,7 @@ En mi caso como ya había archivos corruptos, lo ideal era empezar con `git fsck
 
 ---
 
-### Ejemplo de limpieza
+**Ejemplo de limpieza**
 lo siguiente es un ejemplo de lo que sal en la terminal:
 
 **1. `git gc --prune=now`**
@@ -195,8 +183,6 @@ Total 1989 (delta 342), reusados 1971 (delta 332), pack-reusados 0
 - **"Pack-reusados 0"** → No había paquetes de objetos antiguos que se pudieran reutilizar.  
 
 📌 **Conclusión:** Tu repositorio se compactó correctamente y no hay objetos innecesarios.
-
----
 
 **2. `git fsck --full`**
 ```sh

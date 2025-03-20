@@ -218,9 +218,32 @@ Puedes crear un archivo comprimido con el contenido del repositorio regularmente
 O, si usas otra cuenta ejemplo GitLab, puedesimportar tu repositorio para también tenerlo allí
 
 
+# Cómo revertir git add .
 
+Si agregaste archivos al área de staging con `git add .` y quieres revertir la acción antes de hacer un commit, usa el siguiente comando:  
 
+```sh
+git reset
+```
 
+### Explicación:
+- `git reset` sin argumentos deshace `git add` y devuelve los archivos al estado "unstaged", pero mantiene los cambios en tu directorio de trabajo.
+
+Si solo quieres quitar un archivo específico del área de staging:
+```sh
+git reset nombre-del-archivo
+```
+
+Si también quieres descartar los cambios en los archivos (volver a la última versión confirmada):
+```sh
+git checkout -- nombre-del-archivo
+```
+
+Si ya hiciste commit pero quieres deshacerlo:
+```sh
+git reset --soft HEAD~1
+```
+Esto mantiene los cambios en staging pero deshace el último commit.
 
 
 

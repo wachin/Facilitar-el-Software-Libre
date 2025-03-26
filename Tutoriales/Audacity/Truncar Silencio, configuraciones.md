@@ -5,14 +5,24 @@
 
 Truncar silencio, por defecto
 
+Efecto:
 
-Detectar silencio
+Truncar Silencio
+
+
+**Detectar silencio**
 Umbral: -35 db
 Duración: 0,5 segundos
 
-Acción
+**Acción**
 
 Truncar silencio detectado
+
+
+
+
+
+
 
 Truncar a: 0,5 segundos
 

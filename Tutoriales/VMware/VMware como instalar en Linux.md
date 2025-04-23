@@ -1,4 +1,3 @@
-
 # Pasos para instalar el archivo .bundle
 La siguiente es una guía paso a paso para completar la instalación:
 
@@ -40,6 +39,7 @@ sudo ./VMware-Workstation-Full-17.6.3-24583834.x86_64.bundle
 
 Esto iniciará el proceso de instalación. Durante la instalación, se te pedirá que aceptes el acuerdo de licencia y configures algunas opciones básicas.
 
+
 ### **5. Completa la configuración**
 Después de la instalación, podrás iniciar VMware Workstation desde el menú de aplicaciones o ejecutándolo directamente desde la terminal:
 
@@ -57,4 +57,3 @@ Si encuentras algún problema durante la instalación o ejecución, aquí hay al
 - **Actualiza el kernel**: Si estás usando un kernel personalizado o muy reciente, es posible que VMware no sea compatible directamente. En ese caso, intenta actualizar VMware a la última versión o usa un kernel más estable.
 
 - **Reinstala las herramientas de compilación**: Si los módulos del kernel no se compilan, asegúrate de tener las herramientas de desarrollo adecuadas instaladas.
-

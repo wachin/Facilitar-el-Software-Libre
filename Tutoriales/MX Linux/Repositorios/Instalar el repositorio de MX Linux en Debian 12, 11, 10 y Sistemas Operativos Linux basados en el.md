@@ -1,27 +1,25 @@
 Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, ejemplo (puede ser cualquier otro, como Debian mismo):
 
-
-**Q4OS**  
-  
-En la siguiente imagen el repositorio de MX Linux 21 añadido en Synaptic en [Q4OS versión 4](https://q4os.org/downloads3.html):
+La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s16000-rw/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
-
-Lo siguiente yo lo voy a hacer en Q4OS que tiene como base a Debian, así que si alguno de ustedes necesita añadir los repositorios de MX Linux a alguna distribución con base Debian bien puede usar este tutorial
 
 ### Qué se puede instalar desde este repositorio?
 
 En los repositorios de MX Linux hay software muy importante como ejemplo:  
   
+**Para Dolphin Administrador de archivos:**
 kde-servicemenu-extract-and-compress  
 kde-servicemenu-checkhash-installdebs  
 kde-servicemenu-rootactions  
 kde-servicemenu-kim5  
-ksnip (versiones actualizadas)
+
+**Herramientas**
+ksnip (version actualizada desde el Repositorio de Pruebas "Test")
 
 Avidemux
 
-yt-dlp (versión actualizada)  
+yt-dlp (version actualizada desde el Repositorio de Pruebas "Test")
 
 telegram-desktop = Telegram (32 y 64 bit)
 
@@ -63,7 +61,14 @@ sudo nano /etc/apt/sources.list.d/mx.list
 
 **El repositorio de MX Linux para Debian 12:** 
 
-    MX Community Main and Test Reposdeb http://mxrepo.com/mx/repo/deb http://mxrepo.com/mx/repo/ bookworm main non-free#deb http://mxrepo.com/mx/repo/ bookworm test#ahs hardware stack repo#deb http://mxrepo.com/mx/repo/ bookworm ahs 
+MX Community Main and Test Repos
+    
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs 
 
  4.) **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. ─ `nano` te pedirá confirmación para el nombre del archivo, presiona `Enter` para confirmar la escritura en el archivo mx.list.
 
@@ -114,9 +119,6 @@ Los comandos en `nano` se ejecutan usando la tecla `Ctrl` (Control) en combinaci
 Si necesita ayuda adicional mientras usas `nano`, puedes presionar `Ctrl + G` para abrir el menú de ayuda, y usa Ctrl + X dos veces para salir.
 
   
-
-  
-
 6.) **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
 
 sudo apt update
@@ -135,7 +137,14 @@ Debian 10
 
 Copie las siguientes líneas:
 
-    # MX Community Main and Test Reposdeb http://mxrepo.com/mx/repo/ bookworm main non-free#deb http://mxrepo.com/mx/repo/ bookworm test#ahs hardware stack repo#deb http://mxrepo.com/mx/repo/ bookworm ahs 
+#MX Community Main and Test Repos
+
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs 
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -157,8 +166,6 @@ e instálelo, puede ser con dpkg desde la terminal, ejemplo para este archivo se
 
 sudo dpkg -i mx23-archive-keyring\_\*.\*.deb
 
-  
-
 Este comando se descompone en varias partes:
 
 1.  **`sudo`**: Ejecuta el comando con privilegios de superusuario (root). Esto es necesario porque instalar paquetes en el sistema requiere permisos de administrador.
@@ -167,14 +174,9 @@ Este comando se descompone en varias partes:
     
 3.  **`mx23-archive-keyring_*.*.deb`**: Especifica el paquete que deseas instalar. En este caso, es un archivo `.deb` que contiene el keyring (anillo de claves) para los repositorios de MX Linux 23. El uso del comodín `*.*` permite coincidir con cualquier versión del paquete, es decir, no importa cuál sea el número de versión, siempre que comience con `mx23-archive-keyring`.
     
-
 En conjunto, el comando instala el paquete `mx23-archive-keyring` que contiene las claves públicas necesarias para verificar la autenticidad de los paquetes del repositorio de MX Linux 23. Estas claves son importantes para asegurar que los paquetes instalados desde los repositorios no han sido manipulados y provienen de una fuente confiable.
 
-  
-
 Recargue los repositorios le recomiendo desde Synaptic:
-
-  
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s16000-rw/20240719-083406%20synaptic%20Recarga%20repos.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s860/20240719-083406%20synaptic%20Recarga%20repos.png)
 
@@ -184,11 +186,16 @@ e instale el programa que necesite:
 
 ### Para Debian 11 bullseye: MX Linux 21 Repo
 
-Ejemplo Q4OS 4 Gemini tiene como base a Debian 11 Bullseye
-
 Copie las siguientes líneas:
 
-    # MX Community Main and Test Reposdeb http://mxrepo.com/mx/repo/ bullseye main non-free#deb http://mxrepo.com/mx/repo/ bullseye test#ahs hardware stack repo#deb http://mxrepo.com/mx/repo/ bullseye ahs 
+#MX Community Main and Test Repos
+
+deb http://mxrepo.com/mx/repo/ bullseye main non-free
+
+#deb http://mxrepo.com/mx/repo/ bullseye test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bullseye ahs 
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 

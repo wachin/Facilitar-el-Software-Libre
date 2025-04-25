@@ -10,22 +10,22 @@ La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión
 En los repositorios de MX Linux hay software muy importante como ejemplo:  
   
 **Extensiones para  Dolphin Administrador de archivos:**
-kde-servicemenu-extract-and-compress  
-kde-servicemenu-checkhash-installdebs  
-kde-servicemenu-rootactions  
-kde-servicemenu-kim5  
+
+- kde-servicemenu-extract-and-compress  
+- kde-servicemenu-checkhash-installdebs  
+- kde-servicemenu-rootactions  
+- kde-servicemenu-kim5  
 
 **Herramientas**
-ksnip (version actualizada desde el Repositorio de Pruebas "Test")
 
-Avidemux
-
-yt-dlp (version actualizada desde el Repositorio de Pruebas "Test")
-
-telegram-desktop = Telegram (32 y 64 bit)
-
-VirtualBox  
-etc  
+- **ksnip:** (version actualizada desde el Repositorio de Pruebas "Test")
+- **avidemux:** editor de video
+- **yt-dlp:** (version actualizada desde el Repositorio de Pruebas "Test")
+- **telegram-desktop** = Telegram (32 y 64 bit)
+- **formatusb:** Para formatear un Pendrive
+- **virtualBox:** La máquina virtual
+- **mx-snapshot:** MX Snapshot es una herramienta utilizada para crear un CD en vivo desde el sistema en ejecución (Respins)
+- otros
   
 
 ## Añadiendo los repositorios de MX Linux a Debian 12
@@ -226,10 +226,16 @@ la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo*
 
 ![AVvXsEhSBqEgNBmLDGuOzEiVODcP79mt_3zi_pep8_6FJi34mYOA42LjoLoLa5uvyOJgaKQrBiS83qsN8imw9Lzt86zoMQJ9j1AlGc8jcomDsHUoS5Q9SWwtTuDumHviV2kLZZQecTm9MnUYn4SgFM_NvxlJsdsEYstDKyg1N52Uv9CZxIqfSxA6Ipn2X7hrBU0](vx_images/447618896407164)
 
-como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba:
+como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX:
 
+![AVvXsEh0Bz3IjTx424mVkuaSfnWwtVUrS8xVfix-m9yEw4Ud56mw13oYsmuoVe6C0I4nbn6QScCWnta86hw9leIBQBFiFHW3ECAUPUQ6cdlfa28PWdwgw5BKNcOQT_TtVc4MdaG45bD-giss2O4c4BCCljSEX-McKfGW7SmOMS-ybP01yHphN-6qrG3UXkkfJKY](vx_images/119581900982736)
 
+Bueno, ahora si dejo las instrucciones para:
 
+Debian 12
+Debian 11
+
+repito para la primera, pero solo los pasos de instalación del repositorio:
 
 ## Para Debian 12 bookworm: MX 23 Repo
 
@@ -345,11 +351,11 @@ sudo dpkg -i mx19-archive-keyring\_\*.\*.deb
   
 Recargue los repositorios e instale el programa que necesite
 
-## Consejos
+**Nota:** En Debian 10 buster a esta hay menos programas.
 
-Yo he activado este repositorio y he instalado:
+## Otros programas interesantes de los repositorios de MX Linux
 
-ksnip.- Para hacer capturas de pantalla (lo actualicé pues allí está una versión mejor)
+He instalado:
 
 mx-snapshot.- herramienta que se utiliza para crear un Live-CD desde el sistema en ejecución
 

@@ -199,14 +199,11 @@ descuiden con este programa pues no instala dependencias de test repo
 
 [http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/](http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/)
 
-![AVvXsEiRe51WCsfHnAazjrol2a31MkwZEPopRae7Rskjd0JRNbgs-FMf6F3B5SF_VabqsUvyN-xjabmSYbvNg8_BGZlfHgbAJElQyWo_M_b9d92pjWlVD0xp6ZCN0OlaVZjjrDCJ5MdLETaJYzrpnoMrk5LiTJV0ZLADhLxM-bF5aD5bSNHiN1jdfaVJqGf9T5U](vx_images/466844190987871)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgtE2csEWlHX1uAcg09-7cPynurKKErK8NTG62LIcPPU_gWPV6usFuPIEvo2-YSKHv39tbkaE0WOaGMNxp857FgnKMCARguCUaMyZVeKakmqRdWlzVLjhFM3hSky1utPlblYxklvdlVlp2Rzvmw7AjEs7SE58k5Ykn67t3Mofs_SIaYcH4QYouQAaLSpbM=s16000-rw)
 
 **yt-dlp el 25 de Abril visto en los repositorios de prueba de MX Linux**, está la versión 2024-12-23, como vemos han movido la versión más actual que tenían allí a la versión estable
 
-![AVvXsEjQsInTVnvQcil_uzWibZARn-a7t7atV2pq3ZszHriakJDxswqTnS0sj3ih0x-32dp85bfm-YIB8SYnS-i2dmtAVmcTQkA_P6AvQ6tQvBsXtZK40d6N4DlSTrwP3JaeZ72fUKgfcG240yGiyI3FGDNO_sPbCnU-34eyR9Ny3lF2HqlGScNObvh3Xafe3eA](vx_images/468754520425145)
-
-
-
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhlXuAWe9OD2a5QDb4PIe7H0iAr8zFGVH5y_7fdC7FENd7K8e5373aICkUhs2n2Q-I9YqZ6YEs7vlT3WhHj4QvHYvnZS8gpt3NI-yUlEbdKX4iChMx2adhE63eEMgycDo74u7oysPH408MHiq6YuwiGa1J7G95QFUzPegRLFEy3_RlbOaMMU7j4hdW85XA=s16000-rw)
 
 e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en "**Mostrar los detalles...**"). 
 

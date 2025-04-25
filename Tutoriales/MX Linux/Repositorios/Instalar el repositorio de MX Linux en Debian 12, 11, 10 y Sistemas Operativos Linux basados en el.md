@@ -27,39 +27,30 @@ VirtualBox
 etc  
   
 
-### Añadiendo los repositorios de MX Linux Linux a Debian 12
+### Añadiendo los repositorios de MX Linux a Debian 12
 
-Esta es una explicación genérica que ha hago para Debian 12, con estas explicaciones deberán poder hacer esto en Debian 11, y Debian 10
-
-   
+La siguiente es una explicación genérica que hago para Debian 12 con estas explicaciones que deberán servir para hacer esto en Debian 11, y Debian 10
 
 Para añadir el repositorio de MX Linux debemos añadirlo en el:  
   
 /etc/apt/sources.list.d/  
   
-podemos usar Gedit si es que lo deja hacer (o sea si es que lo permite):
-
+## Usando Gedit u otro editor de texto para editar sources.list.d
+podemos usar Gedit  u otro editor de texto, si es que lo deja hacer el sistema operativo, digo porque ejemplo Kate no deja hacer esto:
  
+```bash
 sudo gedit /etc/apt/sources.list.d/mx.list
+```
+ 
+## Usando nano para editar sources.list.d
+Se puede usar nano desde la terminal. Nano es un editor de texto de terminal que siempre sirve para cosas como estas que necesitan elevar los permisos. 
 
+- El siguiente comando creará el archivo mx.list automáticamente **con `nano`**::
 
-digo si es que deja porque ejemplo Kate no deja hacer esto.  
-  
-o también se puede usar nano desde la terminal (este siempre permite hacerlo). Nano es un editor de texto de terminal que siempre sirve para cosas como estas que necesitan elevar los permisos:
-
+```bash
 sudo nano /etc/apt/sources.list.d/mx.list
-
-Aquí tienes los pasos detallados para añadir el repositorio utilizando `nano`:
-
-1.) **Abrir la terminal**: Puedes abrir la terminal presionando `Ctrl + Alt + T` o buscándola en el menú de aplicaciones.
-
-2.) El siguiente comando creará el archivo mx.list automáticamente **con `nano`**:
-
-sudo nano /etc/apt/sources.list.d/mx.list
-
-3.) **Editar el archivo en `nano`**: ─ Añade la siguiente línea:
-
-**El repositorio de MX Linux para Debian 12:** 
+```
+- **Editar el archivo en `nano`**: ─ Añade las siguientes líneas, copialas:
 
 MX Community Main and Test Repos
     
@@ -70,54 +61,14 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs 
 
+y pegalas en nano.
+
  4.) **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. ─ `nano` te pedirá confirmación para el nombre del archivo, presiona `Enter` para confirmar la escritura en el archivo mx.list.
 
-**Nota:** Nano abrevia CTRL con ^, así CTRL + O es igual a:  
-  
-^O  
-  
-y en nano aparece así:  
-  
-^O Guardar  
-  
-por eso para guardar aplaste:  
-  
-CTRL + O  
+Si necesitas ayuda aquí dejo un tutorial:
 
-5.) **Cerrar `nano`**: ─ Presiona `Ctrl + X` (Control y X al mismo tiempo) para salir del editor `nano`.
-
-Nota: Nano abrevia CTRL con ^, así CTRL + X es igual a: 
-
-^X
-
-y en nano apare así: 
-
-^X Salir
-
-que es para Salir 
-
-**Pero**: Si Ud está escribiendo algo y ha aplastado "CTRL + O" la opción CTRL + X no estará disponible hasta que Ud de ENTER y allí si saldrá de nano 
-
-  
-
-### Comandos básicos
-
-### 
-
-Los comandos en `nano` se ejecutan usando la tecla `Ctrl` (Control) en combinación con otra tecla. Aquí tienes algunos comandos útiles:
-
--   **Guardar el archivo**: `Ctrl + O` (luego presiona `Enter` para confirmar).
--   **Salir de `nano`**: `Ctrl + X`.
--   **Cortar una línea**: `Ctrl + K`.
--   **Pegar una línea**: `Ctrl + U`.
--   **Buscar texto**: `Ctrl + W` (luego escribe el texto que quieres buscar y presiona `Enter`).
--   **Moverse al principio del archivo**: `Ctrl + Y`.
--   **Moverse al final del archivo**: `Ctrl + V`.
--   **Moverse entre varias palabras**: Sostener `Ctrl` y usar las Flechas izquierda o derecha.
--   **Borrar palabras enteras hacia la izquierda**: Ubicándose a la derecha de la palabra que de sea borrar usar `Ctrl + Shift + Supr`, esto se puede hacer varias veces si hay más palabras a la izquierda.
-
-Si necesita ayuda adicional mientras usas `nano`, puedes presionar `Ctrl + G` para abrir el menú de ayuda, y usa Ctrl + X dos veces para salir.
-
+**Cómo usar nano en la terminal de Linux para editar archivos de texto** 
+[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
   
 6.) **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
 

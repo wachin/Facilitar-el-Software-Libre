@@ -35,7 +35,7 @@ Para añadir el repositorio de MX Linux debemos añadirlo en el:
   
 /etc/apt/sources.list.d/  
 
-podemos hacerlo de dos maneras, usando un **editor de texto** o **nano** o **vim** (no confundir vi con vim, vi viene instalado muchas veces por defecto, pero vim es una versión mejorada más fácil de usar) que son editores de texto de terminal (tamién hay otros editores)
+podemos hacerlo de dos maneras, usando un **editor de texto** o **nano** o **vim** (no confundir vi con vim, vi viene instalado muchas veces por defecto, pero vim es una versión mejorada más fácil de usar) que son editores de texto de terminal (tamién hay otros editores de terminal como micro, u otros)
   
 ## Usando Gedit u otro editor de texto para editar sources.list.d
 podemos usar Gedit  u otro editor de texto, si es que lo deja hacer el sistema operativo, digo porque ejemplo Kate no deja hacer esto:
@@ -65,16 +65,17 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 y pegalas en nano.
 
- 4.) **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. `nano` te pedirá confirmación para el nombre del archivo el cual te lo mostrará, presiona `Enter` para confirmar la escritura en el archivo mx.list. Para cerrar nano presiona Ctrl + X
+ - **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. `nano` te pedirá confirmación para el nombre del archivo el cual te lo mostrará, presiona `Enter` para confirmar la escritura en el archivo mx.list. Para cerrar nano presiona Ctrl + X
 
-Si necesitas ayuda para usar nano aquí dejo un tutorial que he hecho:
+Si necesitas ayuda para usar nano aquí dejo [un tutorial que he hecho](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
 
-**Cómo usar nano en la terminal de Linux para editar archivos de texto** 
-[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
-  
-6.) **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
+- **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
 
+```bash
 sudo apt update
+```
+
+
 
 Siguiendo estos pasos, habrás añadido el repositorio y actualizado la lista de paquetes en tu sistema.
 
@@ -117,7 +118,9 @@ a la fecha que hago este tutorial está el archivo:
 
 e instálelo, puede ser con dpkg desde la terminal, ejemplo para este archivo sería:
 
+```bash
 sudo dpkg -i mx23-archive-keyring\_\*.\*.deb
+```
 
 Este comando se descompone en varias partes:
 
@@ -162,7 +165,9 @@ a la fecha que hago este tutorial está el archivo:
 
 e instálelo, puede ser con dpkg desde la terminal, ejemplo para este archivo sería:
 
+```bash
 sudo dpkg -i mx21-archive-keyring\_\*.\*.deb  
+```
 
 Recargue los repositorios e instale el programa que necesite
 
@@ -170,7 +175,13 @@ Recargue los repositorios e instale el programa que necesite
 
 Copie las siguientes líneas:
 
-    # MX Community Main and Test Reposdeb http://mxrepo.com/mx/repo/ buster main non-free#deb http://mxrepo.com/mx/repo/ buster test#ahs hardware stack repo#deb http://mxrepo.com/mx/repo/ buster ahs 
+#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ buster main non-free
+
+#deb http://mxrepo.com/mx/repo/ buster test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ buster ahs 
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -184,8 +195,9 @@ a la fecha que hago este tutorial está el archivo:
 
 e instálelo, puede ser con dpkg desde la terminal, ejemplo para este archivo sería:
 
+```bash
 sudo dpkg -i mx19-archive-keyring\_\*.\*.deb  
-
+```
   
 Recargue los repositorios e instale el programa que necesite
 
@@ -196,8 +208,6 @@ Yo he activado este repositorio y he instalado:
 ksnip.- Para hacer capturas de pantalla (lo actualicé pues allí está una versión mejor)
 
 mx-snapshot.- herramienta que se utiliza para crear un Live-CD desde el sistema en ejecución
-
-
 
 ### Es posible descargar manualmente programas
 

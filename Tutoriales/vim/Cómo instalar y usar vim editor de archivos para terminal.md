@@ -3,7 +3,7 @@
 
 En los Sistemas Operativos Linux puede venir instalado`vi` el cual es una versión ligera de `vim` y es muy dificil de usar. Lo mejor es instalar`vim` el cual es una versón completa y facil de usar (por así decirlo), aquí te explico cómo instalarlo.
 
-## **Ver si ya tienes vi o vim**
+## **Ver si ya tienes vim**
 Primero verifica si ya está instalado:
 
 ```bash
@@ -46,6 +46,7 @@ vim archivo.txt
 
 ## Cambiar al modo de inserción:
 Presiona alguna de estas teclas:
+
 - `i` → insertar antes del cursor
 - `I` → insertar al inicio de la línea
 - `a` → añadir después del cursor
@@ -64,12 +65,14 @@ Estando en modo normal (`Esc`):
 
 ## **4. Moverse dentro del archivo**
 En modo normal:
+
 - `h` → izquierda
 - `l` → derecha
 - `j` → abajo
 - `k` → arriba
 
 Otros útiles:
+
 - `0` → inicio de línea
 - `$` → final de línea
 - `G` → ir al final del archivo
@@ -77,6 +80,7 @@ Otros útiles:
 
 ## **5. Borrar texto**
 En modo normal:
+
 - `x` → borra un carácter
 - `dd` → borra una línea completa
 - `dw` → borra una palabra
@@ -84,12 +88,14 @@ En modo normal:
 
 ## **6. Copiar y pegar**
 En modo normal:
+
 - `yy` → copia una línea (yank)
 - `p` → pega después del cursor
 - `P` → pega antes del cursor
 
 ## **7. Buscar texto**
 En modo normal:
+
 - `/palabra` → busca hacia abajo
 - `?palabra` → busca hacia arriba
 - `n` → siguiente coincidencia
@@ -97,6 +103,7 @@ En modo normal:
 
 ## **8. Deshacer y rehacer**
 En modo normal:
+
 - `u` → deshacer
 - `Ctrl + r` → rehacer
 

@@ -1,0 +1,103 @@
+<h1 id="cómo-instalar-y-usar-vim-editor-de-archivos-para-terminal">Cómo
+instalar y usar vim editor de archivos para terminal</h1>
+<p>En los Sistemas Operativos Linux puede venir instalado<code>vi</code>
+el cual es una versión ligera de <code>vim</code> y es muy dificil de
+usar. Lo mejor es instalar<code>vim</code> el cual es una versón
+completa y facil de usar (por así decirlo), aquí te explico cómo
+instalarlo.</p>
+<h2 id="ver-si-ya-tienes-vi-o-vim"><strong>Ver si ya tienes vi o
+vim</strong></h2>
+<p>Primero verifica si ya está instalado:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="ex">vim</span> <span class="at">--version</span></span></code></pre></div>
+<h2 id="instalar-vi-vim-en-debian"><strong>Instalar vi (vim) en
+Debian</strong></h2>
+<h3 id="actualizar-el-sistema-opcional-pero-recomendado">1.
+<strong>Actualizar el sistema (opcional pero recomendado):</strong></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade</span></code></pre></div>
+<h3 id="instalar-vim">2. <strong>Instalar vim:</strong></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> apt install vim</span></code></pre></div>
+<p>Esto instalará la versión completa de Vim (recomendada).</p>
+<h3 id="verifica-la-instalación"><strong>Verifica la
+instalación</strong></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="ex">vim</span> <span class="at">--version</span></span></code></pre></div>
+<p>Te debería mostrar la versión de <code>vim</code> instalada, con
+opciones y características habilitadas.</p>
+<h1 id="tutorial-básico-de-vim-para-debian-y-cualquier-linux"><strong>Tutorial
+básico de <code>vim</code> para Debian (y cualquier Linux)</strong></h1>
+<h2 id="abrir-un-archivo"><strong>1. Abrir un archivo</strong></h2>
+<p>Para abrir o crear un archivo:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="ex">vim</span> archivo.txt</span></code></pre></div>
+<h2 id="modo-normal-vs-modo-de-inserción"><strong>2. Modo normal vs modo
+de inserción</strong></h2>
+<p><code>vim</code> tiene varios modos, pero los principales son:</p>
+<ul>
+<li><strong>Modo normal</strong>: es el modo por defecto al abrir
+<code>vim</code>, donde puedes moverte, borrar, copiar, etc.</li>
+<li><strong>Modo de inserción</strong>: es donde puedes escribir texto
+normalmente.</li>
+</ul>
+<h2 id="cambiar-al-modo-de-inserción">Cambiar al modo de inserción:</h2>
+<p>Presiona alguna de estas teclas:</p>
+<ul>
+<li><code>i</code> → insertar antes del cursor</li>
+<li><code>I</code> → insertar al inicio de la línea</li>
+<li><code>a</code> → añadir después del cursor</li>
+<li><code>A</code> → añadir al final de la línea</li>
+</ul>
+<h2 id="volver-al-modo-normal">Volver al modo normal:</h2>
+<p>Presiona <code>Esc</code>.</p>
+<h2 id="guardar-y-salir"><strong>3. Guardar y salir</strong></h2>
+<p>Estando en modo normal (<code>Esc</code>):</p>
+<ul>
+<li><code>:w</code> → guardar (write)</li>
+<li><code>:q</code> → salir (quit) (pero, si no has guardado los cambios
+no podrás salir)</li>
+<li><code>:wq</code> o <code>ZZ</code> → guardar y salir</li>
+<li><code>:q!</code> → salir sin guardar</li>
+</ul>
+<h2 id="moverse-dentro-del-archivo"><strong>4. Moverse dentro del
+archivo</strong></h2>
+<p>En modo normal:</p>
+<ul>
+<li><code>h</code> → izquierda</li>
+<li><code>l</code> → derecha</li>
+<li><code>j</code> → abajo</li>
+<li><code>k</code> → arriba</li>
+</ul>
+<p>Otros útiles:</p>
+<ul>
+<li><code>0</code> → inicio de línea</li>
+<li><code>$</code> → final de línea</li>
+<li><code>G</code> → ir al final del archivo</li>
+<li><code>gg</code> → ir al inicio del archivo</li>
+</ul>
+<h2 id="borrar-texto"><strong>5. Borrar texto</strong></h2>
+<p>En modo normal:</p>
+<ul>
+<li><code>x</code> → borra un carácter</li>
+<li><code>dd</code> → borra una línea completa</li>
+<li><code>dw</code> → borra una palabra</li>
+<li><code>d$</code> → borra hasta el final de la línea</li>
+</ul>
+<h2 id="copiar-y-pegar"><strong>6. Copiar y pegar</strong></h2>
+<p>En modo normal:</p>
+<ul>
+<li><code>yy</code> → copia una línea (yank)</li>
+<li><code>p</code> → pega después del cursor</li>
+<li><code>P</code> → pega antes del cursor</li>
+</ul>
+<h2 id="buscar-texto"><strong>7. Buscar texto</strong></h2>
+<p>En modo normal:</p>
+<ul>
+<li><code>/palabra</code> → busca hacia abajo</li>
+<li><code>?palabra</code> → busca hacia arriba</li>
+<li><code>n</code> → siguiente coincidencia</li>
+<li><code>N</code> → anterior coincidencia</li>
+</ul>
+<h2 id="deshacer-y-rehacer"><strong>8. Deshacer y rehacer</strong></h2>
+<p>En modo normal:</p>
+<ul>
+<li><code>u</code> → deshacer</li>
+<li><code>Ctrl + r</code> → rehacer</li>
+</ul>
+<p>Dios les bendiga</p>

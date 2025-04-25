@@ -1,10 +1,11 @@
+# Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
 Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, ejemplo (puede ser cualquier otro, como Debian mismo):
 
 La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s16000-rw/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
 
-### Qué se puede instalar desde este repositorio?
+## Qué se puede instalar desde este repositorio?
 
 En los repositorios de MX Linux hay software muy importante como ejemplo:  
   
@@ -27,7 +28,7 @@ VirtualBox
 etc  
   
 
-### Añadiendo los repositorios de MX Linux a Debian 12
+## Añadiendo los repositorios de MX Linux a Debian 12
 
 La siguiente es una explicación genérica que hago para Debian 12, y estas explicaciones deberán servir para hacer esto en Debian 11, y Debian 10
 
@@ -75,7 +76,55 @@ Si necesitas ayuda para usar nano aquí dejo [un tutorial que he hecho](https://
 sudo apt update
 ```
 
+## Usando vim para editar `sources.list.d`
 
+Otra opción desde la terminal es usar `vim`, un editor de texto muy poderoso para usuarios más avanzados. A diferencia de `nano`, `vim` tiene modos de edición que pueden parecer confusos al principio, pero una vez que se aprende, es muy rápido y versátil.
+
+- Para abrir o crear el archivo `mx.list` en `vim`, escribe el siguiente comando:
+
+```bash
+sudo vim /etc/apt/sources.list.d/mx.list
+```
+
+- Cuando se abra el archivo, presiona la tecla `i` para entrar al **modo de inserción** (Insert Mode). Verás que abajo dice `-- INSERT --`. Ahora sí puedes escribir o pegar el contenido.
+
+Copia y pega lo siguiente:
+
+```plaintext
+# MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs
+```
+
+- Cuando termines, **presiona `Esc`** para salir del modo de inserción.
+
+- Para guardar y salir, escribe lo siguiente (debes estar en el modo normal, es decir, sin estar escribiendo texto):
+
+```vim
+:wq
+```
+
+Y luego presiona `Enter`.
+
+- Si en cambio quieres salir **sin guardar**, escribe:
+
+```vim
+:q!
+```
+
+y presiona `Enter`.
+
+> Si no estás familiarizado con vim y quieres aprender lo básico, puedes ver [mi mini guía de Vim aquí](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html) 
+
+- **Actualizar la lista de repositorios**: después de guardar el archivo, ejecuta:
+
+```bash
+sudo apt update
+```
 
 Siguiendo estos pasos, habrás añadido el repositorio y actualizado la lista de paquetes en tu sistema.
 
@@ -87,7 +136,7 @@ Debian 11
 
 Debian 10 
 
-### Para Debian 12 bookworm: MX 23 Repo
+## Para Debian 12 bookworm: MX 23 Repo
 
 Copie las siguientes líneas:
 
@@ -140,7 +189,7 @@ e instale el programa que necesite:
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s16000-rw/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s964/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png)
 
-### Para Debian 11 bullseye: MX Linux 21 Repo
+## Para Debian 11 bullseye: MX Linux 21 Repo
 
 Copie las siguientes líneas:
 
@@ -171,7 +220,7 @@ sudo dpkg -i mx21-archive-keyring\_\*.\*.deb
 
 Recargue los repositorios e instale el programa que necesite
 
-### Para Debian 10 buster: MX Linux 19 Repo
+## Para Debian 10 buster: MX Linux 19 Repo
 
 Copie las siguientes líneas:
 
@@ -201,7 +250,7 @@ sudo dpkg -i mx19-archive-keyring\_\*.\*.deb
   
 Recargue los repositorios e instale el programa que necesite
 
-### Consejos
+## Consejos
 
 Yo he activado este repositorio y he instalado:
 
@@ -209,7 +258,7 @@ ksnip.- Para hacer capturas de pantalla (lo actualicé pues allí está una vers
 
 mx-snapshot.- herramienta que se utiliza para crear un Live-CD desde el sistema en ejecución
 
-### Es posible descargar manualmente programas
+## Es posible descargar manualmente programas
 
 Por si necesita manualmente descargar algun programa, puede entrar manualmente a las siguientes direcciones
 
@@ -222,7 +271,7 @@ non-free
 
 Dios les bendiga
 
-### CONSULTAS
+## CONSULTAS
 
 **Lista de repositorios MX Linux**  
 [https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt](https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt)

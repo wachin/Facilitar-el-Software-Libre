@@ -8,7 +8,7 @@ La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión
 
 En los repositorios de MX Linux hay software muy importante como ejemplo:  
   
-**Para Dolphin Administrador de archivos:**
+**Extensiones para  Dolphin Administrador de archivos:**
 kde-servicemenu-extract-and-compress  
 kde-servicemenu-checkhash-installdebs  
 kde-servicemenu-rootactions  
@@ -29,11 +29,13 @@ etc
 
 ### Añadiendo los repositorios de MX Linux a Debian 12
 
-La siguiente es una explicación genérica que hago para Debian 12 con estas explicaciones que deberán servir para hacer esto en Debian 11, y Debian 10
+La siguiente es una explicación genérica que hago para Debian 12, y estas explicaciones deberán servir para hacer esto en Debian 11, y Debian 10
 
 Para añadir el repositorio de MX Linux debemos añadirlo en el:  
   
 /etc/apt/sources.list.d/  
+
+podemos hacerlo de dos maneras, usando un **editor de texto** o **nano** o **vim** (no confundir vi con vim, vi viene instalado muchas veces por defecto, pero vim es una versión mejorada más fácil de usar) que son editores de texto de terminal (tamién hay otros editores)
   
 ## Usando Gedit u otro editor de texto para editar sources.list.d
 podemos usar Gedit  u otro editor de texto, si es que lo deja hacer el sistema operativo, digo porque ejemplo Kate no deja hacer esto:
@@ -63,9 +65,9 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 y pegalas en nano.
 
- 4.) **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. ─ `nano` te pedirá confirmación para el nombre del archivo, presiona `Enter` para confirmar la escritura en el archivo mx.list.
+ 4.) **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. `nano` te pedirá confirmación para el nombre del archivo el cual te lo mostrará, presiona `Enter` para confirmar la escritura en el archivo mx.list. Para cerrar nano presiona Ctrl + X
 
-Si necesitas ayuda aquí dejo un tutorial:
+Si necesitas ayuda para usar nano aquí dejo un tutorial que he hecho:
 
 **Cómo usar nano en la terminal de Linux para editar archivos de texto** 
 [https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)

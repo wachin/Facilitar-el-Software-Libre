@@ -183,7 +183,9 @@ También si ya lo tenías instalado desde los repositorios de Debian lo puedes a
 
 descuiden con este programa pues no instala dependencias de test repo, lo sé porque se lo puede descargar desde:
 
-[https://mxrepo.com/mx/testrepo/pool/test/y/yt-dlp/](https://mxrepo.com/mx/testrepo/pool/test/y/yt-dlp/)
+[http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/](http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/)
+
+![](vx_images/75144066296898.png)
 
 e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en "**Mostrar los detalles...**"). 
 
@@ -191,7 +193,7 @@ e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde 
 
 Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 
-
+Así mismo instalar a **ksnip** (sirve para hacer capturas de pantalla)
 
 ## Para Debian 12 bookworm: MX 23 Repo
 

@@ -90,15 +90,15 @@ sudo vim /etc/apt/sources.list.d/mx.list
 
 Copia y pega lo siguiente:
 
-```plaintext
-# MX Community Main and Test Repos
+
+#MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs
-```
+
 
 - Cuando termines, **presiona `Esc`** para salir del modo de inserción.
 
@@ -147,13 +147,21 @@ y luego buscarlo y abrirlo:
 
 **Nota**: La imagen de arriba es en xfe4-appfinder en MX Linux 21 usando el administrador ventanas Fluxbox.
 
+### El motivo de ser de los repositrios de prueba
+Los programas que hay en los repositorios de prueba son programas cuya finalidad es que después que estén corregidos por haber pasado en tantas pruebas puedan pasar a los repositorios estables de MX Linux, por tal motivo es posible que después que hayan dejado bien estable algún programa, lo pasen desde los repositorios de prueba a los repositorios estables (o sea, llegará un momento en que es posible que no veamos tal o cual versión en los repositorios de prueba sino en los estables)
+
 sigamos, clic en la pestaña:
 
 **MX Repo de prueba**
 
 **[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s16000-rw/20240205-054512%20repo%20de%20prueba.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png)**
 
-**allí dice:**
+
+Antes de seguir recargue la lista:
+
+![AVvXsEhHx5ku7i8Qz4_oW_2a75TTZAFYq3EyQSnR3DV0Zb1awwDnDK9k4mmWLyXB2kD7621tp8J165FKNAmGKP-NrsN6b5bXn5Tlmr5ejiyM4FzMOdvc_t_yS0EKQbfGZ4VN9T5N8XzUoX0Dh6Td-QpT1Cv0OjDSrpAlBFCvfrpfxwiBQgDxtSPJHOKJ3DKjUjQ](vx_images/92802641067366)
+
+ahora si, sigamos, en la imágen anterior dice:
 
 "Advertencia  
 Está a punto de utilizar el repositorio MX de  
@@ -171,21 +179,30 @@ y eso es lo que vamos a hacer, busquen a:
 
 este paquete solo se instala él desde los repositorios de MX Linux, y si instala alguna dependencia lo hará desde los repositorios de Debian, marcar e instalar
 
+La siguiente imagen es de MX Linux 21 (pero la imagen es vieja, la tomé en el 2023) que usa como base a Debian 11, allí la ultima versión solo estába en los paquetes de prueba de MX Linux (**MX Repo de prueba**):
+
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s16000-rw/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)
 
 **Nota:** Pueden dar clic en "**Mostrar detalles...**" para que vean si el programa va a instalar alguna dependencia, como dice el mensaje de arriba, el repositorio de prueba contiene software que podría llegar a dañar su sistema, pero en este caso solo se instala un paquete desde esos repositorios, y los demás son paquetes del mismo sistema  
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s16000-rw/20240121-163920%20instalar%20yt-dlp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png)
 
-También si ya lo tenías instalado desde los repositorios de Debian lo puedes actualizar:
+También si ya lo tenías instalado desde los repositorios de Debian lo puedes actualizar. La siguiente imagen es en Debian 12 donde instalé los repositorios de MX Linux 23 y fue tomada en enero de 2025 aprox:
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s16000-rw/20250424-%200014%20actualizando%20yt-dlp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png)
 
-descuiden con este programa pues no instala dependencias de test repo, lo sé porque se lo puede descargar desde:
+descuiden con este programa pues no instala dependencias de test repo
+
+
+**yt-dlp el 25 de Abril 2025 visto en los repositorios estables de MX Linux**, está la versión 2025-03-27
 
 [http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/](http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/)
 
-![](vx_images/75144066296898.png)
+![AVvXsEiRe51WCsfHnAazjrol2a31MkwZEPopRae7Rskjd0JRNbgs-FMf6F3B5SF_VabqsUvyN-xjabmSYbvNg8_BGZlfHgbAJElQyWo_M_b9d92pjWlVD0xp6ZCN0OlaVZjjrDCJ5MdLETaJYzrpnoMrk5LiTJV0ZLADhLxM-bF5aD5bSNHiN1jdfaVJqGf9T5U](vx_images/466844190987871)
+
+**yt-dlp el 25 de Abril visto en los repositorios de prueba de MX Linux**, está la versión 2024-12-23, como vemos han movido la versión más actual que tenían allí a la versión estable
+
+![AVvXsEjQsInTVnvQcil_uzWibZARn-a7t7atV2pq3ZszHriakJDxswqTnS0sj3ih0x-32dp85bfm-YIB8SYnS-i2dmtAVmcTQkA_P6AvQ6tQvBsXtZK40d6N4DlSTrwP3JaeZ72fUKgfcG240yGiyI3FGDNO_sPbCnU-34eyR9Ny3lF2HqlGScNObvh3Xafe3eA](vx_images/468754520425145)
 
 e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en "**Mostrar los detalles...**"). 
 
@@ -193,7 +210,26 @@ e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde 
 
 Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 
-Así mismo instalar a **ksnip** (sirve para hacer capturas de pantalla)
+## Instalando a ksnip desde los repositorios de prueba
+
+Ksnip sirve para hacer capturas de pantalla
+
+la siguiente imagen es de ksnip visto en Debian 12 en los repositorios, el 25 de abril 2025:
+
+![AVvXsEijyOBqjVt54_0pAgf0DAxwTM8r2Shi_SoYHFpb3m89xCYBukgpbuDxwjsfIe94HrcCfYJvO2m_CJ6_u3aHmLCQ8J2GpnYXIRBRMVHHM5-lg-7Ky7zCLnaY50iKCKEcBHQJj1C4UK_fG9jyRCR77bCzDXVKorm9zlboAWUl46j-bbaQybyhPCCh5GqadK8](vx_images/412755593269938)
+
+la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025:
+
+![AVvXsEiOBgc-Z_S1i5qBSmM2Tyv-mkkcbUf9XOhdzvam-X6WrMGdCs5MGf8PtKXtZlK8NJtP_JJHUdZRrVO4kctEu3kBNadBarXhuGVUZmhCceH3QCixuYby582mkPBcbbWF-y92g51lEFVwqNtnMyImZGI6rvS6ATeKx2558noOJITDPQSgjU0t8gkDm5PArws](vx_images/16087994950982)
+
+la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025:
+
+![AVvXsEhSBqEgNBmLDGuOzEiVODcP79mt_3zi_pep8_6FJi34mYOA42LjoLoLa5uvyOJgaKQrBiS83qsN8imw9Lzt86zoMQJ9j1AlGc8jcomDsHUoS5Q9SWwtTuDumHviV2kLZZQecTm9MnUYn4SgFM_NvxlJsdsEYstDKyg1N52Uv9CZxIqfSxA6Ipn2X7hrBU0](vx_images/447618896407164)
+
+como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba:
+
+
+
 
 ## Para Debian 12 bookworm: MX 23 Repo
 

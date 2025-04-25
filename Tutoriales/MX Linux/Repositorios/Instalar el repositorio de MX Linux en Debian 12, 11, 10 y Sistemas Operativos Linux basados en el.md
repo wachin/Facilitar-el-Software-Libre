@@ -68,7 +68,7 @@ y pegalas en nano.
 
  - **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. `nano` te pedirá confirmación para el nombre del archivo el cual te lo mostrará, presiona `Enter` para confirmar la escritura en el archivo mx.list. Para cerrar nano presiona Ctrl + X
 
-Si necesitas ayuda para usar nano aquí dejo [un tutorial que he hecho](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
+Si necesitas ayuda para usar nano aquí dejo en mi blog en Blogger [un tutorial que he hecho](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
 
 - **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
 
@@ -118,7 +118,7 @@ Y luego presiona `Enter`.
 
 y presiona `Enter`.
 
-> Si no estás familiarizado con vim y quieres aprender lo básico, puedes ver [mi mini guía de Vim aquí](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html) 
+> Si no estás familiarizado con vim y quieres aprender lo básico, puedes ver en mi blog en Blogger [mi mini guía de Vim aquí](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html) 
 
 - **Actualizar la lista de repositorios**: después de guardar el archivo, ejecuta:
 
@@ -128,21 +128,15 @@ sudo apt update
 
 Siguiendo estos pasos, habrás añadido el repositorio y actualizado la lista de paquetes en tu sistema.
 
-Ahora si, para así mismo:
-
-Debian 12
-
-Debian 11
-
-Debian 10 
-
 ## Cómo instalar actualizado a yt-dlp desde los paquetes de Prueba (test)  
 
-En MX Linux está el paquete:
+Voy a poner aquí cómo instalar la ultima versión de un programa llamado yt-dlp que sirve para descargar videos, audios ejemplo de Youtube y que no está en los repositorios de Debian sino en los de MX Linux
+
+Para ello los desarrolladores de MX Linux crearon un paquete llamado:
 
 **MX Instalar paquetes** 
 
-este debemos instalarlo, para ello poner en la terminal:
+este debemos instalarlo, poner en la terminal:
 
 ```bash
 sudo apt install mx-repo-list mx-repo-manager mx-packageinstaller

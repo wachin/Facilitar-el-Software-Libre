@@ -154,7 +154,7 @@ sigamos, clic en la pestaña:
 
 **MX Repo de prueba**
 
-**[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s16000-rw/20240205-054512%20repo%20de%20prueba.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png)**
+**[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s16000-rw/20240205-054512%20repo%20de%20prueba.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png)
 
 
 Antes de seguir recargue la lista:
@@ -353,32 +353,27 @@ Recargue los repositorios e instale el programa que necesite
 
 **Nota:** En Debian 10 buster a esta hay menos programas.
 
-## Otros programas interesantes de los repositorios de MX Linux
-
-He instalado:
-
-mx-snapshot.- herramienta que se utiliza para crear un Live-CD desde el sistema en ejecución
 
 ## Es posible descargar manualmente programas
 
 Por si necesita manualmente descargar algun programa, puede entrar manualmente a las siguientes direcciones
 
-[https://mxrepo.com/mx/repo/pool/](https://mxrepo.com/mx/repo/pool/)
+[https://mxrepo.com/mx/repo/pool/](https://mxrepo.com/mx/repo/pool/)  
 
-de allí yo he buscado en:
+de allí yo he buscado en:  
 
 pool  
-non-free
+non-free  
 
-Dios les bendiga
+Dios les bendiga  
 
 ## CONSULTAS
 
 **Lista de repositorios MX Linux**  
-[https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt](https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt)
+[https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt](https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt)  
 
 **Repos — MX-23**  
-[https://mxlinux.org/uncategorized/repos-mx-23/](https://mxlinux.org/uncategorized/repos-mx-23/)
+[https://mxlinux.org/uncategorized/repos-mx-23/](https://mxlinux.org/uncategorized/repos-mx-23/)  
 
 
 

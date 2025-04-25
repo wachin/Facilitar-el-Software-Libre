@@ -3,7 +3,7 @@ Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativo
 
 La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s16000-rw/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
+![20231118-182409 repositorio de MX Linux 21 añadido](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
 
 ## Qué se puede instalar desde este repositorio?
 
@@ -143,7 +143,7 @@ sudo apt install mx-repo-list mx-repo-manager mx-packageinstaller
 ```
 y luego buscarlo y abrirlo:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s16000-rw/20240205-054409%20MX%20Instalar%20paquetes.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png)
+![20240205-054409 MX Instalar paquetes](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png)
 
 **Nota**: La imagen de arriba es en xfe4-appfinder en MX Linux 21 usando el administrador ventanas Fluxbox.
 
@@ -154,12 +154,12 @@ sigamos, clic en la pestaña:
 
 **MX Repo de prueba**
 
-**[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s16000-rw/20240205-054512%20repo%20de%20prueba.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png)
+![20240205-054512 repo de prueba](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png)
 
 
 Antes de seguir recargue la lista:
 
-![AVvXsEhHx5ku7i8Qz4_oW_2a75TTZAFYq3EyQSnR3DV0Zb1awwDnDK9k4mmWLyXB2kD7621tp8J165FKNAmGKP-NrsN6b5bXn5Tlmr5ejiyM4FzMOdvc_t_yS0EKQbfGZ4VN9T5N8XzUoX0Dh6Td-QpT1Cv0OjDSrpAlBFCvfrpfxwiBQgDxtSPJHOKJ3DKjUjQ](vx_images/92802641067366)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhHx5ku7i8Qz4_oW_2a75TTZAFYq3EyQSnR3DV0Zb1awwDnDK9k4mmWLyXB2kD7621tp8J165FKNAmGKP-NrsN6b5bXn5Tlmr5ejiyM4FzMOdvc_t_yS0EKQbfGZ4VN9T5N8XzUoX0Dh6Td-QpT1Cv0OjDSrpAlBFCvfrpfxwiBQgDxtSPJHOKJ3DKjUjQ=s16000-rw)
 
 ahora si, sigamos, en la imágen anterior dice:
 
@@ -181,15 +181,16 @@ este paquete solo se instala él desde los repositorios de MX Linux, y si instal
 
 La siguiente imagen es de MX Linux 21 (pero la imagen es vieja, la tomé en el 2023) que usa como base a Debian 11, allí la ultima versión solo estába en los paquetes de prueba de MX Linux (**MX Repo de prueba**):
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s16000-rw/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)
+![20240121-163620 buscando a yt-dlp en mx test repo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)
+
 
 **Nota:** Pueden dar clic en "**Mostrar detalles...**" para que vean si el programa va a instalar alguna dependencia, como dice el mensaje de arriba, el repositorio de prueba contiene software que podría llegar a dañar su sistema, pero en este caso solo se instala un paquete desde esos repositorios, y los demás son paquetes del mismo sistema  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s16000-rw/20240121-163920%20instalar%20yt-dlp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png)
+![20240121-163920 instalar yt-dlp](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png)
 
 También si ya lo tenías instalado desde los repositorios de Debian lo puedes actualizar. La siguiente imagen es en Debian 12 donde instalé los repositorios de MX Linux 23 y fue tomada en enero de 2025 aprox:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s16000-rw/20250424-%200014%20actualizando%20yt-dlp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png)
+![20250424- 0014 actualizando yt-dlp](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png)
 
 descuiden con este programa pues no instala dependencias de test repo
 
@@ -204,6 +205,9 @@ descuiden con este programa pues no instala dependencias de test repo
 
 ![AVvXsEjQsInTVnvQcil_uzWibZARn-a7t7atV2pq3ZszHriakJDxswqTnS0sj3ih0x-32dp85bfm-YIB8SYnS-i2dmtAVmcTQkA_P6AvQ6tQvBsXtZK40d6N4DlSTrwP3JaeZ72fUKgfcG240yGiyI3FGDNO_sPbCnU-34eyR9Ny3lF2HqlGScNObvh3Xafe3eA](vx_images/468754520425145)
 
+
+
+
 e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en "**Mostrar los detalles...**"). 
 
  Lo que también me da una idea, tal vez ese deb se pueda instalar en Ubuntu, si alguien hace la prueba, me avisa por favor.  
@@ -214,21 +218,21 @@ Bien, para mi este programa no encierra ningún riesgo puesto que solo se instal
 
 Ksnip sirve para hacer capturas de pantalla
 
-la siguiente imagen es de ksnip visto en Debian 12 en los repositorios, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en Debian 12 en los repositorios en Synaptic, el 25 de abril 2025:
 
-![AVvXsEijyOBqjVt54_0pAgf0DAxwTM8r2Shi_SoYHFpb3m89xCYBukgpbuDxwjsfIe94HrcCfYJvO2m_CJ6_u3aHmLCQ8J2GpnYXIRBRMVHHM5-lg-7Ky7zCLnaY50iKCKEcBHQJj1C4UK_fG9jyRCR77bCzDXVKorm9zlboAWUl46j-bbaQybyhPCCh5GqadK8](vx_images/412755593269938)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw)
 
 la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025:
 
-![AVvXsEiOBgc-Z_S1i5qBSmM2Tyv-mkkcbUf9XOhdzvam-X6WrMGdCs5MGf8PtKXtZlK8NJtP_JJHUdZRrVO4kctEu3kBNadBarXhuGVUZmhCceH3QCixuYby582mkPBcbbWF-y92g51lEFVwqNtnMyImZGI6rvS6ATeKx2558noOJITDPQSgjU0t8gkDm5PArws](vx_images/16087994950982)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMG-RZmFOHmGx65PUznXuOy_htSjsSmhiTWkqiOVpjpxTiC0-hG5irm3D8ug0uP0lKXoYhlv-IEOkuC5Xo28jMy4WZ_dVWy_pWCSzdVNCNgkWLT-cZp2KaeWWl6Tbgpq5LrMh-34XNTtJSfDZ8e_0AFWfXTpUDTAwSF6HaY2QhFfwI9TpOCK4_HSmdn1g/s16000-rw/16087994950982.png)
 
 la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025:
 
-![AVvXsEhSBqEgNBmLDGuOzEiVODcP79mt_3zi_pep8_6FJi34mYOA42LjoLoLa5uvyOJgaKQrBiS83qsN8imw9Lzt86zoMQJ9j1AlGc8jcomDsHUoS5Q9SWwtTuDumHviV2kLZZQecTm9MnUYn4SgFM_NvxlJsdsEYstDKyg1N52Uv9CZxIqfSxA6Ipn2X7hrBU0](vx_images/447618896407164)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw)
 
 como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX:
 
-![AVvXsEh0Bz3IjTx424mVkuaSfnWwtVUrS8xVfix-m9yEw4Ud56mw13oYsmuoVe6C0I4nbn6QScCWnta86hw9leIBQBFiFHW3ECAUPUQ6cdlfa28PWdwgw5BKNcOQT_TtVc4MdaG45bD-giss2O4c4BCCljSEX-McKfGW7SmOMS-ybP01yHphN-6qrG3UXkkfJKY](vx_images/119581900982736)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw)
 
 Bueno, ahora si dejo las instrucciones para:
 
@@ -260,9 +264,7 @@ a la fecha que hago este tutorial está el archivo:
 
 [https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring\_2023.6.6\_all.deb](https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring_2023.6.6_all.deb)
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueQdbSd8OHyGbUnbS4cXkpp08vfq8YxpzLEjJfeAvRsOkGQD4-c2emanbOU_raOzAPloBJyC_r5fdAVQM-Iz5hFhNr27VrIIjD8ABWMorC_Gmj_960QIfQIYMfXUt5_e2XLUp7fa-ogoP_VcnmdY5MTMoHaK60UVM3fmpTIbo0JdbWN8w2vltq_SKgAQ/s16000-rw/20240719-082459%20mx23-archive-keyring_2023.6.6_all.deb.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueQdbSd8OHyGbUnbS4cXkpp08vfq8YxpzLEjJfeAvRsOkGQD4-c2emanbOU_raOzAPloBJyC_r5fdAVQM-Iz5hFhNr27VrIIjD8ABWMorC_Gmj_960QIfQIYMfXUt5_e2XLUp7fa-ogoP_VcnmdY5MTMoHaK60UVM3fmpTIbo0JdbWN8w2vltq_SKgAQ/s790/20240719-082459%20mx23-archive-keyring_2023.6.6_all.deb.png)
-
-  
+![20240719-082459 mx23-archive-keyring_2023](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueQdbSd8OHyGbUnbS4cXkpp08vfq8YxpzLEjJfeAvRsOkGQD4-c2emanbOU_raOzAPloBJyC_r5fdAVQM-Iz5hFhNr27VrIIjD8ABWMorC_Gmj_960QIfQIYMfXUt5_e2XLUp7fa-ogoP_VcnmdY5MTMoHaK60UVM3fmpTIbo0JdbWN8w2vltq_SKgAQ/s790/20240719-082459%20mx23-archive-keyring_2023.6.6_all.deb.png)
 
 **Nota:** Es posible que con el paso del tiempo lo cambien con otro más actual y cambie el nombre de la versión.
 
@@ -284,11 +286,12 @@ En conjunto, el comando instala el paquete `mx23-archive-keyring` que contiene l
 
 Recargue los repositorios le recomiendo desde Synaptic:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s16000-rw/20240719-083406%20synaptic%20Recarga%20repos.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s860/20240719-083406%20synaptic%20Recarga%20repos.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s860/20240719-083406%20synaptic%20Recarga%20repos.png)
 
 e instale el programa que necesite:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s16000-rw/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s964/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png)
+![20240719-083602 repositorios de MX Linux activados en Debian 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s964/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png)
+
 
 ## Para Debian 11 bullseye: MX Linux 21 Repo
 

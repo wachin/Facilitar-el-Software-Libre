@@ -1,0 +1,126 @@
+<h1 id="si-usas-un-gestor-de-ventanas-diferente-al-que-viene-por-defecto-en-la-distro-asegúrate-de-configurar-correctamente-a-policykit">Si
+usas un Gestor de Ventanas diferente al que viene por defecto en la
+Distro asegúrate de configurar correctamente a PolicyKit</h1>
+<p>El siguiente tutorial y funciona bien para sistemas operativos Linux
+que uno los usa con su gestor de ventanas por defecto, pero si uno
+instala por ejemplo openbox y uno no ha configurado el policykit agent,
+el programa “MX Instalador de paquetes” no abre, ejemplo yo instalé en
+mi ordenador “Debian 12 LXQT” e instalé el repositorio de MX Linux y el
+programa “MX Instalador de paquetes” abre y se pueden instalar los
+paquetes que uno necesite incluso de la pestaña “Repositorios de prueba”
+pero al instalar openbox y cerrar sesión y entrar en la sesión de
+openbox este no funcionaba hasta que tuve que añadir en el archivo
+autostart la línea: “lxqt-policykit-agent &amp;”. Este problema con el
+programa <strong>“MX Instalador de paquetes”</strong> al usar
+<strong>Openbox</strong> en lugar del entorno de escritorio por defecto
+(como LXQt) está relacionado con la falta de un <strong>agente de
+PolicyKit</strong> (polkit) configurado correctamente en la sesión de
+Openbox. A continuación, explico por qué ocurre esto, cómo afecta al
+funcionamiento de aplicaciones como “MX Instalador de paquetes” y cómo
+varía según el entorno de escritorio (KDE, GNOME, LXQt, etc.).</p>
+<h2 id="qué-es-policykit-y-por-qué-es-importante"><strong>¿Qué es
+PolicyKit y por qué es importante?</strong></h2>
+<p><strong>PolicyKit</strong> (o <strong>polkit</strong>) es un sistema
+en Linux que gestiona los permisos para realizar acciones privilegiadas
+(como instalar paquetes, montar dispositivos, etc.) de manera segura.
+Muchas aplicaciones gráficas, como “MX Instalador de paquetes”,
+requieren autenticación para ejecutar comandos con privilegios de
+administrador (root). Esta autenticación suele presentarse como una
+ventana emergente que solicita la contraseña del usuario.</p>
+<p>Para que esta ventana de autenticación aparezca, debe estar
+ejecutándose un <strong>agente de PolicyKit</strong> en la sesión del
+usuario. Cada entorno de escritorio (KDE, GNOME, LXQt, etc.) proporciona
+su propio agente de PolicyKit, que se inicia automáticamente al comenzar
+la sesión. Sin embargo, en gestores de ventanas ligeros como
+<strong>Openbox</strong>, no hay un entorno de escritorio completo, por
+lo que el agente de PolicyKit no se inicia de forma predeterminada a
+menos que se configure manualmente.</p>
+<h2 id="por-qué-mx-instalador-de-paquetes-no-abre-en-openbox"><strong>¿Por
+qué “MX Instalador de paquetes” no abre en Openbox?</strong></h2>
+<p>El programa <strong>“MX Instalador de paquetes”</strong> depende de
+<strong>PolicyKit</strong> para autenticar acciones privilegiadas, como
+instalar o actualizar paquetes desde los repositorios. Cuando inicias
+una sesión en <strong>Openbox</strong> sin un agente de PolicyKit
+activo, la aplicación intenta solicitar permisos, pero no puede mostrar
+la ventana de autenticación porque el agente no está corriendo. Como
+resultado, la aplicación falla silenciosamente o no se abre.</p>
+<h2 id="diferencias-entre-entornos-de-escritorio"><strong>Diferencias
+entre entornos de escritorio</strong></h2>
+<p>Cada entorno de escritorio utiliza un agente de PolicyKit específico,
+que se integra con su diseño y estilo visual. Aquí hay una lista de los
+agentes más comunes:</p>
+<ol type="1">
+<li><strong>LXQt</strong>: Usa <code>lxqt-policykit-agent</code>. Este
+es el que configuraste manualmente en Openbox.</li>
+<li><strong>GNOME</strong>: Usa
+<code>polkit-gnome-authentication-agent-1</code>, que se inicia
+automáticamente con la sesión de GNOME.</li>
+<li><strong>KDE Plasma</strong>: Usa <code>polkit-kde-agent-1</code>,
+integrado en el entorno de Plasma.</li>
+<li><strong>XFCE</strong>: Usa <code>xfce-polkit</code> o, en algunos
+casos, un agente genérico como <code>lxpolkit</code>.</li>
+<li><strong>Entornos ligeros o gestores de ventanas (como
+Openbox)</strong>: No incluyen un agente de PolicyKit por defecto, por
+lo que debes iniciarlo manualmente.</li>
+</ol>
+<p>Si cambias de un entorno completo (como LXQt) a un gestor de ventanas
+como Openbox, el agente de PolicyKit que normalmente se inicia
+automáticamente en LXQt no se ejecuta, lo que provoca problemas con
+aplicaciones que requieren autenticación.</p>
+<h2 id="configuración-del-agente-de-policykit-para-gestores-de-ventanas-como-openbox"><strong>Configuración
+del agente de PolicyKit para gestores de ventanas como
+Openbox</strong></h2>
+<p>Si instalas el programa <strong>“MX Instalador de paquetes”</strong>
+en un sistema Debian con un entorno de escritorio completo como
+<strong>LXQt</strong>, <strong>GNOME</strong>, o <strong>KDE</strong>,
+el programa debería funcionar sin problemas, ya que estos entornos
+inician automáticamente un <strong>agente de PolicyKit</strong> al
+comenzar la sesión. Sin embargo, si usas un gestor de ventanas ligero
+como <strong>Openbox</strong>, es posible que “MX Instalador de
+paquetes” no se abra porque no hay un agente de PolicyKit activo.</p>
+<p><strong>Solución</strong>:</p>
+<ol type="1">
+<li><p><strong>Identifica el agente de PolicyKit adecuado</strong>:
+Puedes buscarlo en Synaptic buscando la palabra:</p>
+<p>PolicyKit</p>
+<p>y ordenando los paquetes instalados, y busca entre todos los paquetes
+algo que se pueda relacionar y verifica el archivo .desktop que siembre
+contienen ello:</p></li>
+<li><p><strong>Añade el agente al inicio de la sesión de
+Openbox</strong>:</p>
+<ul>
+<li><p>Edita el archivo de autostart de Openbox, normalmente ubicado en
+<code>~/.config/openbox/autostart</code>. Si no existe, créalo.</p></li>
+<li><p>Añade la siguiente línea, dependiendo del agente que uses:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a> <span class="ex">lxqt-policykit-agent</span> <span class="kw">&amp;</span></span></code></pre></div>
+<p>o, si usas otro agente:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="ex">lxpolkit</span> <span class="kw">&amp;</span></span></code></pre></div>
+<p>o:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1</span> <span class="kw">&amp;</span></span></code></pre></div>
+<p>o:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="ex">/usr/lib/polkit-kde-agent-1</span> <span class="kw">&amp;</span></span></code></pre></div></li>
+</ul></li>
+<li><p><strong>Guarda el archivo y reinicia la sesión</strong>:</p>
+<ul>
+<li>Cierra la sesión y vuelve a iniciarla en Openbox. Ahora, “MX
+Instalador de paquetes” debería abrirse correctamente y mostrar la
+ventana de autenticación cuando sea necesario.</li>
+</ul></li>
+</ol>
+<h3 id="recomendaciones-adicionales"><strong>Recomendaciones
+adicionales</strong></h3>
+<ol type="1">
+<li><p><strong>Cómo verificar si un agente está activo</strong>: Para
+verificar si un agente de PolicyKit está ejecutándose:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> polkit</span></code></pre></div>
+<p>Si no aparece ningún agente (como <code>lxqt-policykit-agent</code>,
+<code>polkit-gnome-authentication-agent-1</code>, etc.), entonces no hay
+un agente activo, y aplicaciones como “MX Instalador de paquetes” no
+funcionarán correctamente.</p></li>
+<li><p><strong>Agente genérico</strong>: Si el usuario no está seguro de
+qué agente usar, sugiere instalar <code>lxpolkit</code> como una opción
+ligera y genérica:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> apt install lxpolkit</span></code></pre></div>
+<p>Luego, añádelo al autostart:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="ex">lxpolkit</span> <span class="kw">&amp;</span></span></code></pre></div></li>
+</ol>

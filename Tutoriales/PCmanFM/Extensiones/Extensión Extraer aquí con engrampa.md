@@ -1,6 +1,6 @@
-En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí, así si este es tu caso, si has instalado `pcmanfm-qt` en algún Linux y ves la opción "Extraer aquí" pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente:
+En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí, así si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción "Extraer aquí" pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente:
 
-# ✅ 1. Falta instalar utilidades necesarias para descomprimir
+# ✅ Instalar utilidades necesarias para descomprimir
 `pcmanfm-qt` utiliza internamente otras herramientas del sistema (como `unzip`, `7z`, etc.) para realizar las operaciones de extracción.
 
 ##### Solución:
@@ -15,11 +15,7 @@ sudo apt install unzip xz-utils p7zip-full engrampa
 - `p7zip-full`: soporte para formatos adicionales como `.7z`, `.rar`, etc.
 - `engrampa`: es el gestor de archivos comprimidos, usado por algunas interfaces gráficas
 
-
-
-¡Perfecto! Vamos a crear una **acción contextual personalizada para `pcmanfm-qt`** que permita integrar las opciones de **Engrampa** directamente desde el menú contextual del explorador de archivos.
-
-Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se guardan en la carpeta:
+Ahora vamos a crear una **acción contextual personalizada para `pcmanfm-qt`** que permita integrar las opciones de **Engrampa** directamente desde el menú contextual del explorador de archivos. Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se guardan en la carpeta:
 
 ```
 ~/.local/share/file-manager/actions/
@@ -27,7 +23,7 @@ Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se g
 
 ---
 
-## 📁 Paso 1: Crear la carpeta si no existe
+## 📁 Paso 1: Crear la carpeta (lo más seguro es que no exista)
 
 Ejecuta este comando en tu terminal:
 
@@ -50,8 +46,11 @@ Puedes usar `nano` o tu editor favorito:
 ```bash
 nano ~/.local/share/file-manager/actions/engrampa-extract-here.desktop
 ```
+**Nota:** Si no sabes usar nano ve este [tutorial](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html).
 
 ### ✅ Contenido del archivo:
+
+El siguiente es el contenido que debes copiar y pegar en ese archivo:
 
 ```ini
 # Extract Here - Supports multiple languages
@@ -87,9 +86,11 @@ Name[it]=Estrai nella cartella corrente
 Name[pt]=Extrair na pasta atual
 ```
 
+después de pegar, guarda y cierra el archivo.
+
 ---
 
-## 📄 Paso 3: Crear otro archivo para "Extraer en carpeta..."
+## 📄 Paso 3: Crear otro archivo para "Extraer en carpeta... (Opcional)"
 
 También puedes crear otra acción para extraer **en una carpeta con el nombre del archivo zip**:
 
@@ -98,6 +99,7 @@ nano ~/.local/share/file-manager/actions/engrampa-extract-to-folder.desktop
 ```
 
 ### ✅ Contenido del archivo:
+El siguiente es el contenido que debes copiar y pegar en ese archivo:
 
 ```ini
 # Extract to Folder - Supports multiple languages
@@ -133,40 +135,7 @@ Name[it]=Estrai nel proprio folder
 Name[pt]=Extrair na própria pasta
 ```
 
----
-
-## ✅ Resultado final
-
-Después de crear estos dos archivos:
-
-- Hacer clic derecho sobre un archivo comprimido (`.zip`, `.rar`, etc.)
-- Verás dos nuevas opciones:
-  - **"Extract Here"**
-  - **"Extract to Folder"**
-
-La segunda opción es ideal para evitar desorden, ya que crea una carpeta con el nombre del archivo y coloca todo allí dentro.
-
----
-
-
-
-
----
-
-## 🧾 Instrucciones de uso
-
-1. Crea la carpeta si no existe:
-
-   ```bash
-   mkdir -p ~/.local/share/file-manager/actions
-   ```
-
-2. Guarda ambos archivos dentro de esa carpeta:
-
-   - `~/.local/share/file-manager/actions/engrampa-extract-here.desktop`
-   - `~/.local/share/file-manager/actions/engrampa-extract-to-folder.desktop`
-
-3. Reinicia `pcmanfm-qt` (cierra y vuelve a abrir) o incluso reinicia tu sesión gráfica si no ves los cambios.
+después de pegar, guarda y cierra el archivo.
 
 ---
 
@@ -180,22 +149,22 @@ La segunda opción es ideal para evitar desorden, ya que crea una carpeta con el
 | `Exec=` | Comando que se ejecuta cuando se selecciona la opción |
 | `MimeTypes=` | Lista de formatos compatibles |
 
+---
 
+## ✅ Resultado final
+
+Después de crear estos dos archivos, **Reinicia** `pcmanfm-qt` (cierra y vuelve a abrir) o incluso reinicia tu sesión gráfica si no ves los cambios.
+
+- Abre pcmanfm-qt y hacer clic derecho sobre un archivo comprimido (`.zip`, `.rar`, etc.)
+- Verás dos nuevas opciones:
+  - **"Extract Aquí"**
+  - **"Extract en carpeta"**
 
 ---
 
-¿Después de instalar estos paquetes, reinicia `pcmanfm-qt` o incluso la sesión del escritorio.
+# Instalación rápida y automática
 
-
-
-# Cómo instalar
-
-Y te digo si falta alguna.
-Ejemplo para Dolphin
-
-engrampa-kde-service
-
-Dolphin Menú Extraer aqui para Dolphin usando Engrampa. Copiar todas las siguietnes líneas y poner en la terminal (las he preparado para que las pueda copiar todas y ahorrar tiempo):
+Copiar todas las siguietnes líneas y poner en la terminal (las he preparado para que las pueda copiar todas y ahorrar tiempo):
 
 ```bash
 mkdir -p ~/.local/share/kservices5/ServiceMenus

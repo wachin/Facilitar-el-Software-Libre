@@ -1,0 +1,31 @@
+# Extract Here - Supports multiple languages
+# Use this action to extract archives directly into the current folder using Engrampa
+
+[Desktop Entry]
+Type=Action
+Tooltip[es]=Extraer el archivo comprimido aquí usando Engrampa
+Tooltip[en]=Extract the archive here using Engrampa
+Tooltip[fr]=Extraire l'archive ici avec Engrampa
+Tooltip[de]=Archiv hier mit Engrampa entpacken
+Tooltip[it]=Estrarre l'archivio qui con Engrampa
+Tooltip[pt]=Extrair o arquivo aqui com o Engrampa
+
+Name[es]=Extraer aquí
+Name[en]=Extract Here
+Name[fr]=Extraire ici
+Name[de]=Hier entpacken
+Name[it]=Estrai qui
+Name[pt]=Extrair aqui
+
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/zip;application/x-rar;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;
+Exec=engrampa --extract-here %u
+
+Name[es]=Extraer a la carpeta actual
+Name[en]=Extract to current folder
+Name[fr]=Extraire dans le dossier actuel
+Name[de]=In aktuellen Ordner entpacken
+Name[it]=Estrai nella cartella corrente
+Name[pt]=Extrair na pasta atual

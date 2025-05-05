@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Tooltip=Extract archive here using Engrampa
+Name=Extract Here
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/zip;application/x-rar;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;
+Exec=engrampa --extract-here %u
+Name=Extract to current folder

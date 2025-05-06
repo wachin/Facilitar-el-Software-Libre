@@ -4,6 +4,14 @@ Publicadas por [Washington Indacochea Delgado](https://www.blogger.com/profile/1
 
 Nano es un editor de texto sencillo, ideal para principiantes en sistemas Unix/Linux. A diferencia de otros editores como Vim o Emacs, Nano tiene una interfaz intuitiva y comandos claros, lo que lo hace perfecto para editar archivos de texto desde la línea de comandos, solo que debemos de aprender a usarlo desde cero, es como si necesitáramos borrar de nuestra mente el modo normal de edición de texto en cualquier programa con interfaz gráfica, para poder entender cómo hacerlo desde la terminal con nano (y necesitamos memorizar sus comandos).
 
+Es ideal para:
+
+    - Modificar archivos de configuración del sistema (como `/etc/fstab` o `/etc/nginx/nginx.conf`), donde necesitarás permisos de superusuario, usa `sudo` antes del comando.
+    - Escribir scripts rápidos (como `.sh` o `.py`).
+    - Trabajar en servidores remotos sin interfaz gráfica.
+
+Su simplicidad lo hace perfecto para principiantes, mientras que sus atajos avanzados son útiles para usuarios experimentados.
+
 **Nota**: Si estás familiarizado con otros editores como [Vim](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html), notarás que Nano no requiere aprender modos de edición complejos, lo que lo convierte en una excelente opción para principiantes.
 
 ### Abrir un archivo

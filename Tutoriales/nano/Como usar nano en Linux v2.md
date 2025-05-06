@@ -107,7 +107,7 @@ En Nano, los atajos para ir al **inicio** y al **final** del archivo son:
 
 Si deseas ir a una línea específica, ejemplo a la línea 3 pon:
 
--   **Ctrl + \_** luego escribe `3` → ir a la línea 3. (Es útil, por ejemplo, cuando un mensaje de error dice que hay un problema en la línea 42.)
+-   **Ctrl + \_** luego escribe `3` y da Enter → ir a la línea 3. (Es útil, por ejemplo, cuando un mensaje de error dice que hay un problema en la línea 42.)
 
 
 ## ¿Cómo seleccionar mucho texto y borrarlo en Nano?

@@ -1,5 +1,8 @@
 # Extract to Folder - Supports multiple languages
 # Use this action to extract archives into their own folder using Engrampa
+# Proyecto Facilitar el Software Libre en el Ecuador
+# By: Washington Indacochea Delgado
+# https://facilitarelsoftwarelibre.blogspot.com
 
 [Desktop Entry]
 Type=Action
@@ -16,6 +19,8 @@ Name[fr]=Extraire dans un dossier
 Name[de]=In Ordner entpacken
 Name[it]=Estrai in una cartella
 Name[pt]=Extrair em pasta
+
+Icon=folder-new
 
 Profiles=profile-zero;
 

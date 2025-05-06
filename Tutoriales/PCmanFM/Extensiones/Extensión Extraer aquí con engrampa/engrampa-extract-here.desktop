@@ -1,5 +1,8 @@
 # Extract Here - Supports multiple languages
 # Use this action to extract archives directly into the current folder using Engrampa
+# Proyecto Facilitar el Software Libre en el Ecuador
+# By: Washington Indacochea Delgado
+# https://facilitarelsoftwarelibre.blogspot.com
 
 [Desktop Entry]
 Type=Action
@@ -16,6 +19,8 @@ Name[fr]=Extraire ici
 Name[de]=Hier entpacken
 Name[it]=Estrai qui
 Name[pt]=Extrair aqui
+
+Icon=archive-extract
 
 Profiles=profile-zero;
 

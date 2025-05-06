@@ -8,7 +8,7 @@ Instala las herramientas básicas necesarias:
 
 ```bash
 sudo apt update
-sudo apt install unzip xz-utils p7zip-full engrampa
+sudo apt install unzip xz-utils p7zip-full engrampa pcmanfm-qt
 ```
 
 - `unzip`: para archivos `.zip`
@@ -40,7 +40,7 @@ cp *.desktop ~/.local/share/file-manager/actions/
 cd && echo "Dios les bendiga"
 ```
 
-y da **Enter**, y quedará una ultima linea en la terminal, dar **Enter** otra vez, y **Reinicia** PCManFM (cerrarlo y volverlo a abrir) y quedará instalado correctamente
+y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la terminal usada tal vez tengas que dar Enter otra vez) y **Reinicia** PCManFM (cerrarlo y volverlo a abrir) y quedará instalado correctamente
 
 - Hacer clic derecho sobre un archivo comprimido (`.zip`, `.rar`, etc.)
 - Verás dos nuevas opciones:
@@ -49,6 +49,54 @@ y da **Enter**, y quedará una ultima linea en la terminal, dar **Enter** otra v
 con iconos:
 
 ![20250505-0004 extraer aquí con engrampa en PCManFM](vx_images/345998725303063.png)
+
+## 🔍 Explicación línea por línea del Script
+
+**1. `mkdir -p ~/.local/share/file-manager/actions/`**
+- Crea la carpeta donde `pcmanfm-qt` busca las acciones personalizadas.
+- La opción `-p` asegura que se creen todas las carpetas necesarias si no existen.
+- Si ya existe, no hace nada.
+
+📁 Carpeta final:  
+`~/.local/share/file-manager/actions/`
+
+**2. `cd /tmp`**
+- Cambia al directorio temporal `/tmp`.
+- Es una ubicación común para descargar o clonar repositorios temporales.
+
+**3. `git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here`**
+- Clona mi repositorio de GitHub en la máquina local.
+- Descarga los archivos `.desktop` desde el repositorio público.
+
+📦 Esto crea una carpeta llamada `PCManFM-engrampa-Extract-Here` dentro de `/tmp`.
+
+**4. `cd PCManFM-engrampa-Extract-Here`**
+- Entra a la carpeta recién clonada para trabajar con sus archivos.
+
+**5. `cp *.desktop ~/.local/share/file-manager/actions/`**
+- Copia todos los archivos `.desktop` (en este caso, las dos acciones) a la carpeta de acciones personalizadas de `pcmanfm-qt`.
+
+📄 Archivos copiados:
+- `engrampa-extract-here.desktop`
+- `engrampa-extract-to-folder.desktop`
+
+**6. `cd && echo "Dios les bendiga"`**
+- `cd` sin argumentos vuelve al directorio personal (`~`).
+- `echo "Dios les bendiga"` muestra un mensaje amigable y positivo en la terminal 😊
+
+**✅ Resultado final**
+
+Después de ejecutar este script:
+
+- Se habrán instalado correctamente las dos acciones personalizadas.
+- Al abrir `pcmanfm-qt`, al hacer clic derecho sobre un archivo comprimido (`.zip`, `.tar.gz`, etc.) aparecerán estas opciones:
+  - **"Extraer aquí"**
+  - **"Extraer en carpeta"**
+
+Ambas usarán **Engrampa**, respetando el idioma del sistema y mostrando iconos apropiados si están disponibles.
+
+---
+
 
 # Si deseas hacerlo manualmente todo haz lo siguiente
 Puede que haya alguien que tenga dudas en usar el metodo automático de arriba y quiera revisar personalmente cada paso y cada parte del código, entonces si fuera así, para su tranquilidad haga lo siguiente:

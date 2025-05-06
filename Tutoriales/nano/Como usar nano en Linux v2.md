@@ -118,7 +118,7 @@ Nano **no tiene selección con el mouse** para cortar texto en modo consola pura
 
 1.  **Ubica el cursor al inicio del texto** que quieres borrar.
 
-2.  **Presiona `Esc + A`** Esto activa el **modo de selección**
+2.  **Presiona `Esc + A`** Esto activa el **modo de selección** (si lo presionas otra vez lo desactivas)
 
 3.  **Mueve el cursor** con las teclas de flecha para seleccionar el bloque deseado (verás que el cursor empieza a marcar texto a medida que te mueves).
 

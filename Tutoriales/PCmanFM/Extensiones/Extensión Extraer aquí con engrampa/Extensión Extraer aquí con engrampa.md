@@ -167,11 +167,11 @@ Después de crear estos dos archivos, **Reinicia** `pcmanfm-qt` (cierra y vuelve
 Copiar todas las siguietnes líneas y poner en la terminal (las he preparado para que las pueda copiar todas y ahorrar tiempo):
 
 ```bash
-mkdir -p ~/.local/share/kservices5/ServiceMenus
+mkdir -p ~/.local/share/file-manager/actions/
 cd /tmp
-git clone https://github.com/wachin/engrampa-kde-service
-cd engrampa-kde-service
-cp *.desktop ~/.local/share/kservices5/ServiceMenus
+git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here
+cd PCManFM-engrampa-Extract-Here
+cp *.desktop ~/.local/share/file-manager/actions/
 cd && echo "Dios les bendiga"
 ```
 

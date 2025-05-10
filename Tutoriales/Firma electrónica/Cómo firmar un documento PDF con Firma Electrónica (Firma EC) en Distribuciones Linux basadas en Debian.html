@@ -1,0 +1,73 @@
+<p>Tutorial paso a paso para usar Firma EC en Sistemas Operativos
+basadso en Debian:</p>
+<h3 id="configuración-inicial"><strong>1. Configuración
+inicial</strong></h3>
+<ol type="1">
+<li><p>Asegúrate de que Java esté correctamente instalado. Puedes
+verificarlo con:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-version</span></span></code></pre></div>
+<p>Si no está instalado o necesitas actualizarlo, usa:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install default-jre</span></code></pre></div></li>
+<li><p>Abre Firma EC desde el menú de aplicaciones o ejecuta:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firmaec</span></span></code></pre></div></li>
+</ol>
+<h3 id="descarga-e-instalación-de-firma-ec"><strong>2. Descarga e
+instalación de Firma EC</strong></h3>
+<ol type="1">
+<li><p>Ve al sitio oficial de <a
+href="https://www.firmadigital.gob.ec/wp-content/uploads/2018/05/Manual-Usuario-FirmaEC-.pdf">Firma
+EC</a> y descarga la versión para “Distribuciones basadas en
+Debian”.</p></li>
+<li><p>Una vez descargado el archivo <code>.deb</code>, abre una
+terminal y navega al directorio donde se encuentra el archivo.</p></li>
+<li><p>Instala el paquete con el siguiente comando:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> nombre_del_archivo.deb</span></code></pre></div>
+<p>Reemplaza <code>nombre_del_archivo.deb</code> con el nombre exacto
+del archivo descargado.</p></li>
+<li><p>Si encuentras errores de dependencias, corrígelos con:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-f</span></span></code></pre></div></li>
+</ol>
+<h3 id="firma-de-documentos-con-certificado-en-archivo"><strong>3. Firma
+de documentos con certificado en archivo</strong></h3>
+<ol type="1">
+<li>Abre Firma EC y selecciona la opción para firmar documentos.</li>
+<li>En el programa en “<strong>Certificado en</strong>” selecciona
+“<strong>Archivo</strong>” y da clic en “<strong>Examinar</strong>” y
+carga tu archivo de firma electrónica (normalmente un archivo
+<code>.p12</code> o <code>.pfx</code>) e ingresa la contraseña asociada
+en el apartado para ella. En caso de que el archivo que descargaste en
+Linux no tenga extensión, escríbela manualmente, prueba con ambas, yo
+uso .pfx para la firma que adquirí en <a
+href="https://portal-sd.securitydata.net.ec/">https://portal-sd.securitydata.net.ec/</a></li>
+<li>En “<strong>DOCUMENTOS (S) SELECCIONADO (S)</strong>” en
+“<strong>Examinar</strong>” selecciona el documento PDF que deseas
+firmar, debe estar en PDF.</li>
+<li>Define la ubicación de la firma en el documento y confirma.</li>
+</ol>
+<h3 id="verificación-de-documentos-firmados"><strong>4. Verificación de
+documentos firmados</strong></h3>
+<ol type="1">
+<li>Si necesitas verificar un documento firmado, selecciona la opción
+correspondiente en Firma EC.</li>
+<li>Carga el documento firmado y revisa los detalles de la firma, como
+la validez y el emisor.</li>
+</ol>
+<h3 id="validación-de-certificados"><strong>5. Validación de
+certificados</strong></h3>
+<ol type="1">
+<li>Para validar tu certificado, selecciona la opción de validación en
+el software.</li>
+<li>Carga tu archivo de firma y verifica los detalles del certificado,
+como la fecha de expiración y el emisor.</li>
+</ol>
+<p>Si necesitas más detalles, puedes consultar el <a
+href="https://www.firmadigital.gob.ec/wp-content/uploads/2018/05/Manual-Usuario-FirmaEC-.pdf">manual
+oficial de usuario</a> o explorar tutoriales en video como <a
+href="https://www.youtube.com/watch?v=dm5mHbGTI4k">Descargar e instalar
+FIRMA EC - Firmar PDF - Validar archivos firmados | DigitalEducas</a>
+que explica el proceso de manera visual.</p>

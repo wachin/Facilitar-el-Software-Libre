@@ -25,24 +25,11 @@ sudo apt remove pipewire-audio-client-libraries pipewire-jack
    systemctl --user mask pipewire pipewire-pulse wireplumber
    ```
 
-3. **Instalar pulseaudio**
+3. **Instalar pulseaudio qjackctl y los demás paquetes y configuraciones**
 
-```bash
-sudo apt install pulseaudio
-```
+por favor sigue el siguiente tutorial para instalar todo lo necesario
 
-3. **Reiniciar PulseAudio**:
+**Cómo instalar y usar Jack Audio Connection Kit (JACK) + Ardour y sus plugins con un Kernel de Tiempo Real en MX Linux 21 (basado en Debian 11)**   
+https://facilitarelsoftwarelibre.blogspot.com/2020/10/instalar-realtime-kernel-en-mx-linux.html
 
-   ```bash
-   pulseaudio --start
-   ```
 
-4. **Abrir JACK**
-
-```bash
-    qjackctl &
-```
-
----
-
-Pero al grabar un audio desde el microfono con Audacity me sale un mensaje que dice que se han perdido las etiquetas porque se está tratando de grabar en un dispositivo muy lento, lo cual efectivamente es así, pues estoy usando Linux Debian 12 instalado en un pendrive SanDisk y no en un disco de estado sólido ni un disco duro

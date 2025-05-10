@@ -1,0 +1,144 @@
+<h1
+id="cómo-desabilitar-pipewire-en-linux-basados-en-debian-12-como-mx-linux-23-etc-y-otros-como-ubuntu-23.04-y-basados-en-él.md">Cómo
+desabilitar PipeWire en Linux basados en Debian 12 como MX Linux 23, etc
+y otros como Ubuntu 23.04 y basados en él.md</h1>
+<p>En Distribuciones Linux basados en Debian 12 como MX Linux 23, antiX
+23 u otros como Ubuntu 23.04 lanzados aproximadamentes en el 2023 es
+posible que vengan con PipeWire en vez de PulseAudio, si usted como yo
+desea deshabilitar PipeWire para habilitar PulseAudio y usarlo en
+conjunto con QjackCtl hacer lo siguiente</p>
+<h2 id="usar-jack-sin-pipewire-en-debian-12-mx-linux-23">Usar JACK sin
+PipeWire en Debian 12, MX Linux 23</h2>
+<p>Si prefieres el método antiguo (como en Debian 11), puedes
+<strong>deshabilitar PipeWire y usar JACK directamente</strong>:</p>
+<p>Desinstalar:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt remove pipewire-audio-client-libraries pipewire-jack</span></code></pre></div>
+<ol type="1">
+<li><p><strong>Deshabilitar PipeWire</strong>:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> stop pipewire pipewire-pulse wireplumber</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> disable pipewire pipewire-pulse wireplumber</span></code></pre></div></li>
+<li><p><strong>Enmascarar PipeWire para que no se active</strong>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> mask pipewire pipewire-pulse wireplumber</span></code></pre></div></li>
+<li><p><strong>Opcional: Limpiar configuraciones
+residuales</strong></p></li>
+</ol>
+<p>Si quieres dejar el sistema limpio, podrías borrar las
+configuraciones locales de audio del usuario:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/.config/pipewire/</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/.config/wireplumber/</span></code></pre></div>
+<blockquote>
+<p>⚠️ Esto eliminará cualquier ajuste personalizado, pero ayuda a evitar
+problemas si PipeWire había estado activo antes.</p>
+</blockquote>
+<ol start="4" type="1">
+<li>Para <strong>verificar si PulseAudio está funcionando
+correctamente</strong> en MX Linux 23 (o cualquier sistema basado en
+Debian/Ubuntu con PulseAudio), puedes usar los siguientes comandos:</li>
+</ol>
+<hr />
+<p>🔍 4.1. <strong>Verificar si PulseAudio está corriendo:</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pulseaudio</span> <span class="at">--check</span></span></code></pre></div>
+<ul>
+<li>Si devuelve silencio y código de salida <code>0</code>, significa
+que PulseAudio está configurado correctamente.</li>
+<li>Si no está corriendo, puedes iniciarlo con:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pulseaudio</span> <span class="at">--start</span></span></code></pre></div>
+<hr />
+<p>📋 4.2. <strong>Listar dispositivos de audio
+reconocidos:</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pactl</span> info</span></code></pre></div>
+<p>Esto muestra información general sobre el servidor PulseAudio,
+incluyendo el <strong>servidor actual</strong>, el
+<strong>usuario</strong>, el <strong>estado del daemon</strong>, y el
+<strong>dispositivo de salida predeterminado</strong>.</p>
+<hr />
+<p>🎧 4.3. <strong>Verificar la salida de audio:</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pactl</span> list short sinks</span></code></pre></div>
+<p>Te muestra las “salidas de audio” disponibles (por ejemplo,
+altavoces, auriculares). Deberías ver al menos una salida activa.</p>
+<hr />
+<p>👂 4.4. <strong>Verificar entradas de audio
+(micrófonos):</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pactl</span> list short sources</span></code></pre></div>
+<p>Muestra los dispositivos de entrada de audio (micrófonos).</p>
+<hr />
+<p>🔄 4.5. <strong>Reiniciar PulseAudio (útil para resolver problemas
+temporales):</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pulseaudio</span> <span class="at">--kill</span> <span class="kw">&amp;&amp;</span> <span class="ex">pulseaudio</span> <span class="at">--start</span></span></code></pre></div>
+<p>Este comando mata el proceso actual de PulseAudio y lo reinicia.</p>
+<hr />
+<p>🧰 4.6. <strong>Opcional: Abrir control de volumen
+avanzado</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pavucontrol</span></span></code></pre></div>
+<p>Si tienes instalado <code>pavucontrol</code> (PulseAudio Volume
+Control), te permite ajustar niveles de sonido, dispositivos de
+entrada/salida, perfiles, etc., desde una interfaz gráfica.</p>
+<hr />
+<h3 id="resumen-rápido-de-comandos-útiles">✅ Resumen rápido de comandos
+útiles</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pulseaudio --check</code></td>
+<td>Verifica si PulseAudio está configurado</td>
+</tr>
+<tr class="even">
+<td><code>pulseaudio --start</code></td>
+<td>Inicia PulseAudio</td>
+</tr>
+<tr class="odd">
+<td><code>pulseaudio --stop</code></td>
+<td>Detiene PulseAudio</td>
+</tr>
+<tr class="even">
+<td><code>pulseaudio --kill</code></td>
+<td>Mata el proceso actual de PulseAudio</td>
+</tr>
+<tr class="odd">
+<td><code>pactl info</code></td>
+<td>Información general del estado de PulseAudio</td>
+</tr>
+<tr class="even">
+<td><code>pactl list short sinks</code></td>
+<td>Lista salidas de audio</td>
+</tr>
+<tr class="odd">
+<td><code>pactl list short sources</code></td>
+<td>Lista entradas de audio (micrófonos)</td>
+</tr>
+<tr class="even">
+<td><code>pavucontrol</code></td>
+<td>Panel de control gráfico de audio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<ol start="5" type="1">
+<li><strong>Instalar pulseaudio qjackctl y los demás paquetes y
+configuraciones</strong></li>
+</ol>
+<p>Por favor sigue el siguiente tutorial para instalar todo lo
+necesario</p>
+<p><strong>Cómo instalar y usar Jack Audio Connection Kit (JACK) +
+Ardour y sus plugins con un Kernel de Tiempo Real en MX Linux 21 (basado
+en Debian 11)</strong><br />
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2020/10/instalar-realtime-kernel-en-mx-linux.html">https://facilitarelsoftwarelibre.blogspot.com/2020/10/instalar-realtime-kernel-en-mx-linux.html</a></p>

@@ -1,0 +1,290 @@
+<h1
+id="cómo-instalar-yt-dlp-en-termux-para-descargar-videos-audio-mp3-de-youtube-y-otros-sitios"><strong>Cómo
+instalar yt-dlp en Termux para descargar videos, audio (MP3) de YouTube
+y otros sitios</strong></h1>
+<p><code>yt-dlp</code> es una bifurcación (fork) de
+<code>youtube-dl</code>, una herramienta popular de línea de comandos
+utilizada para descargar videos de YouTube y otros sitios web.
+<code>yt-dlp</code> incluye características adicionales, mejoras en la
+funcionalidad original y soporte para más plataformas. Es una
+herramienta poderosa para gestionar contenido multimedia desde diversas
+plataformas.</p>
+<p>Antes de continuar con este tutorial, te recomiendo revisar mi guía
+sobre cómo instalar y usar <strong>Git en Termux</strong>, ya que
+contiene información valiosa sobre la configuración inicial de
+Termux:</p>
+<p><a
+href="https://github.com/wachin/Instalar-git-en-Android-con-Termux">Tutorial:
+Uso de Git en Termux para Android</a></p>
+<hr />
+<h2 id="paso-1-actualizar-los-repositorios-de-termux"><strong>Paso 1:
+Actualizar los repositorios de Termux</strong></h2>
+<p>Abre Termux y ejecuta el siguiente comando para actualizar los
+paquetes disponibles:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pkg</span> update</span></code></pre></div>
+<p>Este proceso puede tardar unos minutos. Cuando te pida confirmación,
+responde con:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">y</span></span></code></pre></div>
+<p>Es posible que te haga varias preguntas; sigue respondiendo con
+<code>y</code> hasta que el proceso termine.</p>
+<hr />
+<h2 id="paso-2-instalar-las-dependencias-necesarias"><strong>Paso 2:
+Instalar las dependencias necesarias</strong></h2>
+<p>Para usar <code>yt-dlp</code>, necesitarás Python y FFmpeg. Ejecuta
+el siguiente comando para instalarlos:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pkg</span> install python ffmpeg <span class="at">-y</span></span></code></pre></div>
+<p>Aquí: - <code>python</code>: Es necesario para ejecutar
+<code>yt-dlp</code>. - <code>ffmpeg</code>: Es una herramienta esencial
+para fusionar video y audio.</p>
+<hr />
+<h2 id="paso-3-instalar-yt-dlp"><strong>Paso 3: Instalar
+yt-dlp</strong></h2>
+<p>Una vez instaladas las dependencias, instala <code>yt-dlp</code>
+usando <code>pip</code>:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install yt-dlp</span></code></pre></div>
+<hr />
+<h2 id="paso-4-mantener-yt-dlp-actualizado"><strong>Paso 4: Mantener
+yt-dlp actualizado</strong></h2>
+<p>Es recomendable mantener <code>yt-dlp</code> actualizado para
+aprovechar las últimas funciones y correcciones. Usa el siguiente
+comando para actualizarlo:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">-U</span> <span class="st">&quot;yt-dlp[default]&quot;</span></span></code></pre></div>
+<hr />
+<h2 id="paso-5-configurar-el-repositorio-de-termux"><strong>Paso 5:
+Configurar el repositorio de Termux</strong></h2>
+<p>Para evitar problemas con los repositorios, asegúrate de usar un solo
+repositorio confiable. Puedes verificar y cambiar tu repositorio con el
+siguiente comando:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">termux-change-repo</span></span></code></pre></div>
+<p>Cuando aparezca el menú, selecciona la opción para elegir manualmente
+un repositorio (por ejemplo, Grimler o BFSU). Luego, actualiza los
+paquetes nuevamente:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pkg</span> update</span></code></pre></div>
+<p>Recomendación: Revisa los repositorios disponibles en el <a
+href="https://github.com/wachin/Instalar-git-en-Android-con-Termux">tutorial
+de Git en Termux</a>.</p>
+<hr />
+<h2 id="paso-6-acceder-al-almacenamiento-interno"><strong>Paso 6:
+Acceder al almacenamiento interno</strong></h2>
+<p>Para descargar archivos directamente en tu almacenamiento interno,
+configura los permisos de acceso con:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">termux-setup-storage</span></span></code></pre></div>
+<p>Luego, navega al directorio compartido con uno de los siguientes
+métodos:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /sdcard</span></code></pre></div>
+<p>O bien:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> storage/shared</span></code></pre></div>
+<p>Para verificar tu ubicación actual, usa:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<hr />
+<h2 id="paso-7-descargar-contenido-multimedia-con-yt-dlp"><strong>Paso
+7: Descargar contenido multimedia con yt-dlp</strong></h2>
+<h3 id="descargar-videos-con-audio-formato-mp4"><strong>Descargar videos
+con audio (formato MP4)</strong></h3>
+<p>Usa el siguiente comando para descargar un video con audio en formato
+<code>.mp4</code>:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>Explicación del comando: - <code>-f "bv*+ba"</code>: Selecciona el
+mejor formato de video (<code>bv*</code>) y lo combina con el mejor
+formato de audio (<code>ba</code>). - <code>-S ext:mp4</code>: Prioriza
+los formatos con extensión <code>.mp4</code>. -
+<code>--merge-output-format mp4</code>: Garantiza que el archivo final
+sea un <code>.mp4</code>. - <code>&lt;URL_DEL_VIDEO&gt;</code>:
+Reemplaza esto con la URL del video que deseas descargar.</p>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 https://www.youtube.com/watch<span class="pp">?</span>v=example</span></code></pre></div>
+<p>Verifica que el archivo se haya descargado correctamente:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<hr />
+<h3 id="descargar-solo-audio-formato-mp3"><strong>Descargar solo audio
+(formato MP3)</strong></h3>
+<p>Para descargar solo el audio en formato MP3, usa el siguiente
+comando:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 https://youtu.be/g8MX3GpouE4<span class="pp">?</span>si=C6gwurplt06fsBe0</span></code></pre></div>
+<p>También puedes descargar audio en otros formatos como
+<code>m4a</code>, <code>aac</code>, <code>flac</code>, etc., cambiando
+la extensión en el comando.</p>
+<hr />
+<h3 id="descargar-videos-de-otros-sitios-web"><strong>Descargar videos
+de otros sitios web</strong></h3>
+<p><code>yt-dlp</code> también es compatible con otros sitios web.
+Simplemente cambia la URL en el comando:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="st">&quot;https://www.example.com/video&quot;</span></span></code></pre></div>
+<hr />
+<h2 id="notas-adicionales"><strong>Notas adicionales</strong></h2>
+<ul>
+<li><p><strong>Velocidad de descarga:</strong> Si experimentas problemas
+de velocidad, verifica tu conexión a internet. También puedes intentar
+usar un servidor proxy o VPN si sospechas limitaciones
+geográficas.</p></li>
+<li><p><strong>Depuración:</strong> Si encuentras problemas durante la
+descarga, agrega la opción <code>-v</code> al comando para obtener
+información detallada:</p></li>
+</ul>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-v</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<hr />
+<h2 id="consultas-útiles"><strong>Consultas útiles</strong></h2>
+<ul>
+<li><a href="https://wiki.termux.com/wiki/Termux-setup-storage">Termux
+Setup Storage</a></li>
+<li><a
+href="https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/">yt-dlp
+en Reddit</a></li>
+</ul>
+<hr />
+<p>Con estos pasos, estarás listo para descargar videos, audio y otros
+contenidos multimedia desde YouTube y otros sitios web utilizando
+<code>yt-dlp</code> en Termux en Android. ¡Disfruta de tus
+descargas!</p>
+<hr />
+<h1
+id="descargar-videos-en-formato-mp3-con-diferentes-calidades"><strong>Descargar
+videos en formato MP3 con diferentes calidades</strong></h1>
+<p><code>yt-dlp</code> es una herramienta muy flexible que permite
+descargar audio en varios formatos y calidades. A continuación, se
+explica cómo descargar videos en formato MP3 con opciones específicas de
+calidad.</p>
+<h2
+id="descargar-audio-en-formato-mp3-con-calidad-específica"><strong>1.
+Descargar audio en formato MP3 con calidad específica</strong></h2>
+<p>Para descargar un video en formato MP3 con una calidad específica,
+usa el siguiente comando:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> <span class="op">&lt;</span>CALIDAD<span class="op">&gt;</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>Explicación del comando: - <code>-x</code>: Extrae solo el audio. -
+<code>--audio-format mp3</code>: Especifica que el formato de salida
+debe ser MP3. - <code>--audio-quality &lt;CALIDAD&gt;</code>: Define la
+calidad del audio en kbps (kilobits por segundo). -
+<code>&lt;URL_DEL_VIDEO&gt;</code>: Reemplaza esto con la URL del video
+que deseas descargar.</p>
+<h3 id="ejemplo-práctico"><strong>Ejemplo práctico</strong></h3>
+<p>Supongamos que deseas descargar el siguiente video en formato MP3 con
+una calidad de 128 kbps:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> 128K https://www.youtube.com/watch<span class="pp">?</span>v=example</span></code></pre></div>
+<h3 id="calidades-disponibles"><strong>Calidades
+disponibles</strong></h3>
+<p>Aquí tienes una lista de las calidades que puedes especificar:</p>
+<ul>
+<li><code>320K</code>: Calidad máxima (320 kbps)</li>
+<li><code>256K</code>: Alta calidad (256 kbps)</li>
+<li><code>224K</code>: Buena calidad (224 kbps)</li>
+<li><code>192K</code>: Calidad estándar (192 kbps)</li>
+<li><code>160K</code>: Media calidad (160 kbps)</li>
+<li><code>144K</code>: Baja calidad (144 kbps)</li>
+<li><code>128K</code>: Calidad promedio (128 kbps)</li>
+<li><code>112K</code>: Baja calidad (112 kbps)</li>
+<li><code>96K</code>: Muy baja calidad (96 kbps)</li>
+<li><code>80K</code>: Calidad mínima aceptable (80 kbps)</li>
+<li><code>64K</code>: Calidad muy baja (64 kbps)</li>
+<li><code>56K</code>: Calidad extremadamente baja (56 kbps)</li>
+<li><code>48K</code>: Calidad para voz (48 kbps)</li>
+<li><code>40K</code>: Calidad mínima para voces claras (40 kbps)</li>
+</ul>
+<p><strong>Nota:</strong> Las calidades más bajas son ideales para
+archivos de voz o cuando necesitas ahorrar espacio.</p>
+<hr />
+<h2 id="descargar-videos-desde-otras-plataformas"><strong>2. Descargar
+videos desde otras plataformas</strong></h2>
+<p><code>yt-dlp</code> no solo funciona con YouTube, sino también con
+muchas otras plataformas como Facebook, Instagram, TikTok y páginas web.
+A continuación, se explica cómo hacerlo.</p>
+<h3 id="facebook"><strong>Facebook</strong></h3>
+<p>Para descargar un video de Facebook, simplemente usa el siguiente
+comando:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="op">&lt;</span>URL_DEL_VIDEO_DE_FACEBOOK<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> https://www.facebook.com/watch/<span class="pp">?</span>v=1234567890</span></code></pre></div>
+<h3 id="instagram"><strong>Instagram</strong></h3>
+<p>Para descargar un video o imagen de Instagram, usa el siguiente
+comando:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="op">&lt;</span>URL_DEL_CONTENIDO_DE_INSTAGRAM<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> https://www.instagram.com/p/ABC123456789/</span></code></pre></div>
+<h3 id="tiktok"><strong>TikTok</strong></h3>
+<p>Para descargar un video de TikTok, usa el siguiente comando:</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="op">&lt;</span>URL_DEL_VIDEO_DE_TIKTOK<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> https://www.tiktok.com/@usuario/video/1234567890</span></code></pre></div>
+<h3 id="páginas-web-genéricas"><strong>Páginas web
+genéricas</strong></h3>
+<p>Si encuentras un video incrustado en una página web, puedes intentar
+descargarlo usando <code>yt-dlp</code>. Simplemente copia la URL de la
+página y ejecuta el siguiente comando:</p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="op">&lt;</span>URL_DE_LA_PÁGINA_WEB<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> https://www.ejemplo.com/video</span></code></pre></div>
+<hr />
+<h2 id="notas-adicionales-1"><strong>3. Notas adicionales</strong></h2>
+<ul>
+<li><p><strong>Formatos alternativos:</strong> Si prefieres descargar el
+audio en otro formato (por ejemplo, AAC, FLAC, OGG), puedes cambiar el
+parámetro <code>--audio-format</code> al formato deseado. Ejemplo:</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> aac <span class="at">--audio-quality</span> 128K <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div></li>
+<li><p><strong>Compatibilidad:</strong> Algunas plataformas pueden
+requerir autenticación o cookies para descargar contenido. En esos
+casos, consulta la documentación oficial de <code>yt-dlp</code> para
+obtener instrucciones específicas.</p></li>
+<li><p><strong>Depuración:</strong> Si encuentras problemas durante la
+descarga, agrega la opción <code>-v</code> al comando para obtener
+información detallada sobre el proceso:</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-v</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> 128K <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div></li>
+</ul>
+<hr />
+<p>Con estos comandos y explicaciones, podrás descargar videos en
+formato MP3 con diferentes calidades y acceder a contenido multimedia
+desde diversas plataformas.</p>
+<hr />
+<h3 id="un-versículo-bíblico"><strong>un Versículo Bíblico</strong>
+🌟</h3>
+<blockquote>
+<p><strong>“Y estas palabras que yo te mando hoy, estarán sobre tu
+corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu
+casa, y andando por el camino, y al acostarte, y cuando te
+levantes.”</strong><br />
+— <strong>Deuteronomio 6:6-7</strong> 📖✨</p>
+</blockquote>
+<hr />
+<h3 id="explicación"><strong>Explicación</strong> 🤔💡</h3>
+<p>Este versículo nos recuerda la importancia de <strong>compartir
+conocimientos y sabiduría</strong> con los demás, especialmente con
+aquellos que están dispuestos a aprender. Al crear tutoriales como este,
+estamos compartiendo lo que hemos aprendido (nuestro “conocimiento”)
+para que otros puedan beneficiarse de ello, tal como se menciona en este
+pasaje bíblico.</p>
+<p>Al usar herramientas como <code>Termux</code>, <code>git</code> y
+<code>yt-dlp</code>, estamos aprovechando la tecnología moderna para
+<strong>facilitar el acceso a la información</strong> desde los
+celulares Android, lo cual es una forma práctica de aplicar este
+principio bíblico en nuestra vida diaria. 🌍💻</p>
+<hr />

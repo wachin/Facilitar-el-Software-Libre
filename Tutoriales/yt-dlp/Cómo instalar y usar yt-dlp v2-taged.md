@@ -60,28 +60,26 @@ python3 -m pip install -U "yt-dlp[default]"
 
 Este comando debemos de usarlo con cierta frecuencia, puede ser una vez al mes o una vez cada dos meses, es para ver si han enviado alguna actualización y aplicarla, debido a que sino se hace esto, es posible que ya no se pueda descargar desde Youtube, porque ellos a veces hacen cambios.
 
-## **Paso 5: Configurar el repositorio de Termux**
------------------------------------------------
-
-Para evitar problemas con los repositorios, asegúrate de usar un solo repositorio confiable. Puedes verificar y cambiar tu repositorio con el siguiente comando:
-
-Cuando aparezca el menú, selecciona la opción para elegir manualmente un repositorio (por ejemplo, Grimler o BFSU). Luego, actualiza los paquetes nuevamente:
-
-Recomendación: Revisa los repositorios disponibles en el [tutorial de Git en Termux](https://github.com/wachin/Instalar-git-en-Android-con-Termux).
-
-
-
-## **Paso 6: Acceder al almacenamiento interno**
----------------------------------------------
+## **Paso 5: Acceder al almacenamiento interno**
 
 Para descargar archivos directamente en tu almacenamiento interno, configura los permisos de acceso con:
 
+```bash
+termux-setup-storage
+```
 Luego, navega al directorio compartido con uno de los siguientes métodos:
-
+```bash
+cd /sdcard
+```
 O bien:
-
+```bash
+cd storage/shared
+```
 Para verificar tu ubicación actual, usa:
-
+```bash
+pwd
+```
+sólo allí debes descargar los videos
 
 
 ### **Descargar videos con audio (formato MP4)**
@@ -91,7 +89,6 @@ Usa el siguiente comando para descargar un video con audio en formato `.mp4`:
 ```bash
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 ```
-
 
 Explicación del comando: 
 
@@ -111,7 +108,10 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 https://www.youtube.com/
 
 
 Verifica que el archivo se haya descargado correctamente:
-
+```bash
+ls
+```
+allí deberás ver los archivos, claro también los puedes ver con el administrador de archivos de Android
 
 
 ### **Descargar solo audio, formato MP3**
@@ -121,7 +121,6 @@ Para descargar solo el audio en formato MP3, usa el siguiente comando:
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 ```
-
 
 **Explicación de las opciones nuevas:**
 

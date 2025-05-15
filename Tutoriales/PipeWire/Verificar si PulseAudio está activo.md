@@ -19,29 +19,10 @@ Entonces **PulseAudio está funcionando**.
 Si, por el contrario, te dice:
 
 ```
-Connection refused
+Conexión rechazada
 ```
 
 Significa que **no está corriendo o hay un problema**.
-
----
-
-## 🛠️ Solución rápida si no funciona
-
-Si después de `pulseaudio --start` aún no se inicia, prueba reiniciarlo así:
-
-```bash
-pulseaudio --kill
-pulseaudio --start
-```
-
-Y luego otra vez:
-
-```bash
-pactl info
-```
-
----
 
 ## 💡 Recomendaciones adicionales
 
@@ -65,9 +46,7 @@ pactl info
    sudo apt install --reinstall pulseaudio
    ```
 
-4. **Asegúrate de no tener PipeWire activo**, porque podría estar interfiriendo (como viste antes).
 
----
 
 ¿Quieres probar ahora si suena el audio? Puedes usar:
 

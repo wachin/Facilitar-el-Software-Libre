@@ -1,26 +1,26 @@
 # Cómo instalar yt-dlp en Termux en Android para descargar videos, audio (MP3) de YouTube, Facebook, Tiktok, Instagram y otros
-`**Nota**: Este tutorial es para celulares con Android, si deseas instalar yt-dlp en Linux aconsejo [este tutorial.   ](https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html)`
+`**Nota**: Este tutorial es para celulares con Android, si deseas instalar yt-dlp en Linux aconsejo [este tutorial.](https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html)`
 
 Ahora sí, sigamos: `yt-dlp` es una bifurcación (fork) de `youtube-dl`, una herramienta popular de línea de comandos utilizada para descargar videos de YouTube y otros sitios web. `yt-dlp` incluye características adicionales, mejoras en la funcionalidad original y soporte para más plataformas. Es una herramienta poderosa para gestionar contenido multimedia desde diversas plataformas.
 
-Antes de continuar con este tutorial, debes revisar mi guía sobre cómo instalar y usar **Git en Termux**, ya que contiene información imprescindible sobre la instalación de Termux Full y configuración:
 
-[Tutorial: Uso de Git en Termux para Android](https://github.com/wachin/Instalar-git-en-Android-con-Termux)
-
-
-
-**Paso 1: Actualizar los repositorios de Termux**
+## **Paso 1: Instalar Termux**
 -------------------------------------------------
+Debemos instalar Termux en Android pero no la versión que viene en la Play Store sino la versión completa, esta está en los celulares Xiaomi donde viene disponible en el gestor de software de esos celulares, pero no en otros como los SANSUMG. Vea la siguiente entrada con todas las explicaciones, instale Termux en su Celular con Adroid:
 
-Abre Termux y ejecuta el siguiente comando para actualizar los paquetes disponibles:
+**Tutorial: Uso de Git en Termux para Android**
+[https://github.com/wachin/Instalar-git-en-Android-con-Termux](https://github.com/wachin/Instalar-git-en-Android-con-Termux)
 
-Este proceso puede tardar unos minutos. Cuando te pida confirmación, responde con:
+Si has seguido bien mi tutorial deberás haber usado:
 
-Es posible que te haga varias preguntas; sigue respondiendo con `y` hasta que el proceso termine.
+```bash
+pkg update
+```
+
+y recomiendo usar un solo repositorio de los paquetes Termux, bueno allí están las explicaciones.
 
 
-
-**Paso 2: Instalar las dependencias necesarias**
+## **Paso 2: Instalar las dependencias necesarias**
 ------------------------------------------------
 
 Para usar `yt-dlp`, necesitarás Python y FFmpeg. Ejecuta el siguiente comando para instalarlos:
@@ -29,8 +29,7 @@ Para usar `yt-dlp`, necesitarás Python y FFmpeg. Ejecuta el siguiente comando p
 pkg install python ffmpeg -y
 ```
 
-
-Aquí: 
+Donde: 
 
 \- `python`: Es necesario para ejecutar `yt-dlp`. 
 
@@ -38,7 +37,7 @@ Aquí:
 
 
 
-**Paso 3: Instalar yt-dlp**
+## **Paso 3: Instalar yt-dlp**
 ---------------------------
 
 Una vez instaladas las dependencias, instala `yt-dld y mutagen` usando `pip`:
@@ -47,22 +46,21 @@ Una vez instaladas las dependencias, instala `yt-dld y mutagen` usando `pip`:
 python -m pip install yt-dlp mutagen
 ```
 
+El paquete de [Python mutagen](https://products.documentprocessing.com/es/metadata/python/mutagen/#:~:text=Mutagen%20es%20una%20biblioteca%20Python%20potente%20y,incluidos%20MP3%2C%20FLAC%2C%20OGG%2C%20AAC%20y%20m%C3%A1s.) sirve para manipular metadatos de archivos de audio. Permite leer, escribir y modificar etiquetas de metadatos en diversos formatos, como MP3, FLAC, OGG, y muchos otros
 
 
-
-**Paso 4: Mantener yt-dlp actualizado**
+## **Paso 4: Mantener yt-dlp actualizado**
 ---------------------------------------
 
-Es recomendable mantener `yt-dlp` actualizado para aprovechar las últimas funciones y correcciones. Usa el siguiente comando para actualizarlo:
+Es recomendable mantener `yt-dlp` actualizado para aprovechar las últimas funciones y correcciones. Este comando es para usarlo después, para actualizarlo:
 
 ```bash
 python3 -m pip install -U "yt-dlp[default]"
 ```
 
+Este comando debemos de usarlo con cierta frecuencia, puede ser una vez al mes o una vez cada dos meses, es para ver si han enviado alguna actualización y aplicarla, debido a que sino se hace esto, es posible que ya no se pueda descargar desde Youtube, porque ellos a veces hacen cambios.
 
-**Importante**.- Este comando debemos de volverlo a usar con cierta frecuencia, puede ser una vez al mes o una vez cada dos meses, es para ver si han enviado una actualización y aplicarla, debido a que sino se hace esto es posible que ya no se pueda descargar desde Youtube, porque ellos a veces hacen cambios.
-
-**Paso 5: Configurar el repositorio de Termux**
+## **Paso 5: Configurar el repositorio de Termux**
 -----------------------------------------------
 
 Para evitar problemas con los repositorios, asegúrate de usar un solo repositorio confiable. Puedes verificar y cambiar tu repositorio con el siguiente comando:
@@ -73,7 +71,7 @@ Recomendación: Revisa los repositorios disponibles en el [tutorial de Git en Te
 
 
 
-**Paso 6: Acceder al almacenamiento interno**
+## **Paso 6: Acceder al almacenamiento interno**
 ---------------------------------------------
 
 Para descargar archivos directamente en tu almacenamiento interno, configura los permisos de acceso con:

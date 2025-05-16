@@ -1,6 +1,8 @@
 # Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
 Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, y para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
 
+**Nota**: Este tutorial es para usarlo en un Sistema Operativo Linux que trae por defecto su Gestor de Ventanas, pero si deseas allí instalar otro, por ejemplo Openbox, debes revisar el siguiente tutorial para activar PolicyKit.
+
 ## Qué se puede instalar desde este repositorio?
 
 En los repositorios de MX Linux hay software muy importante como ejemplo:  
@@ -147,7 +149,7 @@ y luego buscarlo y abrirlo:
 
 **Nota**: La imagen de arriba es en xfe4-appfinder en MX Linux 21 usando el administrador ventanas Fluxbox.
 
-### El motivo de ser de los repositrios de prueba
+### El motivo de ser de los repositorios de prueba
 Los programas que hay en los repositorios de prueba son programas cuya finalidad es que después que estén corregidos por haber pasado en tantas pruebas puedan pasar a los repositorios estables de MX Linux, por tal motivo es posible que después que hayan dejado bien estable algún programa, lo pasen desde los repositorios de prueba a los repositorios estables (o sea, llegará un momento en que es posible que no veamos tal o cual versión en los repositorios de prueba sino en los estables)
 
 sigamos, clic en la pestaña:

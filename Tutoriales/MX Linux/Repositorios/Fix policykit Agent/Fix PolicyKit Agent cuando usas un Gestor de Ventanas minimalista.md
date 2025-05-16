@@ -1,11 +1,13 @@
 
-# Cómo hacer que aplicaciones gráficas con permisos de administrador funcionen en Openbox u otros gestores de ventanas ligeros
+# Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros
 
-Cuando instalas un sistema Linux basado en Debian o Ubuntu (como Debian, MX Linux, Linux Mint, etc.), normalmente viene con un entorno de escritorio completo (como GNOME, KDE, XFCE o LXQt). Estos entornos ya traen configurado automáticamente un **agente de PolicyKit** que permite abrir aplicaciones gráficas que requieren permisos de administrador, como **Synaptic**, **MX Instalador de paquetes**, entre otros.
+## Cómo hacer que aplicaciones gráficas con permisos de administrador funcionen en Openbox u otros gestores de ventanas ligeros
+
+Cuando instalas un sistema Linux basado en Debian o Ubuntu (como Debian, MX Linux, Linux Mint, etc.), normalmente viene con un entorno de escritorio completo (como GNOME, KDE, XFCE o LXQt). Estos entornos ya traen configurado automáticamente un **agente de PolicyKit** que permite abrir aplicaciones gráficas que requieren permisos de administrador, como **Synaptic**, **MX Instalador de paquetes**, **Gparted** entre otros.
 
 Sin embargo, si decides instalar un **gestor de ventanas ligero** como **Openbox** o **Fluxbox**, te puedes encontrar con el siguiente problema:
 
-> **Las aplicaciones que requieren permisos de administrador simplemente no se abren, no muestran ningún mensaje de error, y parece que no pasa nada.**
+> **Las aplicaciones que requieren permisos de administrador simplemente no se abren, no muestran ningún mensaje de error, y parece que no pasa nada. Tampoco se puede realizar tareas gráficas que requieran permisos de administrador.**
 
 Este problema tiene solución, y aquí te explico por qué ocurre y cómo solucionarlo.
 
@@ -88,15 +90,94 @@ guardar y cerrar.
 
 
 
-### Para añadirlo a Fluxbox
+## **Cómo añadir un agente de PolicyKit al inicio en Fluxbox y otros Window Managers (X11)**
 
+En gestores de ventanas ligeros como **Fluxbox**, **IceWM**, **JWM**, **Blackbox**, etc., el procedimiento es muy similar al de Openbox: necesitas ejecutar el **agente de PolicyKit** al inicio de la sesión gráfica, ya que estos entornos no lo hacen automáticamente.
 
+A continuación te explico cómo hacerlo para los más comunes:
 
+---
 
+### ✅ **1. En Fluxbox**
+
+Fluxbox usa un archivo llamado `~/.fluxbox/startup` para ejecutar aplicaciones al inicio de la sesión.
+
+#### 🔧 **Pasos:**
+
+1. Abre el archivo con tu editor favorito:
+
+   ```bash
+   nano ~/.fluxbox/startup
+   ```
+
+2. Antes de la línea `exec fluxbox`, añade el comando correspondiente al agente que quieras usar. Ejemplo:
+
+   ```bash
+   /usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
+   ```
+
+3. Asegúrate de que **la última línea sea**:
+
+   ```bash
+   exec fluxbox
+   ```
+
+4. Guarda y cierra. Luego **cierra sesión y vuelve a entrar en Fluxbox**.
+
+---
+
+### ✅ **2. En IceWM**
+
+IceWM no tiene un archivo de inicio oficial por defecto, pero puedes usar el archivo `~/.icewm/startup`.
+
+#### 🔧 **Pasos:**
+
+1. Crea el archivo si no existe:
+
+   ```bash
+   mkdir -p ~/.icewm
+   nano ~/.icewm/startup
+   ```
+
+2. Añade tu agente de PolicyKit:
+
+   ```bash
+   /usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
+   ```
+
+3. Guarda, dale permisos de ejecución:
+
+   ```bash
+   chmod +x ~/.icewm/startup
+   ```
+
+4. Reinicia la sesión.
+
+---
+
+### ✅ **3. En JWM (Joe's Window Manager)**
+
+JWM usa un archivo de configuración en XML, normalmente en `~/.jwmrc`.
+
+#### 🔧 **Pasos:**
+
+1. Abre el archivo:
+
+   ```bash
+   nano ~/.jwmrc
+   ```
+
+2. Busca la sección `<StartupCommand>` y añade el comando del agente dentro:
+
+   ```xml
+   <StartupCommand>/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1</StartupCommand>
+   ```
+
+3. Guarda, cierra y reinicia JWM.
 
 # PolicyKit Genérico
 
-Si dedeas puedes instalar el siguiente y usarlo
+Si deseas puedes instalar el siguiente y usarlo
 
 ```bash
   sudo apt install lxpolkit
@@ -105,10 +186,10 @@ Si dedeas puedes instalar el siguiente y usarlo
 Si no estás seguro de cuál usar, `lxpolkit` es una opción ligera que funciona en casi todos los casos.
 
 
-Guarda y cierra el archivo. Luego **cierra la sesión y vuelve a entrar en Openbox**.
+Guarda y cierra el archivo. Luego **cierra la sesión y vuelve a entrar en Openbox o tu x11 WM**.
 
 
-### 3. **Verifica que el agente esté funcionando**
+# Verifica que el agente esté funcionando
 
 Abre una terminal y escribe:
 
@@ -118,47 +199,22 @@ ps aux | grep polkit
 
 Deberías ver que tu agente aparece en la lista de procesos.
 
----
 
-## ¿Qué pasa si no lo configuro?
+# 📌 Palabras de búsqueda para Google
 
-Si no se está ejecutando un agente de PolicyKit:
-
-* Aplicaciones como **Synaptic**, **MX Instalador de paquetes**, **GParted**, entre otras, **no abrirán**.
-* No verás ningún mensaje de error, simplemente no ocurre nada.
-* Tampoco podrás realizar tareas gráficas que requieran permisos de administrador.
-
----
-
-## Ejemplo práctico
-
-Yo instalé **Debian 12 con LXQt** y luego agregué los repositorios de **MX Linux** para usar herramientas como el **MX Instalador de paquetes**. Cuando usaba LXQt, todo funcionaba bien. Pero cuando cambié a **Openbox**, el instalador no abría.
-
-La solución fue **añadir esta línea** al archivo `~/.config/openbox/autostart`:
-
-```bash
-lxqt-policykit-agent &
-```
-
-Después de reiniciar la sesión, el problema se resolvió y la ventana de autenticación apareció como debía.
-
----
-
-## Recomendación final
-
-Si usas un gestor de ventanas como Openbox, Fluxbox, i3 o similares, **asegúrate siempre de que un agente de PolicyKit esté activo**. Así evitarás que aplicaciones importantes fallen al intentar obtener permisos de administrador.
-
-Puedes incluso crear un alias para verificar rápidamente si está activo:
-
-```bash
-alias checkpolkit="ps aux | grep -i polkit | grep -v grep"
-```
-
-Así, solo escribes `checkpolkit` en la terminal para comprobar si todo está bien.
-
----
-
-## ¿Te resultó útil este tutorial?
-
-Si tienes preguntas o necesitas ayuda con otro entorno, ¡déjalo en los comentarios!
+1. **Cómo solucionar problemas de permisos en Openbox con PolicyKit**
+2. **Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros**
+3. **¿No se abre Synaptic o el MX Instalador? Aquí la solución en Openbox**
+4. **Habilitar autenticación gráfica en gestores de ventanas ligeros en Linux**
+5. **PolicyKit en Openbox: Solución a errores al abrir programas con permisos de administrador**
+6. **Configurando PolicyKit manualmente en Openbox, Fluxbox e i3**
+7. **Agentes de PolicyKit en entornos sin escritorio: Guía para Openbox**
+8. **Solución a fallos silenciosos de apps root en gestores de ventanas ligeros**
+9. **Cómo integrar PolicyKit en sesiones personalizadas de Linux**
+10. **¿Por qué no se abre Synaptic en Openbox? Aquí tienes la respuesta**
+11. **¿Programas que requieren sudo no funcionan en tu entorno ligero? Esta es la causa**
+12. **¿Openbox no muestra la ventana de autenticación? Aprende a arreglarlo**
+13. **Linux ligero, problemas comunes: cómo arreglar el acceso root gráfico**
+14. **Instalaste Openbox y no puedes usar herramientas gráficas con permisos root? Solución aquí**
+15. **El paso que muchos olvidan al usar Openbox: configurar PolicyKit**
 

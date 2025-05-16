@@ -184,20 +184,20 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ex
 
 `yt-dlp` es una herramienta muy flexible que permite descargar audio en varios formatos y calidades. A continuación, se explica cómo descargar videos en formato MP3 con opciones específicas de calidad.
 
-## Cómo se qué calidad del video tenía cuando fue subido?
+## Cómo se qué calidad del vídeo tenía cuando fue subido?
 
-Antes de continuar explico que un video en youtube puede haber sido subido con muy buena calidad o con una calidad baja pero no podemos saber que yo sepa a qué calidad de audio fue subido un video, ejemplo yo subí este:
+Antes de continuar explico que un video en Youtube puede haber sido subido con muy buena calidad o con una calidad baja, pero no podemos saber que yo sepa a qué calidad de audio fue subido un video, ejemplo yo subí este:
 
 **20220814 Miguel Pelaez presentacion del Ministerio Gedeones Internacionales en Guayaquil**  
-[https://www.youtube.com/watch?v=60AecDF\_Kqg](https://www.youtube.com/watch?v=60AecDF_Kqg)
+[https://youtu.be/60AecDF_Kqg?si=Zw2OdfPeBvSjFZfF](https://youtu.be/60AecDF_Kqg?si=Zw2OdfPeBvSjFZfF)
 
-y al dar clic donde indico lo que podemos ver es la calidad de la imagen del video:  
+y al dar clic en la **Tuerca** y en **Calidad** indico lo que podemos ver que es la calidad de la imagen del video:  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s16000-rw/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s898/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png)
+![20250404 Información de la caldad de un video que subí a Youtube](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s898/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png)
 
-yo lo que hago es escuchar el video y presuponer según lo que escucho qué calidad de audio tendrá (lo mejor es tener un buen auricular).
+y para saber cual es la calidad del audio, yo lo que hago es escuchar el video y presuponer según lo que escucho qué calidad de audio tendrá (lo mejor es tener un buen auricular).
 
-Para descargar un video en formato MP3 con una calidad específica, usa el siguiente comando:
+Entonces, descargar un vídeo en formato MP3 con una calidad específica, usa el siguiente comando:
 
 ```bash
 yt-dlp -x --audio-format mp3 --audio-quality <CALIDAD> <URL_DEL_VIDEO>
@@ -207,11 +207,26 @@ Explicación del comando:
 
 `**-x**`: Extrae solo el audio. 
 
-`**--audio-format mp3**`: Especifica que el formato de salida debe ser MP3. 
+`**--audio-format mp3**`: Especifica que el formato de salida debe ser mp3 que es el más usado, pero también puede ser otro, como: m4a, , aac, flac, wav, opus, alac
 
 `**--audio-quality <CALIDAD>**`: Define la calidad del audio en kbps (kilobits por segundo). 
 
 `**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
+
+### 🎵 Formatos que `yt-dlp` puede convertir con `--audio-format`:
+
+| Formato  | Descripción                                                                      |
+| -------- | -------------------------------------------------------------------------------- |
+| `mp3`    | Muy compatible. Perfecto para reproductores antiguos.                            |
+| `m4a`    | Alta calidad, buena compresión. Recomendado.                                     |
+| `aac`    | Similar a m4a pero sin envoltura MP4.                                            |
+| `flac`   | Audio sin pérdida (lossless). Muy pesado.                                        |
+| `wav`    | Sin compresión, archivos grandes. Uso técnico.                                   |
+| `opus`   | Muy eficiente a bajo bitrate. Ideal para voz.                                    |
+| `vorbis` | Códec abierto, generalmente en `webm`.                                           |
+| `alac`   | Apple Lossless. Menos común, solo si necesitas compatibilidad Apple sin pérdida. |
+
+> 🔧 Esto requiere tener `ffmpeg` correctamente instalado
 
   
 

@@ -140,7 +140,7 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" -
 ```
 funciona.
 
-# **Descargar videos de otros sitios web**
+# Descargar videos de otros sitios web
 
 `yt-dlp` también es compatible con otros sitios web. Simplemente cambia la URL en el comando:
 
@@ -184,12 +184,12 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ex
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
 
-## **Descargar videos en formato MP3 con diferentes calidades**
+## Descargar vídeos en formato mp3 con diferentes calidades
 ------------------------------------------------------------
 
 `yt-dlp` es una herramienta muy flexible que permite descargar audio en varios formatos y calidades. A continuación, se explica cómo descargar videos en formato MP3 con opciones específicas de calidad.
 
-**1\. Descargar audio en formato MP3 con calidad específica**
+**1\. Descargar audio en formato mp3 con calidad específica**
 -------------------------------------------------------------
 
 Antes de continuar explico que un video en youtube puede haber sido subido con muy buena calidad o con una calidad baja pero no podemos saber que yo sepa a qué calidad de audio fue subido un video, ejemplo yo subí este:

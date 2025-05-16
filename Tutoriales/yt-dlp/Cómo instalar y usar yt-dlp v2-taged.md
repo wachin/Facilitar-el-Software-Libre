@@ -8,7 +8,7 @@ Ahora sí, sigamos: `yt-dlp` es una bifurcación (fork) de `youtube-dl`, una her
 
 Debemos instalar Termux en Android pero no la versión que viene en la Play Store sino la versión completa, esta está en los celulares Xiaomi donde viene disponible en el gestor de software de esos celulares, pero no en otros como los SANSUMG. Vea la siguiente entrada con todas las explicaciones, para que pueda instalar Termux en su Celular con Adroid:
 
-**Tutorial: Uso de Git en Termux para Android**
+**Tutorial: Uso de Git en Termux para Android**  
 [https://github.com/wachin/Instalar-git-en-Android-con-Termux](https://github.com/wachin/Instalar-git-en-Android-con-Termux)
 
 Si has seguido bien mi tutorial deberás haber usado:
@@ -300,9 +300,9 @@ Antes de continuar explico que un video en Youtube puede haber sido subido con m
 
 y al dar clic en la **Tuerca** y en **Calidad** indico lo que podemos ver que es la calidad de la imagen del video:  
 
-![20250404 Información de la caldad de un video que subí a Youtube](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s898/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png)
+![20250404 Captura de pantalla de la información de la caldad de un video que subí a Youtube](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s898/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png)
 
-y para saber cual es la calidad del audio, yo lo que hago es escuchar el video y presuponer según lo que escucho qué calidad de audio tendrá (lo mejor es tener un buen auricular).
+y para saber cual es la **calidad del audio**, yo lo que hago es escuchar el video y presuponer según lo que escucho qué calidad de audio tendrá (lo mejor es tener un buen auricular).
 
 Entonces, descargar un vídeo en formato MP3 con una calidad específica, usa el siguiente comando:
 
@@ -310,15 +310,12 @@ Entonces, descargar un vídeo en formato MP3 con una calidad específica, usa el
 yt-dlp -x --audio-format mp3 --audio-quality <CALIDAD> <URL_DEL_VIDEO>
 ```
 
-Explicación del comando: 
+**Explicación del comando:** 
 
-**-x**: Extrae solo el audio. 
-
-**--audio-format mp3**: Especifica que el formato de salida debe ser mp3 que es el más usado, pero también puede ser otro, como: m4a, , aac, flac, wav, opus, alac
-
-**--audio-quality <CALIDAD>**: Define la calidad del audio en kbps (kilobits por segundo). 
-
-**<URL_DEL_VIDEO>**: Reemplaza esto con la URL del video que deseas descargar.
+1. **-x**: Extrae solo el audio.
+2. **--audio-format mp3**: Especifica que el formato de salida debe ser mp3 que es el más usado, pero también puede ser otro, como: m4a, , aac, flac, wav, opus, alac.
+3. **--audio-quality <CALIDAD>**: Define la calidad del audio en kbps (kilobits por segundo).
+4. **<URL_DEL_VIDEO>**: Reemplaza esto con la URL del video que deseas descargar.
 
   
 
@@ -361,14 +358,10 @@ Aquí tienes una lista de las calidades que puedes especificar:
 
 
 # Notas adicionales
--------------------------
 
 *   **Compatibilidad:** Algunas plataformas pueden requerir autenticación o cookies para descargar contenido. En esos casos, consulta la documentación oficial de `yt-dlp` para obtener instrucciones específicas.
-
 *   **Velocidad de descarga:** Si experimentas problemas de velocidad, verifica tu conexión a internet. También puedes intentar usar un servidor proxy o VPN si sospechas limitaciones geográficas.
-    
 *   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada, ejemplos:
-    
 
 ```bash
 yt-dlp -v -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
@@ -402,8 +395,8 @@ Dios les bendiga
 **"File System Limitations on Android." Android Developer Documentation.**  
 [https://developer.android.com/guide/topics/data/data-storage](https://developer.android.com/guide/topics/data/data-storage)
 
-**Termux Setup Storage**
+**Termux Setup Storage**  
 [https://wiki.termux.com/wiki/Termux-setup-storage](https://wiki.termux.com/wiki/Termux-setup-storage)
 
-**yt-dlp en Reddityt-dlp en Reddit**
+**yt-dlp en Reddityt-dlp en Reddit**  
 [https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/](https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/)

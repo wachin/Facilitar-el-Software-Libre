@@ -144,7 +144,7 @@ yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
 
   
 
-# Descargar solo audio, formato mp3
+# Descargar solo audio, formato mp3, u otros
 
 Para descargar solo el audio en formato mp3, usa el siguiente comando:
 
@@ -167,7 +167,7 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtu.be/J
 ```
 Se descargarán algunos archivos, debes esperar a que el proceso termine pues debe quedar sólo un archivo, el de audio, con la imagen de la carátula insertada.
 
-**Para descargar resumiendo el nombre de los archivos**
+## Para descargar resumiendo el nombre de los archivos
 
 Opcionalmente si necesitas que el archivo no contenga caracteres extraños, usa:
 
@@ -180,13 +180,11 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ex
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
 
-## Descargar vídeos en formato mp3 con diferentes calidades
-------------------------------------------------------------
+# Descargar sólo audio en formato mp3 u otros, con diferentes calidades
 
 `yt-dlp` es una herramienta muy flexible que permite descargar audio en varios formatos y calidades. A continuación, se explica cómo descargar videos en formato MP3 con opciones específicas de calidad.
 
-**1\. Descargar audio en formato mp3 con calidad específica**
--------------------------------------------------------------
+## Cómo se qué calidad del video tenía cuando fue subido?
 
 Antes de continuar explico que un video en youtube puede haber sido subido con muy buena calidad o con una calidad baja pero no podemos saber que yo sepa a qué calidad de audio fue subido un video, ejemplo yo subí este:
 
@@ -217,7 +215,7 @@ Explicación del comando:
 
   
 
-### Ejemplo práctico
+## Ejemplo práctico
 
 Supongamos que deseas descargar el siguiente video en formato MP3 con una calidad de 128 kbps:
 
@@ -227,7 +225,7 @@ yt-dlp -x --audio-format mp3 --audio-quality 128K https://www.youtube.com/watch?
 
   
 
-### Calidades disponibles
+## Calidades disponibles
 
 Aquí tienes una lista de las calidades que puedes especificar:
 
@@ -255,7 +253,7 @@ Aquí tienes una lista de las calidades que puedes especificar:
 
   
 
-### TikTok, Facebook, Instagram
+## TikTok, Facebook, Instagram
 
 Para descargar un video de TikTok, Facebook, Instagram usa el siguiente comando (en estas redes sociales sino puedes obtener el link fácilmente solo da clic en la opción "Compartir" el video y allí busca y debe haber una opción para copiar el enlace):
 

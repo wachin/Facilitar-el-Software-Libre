@@ -3,14 +3,8 @@ el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos
 Linux basados en el</h1>
 <p>Este tutorial es para instalar los repositorios de MX Linux a
 Sistemas Operativos Debian y basados en Debian que no lo tienen añadido,
-ejemplo (puede ser cualquier otro, como Debian mismo):</p>
-<p>La siguiente imagen es del repositorio de MX Linux 21 añadido en <a href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
-Synaptic:</p>
-<figure>
-<img alt="20231118-182409 repositorio de MX Linux 21 añadido" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"/>
-<figcaption aria-hidden="true">20231118-182409 repositorio de MX Linux
-21 añadido</figcaption>
-</figure>
+para instalar el Instalador de paquetes de MX Linux y poder instalar las
+ultimas versiones de algunos programas.</p>
 <h2 id="qué-se-puede-instalar-desde-este-repositorio">Qué se puede
 instalar desde este repositorio?</h2>
 <p>En los repositorios de MX Linux hay software muy importante como
@@ -28,17 +22,23 @@ archivos:</strong></p>
 </ul>
 <p><strong>Herramientas</strong></p>
 <ul>
-<li><strong>ksnip:</strong> (version actualizada desde el Repositorio de
-Pruebas “Test”)</li>
-<li><strong>avidemux:</strong> editor de video</li>
-<li><strong>yt-dlp:</strong> (version actualizada desde “el Repositorio
-de Pruebas”Test”MX Repo de prueba” o en “Backkports de Debian”)</li>
+<li><strong>ksnip:</strong> Capturado de pantalla (version actualizada
+)</li>
+<li><strong>avidemux:</strong> editor de video (En el 2025-05-016 no lo
+pude instalar porque dice qu e depende de libfaac0, libfdk-aac2 y no se
+pueden instalar)</li>
+<li><strong>yt-dlp:</strong> <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html">Descargador
+de videos</a> (version actualizada)</li>
 <li><strong>telegram-desktop</strong> = Telegram (32 y 64 bit)</li>
 <li><strong>formatusb:</strong> Para formatear un Pendrive</li>
 <li><strong>virtualBox:</strong> La máquina virtual</li>
 <li><strong>mx-snapshot:</strong> MX Snapshot es una herramienta
 utilizada para crear un CD en vivo desde el sistema en ejecución
 (Respins)</li>
+<li><strong>LibreOffice</strong> Programa de Ofimática (desde los
+Repositorios Backports de Debian)</li>
+<li><strong>Firmware</strong>.- <a href="https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html">Controladores</a>,
+ejemplo de Wi-Fi, otros</li>
 <li>otros</li>
 </ul>
 <p><strong>Nota</strong>: Se pueden instalar las ultimas versiones, pero
@@ -77,7 +77,6 @@ los permisos.</p>
 siguientes líneas, copialas:</li>
 </ul>
 <pre><span style="color: #800180;"><b>MX Community Main and Test Repos
-    
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
@@ -290,7 +289,6 @@ repositorio:</p>
 23 Repo</h2>
 <p>Copie las siguientes líneas:</p>
 <pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
-
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
@@ -347,8 +345,8 @@ activados en Debian 12</figcaption>
 <h2 id="para-debian-11-bullseye-mx-linux-21-repo">Para Debian 11
 bullseye: MX Linux 21 Repo</h2>
 <p>Copie las siguientes líneas:</p>
-<p>#MX Community Main and Test Repos</p>
-<pre><span style="color: #800180;"><b>deb http://mxrepo.com/mx/repo/ bullseye main non-free
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bullseye main non-free
 
 #deb http://mxrepo.com/mx/repo/ bullseye test
 
@@ -386,6 +384,15 @@ archivo sería:</p>
 <p>Recargue los repositorios e instale el programa que necesite</p>
 <p><strong>Nota:</strong> En Debian 10 buster a esta hay menos
 programas.</p>
+<h1 id="repositorio-añadido-en-algunos-sistemas-operativos">Repositorio
+añadido en algunos Sistemas Operativos</h1>
+<p>La siguiente imagen es del repositorio de MX Linux 21 añadido en <a href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
+Synaptic:</p>
+<figure>
+<img alt="20231118-182409 repositorio de MX Linux 21 añadido" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"/>
+<figcaption aria-hidden="true">20231118-182409 repositorio de MX Linux
+21 añadido</figcaption>
+</figure>
 <h2 id="es-posible-descargar-manualmente-programas">Es posible descargar
 manualmente programas</h2>
 <p>Por si necesita manualmente descargar algun programa, puede entrar

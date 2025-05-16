@@ -1,5 +1,5 @@
 # Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
-Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
+Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, y para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
 
 ## Qué se puede instalar desde este repositorio?
 
@@ -15,7 +15,7 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
 **Herramientas**
 
 - **ksnip:** Capturado de  pantalla (version actualizada )
-- **avidemux:** editor de video
+- **avidemux:** editor de video (En el 2025-05-016 no lo pude instalar porque dice qu e depende de libfaac0, libfdk-aac2 y no se pueden instalar)
 - **yt-dlp:** [Descargador de videos](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html) (version actualizada)
 - **telegram-desktop** = Telegram (32 y 64 bit)
 - **formatusb:** Para formatear un Pendrive

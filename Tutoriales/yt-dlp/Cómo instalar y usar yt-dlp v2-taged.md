@@ -3,8 +3,7 @@
 
 Ahora sí, sigamos: `yt-dlp` es una bifurcación (fork) de `youtube-dl`, una herramienta popular de línea de comandos utilizada para descargar videos de YouTube y otros sitios web. `yt-dlp` incluye características adicionales, mejoras en la funcionalidad original y soporte para más plataformas. Es una herramienta poderosa para gestionar contenido multimedia desde diversas plataformas.
 
-
-## **Paso 1: Instalar Termux**
+## Paso 1: Instalar Termux
 -------------------------------------------------
 Debemos instalar Termux en Android pero no la versión que viene en la Play Store sino la versión completa, esta está en los celulares Xiaomi donde viene disponible en el gestor de software de esos celulares, pero no en otros como los SANSUMG. Vea la siguiente entrada con todas las explicaciones, para que pueda instalar Termux en su Celular con Adroid:
 
@@ -19,9 +18,7 @@ pkg update
 
 y recomiendo usar un solo repositorio de los paquetes Termux, yo uso Grimler, y bueno allí están las explicaciones.
 
-
-## **Paso 2: Instalar las dependencias necesarias**
-------------------------------------------------
+## Paso 2: Instalar las dependencias necesarias
 
 Para usar `yt-dlp`, necesitarás Python y FFmpeg. Ejecuta el siguiente comando para instalar esos paquetes:
 
@@ -35,10 +32,7 @@ Donde:
 
 \- `ffmpeg`: Es una herramienta esencial para fusionar video y audio.
 
-
-
-## **Paso 3: Instalar yt-dlp**
----------------------------
+## Paso 3: Instalar yt-dlp
 
 Una vez instaladas las dependencias, instala `yt-dld y mutagen` usando `pip`:
 
@@ -48,9 +42,7 @@ python -m pip install yt-dlp mutagen
 
 El paquete de [Python mutagen](https://products.documentprocessing.com/es/metadata/python/mutagen/#:~:text=Mutagen%20es%20una%20biblioteca%20Python%20potente%20y,incluidos%20MP3%2C%20FLAC%2C%20OGG%2C%20AAC%20y%20m%C3%A1s.) sirve para manipular metadatos de archivos de audio. Permite leer, escribir y modificar etiquetas de metadatos en diversos formatos, como MP3, FLAC, OGG, y muchos otros, esto es para que la imagen del Vídeo mp4 quede en el mp3.
 
-
-## **Paso 4: Mantener yt-dlp actualizado**
----------------------------------------
+## Paso 4: Mantener yt-dlp actualizado
 
 Es recomendable mantener `yt-dlp` actualizado para aprovechar las últimas funciones y correcciones. Este comando es para usarlo después, para actualizarlo:
 
@@ -60,7 +52,7 @@ python3 -m pip install -U "yt-dlp[default]"
 
 Este comando debemos de usarlo con cierta frecuencia, puede ser una vez al mes o una vez cada dos meses, es para ver si han enviado alguna actualización y aplicarla, debido a que sino se hace esto, es posible que ya no se pueda descargar desde Youtube.
 
-## **Paso 5: Acceder al almacenamiento interno**
+## Paso 5: Acceder al almacenamiento interno
 
 Para descargar archivos directamente en tu almacenamiento interno, configura los permisos de acceso con:
 
@@ -81,6 +73,7 @@ pwd
 ```
 sólo allí debes descargar los videos. Esto y otras indicaciones están explicadas en el anterior tutorial.
 
+  
 
 # Descargar vídeos con audio en formato mp4
 
@@ -90,7 +83,7 @@ Usa el siguiente comando para descargar un video con audio en formato `.mp4` (es
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 ```
 
-Explicación del comando: 
+**Explicación del comando:** 
 
 `**-f "bv*+ba"**`: Selecciona el mejor formato de video (`bv*`) y lo combina con el mejor formato de audio (`ba`). 
 
@@ -138,7 +131,8 @@ A veces hay nombres de archivos que son muy largos y tienen en el nombre caracte
 ```bash
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
-funciona.
+
+  
 
 # Descargar videos de otros sitios web
 
@@ -148,9 +142,11 @@ funciona.
 yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
 ```
 
-# Descargar solo audio, formato MP3
+  
 
-Para descargar solo el audio en formato MP3, usa el siguiente comando:
+# Descargar solo audio, formato mp3
+
+Para descargar solo el audio en formato mp3, usa el siguiente comando:
 
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>

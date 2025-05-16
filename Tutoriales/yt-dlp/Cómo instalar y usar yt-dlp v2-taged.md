@@ -134,6 +134,81 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" -
 
   
 
+# Descargar vídeo desde TikTok, Facebook, Instagram, Twitter
+
+Para descargar un vídeo de TikTok, Facebook, Instagram, Twitter, usa el siguiente comando (en estas redes sociales sino puedes obtener el link fácilmente solo da clic en la opción "Compartir" el video y allí busca, y debe haber una opción para copiar el enlace. En Twitter dale clic derecho al vídeo y copia el enlace)
+
+**Ejemplo práctico:**
+
+```bash
+yt-dlp https://www.tiktok.com/@usuario/video/1234567890
+```
+
+pero yo no lo uso porque se descargan videos con algunos caracteres raros que a veces causan problemas, por eso mejor lo siguiente:
+
+## Para descargar vídeo resumiendo el nombre del archivo
+
+A veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero con el siguiente comando eliminarás todo aquello:
+
+```bash
+yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
+al poner el comando espera un momento, y funcionará
+
+**Explicación de cada parte del comando:**
+
+1.  **yt-dlp**: Es el nombre del programa que estás utilizando para descargar videos.
+    
+2.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
+    *   `%(title)s`: Es una variable que se reemplaza con el título del video.
+    *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (mp4, en este caso, pero como ya saben se puede usar otro).
+    *   Las comillas son necesarias para que el sistema reconozca el patrón completo.
+3.  **\--restrict-filenames**:
+    
+    *   Esta es la parte clave para resolver el problema de que algunos videos tienen caracteres extraños ya que limita los caracteres permitidos en los nombres de archivo a caracteres ASCII básicos.
+    *   Reemplaza espacios con guiones bajos.
+    *   Elimina o sustituye caracteres especiales, emojis, comillas y otros símbolos que podrían causar problemas en el sistema de archivos.
+    *   Hace que los nombres de archivo sean compatibles con la mayoría de los sistemas operativos y entornos.
+4.  **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
+    
+
+**Otras variables útiles que podrías usar en el patrón de salida (opcional)**
+
+Lo siguiente es solamente opcional, pues podría dar errores de descarga
+
+*   `%(uploader)s`: Nombre del usuario que subió el video.
+*   `%(id)s`: ID único del video.
+*   `%(upload_date)s`: Fecha de subida (formato AAAAMMDD).
+
+Por ejemplo, si quisieras incluir la fecha y el usuario, podrías usar:
+
+```bash
+yt-dlp -o "%(upload_date)s-%(uploader)s-%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
+
+pero lo malo de este comando es que puede dejar el nombre del archivo muy largo y podría no poder descargarse
+
+## Deseo elegir la cantidad de los caracteres del nombre del archivo  
+
+Si el nombre resultante de la descarga es muy largo, para solucionar esto podemos usar el siguiente comando que limita el título a los primeros 30 caracteres:
+
+```bash
+yt-dlp -o "%(upload_date)s-%(uploader).30s-%(title).30s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
+
+La sintaxis `.30s` después de una variable (allí hay dos variables) limita esa parte a 30 caracteres.
+
+Puedes ajustar este número según tus preferencias, por ejemplo:
+
+```bash
+yt-dlp -o "%(upload_date)s-%(uploader).15s-%(title).40s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
+
+Esto tomaría los primeros 15 caracteres del nombre del canal y los primeros 40 del título. Y así se pueden hacer otros experimentos.
+
+
+  
+
 # Descargar videos de otros sitios web
 
 `yt-dlp` también es compatible con otros sitios web. Simplemente cambia la URL en el comando:
@@ -142,9 +217,11 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" -
 yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
 ```
 
+También puedes intentar añadir al comando alguno de los anteriormente explicados si los necesite.
+
   
 
-# Descargar solo audio, formato mp3, u otros
+# Descargar solo audio, en formato mp3 u otros
 
 Para descargar solo el audio en formato mp3, usa el siguiente comando:
 
@@ -159,6 +236,21 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 **\--embed-thumbnail:** descarga la miniatura del video y la incrusta como imagen de portada en el archivo MP3 (necesita ffmpeg y mutagen para funcionar).
 
 **\--add-metadata:** añade metadatos como el título, artista, etc., si están disponibles.
+
+## 🎵 Formatos que `yt-dlp` puede convertir con `--audio-format`:
+
+| Formato  | Descripción                                                                      |
+| -------- | -------------------------------------------------------------------------------- |
+| `mp3`    | Muy compatible. Perfecto para reproductores antiguos.                            |
+| `m4a`    | Alta calidad, buena compresión. Recomendado.                                     |
+| `aac`    | Similar a m4a pero sin envoltura MP4.                                            |
+| `flac`   | Audio sin pérdida (lossless). Muy pesado.                                        |
+| `wav`    | Sin compresión, archivos grandes. Uso técnico.                                   |
+| `opus`   | Muy eficiente a bajo bitrate. Ideal para voz.                                    |
+| `vorbis` | Códec abierto, generalmente en `webm`.                                           |
+| `alac`   | Apple Lossless. Menos común, solo si necesitas compatibilidad Apple sin pérdida. |
+
+> 🔧 Esto requiere tener `ffmpeg` correctamente instalado
 
 **Ejemplo práctico:**
 
@@ -205,28 +297,13 @@ yt-dlp -x --audio-format mp3 --audio-quality <CALIDAD> <URL_DEL_VIDEO>
 
 Explicación del comando: 
 
-`**-x**`: Extrae solo el audio. 
+**-x**: Extrae solo el audio. 
 
-`**--audio-format mp3**`: Especifica que el formato de salida debe ser mp3 que es el más usado, pero también puede ser otro, como: m4a, , aac, flac, wav, opus, alac
+**--audio-format mp3**: Especifica que el formato de salida debe ser mp3 que es el más usado, pero también puede ser otro, como: m4a, , aac, flac, wav, opus, alac
 
-`**--audio-quality <CALIDAD>**`: Define la calidad del audio en kbps (kilobits por segundo). 
+**--audio-quality <CALIDAD>**: Define la calidad del audio en kbps (kilobits por segundo). 
 
-`**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
-
-### 🎵 Formatos que `yt-dlp` puede convertir con `--audio-format`:
-
-| Formato  | Descripción                                                                      |
-| -------- | -------------------------------------------------------------------------------- |
-| `mp3`    | Muy compatible. Perfecto para reproductores antiguos.                            |
-| `m4a`    | Alta calidad, buena compresión. Recomendado.                                     |
-| `aac`    | Similar a m4a pero sin envoltura MP4.                                            |
-| `flac`   | Audio sin pérdida (lossless). Muy pesado.                                        |
-| `wav`    | Sin compresión, archivos grandes. Uso técnico.                                   |
-| `opus`   | Muy eficiente a bajo bitrate. Ideal para voz.                                    |
-| `vorbis` | Códec abierto, generalmente en `webm`.                                           |
-| `alac`   | Apple Lossless. Menos común, solo si necesitas compatibilidad Apple sin pérdida. |
-
-> 🔧 Esto requiere tener `ffmpeg` correctamente instalado
+**<URL_DEL_VIDEO>**: Reemplaza esto con la URL del video que deseas descargar.
 
   
 
@@ -256,87 +333,17 @@ Aquí tienes una lista de las calidades que puedes especificar:
 *   `80K`: Calidad mínima aceptable (80 kbps)
 *   `64K`: Calidad muy baja (64 kbps)
 *   `56K`: Calidad extremadamente baja (56 kbps)
-*   `48K`: Calidad para voz (48 kbps)
+*   `48K`: Calidad para voz (48 kbps) (La uso para compartir predicas largas por Whatsapp)
 *   `40K`: Calidad mínima para voces claras (40 kbps)
 
 **Nota:** Las calidades más bajas son ideales para archivos de voz o cuando necesitas ahorrar espacio.
 
-**2\. Descargar videos desde otras plataformas**
-------------------------------------------------
+**2. Descargar videos desde otras plataformas**
 
 `yt-dlp` no solo funciona con YouTube, sino también con muchas otras plataformas como Facebook, Instagram, TikTok y páginas web. A continuación, se explica cómo hacerlo.
 
   
 
-## TikTok, Facebook, Instagram
-
-Para descargar un video de TikTok, Facebook, Instagram usa el siguiente comando (en estas redes sociales sino puedes obtener el link fácilmente solo da clic en la opción "Compartir" el video y allí busca y debe haber una opción para copiar el enlace):
-
-**Ejemplo práctico:**
-
-```bash
-yt-dlp https://www.tiktok.com/@usuario/video/1234567890
-```
-
-pero yo no lo uso porque se descargan videos con algunos caracteres raros que a veces causan problemas, por eso mejor lo siguiente:
-
-**Para descargar resumiendo el nombre de los archivos**
-
-A veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero con el siguiente comando eliminarás todo aquello:
-
-```bash
-yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
-```
-al poner el comando espera un momento, y funcionará
-
-**Explicación de cada parte del comando:**
-
-1.  **yt-dlp**: Es el nombre del programa que estás utilizando para descargar videos.
-    
-2.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
-    *   `%(title)s`: Es una variable que se reemplaza con el título del video.
-    *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (mp4, en este caso).
-    *   Las comillas son necesarias para que el sistema reconozca el patrón completo.
-3.  **\--restrict-filenames**:
-    
-    *   Esta es la parte clave para resolver el problema de que algunos videos tienen caracteres extraños ya que limita los caracteres permitidos en los nombres de archivo a caracteres ASCII básicos.
-    *   Reemplaza espacios con guiones bajos.
-    *   Elimina o sustituye caracteres especiales, emojis, comillas y otros símbolos que podrían causar problemas en el sistema de archivos.
-    *   Hace que los nombres de archivo sean compatibles con la mayoría de los sistemas operativos y entornos.
-4.  **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
-    
-
-**Otras variables útiles que podrías usar en el patrón de salida (opcional)**
-
-Lo siguiente es solamente opcional, pues podría dar errores de descarga
-
-*   `%(uploader)s`: Nombre del usuario que subió el video.
-*   `%(id)s`: ID único del video.
-*   `%(upload_date)s`: Fecha de subida (formato AAAAMMDD).
-
-Por ejemplo, si quisieras incluir la fecha y el usuario, podrías usar:
-
-```bash
-yt-dlp -o "%(upload_date)s-%(uploader)s-%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
-```
-
-
-pero lo malo de este comando es que puede dejar el nombre del archivo muy largo y podría no poder descargarse
-
-## Deseo elegir el tamaño de los carácteres del nombre del archivo  
-Para solucionar esto podemos usar el siguiente comando que limita el título a los primeros 30 caracteres:
-
-```bash
-yt-dlp -o "%(upload_date)s-%(uploader).30s-%(title).30s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
-```
-
-La sintaxis `.30s` después de una variable (allí hay dos variables) limita esa parte a 30 caracteres. Puedes ajustar este número según tus preferencias, por ejemplo:
-
-```bash
-yt-dlp -o "%(upload_date)s-%(uploader).15s-%(title).40s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
-```
-
-Esto tomaría los primeros 15 caracteres del nombre del canal y los primeros 40 del título. Y así se pueden hacer otros experimentos
 
 # Notas adicionales
 -------------------------

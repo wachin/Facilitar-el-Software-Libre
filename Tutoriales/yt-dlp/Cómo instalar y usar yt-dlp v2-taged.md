@@ -93,6 +93,20 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 
 `**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
 
+## 🎥 **Formatos de video que `yt-dlp` puede generar (con ayuda de `ffmpeg`)**
+
+Cuando usas `--merge-output-format`, los formatos más comunes que puedes usar son:
+
+| Formato |                               Descripción                                |
+| ------- | ------------------------------------------------------------------------ |
+| `mp4`   | Muy compatible con casi todos los dispositivos y navegadores.            |
+| `mkv`   | Flexible, soporta múltiples pistas de audio, subtítulos, capítulos, etc. |
+| `webm`  | Formato abierto, bien soportado por navegadores.                         |
+| `flv`   | Antiguo formato usado para streaming (menos común ahora).                |
+| `avi`   | Formato más viejo; no recomendado para contenido moderno.                |
+| `mov`   | Usado por Apple/QuickTime.                                               |
+
+
 ## Ejemplo práctico:
 
 ```bash
@@ -206,10 +220,9 @@ yt-dlp -o "%(upload_date)s-%(uploader).15s-%(title).40s.%(ext)s" --restrict-file
 
 Esto tomaría los primeros 15 caracteres del nombre del canal y los primeros 40 del título. Y así se pueden hacer otros experimentos.
 
-
   
 
-# Descargar videos de otros sitios web
+# Descargar vídeos de otros sitios web
 
 `yt-dlp` también es compatible con otros sitios web. Simplemente cambia la URL en el comando:
 

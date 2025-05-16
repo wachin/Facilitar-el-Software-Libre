@@ -106,12 +106,39 @@ Explicación del comando:
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 https://www.youtube.com/watch?v=example
 ```
 
-
 Verifica que el archivo se haya descargado correctamente:
 ```bash
 ls
 ```
 allí deberás ver los archivos, claro también los puedes ver con el administrador de archivos de Android
+
+**Para descargar resumiendo el nombre de los archivos**
+
+A veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero agregando la siguiente línea al final del comando eliminarás todo aquello:
+
+```bash
+-o "%(title)s.%(ext)s" --restrict-filenames
+```
+
+**Explicación de cada parte del comando:**
+
+1.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
+    *   `%(title)s`: Es una variable que se reemplaza con el título del video.
+    *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (mp4, en este caso).
+    *   Las comillas son necesarias para que el sistema reconozca el patrón completo.
+2.  **\--restrict-filenames**:
+    
+    *   Esta es la parte clave para resolver el problema de que algunos videos tienen caracteres extraños ya que limita los caracteres permitidos en los nombres de archivo a caracteres ASCII básicos.
+    *   Reemplaza espacios con guiones bajos.
+    *   Elimina o sustituye caracteres especiales, emojis, comillas y otros símbolos que podrían causar problemas en el sistema de archivos.
+    *   Hace que los nombres de archivo sean compatibles con la mayoría de los sistemas operativos y entornos.
+
+**Al añadirla queda así**
+
+```bash
+yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
+funciona.
 
 
 ### **Descargar solo audio, formato MP3**
@@ -122,18 +149,20 @@ Para descargar solo el audio en formato MP3, usa el siguiente comando:
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 ```
 
-**Explicación de las opciones nuevas:**
+**Explicación de las opciones:**
+
+**\--audio-format mp3:** elegimos el formato mp3, y si deseamos descargar audio en otros formatos podemos cambiarlo por: `m4a`, `aac`, `flac`, etc.
 
 **\--embed-thumbnail:** descarga la miniatura del video y la incrusta como imagen de portada en el archivo MP3 (necesita ffmpeg y mutagen para funcionar).
 
-**\--add-metadata: añade metadatos como el título, artista, etc., si están disponibles.**
+**\--add-metadata:** añade metadatos como el título, artista, etc., si están disponibles.
 
 **Ejemplo práctico:**
 
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
-También puedes descargar audio en otros formatos como `m4a`, `aac`, `flac`, etc., cambiando la extensión en el comando.
+
 
 
 
@@ -265,14 +294,12 @@ pero yo no lo uso porque se descargan videos con algunos caracteres raros que a 
 
 **Para descargar resumiendo el nombre de los archivos**
 
-Esto es importante porque a veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero con el siguiente comando eliminarás todo aquello:
+A veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero con el siguiente comando eliminarás todo aquello:
 
 ```bash
 yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
-
-
-al poner el comando parece que desaparece y no pasa nada, pero si, solo hay que esperar un poco para que descargue
+al poner el comando espera un momento, y funcionará
 
 **Explicación de cada parte del comando:**
 

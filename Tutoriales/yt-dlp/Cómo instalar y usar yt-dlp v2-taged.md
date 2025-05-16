@@ -1,8 +1,8 @@
-# Cómo instalar yt-dlp en Termux en Android para descargar videos, audio (MP3) de YouTube, Facebook, Tiktok, Instagram y otros
+# Cómo instalar yt-dlp en Termux en Android para descargar videos, audio (MP3) de YouTube, Facebook, Tiktok, Instagram, Twitter y otros
+
+`yt-dlp` es una bifurcación (fork) de `youtube-dl`, una herramienta popular de línea de comandos utilizada para descargar videos de YouTube, Facebook, Tiktok, Instagram, Twitter y otros sitios web. `yt-dlp` incluye características adicionales, mejoras en la funcionalidad original y soporte para más plataformas. Es una herramienta poderosa para gestionar contenido multimedia desde diversas plataformas.
 
 **Nota**: Este tutorial es para celulares con Android, si deseas instalar yt-dlp en Linux aconsejo [este tutorial.](https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html)
-
-Ahora sí, sigamos: `yt-dlp` es una bifurcación (fork) de `youtube-dl`, una herramienta popular de línea de comandos utilizada para descargar videos de YouTube y otros sitios web. `yt-dlp` incluye características adicionales, mejoras en la funcionalidad original y soporte para más plataformas. Es una herramienta poderosa para gestionar contenido multimedia desde diversas plataformas.
 
 ## Paso 1: Instalar Termux
 
@@ -35,7 +35,7 @@ Donde:
 
 ## Paso 3: Instalar yt-dlp
 
-Una vez instaladas las dependencias, instala `yt-dld y mutagen` usando `pip`:
+Una vez instaladas las dependencias, instala **yt-dlp** y **mutagen** usando **pip**:
 
 ```bash
 python -m pip install yt-dlp mutagen

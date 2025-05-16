@@ -46,7 +46,7 @@ podemos usar Gedit  u otro editor de texto, si es que lo deja hacer el sistema o
 sudo gedit /etc/apt/sources.list.d/mx.list
 ```
  
-## Usando nano para editar sources.list.d
+## Usando nano para editar `sources.list.d`
 Se puede usar nano desde la terminal. Nano es un editor de texto de terminal que siempre sirve para cosas como estas que necesitan elevar los permisos. 
 
 - El siguiente comando creará el archivo mx.list automáticamente **con `nano`**::
@@ -214,11 +214,9 @@ e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde 
 
 Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 
-## Instalando a ksnip desde los repositorios de prueba
+## Instalando a ksnip desde los Repositorios de prueba de MX, o Backports de Debian
 
-Ksnip sirve para hacer capturas de pantalla
-
-la siguiente imagen es de ksnip visto en Debian 12  de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
+Ksnip sirve para hacer capturas de pantalla, la siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw)
 
@@ -234,9 +232,13 @@ la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo*
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw)
 
-como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX:
+La última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX Linux, la siguiente imagen es en MX Linux 23 KDE de 64 bit:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw)
+
+La siguiente imagen es de ksnip la ultima versión en **Backports de Debian** visto en Debian 12 de 32 bit, pues allí no la encuentro en los repositorios de prueba:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000)
 
 Bueno, ahora si dejo las instrucciones para:
 
@@ -249,6 +251,7 @@ repito para la primera, pero solo los pasos de instalación del repositorio:
 
 Copie las siguientes líneas:
 
+```
 #MX Community Main and Test Repos
 
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
@@ -257,6 +260,7 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -303,12 +307,14 @@ Copie las siguientes líneas:
 
 #MX Community Main and Test Repos
 
+```
 deb http://mxrepo.com/mx/repo/ bullseye main non-free
 
 #deb http://mxrepo.com/mx/repo/ bullseye test
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bullseye ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -332,6 +338,7 @@ Recargue los repositorios e instale el programa que necesite
 
 Copie las siguientes líneas:
 
+```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ buster main non-free
 
@@ -339,6 +346,7 @@ deb http://mxrepo.com/mx/repo/ buster main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ buster ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 

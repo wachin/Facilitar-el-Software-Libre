@@ -1,0 +1,243 @@
+<h1
+id="activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligeros">Activar
+el agente de PolicyKit en Openbox y gestores de ventanas ligeros</h1>
+<h2
+id="cómo-hacer-que-aplicaciones-gráficas-con-permisos-de-administrador-funcionen-en-openbox-u-otros-gestores-de-ventanas-ligeros">Cómo
+hacer que aplicaciones gráficas con permisos de administrador funcionen
+en Openbox u otros gestores de ventanas ligeros</h2>
+<p>Cuando instalas un sistema Linux basado en Debian o Ubuntu (como
+Debian, MX Linux, Linux Mint, etc.), normalmente viene con un entorno de
+escritorio completo (como GNOME, KDE, XFCE o LXQt). Estos entornos ya
+traen configurado automáticamente un <strong>agente de
+PolicyKit</strong> que permite abrir aplicaciones gráficas que requieren
+permisos de administrador, como <strong>Synaptic</strong>, <strong>MX
+Instalador de paquetes</strong>, <strong>Gparted</strong> entre
+otros.</p>
+<p>Sin embargo, si decides instalar un <strong>gestor de ventanas
+ligero</strong> como <strong>Openbox</strong> o
+<strong>Fluxbox</strong>, te puedes encontrar con el siguiente
+problema:</p>
+<blockquote>
+<p><strong>Las aplicaciones que requieren permisos de administrador
+simplemente no se abren, no muestran ningún mensaje de error, y parece
+que no pasa nada. Tampoco se puede realizar tareas gráficas que
+requieran permisos de administrador.</strong></p>
+</blockquote>
+<p>Este problema tiene solución, y aquí te explico por qué ocurre y cómo
+solucionarlo.</p>
+<hr />
+<h2 id="por-qué-ocurre-esto">¿Por qué ocurre esto?</h2>
+<p>Muchas aplicaciones gráficas que necesitan permisos elevados usan un
+sistema llamado <strong>PolicyKit (o Polkit)</strong> para mostrar una
+ventana donde puedas ingresar tu contraseña. Pero para que esa ventana
+aparezca, <strong>debe estar ejecutándose un “agente de PolicyKit” en
+segundo plano</strong>.</p>
+<ul>
+<li><strong>Entornos de escritorio completos</strong> ya incluyen e
+inician ese agente automáticamente.</li>
+<li><strong>Gestores de ventanas ligeros instalados después</strong>
+(como Openbox) <strong>no lo hacen</strong>, por lo que <strong>debes
+iniciarlo tú manualmente</strong>.</li>
+</ul>
+<hr />
+<h2 id="qué-es-un-agente-de-policykit">¿Qué es un agente de
+PolicyKit?</h2>
+<p>Es un pequeño programa que se encarga de mostrar la ventana de
+autenticación cuando una aplicación necesita privilegios. Algunos
+ejemplos:</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Entorno de escritorio</th>
+<th>Agente de PolicyKit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LXQt</td>
+<td><code>lxqt-policykit-agent</code></td>
+</tr>
+<tr class="even">
+<td>GNOME</td>
+<td><code>/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1</code></td>
+</tr>
+<tr class="odd">
+<td>KDE Plasma</td>
+<td><code>/usr/lib/polkit-kde-agent-1</code></td>
+</tr>
+<tr class="even">
+<td>XFCE / LXDE</td>
+<td><code>lxpolkit</code></td>
+</tr>
+<tr class="odd">
+<td>Openbox / Fluxbox</td>
+<td>Ninguno por defecto, debes configurarlo tú mismo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong> Una vez en la Distro AV Linux los
+desarrolladores le pusieron Openbox y venía ya configurado con algún
+Agnete de PolicyKit.</p>
+<p><strong>Nota 2</strong>: La ruta donde está el archivo ejecutable
+puede variar dependiendo del Sistema Iprativo. Más abajo indico con más
+detalle.</p>
+<hr />
+<h2 id="cómo-activar-un-agente-de-policykit-en-openbox">Cómo activar un
+agente de PolicyKit en Openbox</h2>
+<h3 id="usa-un-agente-de-policykit">Usa un agente de PolicyKit</h3>
+<p>Busca en Synaptic la palabra:</p>
+<p>policykit</p>
+<p>Como ve en la siguiente imagen, le he dado clic en la letra
+“<strong>E</strong>” para ordenar todos los paquetes instalados, así al
+poderlos ver puedo encontrar algún paquete que tiene que ver con
+policykit:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgLF9qtCJqW_Cc7WSOi2IALvmfqkvrMZOdpCk0qu3kjpKMqN99AkjlaLQ1JdufDvQIdMre7NrSCv2hcCAzl08aIZT3Yj2Lqd5oTRxDSnPrK7EB9FLLLsKOqdZnLs3vKulNiPjpKzitkV67VgD06dfoxeWxxw8bAZOXSgAc4JdqA910ODp4DbIyQPKXEhak" /></p>
+<p>al darle clic a ese paquete y ver sus <strong>Propiedades</strong>,
+en la pestaña “<strong>Archivos instalados</strong>” encuentro un
+archivo .desktop</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEhHmjGbNzJqWdxxWiFbRBd_t_YOjmydnpwyTQu8CMfSqmepKrI8iROcg2UtsiXs8KzylOovTj0tq2R11woB4M64YClTgX8vwPRQBfKEucWK-zAKAG1fdu-yo_e64jRpeb0Z3jfaDXqdEP5Cz-49WJOu7q9oRg8hO1jX31poK_xwJgkqenw6Bbs-ElGfHgs=s16000" /></p>
+<p><strong>en este caso</strong> aquí lo copio:</p>
+<p>/etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop</p>
+<p>este lo puedo abrir con algún editor de texto desde la terminal:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gedit</span> /etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop</span></code></pre></div>
+<p>puedes cambiar gedit con el nombre el editor de texto que uses, o con
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html">nano</a>
+o <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html">Vim</a>
+lo puedes abrir</p>
+<p>y búsca la línea que está en <strong>Exec</strong>:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEhxxo-w73Y8Wqvjfj1zqB2pJASTktmf2l7rCq1n6HJ6B33q09DlpSXOpBihT57jytE21SgIfE9nYztYtzcDIWSyRnP5E8krD5Nhq9VaY_2meRxU-YySgzE4ciED7JYTf6rOEdevoBwuMPq1hvvoamroxGiEZRsVwpDBD4TUGi1NllvystsZVuLWajJVZuU" /></p>
+<h3 id="añadir-policykit-al-inicio-de-openbox">Añadir PolicyKit al
+inicio de Openbox</h3>
+<p>Para añadirlo hay que abrir el archivo autostart de openbox, para
+llegar allí activa la capacidad de ver archivos ocultos de tu
+administrador de archivos (ver con Ctrl + H) y llega hasta:</p>
+<p><code>~/.config/openbox/autostart</code>.</p>
+<p><a
+href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVgjA5Hzzar65NsM09DqpSOueI3PCelKyA59ZYkwS14vhSyNOEo5RsjJvSnHDbjOpeZQ1YUUc0-NSqCZ78_3oN4iFFiSwykbc1m-IVPQUHxECfnYPc3mXesP5v9fttc8oLApVdfRnYj0c6WcVpi8EVX_RHDhrAc5ORkhV1vmyo7-Omipw5_A3oGatBDk/s696/20250318-111511%20archivo%20autostart.png"><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVgjA5Hzzar65NsM09DqpSOueI3PCelKyA59ZYkwS14vhSyNOEo5RsjJvSnHDbjOpeZQ1YUUc0-NSqCZ78_3oN4iFFiSwykbc1m-IVPQUHxECfnYPc3mXesP5v9fttc8oLApVdfRnYj0c6WcVpi8EVX_RHDhrAc5ORkhV1vmyo7-Omipw5_A3oGatBDk/s16000-rw/20250318-111511%20archivo%20autostart.png" /></a></p>
+<p>allí agregar la línea que en este caso es:</p>
+<p>/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1</p>
+<p>guardar y cerrar.</p>
+<h2
+id="cómo-añadir-un-agente-de-policykit-al-inicio-en-fluxbox-y-otros-window-managers-x11"><strong>Cómo
+añadir un agente de PolicyKit al inicio en Fluxbox y otros Window
+Managers (X11)</strong></h2>
+<p>En gestores de ventanas ligeros como <strong>Fluxbox</strong>,
+<strong>IceWM</strong>, <strong>JWM</strong>, <strong>Blackbox</strong>,
+etc., el procedimiento es muy similar al de Openbox: necesitas ejecutar
+el <strong>agente de PolicyKit</strong> al inicio de la sesión gráfica,
+ya que estos entornos no lo hacen automáticamente.</p>
+<p>A continuación te explico cómo hacerlo para los más comunes:</p>
+<hr />
+<h3 id="en-fluxbox">✅ <strong>1. En Fluxbox</strong></h3>
+<p>Fluxbox usa un archivo llamado <code>~/.fluxbox/startup</code> para
+ejecutar aplicaciones al inicio de la sesión.</p>
+<h4 id="pasos">🔧 <strong>Pasos:</strong></h4>
+<ol type="1">
+<li><p>Abre el archivo con tu editor favorito:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.fluxbox/startup</span></code></pre></div></li>
+<li><p>Antes de la línea <code>exec fluxbox</code>, añade el comando
+correspondiente al agente que quieras usar. Ejemplo:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1</span> <span class="kw">&amp;</span></span></code></pre></div></li>
+<li><p>Asegúrate de que <strong>la última línea sea</strong>:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span> fluxbox</span></code></pre></div></li>
+<li><p>Guarda y cierra. Luego <strong>cierra sesión y vuelve a entrar en
+Fluxbox</strong>.</p></li>
+</ol>
+<hr />
+<h3 id="en-icewm">✅ <strong>2. En IceWM</strong></h3>
+<p>IceWM no tiene un archivo de inicio oficial por defecto, pero puedes
+usar el archivo <code>~/.icewm/startup</code>.</p>
+<h4 id="pasos-1">🔧 <strong>Pasos:</strong></h4>
+<ol type="1">
+<li><p>Crea el archivo si no existe:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.icewm</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.icewm/startup</span></code></pre></div></li>
+<li><p>Añade tu agente de PolicyKit:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1</span> <span class="kw">&amp;</span></span></code></pre></div></li>
+<li><p>Guarda, dale permisos de ejecución:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x ~/.icewm/startup</span></code></pre></div></li>
+<li><p>Reinicia la sesión.</p></li>
+</ol>
+<hr />
+<h3 id="en-jwm-joes-window-manager">✅ <strong>3. En JWM (Joe’s Window
+Manager)</strong></h3>
+<p>JWM usa un archivo de configuración en XML, normalmente en
+<code>~/.jwmrc</code>.</p>
+<h4 id="pasos-2">🔧 <strong>Pasos:</strong></h4>
+<ol type="1">
+<li><p>Abre el archivo:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.jwmrc</span></code></pre></div></li>
+<li><p>Busca la sección <code>&lt;StartupCommand&gt;</code> y añade el
+comando del agente dentro:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">StartupCommand</span>&gt;/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1&lt;/<span class="kw">StartupCommand</span>&gt;</span></code></pre></div></li>
+<li><p>Guarda, cierra y reinicia JWM.</p></li>
+</ol>
+<h1 id="policykit-genérico">PolicyKit Genérico</h1>
+<p>Si deseas puedes instalar el siguiente y usarlo</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sudo</span> apt install lxpolkit</span></code></pre></div>
+<p>Si no estás seguro de cuál usar, <code>lxpolkit</code> es una opción
+ligera que funciona en casi todos los casos.</p>
+<p>Guarda y cierra el archivo. Luego <strong>cierra la sesión y vuelve a
+entrar en Openbox o tu x11 WM</strong>.</p>
+<h1 id="verifica-que-el-agente-esté-funcionando">Verifica que el agente
+esté funcionando</h1>
+<p>Abre una terminal y escribe:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> polkit</span></code></pre></div>
+<p>Deberías ver que tu agente aparece en la lista de procesos.</p>
+<h1 id="palabras-de-búsqueda-para-google">📌 Palabras de búsqueda para
+Google</h1>
+<ul>
+<li>Cómo solucionar problemas de permisos en Openbox con PolicyKit</li>
+<li>Activar el agente de PolicyKit en Openbox y gestores de ventanas
+ligeros</li>
+<li>¿No se abre Synaptic o el MX Instalador? Aquí la solución en
+Openbox</li>
+<li>PolicyKit en Openbox: Solución a errores al abrir programas con
+permisos de administrador</li>
+<li>Configurando PolicyKit manualmente en Openbox, Fluxbox e i3</li>
+<li>Agentes de PolicyKit en entornos sin escritorio: Guía para
+Openbox</li>
+<li>Solución a fallos silenciosos de apps root en gestores de ventanas
+ligeros</li>
+<li>Cómo integrar PolicyKit en sesiones personalizadas de Linux</li>
+<li>¿Por qué no se abre Synaptic en Openbox? Aquí tienes la
+respuesta</li>
+<li>¿Programas que requieren sudo no funcionan en tu entorno ligero?
+Esta es la causa</li>
+<li>¿Openbox no muestra la ventana de autenticación? Aprende a
+arreglarlo</li>
+<li>Linux ligero, problemas comunes: cómo arreglar el acceso root
+gráfico</li>
+<li>Instalaste Openbox y no puedes usar herramientas gráficas con
+permisos root? Solución aquí</li>
+<li>El paso que muchos olvidan al usar Openbox: configurar
+PolicyKit</li>
+</ul>
+<h1 id="referencias">Referencias</h1>
+<p><strong>polkit - www.freedesktop.org</strong><br />
+<a
+href="https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html">https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html</a></p>
+<p><strong>polkit(8) - Linux man page</strong><br />
+<a
+href="https://linux.die.net/man/8/polkit">https://linux.die.net/man/8/polkit</a></p>

@@ -1,7 +1,10 @@
 # Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
 Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, y para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
 
-**Nota**: Este tutorial es para usarlo en un Sistema Operativo Linux que trae por defecto su Gestor de Ventanas, pero si deseas allí instalar otro, por ejemplo Openbox, debes revisar el siguiente tutorial para activar PolicyKit.
+**Nota**: Este tutorial es para usarlo en un Sistema Operativo Linux que trae por defecto su Gestor de Ventanas, pero si deseas allí instalar otro, por ejemplo Openbox, debes revisar el siguiente tutorial para activar PolicyKit:
+
+**Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros x11**  
+[https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html](https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html)
 
 ## Qué se puede instalar desde este repositorio?
 

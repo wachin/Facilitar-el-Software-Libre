@@ -314,31 +314,20 @@ yt-dlp -o "%(upload_date)s-%(uploader)s-%(title)s.%(ext)s" --restrict-filenames 
 
 pero lo malo de este comando es que puede dejar el nombre del archivo muy largo y podría no poder descargarse
 
-**Qué hago si en algún momento el video no se pueda descargar por ser muy largo su nombre**  
-Para solucionar este problema, aquí un comando que limita el título a los primeros 30 caracteres:
+## Deseo elegir el tamaño de los carácteres del nombre del archivo  
+Para solucionar esto podemos usar el siguiente comando que limita el título a los primeros 30 caracteres:
 
 ```bash
 yt-dlp -o "%(upload_date)s-%(uploader).30s-%(title).30s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
 
-
-La sintaxis `.30s` después de una variable limita esa parte a 30 caracteres. Puedes ajustar este número según tus preferencias, por ejemplo:
+La sintaxis `.30s` después de una variable (allí hay dos variables) limita esa parte a 30 caracteres. Puedes ajustar este número según tus preferencias, por ejemplo:
 
 ```bash
 yt-dlp -o "%(upload_date)s-%(uploader).15s-%(title).40s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
 
-
- Esto tomaría los primeros 15 caracteres del nombre del canal y los primeros 40 del título.
-
-O si quieres un formato intermedio con más información pero todavía compacto, puedes experimentar:
-
-```bash
-yt-dlp -o "%(upload_date)s-%(id)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
-```
-
-
-y así se pueden hacer otros experimentos, que podrían no funcionar.
+Esto tomaría los primeros 15 caracteres del nombre del canal y los primeros 40 del título. Y así se pueden hacer otros experimentos
 
 # Notas adicionales
 -------------------------

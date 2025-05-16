@@ -84,15 +84,12 @@ Usa el siguiente comando para descargar un video con audio en formato `.mp4` (es
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 ```
 
-**Explicación del comando:** 
+**Explicación del comando:**  
 
-`**-f "bv*+ba"**`: Selecciona el mejor formato de video (`bv*`) y lo combina con el mejor formato de audio (`ba`). 
-
-`**-S ext:mp4**`: Prioriza los formatos con extensión `.mp4`. 
-
-`**--merge-output-format mp4**`: Garantiza que el archivo final sea un `.mp4`, pero también puedes poner otro formato de salida: mkv, webm, flv, avi, mov 
-
-`**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
+1. **-f "bv`*`+ba"**  : Selecciona el mejor formato de video (`bv*`) y lo combina con el mejor formato de audio (`ba`). 
+2. **-S ext:mp4**: Prioriza los formatos con extensión `.mp4`. 
+3. **--merge-output-format mp4**: Garantiza que el archivo final sea un `.mp4`, pero también puedes poner otro formato de salida: mkv, webm, flv, avi, mov 
+4. **<URL_DEL_VIDEO>**: Reemplaza esto con la URL del video que deseas descargar
 
 ## 🎥 **Formatos de video que `yt-dlp` puede generar (con ayuda de `ffmpeg`)**
 
@@ -173,19 +170,16 @@ al poner el comando espera un momento, y funcionará
 **Explicación de cada parte del comando:**
 
 1.  **yt-dlp**: Es el nombre del programa que estás utilizando para descargar videos.
-    
 2.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
     *   `%(title)s`: Es una variable que se reemplaza con el título del video.
     *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (se descargará con el formato de video de la plataforma, generalmente en mp4).
     *   Las comillas son necesarias para que el sistema reconozca el patrón completo.
 3.  **\--restrict-filenames**:
-    
     *   Esta es la parte clave para resolver el problema de que algunos videos tienen caracteres extraños ya que limita los caracteres permitidos en los nombres de archivo a caracteres ASCII básicos.
     *   Reemplaza espacios con guiones bajos.
     *   Elimina o sustituye caracteres especiales, emojis, comillas y otros símbolos que podrían causar problemas en el sistema de archivos.
     *   Hace que los nombres de archivo sean compatibles con la mayoría de los sistemas operativos y entornos.
 4.  **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
-    
 
 ## Ejemplo práctico
 
@@ -254,12 +248,10 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 
 **Explicación de las opciones:**
 
-**\--audio-format mp3:** elegimos el formato mp3, y si deseamos descargar audio en otros formatos podemos cambiarlo por: `m4a`, `aac`, `flac`, etc.
-
-**\--embed-thumbnail:** descarga la miniatura del video y la incrusta como imagen de portada en el archivo MP3 (necesita ffmpeg y mutagen para funcionar).
-
-**\--add-metadata:** añade metadatos como el título, artista, etc., si están disponibles.
-
+1. **\--audio-format mp3:** elegimos el formato mp3, y si deseamos descargar audio en otros formatos podemos cambiarlo por: `m4a`, `aac`, `flac`, etc.
+2. **\--embed-thumbnail:** descarga la miniatura del video y la incrusta como imagen de portada en el archivo MP3 (necesita ffmpeg y mutagen para funcionar).
+3. **\--add-metadata:** añade metadatos como el título, artista, etc., si están disponibles.
+4. **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
 ## 🎵 Formatos que `yt-dlp` puede convertir con `--audio-format`:
 
 | Formato  | Descripción                                                                      |

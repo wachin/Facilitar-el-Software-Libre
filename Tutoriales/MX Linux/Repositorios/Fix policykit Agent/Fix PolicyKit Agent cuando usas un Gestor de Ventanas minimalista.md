@@ -218,4 +218,11 @@ Deberías ver que tu agente aparece en la lista de procesos.
 * El paso que muchos olvidan al usar Openbox: configurar PolicyKit
 
 
+# Referencias
+
+**polkit - www.freedesktop.org**  
+[https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html](https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html)
+
+**polkit(8) - Linux man page**  
+[https://linux.die.net/man/8/polkit](https://linux.die.net/man/8/polkit)
 

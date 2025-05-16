@@ -340,29 +340,10 @@ yt-dlp -o "%(upload_date)s-%(id)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 
 y así se pueden hacer otros experimentos, que podrían no funcionar.
 
-**3\. Notas adicionales**
+# Notas adicionales
 -------------------------
 
-*   **Formatos alternativos:** Si prefieres descargar el audio en otro formato (por ejemplo, AAC, FLAC, OGG), puedes cambiar el parámetro `--audio-format` al formato deseado. Ejemplo:
-
-```bash
-yt-dlp -x --audio-format aac --audio-quality 128K <URL_DEL_VIDEO>
-```
-
 *   **Compatibilidad:** Algunas plataformas pueden requerir autenticación o cookies para descargar contenido. En esos casos, consulta la documentación oficial de `yt-dlp` para obtener instrucciones específicas.
-
-*   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada sobre el proceso:
-
-```bash
-yt-dlp -v -x --audio-format mp3 --audio-quality 128K <URL_DEL_VIDEO>
-```
-
-Con estos comandos y explicaciones, podrás descargar videos en formato MP3 con diferentes calidades y acceder a contenido multimedia desde diversas plataformas.
-
-Al usar herramientas como `Termux`, `git` y `yt-dlp`, estamos aprovechando la tecnología moderna para **facilitar el acceso a la información** desde los celulares Android, lo cual es una forma práctica de aplicar este principio bíblico en nuestra vida diaria. 🌍💻
-
-**Notas adicionales**
---------------------
 
 *   **Velocidad de descarga:** Si experimentas problemas de velocidad, verifica tu conexión a internet. También puedes intentar usar un servidor proxy o VPN si sospechas limitaciones geográficas.
     
@@ -373,7 +354,11 @@ Al usar herramientas como `Termux`, `git` y `yt-dlp`, estamos aprovechando la te
 yt-dlp -v -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 ```
 
-Con estos pasos, estarás listo para descargar videos, audio y otros contenidos multimedia desde YouTube y otros sitios web utilizando `yt-dlp` en Termux en Android. ¡Disfruta de tus descargas!
+o 
+
+```bash
+yt-dlp -v -x --audio-format mp3 --audio-quality 128K <URL_DEL_VIDEO>
+```
 
 # Un Versículo Bíblico 🌟
 
@@ -381,6 +366,8 @@ Con estos pasos, estarás listo para descargar videos, audio y otros contenidos 
 > — **Deuteronomio 6:6-7** 📖✨
 
 Este versículo nos recuerda la importancia de **compartir conocimientos y sabiduría** con los demás, especialmente con aquellos que están dispuestos a aprender. Al crear tutoriales como este, estamos compartiendo lo que hemos aprendido (nuestro “conocimiento”) para que otros puedan beneficiarse de ello, tal como se menciona en este pasaje bíblico.
+
+Al usar herramientas como `Termux`, y `yt-dlp`, estamos aprovechando la tecnología moderna para **facilitar el acceso a la información** desde los celulares Android, lo cual es una forma práctica de aplicar este principio bíblico en nuestra vida diaria. 🌍💻
 
 Dios les bendiga
 

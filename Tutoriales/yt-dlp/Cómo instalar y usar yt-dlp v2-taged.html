@@ -1,0 +1,502 @@
+<h1
+id="cómo-instalar-yt-dlp-en-termux-en-android-para-descargar-videos-audio-mp3-de-youtube-facebook-tiktok-instagram-twitter-y-otros">Cómo
+instalar yt-dlp en Termux en Android para descargar videos, audio (MP3)
+de YouTube, Facebook, Tiktok, Instagram, Twitter y otros</h1>
+<p><code>yt-dlp</code> es una bifurcación (fork) de
+<code>youtube-dl</code>, una herramienta popular de línea de comandos
+utilizada para descargar videos de YouTube, Facebook, Tiktok, Instagram,
+Twitter y otros sitios web. <code>yt-dlp</code> incluye características
+adicionales, mejoras en la funcionalidad original y soporte para más
+plataformas. Es una herramienta poderosa para gestionar contenido
+multimedia desde diversas plataformas.</p>
+<p><strong>Nota</strong>: Este tutorial es para celulares con Android,
+si deseas instalar yt-dlp en Linux aconsejo <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html">este
+tutorial.</a></p>
+<h2 id="paso-1-instalar-termux">Paso 1: Instalar Termux</h2>
+<p>Debemos instalar Termux en Android pero no la versión que viene en la
+Play Store sino la versión completa, esta está en los celulares Xiaomi
+donde viene disponible en el gestor de software de esos celulares, pero
+no en otros como los SANSUMG. Vea la siguiente entrada con todas las
+explicaciones, para que pueda instalar Termux en su Celular con
+Adroid:</p>
+<p><strong>Tutorial: Uso de Git en Termux para Android</strong><br />
+<a
+href="https://github.com/wachin/Instalar-git-en-Android-con-Termux">https://github.com/wachin/Instalar-git-en-Android-con-Termux</a></p>
+<p>Si has seguido bien mi tutorial deberás haber usado:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pkg</span> update</span></code></pre></div>
+<p>y recomiendo usar un solo repositorio de los paquetes Termux, yo uso
+Grimler, y bueno allí están las explicaciones.</p>
+<h2 id="paso-2-instalar-las-dependencias-necesarias">Paso 2: Instalar
+las dependencias necesarias</h2>
+<p>Para usar <code>yt-dlp</code>, necesitarás Python y FFmpeg. Ejecuta
+el siguiente comando para instalar esos paquetes:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pkg</span> install python ffmpeg <span class="at">-y</span></span></code></pre></div>
+<p>Donde:</p>
+<p>- <code>python</code>: Es necesario para ejecutar
+<code>yt-dlp</code>.</p>
+<p>- <code>ffmpeg</code>: Es una herramienta esencial para fusionar
+video y audio.</p>
+<h2 id="paso-3-instalar-yt-dlp">Paso 3: Instalar yt-dlp</h2>
+<p>Una vez instaladas las dependencias, instala <strong>yt-dlp</strong>
+y <strong>mutagen</strong> usando <strong>pip</strong>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install yt-dlp mutagen</span></code></pre></div>
+<p>El paquete de <a
+href="https://products.documentprocessing.com/es/metadata/python/mutagen/#:~:text=Mutagen%20es%20una%20biblioteca%20Python%20potente%20y,incluidos%20MP3%2C%20FLAC%2C%20OGG%2C%20AAC%20y%20m%C3%A1s.">Python
+mutagen</a> sirve para manipular metadatos de archivos de audio. Permite
+leer, escribir y modificar etiquetas de metadatos en diversos formatos,
+como MP3, FLAC, OGG, y muchos otros, esto es para que la imagen del
+Vídeo mp4 quede en el mp3.</p>
+<h2 id="paso-4-mantener-yt-dlp-actualizado">Paso 4: Mantener yt-dlp
+actualizado</h2>
+<p>Es recomendable mantener <code>yt-dlp</code> actualizado para
+aprovechar las últimas funciones y correcciones. Este comando es para
+usarlo después, para actualizarlo:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">-U</span> <span class="st">&quot;yt-dlp[default]&quot;</span></span></code></pre></div>
+<p>Este comando debemos de usarlo con cierta frecuencia, puede ser una
+vez al mes o una vez cada dos meses, es para ver si han enviado alguna
+actualización y aplicarla, debido a que sino se hace esto, es posible
+que ya no se pueda descargar desde Youtube.</p>
+<h2 id="paso-5-acceder-al-almacenamiento-interno">Paso 5: Acceder al
+almacenamiento interno</h2>
+<p>Para descargar archivos directamente en tu almacenamiento interno,
+configura los permisos de acceso con:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">termux-setup-storage</span></span></code></pre></div>
+<p>Luego, navega al directorio compartido con uno de los siguientes
+métodos:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /sdcard</span></code></pre></div>
+<p>O bien:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> storage/shared</span></code></pre></div>
+<p>Para verificar tu ubicación actual, usa:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<p>sólo allí debes descargar los videos. Esto y otras indicaciones están
+explicadas en el anterior tutorial.</p>
+<h1 id="descargar-vídeos-con-audio-en-formato-mp4">Descargar vídeos con
+audio en formato mp4</h1>
+<p>Usa el siguiente comando para descargar un video con audio en formato
+<code>.mp4</code> (es que si no se hace esto sólo de descarga el vídeo
+sin el audio):</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Explicación del comando:</strong></p>
+<ol type="1">
+<li><strong>-f “bv<code>*</code>+ba”</strong> : Selecciona el mejor
+formato de video (<code>bv*</code>) y lo combina con el mejor formato de
+audio (<code>ba</code>).</li>
+<li><strong>-S ext:mp4</strong>: Prioriza los formatos con extensión
+<code>.mp4</code>.</li>
+<li><strong>–merge-output-format mp4</strong>: Garantiza que el archivo
+final sea un <code>.mp4</code>, pero también puedes poner otro formato
+de salida: mkv, webm, flv, avi, mov</li>
+<li><strong><URL_DEL_VIDEO></strong>: Reemplaza esto con la URL del
+video que deseas descargar</li>
+</ol>
+<h2
+id="formatos-de-video-que-yt-dlp-puede-generar-con-ayuda-de-ffmpeg">🎥
+<strong>Formatos de video que <code>yt-dlp</code> puede generar (con
+ayuda de <code>ffmpeg</code>)</strong></h2>
+<p>Cuando usas <code>--merge-output-format</code>, los formatos más
+comunes que puedes usar son:</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mp4</code></td>
+<td>Muy compatible con casi todos los dispositivos y navegadores.</td>
+</tr>
+<tr class="even">
+<td><code>mkv</code></td>
+<td>Flexible, soporta múltiples pistas de audio, subtítulos, capítulos,
+etc.</td>
+</tr>
+<tr class="odd">
+<td><code>webm</code></td>
+<td>Formato abierto, bien soportado por navegadores.</td>
+</tr>
+<tr class="even">
+<td><code>flv</code></td>
+<td>Antiguo formato usado para streaming (menos común ahora).</td>
+</tr>
+<tr class="odd">
+<td><code>avi</code></td>
+<td>Formato más viejo; no recomendado para contenido moderno.</td>
+</tr>
+<tr class="even">
+<td><code>mov</code></td>
+<td>Usado por Apple/QuickTime.</td>
+</tr>
+</tbody>
+</table>
+<p>si deseas ver todos los formatos disponibles pon:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-muxers</span></span></code></pre></div>
+<h2 id="ejemplo-práctico">Ejemplo práctico:</h2>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 https://www.youtube.com/watch<span class="pp">?</span>v=example</span></code></pre></div>
+<p>Verifica que el archivo se haya descargado correctamente:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<p>allí deberás ver los archivos, claro también los puedes ver con el
+administrador de archivos de Android</p>
+<h2 id="descargar-resumiendo-el-nombre-de-los-archivos">Descargar
+resumiendo el nombre de los archivos</h2>
+<p>A veces hay nombres de archivos que son muy largos y tienen en el
+nombre caracteres extraños, pero agregando la siguiente línea al final
+del comando eliminarás todo aquello:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span></span></code></pre></div>
+<p><strong>Explicación de cada parte del comando:</strong></p>
+<ol type="1">
+<li><p><strong>-o “%(title)s.%(ext)s”</strong>: Esta opción define el
+formato del nombre del archivo de salida.</p>
+<ul>
+<li><code>%(title)s</code>: Es una variable que se reemplaza con el
+título del video.</li>
+<li><code>%(ext)s</code>: Es una variable que se reemplaza con la
+extensión del archivo (mp4, en este caso).</li>
+<li>Las comillas son necesarias para que el sistema reconozca el patrón
+completo.</li>
+</ul></li>
+<li><p><strong>--restrict-filenames</strong>:</p>
+<ul>
+<li>Esta es la parte clave para resolver el problema de que algunos
+videos tienen caracteres extraños ya que limita los caracteres
+permitidos en los nombres de archivo a caracteres ASCII básicos.</li>
+<li>Reemplaza espacios con guiones bajos.</li>
+<li>Elimina o sustituye caracteres especiales, emojis, comillas y otros
+símbolos que podrían causar problemas en el sistema de archivos.</li>
+<li>Hace que los nombres de archivo sean compatibles con la mayoría de
+los sistemas operativos y entornos.</li>
+</ul></li>
+</ol>
+<p><strong>Al añadirla queda así</strong></p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<h1
+id="descargar-vídeo-desde-tiktok-facebook-instagram-twitter">Descargar
+vídeo desde TikTok, Facebook, Instagram, Twitter</h1>
+<p>Para descargar un vídeo de TikTok, Facebook, Instagram, Twitter, usa
+el siguiente comando (en estas redes sociales sino puedes obtener el
+link fácilmente solo da clic en la opción “Compartir” el video y allí
+busca, y debe haber una opción para copiar el enlace. En Twitter dale
+clic derecho al vídeo y copia el enlace)</p>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> https://www.tiktok.com/@usuario/video/1234567890</span></code></pre></div>
+<p>pero yo no lo uso porque se descargan videos con algunos caracteres
+raros que a veces causan problemas, por eso mejor lo siguiente:</p>
+<h2 id="para-descargar-vídeo-resumiendo-el-nombre-del-archivo">Para
+descargar vídeo resumiendo el nombre del archivo</h2>
+<p>A veces hay nombres de archivos que son muy largos y tienen en el
+nombre caracteres extraños, pero con el siguiente comando eliminarás
+todo aquello:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>al poner el comando espera un momento, y funcionará</p>
+<p><strong>Explicación de cada parte del comando:</strong></p>
+<ol type="1">
+<li><strong>yt-dlp</strong>: Es el nombre del programa que estás
+utilizando para descargar videos.</li>
+<li><strong>-o “%(title)s.%(ext)s”</strong>: Esta opción define el
+formato del nombre del archivo de salida.
+<ul>
+<li><code>%(title)s</code>: Es una variable que se reemplaza con el
+título del video.</li>
+<li><code>%(ext)s</code>: Es una variable que se reemplaza con la
+extensión del archivo (se descargará con el formato de video de la
+plataforma, generalmente en mp4).</li>
+<li>Las comillas son necesarias para que el sistema reconozca el patrón
+completo.</li>
+</ul></li>
+<li><strong>--restrict-filenames</strong>:
+<ul>
+<li>Esta es la parte clave para resolver el problema de que algunos
+videos tienen caracteres extraños ya que limita los caracteres
+permitidos en los nombres de archivo a caracteres ASCII básicos.</li>
+<li>Reemplaza espacios con guiones bajos.</li>
+<li>Elimina o sustituye caracteres especiales, emojis, comillas y otros
+símbolos que podrían causar problemas en el sistema de archivos.</li>
+<li>Hace que los nombres de archivo sean compatibles con la mayoría de
+los sistemas operativos y entornos.</li>
+</ul></li>
+<li><strong>&lt;URL_DEL_VIDEO&gt;</strong>: La dirección del video que
+quieres descargar.</li>
+</ol>
+<h2 id="ejemplo-práctico-1">Ejemplo práctico</h2>
+<p>Supongamos que deseas descargar el siguiente video:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> https://x.com/i/status/1630244294484443137</span></code></pre></div>
+<p><strong>Otras variables útiles que podrías usar en el patrón de
+salida (opcional)</strong></p>
+<p>Lo siguiente es solamente opcional, pues podría dar errores de
+descarga</p>
+<ul>
+<li><code>%(uploader)s</code>: Nombre del usuario que subió el
+video.</li>
+<li><code>%(id)s</code>: ID único del video.</li>
+<li><code>%(upload_date)s</code>: Fecha de subida (formato
+AAAAMMDD).</li>
+</ul>
+<p>Por ejemplo, si quisieras incluir la fecha y el usuario, podrías
+usar:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(upload_date)s-%(uploader)s-%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>pero lo malo de este comando es que puede dejar el nombre del archivo
+muy largo y podría no poder descargarse</p>
+<h2
+id="deseo-elegir-la-cantidad-de-los-caracteres-del-nombre-del-archivo">Deseo
+elegir la cantidad de los caracteres del nombre del archivo</h2>
+<p>Si el nombre resultante de la descarga es muy largo, para solucionar
+esto podemos usar el siguiente comando que limita el título a los
+primeros 30 caracteres:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(upload_date)s-%(uploader).30s-%(title).30s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>La sintaxis <code>.30s</code> después de una variable (allí hay dos
+variables) limita esa parte a 30 caracteres.</p>
+<p>Puedes ajustar este número según tus preferencias, por ejemplo:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(upload_date)s-%(uploader).15s-%(title).40s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>Esto tomaría los primeros 15 caracteres del nombre del canal y los
+primeros 40 del título. Y así se pueden hacer otros experimentos.</p>
+<h1 id="descargar-vídeos-de-otros-sitios-web">Descargar vídeos de otros
+sitios web</h1>
+<p><code>yt-dlp</code> también es compatible con otros sitios web.
+Simplemente cambia la URL en el comando:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="st">&quot;https://www.example.com/video&quot;</span></span></code></pre></div>
+<p>También puedes intentar añadir al comando alguno de los anteriormente
+explicados si los necesite.</p>
+<h1 id="descargar-solo-audio-en-formato-mp3-u-otros">Descargar solo
+audio, en formato mp3 u otros</h1>
+<p>Para descargar solo el audio en formato mp3, usa el siguiente
+comando:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--embed-thumbnail</span> <span class="at">--add-metadata</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Explicación de las opciones:</strong></p>
+<ol type="1">
+<li><strong>--audio-format mp3:</strong> elegimos el formato mp3, y si
+deseamos descargar audio en otros formatos podemos cambiarlo por:
+<code>m4a</code>, <code>aac</code>, <code>flac</code>, etc.</li>
+<li><strong>--embed-thumbnail:</strong> descarga la miniatura del video
+y la incrusta como imagen de portada en el archivo MP3 (necesita ffmpeg
+y mutagen para funcionar).</li>
+<li><strong>--add-metadata:</strong> añade metadatos como el título,
+artista, etc., si están disponibles.</li>
+<li><strong>&lt;URL_DEL_VIDEO&gt;</strong>: La dirección del video que
+quieres descargar. ## 🎵 Formatos que <code>yt-dlp</code> puede
+convertir con <code>--audio-format</code>:</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mp3</code></td>
+<td>Muy compatible. Perfecto para reproductores antiguos.</td>
+</tr>
+<tr class="even">
+<td><code>m4a</code></td>
+<td>Alta calidad, buena compresión. Recomendado.</td>
+</tr>
+<tr class="odd">
+<td><code>aac</code></td>
+<td>Similar a m4a pero sin envoltura MP4.</td>
+</tr>
+<tr class="even">
+<td><code>flac</code></td>
+<td>Audio sin pérdida (lossless). Muy pesado.</td>
+</tr>
+<tr class="odd">
+<td><code>wav</code></td>
+<td>Sin compresión, archivos grandes. Uso técnico.</td>
+</tr>
+<tr class="even">
+<td><code>opus</code></td>
+<td>Muy eficiente a bajo bitrate. Ideal para voz.</td>
+</tr>
+<tr class="odd">
+<td><code>vorbis</code></td>
+<td>Códec abierto, generalmente en <code>webm</code>.</td>
+</tr>
+<tr class="even">
+<td><code>alac</code></td>
+<td>Apple Lossless. Menos común, solo si necesitas compatibilidad Apple
+sin pérdida.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔧 Esto requiere tener <code>ffmpeg</code> correctamente
+instalado</p>
+</blockquote>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--embed-thumbnail</span> <span class="at">--add-metadata</span> https://youtu.be/JMYFz-uoOUw<span class="pp">?</span>si=h_MFWXsiukrKD3_Y</span></code></pre></div>
+<p>Se descargarán algunos archivos, debes esperar a que el proceso
+termine pues debe quedar sólo un archivo, el de audio, con la imagen de
+la carátula insertada.</p>
+<h2 id="para-descargar-resumiendo-el-nombre-de-los-archivos">Para
+descargar resumiendo el nombre de los archivos</h2>
+<p>Opcionalmente si necesitas que el archivo no contenga caracteres
+extraños, usa:</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--embed-thumbnail</span> <span class="at">--add-metadata</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--embed-thumbnail</span> <span class="at">--add-metadata</span> <span class="at">-o</span> <span class="st">&quot;%(title)s.%(ext)s&quot;</span> <span class="at">--restrict-filenames</span> https://youtu.be/JMYFz-uoOUw<span class="pp">?</span>si=h_MFWXsiukrKD3_Y</span></code></pre></div>
+<h1
+id="descargar-sólo-audio-en-formato-mp3-u-otros-con-diferentes-calidades">Descargar
+sólo audio en formato mp3 u otros, con diferentes calidades</h1>
+<p><code>yt-dlp</code> es una herramienta muy flexible que permite
+descargar audio en varios formatos y calidades. A continuación, se
+explica cómo descargar videos en formato MP3 con opciones específicas de
+calidad.</p>
+<h2 id="cómo-se-qué-calidad-del-vídeo-tenía-cuando-fue-subido">Cómo se
+qué calidad del vídeo tenía cuando fue subido?</h2>
+<p>Antes de continuar explico que un video en Youtube puede haber sido
+subido con muy buena calidad o con una calidad baja, pero no podemos
+saber que yo sepa a qué calidad de audio fue subido un video, ejemplo yo
+subí este:</p>
+<p><strong>20220814 Miguel Pelaez presentacion del Ministerio Gedeones
+Internacionales en Guayaquil</strong><br />
+<a
+href="https://youtu.be/60AecDF_Kqg?si=Zw2OdfPeBvSjFZfF">https://youtu.be/60AecDF_Kqg?si=Zw2OdfPeBvSjFZfF</a></p>
+<p>y al dar clic en la <strong>Tuerca</strong> y en
+<strong>Calidad</strong> indico lo que podemos ver que es la calidad de
+la imagen del video:</p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiryssasgZn91yCzSsb3QBk236Uir_9lfkX2aCyxD3YTRMLVZlyK2J-gYoDsy51Lhod7ngX4JXi1s63E4kwbGOswZ7gNk3c5A7OTZohhmS2fsHn-baEoPOTYclBXCBZcQxgin328f2zx5nfIZo9N_ljOdHpLUWXmoTieVd-mvH3GL2UcKVHc92ciEgFbBQ/s898/20250404-112310%20informaci%C3%B3n%20de%20la%20caldad%20de%20un%20video.png"
+alt="20250404 Captura de pantalla de la información de la caldad de un video que subí a Youtube" />
+<figcaption aria-hidden="true">20250404 Captura de pantalla de la
+información de la caldad de un video que subí a Youtube</figcaption>
+</figure>
+<p>y para saber cual es la <strong>calidad del audio</strong>, yo lo que
+hago es escuchar el video y presuponer según lo que escucho qué calidad
+de audio tendrá (lo mejor es tener un buen auricular).</p>
+<p>Entonces, descargar un vídeo en formato MP3 con una calidad
+específica, usa el siguiente comando:</p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> <span class="op">&lt;</span>CALIDAD<span class="op">&gt;</span> <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Explicación del comando:</strong></p>
+<ol type="1">
+<li><strong>-x</strong>: Extrae solo el audio.</li>
+<li><strong>–audio-format mp3</strong>: Especifica que el formato de
+salida debe ser mp3 que es el más usado, pero también puede ser otro,
+como: m4a, , aac, flac, wav, opus, alac.</li>
+<li><strong>–audio-quality <CALIDAD></strong>: Define la calidad del
+audio en kbps (kilobits por segundo).</li>
+<li><strong><URL_DEL_VIDEO></strong>: Reemplaza esto con la URL del
+video que deseas descargar.</li>
+</ol>
+<h2 id="ejemplo-práctico-2">Ejemplo práctico</h2>
+<p>Supongamos que deseas descargar el siguiente video en formato MP3 con
+una calidad de 128 kbps:</p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> 128K https://www.youtube.com/watch<span class="pp">?</span>v=example</span></code></pre></div>
+<h2 id="calidades-disponibles">Calidades disponibles</h2>
+<p>Aquí tienes una lista de las calidades que puedes especificar:</p>
+<ul>
+<li><code>320K</code>: Calidad máxima (320 kbps)</li>
+<li><code>256K</code>: Alta calidad (256 kbps)</li>
+<li><code>224K</code>: Buena calidad (224 kbps)</li>
+<li><code>192K</code>: Calidad estándar (192 kbps)</li>
+<li><code>160K</code>: Media calidad (160 kbps)</li>
+<li><code>144K</code>: Baja calidad (144 kbps)</li>
+<li><code>128K</code>: Calidad promedio (128 kbps)</li>
+<li><code>112K</code>: Baja calidad (112 kbps)</li>
+<li><code>96K</code>: Muy baja calidad (96 kbps)</li>
+<li><code>80K</code>: Calidad mínima aceptable (80 kbps)</li>
+<li><code>64K</code>: Calidad muy baja (64 kbps)</li>
+<li><code>56K</code>: Calidad extremadamente baja (56 kbps)</li>
+<li><code>48K</code>: Calidad para voz (48 kbps) (La uso para compartir
+predicas largas por Whatsapp)</li>
+<li><code>40K</code>: Calidad mínima para voces claras (40 kbps)</li>
+</ul>
+<p><strong>Nota:</strong> Las calidades más bajas son ideales para
+archivos de voz o cuando necesitas ahorrar espacio.</p>
+<p><strong>2. Descargar videos desde otras plataformas</strong></p>
+<p><code>yt-dlp</code> no solo funciona con YouTube, sino también con
+muchas otras plataformas como Facebook, Instagram, TikTok y páginas web.
+A continuación, se explica cómo hacerlo.</p>
+<h1 id="notas-adicionales">Notas adicionales</h1>
+<ul>
+<li><strong>Compatibilidad:</strong> Algunas plataformas pueden requerir
+autenticación o cookies para descargar contenido. En esos casos,
+consulta la documentación oficial de <code>yt-dlp</code> para obtener
+instrucciones específicas.</li>
+<li><strong>Velocidad de descarga:</strong> Si experimentas problemas de
+velocidad, verifica tu conexión a internet. También puedes intentar usar
+un servidor proxy o VPN si sospechas limitaciones geográficas.</li>
+<li><strong>Depuración:</strong> Si encuentras problemas durante la
+descarga, agrega la opción <code>-v</code> al comando para obtener
+información detallada, ejemplos:</li>
+</ul>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-v</span> <span class="at">-f</span> <span class="st">&quot;bv*+ba&quot;</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<p>o</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-v</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 <span class="at">--audio-quality</span> 128K <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div>
+<h1 id="un-versículo-bíblico">Un Versículo Bíblico 🌟</h1>
+<blockquote>
+<p><strong>“Y estas palabras que yo te mando hoy, estarán sobre tu
+corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu
+casa, y andando por el camino, y al acostarte, y cuando te
+levantes.”</strong><br />
+— <strong>Deuteronomio 6:6-7</strong> 📖✨</p>
+</blockquote>
+<p>Este versículo nos recuerda la importancia de <strong>compartir
+conocimientos y sabiduría</strong> con los demás, especialmente con
+aquellos que están dispuestos a aprender. Al crear tutoriales como este,
+estamos compartiendo lo que hemos aprendido (nuestro “conocimiento”)
+para que otros puedan beneficiarse de ello, tal como se menciona en este
+pasaje bíblico.</p>
+<p>Al usar herramientas como <code>Termux</code>, y <code>yt-dlp</code>,
+estamos aprovechando la tecnología moderna para <strong>facilitar el
+acceso a la información</strong> desde los celulares Android, lo cual es
+una forma práctica de aplicar este principio bíblico en nuestra vida
+diaria. 🌍💻</p>
+<p>Dios les bendiga</p>
+<h1 id="consultas">Consultas</h1>
+<p><strong>“Format Selection and Output Template Options.” GitHub
+Repository.</strong><br />
+<a
+href="https://github.com/yt-dlp/yt-dlp#output-template">https://github.com/yt-dlp/yt-dlp#output-template</a></p>
+<p><strong>“Termux Package Management.” Termux Wiki.</strong><br />
+<a
+href="https://wiki.termux.com/wiki/Package_Management">https://wiki.termux.com/wiki/Package_Management</a></p>
+<p><strong>“File System Limitations on Android.” Android Developer
+Documentation.</strong><br />
+<a
+href="https://developer.android.com/guide/topics/data/data-storage">https://developer.android.com/guide/topics/data/data-storage</a></p>
+<p><strong>Termux Setup Storage</strong><br />
+<a
+href="https://wiki.termux.com/wiki/Termux-setup-storage">https://wiki.termux.com/wiki/Termux-setup-storage</a></p>
+<p><strong>yt-dlp en Reddityt-dlp en Reddit</strong><br />
+<a
+href="https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/">https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/</a></p>

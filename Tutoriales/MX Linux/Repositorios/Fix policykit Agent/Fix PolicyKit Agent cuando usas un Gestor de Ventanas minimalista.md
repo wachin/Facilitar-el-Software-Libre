@@ -205,7 +205,6 @@ Deberías ver que tu agente aparece en la lista de procesos.
 * Cómo solucionar problemas de permisos en Openbox con PolicyKit
 * Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros
 * ¿No se abre Synaptic o el MX Instalador? Aquí la solución en Openbox
-* Habilitar autenticación gráfica en gestores de ventanas ligeros en Linux
 * PolicyKit en Openbox: Solución a errores al abrir programas con permisos de administrador
 * Configurando PolicyKit manualmente en Openbox, Fluxbox e i3
 * Agentes de PolicyKit en entornos sin escritorio: Guía para Openbox

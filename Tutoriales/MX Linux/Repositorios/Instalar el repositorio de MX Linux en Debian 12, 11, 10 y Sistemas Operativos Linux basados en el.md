@@ -57,7 +57,7 @@ sudo nano /etc/apt/sources.list.d/mx.list
 - **Editar el archivo en `nano`**: ─ Añade las siguientes líneas, copialas:
 
 ```
-MX Community Main and Test Repos
+#MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test

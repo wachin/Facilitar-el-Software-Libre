@@ -1,9 +1,5 @@
 # Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
-Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, ejemplo (puede ser cualquier otro, como Debian mismo):
-
-La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
-
-![20231118-182409 repositorio de MX Linux 21 añadido](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
+Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
 
 ## Qué se puede instalar desde este repositorio?
 
@@ -18,13 +14,15 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
 
 **Herramientas**
 
-- **ksnip:** (version actualizada desde el Repositorio de Pruebas "Test")
+- **ksnip:** Capturado de  pantalla (version actualizada )
 - **avidemux:** editor de video
-- **yt-dlp:** (version actualizada desde "el Repositorio de Pruebas "Test"MX Repo de prueba" o en "Backkports de Debian")
+- **yt-dlp:** [Descargador de videos](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html) (version actualizada)
 - **telegram-desktop** = Telegram (32 y 64 bit)
 - **formatusb:** Para formatear un Pendrive
 - **virtualBox:** La máquina virtual
 - **mx-snapshot:** MX Snapshot es una herramienta utilizada para crear un CD en vivo desde el sistema en ejecución (Respins)
+- **LibreOffice** Programa de Ofimática (desde los Repositorios Backports de Debian)
+- **Firmware**.- [Controladores](https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html), ejemplo de Wi-Fi, otros
 - otros
   
 **Nota**: Se pueden instalar las ultimas versiones, pero no es necesario si ya las movieron al repo estable, más abajo explico con más detalle.
@@ -364,6 +362,12 @@ sudo dpkg -i mx19-archive-keyring\_\*.\*.deb
 Recargue los repositorios e instale el programa que necesite
 
 **Nota:** En Debian 10 buster a esta hay menos programas.
+
+# Repositorio añadido en algunos Sistemas Operativos
+
+La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
+
+![20231118-182409 repositorio de MX Linux 21 añadido](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
 
 
 ## Es posible descargar manualmente programas

@@ -82,7 +82,7 @@ pwd
 sólo allí debes descargar los videos. Esto y otras indicaciones están explicadas en el anterior tutorial.
 
 
-### **Descargar videos con audio (formato MP4)**
+# Descargar vídeos con audio en formato mp4
 
 Usa el siguiente comando para descargar un video con audio en formato `.mp4` (es que si no se hace esto sólo de descarga el vídeo sin el audio):
 
@@ -96,7 +96,7 @@ Explicación del comando:
 
 `**-S ext:mp4**`: Prioriza los formatos con extensión `.mp4`. 
 
-`**--merge-output-format mp4**`: Garantiza que el archivo final sea un `.mp4`. 
+`**--merge-output-format mp4**`: Garantiza que el archivo final sea un `.mp4`, pero también puedes poner otro formato de salida: mkv, webm, flv, avi, mov 
 
 `**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
 
@@ -140,8 +140,15 @@ yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 -o "%(title)s.%(ext)s" -
 ```
 funciona.
 
+# **Descargar videos de otros sitios web**
 
-### **Descargar solo audio, formato MP3**
+`yt-dlp` también es compatible con otros sitios web. Simplemente cambia la URL en el comando:
+
+```bash
+yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
+```
+
+# Descargar solo audio, formato MP3
 
 Para descargar solo el audio en formato MP3, usa el siguiente comando:
 
@@ -177,15 +184,7 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ex
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
 
-### **Descargar videos de otros sitios web**
-
-`yt-dlp` también es compatible con otros sitios web. Simplemente cambia la URL en el comando:
-
-```bash
-yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
-```
-
-**Descargar videos en formato MP3 con diferentes calidades**
+## **Descargar videos en formato MP3 con diferentes calidades**
 ------------------------------------------------------------
 
 `yt-dlp` es una herramienta muy flexible que permite descargar audio en varios formatos y calidades. A continuación, se explica cómo descargar videos en formato MP3 con opciones específicas de calidad.

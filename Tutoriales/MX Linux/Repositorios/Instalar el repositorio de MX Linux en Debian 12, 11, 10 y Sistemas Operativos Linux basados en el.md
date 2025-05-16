@@ -58,7 +58,6 @@ sudo nano /etc/apt/sources.list.d/mx.list
 
 ```
 MX Community Main and Test Repos
-    
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
@@ -253,7 +252,6 @@ Copie las siguientes líneas:
 
 ```
 #MX Community Main and Test Repos
-
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
@@ -305,9 +303,8 @@ e instale el programa que necesite:
 
 Copie las siguientes líneas:
 
-#MX Community Main and Test Repos
-
 ```
+#MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bullseye main non-free
 
 #deb http://mxrepo.com/mx/repo/ bullseye test

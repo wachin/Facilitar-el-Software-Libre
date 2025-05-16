@@ -1,0 +1,11 @@
+
+
+
+Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el, y el instalador MX Instalar paquetes para instalar Ksnip, yt-dlp, otros
+https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html
+
+¿Letra 'O' o número '0'? una distinción necesaria para mejorar la legibilidad al ingresar números
+https://facilitarelsoftwarelibre.blogspot.com/2025/05/tengo-una-queja-de-que-la-letra-o-y-el-numero-cero-son-practicamente-iguales.html
+
+Cómo instalar yt-dlp en Termux en Android para descargar videos, audio (MP3) de YouTube, Facebook, Tiktok, Instagram y otros
+https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html

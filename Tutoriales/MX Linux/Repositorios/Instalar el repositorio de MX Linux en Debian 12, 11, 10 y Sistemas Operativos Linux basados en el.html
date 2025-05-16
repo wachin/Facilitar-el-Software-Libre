@@ -4,17 +4,8 @@ el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos
 Linux basados en el</h1>
 <p>Este tutorial es para instalar los repositorios de MX Linux a
 Sistemas Operativos Debian y basados en Debian que no lo tienen añadido,
-ejemplo (puede ser cualquier otro, como Debian mismo):</p>
-<p>La siguiente imagen es del repositorio de MX Linux 21 añadido en <a
-href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
-Synaptic:</p>
-<figure>
-<img
-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"
-alt="20231118-182409 repositorio de MX Linux 21 añadido" />
-<figcaption aria-hidden="true">20231118-182409 repositorio de MX Linux
-21 añadido</figcaption>
-</figure>
+para instalar el Instalador de paquetes de MX Linux y poder instalar las
+ultimas versiones de algunos programas.</p>
 <h2 id="qué-se-puede-instalar-desde-este-repositorio">Qué se puede
 instalar desde este repositorio?</h2>
 <p>En los repositorios de MX Linux hay software muy importante como
@@ -32,19 +23,30 @@ archivos:</strong></p>
 </ul>
 <p><strong>Herramientas</strong></p>
 <ul>
-<li><strong>ksnip:</strong> (version actualizada desde el Repositorio de
-Pruebas “Test”)</li>
-<li><strong>avidemux:</strong> editor de video</li>
-<li><strong>yt-dlp:</strong> (version actualizada desde el Repositorio
-de Pruebas “Test”)</li>
+<li><strong>ksnip:</strong> Capturado de pantalla (version actualizada
+)</li>
+<li><strong>avidemux:</strong> editor de video (En el 2025-05-016 no lo
+pude instalar porque dice qu e depende de libfaac0, libfdk-aac2 y no se
+pueden instalar)</li>
+<li><strong>yt-dlp:</strong> <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html">Descargador
+de videos</a> (version actualizada)</li>
 <li><strong>telegram-desktop</strong> = Telegram (32 y 64 bit)</li>
 <li><strong>formatusb:</strong> Para formatear un Pendrive</li>
 <li><strong>virtualBox:</strong> La máquina virtual</li>
 <li><strong>mx-snapshot:</strong> MX Snapshot es una herramienta
 utilizada para crear un CD en vivo desde el sistema en ejecución
 (Respins)</li>
+<li><strong>LibreOffice</strong> Programa de Ofimática (desde los
+Repositorios Backports de Debian)</li>
+<li><strong>Firmware</strong>.- <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html">Controladores</a>,
+ejemplo de Wi-Fi, otros</li>
 <li>otros</li>
 </ul>
+<p><strong>Nota</strong>: Se pueden instalar las ultimas versiones, pero
+no es necesario si ya las movieron al repo estable, más abajo explico
+con más detalle.</p>
 <h2 id="añadiendo-los-repositorios-de-mx-linux-a-debian-12">Añadiendo
 los repositorios de MX Linux a Debian 12</h2>
 <p>La siguiente es una explicación genérica que hago para Debian 12, y
@@ -66,7 +68,7 @@ sistema operativo, digo porque ejemplo Kate no deja hacer esto:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit /etc/apt/sources.list.d/mx.list</span></code></pre></div>
 <h2 id="usando-nano-para-editar-sources.list.d">Usando nano para editar
-sources.list.d</h2>
+<code>sources.list.d</code></h2>
 <p>Se puede usar nano desde la terminal. Nano es un editor de texto de
 terminal que siempre sirve para cosas como estas que necesitan elevar
 los permisos.</p>
@@ -80,11 +82,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <li><strong>Editar el archivo en <code>nano</code></strong>: ─ Añade las
 siguientes líneas, copialas:</li>
 </ul>
-<p>MX Community Main and Test Repos</p>
-<p>deb http://mxrepo.com/mx/repo/ bookworm main non-free</p>
-<p>#deb http://mxrepo.com/mx/repo/ bookworm test</p>
-<p>#ahs hardware stack repo #deb http://mxrepo.com/mx/repo/ bookworm
-ahs</p>
+<pre><code>MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs </code></pre>
 <p>y pegalas en nano.</p>
 <ul>
 <li><strong>Guardar el archivo en <code>nano</code></strong>: ─ Presiona
@@ -102,8 +106,8 @@ tutorial que he hecho</a></p>
 hayas cerrado <code>nano</code>, ejecuta el siguiente comando para
 actualizar la lista de paquetes disponibles:</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
 <h2 id="usando-vim-para-editar-sources.list.d">Usando vim para editar
 <code>sources.list.d</code></h2>
 <p>Otra opción desde la terminal es usar <code>vim</code>, un editor de
@@ -115,8 +119,8 @@ rápido y versátil.</p>
 <li>Para abrir o crear el archivo <code>mx.list</code> en
 <code>vim</code>, escribe el siguiente comando:</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/apt/sources.list.d/mx.list</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/apt/sources.list.d/mx.list</span></code></pre></div>
 <ul>
 <li>Cuando se abra el archivo, presiona la tecla <code>i</code> para
 entrar al <strong>modo de inserción</strong> (Insert Mode). Verás que
@@ -124,11 +128,13 @@ abajo dice <code>-- INSERT --</code>. Ahora sí puedes escribir o pegar
 el contenido.</li>
 </ul>
 <p>Copia y pega lo siguiente:</p>
-<p>#MX Community Main and Test Repos deb http://mxrepo.com/mx/repo/
-bookworm main non-free</p>
-<p>#deb http://mxrepo.com/mx/repo/ bookworm test</p>
-<p>#ahs hardware stack repo #deb http://mxrepo.com/mx/repo/ bookworm
-ahs</p>
+<pre><code>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs</code></pre>
 <ul>
 <li><p>Cuando termines, <strong>presiona <code>Esc</code></strong> para
 salir del modo de inserción.</p></li>
@@ -153,8 +159,8 @@ mini guía de Vim aquí</a></p>
 <li><strong>Actualizar la lista de repositorios</strong>: después de
 guardar el archivo, ejecuta:</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
 <p>Siguiendo estos pasos, habrás añadido el repositorio y actualizado la
 lista de paquetes en tu sistema.</p>
 <h2
@@ -168,8 +174,8 @@ Linux</p>
 llamado:</p>
 <p><strong>MX Instalar paquetes</strong></p>
 <p>este debemos instalarlo, poner en la terminal:</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller</span></code></pre></div>
 <p>y luego buscarlo y abrirlo:</p>
 <figure>
 <img
@@ -275,27 +281,41 @@ sabe qué programa ha instalado y si ese le cause algún problema pues lo
 puede desinstalar, pero si fueran muchos o muchas dependencias desde el
 testrepo usted no sabrá qué le causó algún problema y no sabrá que
 desinstalar)</p>
-<h2 id="instalando-a-ksnip-desde-los-repositorios-de-prueba">Instalando
-a ksnip desde los repositorios de prueba</h2>
-<p>Ksnip sirve para hacer capturas de pantalla</p>
-<p>la siguiente imagen es de ksnip visto en Debian 12 en los
-repositorios en Synaptic, el 25 de abril 2025:</p>
+<h2
+id="instalando-a-ksnip-desde-los-repositorios-de-prueba-de-mx-o-backports-de-debian">Instalando
+a ksnip desde los Repositorios de prueba de MX, o Backports de
+Debian</h2>
+<p>Ksnip sirve para hacer capturas de pantalla, la siguiente imagen es
+de ksnip visto en Debian 12 de 64 bit en los repositorios en Synaptic,
+el 25 de abril 2025:</p>
 <p><img
 src="https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw" /></p>
 <p>la siguiente imagen es de ksnip visto en los repositorios estables de
-MX Linux, el 25 de abril 2025:</p>
+MX Linux, el 25 de abril 2025, como vemos no hay alguna versión para MX
+Linux 23, sólo hay las versiones para MX Linux 17, 19, 21:</p>
+<p><a
+href="https://mxrepo.com/mx/repo/pool/main/k/ksnip/">https://mxrepo.com/mx/repo/pool/main/k/ksnip/</a></p>
 <p><img
 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMG-RZmFOHmGx65PUznXuOy_htSjsSmhiTWkqiOVpjpxTiC0-hG5irm3D8ug0uP0lKXoYhlv-IEOkuC5Xo28jMy4WZ_dVWy_pWCSzdVNCNgkWLT-cZp2KaeWWl6Tbgpq5LrMh-34XNTtJSfDZ8e_0AFWfXTpUDTAwSF6HaY2QhFfwI9TpOCK4_HSmdn1g/s16000-rw/16087994950982.png" /></p>
 <p>la siguiente imagen es de ksnip visto en los repositorios de prueba
-(<strong>testrepo</strong>) de MX Linux, el 25 de abril 2025:</p>
+(<strong>testrepo</strong>) de MX Linux, el 25 de abril 2025, hay las
+versiones para MX Linux 21, 23, 19 y para MX 21 y 23 la versión 1.10.1
+que es la ultima a esta fecha:</p>
+<p><a
+href="https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/">https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/</a></p>
 <p><img
 src="https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw" /></p>
-<p>como observan la última versión ksnip 1.10.1 está todavía en el
-repositorio de prueba y no la han pasado al repositorio estable, por lo
-que la única manera de tener la última versión es desde el repositorio
-de prueba de MX:</p>
+<p>La última versión ksnip 1.10.1 está todavía en el repositorio de
+prueba y no la han pasado al repositorio estable, por lo que la única
+manera de tener la última versión es desde el repositorio de prueba de
+MX Linux, la siguiente imagen es en MX Linux 23 KDE de 64 bit:</p>
 <p><img
 src="https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw" /></p>
+<p>La siguiente imagen es de ksnip la ultima versión en
+<strong>Backports de Debian</strong> visto en Debian 12 de 32 bit, pues
+allí no la encuentro en los repositorios de prueba:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000" /></p>
 <p>Bueno, ahora si dejo las instrucciones para:</p>
 <p>Debian 12 Debian 11</p>
 <p>repito para la primera, pero solo los pasos de instalación del
@@ -303,11 +323,13 @@ repositorio:</p>
 <h2 id="para-debian-12-bookworm-mx-23-repo">Para Debian 12 bookworm: MX
 23 Repo</h2>
 <p>Copie las siguientes líneas:</p>
-<p>#MX Community Main and Test Repos</p>
-<p>deb http://mxrepo.com/mx/repo/ bookworm main non-free</p>
-<p>#deb http://mxrepo.com/mx/repo/ bookworm test</p>
-<p>#ahs hardware stack repo #deb http://mxrepo.com/mx/repo/ bookworm
-ahs</p>
+<pre><code>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs </code></pre>
 <p>en el archivo mx.list con alguno de los métodos que se indicó arriba
 y guarde</p>
 <p>ahora descargue la llave desde:</p>
@@ -327,8 +349,8 @@ mx23-archive-keyring_2023</figcaption>
 cambien con otro más actual y cambie el nombre de la versión.</p>
 <p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
 archivo sería:</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx23-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx23-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb</span></code></pre></div>
 <p>Este comando se descompone en varias partes:</p>
 <ol type="1">
 <li><p><strong><code>sudo</code></strong>: Ejecuta el comando con
@@ -366,11 +388,13 @@ activados en Debian 12</figcaption>
 <h2 id="para-debian-11-bullseye-mx-linux-21-repo">Para Debian 11
 bullseye: MX Linux 21 Repo</h2>
 <p>Copie las siguientes líneas:</p>
-<p>#MX Community Main and Test Repos</p>
-<p>deb http://mxrepo.com/mx/repo/ bullseye main non-free</p>
-<p>#deb http://mxrepo.com/mx/repo/ bullseye test</p>
-<p>#ahs hardware stack repo #deb http://mxrepo.com/mx/repo/ bullseye
-ahs</p>
+<pre><code>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bullseye main non-free
+
+#deb http://mxrepo.com/mx/repo/ bullseye test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bullseye ahs </code></pre>
 <p>en el archivo mx.list con alguno de los métodos que se indicó arriba
 y guarde</p>
 <p>ahora descargue la llave desde:</p>
@@ -381,17 +405,19 @@ href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/">https://mxre
 href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb</a></p>
 <p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
 archivo sería:</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx21-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx21-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
 <p>Recargue los repositorios e instale el programa que necesite</p>
 <h2 id="para-debian-10-buster-mx-linux-19-repo">Para Debian 10 buster:
 MX Linux 19 Repo</h2>
 <p>Copie las siguientes líneas:</p>
-<p>#MX Community Main and Test Repos deb http://mxrepo.com/mx/repo/
-buster main non-free</p>
-<p>#deb http://mxrepo.com/mx/repo/ buster test</p>
-<p>#ahs hardware stack repo #deb http://mxrepo.com/mx/repo/ buster
-ahs</p>
+<pre><code>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ buster main non-free
+
+#deb http://mxrepo.com/mx/repo/ buster test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ buster ahs </code></pre>
 <p>en el archivo mx.list con alguno de los métodos que se indicó arriba
 y guarde</p>
 <p>ahora descargue la llave desde:</p>
@@ -402,11 +428,23 @@ href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/">https://mxre
 href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb</a></p>
 <p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
 archivo sería:</p>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx19-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx19-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
 <p>Recargue los repositorios e instale el programa que necesite</p>
 <p><strong>Nota:</strong> En Debian 10 buster a esta hay menos
 programas.</p>
+<h1 id="repositorio-añadido-en-algunos-sistemas-operativos">Repositorio
+añadido en algunos Sistemas Operativos</h1>
+<p>La siguiente imagen es del repositorio de MX Linux 21 añadido en <a
+href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
+Synaptic:</p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"
+alt="20231118-182409 repositorio de MX Linux 21 añadido" />
+<figcaption aria-hidden="true">20231118-182409 repositorio de MX Linux
+21 añadido</figcaption>
+</figure>
 <h2 id="es-posible-descargar-manualmente-programas">Es posible descargar
 manualmente programas</h2>
 <p>Por si necesita manualmente descargar algun programa, puede entrar

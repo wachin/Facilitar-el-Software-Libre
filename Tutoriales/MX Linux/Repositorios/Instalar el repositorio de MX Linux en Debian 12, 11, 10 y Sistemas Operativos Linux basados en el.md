@@ -1,9 +1,5 @@
 # Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el
-Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, ejemplo (puede ser cualquier otro, como Debian mismo):
-
-La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
-
-![20231118-182409 repositorio de MX Linux 21 añadido](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
+Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, y para instalar el Instalador de paquetes de MX Linux y poder instalar las ultimas versiones de algunos programas.
 
 ## Qué se puede instalar desde este repositorio?
 
@@ -18,15 +14,18 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
 
 **Herramientas**
 
-- **ksnip:** (version actualizada desde el Repositorio de Pruebas "Test")
-- **avidemux:** editor de video
-- **yt-dlp:** (version actualizada desde el Repositorio de Pruebas "Test")
+- **ksnip:** Capturado de  pantalla (version actualizada )
+- **avidemux:** editor de video (En el 2025-05-016 no lo pude instalar porque dice qu e depende de libfaac0, libfdk-aac2 y no se pueden instalar)
+- **yt-dlp:** [Descargador de videos](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html) (version actualizada)
 - **telegram-desktop** = Telegram (32 y 64 bit)
 - **formatusb:** Para formatear un Pendrive
 - **virtualBox:** La máquina virtual
 - **mx-snapshot:** MX Snapshot es una herramienta utilizada para crear un CD en vivo desde el sistema en ejecución (Respins)
+- **LibreOffice** Programa de Ofimática (desde los Repositorios Backports de Debian)
+- **Firmware**.- [Controladores](https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html), ejemplo de Wi-Fi, otros
 - otros
   
+**Nota**: Se pueden instalar las ultimas versiones, pero no es necesario si ya las movieron al repo estable, más abajo explico con más detalle.
 
 ## Añadiendo los repositorios de MX Linux a Debian 12
 
@@ -45,7 +44,7 @@ podemos usar Gedit  u otro editor de texto, si es que lo deja hacer el sistema o
 sudo gedit /etc/apt/sources.list.d/mx.list
 ```
  
-## Usando nano para editar sources.list.d
+## Usando nano para editar `sources.list.d`
 Se puede usar nano desde la terminal. Nano es un editor de texto de terminal que siempre sirve para cosas como estas que necesitan elevar los permisos. 
 
 - El siguiente comando creará el archivo mx.list automáticamente **con `nano`**::
@@ -55,14 +54,15 @@ sudo nano /etc/apt/sources.list.d/mx.list
 ```
 - **Editar el archivo en `nano`**: ─ Añade las siguientes líneas, copialas:
 
+```
 MX Community Main and Test Repos
-    
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs 
+```
 
 y pegalas en nano.
 
@@ -90,7 +90,7 @@ sudo vim /etc/apt/sources.list.d/mx.list
 
 Copia y pega lo siguiente:
 
-
+```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
@@ -98,7 +98,7 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs
-
+```
 
 - Cuando termines, **presiona `Esc`** para salir del modo de inserción.
 
@@ -211,25 +211,31 @@ e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde 
 
 Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 
-## Instalando a ksnip desde los repositorios de prueba
+## Instalando a ksnip desde los Repositorios de prueba de MX, o Backports de Debian
 
-Ksnip sirve para hacer capturas de pantalla
-
-la siguiente imagen es de ksnip visto en Debian 12 en los repositorios en Synaptic, el 25 de abril 2025:
+Ksnip sirve para hacer capturas de pantalla, la siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw)
 
-la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025, como vemos no hay alguna versión para MX Linux 23, sólo hay las versiones para MX Linux 17, 19, 21:
+
+[https://mxrepo.com/mx/repo/pool/main/k/ksnip/](https://mxrepo.com/mx/repo/pool/main/k/ksnip/)
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMG-RZmFOHmGx65PUznXuOy_htSjsSmhiTWkqiOVpjpxTiC0-hG5irm3D8ug0uP0lKXoYhlv-IEOkuC5Xo28jMy4WZ_dVWy_pWCSzdVNCNgkWLT-cZp2KaeWWl6Tbgpq5LrMh-34XNTtJSfDZ8e_0AFWfXTpUDTAwSF6HaY2QhFfwI9TpOCK4_HSmdn1g/s16000-rw/16087994950982.png)
 
-la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025, hay las versiones para MX Linux 21, 23, 19 y para MX 21 y 23 la versión 1.10.1 que es la ultima a esta fecha:
+
+[https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/](https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/)
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw)
 
-como observan la última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX:
+La última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX Linux, la siguiente imagen es en MX Linux 23 KDE de 64 bit:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw)
+
+La siguiente imagen es de ksnip la ultima versión en **Backports de Debian** visto en Debian 12 de 32 bit, pues allí no la encuentro en los repositorios de prueba:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000)
 
 Bueno, ahora si dejo las instrucciones para:
 
@@ -242,14 +248,15 @@ repito para la primera, pero solo los pasos de instalación del repositorio:
 
 Copie las siguientes líneas:
 
+```
 #MX Community Main and Test Repos
-
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #deb http://mxrepo.com/mx/repo/ bookworm test
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -294,14 +301,15 @@ e instale el programa que necesite:
 
 Copie las siguientes líneas:
 
+```
 #MX Community Main and Test Repos
-
 deb http://mxrepo.com/mx/repo/ bullseye main non-free
 
 #deb http://mxrepo.com/mx/repo/ bullseye test
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bullseye ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -325,6 +333,7 @@ Recargue los repositorios e instale el programa que necesite
 
 Copie las siguientes líneas:
 
+```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ buster main non-free
 
@@ -332,6 +341,7 @@ deb http://mxrepo.com/mx/repo/ buster main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ buster ahs 
+```
 
 en el archivo mx.list con alguno de los métodos que se indicó arriba y guarde
 
@@ -352,6 +362,12 @@ sudo dpkg -i mx19-archive-keyring\_\*.\*.deb
 Recargue los repositorios e instale el programa que necesite
 
 **Nota:** En Debian 10 buster a esta hay menos programas.
+
+# Repositorio añadido en algunos Sistemas Operativos
+
+La siguiente imagen es del repositorio de MX Linux 21 añadido en [Q4OS versión 4](https://q4os.org/downloads3.html) visto en Synaptic:
+
+![20231118-182409 repositorio de MX Linux 21 añadido](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png)
 
 
 ## Es posible descargar manualmente programas

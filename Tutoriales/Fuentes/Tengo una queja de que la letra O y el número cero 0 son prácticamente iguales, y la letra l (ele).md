@@ -1,6 +1,3 @@
-
-
-
 # ¿Letra 'O' o número '0'? una distinción necesaria para mejorar la legibilidad al ingresar números  
 
 En el mundo digital, la legibilidad no es solo una cuestión estética, sino también de funcionalidad y accesibilidad. Uno de los problemas más comunes que enfrentamos —especialmente quienes trabajamos con código, configuraciones técnicas o tipografías monoespaciadas— es la casi _indistinguible_ diferencia entre la letra mayúscula **O** y el número **0** (cero).
@@ -188,7 +185,13 @@ les cuento que en el mes de Abril de 2025 tuve la oportunidad de ver a una amist
 
 Les cuento que estoy usando la fuente tipográfica proporcional Atkinson Hyperlegible en el sistema operativo (y sus programas)
 
-   
+# Herramientas para probar fuentes fácilmente  
+
+Aconsejo usar Sitios web como [https://fontdrop.info/](https://fontdrop.info/) o [https://www.fontsquirrel.com/tools/webfont-generator](https://www.fontsquirrel.com/tools/webfont-generator)   los cuales permiten subir fuentes y ver cómo lucen en pantalla, además de otras informaciones:
+
+**Fontdrop.info**
+
+
 
 ### Para reflexionar:  
 

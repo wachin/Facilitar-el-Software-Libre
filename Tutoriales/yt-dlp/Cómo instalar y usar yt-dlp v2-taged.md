@@ -104,6 +104,12 @@ Cuando usas `--merge-output-format`, los formatos más comunes que puedes usar s
 | `avi`   | Formato más viejo; no recomendado para contenido moderno.                |
 | `mov`   | Usado por Apple/QuickTime.                                               |
 
+si deseas ver todos los formatos disponibles pon:
+
+```bash
+ffmpeg -muxers
+```
+   
 
 ## Ejemplo práctico:
 

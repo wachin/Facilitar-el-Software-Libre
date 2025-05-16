@@ -347,7 +347,7 @@ y así se pueden hacer otros experimentos, que podrían no funcionar.
 
 *   **Velocidad de descarga:** Si experimentas problemas de velocidad, verifica tu conexión a internet. También puedes intentar usar un servidor proxy o VPN si sospechas limitaciones geográficas.
     
-*   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada:
+*   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada, ejemplos:
     
 
 ```bash

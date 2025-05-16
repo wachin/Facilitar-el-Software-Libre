@@ -24,27 +24,30 @@ Muchas aplicaciones gráficas que necesitan permisos elevados usan un sistema ll
 
 Es un pequeño programa que se encarga de mostrar la ventana de autenticación cuando una aplicación necesita privilegios. Algunos ejemplos:
 
-| Entorno de escritorio | Agente de PolicyKit                                |
-|------------------------|----------------------------------------------------|
-| LXQt                   | `lxqt-policykit-agent`                             |
-| GNOME                  | `polkit-gnome-authentication-agent-1`             |
-| KDE Plasma             | `polkit-kde-agent-1`                               |
-| XFCE / LXDE            | `lxpolkit`                                         |
-| Openbox / Fluxbox      | Ninguno por defecto, debes configurarlo tú mismo  |
+| Entorno de escritorio |                     Agente de PolicyKit                     |
+| --------------------- | ----------------------------------------------------------- |
+| LXQt                  | `lxqt-policykit-agent`                                      |
+| GNOME                 | `/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1` |
+| KDE Plasma            | `/usr/lib/polkit-kde-agent-1`                               |
+| XFCE / LXDE           | `lxpolkit`                                                  |
+| Openbox / Fluxbox     | Ninguno por defecto, debes configurarlo tú mismo            |
+
 
 **Nota** Una vez en la Distro AV Linux los desarrolladores le pusieron Openbox y venía ya configurado con algún Agnete de PolicyKit.
 
+**Nota 2**: La ruta donde está el archivo ejecutable puede variar dependiendo del Sistema Iprativo. Más abajo indico con más detalle.
+
 ---
 
-## Solución: cómo activar un agente de PolicyKit en Openbox
+## Cómo activar un agente de PolicyKit en Openbox
 
-### 1. **Instala un agente de PolicyKit**
+### Usa un agente de PolicyKit
 
-Si usas algún Sistema Operativo Linux como Ubuntu o alguno de sus sabores, o Debian o alguna distribución basada en ella que usen LXQT, GNOME, KDE Plasma, XFCE, LXDE puedes buscar en Synaptic la palabra:
+Busca en Synaptic la palabra:
 
 policykit
 
-Como ve en la siguiente imagen, le he dado clic en la letra "E" para ordenar todos los paquetes instalados, así al poderlos ver puedo encontrar algún paquete que tiene que ver con  policykit:
+Como ve en la siguiente imagen, le he dado clic en la letra "**E**" para ordenar todos los paquetes instalados, así al poderlos ver puedo encontrar algún paquete que tiene que ver con  policykit:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgLF9qtCJqW_Cc7WSOi2IALvmfqkvrMZOdpCk0qu3kjpKMqN99AkjlaLQ1JdufDvQIdMre7NrSCv2hcCAzl08aIZT3Yj2Lqd5oTRxDSnPrK7EB9FLLLsKOqdZnLs3vKulNiPjpKzitkV67VgD06dfoxeWxxw8bAZOXSgAc4JdqA910ODp4DbIyQPKXEhak)
 
@@ -52,7 +55,7 @@ al darle clic a ese paquete y ver sus **Propiedades**, en la pestaña "**Archivo
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEhHmjGbNzJqWdxxWiFbRBd_t_YOjmydnpwyTQu8CMfSqmepKrI8iROcg2UtsiXs8KzylOovTj0tq2R11woB4M64YClTgX8vwPRQBfKEucWK-zAKAG1fdu-yo_e64jRpeb0Z3jfaDXqdEP5Cz-49WJOu7q9oRg8hO1jX31poK_xwJgkqenw6Bbs-ElGfHgs=s16000)
 
-en este caso aquí lo copio:
+**en este caso** aquí lo copio:
 
 /etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop
 
@@ -68,57 +71,42 @@ y búsca la línea que está en **Exec**:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEhxxo-w73Y8Wqvjfj1zqB2pJASTktmf2l7rCq1n6HJ6B33q09DlpSXOpBihT57jytE21SgIfE9nYztYtzcDIWSyRnP5E8krD5Nhq9VaY_2meRxU-YySgzE4ciED7JYTf6rOEdevoBwuMPq1hvvoamroxGiEZRsVwpDBD4TUGi1NllvystsZVuLWajJVZuU)
 
-esa líena debes colocarla para que al encender el ordenador se ejecute, 
 
-el cual lo puedo buscar en el administrador de archivos y abrir y leer lo que dice en:
+### Añadir PolicyKit al inicio de Openbox 
+
+Para añadirlo hay que abrir el archivo autostart de openbox, para llegar allí activa la capacidad de ver archivos ocultos de tu administrador de archivos (ver con Ctrl + H) y llega hasta:
+
+`~/.config/openbox/autostart`.
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVgjA5Hzzar65NsM09DqpSOueI3PCelKyA59ZYkwS14vhSyNOEo5RsjJvSnHDbjOpeZQ1YUUc0-NSqCZ78_3oN4iFFiSwykbc1m-IVPQUHxECfnYPc3mXesP5v9fttc8oLApVdfRnYj0c6WcVpi8EVX_RHDhrAc5ORkhV1vmyo7-Omipw5_A3oGatBDk/s16000-rw/20250318-111511%20archivo%20autostart.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVgjA5Hzzar65NsM09DqpSOueI3PCelKyA59ZYkwS14vhSyNOEo5RsjJvSnHDbjOpeZQ1YUUc0-NSqCZ78_3oN4iFFiSwykbc1m-IVPQUHxECfnYPc3mXesP5v9fttc8oLApVdfRnYj0c6WcVpi8EVX_RHDhrAc5ORkhV1vmyo7-Omipw5_A3oGatBDk/s696/20250318-111511%20archivo%20autostart.png)
+
+allí agregar la línea que en este caso es:
+
+/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1
+
+guardar y cerrar.
 
 
-Puedes elegir uno de estos:
 
-* **Opción si ya tienes LXQt instalado**:
+### Para añadirlo a Fluxbox
 
-  ```bash
-  sudo apt install lxqt-policykit
-  ```
 
-* **Opción GNOME** (si prefieres la interfaz de GNOME):
 
-  ```bash
-  sudo apt install policykit-1-gnome
-  ```
 
-- **Opción recomendada para Openbox** (ligero y sencillo):
-  ```bash
+
+# PolicyKit Genérico
+
+Si dedeas puedes instalar el siguiente y usarlo
+
+```bash
   sudo apt install lxpolkit
-````
-
-> Si no estás seguro de cuál instalar, `lxpolkit` es una opción ligera que funciona en casi todos los casos.
-
----
-
-### 2. **Añade el agente al inicio de tu sesión Openbox**
-
-Edita (o crea) el archivo de inicio automático de Openbox:
-
-```bash
-nano ~/.config/openbox/autostart
 ```
 
-Añade una de las siguientes líneas, según el agente que hayas instalado:
+Si no estás seguro de cuál usar, `lxpolkit` es una opción ligera que funciona en casi todos los casos.
 
-```bash
-lxpolkit &
-# o
-lxqt-policykit-agent &
-# o
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# o
-/usr/lib/polkit-kde-agent-1 &
-```
 
 Guarda y cierra el archivo. Luego **cierra la sesión y vuelve a entrar en Openbox**.
 
----
 
 ### 3. **Verifica que el agente esté funcionando**
 
@@ -172,11 +160,5 @@ Así, solo escribes `checkpolkit` en la terminal para comprobar si todo está bi
 
 ## ¿Te resultó útil este tutorial?
 
-Si tienes preguntas o necesitas ayuda con otro entorno, ¡déjalo en los comentarios o contáctame!
+Si tienes preguntas o necesitas ayuda con otro entorno, ¡déjalo en los comentarios!
 
-```
-
----
-
-¿Te gustaría que prepare también una versión en PDF, en HTML o en algún otro formato para compartirlo más fácilmente?
-```

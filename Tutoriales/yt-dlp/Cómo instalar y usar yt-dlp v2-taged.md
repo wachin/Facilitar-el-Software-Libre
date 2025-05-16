@@ -133,8 +133,6 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
-
-
 También puedes descargar audio en otros formatos como `m4a`, `aac`, `flac`, etc., cambiando la extensión en el comando.
 
 
@@ -270,7 +268,7 @@ pero yo no lo uso porque se descargan videos con algunos caracteres raros que a 
 Esto es importante porque a veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero con el siguiente comando eliminarás todo aquello:
 
 ```bash
-yt-dlp --output "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
 
 
@@ -280,9 +278,7 @@ al poner el comando parece que desaparece y no pasa nada, pero si, solo hay que 
 
 1.  **yt-dlp**: Es el nombre del programa que estás utilizando para descargar videos.
     
-2.  **\--output "%(title)s.%(ext)s"** (o en versión corta: **\-o "%(title)s.%(ext)s"**):
-    
-    *   Esta opción define el formato del nombre del archivo de salida.
+2.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
     *   `%(title)s`: Es una variable que se reemplaza con el título del video.
     *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (mp4, en este caso).
     *   Las comillas son necesarias para que el sistema reconozca el patrón completo.

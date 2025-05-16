@@ -100,7 +100,7 @@ Explicación del comando:
 
 `**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
 
-**Ejemplo práctico:**
+## Ejemplo práctico:
 
 ```bash
 yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 https://www.youtube.com/watch?v=example
@@ -112,7 +112,7 @@ ls
 ```
 allí deberás ver los archivos, claro también los puedes ver con el administrador de archivos de Android
 
-**Para descargar resumiendo el nombre de los archivos**
+## Descargar resumiendo el nombre de los archivos
 
 A veces hay nombres de archivos que son muy largos y tienen en el nombre caracteres extraños, pero agregando la siguiente línea al final del comando eliminarás todo aquello:
 
@@ -209,7 +209,6 @@ Para descargar un video en formato MP3 con una calidad específica, usa el sigui
 yt-dlp -x --audio-format mp3 --audio-quality <CALIDAD> <URL_DEL_VIDEO>
 ```
 
-
 Explicación del comando: 
 
 `**-x**`: Extrae solo el audio. 
@@ -220,7 +219,9 @@ Explicación del comando:
 
 `**<URL_DEL_VIDEO>**`: Reemplaza esto con la URL del video que deseas descargar.
 
-### **Ejemplo práctico**
+  
+
+### Ejemplo práctico
 
 Supongamos que deseas descargar el siguiente video en formato MP3 con una calidad de 128 kbps:
 
@@ -228,8 +229,9 @@ Supongamos que deseas descargar el siguiente video en formato MP3 con una calida
 yt-dlp -x --audio-format mp3 --audio-quality 128K https://www.youtube.com/watch?v=example
 ```
 
+  
 
-### **Calidades disponibles**
+### Calidades disponibles
 
 Aquí tienes una lista de las calidades que puedes especificar:
 
@@ -250,8 +252,6 @@ Aquí tienes una lista de las calidades que puedes especificar:
 
 **Nota:** Las calidades más bajas son ideales para archivos de voz o cuando necesitas ahorrar espacio.
 
-
-
 **2\. Descargar videos desde otras plataformas**
 ------------------------------------------------
 
@@ -259,7 +259,7 @@ Aquí tienes una lista de las calidades que puedes especificar:
 
   
 
-### **TikTok, Facebook, Instagram**
+### TikTok, Facebook, Instagram
 
 Para descargar un video de TikTok, Facebook, Instagram usa el siguiente comando (en estas redes sociales sino puedes obtener el link fácilmente solo da clic en la opción "Compartir" el video y allí busca y debe haber una opción para copiar el enlace):
 
@@ -268,7 +268,6 @@ Para descargar un video de TikTok, Facebook, Instagram usa el siguiente comando 
 ```bash
 yt-dlp https://www.tiktok.com/@usuario/video/1234567890
 ```
-
 
 pero yo no lo uso porque se descargan videos con algunos caracteres raros que a veces causan problemas, por eso mejor lo siguiente:
 
@@ -341,21 +340,6 @@ yt-dlp -o "%(upload_date)s-%(id)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 
 y así se pueden hacer otros experimentos, que podrían no funcionar.
 
-### **Páginas web genéricas**
-
-Si encuentras un video incrustado en una página web, puedes intentar descargarlo usando `yt-dlp`. Simplemente copia la URL de la página y ejecuta el siguiente comando:
-
-```bash
-yt-dlp <URL_DE_LA_PÁGINA_WEB>
-```
-
-
-**Ejemplo práctico:**
-
-```bash
-yt-dlp https://www.ejemplo.com/video
-```
-
 **3\. Notas adicionales**
 -------------------------
 
@@ -391,7 +375,7 @@ yt-dlp -v -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
 
 Con estos pasos, estarás listo para descargar videos, audio y otros contenidos multimedia desde YouTube y otros sitios web utilizando `yt-dlp` en Termux en Android. ¡Disfruta de tus descargas!
 
-### **un Versículo Bíblico** 🌟
+# Un Versículo Bíblico 🌟
 
 > **“Y estas palabras que yo te mando hoy, estarán sobre tu corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu casa, y andando por el camino, y al acostarte, y cuando te levantes.”**  
 > — **Deuteronomio 6:6-7** 📖✨
@@ -400,7 +384,7 @@ Este versículo nos recuerda la importancia de **compartir conocimientos y sabid
 
 Dios les bendiga
 
-### Consultas
+# Consultas
 
 **"Format Selection and Output Template Options." GitHub Repository.**  
 [https://github.com/yt-dlp/yt-dlp#output-template](https://github.com/yt-dlp/yt-dlp#output-template)

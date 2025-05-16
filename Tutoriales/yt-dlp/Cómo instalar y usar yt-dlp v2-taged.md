@@ -162,13 +162,20 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
+Se descargarán algunos archivos, debes esperar a que el proceso termine pues debe quedar sólo un archivo, el de audio, con la imagen de la carátula insertada.
 
-Si necesitas que el archivo no contenga caracteres extraños:
+**Para descargar resumiendo el nombre de los archivos**
+
+Opcionalmente si necesitas que el archivo no contenga caracteres extraños, usa:
 
 ```bash
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
 ```
+**Ejemplo práctico:**
 
+```bash
+yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
+```
 
 ### **Descargar videos de otros sitios web**
 
@@ -177,36 +184,6 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ex
 ```bash
 yt-dlp -o "%(title)s.%(ext)s" "https://www.example.com/video"
 ```
-
-
-
-
-**Notas adicionales**
----------------------
-
-*   **Velocidad de descarga:** Si experimentas problemas de velocidad, verifica tu conexión a internet. También puedes intentar usar un servidor proxy o VPN si sospechas limitaciones geográficas.
-    
-*   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada:
-    
-
-```bash
-yt-dlp -v -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
-```
-
-
-
-
-**Consultas útiles**
---------------------
-
-*   [Termux Setup Storage](https://wiki.termux.com/wiki/Termux-setup-storage)
-*   [yt-dlp en Reddit](https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/)
-
-
-
-Con estos pasos, estarás listo para descargar videos, audio y otros contenidos multimedia desde YouTube y otros sitios web utilizando `yt-dlp` en Termux en Android. ¡Disfruta de tus descargas!
-
-
 
 **Descargar videos en formato MP3 con diferentes calidades**
 ------------------------------------------------------------
@@ -399,22 +376,28 @@ yt-dlp -v -x --audio-format mp3 --audio-quality 128K <URL_DEL_VIDEO>
 
 Con estos comandos y explicaciones, podrás descargar videos en formato MP3 con diferentes calidades y acceder a contenido multimedia desde diversas plataformas.
 
+Al usar herramientas como `Termux`, `git` y `yt-dlp`, estamos aprovechando la tecnología moderna para **facilitar el acceso a la información** desde los celulares Android, lo cual es una forma práctica de aplicar este principio bíblico en nuestra vida diaria. 🌍💻
 
+**Notas adicionales**
+--------------------
+
+*   **Velocidad de descarga:** Si experimentas problemas de velocidad, verifica tu conexión a internet. También puedes intentar usar un servidor proxy o VPN si sospechas limitaciones geográficas.
+    
+*   **Depuración:** Si encuentras problemas durante la descarga, agrega la opción `-v` al comando para obtener información detallada:
+    
+
+```bash
+yt-dlp -v -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 <URL_DEL_VIDEO>
+```
+
+Con estos pasos, estarás listo para descargar videos, audio y otros contenidos multimedia desde YouTube y otros sitios web utilizando `yt-dlp` en Termux en Android. ¡Disfruta de tus descargas!
 
 ### **un Versículo Bíblico** 🌟
 
 > **“Y estas palabras que yo te mando hoy, estarán sobre tu corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu casa, y andando por el camino, y al acostarte, y cuando te levantes.”**  
 > — **Deuteronomio 6:6-7** 📖✨
 
-
-
-### **Explicación** 🤔💡
-
 Este versículo nos recuerda la importancia de **compartir conocimientos y sabiduría** con los demás, especialmente con aquellos que están dispuestos a aprender. Al crear tutoriales como este, estamos compartiendo lo que hemos aprendido (nuestro “conocimiento”) para que otros puedan beneficiarse de ello, tal como se menciona en este pasaje bíblico.
-
-Al usar herramientas como `Termux`, `git` y `yt-dlp`, estamos aprovechando la tecnología moderna para **facilitar el acceso a la información** desde los celulares Android, lo cual es una forma práctica de aplicar este principio bíblico en nuestra vida diaria. 🌍💻
-
-
 
 Dios les bendiga
 
@@ -428,3 +411,9 @@ Dios les bendiga
 
 **"File System Limitations on Android." Android Developer Documentation.**  
 [https://developer.android.com/guide/topics/data/data-storage](https://developer.android.com/guide/topics/data/data-storage)
+
+**Termux Setup Storage**
+[https://wiki.termux.com/wiki/Termux-setup-storage](https://wiki.termux.com/wiki/Termux-setup-storage)
+
+**yt-dlp en Reddityt-dlp en Reddit**
+[https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/](https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/)

@@ -188,7 +188,13 @@ les cuento que en el mes de Abril de 2025 tuve la oportunidad de ver a una amist
 
 Les cuento que estoy usando la fuente tipográfica proporcional Atkinson Hyperlegible en el sistema operativo (y sus programas)
 
-   
+# Herramientas para probar fuentes fácilmente  
+
+Aconsejo usar Sitios web como [https://fontdrop.info/](https://fontdrop.info/) o [https://www.fontsquirrel.com/tools/webfont-generator](https://www.fontsquirrel.com/tools/webfont-generator)   los cuales permiten subir fuentes y ver cómo lucen en pantalla, además de otras informaciones:
+
+**Fontdrop.info**
+
+
 
 ### Para reflexionar:  
 

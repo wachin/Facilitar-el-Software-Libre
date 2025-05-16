@@ -175,7 +175,7 @@ al poner el comando espera un momento, y funcionará
     
 2.  **\-o "%(title)s.%(ext)s"**: Esta opción define el formato del nombre del archivo de salida.
     *   `%(title)s`: Es una variable que se reemplaza con el título del video.
-    *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (mp4, en este caso, pero como ya saben se puede usar otro).
+    *   `%(ext)s`: Es una variable que se reemplaza con la extensión del archivo (se descargará con el formato de video de la plataforma, generalmente en mp4).
     *   Las comillas son necesarias para que el sistema reconozca el patrón completo.
 3.  **\--restrict-filenames**:
     
@@ -185,6 +185,15 @@ al poner el comando espera un momento, y funcionará
     *   Hace que los nombres de archivo sean compatibles con la mayoría de los sistemas operativos y entornos.
 4.  **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
     
+
+## Ejemplo práctico
+
+Supongamos que deseas descargar el siguiente video:
+
+```bash
+yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames https://x.com/i/status/1630244294484443137
+```
+
 
 **Otras variables útiles que podrías usar en el patrón de salida (opcional)**
 

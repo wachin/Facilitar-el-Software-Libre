@@ -20,13 +20,14 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
 
 - **ksnip:** (version actualizada desde el Repositorio de Pruebas "Test")
 - **avidemux:** editor de video
-- **yt-dlp:** (version actualizada desde el Repositorio de Pruebas "Test")
+- **yt-dlp:** (version actualizada desde "el Repositorio de Pruebas "Test"MX Repo de prueba" o en "Backkports de Debian")
 - **telegram-desktop** = Telegram (32 y 64 bit)
 - **formatusb:** Para formatear un Pendrive
 - **virtualBox:** La máquina virtual
 - **mx-snapshot:** MX Snapshot es una herramienta utilizada para crear un CD en vivo desde el sistema en ejecución (Respins)
 - otros
   
+**Nota**: Se pueden instalar las ultimas versiones, pero no es necesario si ya las movieron al repo estable, más abajo explico con más detalle.
 
 ## Añadiendo los repositorios de MX Linux a Debian 12
 
@@ -55,6 +56,7 @@ sudo nano /etc/apt/sources.list.d/mx.list
 ```
 - **Editar el archivo en `nano`**: ─ Añade las siguientes líneas, copialas:
 
+```
 MX Community Main and Test Repos
     
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
@@ -63,6 +65,7 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs 
+```
 
 y pegalas en nano.
 
@@ -90,7 +93,7 @@ sudo vim /etc/apt/sources.list.d/mx.list
 
 Copia y pega lo siguiente:
 
-
+```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
@@ -98,7 +101,7 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs
-
+```
 
 - Cuando termines, **presiona `Esc`** para salir del modo de inserción.
 
@@ -215,15 +218,19 @@ Bien, para mi este programa no encierra ningún riesgo puesto que solo se instal
 
 Ksnip sirve para hacer capturas de pantalla
 
-la siguiente imagen es de ksnip visto en Debian 12 en los repositorios en Synaptic, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en Debian 12  de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw)
 
-la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025, como vemos no hay alguna versión para MX Linux 23, sólo hay las versiones para MX Linux 17, 19, 21:
+
+[https://mxrepo.com/mx/repo/pool/main/k/ksnip/](https://mxrepo.com/mx/repo/pool/main/k/ksnip/)
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMG-RZmFOHmGx65PUznXuOy_htSjsSmhiTWkqiOVpjpxTiC0-hG5irm3D8ug0uP0lKXoYhlv-IEOkuC5Xo28jMy4WZ_dVWy_pWCSzdVNCNgkWLT-cZp2KaeWWl6Tbgpq5LrMh-34XNTtJSfDZ8e_0AFWfXTpUDTAwSF6HaY2QhFfwI9TpOCK4_HSmdn1g/s16000-rw/16087994950982.png)
 
-la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025:
+la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025, hay las versiones para MX Linux 21, 23, 19 y para MX 21 y 23 la versión 1.10.1 que es la ultima a esta fecha:
+
+[https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/](https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/)
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw)
 

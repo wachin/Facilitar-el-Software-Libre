@@ -1,6 +1,3 @@
-
-
-
 # ¿Letra 'O' o número '0'? una distinción necesaria para mejorar la legibilidad al ingresar números  
 
 En el mundo digital, la legibilidad no es solo una cuestión estética, sino también de funcionalidad y accesibilidad. Uno de los problemas más comunes que enfrentamos —especialmente quienes trabajamos con código, configuraciones técnicas o tipografías monoespaciadas— es la casi _indistinguible_ diferencia entre la letra mayúscula **O** y el número **0** (cero).

@@ -202,19 +202,21 @@ Deberías ver que tu agente aparece en la lista de procesos.
 
 # 📌 Palabras de búsqueda para Google
 
-1. **Cómo solucionar problemas de permisos en Openbox con PolicyKit**
-2. **Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros**
-3. **¿No se abre Synaptic o el MX Instalador? Aquí la solución en Openbox**
-4. **Habilitar autenticación gráfica en gestores de ventanas ligeros en Linux**
-5. **PolicyKit en Openbox: Solución a errores al abrir programas con permisos de administrador**
-6. **Configurando PolicyKit manualmente en Openbox, Fluxbox e i3**
-7. **Agentes de PolicyKit en entornos sin escritorio: Guía para Openbox**
-8. **Solución a fallos silenciosos de apps root en gestores de ventanas ligeros**
-9. **Cómo integrar PolicyKit en sesiones personalizadas de Linux**
-10. **¿Por qué no se abre Synaptic en Openbox? Aquí tienes la respuesta**
-11. **¿Programas que requieren sudo no funcionan en tu entorno ligero? Esta es la causa**
-12. **¿Openbox no muestra la ventana de autenticación? Aprende a arreglarlo**
-13. **Linux ligero, problemas comunes: cómo arreglar el acceso root gráfico**
-14. **Instalaste Openbox y no puedes usar herramientas gráficas con permisos root? Solución aquí**
-15. **El paso que muchos olvidan al usar Openbox: configurar PolicyKit**
+* Cómo solucionar problemas de permisos en Openbox con PolicyKit
+* Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros
+* ¿No se abre Synaptic o el MX Instalador? Aquí la solución en Openbox
+* Habilitar autenticación gráfica en gestores de ventanas ligeros en Linux
+* PolicyKit en Openbox: Solución a errores al abrir programas con permisos de administrador
+* Configurando PolicyKit manualmente en Openbox, Fluxbox e i3
+* Agentes de PolicyKit en entornos sin escritorio: Guía para Openbox
+* Solución a fallos silenciosos de apps root en gestores de ventanas ligeros
+* Cómo integrar PolicyKit en sesiones personalizadas de Linux
+* ¿Por qué no se abre Synaptic en Openbox? Aquí tienes la respuesta
+* ¿Programas que requieren sudo no funcionan en tu entorno ligero? Esta es la causa
+* ¿Openbox no muestra la ventana de autenticación? Aprende a arreglarlo
+* Linux ligero, problemas comunes: cómo arreglar el acceso root gráfico
+* Instalaste Openbox y no puedes usar herramientas gráficas con permisos root? Solución aquí
+* El paso que muchos olvidan al usar Openbox: configurar PolicyKit
+
+
 

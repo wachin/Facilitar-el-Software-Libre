@@ -163,7 +163,11 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtu.be/JMYFz-uoOUw?si=h_MFWXsiukrKD3_Y
 ```
 
+Si necesitas que el archivo no contenga caracteres extraños:
 
+```bash
+yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" --restrict-filenames <URL_DEL_VIDEO>
+```
 
 
 ### **Descargar videos de otros sitios web**

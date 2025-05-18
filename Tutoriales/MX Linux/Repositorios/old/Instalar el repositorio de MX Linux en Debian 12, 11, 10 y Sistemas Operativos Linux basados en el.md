@@ -200,19 +200,42 @@ También si ya lo tenías instalado desde los repositorios de Debian lo puedes a
 descuiden con este programa pues no instala dependencias de test repo
 
 
-**yt-dlp el 25 de Abril 2025 visto en los repositorios estables de MX Linux**, está la versión 2025-03-27
+**yt-dlp desde Backports de Debian** 
+
+También está una versión actual en los Backports de Debian:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOUVIXO1xMiy3vLsB-dp6szetoAmoYljjhm0-sj43QZNOYZSYl8f_1V0MF8Ge6aX6SRG5yTcvoQiUZ1dyvltt0-eVFc7M2UgbgOjfSb4ajkJld92iS-sWUDG6vtWZX3G244BttDjOIZSy9OoCVgNBgVhwcwJWwGCqbvVxYORzD6r7h0bTlRVt97Lr29bw/s16000-rw/20250518-0001%20pesta%C3%B1a%20Backports%20de%20Debian.png)
+
+
+a continuación pongo el mensaje:
+
+"Advertencia
+Va a usar Debian Backports, que contiene paquetes tomados de la próxima
+versión de Debian (llamada 'prueba"), ajustados y recompilados para el uso
+en Debian Estable. Los mismos no pueden ser probados extensivamente
+como en las versiones estables de Debian y MX Linux, y se proporcionan
+'como están', con el riesgo de incompatibilidades con otros componentes en
+Debian Estable. ¡Utilicelos con cuidado!"
+
+Está claro lo que dice, yo lo he instalado en MX Linux 23 de 32 bit donde no está en los otros repotorios:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIr6cxEQPBsOW-z-X7kWwuYWgvBHJwPBeVXw_zYT4oul4IABoa2DqOildRye4RjN3-wKm1ycG4YUWGbA6JXpqElGdjy7lzupvZzfIzTtIIoLBNSXS2AlA1HZvTMIHp4ttYze5TJX5l0PI_iwlI4eJj-T9B8DHE5NuH8PyepP3FkcNXlg84x34ylLLX_zE/s16000-rw/20250518-0002%20yt-dlp%20en%20Backports%20de%20Debian.png)
+
+La siguiente imagen es el paquete **yt-dlp** el 25 de Abril 2025 visto en los repositorios estables de MX Linux, está la versión 2025.03.27
 
 [http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/](http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/)
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgtE2csEWlHX1uAcg09-7cPynurKKErK8NTG62LIcPPU_gWPV6usFuPIEvo2-YSKHv39tbkaE0WOaGMNxp857FgnKMCARguCUaMyZVeKakmqRdWlzVLjhFM3hSky1utPlblYxklvdlVlp2Rzvmw7AjEs7SE58k5Ykn67t3Mofs_SIaYcH4QYouQAaLSpbM=s16000-rw)
 
-**yt-dlp el 25 de Abril visto en los repositorios de prueba de MX Linux**, está la versión 2024-12-23, como vemos han movido la versión más actual que tenían allí a la versión estable
+por eso se lo puede encontrar en Synaptic en MX Linux y si uno instala los repositorios de MX Linux
+
+la siguiente imagen es de yt-dlp el 25 de Abril visto en los repositorios de prueba de MX Linux, está la versión 2024.12.23, pero allí antes estaba la versión 2025.03.27  
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEhlXuAWe9OD2a5QDb4PIe7H0iAr8zFGVH5y_7fdC7FENd7K8e5373aICkUhs2n2Q-I9YqZ6YEs7vlT3WhHj4QvHYvnZS8gpt3NI-yUlEbdKX4iChMx2adhE63eEMgycDo74u7oysPH408MHiq6YuwiGa1J7G95QFUzPegRLFEy3_RlbOaMMU7j4hdW85XA=s16000-rw)
 
-e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en "**Mostrar los detalles...**"). 
+e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en “**Mostrar los detalles…**”).
 
- Lo que también me da una idea, tal vez ese deb se pueda instalar en Ubuntu, si alguien hace la prueba, me avisa por favor.  
+Lo que también me da una idea, tal vez ese deb se pueda instalar en Ubuntu, si alguien hace la prueba, me avisa por favor.
 
 Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 

@@ -12,10 +12,10 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
   
 **Extensiones para  Dolphin Administrador de archivos:**
 
-- kde-servicemenu-extract-and-compress  
-- kde-servicemenu-checkhash-installdebs  
-- kde-servicemenu-rootactions  
-- kde-servicemenu-kim5  
+- **kde-servicemenu-extract-and-compress**  Pone un menú Extrar y Comprimir.
+- **kde-servicemenu-checkhash-installdebs**  Permite instalar deb.
+- **kde-servicemenu-rootactions**  Permite realizar acciones con elevación de permisos.
+- **kde-servicemenu-kim5**  Permite realizar operaciones con imagenes.
 
 **Herramientas**
 
@@ -34,11 +34,11 @@ En los repositorios de MX Linux hay software muy importante como ejemplo:
 
 ## Añadiendo los repositorios de MX Linux a Debian 12
 
-La siguiente es una explicación genérica que hago para Debian 12, y estas explicaciones deberán servir para hacer esto en Debian 11, y Debian 10
+La siguiente es una explicación genérica que hago para Debian 12, y estas explicaciones deberán servir para hacer esto en Debian 11, y Debian 10 (más abajo dejo las líneas para ellos)
 
 Para añadir el repositorio de MX Linux debemos añadirlo en el:  
   
-/etc/apt/sources.list.d/  
+`/etc/apt/sources.list.d/ `
 
 podemos hacerlo de dos maneras, usando un **editor de texto** o **nano** o **vim** (no confundir vi con vim, vi viene instalado muchas veces por defecto, pero vim es una versión mejorada más fácil de usar) que son editores de texto de terminal (tamién hay otros editores de terminal como micro, u otros)
   
@@ -73,7 +73,7 @@ y pegalas en nano.
 
  - **Guardar el archivo en `nano`**: ─ Presiona `Ctrl + O` (Control y O al mismo tiempo) para guardar los cambios. `nano` te pedirá confirmación para el nombre del archivo el cual te lo mostrará, presiona `Enter` para confirmar la escritura en el archivo mx.list. Para cerrar nano presiona Ctrl + X
 
-Si necesitas ayuda para usar nano aquí dejo en mi blog en Blogger [un tutorial que he hecho](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
+> Si necesitas ayuda para usar nano aquí dejo en mi blog en Blogger [un tutorial que he hecho](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
 
 - **Actualizar la lista de repositorios**: ─ Una vez que hayas cerrado `nano`, ejecuta el siguiente comando para actualizar la lista de paquetes disponibles:
 
@@ -135,20 +135,27 @@ Siguiendo estos pasos, habrás añadido el repositorio y actualizado la lista de
 
 ## Cómo instalar actualizado a yt-dlp desde los paquetes de Prueba (test)  
 
-Voy a poner aquí cómo instalar la ultima versión de un programa llamado yt-dlp que sirve para descargar videos, audios ejemplo de Youtube y que no está en los repositorios de Debian sino en los de MX Linux
+El programa yt-dlp que sirve para descargar videos, audios, de Youtube, Facebook, Instagram, Twitter, otros
 
-Para ello los desarrolladores de MX Linux crearon un paquete llamado:
+En la fecha 18 de Mayo de 2025 una versión muy actual de este mismo año está en los repositorios estables de MX Linux, así lo puedes instalar desde Synaptic o desde la terminal:
+
+```bash
+sudo apt install yt-dlp
+```
+Si no usas MX Linux y usas algún Debian basado en este una vez que instales los repositorios lo podrás instalar así.
+
+Antes el paquete para poderlo instalar estaba en los repositorios de prueba, y para ello instalé el paquete:
 
 **MX Instalar paquetes** 
 
-este debemos instalarlo, poner en la terminal:
+este debemos instalarlo poniendo en la terminal:
 
 ```bash
 sudo apt install mx-repo-list mx-repo-manager mx-packageinstaller
 ```
 y luego buscarlo y abrirlo:
 
-![20240205-054409 MX Instalar paquetes](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png)
 
 **Nota**: La imagen de arriba es en xfe4-appfinder en MX Linux 21 usando el administrador ventanas Fluxbox.
 
@@ -178,20 +185,18 @@ vez. Por favor, envie sus comentarios al Foro para
 que los paquetes puedan ser evaluados antes de pasar  
 al repositorio principal (Main)"
 
-y eso es lo que vamos a hacer, busquen a:
+allí buscar a:
 
 **yt-dlp** 
 
-este paquete solo se instala él desde los repositorios de MX Linux, y si instala alguna dependencia lo hará desde los repositorios de Debian, marcar e instalar
-
-La siguiente imagen es de MX Linux 21 (pero la imagen es vieja, la tomé en el 2023) que usa como base a Debian 11, allí la ultima versión solo estába en los paquetes de prueba de MX Linux (**MX Repo de prueba**):
+La siguiente imagen es en Debian 11 donde había instalado los repositorios de MX, allí la ultima versión solo estába en los paquetes de prueba de MX Linux (**MX Repo de prueba**):
 
 ![20240121-163620 buscando a yt-dlp en mx test repo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png)
 
 
 **Nota:** Pueden dar clic en "**Mostrar detalles...**" para que vean si el programa va a instalar alguna dependencia, como dice el mensaje de arriba, el repositorio de prueba contiene software que podría llegar a dañar su sistema, pero en este caso solo se instala un paquete desde esos repositorios, y los demás son paquetes del mismo sistema  
 
-![20240121-163920 instalar yt-dlp](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png)
 
 También si ya lo tenías instalado desde los repositorios de Debian lo puedes actualizar. La siguiente imagen es en Debian 12 donde instalé los repositorios de MX Linux 23 y fue tomada en enero de 2025 aprox:
 
@@ -202,10 +207,9 @@ descuiden con este programa pues no instala dependencias de test repo
 
 **yt-dlp desde Backports de Debian** 
 
-También está una versión actual en los Backports de Debian:
+También está una versión actual en los Backports de Debian, esa versión me sirvió para instalar la versión más actual en Debian 12 de 32 bit, pues es el unico lugar donde estaba:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOUVIXO1xMiy3vLsB-dp6szetoAmoYljjhm0-sj43QZNOYZSYl8f_1V0MF8Ge6aX6SRG5yTcvoQiUZ1dyvltt0-eVFc7M2UgbgOjfSb4ajkJld92iS-sWUDG6vtWZX3G244BttDjOIZSy9OoCVgNBgVhwcwJWwGCqbvVxYORzD6r7h0bTlRVt97Lr29bw/s16000-rw/20250518-0001%20pesta%C3%B1a%20Backports%20de%20Debian.png)
-
 
 a continuación pongo el mensaje:
 
@@ -217,11 +221,15 @@ como en las versiones estables de Debian y MX Linux, y se proporcionan
 'como están', con el riesgo de incompatibilidades con otros componentes en
 Debian Estable. ¡Utilicelos con cuidado!"
 
-Está claro lo que dice, yo lo he instalado en MX Linux 23 de 32 bit donde no está en los otros repotorios:
+e instalandolo, pues solo se instala este paquete (en caso de que luego no sirva lo desinstalo y no pasa nada pues se cual fue que se instaló):
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIr6cxEQPBsOW-z-X7kWwuYWgvBHJwPBeVXw_zYT4oul4IABoa2DqOildRye4RjN3-wKm1ycG4YUWGbA6JXpqElGdjy7lzupvZzfIzTtIIoLBNSXS2AlA1HZvTMIHp4ttYze5TJX5l0PI_iwlI4eJj-T9B8DHE5NuH8PyepP3FkcNXlg84x34ylLLX_zE/s16000-rw/20250518-0002%20yt-dlp%20en%20Backports%20de%20Debian.png)
 
-La siguiente imagen es el paquete **yt-dlp** el 25 de Abril 2025 visto en los repositorios estables de MX Linux, está la versión 2025.03.27
+
+## Los paquetes vistos online desde un navegador Web (Opcional)
+Por motivos educativos pongo esta informamción, aclaro que no deseo confundir a nadie. 
+
+La siguiente imagen es el paquete **yt-dlp** el 25 de Abril 2025 visto online desde un navegador web en los repositorios estables de MX Linux, está la versión 2025.03.27
 
 [http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/](http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/)
 
@@ -229,35 +237,20 @@ La siguiente imagen es el paquete **yt-dlp** el 25 de Abril 2025 visto en los re
 
 por eso se lo puede encontrar en Synaptic en MX Linux y si uno instala los repositorios de MX Linux
 
-la siguiente imagen es de yt-dlp el 25 de Abril visto en los repositorios de prueba de MX Linux, está la versión 2024.12.23, pero allí antes estaba la versión 2025.03.27  
+La siguiente imagen es de yt-dlp el 25 de Abril visto online desde un navegador web en los repositorios de prueba de MX Linux, está la versión 2024.12.23, pero allí antes estaba la versión 2025.03.27  
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEhlXuAWe9OD2a5QDb4PIe7H0iAr8zFGVH5y_7fdC7FENd7K8e5373aICkUhs2n2Q-I9YqZ6YEs7vlT3WhHj4QvHYvnZS8gpt3NI-yUlEbdKX4iChMx2adhE63eEMgycDo74u7oysPH408MHiq6YuwiGa1J7G95QFUzPegRLFEy3_RlbOaMMU7j4hdW85XA=s16000-rw)
 
-e instalarlo con clic derecho y se deja instalar y lo que instala es todo desde los repositorios de MX mismo (instalará ffmpeg que pueden verlo en “**Mostrar los detalles…**”).
-
-Lo que también me da una idea, tal vez ese deb se pueda instalar en Ubuntu, si alguien hace la prueba, me avisa por favor.
-
-Bien, para mi este programa no encierra ningún riesgo puesto que solo se instala el desde el testrepo y lo demás desde los repositorios de mx (lo que tratan de decir en el mensaje de advertencia es que si usted sabe qué programa ha instalado y si ese le cause algún problema pues lo puede desinstalar, pero si fueran muchos o muchas dependencias desde el testrepo usted no sabrá qué le causó algún problema y no sabrá que desinstalar)
 
 ## Instalando a ksnip desde los Repositorios de prueba de MX, o Backports de Debian
 
-Ksnip sirve para hacer capturas de pantalla, la siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
+Ksnip sirve para hacer capturas de pantalla
+
+La siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los repositorios en Synaptic, el 25 de abril 2025:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw)
 
-la siguiente imagen es de ksnip visto en los repositorios estables de MX Linux, el 25 de abril 2025, como vemos no hay alguna versión para MX Linux 23, sólo hay las versiones para MX Linux 17, 19, 21:
-
-[https://mxrepo.com/mx/repo/pool/main/k/ksnip/](https://mxrepo.com/mx/repo/pool/main/k/ksnip/)
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMG-RZmFOHmGx65PUznXuOy_htSjsSmhiTWkqiOVpjpxTiC0-hG5irm3D8ug0uP0lKXoYhlv-IEOkuC5Xo28jMy4WZ_dVWy_pWCSzdVNCNgkWLT-cZp2KaeWWl6Tbgpq5LrMh-34XNTtJSfDZ8e_0AFWfXTpUDTAwSF6HaY2QhFfwI9TpOCK4_HSmdn1g/s16000-rw/16087994950982.png)
-
-la siguiente imagen es de ksnip visto en los repositorios de prueba (**testrepo**) de MX Linux, el 25 de abril 2025, hay las versiones para MX Linux 21, 23, 19 y para MX 21 y 23 la versión 1.10.1 que es la ultima a esta fecha:
-
-[https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/](https://mxrepo.com/mx/testrepo/pool/test/k/ksnip/)
-
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgctAvREhPx866Irzb8uuacgnaXglnkANLXahqIxUOQ6WaxwAYcqdL1VVnOgDC-kdpDADf8TpY4ZNidyPaeaNCI7zF7WqBUa2jhQq6YV6Ih6DA2_sy4IReyyUcaJc9GbV35bhhpnsfxDw25a6Y_ar3IfQiaXOmfDfICmCUeCTkrnqIOU0cyFdttQ63OmAY=s16000-rw)
-
-La última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el repositorio de prueba de MX Linux, la siguiente imagen es en MX Linux 23 KDE de 64 bit:
+La última versión ksnip 1.10.1 está todavía en el repositorio de prueba y no la han pasado al repositorio estable, por lo que la única manera de tener la última versión es desde el **repositorio de prueba de MX Linux** o **Backports de Debian**, la siguiente imagen es en MX Linux 23 KDE de 64 bit:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw)
 
@@ -265,10 +258,13 @@ La siguiente imagen es de ksnip la ultima versión en **Backports de Debian** vi
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000)
 
+En resumen, deben de buscar dónde esté la ultima versión disponible.
+
 Bueno, ahora si dejo las instrucciones para:
 
 Debian 12
 Debian 11
+Debian º0
 
 repito para la primera, pero solo los pasos de instalación del repositorio:
 
@@ -404,10 +400,16 @@ Por si necesita manualmente descargar algun programa, puede entrar manualmente a
 
 [https://mxrepo.com/mx/repo/pool/](https://mxrepo.com/mx/repo/pool/)  
 
-de allí yo he buscado en:  
+allí yo he buscado en:  
 
 pool  
 non-free  
+
+[https://mxrepo.com/mx/testrepo/pool/](https://mxrepo.com/mx/testrepo/pool/)
+
+allí yo he buscado en:  
+
+test
 
 Dios les bendiga  
 

@@ -202,8 +202,6 @@ También si ya lo tenías instalado desde los repositorios de Debian lo puedes a
 
 ![20250424- 0014 actualizando yt-dlp](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png)
 
-descuiden con este programa pues no instala dependencias de test repo
-
 
 **yt-dlp desde Backports de Debian** 
 
@@ -420,16 +418,5 @@ Dios les bendiga
 
 **Repos — MX-23**  
 [https://mxlinux.org/uncategorized/repos-mx-23/](https://mxlinux.org/uncategorized/repos-mx-23/)  
-
-
-
-
-
-
-
-
-
-
-
 
 

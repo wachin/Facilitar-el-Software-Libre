@@ -135,7 +135,7 @@ Siguiendo estos pasos, habrás añadido el repositorio y actualizado la lista de
 
 ## Cómo instalar actualizado a yt-dlp desde los paquetes de Prueba (test)  
 
-El programa yt-dlp que sirve para descargar videos, audios, de Youtube, Facebook, Instagram, Twitter, otros
+El programa yt-dlp que sirve para descargar videos, audios, de Youtube, Facebook, Instagram, Tiktok, Twitter, otros
 
 En la fecha 18 de Mayo de 2025 una versión muy actual de este mismo año está en los repositorios estables de MX Linux, así lo puedes instalar desde Synaptic o desde la terminal:
 

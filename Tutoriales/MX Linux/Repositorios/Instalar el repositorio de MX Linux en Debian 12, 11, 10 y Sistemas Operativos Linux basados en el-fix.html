@@ -1,0 +1,416 @@
+<h1 id="instalar-el-repositorio-de-mx-linux-en-debian-12-11-10-y-sistemas-operativos-linux-basados-en-el">Instalar
+el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos
+Linux basados en el</h1>
+<p>Este tutorial es para instalar los repositorios de MX Linux a
+Sistemas Operativos Debian y basados en Debian que no lo tienen añadido,
+y para instalar el Instalador de paquetes de MX Linux y poder instalar
+las ultimas versiones de algunos programas.</p>
+<p><strong>Nota</strong>: Este tutorial es para usarlo en un Sistema
+Operativo Linux que trae por defecto su Gestor de Ventanas, pero si
+deseas allí instalar otro, por ejemplo Openbox, Fluxbox, JWM, etc, debes
+revisar el siguiente tutorial para activar PolicyKit:</p>
+<p><strong>Activar el agente de PolicyKit en Openbox y gestores de
+ventanas ligeros x11</strong><br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html">https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html</a></p>
+<h2 id="qué-se-puede-instalar-desde-este-repositorio">Qué se puede
+instalar desde este repositorio?</h2>
+<p>En los repositorios de MX Linux hay software muy importante como
+ejemplo:</p>
+<p><strong>Extensiones para Dolphin Administrador de
+archivos:</strong></p>
+<ul>
+<li><strong>kde-servicemenu-extract-and-compress</strong> Pone un menú
+Extrar y Comprimir.</li>
+<li><strong>kde-servicemenu-checkhash-installdebs</strong> Permite
+instalar deb.</li>
+<li><strong>kde-servicemenu-rootactions</strong> Permite realizar
+acciones con elevación de permisos.</li>
+<li><strong>kde-servicemenu-kim5</strong> Permite realizar operaciones
+con imagenes.</li>
+</ul>
+<p><strong>Herramientas</strong></p>
+<ul>
+<li><strong>ksnip:</strong> Capturado de pantalla (version actualizada
+)</li>
+<li><strong>avidemux:</strong> editor de video (En el 2025-05-016 no lo
+pude instalar porque dice qu e depende de libfaac0, libfdk-aac2 y no se
+pueden instalar)</li>
+<li><strong>yt-dlp:</strong> <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html">Descargador
+de videos</a> (version actualizada)</li>
+<li><strong>telegram-desktop</strong> = Telegram (32 y 64 bit)</li>
+<li><strong>formatusb:</strong> Para formatear un Pendrive</li>
+<li><strong>virtualBox:</strong> La máquina virtual</li>
+<li><strong>mx-snapshot:</strong> MX Snapshot es una herramienta
+utilizada para crear un CD en vivo desde el sistema en ejecución
+(Respins)</li>
+<li><strong>LibreOffice</strong> Programa de Ofimática (desde los
+Repositorios Backports de Debian)</li>
+<li><strong>Firmware</strong>.- <a href="https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html">Controladores</a>,
+ejemplo de Wi-Fi, otros</li>
+<li>otros</li>
+</ul>
+<p><strong>Nota</strong>: Se pueden instalar las ultimas versiones, pero
+no es necesario si ya las movieron al repo estable, más abajo explico
+con más detalle.</p>
+<h2 id="añadiendo-los-repositorios-de-mx-linux-a-debian-12">Añadiendo
+los repositorios de MX Linux a Debian 12</h2>
+<p>La siguiente es una explicación genérica que hago para Debian 12, y
+estas explicaciones deberán servir para hacer esto en Debian 11, y
+Debian 10 (más abajo dejo las líneas para ellos)</p>
+<p>Para añadir el repositorio de MX Linux debemos añadirlo en el:</p>
+<p><span style="color: #800180;"><b>/etc/apt/sources.list.d/</b></span></p>
+<p>podemos hacerlo de dos maneras, usando un <strong>editor de
+texto</strong> o <strong>nano</strong> o <strong>vim</strong> (no
+confundir vi con vim, vi viene instalado muchas veces por defecto, pero
+vim es una versión mejorada más fácil de usar) que son editores de texto
+de terminal (tamién hay otros editores de terminal como micro, u
+otros)</p>
+<h2 id="usando-gedit-u-otro-editor-de-texto-para-editar-sources.list.d">Usando
+Gedit u otro editor de texto para editar sources.list.d</h2>
+<p>podemos usar Gedit u otro editor de texto, si es que lo deja hacer el
+sistema operativo, digo porque ejemplo Kate no deja hacer esto:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> gedit /etc/apt/sources.list.d/mx.list</span></code></pre></div>
+<h2 id="usando-nano-para-editar-sources.list.d">Usando nano para editar
+<span style="color: #800180;"><b>sources.list.d</b></span></h2>
+<p>Se puede usar nano desde la terminal. Nano es un editor de texto de
+terminal que siempre sirve para cosas como estas que necesitan elevar
+los permisos.</p>
+<ul>
+<li>El siguiente comando creará el archivo mx.list automáticamente
+<strong>con <span style="color: #800180;"><b>nano</b></span></strong>::</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/apt/sources.list.d/mx.list</span></code></pre></div>
+<ul>
+<li><strong>Editar el archivo en <span style="color: #800180;"><b>nano</b></span></strong>: ─ Añade las
+siguientes líneas, copialas:</li>
+</ul>
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs</b></span></pre>
+<p>y pegalas en nano.</p>
+<ul>
+<li><strong>Guardar el archivo en <span style="color: #800180;"><b>nano</b></span></strong>: ─ Presiona
+<span style="color: #800180;"><b>Ctrl + O</b></span> (Control y O al mismo tiempo) para guardar los
+cambios. <span style="color: #800180;"><b>nano</b></span> te pedirá confirmación para el nombre del
+archivo el cual te lo mostrará, presiona <span style="color: #800180;"><b>Enter</b></span> para
+confirmar la escritura en el archivo mx.list. Para cerrar nano presiona
+Ctrl + X</li>
+</ul>
+<blockquote>
+<p>Si necesitas ayuda para usar nano aquí dejo en mi blog en Blogger <a href="https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html">un
+tutorial que he hecho</a></p>
+</blockquote>
+<ul>
+<li><strong>Actualizar la lista de repositorios</strong>: ─ Una vez que
+hayas cerrado <span style="color: #800180;"><b>nano</b></span>, ejecuta el siguiente comando para
+actualizar la lista de paquetes disponibles:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
+<h2 id="usando-vim-para-editar-sources.list.d">Usando vim para editar
+<span style="color: #800180;"><b>sources.list.d</b></span></h2>
+<p>Otra opción desde la terminal es usar <span style="color: #800180;"><b>vim</b></span>, un editor de
+texto muy poderoso para usuarios más avanzados. A diferencia de
+<span style="color: #800180;"><b>nano</b></span>, <span style="color: #800180;"><b>vim</b></span> tiene modos de edición que pueden
+parecer confusos al principio, pero una vez que se aprende, es muy
+rápido y versátil.</p>
+<ul>
+<li>Para abrir o crear el archivo <span style="color: #800180;"><b>mx.list</b></span> en
+<span style="color: #800180;"><b>vim</b></span>, escribe el siguiente comando:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/apt/sources.list.d/mx.list</span></code></pre></div>
+<ul>
+<li>Cuando se abra el archivo, presiona la tecla <span style="color: #800180;"><b>i</b></span> para
+entrar al <strong>modo de inserción</strong> (Insert Mode). Verás que
+abajo dice <span style="color: #800180;"><b>-- INSERT --</b></span>. Ahora sí puedes escribir o pegar
+el contenido.</li>
+</ul>
+<p>Copia y pega lo siguiente:</p>
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs</b></span></pre>
+<ul>
+<li><p>Cuando termines, <strong>presiona <span style="color: #800180;"><b>Esc</b></span></strong> para
+salir del modo de inserción.</p></li>
+<li><p>Para guardar y salir, escribe lo siguiente (debes estar en el
+modo normal, es decir, sin estar escribiendo texto):</p></li>
+</ul>
+<pre class="vim"><span style="color: #800180;"><b>:wq</b></span></pre>
+<p>Y luego presiona <span style="color: #800180;"><b>Enter</b></span>.</p>
+<ul>
+<li>Si en cambio quieres salir <strong>sin guardar</strong>,
+escribe:</li>
+</ul>
+<pre class="vim"><span style="color: #800180;"><b>:q!</b></span></pre>
+<p>y presiona <span style="color: #800180;"><b>Enter</b></span>.</p>
+<blockquote>
+<p>Si no estás familiarizado con vim y quieres aprender lo básico,
+puedes ver en mi blog en Blogger <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html">mi
+mini guía de Vim aquí</a></p>
+</blockquote>
+<ul>
+<li><strong>Actualizar la lista de repositorios</strong>: después de
+guardar el archivo, ejecuta:</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
+<p>Siguiendo estos pasos, habrás añadido el repositorio y actualizado la
+lista de paquetes en tu sistema.</p>
+<h2 id="cómo-instalar-actualizado-a-yt-dlp-desde-los-paquetes-de-prueba-test">Cómo
+instalar actualizado a yt-dlp desde los paquetes de Prueba (test)</h2>
+<p>El programa yt-dlp que sirve para descargar videos, audios, de
+Youtube, Facebook, Instagram, Tiktok, Twitter, otros</p>
+<p>En la fecha 18 de Mayo de 2025 una versión muy actual de este mismo
+año está en los repositorios estables de MX Linux, así lo puedes
+instalar desde Synaptic o desde la terminal:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="fu">sudo</span> apt install yt-dlp</span></code></pre></div>
+<p>Si no usas MX Linux y usas algún Debian basado en este una vez que
+instales los repositorios lo podrás instalar así.</p>
+<p>Antes el paquete para poderlo instalar estaba en los repositorios de
+prueba, y para ello instalé el paquete:</p>
+<p><strong>MX Instalar paquetes</strong></p>
+<p>este debemos instalarlo poniendo en la terminal:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller</span></code></pre></div>
+<p>y luego buscarlo y abrirlo:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png"/></p>
+<p><strong>Nota</strong>: La imagen de arriba es en xfe4-appfinder en MX
+Linux 21 usando el administrador ventanas Fluxbox.</p>
+<h3 id="el-motivo-de-ser-de-los-repositorios-de-prueba">El motivo de ser
+de los repositorios de prueba</h3>
+<p>Los programas que hay en los repositorios de prueba son programas
+cuya finalidad es que después que estén corregidos por haber pasado en
+tantas pruebas puedan pasar a los repositorios estables de MX Linux, por
+tal motivo es posible que después que hayan dejado bien estable algún
+programa, lo pasen desde los repositorios de prueba a los repositorios
+estables (o sea, llegará un momento en que es posible que no veamos tal
+o cual versión en los repositorios de prueba sino en los estables)</p>
+<p>sigamos, clic en la pestaña:</p>
+<p><strong>MX Repo de prueba</strong></p>
+<figure>
+<img alt="20240205-054512 repo de prueba" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png"/>
+<figcaption aria-hidden="true">20240205-054512 repo de
+prueba</figcaption>
+</figure>
+<p>Antes de seguir recargue la lista:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhHx5ku7i8Qz4_oW_2a75TTZAFYq3EyQSnR3DV0Zb1awwDnDK9k4mmWLyXB2kD7621tp8J165FKNAmGKP-NrsN6b5bXn5Tlmr5ejiyM4FzMOdvc_t_yS0EKQbfGZ4VN9T5N8XzUoX0Dh6Td-QpT1Cv0OjDSrpAlBFCvfrpfxwiBQgDxtSPJHOKJ3DKjUjQ=s16000-rw"/></p>
+<p>ahora si, sigamos, en la imágen anterior dice:</p>
+<p>“Advertencia<br/>
+Está a punto de utilizar el repositorio MX de<br/>
+prueba, cuyos paquetes se proporcionan solo con<br/>
+fines de prueba. Podrían llegar a dañar su sistema,<br/>
+por lo que se sugiere que haga un respaldo de su<br/>
+sistema e instale y/o actualice solo un paquete a la<br/>
+vez. Por favor, envie sus comentarios al Foro para<br/>
+que los paquetes puedan ser evaluados antes de pasar<br/>
+al repositorio principal (Main)”</p>
+<p>allí buscar a:</p>
+<p><strong>yt-dlp</strong></p>
+<p>La siguiente imagen es en Debian 11 donde había instalado los
+repositorios de MX, allí la ultima versión solo estába en los paquetes
+de prueba de MX Linux (<strong>MX Repo de prueba</strong>):</p>
+<figure>
+<img alt="20240121-163620 buscando a yt-dlp en mx test repo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png"/>
+<figcaption aria-hidden="true">20240121-163620 buscando a yt-dlp en mx
+test repo</figcaption>
+</figure>
+<p><strong>Nota:</strong> Pueden dar clic en “<strong>Mostrar
+detalles…</strong>” para que vean si el programa va a instalar alguna
+dependencia, como dice el mensaje de arriba, el repositorio de prueba
+contiene software que podría llegar a dañar su sistema, pero en este
+caso solo se instala un paquete desde esos repositorios, y los demás son
+paquetes del mismo sistema</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png"/></p>
+<p>También si ya lo tenías instalado desde los repositorios de Debian lo
+puedes actualizar. La siguiente imagen es en Debian 12 donde instalé los
+repositorios de MX Linux 23 y fue tomada en enero de 2025 aprox:</p>
+<figure>
+<img alt="20250424- 0014 actualizando yt-dlp" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png"/>
+<figcaption aria-hidden="true">20250424- 0014 actualizando
+yt-dlp</figcaption>
+</figure>
+<p><strong>yt-dlp desde Backports de Debian</strong></p>
+<p>También está una versión actual en los Backports de Debian, esa
+versión me sirvió para instalar la versión más actual en Debian 12 de 32
+bit, pues es el unico lugar donde estaba:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOUVIXO1xMiy3vLsB-dp6szetoAmoYljjhm0-sj43QZNOYZSYl8f_1V0MF8Ge6aX6SRG5yTcvoQiUZ1dyvltt0-eVFc7M2UgbgOjfSb4ajkJld92iS-sWUDG6vtWZX3G244BttDjOIZSy9OoCVgNBgVhwcwJWwGCqbvVxYORzD6r7h0bTlRVt97Lr29bw/s16000-rw/20250518-0001%20pesta%C3%B1a%20Backports%20de%20Debian.png"/></p>
+<p>a continuación pongo el mensaje:</p>
+<p>“Advertencia Va a usar Debian Backports, que contiene paquetes
+tomados de la próxima versión de Debian (llamada ‘prueba”), ajustados y
+recompilados para el uso en Debian Estable. Los mismos no pueden ser
+probados extensivamente como en las versiones estables de Debian y MX
+Linux, y se proporcionan ’como están’, con el riesgo de
+incompatibilidades con otros componentes en Debian Estable. ¡Utilicelos
+con cuidado!”</p>
+<p>e instalandolo, pues solo se instala este paquete (en caso de que
+luego no sirva lo desinstalo y no pasa nada pues se cual fue que se
+instaló):</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIr6cxEQPBsOW-z-X7kWwuYWgvBHJwPBeVXw_zYT4oul4IABoa2DqOildRye4RjN3-wKm1ycG4YUWGbA6JXpqElGdjy7lzupvZzfIzTtIIoLBNSXS2AlA1HZvTMIHp4ttYze5TJX5l0PI_iwlI4eJj-T9B8DHE5NuH8PyepP3FkcNXlg84x34ylLLX_zE/s16000-rw/20250518-0002%20yt-dlp%20en%20Backports%20de%20Debian.png"/></p>
+<h2 id="los-paquetes-vistos-online-desde-un-navegador-web-opcional">Los
+paquetes vistos online desde un navegador Web (Opcional)</h2>
+<p>Por motivos educativos pongo esta informamción, aclaro que no deseo
+confundir a nadie.</p>
+<p>La siguiente imagen es el paquete <strong>yt-dlp</strong> el 25 de
+Abril 2025 visto online desde un navegador web en los repositorios
+estables de MX Linux, está la versión 2025.03.27</p>
+<p><a href="http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/">http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/</a></p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgtE2csEWlHX1uAcg09-7cPynurKKErK8NTG62LIcPPU_gWPV6usFuPIEvo2-YSKHv39tbkaE0WOaGMNxp857FgnKMCARguCUaMyZVeKakmqRdWlzVLjhFM3hSky1utPlblYxklvdlVlp2Rzvmw7AjEs7SE58k5Ykn67t3Mofs_SIaYcH4QYouQAaLSpbM=s16000-rw"/></p>
+<p>por eso se lo puede encontrar en Synaptic en MX Linux y si uno
+instala los repositorios de MX Linux</p>
+<p>La siguiente imagen es de yt-dlp el 25 de Abril visto online desde un
+navegador web en los repositorios de prueba de MX Linux, está la versión
+2024.12.23, pero allí antes estaba la versión 2025.03.27</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhlXuAWe9OD2a5QDb4PIe7H0iAr8zFGVH5y_7fdC7FENd7K8e5373aICkUhs2n2Q-I9YqZ6YEs7vlT3WhHj4QvHYvnZS8gpt3NI-yUlEbdKX4iChMx2adhE63eEMgycDo74u7oysPH408MHiq6YuwiGa1J7G95QFUzPegRLFEy3_RlbOaMMU7j4hdW85XA=s16000-rw"/></p>
+<h2 id="instalando-a-ksnip-desde-los-repositorios-de-prueba-de-mx-o-backports-de-debian">Instalando
+a ksnip desde los Repositorios de prueba de MX, o Backports de
+Debian</h2>
+<p>Ksnip sirve para hacer capturas de pantalla</p>
+<p>La siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los
+repositorios en Synaptic, el 25 de abril 2025:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw"/></p>
+<p>La última versión ksnip 1.10.1 está todavía en el repositorio de
+prueba y no la han pasado al repositorio estable, por lo que la única
+manera de tener la última versión es desde el <strong>repositorio de
+prueba de MX Linux</strong> o <strong>Backports de Debian</strong>, la
+siguiente imagen es en MX Linux 23 KDE de 64 bit:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw"/></p>
+<p>La siguiente imagen es de ksnip la ultima versión en
+<strong>Backports de Debian</strong> visto en Debian 12 de 32 bit, pues
+allí no la encuentro en los repositorios de prueba:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000"/></p>
+<p>En resumen, deben de buscar dónde esté la ultima versión
+disponible.</p>
+<p>Bueno, ahora si dejo las instrucciones para:</p>
+<p>Debian 12 Debian 11 Debian º0</p>
+<p>repito para la primera, pero solo los pasos de instalación del
+repositorio:</p>
+<h2 id="para-debian-12-bookworm-mx-23-repo">Para Debian 12 bookworm: MX
+23 Repo</h2>
+<p>Copie las siguientes líneas:</p>
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs</b></span></pre>
+<p>en el archivo mx.list con alguno de los métodos que se indicó arriba
+y guarde</p>
+<p>ahora descargue la llave desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring_2023.6.6_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring_2023.6.6_all.deb</a></p>
+<figure>
+<img alt="20240719-082459 mx23-archive-keyring_2023" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueQdbSd8OHyGbUnbS4cXkpp08vfq8YxpzLEjJfeAvRsOkGQD4-c2emanbOU_raOzAPloBJyC_r5fdAVQM-Iz5hFhNr27VrIIjD8ABWMorC_Gmj_960QIfQIYMfXUt5_e2XLUp7fa-ogoP_VcnmdY5MTMoHaK60UVM3fmpTIbo0JdbWN8w2vltq_SKgAQ/s790/20240719-082459%20mx23-archive-keyring_2023.6.6_all.deb.png"/>
+<figcaption aria-hidden="true">20240719-082459
+mx23-archive-keyring_2023</figcaption>
+</figure>
+<p><strong>Nota:</strong> Es posible que con el paso del tiempo lo
+cambien con otro más actual y cambie el nombre de la versión.</p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx23-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb</span></code></pre></div>
+<p>Este comando se descompone en varias partes:</p>
+<ol type="1">
+<li><p><strong><span style="color: #800180;"><b>sudo</b></span></strong>: Ejecuta el comando con
+privilegios de superusuario (root). Esto es necesario porque instalar
+paquetes en el sistema requiere permisos de administrador.</p></li>
+<li><p><strong><span style="color: #800180;"><b>dpkg -i</b></span></strong>: <span style="color: #800180;"><b>dpkg</b></span> es el
+gestor de paquetes de bajo nivel en Debian y sus derivados, como Ubuntu.
+La opción <span style="color: #800180;"><b>-i</b></span> (o <span style="color: #800180;"><b>--install</b></span>) indica que quieres
+instalar un paquete.</p></li>
+<li><p><strong><span style="color: #800180;"><b>mx23-archive-keyring_*.*.deb</b></span></strong>:
+Especifica el paquete que deseas instalar. En este caso, es un archivo
+<span style="color: #800180;"><b>.deb</b></span> que contiene el keyring (anillo de claves) para los
+repositorios de MX Linux 23. El uso del comodín <span style="color: #800180;"><b>*.*</b></span> permite
+coincidir con cualquier versión del paquete, es decir, no importa cuál
+sea el número de versión, siempre que comience con
+<span style="color: #800180;"><b>mx23-archive-keyring</b></span>.</p></li>
+</ol>
+<p>En conjunto, el comando instala el paquete
+<span style="color: #800180;"><b>mx23-archive-keyring</b></span> que contiene las claves públicas
+necesarias para verificar la autenticidad de los paquetes del
+repositorio de MX Linux 23. Estas claves son importantes para asegurar
+que los paquetes instalados desde los repositorios no han sido
+manipulados y provienen de una fuente confiable.</p>
+<p>Recargue los repositorios le recomiendo desde Synaptic:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s860/20240719-083406%20synaptic%20Recarga%20repos.png"/></p>
+<p>e instale el programa que necesite:</p>
+<figure>
+<img alt="20240719-083602 repositorios de MX Linux activados en Debian 12" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s964/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png"/>
+<figcaption aria-hidden="true">20240719-083602 repositorios de MX Linux
+activados en Debian 12</figcaption>
+</figure>
+<h2 id="para-debian-11-bullseye-mx-linux-21-repo">Para Debian 11
+bullseye: MX Linux 21 Repo</h2>
+<p>Copie las siguientes líneas:</p>
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bullseye main non-free
+
+#deb http://mxrepo.com/mx/repo/ bullseye test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bullseye ahs</b></span></pre>
+<p>en el archivo mx.list con alguno de los métodos que se indicó arriba
+y guarde</p>
+<p>ahora descargue la llave desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb</a></p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb15-1"><a aria-hidden="true" href="#cb15-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx21-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
+<p>Recargue los repositorios e instale el programa que necesite</p>
+<h2 id="para-debian-10-buster-mx-linux-19-repo">Para Debian 10 buster:
+MX Linux 19 Repo</h2>
+<p>Copie las siguientes líneas:</p>
+<pre><span style="color: #800180;"><b>#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ buster main non-free
+
+#deb http://mxrepo.com/mx/repo/ buster test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ buster ahs</b></span></pre>
+<p>en el archivo mx.list con alguno de los métodos que se indicó arriba
+y guarde</p>
+<p>ahora descargue la llave desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb</a></p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 20px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb17-1"><a aria-hidden="true" href="#cb17-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx19-archive-keyring<span class="dt">\_\*</span>.<span class="dt">\*</span>.deb  </span></code></pre></div>
+<p>Recargue los repositorios e instale el programa que necesite</p>
+<p><strong>Nota:</strong> En Debian 10 buster a esta hay menos
+programas.</p>
+<h1 id="repositorio-añadido-en-algunos-sistemas-operativos">Repositorio
+añadido en algunos Sistemas Operativos</h1>
+<p>La siguiente imagen es del repositorio de MX Linux 21 añadido en <a href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
+Synaptic:</p>
+<figure>
+<img alt="20231118-182409 repositorio de MX Linux 21 añadido" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"/>
+<figcaption aria-hidden="true">20231118-182409 repositorio de MX Linux
+21 añadido</figcaption>
+</figure>
+<h2 id="es-posible-descargar-manualmente-programas">Es posible descargar
+manualmente programas</h2>
+<p>Por si necesita manualmente descargar algun programa, puede entrar
+manualmente a las siguientes direcciones</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/">https://mxrepo.com/mx/repo/pool/</a></p>
+<p>allí yo he buscado en:</p>
+<p>pool<br/>
+non-free</p>
+<p><a href="https://mxrepo.com/mx/testrepo/pool/">https://mxrepo.com/mx/testrepo/pool/</a></p>
+<p>allí yo he buscado en:</p>
+<p>test</p>
+<p>Dios les bendiga</p>
+<h2 id="consultas">CONSULTAS</h2>
+<p><strong>Lista de repositorios MX Linux</strong><br/>
+<a href="https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt">https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt</a></p>
+<p><strong>Repos — MX-23</strong><br/>
+<a href="https://mxlinux.org/uncategorized/repos-mx-23/">https://mxlinux.org/uncategorized/repos-mx-23/</a></p>

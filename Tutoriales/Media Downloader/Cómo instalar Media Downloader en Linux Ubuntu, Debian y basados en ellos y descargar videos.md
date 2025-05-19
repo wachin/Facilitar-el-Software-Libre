@@ -35,13 +35,13 @@ para los que usen algún Sistema Operativo Debian pueden instalar el Repositorio
 **Instalar el repositorio de MX Linux en Debian 12, 11, 10 y Sistemas Operativos Linux basados en el**
 [https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html](https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html)
 
-lean esa entrada, allí hay explicaciones de que yt-dlp puede estar en los repositorios de prueba y luego pasar a los estables, incluso se puede encontrar una versión actualizada en Backports de Debian, todo es depende de dónde esté disponible lo podrán instalar.
+lean esa entrada, allí hay explicaciones de que yt-dlp puede estar en los repositorios de prueba y luego pasar a los estables (ahí se la podrá encontrar en Synaptic), incluso se puede encontrar una versión actualizada en Backports de Debian, todo es depende de dónde esté disponible la última versión la podrán instalar.
 
-**Nota:** En caso de que alguien sólo quiera usar yt-dlp desde la terminal vea [este tutorial](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html). (pues también se pueden descargar sólo usando la terminal)
+**Nota:** En caso de que alguien sólo quiera usar yt-dlp desde la terminal vea [este tutorial](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html). (pues también se puede descargar videos, audios sólo usando la terminal)
 
 ### Instalando Media Downloader
 
-Media Downloader está disponible para varias Distribuciones Linux, en el siguiente enlace:
+Media Downloader está disponible para varias Distribuciones Linux, en el siguiente enlace del Software de OpenSUSE:
 
 [https://software.opensuse.org//download.html?project=home%3Aobs_mhogomchungu&package=media-downloader](https://software.opensuse.org//download.html?project=home%3Aobs_mhogomchungu&package=media-downloader)
 
@@ -52,34 +52,35 @@ se ve en la lista: Debian, Fedora. openSUSE, Raspbian
 Este tutorial lo he probado en:
 
 - MX Linux 21 (basado en Debian 11)
-
 - MX Linux 23 (basado en Debian 12)
-
 - Debian 12 versión LXQt
 
 ## Instalar a Media Downloader desde Software OpenSuse
 
-Buscar según sea su distribución, sigan las instrucciones e instalarlo:
+Buscar según sea su distribución, sigan las instrucciones e instalarlo, ejemplo lo voy a instalar en Debian 12:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8rJ1kts03MNVO17SKCa7OEBrjd2Sqa8fgn-c4Yz4-6N4YLXS9tMCDeVqDYlnP8JCy-G2ilRIKZPmVJyZ99WiEtBnxVFE9CLE19Xt3LVtGoxt6XBkmE1x96SOOaWvlb3uJYWznxwqCvUTJKe8HeH7eVi-CNiiCYaHSznLUdZ_lx94HOAJ0f-yuPKBJ1_Q/s16000-rw/20250404-102020%20lo%20mejor%20es%20instalar%20el%20repositorio%20de%20Media%20Downloader.png)
 
 Ahora hay que abrir a Media Downloader, búsquenlo con el siguiente nombre:
 
-media-downloader
+`media downloader`
 
-entre sus aplicaciones ábranlo:
+o
+
+`Descargador de medios`
+
+y entre sus aplicaciones ábralo:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_pEIFgCkpHL-8peMKnWahKbsvW7wnRS2Px2vA-2HD3hYvso7kEFFeUgrDC1XAZ0-DCky-9X7RBDKS910IqQkIC_wDfJ8UOhMKeYkr5hdca9O4sGcI_Mgb1UoShz9kNpl4E5kb3t2tBzfQPPp-su6ntM1s8XHObocYQhf95zNutsnVtNQUKIfz3C6ml2Y/s16000-rw/20240121-164448%20media-downloader%20instalado.png)
+**Nota**: La imagen de arriba es de xfe4-appfinder en MX Linux 21 donde instalé el administrador ventanas Fluxbox.
 
-**Nota**: La imagen de arriba es de xfe4-appfinder en MX Linux 21 donde instalé el administrador ventanas Fluxbox, pero es MX Linux 21 Xfce.
-
-Cuando se abra el programa este chequeará los otros programas que necesita, allí ven que tengo instalado aria2 pero ese es opcional, pues se supone que uno lo puede usar en vez de yt-dlp para descargar cosas, en la parte de abajo de el tutorial les he puesto unas explicaciones de cómo instalarlo:
+Cuando se abra el programa, éste chequeará los otros programas que necesita, en la imagen de abajo ven que tengo instalado aria2 pero ese es opcional, pues se supone que uno lo puede usar en vez de yt-dlp para descargar cosas, en la parte de abajo de el tutorial les he puesto unas explicaciones de cómo instalarlo:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifwDN0cr2smvEtcDzwhMQtiQFq0WmmJ1xA2DinEdb6koEA7yP3OGujYE8Tv1i70oDHMsYB4DeasuJzq03cpIX-upyR_uPs7nLwSeSLTcKTPrqc-OxyD5_qn7ttnSL66bBuCl2eZVO9wlnh9Pvcjy2BITS695WYemPLVUO7Ortsus0qldMi29f2BC4NQoI/s16000-rw/20240121-165516%20Media%20Downloader%20chequeando%20sus%20dependencias.png)
 
-**Nota:** Media Downloader siempre al iniciar verificará, por defecto en "**Engine Name**" estará el que necesitamos "**yt-dlp**" (allí se supone que se puede usar otro como aria2, pero no lo uso)
+**Nota:** `Media Downloader` siempre al iniciar verificará, y por defecto en "**Engine Name**" estará el que necesitamos "**yt-dlp**" (y según he leído se supone que se puede usar otro motor (engine) como aria2, pero no lo uso).
 
-### Cómo descargar un video de youtube
+### Cómo descargar un video de youtube?
 
 Peguenlen un enlace de algún video de Youtube y clic en Descargar:
 
@@ -89,11 +90,13 @@ se descargará el video por defecto en HOME (pero pueden dar clic en la carpeta 
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1SJoSPh722-Pgx3JtseRDY7-ncSwoiANnPNrphxfQBaAmWt83IuXVFNWmCxg4-X7_9N9h5ryfE_euVtvt13TttQyMw_aiDlMkJ41aqBtlDvqSJIKuoo6OE1Nt2NcCBGLveEEk-DDtLvRwglW_kmMmA7fxF8Xem-ri870ob2q88zun4L5d0R0A6JoBX9w/s16000-rw/20240121-170215%20por%20defecto%20descarga%20los%20archivos%20en%20HOME.png)
 
-También se lo puede poner en español allí:
+También, al programa se lo puede poner en español allí, en:
+
+-> Configurar > Seleccionar Idioma
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiidCLi25_aLNi5pawTV0O7dq_OPuyq1dvi6VCBEgIH385tgpYLj5zujkXBtqWqBCnEm55oWV1zzvlayIblk848VBJ-8CXlVyuLaGZkUw2ONLVmwflopKgmHedNP-W1_Wsidg251Wg-MOixMaEYPuiUKIUlp_0neTg9q__xS_RcU8ShjoIMg9uU4Z6weXs/s16000-rw/20240204-204110%20a%20media%20downloader%20se%20lo%20puede%20poner%20en%20espa%C3%B1ol.png)
 
-en HOME lo descargará pues así está configurado por defecto:
+En la imagen de abajo se ve un vídeo descargado en HOME que es la ruta por defecto:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibXDZ8owN_dWP1loIOIZ3GuRN-dEG78ktcUadzkS76SK_HQmsSBnSF3fFF-cJ-T6K1P0pu2XAd5xhq8uuYhmzCzQPsOSBJZ9_7PB-QZVtZDMev4UJU_k0yyhloX9A8UvMp68ermVgeEGp2a9eNjhqqOMguoWLSDeVpjCXj-0_ZNIhuXxaktadJ-Ee7ntY/s16000-rw/20240121-170404%20el%20video%20se%20descargar%C3%A1%20en%20HOME.png)
 
@@ -101,7 +104,71 @@ en HOME lo descargará pues así está configurado por defecto:
 
 **.webm**
 
-eso es porque ese video estaba disponible para descargarse así. Otros videos de podrán descargar con otra extensión, pero si usted desea que siempre los videos que descargue el programa estén en mp4 más abajo le dejo unas instrucciones de cómo usar las opciones de descarga pues todas ellas lo harán en mp4
+eso es porque ese video estaba disponible para descargarse así, otros videos de podrán descargar con otra extensión, pero si usted desea que siempre los videos que descargue el programa estén en mp4:
+
+## Descargar otras resoluciones de Video siempre en mp4
+
+Lo siguiente quiero poder explicarles de la mejor manera, sucede que hay videos que han sido subidos a Youtube con diferentes resoluciones, eso depende de la persona que los subió (del equipo que tenía), ejemplo, imaginensen que yo subí un video desde mi filmadora en la resolución 720p, éste, desde Youtube se podrá descargar en esa resolución y en Media Downloader también a esa resolución, además de en las resoluciones más bajas a esa, es decir:
+
+144p
+240p
+360p
+480p
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnphgqNyRG4ATZy54kahnCiWrapF8jmIIX2gRjJNlwWZTG6cBV2_Judh0NmSQcfiX6__IDZCGYI8S3J5RlcHPgpqKRkQhEK-ogXiY7gBOXmBZGNJePsEhhHBUVj99azjc_cF3myMk9OADD6cLkixtUUFNAWzDIc7g7634EWA7hewrx0QlOZa7QtbDN1qI/s16000-rw/20240121-173010%20varias%20opciones%20de%20video%20720p%20ejemplo%20de%20un%20video%20mio.png)
+
+las resoluciones más altas yo no las habría subido, así que no tiene sentido usarlas, epsero me comprendan lo que quiero decir. Así ,que esto hay que tenerlo en cuenta, y eso se puede ver en Youtube en:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5n96mRxvfoKAb0wi1zu0FS5kM7OK7tvbyaJl_chQVMuC_jI0jKCTNlkN2Ueo97Nukh7s_dnAK_JS2ll8ECtIHKtYVHfFkQ-Ek9ktdzLstdqzQE8moOP_zJ95UntsyzugW0uO_VEchHH-Qc4FTF8rhv1wm28AkOVXL5hYizMOkyW4MZJnNm_WHoHLfJhE/s16000-rw/20240121-173537%20youtube%20calidad%20de%20los%20videos.png)
+
+**Nota:** La captura de pantalla de la imagen de arriba es del 21 de enero de 2024, esto explico porque las configuraciones cambian con el paso del tiempo.
+
+Les explico mas a fondo con flechas en la siguiente imagen:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfsLJhfY8tTJN4mUTd-LGKgsh2Smo0jSl7tsinkBWuwdd1yQnwt41UVxKHPleZw8XxBiJxmTNN21dtPouOJtRub28O3s5uxtYZ3N75E36ci9CmuokqXi7VgCBPYWxCvirRE92mP1bd8IUpQodyiAL_bI75KtjsNGdLvYBjJZkT2qp244FcrFh452egNCM/s16000-rw/20240121-173804%20tres%20opciones%20de%20calidad%20de%20descarga%20en%20un%20video.png)
+
+como ven en la imagen de arriba, del video:
+
+**Ultimo Live de Jaime Murrell (Un llamado a la Reconciliación) ENERO 2021**
+[https://www.youtube.com/watch?v=Uahg2piJ7y0](https://www.youtube.com/watch?v=Uahg2piJ7y0)
+
+tiene disponible tres calidades o resoluciones:
+
+360p
+240p
+114p
+
+cualquiera de ellas se las puede elegir en Media Downloader:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLaHll0lZS-XIyxb4gs_qrTe2sNywWWd9n40D0TBDvyHm_3d4DTse5Cb4wz8zxT6-b4RhHh2RNYoKCoP5hyphenhyphen_TbUDxhreGBB2Ufhs1NpXfQfciW2egSoGuBacjJ-b5eVhosvC5NNVgc3hkgI6r9yc6gtCBW8oRdqdOLnmztQEVqjoMAln7GeOwG4WdolNA/s16000-rw/20240205-085852%20ejemplo%20de%20descarga%20en%20Media%20Downloader.png)
+
+pero no tiene sentido usar las más altas. Cuando le de clic empezará la descarga.
+
+## Descarga por lotes
+
+Uno puede añadir varios enlaces de videos, ejemplo:
+
+**Cristo Reina**
+[https://youtu.be/E5Nsi0Cf7uE?si=eGP-rdXkC1swbEbC](https://youtu.be/E5Nsi0Cf7uE?si=eGP-rdXkC1swbEbC)
+
+etc
+
+se las podemos añadir al programa una por una en la pestaña:
+
+**Descarga por lotes**
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8wdCp9vUAKRrGDVXHG0BnhqlogYBNy9cjBExLve2fa6iKQNRVbnrNzd-fEbTiRSVf4gZ06trqyd_xvF06NurcvJB-lLf3OAZnIiFjstNhGAUUGSHdWQiConH4SBIY1gFN6lIzFoeALItBHvV2AjebVZu9uD7y0bidrvMBkHnuzB686XN2rS10JGPaOE8/s16000-rw/20240205-094443%20Descarga%20por%20lotes%20de%20Downloader%20Media.png)
+
+debemos de añadir la url:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4KfGb4qYkxx4qLuiQCZ6Zr8uaRusgknUG8fFpB0ssbX9lMzWDw5laC1SGrq7amzFCFlDbtaTSTdKjbz19z9CnRdqW3CcuEvIhyiA6VNhcukFj4SieDbH2Q4wfF-Q2QicvZhYgr8rYQaZrnEbavkG59ksWBMqemYgI4A2_ueX_ng79trftXTyNaE9-I7k/s16000-rw/20240205-094648%20a%C3%B1adiendo%20un%20enlace%20de%20youtube%20a%20la%20descarga%20por%20lotes.png)
+
+**Nota:** Podemos añadir la opción de descarga que necesitemos, sino dejar en Default
+
+En la siguiente imagen ya he añadido las tres url:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtWwoyIx8vqC9MdO-h-49uckcbbYvYd8gEc0LyNB4pc3NsRbgRk_SZxbB-ehbZV7FATwiXDVtOCYslDh8OOscWPp3Bpah8X0DJ-RM_tyE4rfCYeTYELpdaVKVjHZ0QOJJgCoquDJI983VSstGxpqVScdkFVpuNnClTUkXrfX_eqpK0CQnukesIhaNnfIQ/s16000-rw/20240205-095031%20clic%20en%20Descargar.png)
+
 
 ## Cómo descargar audios mp3 con Media Downloader
 
@@ -149,68 +216,6 @@ Para volverlo a dejar como estaba en Options le dan clic en **Enter Options** en
 
 y el programa descargará los videos otra vez
 
-## Descargar otras resoluciones de Video siempre en mp4
-
-Lo siguiente quiero poder explicarles de la mejor manera, sucede que hay videos que han sido subidos a Youtube con diferentes resoluciones, eso depende de la persona que los subió, ejemplo imaginensen que yo subí un video desde mi filmadora en la resolución 720p, éste desde Youtube se podrá descargar en esa resolución y en Media Downloader también a esa resolución, además de en las resoluciones más bajas a esa:
-
-144p
-240p
-360p
-480p
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnphgqNyRG4ATZy54kahnCiWrapF8jmIIX2gRjJNlwWZTG6cBV2_Judh0NmSQcfiX6__IDZCGYI8S3J5RlcHPgpqKRkQhEK-ogXiY7gBOXmBZGNJePsEhhHBUVj99azjc_cF3myMk9OADD6cLkixtUUFNAWzDIc7g7634EWA7hewrx0QlOZa7QtbDN1qI/s16000-rw/20240121-173010%20varias%20opciones%20de%20video%20720p%20ejemplo%20de%20un%20video%20mio.png)
-
-las resoluciones más altas yo no las habría subido así que no tiene sentido usarlas, epsero me comprendan lo que quiero decir. Así que eso hay que tener en cuenta eso, y eso se puede ver en Youtube en:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5n96mRxvfoKAb0wi1zu0FS5kM7OK7tvbyaJl_chQVMuC_jI0jKCTNlkN2Ueo97Nukh7s_dnAK_JS2ll8ECtIHKtYVHfFkQ-Ek9ktdzLstdqzQE8moOP_zJ95UntsyzugW0uO_VEchHH-Qc4FTF8rhv1wm28AkOVXL5hYizMOkyW4MZJnNm_WHoHLfJhE/s16000-rw/20240121-173537%20youtube%20calidad%20de%20los%20videos.png)
-
-**Nota:** La captura de pantalla de la imagen de arriba es del 21 de enero de 2024, esto explico porque las configuraciones cambian con el paso del tiempo.
-
-Les explico mas a fondo con flechas en la siguiente imagen:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfsLJhfY8tTJN4mUTd-LGKgsh2Smo0jSl7tsinkBWuwdd1yQnwt41UVxKHPleZw8XxBiJxmTNN21dtPouOJtRub28O3s5uxtYZ3N75E36ci9CmuokqXi7VgCBPYWxCvirRE92mP1bd8IUpQodyiAL_bI75KtjsNGdLvYBjJZkT2qp244FcrFh452egNCM/s16000-rw/20240121-173804%20tres%20opciones%20de%20calidad%20de%20descarga%20en%20un%20video.png)
-
-como ven en la imagen de arriba el video de:
-
-**Ultimo Live de Jaime Murrell (Un llamado a la Reconciliación) ENERO 2021**
-[https://www.youtube.com/watch?v=Uahg2piJ7y0](https://www.youtube.com/watch?v=Uahg2piJ7y0)
-
-tiene disponible tres calidades o resoluciones:
-
-360p
-240p
-114p
-
-cualquiera de ellas se las puede elegir en Media Downloader:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLaHll0lZS-XIyxb4gs_qrTe2sNywWWd9n40D0TBDvyHm_3d4DTse5Cb4wz8zxT6-b4RhHh2RNYoKCoP5hyphenhyphen_TbUDxhreGBB2Ufhs1NpXfQfciW2egSoGuBacjJ-b5eVhosvC5NNVgc3hkgI6r9yc6gtCBW8oRdqdOLnmztQEVqjoMAln7GeOwG4WdolNA/s16000-rw/20240205-085852%20ejemplo%20de%20descarga%20en%20Media%20Downloader.png)
-
- cuando le de clic empezará la descarga
-
-## Descarga por lotes
-
-Uno puede añadir varios enlaces de viedos, ejemplo:
-
-**Cristo Reina**
-[https://youtu.be/E5Nsi0Cf7uE?si=eGP-rdXkC1swbEbC](https://youtu.be/E5Nsi0Cf7uE?si=eGP-rdXkC1swbEbC)
-
-etc
-
-se las podemos añadir al programa una por una en la pestaña:
-
-**Descarga por lotes**
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8wdCp9vUAKRrGDVXHG0BnhqlogYBNy9cjBExLve2fa6iKQNRVbnrNzd-fEbTiRSVf4gZ06trqyd_xvF06NurcvJB-lLf3OAZnIiFjstNhGAUUGSHdWQiConH4SBIY1gFN6lIzFoeALItBHvV2AjebVZu9uD7y0bidrvMBkHnuzB686XN2rS10JGPaOE8/s16000-rw/20240205-094443%20Descarga%20por%20lotes%20de%20Downloader%20Media.png)
-
-debemos de añadir la url:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4KfGb4qYkxx4qLuiQCZ6Zr8uaRusgknUG8fFpB0ssbX9lMzWDw5laC1SGrq7amzFCFlDbtaTSTdKjbz19z9CnRdqW3CcuEvIhyiA6VNhcukFj4SieDbH2Q4wfF-Q2QicvZhYgr8rYQaZrnEbavkG59ksWBMqemYgI4A2_ueX_ng79trftXTyNaE9-I7k/s16000-rw/20240205-094648%20a%C3%B1adiendo%20un%20enlace%20de%20youtube%20a%20la%20descarga%20por%20lotes.png)
-
-**Nota:** Podemos añadir la opción de descarga que necesitemos, sino dejar en Default
-
-En la siguiente imagen ya he añadido las tres url:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtWwoyIx8vqC9MdO-h-49uckcbbYvYd8gEc0LyNB4pc3NsRbgRk_SZxbB-ehbZV7FATwiXDVtOCYslDh8OOscWPp3Bpah8X0DJ-RM_tyE4rfCYeTYELpdaVKVjHZ0QOJJgCoquDJI983VSstGxpqVScdkFVpuNnClTUkXrfX_eqpK0CQnukesIhaNnfIQ/s16000-rw/20240205-095031%20clic%20en%20Descargar.png)
 
 ## Cómo usar aria2 para descargar archivos
 
@@ -295,4 +300,4 @@ Dios les bendiga
 **Problema con 'yt-dlp', actualización**
 [https://forums.linuxmint.com/viewtopic.php?t=417452](https://forums.linuxmint.com/viewtopic.php?t=417452)
 
-[](https://facilitarelsoftwarelibre.blogspot.com/search/label/Descargar%20Audio)
+Dios les bendiga

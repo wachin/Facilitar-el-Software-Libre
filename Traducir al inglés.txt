@@ -9,3 +9,7 @@ https://facilitarelsoftwarelibre.blogspot.com/2025/05/tengo-una-queja-de-que-la-
 
 Cómo instalar yt-dlp en Termux en Android para descargar videos, audio (MP3) de YouTube, Facebook, Tiktok, Instagram y otros
 https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html
+
+Instalar "Media Downloader" y "yt-dlp" para descarga audios (en mp3) y videos (mp4) de youtube con en MX Linux, Ubuntu, Linux Mint, otros
+https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html
+/home/wachin/Dev/Facilitar-el-Software-Libre/Tutoriales/Media Downloader

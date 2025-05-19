@@ -8,7 +8,7 @@ Media Downloader es una interfaz gráfica que usa yt-dlp (es un programa de lín
 
 ### Instalando la ultima versión de yt-dlp en Ubuntu
 
-Instálelo desde el [PPA](https://launchpad.net/~tomtomtom/+archive/ubuntu/yt-dlp):
+Instálelo desde el:
 
 ```bash
 sudo add-apt-repository ppa:tomtomtom/yt-dlp
@@ -16,7 +16,11 @@ sudo apt update
 sudo apt install yt-dlp
 ```
 
-con esto lo tendrás instalado
+con esto lo tendrá instalado, si desea puede revisar los paquetes en:
+
+ [https://launchpad.net/~tomtomtom/+archive/ubuntu/yt-dlp](https://launchpad.net/~tomtomtom/+archive/ubuntu/yt-dlp)
+ 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir4cBWGJVA8d-ax6rhs2r8FchbwE9Z05C7ovQkEuItrMsmkkSIYZ07GXrSmuyMOduw-Y356RB2G4uVzqn1KOgsOoKVUjGxKSuaIqZknGdtcS_FT3cz5yy2AFmXXUSura1idbnQZ3Vc5_0TYd0Ci1tJPMdFeHGEXcmCDk2QZiX10CV8RUUVSR4xCBsVe98/s16000/20250518-0003%20reviar%20los%20paquetes%20deb%20de%20PPA%20yt-dlp.png)
 
 ### Instalando yt-dlp en MX Linux, antiX o basados en Debian con este repositorio instalado
 

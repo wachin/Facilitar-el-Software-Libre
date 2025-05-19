@@ -1,6 +1,6 @@
 ### Instalar "Media Downloader" y "yt-dlp" para descarga audios (en mp3) y videos (mp4) de youtube con en MX Linux, Ubuntu, Linux Mint, otros
 
-Media Downloader es una interfaz gráfica que usa yt-dlp (es un programa de línea de comandos) para descargar videos, audios, desde Youtube, Facebook, Instagram, Tiktok, Twitter, y diferentes sitios. Con este tutorial aprenderás a instalar:
+Media Downloader es una interfaz gráfica que usa yt-dlp (es un programa de línea de comandos) para descargar videos, audios, desde Youtube, Facebook, Instagram, Tiktok, Twitter, y diferentes sitios. Con este tutorial tendrás la información necesaria para instalar:
 
 - Media Downloader
 
@@ -21,6 +21,8 @@ con esto lo tendrá instalado, si desea puede revisar los paquetes en:
  [https://launchpad.net/~tomtomtom/+archive/ubuntu/yt-dlp](https://launchpad.net/~tomtomtom/+archive/ubuntu/yt-dlp)
  
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir4cBWGJVA8d-ax6rhs2r8FchbwE9Z05C7ovQkEuItrMsmkkSIYZ07GXrSmuyMOduw-Y356RB2G4uVzqn1KOgsOoKVUjGxKSuaIqZknGdtcS_FT3cz5yy2AFmXXUSura1idbnQZ3Vc5_0TYd0Ci1tJPMdFeHGEXcmCDk2QZiX10CV8RUUVSR4xCBsVe98/s16000/20250518-0003%20reviar%20los%20paquetes%20deb%20de%20PPA%20yt-dlp.png)
+
+**Revisando el deb por seguridad.-** Navega hasta encontrar el archivo deb de su versión de Ubuntu, y descargarlo, y desde un Navegador Web entre en [www.virustotal.com](http://www.virustotal.com) e inicie sesión y si no tiene una cree una, y suba el archivo.
 
 ### Instalando yt-dlp en MX Linux, antiX o basados en Debian con este repositorio instalado
 

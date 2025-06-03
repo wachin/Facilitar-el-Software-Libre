@@ -1,20 +1,61 @@
-En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí poque hacen falta unas dependencias, así, si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción “Extraer aquí” pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente:
+En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí poque hacen falta unas dependencias, así, si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción “Extraer aquí” pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente
+
+# En Debian no viene activado el repositorio non-free, ectivalo
+
+unrar-free tiene limitaciones con ciertos archivos `.rar`, especialmente los modernos. El paquete `unrar` (de repositorios no-free) ofrece mejor soporte. Si no tienes habilitado el repositorio `non-free`, edíta el sources.list:
+
+## Usando nano para editar el sources.list
+Ponga en la terminal:
+
+```bash
+sudo nano /etc/apt/sources.list
+```
+
+Asegúrate de que tengas algo como esto:
+
+```bash
+deb http://deb.debian.org/debian/ bookworm main contrib non-free
+```
+
+si no es así como en la siguiente imagen:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhiYN6HExdTofvjfC9l1rljSwiotHZXmW5g0JH_NZ2vVeQgXUhAJksWnmoDlYhGN4j3C-EzVudsMaSyTp0WME02rWbJxlvDjmQbM7vNP396w6SdUSoiaJLkgeSm_Cq0CUq5tSkqO15L26dXGFKmPv1EuTKXcb04BYPHrfEb4Dphwo9TxrUPNzfQs-oXLeo=s16000)
+
+añadelo:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhUYAg8H_c9RmzknvMWAJOJs8HA4hPpFe4Bcz8R5PtQkYNwqoldrORClc_Xe4D7E_voXZ02KEKEi5zslsx8x2Y2DZIgfmK61kgh3Khaz7jb8RY7wczap_JN7AfsMlVQxnT6tYvMrpM4cEqUudoG0BZ8tbQeiCWjDF-dof8zgkP3VtfMgcgiOz8Ck2K6kAQ=s16000)
+
+Guarda y cierra y recarga los repositorios.
+
+Si no sabes como usar nano ve el siguiente tutorial:
+
+**Cómo usar nano en la terminal de Linux para editar archivos de texto**   
+[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
+
+## Usando Gedit para editar el sources.list 
+También si deseas puedes usar gedit el cual generalmente deja hacer esas cosas desde la terminal, solo reemplaza en:
+
+```bash
+sudo gedit /etc/apt/sources.list
+```
+
+También puedes intentar usar otros editores de archivos, pero por ejemplo kate generalmente no permite hacer estas operaciones.
+
+
+---
 
 # ✅ Instalar utilidades necesarias para descomprimir
 
-`pcmanfm-qt` utiliza internamente otras herramientas del sistema (como `unzip`, `7z`, etc.) para realizar las operaciones de extracción.
-
-##### Solución:
-
-Instala las herramientas básicas necesarias:
+`pcmanfm-qt` utiliza internamente otras herramientas del sistema (como `unzip`, `7z`, etc.) para realizar las operaciones de extracción. Instala las herramientas básicas necesarias:
 
 ```
 sudo apt update
-sudo apt install unzip unrar-free xz-utils p7zip-full engrampa pcmanfm-qt
+sudo apt install unzip unrar-free unrar xz-utils p7zip-full engrampa pcmanfm-qt
 ```
 
 *   `unzip`: para archivos `.zip`
-*   `p7zip-full`: soporte para formatos adicionales como `.7z`, `.rar`, etc.
+*   `unrar`: soporte para archivos `.rar`
+*   `p7zip-full`: soporte para formatos adicionales como `.7z`, etc.
 *   `engrampa`: es el gestor de archivos comprimidos, usado por algunas interfaces gráficas.
 
 **Nota**: En caso que algun .rar no lo puedas descomprimir lo mejor será instalar la versión de Windows de WinRar en Linux con Wine, vea [este](https://facilitarelsoftwarelibre.blogspot.com/2024/07/como-instalar-winrar-en-debian-mx-linux.html) tutorial.  
@@ -51,7 +92,7 @@ y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la te
     *   **“Extract Aquí”**
     *   **“Extract en carpeta”** con iconos:
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVfjYheejm8yhXaLDT4k4kSilIEvPtgKDfLSS7irIbYXaInGB9Fx_bJ9q34KCnk9HKmrYf4pMEPDXxejfRuvF5UxMl7L2iRcBqUU9Utq_8Va8tS8a3rzv8BsWlwTYddr9qtUWXbSwrxq19h6bY8BUK0nPlViA6Kj8wFRFTipOTP2XEzY-9woy2xGZY5pI/s16000/20250505-0004%20extraer%20aqu%C3%AD%20con%20engrampa%20en%20PCManFM.png "PCmanFM, extraer archivos zip, rar con clic derecho Extraer aquí creando menú contextual con emgrampa")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVfjYheejm8yhXaLDT4k4kSilIEvPtgKDfLSS7irIbYXaInGB9Fx_bJ9q34KCnk9HKmrYf4pMEPDXxejfRuvF5UxMl7L2iRcBqUU9Utq_8Va8tS8a3rzv8BsWlwTYddr9qtUWXbSwrxq19h6bY8BUK0nPlViA6Kj8wFRFTipOTP2XEzY-9woy2xGZY5pI/s769/20250505-0004%20extraer%20aqu%C3%AD%20con%20engrampa%20en%20PCManFM.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVfjYheejm8yhXaLDT4k4kSilIEvPtgKDfLSS7irIbYXaInGB9Fx_bJ9q34KCnk9HKmrYf4pMEPDXxejfRuvF5UxMl7L2iRcBqUU9Utq_8Va8tS8a3rzv8BsWlwTYddr9qtUWXbSwrxq19h6bY8BUK0nPlViA6Kj8wFRFTipOTP2XEzY-9woy2xGZY5pI/s16000/20250505-0004%20extraer%20aqu%C3%AD%20con%20engrampa%20en%20PCManFM.png "PCmanFM, extraer archivos zip, rar con clic derecho Extraer aquí creando menú contextual con emgrampa")
 
 ## 🔍 Explicación línea por línea del Script
 

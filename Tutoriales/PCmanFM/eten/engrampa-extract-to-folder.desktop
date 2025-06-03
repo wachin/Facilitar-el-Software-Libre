@@ -1,0 +1,36 @@
+# Extract to Folder - Supports multiple languages
+# Use this action to extract archives into their own folder using Engrampa
+# Proyecto Facilitar el Software Libre en el Ecuador
+# By: Washington Indacochea Delgado
+# https://facilitarelsoftwarelibre.blogspot.com
+
+[Desktop Entry]
+Type=Action
+Tooltip[es]=Extraer el archivo comprimido en una carpeta con su nombre usando Engrampa
+Tooltip[en]=Extract the archive into its own folder using Engrampa
+Tooltip[fr]=Extraire l'archive dans un dossier portant son nom avec Engrampa
+Tooltip[de]=Archiv in eigenem Ordner mit gleichem Namen entpacken
+Tooltip[it]=Estrarre l'archivio in una cartella con lo stesso nome
+Tooltip[pt]=Extrair o arquivo em uma pasta com o mesmo nome
+
+Name[es]=Extraer en carpeta
+Name[en]=Extract to Folder
+Name[fr]=Extraire dans un dossier
+Name[de]=In Ordner entpacken
+Name[it]=Estrai in una cartella
+Name[pt]=Extrair em pasta
+
+Icon=folder-new
+
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/zip;application/x-rar;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;
+Exec=engrampa --extract %u
+
+Name[es]=Extraer en su propia carpeta
+Name[en]=Extract to its own folder
+Name[fr]=Extraire dans son propre dossier
+Name[de]=In eigenen Ordner entpacken
+Name[it]=Estrai nel proprio folder
+Name[pt]=Extrair na própria pasta

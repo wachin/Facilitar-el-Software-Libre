@@ -210,7 +210,8 @@ Icon=archive-extract
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
-MimeTypes=application/zip;application/x-rar;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;
+MimeTypes=application/zip;application/x-rar;application/vnd.rar;application/x-rar-compressed;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;application/x-xz-compressed-tar;application/gzip;application/x-lzma-compressed-tar;application/x-lz4-compressed-tar;application/vnd.debian.binary-package;
+
 Exec=engrampa --extract-here %u
 
 Name[es]=Extraer a la carpeta actual
@@ -265,7 +266,8 @@ Icon=folder-new
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
-MimeTypes=application/zip;application/x-rar;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;
+MimeTypes=application/zip;application/x-rar;application/vnd.rar;application/x-rar-compressed;application/x-tar;application/x-bzip2;application/x-7z-compressed;application/x-java-archive;application/x-deb;application/x-cd-image;application/x-xz-compressed-tar;application/gzip;application/x-lzma-compressed-tar;application/x-lz4-compressed-tar;application/vnd.debian.binary-package;
+
 Exec=engrampa --extract %u
 
 Name[es]=Extraer en su propia carpeta

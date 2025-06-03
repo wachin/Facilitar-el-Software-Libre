@@ -1,6 +1,16 @@
-En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí poque hacen falta unas dependencias, así, si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción “Extraer aquí” pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente
+Si usas **PCManFM-QT** en Debian 12 o cualquier otra distribución de Linux y la opción **"Extraer aquí"** no funciona correctamente (especialmente con archivos `.rar .deb .zip`), esta guía te ayudará a solucionarlo integrando **Engrampa** en el menú contextual del botón derecho de `pcmanfm-qt`.
 
-# En Debian no viene activado el repositorio non-free, ectivalo
+Este método añade dos nuevas acciones contextuales:
+- **Extraer aquí**
+- **Extraer a carpeta**
+
+La segunda crea una nueva carpeta con el nombre del archivo comprimido antes de la extracción, evitando así la acumulación de espacio en el directorio actual
+
+En la siguiente imagen está funionando este menú con un archivo .rar:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgvLxgBpzlDXsRpKw9NN8W2BzEDH5CX2PaF696JNpIMa08b5HImELEkDFKuhrM9-nceQh4ap8lP7Zd5jDXI9jD0yArd9KB3J783XPcIpksCxvlJ6Lmm_rH5xQesEtNnvp2ieT5gqs9zDL0Zb6EL1f1uZz6yFz8DXp3mahS8lLRKI05zqBouY2jLOgH_07E=s16000)
+
+# En Debian no viene activado el repositorio non-free, activalo
 
 unrar-free tiene limitaciones con ciertos archivos `.rar`, especialmente los modernos. El paquete `unrar` (de repositorios no-free) ofrece mejor soporte. Si no tienes habilitado el repositorio `non-free`, edíta el sources.list:
 
@@ -72,7 +82,7 @@ Esto hará que funcione el poder extraer aquí, pero como funciona en PCManFM no
 
 Mi objetivo de este blog es hacer las cosas fáciles de usar, así que he hecho una manera de instalar el nuevo menú contextual que integra las opciones de **Engrampa**
 
-# Instalación rápida y automática
+# Instalación rápida y automática con script
 
 Copiar todas las siguietnes líneas (obvio después de haber instalado las dependencias de arriba) y poner en una terminal como Konsole, gnome-terminal o alguna otra que acepte el uso de pegar todas las líneas (hay algunas terminales que no pueden manejar esto, en ese caso hacerlo una por una):
 
@@ -148,7 +158,7 @@ Ambas usarán **Engrampa**, respetando el idioma del sistema y mostrando iconos 
 
 - - -
 
-# Si deseas hacerlo manualmente todo haz lo siguiente
+# Si deseas crear manualmente los menú haz lo siguiente
 
 Puede que haya alguien que tenga dudas en usar el metodo automático de arriba y quiera revisar personalmente cada paso y cada parte del código, entonces si fuera así, para su tranquilidad haga lo siguiente:
 

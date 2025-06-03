@@ -1,0 +1,325 @@
+<p>Si usas <strong>PCManFM-QT</strong> en Debian 12 o cualquier otra
+distribución de Linux y la opción <strong>“Extraer aquí”</strong> no
+funciona correctamente (especialmente con archivos
+<code>.rar .deb .zip</code>), esta guía te ayudará a solucionarlo
+integrando <strong>Engrampa</strong> en el menú contextual del botón
+derecho de <code>pcmanfm-qt</code>.</p>
+<p>Este método añade dos nuevas acciones contextuales: - <strong>Extraer
+aquí</strong> - <strong>Extraer a carpeta</strong></p>
+<p>La segunda crea una nueva carpeta con el nombre del archivo
+comprimido antes de la extracción, evitando así la acumulación de
+espacio en el directorio actual</p>
+<p>En la siguiente imagen está funionando este menú con un archivo
+.rar:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgvLxgBpzlDXsRpKw9NN8W2BzEDH5CX2PaF696JNpIMa08b5HImELEkDFKuhrM9-nceQh4ap8lP7Zd5jDXI9jD0yArd9KB3J783XPcIpksCxvlJ6Lmm_rH5xQesEtNnvp2ieT5gqs9zDL0Zb6EL1f1uZz6yFz8DXp3mahS8lLRKI05zqBouY2jLOgH_07E=s16000" /></p>
+<h1 id="en-debian-no-viene-activado-el-repositorio-non-free-activalo">En
+Debian no viene activado el repositorio non-free, activalo</h1>
+<p>unrar-free tiene limitaciones con ciertos archivos <code>.rar</code>,
+especialmente los modernos. El paquete <code>unrar</code> (de
+repositorios no-free) ofrece mejor soporte. Si no tienes habilitado el
+repositorio <code>non-free</code>, edíta el sources.list:</p>
+<h2 id="usando-nano-para-editar-el-sources.list">Usando nano para editar
+el sources.list</h2>
+<p>Ponga en la terminal:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/apt/sources.list</span></code></pre></div>
+<p>Asegúrate de que tengas algo como esto:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> http://deb.debian.org/debian/ bookworm main contrib non-free</span></code></pre></div>
+<p>si no es así como en la siguiente imagen:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEhiYN6HExdTofvjfC9l1rljSwiotHZXmW5g0JH_NZ2vVeQgXUhAJksWnmoDlYhGN4j3C-EzVudsMaSyTp0WME02rWbJxlvDjmQbM7vNP396w6SdUSoiaJLkgeSm_Cq0CUq5tSkqO15L26dXGFKmPv1EuTKXcb04BYPHrfEb4Dphwo9TxrUPNzfQs-oXLeo=s16000" /></p>
+<p>añadelo:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEhUYAg8H_c9RmzknvMWAJOJs8HA4hPpFe4Bcz8R5PtQkYNwqoldrORClc_Xe4D7E_voXZ02KEKEi5zslsx8x2Y2DZIgfmK61kgh3Khaz7jb8RY7wczap_JN7AfsMlVQxnT6tYvMrpM4cEqUudoG0BZ8tbQeiCWjDF-dof8zgkP3VtfMgcgiOz8Ck2K6kAQ=s16000" /></p>
+<p>Guarda y cierra y recarga los repositorios.</p>
+<p>Si no sabes como usar nano ve el siguiente tutorial:</p>
+<p><strong>Cómo usar nano en la terminal de Linux para editar archivos
+de texto</strong><br />
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html">https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html</a></p>
+<h2 id="usando-gedit-para-editar-el-sources.list">Usando Gedit para
+editar el sources.list</h2>
+<p>También si deseas puedes usar gedit el cual generalmente deja hacer
+esas cosas desde la terminal, solo reemplaza en:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit /etc/apt/sources.list</span></code></pre></div>
+<p>También puedes intentar usar otros editores de archivos, pero por
+ejemplo kate generalmente no permite hacer estas operaciones.</p>
+<hr />
+<h1 id="instalar-utilidades-necesarias-para-descomprimir">✅ Instalar
+utilidades necesarias para descomprimir</h1>
+<p><code>pcmanfm-qt</code> utiliza internamente otras herramientas del
+sistema (como <code>unzip</code>, <code>7z</code>, etc.) para realizar
+las operaciones de extracción. Instala las herramientas básicas
+necesarias:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install unzip unrar-free unrar xz-utils p7zip-full engrampa pcmanfm-qt</span></code></pre></div>
+<ul>
+<li><code>unzip</code>: para archivos <code>.zip</code></li>
+<li><code>unrar</code>: soporte para archivos <code>.rar</code></li>
+<li><code>p7zip-full</code>: soporte para formatos adicionales como
+<code>.7z</code>, etc.</li>
+<li><code>engrampa</code>: es el gestor de archivos comprimidos, usado
+por algunas interfaces gráficas.</li>
+</ul>
+<p><strong>Nota</strong>: En caso que algun .rar no lo puedas
+descomprimir lo mejor será instalar la versión de Windows de WinRar en
+Linux con Wine, vea <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2024/07/como-instalar-winrar-en-debian-mx-linux.html">este</a>
+tutorial.</p>
+<p>Esto hará que funcione el poder extraer aquí, pero como funciona en
+PCManFM no me gusta porque extrae siempre todos los archivos en el
+directorio y no en una carpeta, para solucionarlo ahora vamos a crear
+una <strong>acción contextual personalizada para
+<code>pcmanfm-qt</code></strong> que permita integrar las opciones de
+<strong>Engrampa</strong> directamente desde el menú contextual del
+explorador de archivos. Este método usa el sistema de acciones
+personalizadas de <code>pcmanfm-qt</code>, que se guardan en la
+carpeta:</p>
+<pre><code>~/.local/share/file-manager/actions/</code></pre>
+<hr />
+<h1
+id="crear-una-acción-contextual-personalizada-para-pcmanfm-qt-que-permita-integrar-las-opciones-para-extraer-aquí-con-engrampa">Crear
+una acción contextual personalizada para <code>pcmanfm-qt</code> que
+permita integrar las opciones para “Extraer aquí” con Engrampa</h1>
+<p>Mi objetivo de este blog es hacer las cosas fáciles de usar, así que
+he hecho una manera de instalar el nuevo menú contextual que integra las
+opciones de <strong>Engrampa</strong></p>
+<h1 id="instalación-rápida-y-automática-con-script">Instalación rápida y
+automática con script</h1>
+<p>Copiar todas las siguietnes líneas (obvio después de haber instalado
+las dependencias de arriba) y poner en una terminal como Konsole,
+gnome-terminal o alguna otra que acepte el uso de pegar todas las líneas
+(hay algunas terminales que no pueden manejar esto, en ese caso hacerlo
+una por una):</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/share/file-manager/actions/</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /tmp</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/wachin/PCManFM-engrampa-Extract-Here</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> PCManFM-engrampa-Extract-Here</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="pp">*</span>.desktop ~/.local/share/file-manager/actions/</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> <span class="st">&quot;Dios les bendiga&quot;</span></span></code></pre></div>
+<p>y da <strong>Enter</strong>, y quedará una ultima linea en la
+terminal (dependiendo de la terminal usada tal vez tengas que dar
+<strong>Enter</strong> otra vez) y <strong>Reinicia</strong> PCManFM
+(cerrarlo y volverlo a abrir) y quedará instalado correctamente</p>
+<ul>
+<li>Hacer clic derecho sobre un archivo comprimido (<code>.zip</code>,
+<code>.rar</code>, etc.)</li>
+<li>Verás dos nuevas opciones:
+<ul>
+<li><strong>“Extract Aquí”</strong></li>
+<li><strong>“Extract en carpeta”</strong> con iconos:</li>
+</ul></li>
+</ul>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVfjYheejm8yhXaLDT4k4kSilIEvPtgKDfLSS7irIbYXaInGB9Fx_bJ9q34KCnk9HKmrYf4pMEPDXxejfRuvF5UxMl7L2iRcBqUU9Utq_8Va8tS8a3rzv8BsWlwTYddr9qtUWXbSwrxq19h6bY8BUK0nPlViA6Kj8wFRFTipOTP2XEzY-9woy2xGZY5pI/s16000/20250505-0004%20extraer%20aqu%C3%AD%20con%20engrampa%20en%20PCManFM.png"
+title="PCmanFM, extraer archivos zip, rar con clic derecho Extraer aquí creando menú contextual con emgrampa" /></p>
+<h2 id="explicación-línea-por-línea-del-script">🔍 Explicación línea por
+línea del Script</h2>
+<p><strong>1.
+<code>mkdir -p ~/.local/share/file-manager/actions/</code></strong></p>
+<ul>
+<li>Crea la carpeta donde <code>pcmanfm-qt</code> busca las acciones
+personalizadas.</li>
+<li>La opción <code>-p</code> asegura que se creen todas las carpetas
+necesarias si no existen.</li>
+<li>Si ya existe, no hace nada.</li>
+</ul>
+<p>📁 Carpeta final:<br />
+<code>~/.local/share/file-manager/actions/</code></p>
+<p><strong>2. <code>cd /tmp</code></strong></p>
+<ul>
+<li>Cambia al directorio temporal <code>/tmp</code>.</li>
+<li>Es una ubicación común para descargar o clonar repositorios
+temporales.</li>
+</ul>
+<p><strong>3.
+<code>git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here</code></strong></p>
+<ul>
+<li>Clona mi repositorio de GitHub en la máquina local.</li>
+<li>Descarga los archivos <code>.desktop</code> desde el repositorio
+público.</li>
+</ul>
+<p>📦 Esto crea una carpeta llamada
+<code>PCManFM-engrampa-Extract-Here</code> dentro de
+<code>/tmp</code>.</p>
+<p><strong>4. <code>cd PCManFM-engrampa-Extract-Here</code></strong></p>
+<ul>
+<li>Entra a la carpeta recién clonada para trabajar con sus
+archivos.</li>
+</ul>
+<p><strong>5.
+<code>cp *.desktop ~/.local/share/file-manager/actions/</code></strong></p>
+<ul>
+<li>Copia todos los archivos <code>.desktop</code> (en este caso, las
+dos acciones) a la carpeta de acciones personalizadas de
+<code>pcmanfm-qt</code>.</li>
+</ul>
+<p>📄 Archivos copiados:</p>
+<ul>
+<li><code>engrampa-extract-here.desktop</code></li>
+<li><code>engrampa-extract-to-folder.desktop</code></li>
+</ul>
+<p><strong>6.
+<code>cd &amp;&amp; echo "Dios les bendiga"</code></strong></p>
+<ul>
+<li><code>cd</code> sin argumentos vuelve al directorio personal
+(<code>~</code>).</li>
+<li><code>echo "Dios les bendiga"</code> muestra un mensaje amigable y
+positivo en la terminal 😊</li>
+</ul>
+<p><strong>✅ Resultado final</strong></p>
+<p>Después de ejecutar este script:</p>
+<ul>
+<li>Se habrán instalado correctamente las dos acciones
+personalizadas.</li>
+<li>Al abrir <code>pcmanfm-qt</code>, al hacer clic derecho sobre un
+archivo comprimido (<code>.zip</code>, <code>.tar.gz</code>, etc.)
+aparecerán estas opciones:
+<ul>
+<li><strong>“Extraer aquí”</strong></li>
+<li><strong>“Extraer en carpeta”</strong></li>
+</ul></li>
+</ul>
+<p>Ambas usarán <strong>Engrampa</strong>, respetando el idioma del
+sistema y mostrando iconos apropiados si están disponibles.</p>
+<hr />
+<h1 id="si-deseas-crear-manualmente-los-menú-haz-lo-siguiente">Si deseas
+crear manualmente los menú haz lo siguiente</h1>
+<p>Puede que haya alguien que tenga dudas en usar el metodo automático
+de arriba y quiera revisar personalmente cada paso y cada parte del
+código, entonces si fuera así, para su tranquilidad haga lo
+siguiente:</p>
+<h2 id="paso-1-crear-la-carpeta-lo-más-seguro-es-que-no-exista">📁 Paso
+1: Crear la carpeta (lo más seguro es que no exista)</h2>
+<p>Ejecuta este comando en tu terminal:</p>
+<pre><code>mkdir -p ~/.local/share/file-manager/actions</code></pre>
+<hr />
+<h2 id="paso-2-crear-el-archivo-.desktop-para-extraer-aquí">📄 Paso 2:
+Crear el archivo <code>.desktop</code> para “Extraer aquí”</h2>
+<p>Crea un archivo llamado:</p>
+<pre><code>~/.local/share/file-manager/actions/engrampa-extract-here.desktop</code></pre>
+<p>Puedes usar <code>nano</code> o tu editor favorito:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.local/share/file-manager/actions/engrampa-extract-here.desktop</span></code></pre></div>
+<p><strong>Nota:</strong> Si no sabes usar nano ve este <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html">tutorial</a>.</p>
+<h3 id="contenido-del-archivo">✅ Contenido del archivo:</h3>
+<p>El siguiente es el contenido que debes copiar y pegar en ese
+archivo:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract Here - Supports multiple languages</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use this action to extract archives directly into the current folder using Engrampa</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Proyecto Facilitar el Software Libre en el Ecuador</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># By: Washington Indacochea Delgado</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># https://facilitarelsoftwarelibre.blogspot.com</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[Desktop</span> Entry]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="va">Type</span><span class="op">=</span>Action</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">el</span> archivo comprimido aquí usando Engrampa</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">the</span> archive here using Engrampa</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">l</span><span class="st">&#39;archive ici avec Engrampa</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="st">Tooltip[de]=Archiv hier mit Engrampa entpacken</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="st">Tooltip[it]=Estrarre l&#39;</span><span class="ex">archivio</span> qui con Engrampa</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">o</span> arquivo aqui com o Engrampa</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">aquí</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">Here</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">ici</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>de<span class="op">]=</span>Hier <span class="ex">entpacken</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>it<span class="op">]=</span>Estrai <span class="ex">qui</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">aqui</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="va">Icon</span><span class="op">=</span>archive-extract</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="va">Profiles</span><span class="op">=</span>profile-zero<span class="kw">;</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="ex">[X-Action-Profile</span> profile-zero]</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="va">MimeTypes</span><span class="op">=</span>application/zip<span class="kw">;</span><span class="ex">application/x-rar</span><span class="kw">;</span><span class="ex">application/vnd.rar</span><span class="kw">;</span><span class="ex">application/x-rar-compressed</span><span class="kw">;</span><span class="ex">application/x-tar</span><span class="kw">;</span><span class="ex">application/x-bzip2</span><span class="kw">;</span><span class="ex">application/x-7z-compressed</span><span class="kw">;</span><span class="ex">application/x-java-archive</span><span class="kw">;</span><span class="ex">application/x-deb</span><span class="kw">;</span><span class="ex">application/x-cd-image</span><span class="kw">;</span><span class="ex">application/x-xz-compressed-tar</span><span class="kw">;</span><span class="ex">application/gzip</span><span class="kw">;</span><span class="ex">application/x-lzma-compressed-tar</span><span class="kw">;</span><span class="ex">application/x-lz4-compressed-tar</span><span class="kw">;</span><span class="ex">application/vnd.debian.binary-package</span><span class="kw">;</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="va">Exec</span><span class="op">=</span>engrampa <span class="ex">--extract-here</span> %u</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">a</span> la carpeta actual</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">to</span> current folder</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">dans</span> le dossier actuel</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>de<span class="op">]=</span>In <span class="ex">aktuellen</span> Ordner entpacken</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>it<span class="op">]=</span>Estrai <span class="ex">nella</span> cartella corrente</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">na</span> pasta atual</span></code></pre></div>
+<p>después de pegar, guarda y cierra el archivo.</p>
+<hr />
+<h2 id="paso-3-crear-otro-archivo-para-extraer-en-carpeta">📄 Paso 3:
+Crear otro archivo para “Extraer en carpeta…”</h2>
+<p>También puedes crear otra acción para extraer <strong>en una carpeta
+con el nombre del archivo zip</strong>:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.local/share/file-manager/actions/engrampa-extract-to-folder.desktop</span></code></pre></div>
+<h3 id="contenido-del-archivo-1">✅ Contenido del archivo:</h3>
+<p>El siguiente es el contenido que debes copiar y pegar en ese
+archivo:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract to Folder - Supports multiple languages</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use this action to extract archives into their own folder using Engrampa</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Proyecto Facilitar el Software Libre en el Ecuador</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># By: Washington Indacochea Delgado</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># https://facilitarelsoftwarelibre.blogspot.com</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[Desktop</span> Entry]</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="va">Type</span><span class="op">=</span>Action</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">el</span> archivo comprimido en una carpeta con su nombre usando Engrampa</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">the</span> archive into its own folder using Engrampa</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">l</span><span class="st">&#39;archive dans un dossier portant son nom avec Engrampa</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="st">Tooltip[de]=Archiv in eigenem Ordner mit gleichem Namen entpacken</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="st">Tooltip[it]=Estrarre l&#39;</span><span class="ex">archivio</span> in una cartella con lo stesso nome</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="va">Tooltip</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">o</span> arquivo em uma pasta com o mesmo nome</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">en</span> carpeta</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">to</span> Folder</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">dans</span> un dossier</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>de<span class="op">]=</span>In <span class="ex">Ordner</span> entpacken</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>it<span class="op">]=</span>Estrai <span class="er">in</span> <span class="ex">una</span> cartella</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">em</span> pasta</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="va">Icon</span><span class="op">=</span>folder-new</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="va">Profiles</span><span class="op">=</span>profile-zero<span class="kw">;</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="ex">[X-Action-Profile</span> profile-zero]</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="va">MimeTypes</span><span class="op">=</span>application/zip<span class="kw">;</span><span class="ex">application/x-rar</span><span class="kw">;</span><span class="ex">application/vnd.rar</span><span class="kw">;</span><span class="ex">application/x-rar-compressed</span><span class="kw">;</span><span class="ex">application/x-tar</span><span class="kw">;</span><span class="ex">application/x-bzip2</span><span class="kw">;</span><span class="ex">application/x-7z-compressed</span><span class="kw">;</span><span class="ex">application/x-java-archive</span><span class="kw">;</span><span class="ex">application/x-deb</span><span class="kw">;</span><span class="ex">application/x-cd-image</span><span class="kw">;</span><span class="ex">application/x-xz-compressed-tar</span><span class="kw">;</span><span class="ex">application/gzip</span><span class="kw">;</span><span class="ex">application/x-lzma-compressed-tar</span><span class="kw">;</span><span class="ex">application/x-lz4-compressed-tar</span><span class="kw">;</span><span class="ex">application/vnd.debian.binary-package</span><span class="kw">;</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="va">Exec</span><span class="op">=</span>engrampa <span class="ex">--extract</span> %u</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>es<span class="op">]=</span>Extraer <span class="ex">en</span> su propia carpeta</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>en<span class="op">]=</span>Extract <span class="ex">to</span> its own folder</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>fr<span class="op">]=</span>Extraire <span class="ex">dans</span> son propre dossier</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>de<span class="op">]=</span>In <span class="ex">eigenen</span> Ordner entpacken</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>it<span class="op">]=</span>Estrai <span class="ex">nel</span> proprio folder</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">[</span>pt<span class="op">]=</span>Extrair <span class="ex">na</span> própria pasta</span></code></pre></div>
+<p>después de pegar, guarda y cierra el archivo.</p>
+<hr />
+<h2 id="qué-hace-cada-cosa">🌐 ¿Qué hace cada cosa?</h2>
+<p>Descripción:</p>
+<p><code>Name[xx]</code> Nombre que aparece en el menú contextual según
+el idioma del<br>sistema <code>Tooltip[xx]</code> Texto emergente que
+explica qué hace la acción <code>Exec=</code> Comando que se ejecuta
+cuando se selecciona la opción <code>MimeTypes=</code> Lista de formatos
+compatibles</p>
+<hr />
+<h2 id="resultado-final">✅ Resultado final</h2>
+<p>Después de crear estos dos archivos, <strong>Reinicia</strong>
+<code>pcmanfm-qt</code> (cierra y vuelve a abrir) o incluso reinicia tu
+sesión gráfica si no ves los cambios.</p>
+<ul>
+<li>Abre pcmanfm-qt y hacer clic derecho sobre un archivo comprimido
+(<code>.zip</code>, <code>.rar</code>, etc.)</li>
+<li>Verás dos nuevas opciones:
+<ul>
+<li><strong>“Extract Aquí”</strong></li>
+<li><strong>“Extract en carpeta”</strong></li>
+</ul></li>
+</ul>
+<hr />
+<p>Dios les bendiga</p>

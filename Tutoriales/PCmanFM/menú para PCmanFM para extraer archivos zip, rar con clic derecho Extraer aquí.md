@@ -58,7 +58,7 @@ También puedes intentar usar otros editores de archivos, pero por ejemplo kate 
 
 `pcmanfm-qt` utiliza internamente otras herramientas del sistema (como `unzip`, `7z`, etc.) para realizar las operaciones de extracción. Instala las herramientas básicas necesarias:
 
-```
+```bash
 sudo apt update
 sudo apt install unzip unrar-free unrar xz-utils p7zip-full engrampa pcmanfm-qt
 ```
@@ -86,7 +86,7 @@ Mi objetivo de este blog es hacer las cosas fáciles de usar, así que he hecho 
 
 Copiar todas las siguietnes líneas (obvio después de haber instalado las dependencias de arriba) y poner en una terminal como Konsole, gnome-terminal o alguna otra que acepte el uso de pegar todas las líneas (hay algunas terminales que no pueden manejar esto, en ese caso hacerlo una por una):
 
-```
+```bash
 mkdir -p ~/.local/share/file-manager/actions/
 cd /tmp
 git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here
@@ -182,7 +182,7 @@ Crea un archivo llamado:
 
 Puedes usar `nano` o tu editor favorito:
 
-```
+```bash
 nano ~/.local/share/file-manager/actions/engrampa-extract-here.desktop
 ```
 
@@ -192,7 +192,7 @@ nano ~/.local/share/file-manager/actions/engrampa-extract-here.desktop
 
 El siguiente es el contenido que debes copiar y pegar en ese archivo:
 
-```
+```bash
 # Extract Here - Supports multiple languages
 # Use this action to extract archives directly into the current folder using Engrampa
 # Proyecto Facilitar el Software Libre en el Ecuador
@@ -240,7 +240,7 @@ después de pegar, guarda y cierra el archivo.
 
 También puedes crear otra acción para extraer **en una carpeta con el nombre del archivo zip**:
 
-```
+```bash
 nano ~/.local/share/file-manager/actions/engrampa-extract-to-folder.desktop
 ```
 
@@ -248,7 +248,7 @@ nano ~/.local/share/file-manager/actions/engrampa-extract-to-folder.desktop
 
 El siguiente es el contenido que debes copiar y pegar en ese archivo:
 
-```
+```bash
 # Extract to Folder - Supports multiple languages
 # Use this action to extract archives into their own folder using Engrampa
 # Proyecto Facilitar el Software Libre en el Ecuador
@@ -296,10 +296,10 @@ después de pegar, guarda y cierra el archivo.
 
 Descripción:
 
-`Name[xx]`  Nombre que aparece en el menú contextual según el idioma del<br>sistema
-`Tooltip[xx]` Texto emergente que explica qué hace la acción 
-`Exec=`  Comando que se ejecuta cuando se selecciona la opción 
-`MimeTypes=`  Lista de formatos compatibles 
+* `Name[xx]`  Nombre que aparece en el menú contextual según el idioma del<br>sistema
+* `Tooltip[xx]` Texto emergente que explica qué hace la acción 
+* `Exec=`  Comando que se ejecuta cuando se selecciona la opción 
+* `MimeTypes=`  Lista de formatos compatibles 
 
 - - -
 

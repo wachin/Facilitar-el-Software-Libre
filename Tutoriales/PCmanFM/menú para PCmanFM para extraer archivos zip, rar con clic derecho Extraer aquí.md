@@ -1,4 +1,4 @@
-En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí, así si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción “Extraer aquí” pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente:
+En Debian 12 con el gestor de ventanas LXQT está instalado PCmanFM-QT, pero no funciona la opción Extraer aquí poque hacen falta unas dependencias, así, si este es tu caso, o si has instalado `pcmanfm-qt` en algún Linux y ves la opción “Extraer aquí” pero no funciona al intentar descomprimir archivos `.zip`, haz lo siguiente:
 
 # ✅ Instalar utilidades necesarias para descomprimir
 
@@ -17,7 +17,7 @@ sudo apt install unzip unrar-free xz-utils p7zip-full engrampa pcmanfm-qt
 *   `p7zip-full`: soporte para formatos adicionales como `.7z`, `.rar`, etc.
 *   `engrampa`: es el gestor de archivos comprimidos, usado por algunas interfaces gráficas.
 
-**Nota**: En caso que algun .rar no lo puedas descomprimir lo mejor será instalar WinRar en Linux, vea [este](https://facilitarelsoftwarelibre.blogspot.com/2024/07/como-instalar-winrar-en-debian-mx-linux.html) tutorial.  
+**Nota**: En caso que algun .rar no lo puedas descomprimir lo mejor será instalar la versión de Windows de WinRar en Linux con Wine, vea [este](https://facilitarelsoftwarelibre.blogspot.com/2024/07/como-instalar-winrar-en-debian-mx-linux.html) tutorial.  
 
 Esto hará que funcione el poder extraer aquí, pero como funciona en PCManFM no me gusta porque extrae siempre todos los archivos en el directorio y no en una carpeta, para solucionarlo ahora vamos a crear una **acción contextual personalizada para `pcmanfm-qt`** que permita integrar las opciones de **Engrampa** directamente desde el menú contextual del explorador de archivos. Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se guardan en la carpeta:
 

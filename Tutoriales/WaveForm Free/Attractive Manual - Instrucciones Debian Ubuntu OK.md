@@ -229,5 +229,6 @@ y allí elegir alguno
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLxfOx7YpIOIXtbu74tLUICgkiDhwxFlry8N5tgVBQJVluRXr5bBW3yjSB6Ng2t2_YfAf3NGTFX8NJ1SWJcpYlfGh22Fv1A0XzSxWwCAsV8ZUgvqKPcB1n3z123czUmehhTd_5D7g3dvte57Hev6OwKaCsheIOPG6BctpffZxNFYzKTkFKUGxJmzFOj-Y/s16000/20250604-125530%20a%C3%B1adir%20alg%C3%BAn%20plugin.png)
 
+Por cierto allí se ve a Guitarix porque instalé el paquete `guitarix`.
 
 Dios les bendiga

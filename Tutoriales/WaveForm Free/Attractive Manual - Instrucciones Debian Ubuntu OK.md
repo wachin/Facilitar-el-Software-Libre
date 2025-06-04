@@ -107,6 +107,8 @@ y en **Plugins** dar clic en **Scan for Plugins**:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz6dwcyFlIOiemZWKHHVuWkKAtpZz1UlRyn-1wsTAPfzwbVN6Msw9qwl6uWDoPOuchPm9LqaEjeB-i16WVd7GpPSnNRc-EOZxR_mJDZb0rBlmfKXCW2oaYtGUDJjL-TRJxGefT2UJ5-RXd-L6HwGMbIa-lxJ790vrO0JGHmrfaSQdeie0K-RNAIh2pVwA/s16000/20250604-093811%20en%20Plugins%20dar%20clic%20en%20Scan%20for%20Plugins.png)
 
+**Nota**: Allí se ven varios plugins, eso los instalé tomando como ejemplo la lista de plugins que se instala en UbuntuStudio, [vea este tutorial](https://facilitarelsoftwarelibre.blogspot.com/2020/10/plugins-de-autio-de-ubuntustudio-para-mx-linux.html).
+
 y escanear:
 
  * Scan for new or updated VST plug-ins
@@ -116,7 +118,9 @@ uno cada vez:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIICuC6W4Oun_xBmH1JpNszy_oM1mwoBwXwIJDRWZ8vSGCMSCamDx-z9Zbv-qiT5uAfewKXLtmPzye5fW9I246gJjHRg9GGEhJXC-Ijn6omSqNiJo6iKjbYxXGxIeYf43RYhpb4D7nL2UsXgv2urC7Bu3Udy6E29pXBA7zsZKPyqrt7WfEz0uwqH6Bm1o/s16000/20250604-093954%20clic%20en%20Scan%20for%20new%20or%20updated%20VST%20plug-ins.png)
 
-4.  
+4.  arrastre el plugin Attractive a los favoritos:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvXb8VjWhnIZJa0dq7Y8nDctDq1qAgznXG-rVvoH46jsS_-382Mz9kTu3UnSBQHENDG5gCRSHSj1I_lCspa2uqTlnNOujfx5zrLORxFrLFs9lKsgl_gM1Gb62ydnssrEglx8wE5sQPb1nAWHpOdtFFZOPEk5b45FLIsx3g_ehGSQPPI_lDHAobb4Otd34/s16000/20250604-095920%20arrastre%20el%20plugin%20Attractive%20a%20los%20favoritos.png)
   
   
 Realiza un escaneo de plugins en tu host.

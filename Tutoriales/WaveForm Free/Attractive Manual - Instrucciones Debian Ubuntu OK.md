@@ -163,16 +163,9 @@ aunque es posible que este no se pueda validad, pero bueno con el primer vst ya 
 
 3. Reinicia tu programa principal (**DAW**) y cualquier instancia abierta de **Attracktive**.
 
-## Revisa la configuración del dispositovo de Audio:
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHd_1pX1KOqNCK7SvnsVbBFoeDfO3_Xs1qLzdPn-hcM9IatDCQdIeUbmRxZvcpi3jo7rro9uhnEZybLPti7h498E-QwIouBMWH7-j4yky7jzh3VKOQ0S-wQVMHtTpoAvK8unawQJCG8JhgyIbAAWoyC2jGhqYI2TWXn8rFwj2yA0nABIkISprP7Xgpqbk/s16000/20250604-102258%20revisa%20la%20configuraci%C3%B3n%20del%20dispositovo%20de%20Audio.png)
-
-
-
-
 ## 📁 Directorios de Contenido BioTek
 
-Al activar **Attracktive** el cual es un reproductor de contenido **BioTek**, buscará instrumentos y muestras en el directorio:
+Al activar **Attracktive** el cual es un reproductor de contenido **BioTek**, se crearán unas carpetas y buscará instrumentos y muestras en el directorio:
 
 ~/Tracktion/BioTek/
 
@@ -186,61 +179,50 @@ Al activar **Attracktive** el cual es un reproductor de contenido **BioTek**, bu
 
 - `"~/Tracktion/BioTek/Images"`  
   Contiene diversas imágenes.
+ 
+# Para instalar otros complementos
+
+Entrar en:
+
+[https://www.tracktion.com/](https://www.tracktion.com/)
+
+allí buscar la opción:
+
+Instruments
+
+allí buscar
+
+Me encontré otro gratis llamado:
+
+**zyklop**  
+[https://www.tracktion.com/products/zyklop](https://www.tracktion.com/products/zyklop)
+
+allí di clic en **Download** y luego en **View chart **e hice el **checkout** y al final me dieron a descargar el deb del paquete "**tracktion_download_manager_vx.x.x.deb**" el cual no lo instalé porque ya lo tengo instalado, y lo que hice fue buscarlo y abrirlo e instalar el plugin "**zyklop**" así como se ve en la siguiente imagen:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJfc5VwX-JxV035XobtgP18gfFUaASY_ZTarHKiE6U2_Wmn8gTdEpLpAPRPGY94sH9EylpfZT9U6MZ99BSGMJDxSjaPC8cQ-Y7iWijPdiVnJwl7UMipiXd3ImFju8y-rdCX8mLRIbusPC05jnO5kEODaTuyGjI4uoInwgn2414gSHw1E3RGrp4TQfFigk/s16000/20250604-122950%20plugin%20zyklop%20ya%20instalado.png)
+
+ y asjí hacer con otros, pero esos son de pago.
+
+## Revisa la configuración del dispositovo de Audio:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHd_1pX1KOqNCK7SvnsVbBFoeDfO3_Xs1qLzdPn-hcM9IatDCQdIeUbmRxZvcpi3jo7rro9uhnEZybLPti7h498E-QwIouBMWH7-j4yky7jzh3VKOQ0S-wQVMHtTpoAvK8unawQJCG8JhgyIbAAWoyC2jGhqYI2TWXn8rFwj2yA0nABIkISprP7Xgpqbk/s16000/20250604-102258%20revisa%20la%20configuraci%C3%B3n%20del%20dispositovo%20de%20Audio.png)
+
+luego da clic en el + y en New Project:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmljnJGsFZ8oUUFsrSoqrOeNxqBUYvSUV2TDzQxqEKWF6VCOHTCuQanSPr-3FnzDmj_izFkCKeMhPiKh6Fh4-iwoXDNHFm9eXbmIsGlfR9zDJ8mwKwPgFDIDZEjBMvdQoinwuLeeHKl2dNY-0WZ2LovHuN7DTdxuWjeZhZhsNvMtGSRveL5PIljnWvoqg/s16000/20250604-102506%20luego%20da%20clic%20en%20el%20+%20y%20en%20New%20Project.png)
+
+allí le pongo nombre y lo dejo en la plantilla por defecto
+
+abriendo un MIDI en WaveForm Free en Linux
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdUXFTtgfQ7arCW7GAiqoJW1UrlOMRK-AH9_fF4MkqulIvlUG4H-R1tPWbI70FSxZJTfhIdOsWjJ7v_XS_aepNXPDEM2UKIN_kCaPtPplEvw-mp37GoWm_5PaY-BBmvR0Ox9Hu2nzH-anXO0bARFIg2WDjsmZkGSJ3fAotf9yYzFxogXD53Yx-6ZFSxmM/s16000/20250604-124406%20abriendo%20un%20MIDI%20en%20WaveForm%20Free%20en%20Linux.png)
+
+y en la siguiente imagen ya está cargado:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitrF4vePhAYNULa743hNWj29ekmTOyHmzK8Ugh0cNsgNU-xPYwfnmHhIJ2vS8he8YnjOSQA9um97n6OgdaHsCOZEbTqoneTH8P3X0lHEWn-tRgDxj9MBfEroGA0q4Oe63it6se9oms4OLS0yo08jqzw7EdqwqNlnm39zTj3uE9WcRlnjMO91olNIck5gw/s16000/20250604-124741%20MIDI%20cargado%20en%20WaveForm%20Free.png)
 
 
 
 
-### ✅ Estructura Final Esperada
-
-- `"~/Tracktion/BioTek/Instruments"`  
-  Contiene archivos `.biotek2inst` y/o `.biotekinstrument`.
-
-- `"~/Tracktion/BioTek/Samples"`  
-  Contiene archivos `.biotek2sample` y/o `.acktionsample`.
-
-- `"~/Tracktion/BioTek/Images"`  
-  Contiene diversas imágenes.
-
-
-## 🔐 Autorización del Plugin
-
-Aunque **Attracktive** es gratuito, utiliza protección contra copia basada en software. Necesitas una licencia activada para usarlo sin restricciones.
-
-### 🌐 Autorización En Línea
-
-1. Carga **Attracktive** como plugin de instrumento dentro de tu DAW.
-2. Haz clic en el botón **Unlock (Desbloquear)** en la barra de navegación del plugin.
-3. Ingresa tu correo electrónico y contraseña del **Tracktion Marketplace**.
-4. Haz clic en **Register (Registrar)** para desbloquearlo permanentemente.  
-   *(Se requiere conexión a Internet)*
-
-### 💾 Autorización Offline (Sin Internet)
-
-1. Haz clic en el botón **Offline Unlock (Desbloqueo Offline)** si no tienes conexión.
-2. Sigue las instrucciones en pantalla para autorizar manualmente.
-3. Una vez autorizado, podrás usar **Attracktive** sin limitaciones.
-
-
-## 📦 Instalación de Paquetes de Sonido / Librerías
-
-### 3.1 Usando el Tracktion Download Manager
-
-✎ **Recomendado**
-
-1. Descarga el **Tracktion Download Manager** desde tu cuenta de Tracktion.
-2. Localiza tu paquete de sonido comprado y haz clic en **Instalar**.
-3. Sigue las instrucciones en pantalla.
-4. El paquete se reconocerá automáticamente en **Attracktive** y estará listo para usarse.
-
-
-### 3.2 Instalación Manual
-
-1. Descarga el **Paquete de Sonido** desde tu cuenta de Tracktion o mediante el **Download Manager**, asegurándote de **no activar la opción "Instalar cuando termine la descarga"**.
-2. En **Attracktive**, abre el menú **Global** haciendo clic en el botón hamburguesa (☰) en la barra de navegación.
-3. Haz clic en **"Install Content Pack" (Instalar paquete de contenido)** y selecciona el archivo del paquete en tu computadora.
-4. Sigue las instrucciones en pantalla. Una vez completado, el paquete quedará disponible inmediatamente.
-
-
-> 🧠 **Consejo:** Mantén tus librerías organizadas y verifica periódicamente si hay actualizaciones disponibles en tu cuenta de Tracktion.
 
 

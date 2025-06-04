@@ -235,12 +235,12 @@ Ahora si, después de ya instalado un Kernel RT, la siguiente lista de paquetes 
 Los siguientes son los paquetes más usuales para usar con JACK, Ud. copie de una sola vez las siguientes tres lineas y póngalas en la terminal:
 
   
-
-sudo apt install ardour pulseaudio-module-jack qjackctl mediainfo-gui \\  
-     calf-plugins amb-plugins tap-plugins fluid-soundfont-gm \\  
-     dssi-host-jack dssi-utils pavucontrol a2jmidid qsynth vmpk \\
-     jack-keyboard jack-tools meterbridge jackd2-firewire git muse
-
+```bash
+sudo apt install ardour pulseaudio-module-jack qjackctl mediainfo-gui \
+    calf-plugins amb-plugins tap-plugins fluid-soundfont-gm \  
+    dssi-host-jack dssi-utils pavucontrol a2jmidid qsynth vmpk \
+    jack-keyboard jack-tools meterbridge jackd2-firewire git muse
+```
   
 
 De ENTER y siga los pasos:
@@ -1171,24 +1171,24 @@ y clic en:
 Connect to JACK  
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEg1ksDoMTKbUvAqM35oDsXOwZvLJx_spMTpTa4CIQWj21TRwTsBphNrRLdP541JSkeJTNYOmPR02poD3NIMiZibGV9ndNMpQL92qbwtEdQQd2qOmyRI6ue39MUKlbtM6Xhdzncqk92oZ8E9NKq8PIXkJ1pNZ09kHcIE74V0jbtoRLQxRHxIW85Wnt7q=s16000)
-
-  
-  
+ 
 listo  
 
 ## Instalar los plugins de audio de UbuntuStudio
 
 Ponga en la terminal de una sola vez todas las siguientes siete lineas y de ENTER:
 
-sudo apt install abgate aeolus amb-plugins autotalent blepvco calf-plugins \\  
-     caps cmt csladspa drumkv1 dssi-host-jack dssi-utils eq10q fil-plugins \\  
-     fluidsynth-dssi foo-yc20 ghostess hexter invada-studio-plugins-ladspa \\  
-     invada-studio-plugins-lv2 ir.lv2 jconvolver lv2vocoder mcp-plugins mda-lv2 \\  
-     omins rev-plugins rubberband-ladspa samplv1 swh-lv2 swh-plugins synthv1 \\  
-     tap-plugins vco-plugins vocproc wah-plugins whysynth x42-plugins zita-at1 \\  
-     zita-lrx zita-mu1 zita-resampler zita-rev1  
+```bash
+sudo apt install abgate aeolus amb-plugins autotalent blepvco calf-plugins \
+     caps cmt csladspa drumkv1 dssi-host-jack dssi-utils eq10q fil-plugins \
+     fluidsynth-dssi foo-yc20 ghostess hexter invada-studio-plugins-ladspa \
+     invada-studio-plugins-lv2 ir.lv2 jconvolver lv2vocoder mcp-plugins mda-lv2 \
+     omins rev-plugins rubberband-ladspa samplv1 swh-lv2 swh-plugins synthv1 \
+     tap-plugins vco-plugins vocproc wah-plugins whysynth x42-plugins zita-at1 \
+     zita-lrx zita-mu1 zita-resampler zita-rev1
+```
 
-**Nota:** De esta lista a blop porque desinstala Audacity. Esta lista la he probado en MX Linux 19 y 21, en caso que en una versión superior algún paquete cause alguna molestia deben quitarlo (o en otro tipo de Linux)   
+**Nota:** De esta lista quité a un paquete llamado "blop" porque desinstala Audacity.  Esta lista la he probado en MX Linux 19 y 21, en caso que en una versión superior algún paquete cause alguna molestia deben quitarlo (o en otro tipo de Linux)   
 
 y eso los instalará:
 

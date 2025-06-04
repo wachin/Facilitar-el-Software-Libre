@@ -62,10 +62,37 @@ Para facilitar las cosas pondremos el archivo para el usuario actual en `~/.vst`
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKjVLAE-ChOQT5DvReqS_3kwAlsWt20yQrUNobgOvdfCCuwJTlS6vOmhJr4iknj-kBqL1PPKTCfujjcUmGrVlGrnJpquCOt-qXXWTWEoN5LBS3ucduMQCW3KwanwvW0QoYxchhv8HjGx5qXpHWjuG8EKHeD1FbXqy6h1ik4HrOFjlt2mtmwq0HuogeoVw/s663/20250604-003444%20crear%20carpeta%20.vst%20en%20HOME.png)
 
+y pegarlo en:
 
+.vst  
 
-2. Asegúrate de que tu programa principal (**host DAW**) esté configurado para escanear esa ubicación.
-3. Realiza un escaneo de plugins en tu host.
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiywjzDvK4AUmG0lnvkAd-S2OB-G1y1ZF-TyuBrNYpMFrgnhH8G6kELKZu4opt9aumBwhIBa438i2edRyy4USN5U8U_OQeMI3wu5dDVgOfyNyS0ivaLGzyU_s1ZPoueaEH9E23kZDhy9ApiKpRFAVMOrJFr9vjLOuAXPQ-en7glfnLmfzLRAyV0rclgBb0/s553/20250604-003939%20vst%20.so%20copiado%20a%20.vst.png)
+
+2. Revisar que el programa esté configurado para escanear esa ubicación, clic en:
+
+**Settings**
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuN2d45dARVn0EdJDyERNy5EW5FeC0gLEOYFsKz0s06AELpuVTlv2tfvVH9uLsANzCJVqPyMg3urvC_GN6nlXH32g_c86MAz09I4vuPtrZ6sAWrt0DtEY8uUJDBpHHI8elu2AMPcoF-x3FhMbxhkPeosRLm6aY3r8WztnKDYOMbWvjVO3QkBAspOM6Fmo/s1266/20250604-092427%20en%20WaveForm%20dar%20clic%20en%20Settins.png)
+
+y allí observo que está bien:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGM9e2dMUKnpultX7ZV2Jyw_Ho9_PKHuFdbtKVgE80UXx3Uhuzv7PMSIlE2bJgUFOOl0HieIdGz-e7pmrIUuqc4j3O9vdatLbGw11pt9lUp06Rsa48wWiNeDazHuXwxLjwXaAM2RMh2bwx6ge1gRgFSqdYcI8e_JvXE6pT1kXYVGK6Z7Hp4GnJOn0yAuk/s951/20250604-092717%20verificando%20las%20rutas%20de%20los%20vst.png)
+
+y en **Plugins** dar clic en **Scan for Plugins**:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz6dwcyFlIOiemZWKHHVuWkKAtpZz1UlRyn-1wsTAPfzwbVN6Msw9qwl6uWDoPOuchPm9LqaEjeB-i16WVd7GpPSnNRc-EOZxR_mJDZb0rBlmfKXCW2oaYtGUDJjL-TRJxGefT2UJ5-RXd-L6HwGMbIa-lxJ790vrO0JGHmrfaSQdeie0K-RNAIh2pVwA/s16000/20250604-093811%20en%20Plugins%20dar%20clic%20en%20Scan%20for%20Plugins.png)
+
+y clic en:
+
+ * Scan for new or updated VST plug-ins
+ * Scan for new or updated VST plug-ins
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIICuC6W4Oun_xBmH1JpNszy_oM1mwoBwXwIJDRWZ8vSGCMSCamDx-z9Zbv-qiT5uAfewKXLtmPzye5fW9I246gJjHRg9GGEhJXC-Ijn6omSqNiJo6iKjbYxXGxIeYf43RYhpb4D7nL2UsXgv2urC7Bu3Udy6E29pXBA7zsZKPyqrt7WfEz0uwqH6Bm1o/s16000/20250604-093954%20clic%20en%20Scan%20for%20new%20or%20updated%20VST%20plug-ins.png)
+
+3.  
+  
+  
+Realiza un escaneo de plugins en tu host.
 
 ## 📁 Directorios de Contenido BioTek
 
@@ -77,7 +104,7 @@ Para facilitar las cosas pondremos el archivo para el usuario actual en `~/.vst`
    ```
    ~/Tracktion/BioTek/
    ```  
-   *(Puede que ya exista)*
+   *(se creará cuando abras el programa)*
 
 2. Copia el contenido según corresponda:
    - **Instrumentos**:  

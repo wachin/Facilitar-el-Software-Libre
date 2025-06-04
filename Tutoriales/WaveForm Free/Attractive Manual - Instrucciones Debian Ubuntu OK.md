@@ -141,8 +141,17 @@ uno cada vez:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvXb8VjWhnIZJa0dq7Y8nDctDq1qAgznXG-rVvoH46jsS_-382Mz9kTu3UnSBQHENDG5gCRSHSj1I_lCspa2uqTlnNOujfx5zrLORxFrLFs9lKsgl_gM1Gb62ydnssrEglx8wE5sQPb1nAWHpOdtFFZOPEk5b45FLIsx3g_ehGSQPPI_lDHAobb4Otd34/s16000/20250604-095920%20arrastre%20el%20plugin%20Attractive%20a%20los%20favoritos.png)
   
-  
-Realiza un escaneo de plugins en tu host.
+valida el archivo Atractive.so ubicado en .vst
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFJCObB76y17dkMFD-9OOd113u4sQpgmKF2Rtseh7h1pPdb1LuKAQlcycdn7n9z_AyI92kVkYUzZ5V0jhaqxYPDWU1wd0eTRWzOun0cUbdXa2jlX11au_m8UdUq_UDdgYZs_61lVzbdefWWI-hOsQD8iCdjZc9P90jTH5DKMqCQNWLjRH_G9BpdtaOPU0/s16000/20250604-100554%20valida%20el%20plugin%20en%20.vst.png)
+
+para validar el plugin de clic en Open  
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3PZP4Gc9qAmAS3BdKyi5WA84WkhIE3inJYpryYWQzi7B8WYxDhd9hRYLw05OlbrdvLywx6WW7aYk1qS3yc4mUSpcP5rEU-JsacrsHoBBZwLHDq7hOmmmOyIOVasO63FM2DPjLFPx3pHOoCXYQJQC8T-ME6YblAsCghrwwx2uH6tFM95kieg9KI2cpJ4k/s16000/20250604-101316%20para%20validar%20el%20plugin%20de%20clic%20en%20Open.png)
+
+realiza lo mismo para el plugin vst3 pero debes de buscarlo en la ruta:
+
+`/home/tuusuario/.vst3/Attracktive.vst3/Contents/x86_64-linux/Attracktive.so`
 
 ## 📁 Directorios de Contenido BioTek
 

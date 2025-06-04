@@ -46,27 +46,23 @@ y allí dentro hay un pdf con instrucciones:
 
 `/Desktop/attracktive\_v1.0.9\_linux/Attracktive Manual.pdf`
 
-allí dice y lo voy arreglando:
+de lo cual adapto para este manual, continuemos:
 
 
 # 🎛️ Cómo Instalar Complementos (Plugins) en WaveForm en Linux (Ubuntu/Debian)
 
-## 2.3 Para Linux Ubuntu
-
-### 2.3.1 Tracktion Download Manager
-
-✎ **Recomendamos** utilizar el **Tracktion Download Manager** para descargar e instalar tu software de Tracktion.
-
-1. Descarga el **Tracktion Download Manager** desde tu cuenta de Tracktion → [Mis descargas](https://www.tracktion.com).
-2. Localiza tu instrumento o paquete de sonidos comprado y haz clic en el botón **Instalar**.
-3. Sigue las instrucciones en pantalla.
-
-### 2.3.2 Instalación Manual
+##  Para Linux Ubuntu, Debian, Instalación Manual
 
 1. Copia el archivo `Attracktive.so` en el directorio de plugins VST. Las ubicaciones comunes son:
    - `/usr/lib/vst`
    - `/usr/local/lib/vst`
    - `~/.vst`
+   
+Para facilitar las cosas pondremos el archivo para el usuario actual en `~/.vst` entonces has visibles los archivos ocultos con `Ctrl + H` y crea esa carpeta con clic derecho crear nueva carpeta o si tu administrador de archivos te lo permite con `Ctrl + Shift + N` o `F10` u otro:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKjVLAE-ChOQT5DvReqS_3kwAlsWt20yQrUNobgOvdfCCuwJTlS6vOmhJr4iknj-kBqL1PPKTCfujjcUmGrVlGrnJpquCOt-qXXWTWEoN5LBS3ucduMQCW3KwanwvW0QoYxchhv8HjGx5qXpHWjuG8EKHeD1FbXqy6h1ik4HrOFjlt2mtmwq0HuogeoVw/s663/20250604-003444%20crear%20carpeta%20.vst%20en%20HOME.png)
+
+
 
 2. Asegúrate de que tu programa principal (**host DAW**) esté configurado para escanear esa ubicación.
 3. Realiza un escaneo de plugins en tu host.

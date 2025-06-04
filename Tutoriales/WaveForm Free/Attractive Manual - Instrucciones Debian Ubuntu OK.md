@@ -46,27 +46,52 @@ y allí dentro hay un pdf con instrucciones:
 
 `/Desktop/attracktive\_v1.0.9\_linux/Attracktive Manual.pdf`
 
-de lo cual adapto para este manual, continuemos:
+de lo cual lo adapto para este manual
 
 
-# 🎛️ Cómo Instalar Complementos (Plugins) en WaveForm en Linux (Ubuntu/Debian)
+# 🎛️ Cómo Instalar Complementos (Plugins) VST en WaveForm en Linux (Ubuntu/Debian)
 
-##  Para Linux Ubuntu, Debian, Instalación Manual
+##  Instalando plugins VST
 
-1. Copia el archivo `Attracktive.so` en el directorio de plugins VST. Las ubicaciones comunes son:
-   - `/usr/lib/vst`
-   - `/usr/local/lib/vst`
-   - `~/.vst`
+1. Copia el archivo correspondiente a vst:
+
+`/home/wachin/Desktop/attracktive_v1.0.9_linux/Attracktive.so`  
+  
+en el directorio de plugins VST. Las ubicaciones comunes son:
+
+- `/usr/lib/vst`
+- `/usr/local/lib/vst`
+- `~/.vst`
+- `/usr/lib/vst3`
+- `/usr/local/lib/vst3`
+- `~/.vst3`
+
+como lo más probable es que no existan esas ubicaciones nos tocará crearlas
    
-Para facilitar las cosas pondremos el archivo para el usuario actual en `~/.vst` entonces has visibles los archivos ocultos con `Ctrl + H` y crea esa carpeta con clic derecho crear nueva carpeta o si tu administrador de archivos te lo permite con `Ctrl + Shift + N` o `F10` u otro:
+2. Copia el archivo correspondiente a vst3:
+  
+`/home/tuusuario/Desktop/attracktive_v1.0.9_linux/Attracktive.vst3/Contents/x86_64-linux/Attracktive.so`  
+  
+en el directorio de plugins VST3
+   
+Para facilitar las cosas crearemos los directorios para el usuario actual en HOME:
+
+- `~/.vst`
+- `~/.vst3`
+
+para lograrlo haremos visibles los archivos ocultos con `Ctrl + H` (u otro, dependiendo del administrador de archivos usado) y crear esas carpetas con clic derecho crear nueva carpeta o si tu administrador de archivos te lo permite con `Ctrl + Shift + N` o `F10` u otro atajo:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKjVLAE-ChOQT5DvReqS_3kwAlsWt20yQrUNobgOvdfCCuwJTlS6vOmhJr4iknj-kBqL1PPKTCfujjcUmGrVlGrnJpquCOt-qXXWTWEoN5LBS3ucduMQCW3KwanwvW0QoYxchhv8HjGx5qXpHWjuG8EKHeD1FbXqy6h1ik4HrOFjlt2mtmwq0HuogeoVw/s663/20250604-003444%20crear%20carpeta%20.vst%20en%20HOME.png)
 
-y pegarlo en:
+en la siguiente imagen está pegado en:
 
 .vst  
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiywjzDvK4AUmG0lnvkAd-S2OB-G1y1ZF-TyuBrNYpMFrgnhH8G6kELKZu4opt9aumBwhIBa438i2edRyy4USN5U8U_OQeMI3wu5dDVgOfyNyS0ivaLGzyU_s1ZPoueaEH9E23kZDhy9ApiKpRFAVMOrJFr9vjLOuAXPQ-en7glfnLmfzLRAyV0rclgBb0/s553/20250604-003939%20vst%20.so%20copiado%20a%20.vst.png)
+
+hacer lo mismo para el otro archivo en la carpeta:
+
+.vst3
 
 2. Revisar que el programa esté configurado para escanear esa ubicación, clic en:
 
@@ -82,14 +107,16 @@ y en **Plugins** dar clic en **Scan for Plugins**:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz6dwcyFlIOiemZWKHHVuWkKAtpZz1UlRyn-1wsTAPfzwbVN6Msw9qwl6uWDoPOuchPm9LqaEjeB-i16WVd7GpPSnNRc-EOZxR_mJDZb0rBlmfKXCW2oaYtGUDJjL-TRJxGefT2UJ5-RXd-L6HwGMbIa-lxJ790vrO0JGHmrfaSQdeie0K-RNAIh2pVwA/s16000/20250604-093811%20en%20Plugins%20dar%20clic%20en%20Scan%20for%20Plugins.png)
 
-y clic en:
+y escanear:
 
  * Scan for new or updated VST plug-ins
  * Scan for new or updated VST plug-ins
+
+uno cada vez:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIICuC6W4Oun_xBmH1JpNszy_oM1mwoBwXwIJDRWZ8vSGCMSCamDx-z9Zbv-qiT5uAfewKXLtmPzye5fW9I246gJjHRg9GGEhJXC-Ijn6omSqNiJo6iKjbYxXGxIeYf43RYhpb4D7nL2UsXgv2urC7Bu3Udy6E29pXBA7zsZKPyqrt7WfEz0uwqH6Bm1o/s16000/20250604-093954%20clic%20en%20Scan%20for%20new%20or%20updated%20VST%20plug-ins.png)
 
-3.  
+4.  
   
   
 Realiza un escaneo de plugins en tu host.

@@ -221,8 +221,13 @@ y en la siguiente imagen ya está cargado:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitrF4vePhAYNULa743hNWj29ekmTOyHmzK8Ugh0cNsgNU-xPYwfnmHhIJ2vS8he8YnjOSQA9um97n6OgdaHsCOZEbTqoneTH8P3X0lHEWn-tRgDxj9MBfEroGA0q4Oe63it6se9oms4OLS0yo08jqzw7EdqwqNlnm39zTj3uE9WcRlnjMO91olNIck5gw/s16000/20250604-124741%20MIDI%20cargado%20en%20WaveForm%20Free.png)
 
+para cargar un plugin dar arrastrar de la siguiente manera:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCEejGPanSW3hOyIc22ugFvd3VnOr0cFdWto38NbbJdtP5j1iuQaj7OVxptUGV_WJ60YlAJoPZBCVXJttrMUc9kzmIrsrHt6dfuJCo681CTc49b9sthli5ZAkyV1wXpProlZyhifUz2-k4ChAy4Ub4jVP0V3RcokRwfmmgypi8DaAT5bMYi-MnrIYRzw8/s16000/20250604-125246%20arrastrando%20el%20new%20plugin%20generator.png)
+
+y allí elegir alguno
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLxfOx7YpIOIXtbu74tLUICgkiDhwxFlry8N5tgVBQJVluRXr5bBW3yjSB6Ng2t2_YfAf3NGTFX8NJ1SWJcpYlfGh22Fv1A0XzSxWwCAsV8ZUgvqKPcB1n3z123czUmehhTd_5D7g3dvte57Hev6OwKaCsheIOPG6BctpffZxNFYzKTkFKUGxJmzFOj-Y/s16000/20250604-125530%20a%C3%B1adir%20alg%C3%BAn%20plugin.png)
 
 
-
-
-
+Dios les bendiga

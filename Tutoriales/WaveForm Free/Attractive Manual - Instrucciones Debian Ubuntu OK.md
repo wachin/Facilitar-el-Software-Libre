@@ -68,9 +68,9 @@ en el directorio de plugins VST. Las ubicaciones comunes son:
 
 como lo más probable es que no existan esas ubicaciones nos tocará crearlas
    
-2. Copia el archivo correspondiente a vst3:
+2. Copia la carpeta correspondiente al plugin vst3:
   
-`/home/tuusuario/Desktop/attracktive_v1.0.9_linux/Attracktive.vst3/Contents/x86_64-linux/Attracktive.so`  
+`/home/tuusuario/Desktop/attracktive_v1.0.9_linux/Attracktive.vst3/`  
   
 en el directorio de plugins VST3
    
@@ -85,13 +85,32 @@ para lograrlo haremos visibles los archivos ocultos con `Ctrl + H` (u otro, depe
 
 en la siguiente imagen está pegado en:
 
-.vst  
+.vst/Attractive.so
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiywjzDvK4AUmG0lnvkAd-S2OB-G1y1ZF-TyuBrNYpMFrgnhH8G6kELKZu4opt9aumBwhIBa438i2edRyy4USN5U8U_OQeMI3wu5dDVgOfyNyS0ivaLGzyU_s1ZPoueaEH9E23kZDhy9ApiKpRFAVMOrJFr9vjLOuAXPQ-en7glfnLmfzLRAyV0rclgBb0/s553/20250604-003939%20vst%20.so%20copiado%20a%20.vst.png)
 
 hacer lo mismo para el otro archivo en la carpeta:
 
 .vst3
+
+y me queda allí dentro la carpeta con todo su contenido:
+
+.vst3/Attracktive.vst3
+
+visto eso con tree (si no lo tiene instalado instálelo):
+
+```bash
+wachin@netisntcd:~/.vst3$ tree
+.
+└── Attracktive.vst3
+    └── Contents
+        ├── Resources
+        │   └── moduleinfo.json
+        └── x86_64-linux
+            └── Attracktive.so
+
+5 directories, 2 files
+```
 
 2. Revisar que el programa esté configurado para escanear esa ubicación, clic en:
 

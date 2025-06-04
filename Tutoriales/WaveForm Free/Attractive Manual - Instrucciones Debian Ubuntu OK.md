@@ -112,7 +112,13 @@ wachin@netisntcd:~/.vst3$ tree
 5 directories, 2 files
 ```
 
-2. Revisar que el programa esté configurado para escanear esa ubicación, clic en:
+2. Revisar que el programa esté configurado para escanear esa ubicación, 
+
+abre WaveForm:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhtvfvN-KPlr7Byz0HSLqKk04qFE-CZAxE9Eu1BteLzyKwwJI-hgAmaGg3EpQUqK4jCTpJAZE0tHYyPA7TS556w89w00MLgASsF5OY_4c_Uqu2KGN_qF8qwts5nDznkyzUMQ99PgYI3hq-TJ31AJ4b7Y-qUcXauGu_IFl0-XumDL5MoN9fx50miMmajHg/s16000/20250604-103845%20abriendo%20WaveForm.png)
+
+clic en:
 
 **Settings**
 
@@ -155,33 +161,34 @@ realiza lo mismo para el plugin vst3 pero debes de buscarlo en la ruta:
 
 aunque es posible que este no se pueda validad, pero bueno con el primer vst ya tenemos
 
+3. Reinicia tu programa principal (**DAW**) y cualquier instancia abierta de **Attracktive**.
+
+## Revisa la configuración del dispositovo de Audio:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHd_1pX1KOqNCK7SvnsVbBFoeDfO3_Xs1qLzdPn-hcM9IatDCQdIeUbmRxZvcpi3jo7rro9uhnEZybLPti7h498E-QwIouBMWH7-j4yky7jzh3VKOQ0S-wQVMHtTpoAvK8unawQJCG8JhgyIbAAWoyC2jGhqYI2TWXn8rFwj2yA0nABIkISprP7Xgpqbk/s16000/20250604-102258%20revisa%20la%20configuraci%C3%B3n%20del%20dispositovo%20de%20Audio.png)
+
+
+
+
 ## 📁 Directorios de Contenido BioTek
 
-**Attracktive** es un reproductor de contenido **BioTek**, por lo tanto, busca instrumentos y muestras en los siguientes directorios:
+Al activar **Attracktive** el cual es un reproductor de contenido **BioTek**, buscará instrumentos y muestras en el directorio:
 
-### Instrucciones de Instalación del Contenido
+~/Tracktion/BioTek/
 
-1. Crea un directorio llamado `Attracktive` en:  
-   ```
-   ~/Tracktion/BioTek/
-   ```  
-   *(se creará cuando abras el programa)*
+### ✅ Estructura Final Esperada
 
-2. Copia el contenido según corresponda:
-   - **Instrumentos**:  
-     ```
-     ~/Tracktion/BioTek/Instruments
-     ```
-   - **Muestras**:  
-     ```
-     ~/Tracktion/BioTek/Samples
-     ```
-   - **Imágenes**:  
-     ```
-     ~/Tracktion/BioTek/Images
-     ```
+- `"~/Tracktion/BioTek/Instruments"`  
+  Contiene archivos `.biotek2inst` y/o `.biotekinstrument`.
 
-3. Reinicia tu programa principal (**DAW**) y cualquier instancia abierta de **Attracktive**.
+- `"~/Tracktion/BioTek/Samples"`  
+  Contiene archivos `.biotek2sample` y/o `.acktionsample`.
+
+- `"~/Tracktion/BioTek/Images"`  
+  Contiene diversas imágenes.
+
+
+
 
 ### ✅ Estructura Final Esperada
 

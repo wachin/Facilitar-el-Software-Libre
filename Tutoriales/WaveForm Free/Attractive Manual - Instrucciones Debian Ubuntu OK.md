@@ -153,6 +153,8 @@ realiza lo mismo para el plugin vst3 pero debes de buscarlo en la ruta:
 
 `/home/tuusuario/.vst3/Attracktive.vst3/Contents/x86_64-linux/Attracktive.so`
 
+aunque es posible que este no se pueda validad, pero bueno con el primer vst ya tenemos
+
 ## 📁 Directorios de Contenido BioTek
 
 **Attracktive** es un reproductor de contenido **BioTek**, por lo tanto, busca instrumentos y muestras en los siguientes directorios:

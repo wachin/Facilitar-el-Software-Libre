@@ -1,85 +1,95 @@
-# Instalando sfizz (reproducir de instrumentos virtuales SFZ) en Ubuntu, Debian
-Publicadas por Washington Indacochea Delgado septiembre 15, 2024
+# 🐧 Tutorial: Instalación y Uso de `sfizz` en Linux (Debian 12)
 
-Sfizz es un motor de sonido de código abierto diseñado para reproducir instrumentos virtuales basados en el formato SFZ, un estándar para la creación y distribución de bancos de sonido. Es especialmente útil para músicos, compositores y productores que desean utilizar librerías de sonidos SFZ en su DAW o software de música. Sfizz es ligero y compatible con diferentes plataformas, como Linux, macOS y Windows, y puede integrarse como un plugin VST o LV2 en programas de producción musical.
+## 🔧 Paso 1: Instalar sfizz
+En el repositorio de opensuse.org está sfizz para las distribuciones: Debian, Fedora, Mageia, openSUSE, Raspian, Ubuntu
 
-SFizz se puede usar como plugin en estaciones de trabajo de audio digital (DAWs) como Ardour en formatos como LV2 o VST3. Además, es compatible con sistemas basados en Linux. Para usarlo en Ardour, deberías seguir estos pasos:
+### Descargar desde OpenSUSE Build Service
+Desde [https://software.opensuse.org//download.html?project=home%3Aposener&package=sfizz](https://software.opensuse.org//download.html?project=home%3Aposener&package=sfizz)
 
-1. **Instalación**.- Para Debian 12 (y Sistemas Operativos Linux basados en este ejemplo MX Linux 23, etc) de 32 bit seguí los siguientes pasos:
+En mi caso seleccioné Debian 12 y siguí las instrucciones para añadir el repositorio y luego instalar `sfizz`.
 
-Linux Build
-https://sfz.tools/sfizz/development/build/linux/
+---
 
-aquí dice que hay que instalar las siguientes dependencias:
+### 🎹 Paso 2: Preparar los archivos del piano Salamander
+Descargar "Salamander Grand Piano" (Yamaha C5, recorded with two AKG c414 disposed in an AB position ~12cm above the strings, 48kHz 24bit, 16 velocity layers) desde:
 
-```
-sudo apt install \
-libcairo2-dev \
-libfontconfig1-dev \
-libfreetype6-dev \
-libglib2.0-dev \
-libpango1.0-dev \
-libx11-dev \
-libx11-xcb-dev \
-libxcb-cursor-dev \
-libxcb-keysyms1-dev \
-libxcb-util-dev \
-libxcb-xkb-dev \
-libxkbcommon-dev \
-libxkbcommon-x11-dev \
-zenity \
-libjack-jackd2-dev
-```
+[https://sfzinstruments.github.io/pianos/salamander/](https://sfzinstruments.github.io/pianos/salamander/)
 
-luego de instaladas seguí los siguientes pasos:
-https://sfz.tools/sfizz/development/build/
+el enlace directo de estarga:
 
-puse en la terminal en un lugar donde tengo códigos fuentes de varios programas:
+**Instrument 	wav (24bit) 	48 KHz 	1.18 GB**
+[http://freepats.zenvoid.org/Piano/SalamanderGrandPiano/SalamanderGrandPianoV3+20161209_48khz24bit.tar.xz](http://freepats.zenvoid.org/Piano/SalamanderGrandPiano/SalamanderGrandPianoV3+20161209_48khz24bit.tar.xz)
 
-```
-git clone --recursive https://github.com/sfztools/sfizz-ui.git
-```
+Descargado correctamente el conjunto de muestras del **Salamander Grand Piano**, archivo descargado:
 
-con esto se descarga el repositorio y todos los submódulos  necesarios
+SalamanderGrandPianoV3+20161209_48khz24bit.tar.xz
+
+- Descomprirlo y deberá contener:
+  - Dos archivos `.sfz`
+  - Una carpeta con todos los `.wav` de las muestras
+
+Recomendado: Mueve estos archivos a una carpeta dedicada, por ejemplo:
+
+~/Samples/Piano
+
+Esto evita errores al cargarlo en el SFZ player si las rutas no coinciden.
+
+---
+
+### 🎛️ Paso 3: Usar sfizz dentro de REAPER
+
+#### 1. Cargar sfizz como instrumento LV2
+
+- Abre REAPER.
+- Ve al pista donde quieres cargar el piano.
+- Haz clic en el botón "FX" de esa pista.
+- En la ventana de efectos, haz clic en "All plugins" > "Instruments".
+- Selecciona:
+  ```
+  LV2i: sfizz (SFZTools) (2 out)
+  ```
+
+  > La opción `sfizz-multi (16 outs)` permite salida multicanal para efectos avanzados, como micrófonos separados. Para uso normal, usa la versión simple `(2 out)`.
+
+#### 2. Cargar el archivo `.sfz`
+
+- Al abrir sfizz, verás una interfaz sencilla.
+- Haz clic en el botón ▼ (flecha hacia abajo).
+- Selecciona "Load".
+- Navega hasta donde descomprimiste los archivos y selecciona:
+  ```
+  SalamanderGrandPianoV3.sfz
+  ```
+
+- Una vez cargado, prueba reproducir tu proyecto MIDI y deberías escuchar el piano correctamente.
+
+---
+
+### 📚 Notas adicionales
+
+- **sfizz** también puede usarse fuera de REAPER, como reproductor independiente desde terminal. Ejemplo:
+
+  ```bash
+  sfizz SalamanderGrandPianoV3.sfz
+  ```
+
+  Esto abre un reproductor básico con salida de audio.
+
+- También puedes usar `sfizz` con otros DAWs compatibles con LV2 como Ardour, Qtractor, etc.
+
+---
 
 
-luego debemos entrar en el repositorio:
 
-```
-cd sfizz-ui
-```
+### ✅ Resumen
 
-luego según el tutorial:
+| Paso | Acción |
+|------|--------|
+| 1 | Instala `sfizz` e integración LV2 |
+| 2 | Descarga y organiza el Salamander Grand Piano |
+| 3 | En REAPER, carga `LV2i: sfizz` e importa el `.sfz` |
+| 4 | ¡Disfruta tocando o reproduciendo tus proyectos MIDI! |
 
-pongo:
+---
 
-```
-mkdir build && cd build
-cmake ..
-make
-```
-
-espero, y cuando ya está para instalar pongo:
-
-```
-sudo make install
-```
-
-Para desinstalar veo que hay un archivo de desinstalación:
-
-cuando hay esos archivos para desinstalar el programa se pone así:
-
-sudo make uninstall
-
-eso en caso de que luego lo quieran desinstalar.
-
-
-2. **Carga en Ardour**: Abre Ardour y crea una pista MIDI. Luego, en la sección de plugins, busca SFizz (LV2 o VST3) e insértalo en la pista. A partir de ahí, podrás cargar archivos SFZ en el plugin para reproducir instrumentos virtuales.
-
-3. **Instrumentos SFZ**: Existen varios instrumentos gratuitos y comerciales en formato SFZ que puedes utilizar. Puedes encontrarlos en sitios como https://sfzinstruments.github.io o http://freepats.zenvoid.org
-
-El siguiente piano suena muy bonito:
-
-https://github.com/sfzinstruments/SalamanderGrandPiano
-
-SFizz es un sintetizador poderoso y versátil que te permite usar instrumentos en formato SFZ dentro de Ardour.
+¿Te gustaría que te ayude a crear un script automático para cargar sfizz desde terminal o desde un lanzador gráfico? ¿O quizás configurar soporte MIDI externo?

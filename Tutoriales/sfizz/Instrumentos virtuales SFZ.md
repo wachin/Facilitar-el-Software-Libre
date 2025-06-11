@@ -9,8 +9,17 @@
 
 
 
+## Big Rusty Drums
 
+Una batería de gran tamaño de la Polonia de los años 80.
 
+**Descarga**:
+
+[https://shop.karoryfer.com/pages/free-big-rusty-drums](https://shop.karoryfer.com/pages/free-big-rusty-drums)
+
+enlace directo:
+
+[https://github.com/sfzinstruments/karoryfer.big-rusty-drums/releases/download/v1.100/Big_Rusty_Drums_1100.zip](https://github.com/sfzinstruments/karoryfer.big-rusty-drums/releases/download/v1.100/Big_Rusty_Drums_1100.zip)
 
 Instrucciones para cargar el archivo .sfz
 

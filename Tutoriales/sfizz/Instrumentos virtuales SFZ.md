@@ -8,22 +8,17 @@
 [https://sfzinstruments.github.io/drums/](https://sfzinstruments.github.io/drums/)
 
 
-## Frankensnare
-**Descargar** desde:
-
-[https://karoryfer-samples.myshopify.com/pages/free-frankensnare](https://karoryfer-samples.myshopify.com/pages/free-frankensnare)
 
 
-[https://github.com/sfzinstruments/karoryfer.frankensnare/releases/download/v2.100/Frankensnare_2100.zip](https://github.com/sfzinstruments/karoryfer.frankensnare/releases/download/v2.100/Frankensnare_2100.zip)
 
 
 Instrucciones para cargar el archivo .sfz
 
 Big_Rusty_Drums_1100/Program/01-full.sfz
 
-### 🎛️ Paso 3: Usar sfizz dentro de REAPER
+ 🎛️ Paso 3: Usar sfizz dentro de REAPER
 
-#### 1. Cargar sfizz como instrumento LV2
+1. Cargar sfizz como instrumento LV2
 
 - Abre REAPER.
 - Ve al pista donde quieres cargar el piano.
@@ -36,7 +31,7 @@ Big_Rusty_Drums_1100/Program/01-full.sfz
 
   > La opción `sfizz-multi (16 outs)` permite salida multicanal para efectos avanzados, como micrófonos separados. Para uso normal, usa la versión simple `(2 out)`.
 
-#### 2. Cargar el archivo `.sfz`
+2. Cargar el archivo `.sfz`
 
 - Al abrir sfizz, verás una interfaz sencilla.
 - Haz clic en el botón ▼ (flecha hacia abajo).
@@ -50,7 +45,7 @@ Big_Rusty_Drums_1100/Program/01-full.sfz
 
 ---
 
-### 📚 Notas adicionales
+📚 Notas adicionales
 
 - **sfizz** también puede usarse fuera de REAPER, como reproductor independiente desde terminal. Ejemplo:
 
@@ -63,6 +58,8 @@ Big_Rusty_Drums_1100/Program/01-full.sfz
 - También puedes usar `sfizz` con otros DAWs compatibles con LV2 como Ardour, Qtractor, etc.
 
 ---
+
+**Baterías que no uso.- ** **Frankensnare** [https://karoryfer-samples.myshopify.com/pages/free-frankensnare](https://karoryfer-samples.myshopify.com/pages/free-frankensnare) cuyo archivo es: [https://github.com/sfzinstruments/karoryfer.frankensnare/releases/download/v2.100/Frankensnare_2100.zip](https://github.com/sfzinstruments/karoryfer.frankensnare/releases/download/v2.100/Frankensnare_2100.zip) no lo uso porque no es una batería completa sino una colección de Snares. 
 
 
 

@@ -73,10 +73,14 @@ Big_Rusty_Drums_1100/Program/01-full.sfz
 
 
 # Basses (Bajos)
-https://sfzinstruments.github.io/basses/
 
-El siguiente bajo funciona bien
-**https://sfzinstruments.github.io/basses/rickenbacker4001/**  
+[https://sfzinstruments.github.io/](https://sfzinstruments.github.io/)
+
+[https://sfzinstruments.github.io/basses/](https://sfzinstruments.github.io/basses/)
+
+## Rickenbacker4001
+El siguiente bajo funciona bien:
+
 [https://sfzinstruments.github.io/basses/rickenbacker4001/](https://sfzinstruments.github.io/basses/rickenbacker4001/)
 
 Para descargarlo hay que dar clic en el título en la palabra "Project16Rickenbacker4001:"

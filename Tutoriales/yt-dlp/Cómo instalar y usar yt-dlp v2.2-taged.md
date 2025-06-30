@@ -260,16 +260,27 @@ yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata <URL_DEL_VIDEO>
 4. **<URL\_DEL\_VIDEO>**: La dirección del video que quieres descargar.
 ## 🎵 Formatos que `yt-dlp` puede convertir con `--audio-format`:
 
-| Formato  | Descripción                                                                      |
-| -------- | -------------------------------------------------------------------------------- |
-| `mp3`    | Muy compatible. Perfecto para reproductores antiguos.                            |
-| `m4a`    | Alta calidad, buena compresión. Recomendado.                                     |
-| `aac`    | Similar a m4a pero sin envoltura MP4.                                            |
-| `flac`   | Audio sin pérdida (lossless). Muy pesado.                                        |
-| `wav`    | Sin compresión, archivos grandes. Uso técnico.                                   |
-| `opus`   | Muy eficiente a bajo bitrate. Ideal para voz.                                    |
-| `vorbis` | Códec abierto, generalmente en `webm`.                                           |
-| `alac`   | Apple Lossless. Menos común, solo si necesitas compatibilidad Apple sin pérdida. |
+**mp3** Muy compatible. Perfecto para reproductores antiguos.
+
+**m4a** Alta calidad y buena compresión. Recomendado para la mayoría de los usuarios.
+
+**aac** Similar a m4a pero sin envoltura MP4. Buena calidad y ampliamente soportado.
+
+**flac** Audio sin pérdida (lossless). Muy pesado, ideal para audiófilos que quieren la mejor calidad.
+
+**wav** Sin compresión, lo que genera archivos grandes. Se usa en contextos técnicos o de producción.
+
+**opus** Muy eficiente a bajo bitrate. Ideal para voz o archivos con limitaciones de espacio.
+
+**ogg** Formato contenedor abierto que suele usar el códec Vorbis. Buena calidad y compresión, pero no es tan compatible como mp3 o m4a.
+
+**alac** Apple Lossless. Poco común fuera del ecosistema Apple, útil si se requiere calidad sin pérdida y compatibilidad con productos de Apple.
+
+**ac3** Formato Dolby Digital. Usado en DVDs y contenido con audio multicanal. No es recomendable para música general.
+
+**aiff** Alternativa sin compresión a WAV, más utilizada en entornos Apple o producción de audio profesional.
+
+**amr** Optimizado para voz en baja calidad, como en grabadoras antiguas. No es ideal para música.
 
 > 🔧 Esto requiere tener `ffmpeg` correctamente instalado
 

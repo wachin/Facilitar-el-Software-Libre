@@ -1,0 +1,97 @@
+<h1
+id="no-funcionan-las-teclas-de-brillo-f11-f12-de-laptop-en-debian-12-netinstall-cd-con-lxqt">No
+funcionan las teclas de Brillo F11 / F12 de laptop en Debian 12
+Netinstall CD con LXQT</h1>
+<p>Después de instalar Debian 12 Netinstall CD con LXQt <strong>(esta
+entrada de este tutorial es sólo para este Sistema Operativo, otros no
+deberían tener ningún problema)</strong> en la laptop Dell Inspiron 14
+3481 las teclas de brillo de la pantall (<strong>F11/F12</strong>) no
+funcionan. La solución implica instalar <code>light</code> y configurar
+los atajos manualmente.</p>
+<h2 id="pasos-para-solucionar-el-problema">📌 Pasos para Solucionar el
+Problema</h2>
+<h3 id="instalar-los-paquetes-necesarios"><strong>1️⃣ Instalar los
+Paquetes Necesarios</strong></h3>
+<p>Abre una terminal y ejecuta:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install lxqt-powermanagement light</span></code></pre></div>
+<ul>
+<li><code>lxqt-powermanagement</code>: Gestión de energía para LXQt
+(puede que ya esté instalado).</li>
+<li><code>light</code>: Control de brillo de pantalla.</li>
+</ul>
+<h3 id="dar-permisos-al-usuario-para-controlar-el-brillo"><strong>2️⃣ Dar
+Permisos al Usuario para Controlar el Brillo</strong></h3>
+<p>Añade tu usuario al grupo <code>video</code> (de lo contrario
+tendríamos que usar <code>sudo</code> con <code>light</code>):</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> video <span class="va">$USER</span></span></code></pre></div>
+<p><strong>Reinicia la sesión</strong> (cierra y vuelve a entrar).</p>
+<h3 id="verificar-que-light-funciona"><strong>3️⃣ Verificar que
+<code>light</code> Funciona</strong></h3>
+<p>Prueba estos comandos (uno por uno):</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">light</span> <span class="at">-A</span> 5  <span class="co"># Aumenta brillo en 5%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">light</span> <span class="at">-U</span> 5  <span class="co"># Reduce brillo en 5%</span></span></code></pre></div>
+<p>cada uno de ellos aumenta o baja el brillo muy poco por lo que debes
+usalos varias veces, y para repetir el comando rapido en la terminal una
+vez que uno de ellos haya sido ejecutado sólo aplasta la fecla arriba
+(del teclado)</p>
+<p>Si funcionan, podemos asignarlos a las teclas <strong>F11</strong> y
+<strong>F12</strong>.</p>
+<h3 id="configurar-los-atajos-de-teclado-en-lxqt"><strong>4️⃣ Configurar
+los Atajos de Teclado en LXQt</strong></h3>
+<ol type="1">
+<li><strong>Abre el configurador de atajos de teclado:</strong><br />
+Ejecuta en terminal:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lxqt-config-globalkeyshortcuts</span></span></code></pre></div>
+<p>O búscalo en el menú:<br />
+<strong>Menú LXQt → Preferencias → Configuración de LXQt → Atajos de
+teclado</strong>.</p>
+<ol start="2" type="1">
+<li><p><strong>Eliminar atajos conflictivos (si
+existieran):</strong></p>
+<ul>
+<li>Busca entradas relacionadas con <code>brightness</code> o
+<code>backlight</code>.<br />
+</li>
+<li>Si existen, elimínalas o desactívalas.</li>
+</ul></li>
+<li><p><strong>Añadir nuevos atajos:</strong><br />
+Haz clic en <strong>“Añadir”</strong> (o “Add”).</p>
+<ul>
+<li><strong>Para F12 (Subir brillo):</strong>
+<ul>
+<li><strong>Atajo:</strong> Da clic y presiona la Tecla <code>F12</code>
+(automaticamente se pondrá un comando)</li>
+<li><strong>Descripción</strong> poner <code>Subir brillo</code></li>
+<li><strong>Comando:</strong> marcar comando y poner
+<code>light -A 5</code> y Aceptar</li>
+</ul></li>
+<li><strong>Para F1 (Bajar brillo):</strong>
+<ul>
+<li><strong>Atajo:</strong> Da clic y presiona la Tecla <code>F11</code>
+(automaticamente se pondrá un comando)</li>
+<li><strong>Descripción</strong> poner <code>Bajar brillo</code></li>
+<li><strong>Comando:</strong> marcar comando poner
+<code>light -U 5</code> y Aceptar</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Guardar y probar:</strong></p>
+<ul>
+<li>Cierra la ventana y prueba las teclas <strong>F11/F12</strong>.</li>
+</ul></li>
+</ol>
+<h3 id="solución-alternativa-si-light-no-funciona"><strong>5️⃣ Solución
+Alternativa si <code>light</code> No Funciona</strong></h3>
+<p>Si lo ha hecho bien deberá funcionar, pero sino, si
+<code>light</code> no responde, instala <code>brightnessctl</code>:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install brightnessctl</span></code></pre></div>
+<p>Luego configura los atajos con: - <strong>F11 (Subir):</strong>
+<code>brightnessctl set +5%</code><br />
+- <strong>F12 (Bajar):</strong> <code>brightnessctl set 5%-</code></p>
+<p>Dios les bendiga</p>

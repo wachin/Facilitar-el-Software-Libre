@@ -6,6 +6,8 @@ Después de instalar Debian 12 Netinstall CD con LXQt **(esta entrada de este tu
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZSQ42oRngPd2Sbn1-Ruj7EhLmD7ghXhv7elp7Q8J2FDvgq06FJowq08kb0fgADge4-nhIfgcMd0ykDMF0YC-Eho6aNKMz2vhMqFwtCh1lDsFotWnlsoUE3vbG4spksw1CBMnzsQ-guUJ9Ybh20RSx_ySwazGRUaKrhJqv3RS-l7mt84yq1ZjS6oSGOpE/s16000/20250716-211721%20teclas%20de%20control%20de%20brillo%20en%20Laptop%20Dell%20Inspiron%203481.png)
 
+**Nota:** Allí en el manual dice que en la BIOS se puede cambiar el uso con Fn.
+
 La solución implica instalar `light` y configurar los atajos manualmente.
 
 ## 📌 Pasos para Solucionar el Problema
@@ -81,6 +83,7 @@ sudo apt install brightnessctl
 ```
 
 Luego configura los atajos con:
+
 - **F11 (Subir):** `brightnessctl set +5%`  
 - **F12 (Bajar):** `brightnessctl set 5%-`  
 

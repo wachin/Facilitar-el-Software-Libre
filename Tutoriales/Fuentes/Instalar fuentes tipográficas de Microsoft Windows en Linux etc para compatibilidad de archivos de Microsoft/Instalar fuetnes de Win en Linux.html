@@ -1,0 +1,536 @@
+<p>2025-07-30 Revisíon: Si usted usa Linux y a usted le dan un archivo
+hecho en Microsoft Office y lo abre en <a
+href="https://www.libreoffice.org/download/download-libreoffice/">LibreOffice</a>
+o <a href="https://www.wps.com/">WPS Office</a> (u otro editor de
+ofimática como OnlyOffice o Foftmaker FreeOffice) se dará cuenta que
+muchas veces no encajan las fuentes como estaba el original, o se
+cambian los lugares donde están las cosas, o en WPS Office aparecen
+fuentes feas. Es como si se desbaratara el documento, esto muchas veces
+es debido a que no están instaladas las fuentes con las que fue hecho el
+archivo original. La Solución para visualizar bien los documentos en
+caso de que el tipo de la fuente no esté instalada en su Sistema
+Operativo Linux es instalar las Fuentes de Windows</p>
+<p>Esto también servirá para Diseño Gráfico con Inkscape u otro</p>
+<h2
+id="solución-1.--copiar-las-fuentes-de-una-computadora-con-windows"><strong>SOLUCIÓN
+1.- Copiar las fuentes de una computadora con Windows</strong></h2>
+<p>Este método es el más fácil y le instalará todo lo necesario. Para
+hacerlo, en una computadora con Windows (puede ser suya o en un cyber)
+diríjase a la carpeta:</p>
+<p>C:</p>
+<p>las siguientes son imágenes:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4Y_GK2dP67iHR4Ur8vsn7EbY0mDRSEFFa9wxY_jsM42-3Rdame1U06M8O2W1RbgSxekM0FU5U0kUNah60CIcPVc27vzk-T8Sr1WqaBW6-wvtOdqTMcqkoDYINI9dI_vpagV7RBVCKDRY/s16000-rw/00+carpeta+Windows.png" /></p>
+<p>y debe quedar aquí:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhk9oj6TzlW3v4KYVGJZJV7oU9DRgZML0ej1TApSfC5tSIM4ybBoj6ha_ymXkUGxkWX2mh5WliQJ0bKpcqpBVJK7q7MPfPIVVL1gFbtsw8Bs4Lwd8RrcTQ9AY41tdM3qrTLXWoaEBY9Se4/s16000-rw/01+Carpeta+Fonts.png" /></p>
+<p>como verá, dentro de la carpeta “Windows” está la carpeta “Fonts”,
+entre allí y con el administrador de archivos, de clic encima de una
+fuente y seleccione todos los archivos con “<strong>Ctrl + E</strong>” y
+con clic derecho copiar:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5m8C37SrY8Eh3EEa5KZGFWuE4MYFAM-14ir1r5NCpYwCpoM4a496pntGS0q-MCQsu91xGoPEtUH0Q73JjmcB7mNzFlLGVL-HftCdNXI0s-qpk5rMCSUl6pNISObYXm7OI_xu7U3moaLU/s16000-rw/02+copiando+las+fuentes.png" /></p>
+<p>al hacer esto usted copiará todos los archivos de las fuentes, y en
+un pendrive cree una carpeta con un nombre como por ejemplo
+“FuentesWindows”:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGG0RAXj5TH9pOsbT7FR57zAcXpJt295_YDe_Yy8WJYqivOlWOTkWSSQ5uNpcv2CX9xQ1-hB1JQTXTo6YAo4OSyEcW79Kcy-S-iYQ5sG5BtQKetQDZ3cckTDE1rAa04ZVTEVv519GsZAY/s16000-rw/nombrando+carpeta+en+el+pendrive.png" /></p>
+<p>y los pegará dentro en esa capeta que usted haya creado:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL7l57kyU__-juWEY5ZpNA8aObb5m9bVbrLbeKgZQq6rvF4890N2383ww6pXqcBbjgsMhFfqzz2f0qTc7rQeQOFdV9RbGBqWgNxB3DXjetf2pGUWeUC9lq6qk1VVU6IdNUSeq2DaFcwxE/s16000-rw/Pegando.png" /></p>
+<h1 id="instalación-de-fuentes-tipográficas-en-linux">Instalación de
+fuentes tipográficas en Linux</h1>
+<p>En muchas guías antiguas se recomienda copiar las fuentes de Windows
+a la carpeta personal <code>~/.fonts</code>.<br />
+Esto <strong>sigue siendo funcional en 2025</strong>, pero el archivo de
+configuración de Fontconfig en Debian 12:</p>
+<p>/etc/fonts/fonts.conf</p>
+<p>indica claramente:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dir</span><span class="ot"> prefix=</span><span class="st">&quot;xdg&quot;</span>&gt;fonts&lt;/<span class="kw">dir</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- the following element will be removed in the future --&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dir</span>&gt;~/.fonts&lt;/<span class="kw">dir</span>&gt;</span></code></pre></div>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEizJKqIR0EABs9Adxy82JnefqzQaC_4UfN0ymDV4Pqr4IkBVoDycNYVY14F4Z53rgbkbZhQaSLZYLHQ03JWPixHhGMy_Yj_A7l2B-VprbbkBPBRFCSrEeb6nMXyq7P8rppyg1SiAKSUZjpz7o-UROxj_fbfGCpWc3ZLDImXiMLUB2chSYIoc225HnlJohc=s16000-rw" /></p>
+<p>Esto significa que <code>~/.fonts</code> <strong>será removida en el
+futuro</strong>, y la ubicación recomendada según el estándar
+<strong>XDG Base Directory</strong> es:</p>
+<pre><code>~/.local/share/fonts</code></pre>
+<p>Por lo tanto, si instalas fuentes solo para tu usuario, es mejor usar
+esa ruta recomendada para ya ir acostumbrandose</p>
+<h2
+id="instalar-fuentes-solo-para-tu-usuario-sin-tocar-el-sistema">Instalar
+fuentes solo para tu usuario (sin tocar el sistema)</h2>
+<p>Para instalar fuentes tipográficas solo para tu cuenta de usuario,
+puedes guardarlas en la carpeta recomendada:</p>
+<pre><code>~/.local/share/fonts</code></pre>
+<blockquote>
+<p><strong>Nota:</strong> El símbolo <code>~</code> representa tu
+carpeta personal (por ejemplo: <code>/home/tuusuario/</code>).</p>
+</blockquote>
+<h3 id="crear-la-carpeta-automáticamente-método-rápido">1. Crear la
+carpeta automáticamente (método rápido)</h3>
+<p>Abre una terminal y escribe el siguiente comando:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/share/fonts</span></code></pre></div>
+<p>Este comando crea toda la ruta necesaria.</p>
+<ul>
+<li>La opción <code>-p</code> hace que <strong>se creen las carpetas que
+falten</strong> sin dar errores si ya existen.</li>
+</ul>
+<h3 id="crear-la-carpeta-manualmente-sin-usar-la-terminal">2. Crear la
+carpeta manualmente (sin usar la terminal)</h3>
+<p>Si prefieres hacerlo de forma gráfica:</p>
+<ol type="1">
+<li><p>Abre tu <strong>administrador de archivos</strong>.<br />
+</p></li>
+<li><p>Presiona <code>Ctrl + H</code> para mostrar las <strong>carpetas
+ocultas</strong> (en Linux las carpetas que empiezan con un punto
+<code>.</code> son ocultas).<br />
+</p></li>
+<li><p>Si no existe la carpeta <code>.local</code>, créala:</p>
+<ul>
+<li>Clic derecho → <strong>Crear carpeta</strong> → escribir
+<code>.local</code><br />
+</li>
+</ul></li>
+<li><p>Dentro de <code>.local</code>, crea otra carpeta llamada
+<code>share</code>.<br />
+</p></li>
+<li><p>Dentro de <code>share</code>, crea otra carpeta llamada
+<code>fonts</code>.</p></li>
+</ol>
+<p>La ruta final debe quedar así:</p>
+<pre><code>/home/tuusuario/.local/share/fonts</code></pre>
+<h3 id="copiar-las-fuentes">3. Copiar las fuentes</h3>
+<p>Copia todos los archivos de fuentes de Windows (<code>.ttf</code> o
+<code>.otf</code>) y pégalos en esa carpeta. Puedes crear subcarpetas
+dentro de <code>fonts</code> si quieres organizar tus fuentes (por
+ejemplo: <code>windows</code>, <code>personales</code>, etc.).</p>
+<hr />
+<h3 id="ventajas-de-este-método">Ventajas de este método</h3>
+<ul>
+<li>No necesitas permisos de administrador.</li>
+<li>Las fuentes se aplican solo a tu usuario (otros usuarios del sistema
+no las verán).</li>
+<li>Es la forma recomendada actualmente (la carpeta antigua
+<code>~/.fonts</code> sigue funcionando, pero está marcada para
+eliminarse en el futuro).</li>
+</ul>
+<h2 id="instalación-de-fuentes-para-todo-el-sistema">Instalación de
+fuentes para todo el sistema</h2>
+<p>Si el equipo tiene <strong>varios usuarios</strong> y todos necesitan
+las fuentes de Windows, se deben instalar <strong>para todo el
+sistema</strong>.</p>
+<h3 id="dónde-van-las-fuentes-del-sistema">¿Dónde van las fuentes del
+sistema?</h3>
+<p>Las fuentes del sistema en Linux se guardan en:</p>
+<p>/usr/share/fonts/truetype/</p>
+<p>Podemos crear una carpeta nueva, por ejemplo:</p>
+<p>/usr/share/fonts/truetype/windows</p>
+<p>y dentro de ella pegar todas las fuentes de Windows.</p>
+<h3 id="cómo-copiar-las-fuentes-sin-usar-la-terminal">¿Cómo copiar las
+fuentes sin usar la terminal?</h3>
+<p>Para mover archivos a esa carpeta necesitamos permisos de
+administrador. Hay varias formas de hacerlo gráficamente:</p>
+<h4 id="usando-krusader">1. Usando <strong>Krusader</strong></h4>
+<p><strong>a.)</strong> Instalar Krusader (si no lo tiene):</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install krusader</span></code></pre></div>
+<p><strong>b.)</strong> Ejecutar Krusader como superusuario:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> krusader</span></code></pre></div>
+<p><strong>c.)</strong> Navegar a la carpeta donde tienes las fuentes de
+Windows y copiarlas.</p>
+<p><strong>d.)</strong> Abrir una pestaña con “<code>Ctrl + T</code>” e
+ir a “<code>/usr/share/fonts/truetype/</code>”, crear la carpeta
+<code>windows</code> y pegar allí las fuentes.<br />
+<em>(También puedes hacerlo usando el otro panel en lugar de crear una
+pestaña).</em></p>
+<h4 id="usando-double-commander-gtk-o-qt">2. Usando <strong>Double
+Commander (GTK o QT)</strong></h4>
+<p><strong>a.)</strong> Instalar Double Commander:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-gtk</span></code></pre></div>
+<p>o si usas KDE Plasma o LXQT:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-qt</span></code></pre></div>
+<p><strong>b.)</strong> Ejecutar Double Commander con permisos de
+superusuario:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-gtk</span></code></pre></div>
+<p>o:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-qt</span></code></pre></div>
+<p><strong>c.)</strong> Copiar las fuentes a
+<code>/usr/share/fonts/truetype/windows</code>.</p>
+<h2
+id="consejos-para-usar-el-administrador-de-archivos-como-superusuario">Consejos
+para usar el administrador de archivos como superusuario</h2>
+<ul>
+<li><strong>Tenga mucho cuidado</strong> de no borrar ni mover carpetas
+o archivos del sistema operativo. Si elimina o mueve algo crítico, el
+sistema puede dejar de funcionar y podría ser necesario
+reinstalarlo.</li>
+<li><strong>No abra sus archivos personales (imágenes, documentos,
+etc.)</strong> desde el administrador de archivos ejecutado como
+superusuario. Esto se debe a que el programa que abre esos archivos
+puede heredar permisos de superusuario y cambiar la propiedad de los
+mismos, provocando que luego no pueda acceder a ellos desde su usuario
+normal.</li>
+<li><strong>Cierre el administrador de archivos cuando termine de usarlo
+como superusuario.</strong> Dejarlo abierto puede ser peligroso porque,
+al volver más tarde y olvidar que sigue con permisos de administrador,
+podría borrar o mover algo importante sin darse cuenta.</li>
+</ul>
+<h2 id="actualizar-el-caché-de-fuentes-opcional">Actualizar el caché de
+fuentes (opcional)</h2>
+<p>Después de copiar las fuentes, se recomienda actualizar el caché de
+fuentes:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> fc-cache <span class="at">-fv</span></span></code></pre></div>
+<h3 id="verificar-la-instalación">Verificar la instalación</h3>
+<p>Abre un programa como LibreOffice, GIMP o Inkscape y revisa si
+aparecen las fuentes recién agregadas.</p>
+<h3 id="cuándo-sí-se-necesita-fc-cache--fv">🔁 ¿Cuándo sí se necesita
+<code>fc-cache -fv</code>?</h3>
+<ol type="1">
+<li><strong>Cuando instalas fuentes en directorios no estándar</strong>,
+como uno que creaste manualmente o no es reconocido
+automáticamente.</li>
+<li><strong>Cuando haces scripts automatizados o instalaciones sin
+sesión gráfica activa</strong>, por ejemplo en servidores o
+instalaciones masivas.</li>
+<li><strong>Cuando un programa específico no detecta la fuente
+nueva</strong>, a pesar de reiniciarlo.</li>
+<li><strong>Cuando tienes problemas con fuentes corruptas, cache antigua
+o conflictos</strong>, y necesitas regenerar toda la caché de
+fuentes.</li>
+</ol>
+<h3 id="resumen">✅ RESUMEN</h3>
+<p>Cuando instalas una fuente en directorios estándar como:</p>
+<ul>
+<li><code>~/.fonts</code> (obsoleto pero aún funcional en muchos
+sistemas)</li>
+<li><code>~/.local/share/fonts</code> (recomendado para instalaciones
+por usuario)</li>
+<li><code>/usr/share/fonts</code> (para todo el sistema)</li>
+</ul>
+<p>el sistema detecta automáticamente los archivos <code>.ttf</code>,
+<code>.otf</code>, etc. La mayoría de los entornos de escritorio
+modernos y programas (como LibreOffice, GNOME, KDE, etc.) <strong>usan
+<code>fontconfig</code></strong>, que suele monitorear automáticamente
+los cambios en esos directorios.</p>
+<p>LibreOffice, al reiniciarse, vuelve a cargar las fuentes disponibles
+a través de <code>fontconfig</code>, por eso ya te aparecen sin hacer
+nada.</p>
+<h3 id="un-poco-de-historia">📜 Un poco de historia</h3>
+<p>Durante mucho tiempo, el lugar “de facto” para instalar fuentes a
+nivel de usuario era:</p>
+<ul>
+<li><code>~/.fonts</code> (es decir, una carpeta <code>.fonts</code> en
+tu directorio personal)</li>
+</ul>
+<p>Este método funcionaba bien y era el más documentado en distros como
+Debian, Ubuntu, etc., desde antes de 2010. Muchos tutoriales antiguos (y
+aún varios actuales 2025) siguen recomendando esta ruta.</p>
+<hr />
+<h3 id="qué-cambió">🆕 ¿Qué cambió?</h3>
+<p>A partir de las <strong>especificaciones de XDG</strong> (X Desktop
+Group), las distribuciones comenzaron a migrar a una estructura más
+estandarizada para los archivos de usuario. En esa estructura:</p>
+<ul>
+<li>Los datos del usuario se almacenan en
+<code>~/.local/share/</code></li>
+<li>Por tanto, las <strong>fuentes por usuario</strong> se instalan
+en:</li>
+</ul>
+<pre><code>~/.local/share/fonts</code></pre>
+<p>Este cambio fue adoptado gradualmente, y
+<strong><code>fontconfig</code> desde versiones modernas (como la que
+trae Debian 12)</strong> reconoce y monitorea automáticamente esa ruta
+como válida para fuentes.</p>
+<h2 id="opcional-instalar-una-gui-para-gestionar-fuentes">📌 Opcional:
+Instalar una GUI para gestionar fuentes</h2>
+<p>Si quieres ver, activar o desactivar fuentes fácilmente, instala
+<strong>Fontmatrix</strong>:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install fontmatrix</span></code></pre></div>
+<p>Luego ábrelo desde el menú y revisa tus fuentes instaladas.</p>
+<p>Si las fuentes no se ven bien, debes configurar las fuentes
+visibles</p>
+<p>Da clic en:</p>
+<p><strong>Edit &gt; Preferences</strong></p>
+<p>Da clic en:</p>
+<p><strong>Display &gt; Default font size</strong></p>
+<p>y pon ejemplo:</p>
+<p><strong>10</strong></p>
+<p>este número es un ejemplo y depende de cómo se vean las fuentes en tu
+monitor. Da clic en Close y además cierra Fontmatrix y vuelvelo a abrir
+y se verá el cambio</p>
+<p>También puedes ver mi tutorial:</p>
+<p><strong>Instalar FontMatrix y configurarlo en Debian
+12</strong><br />
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html">https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html</a></p>
+<hr />
+<h2 id="consejos-adicionales">Consejos adicionales</h2>
+<ul>
+<li>Si compartes documentos con usuarios de Windows sólo usa fuentes de
+Windows para asegurarte que se abran en otro ordenador, ejemplo cuando
+una persona está haciendo una tesis y debe compartir archivos con otros
+estudiantes, o cuando vas a hacer imprimir algún archivo de diseño
+gráfico como puede ser un .svg convertido en pdf y lo lleves a hacer
+imprimir a una imprenta. O cualquier archivo que lo vayas a habrir en
+otro ordenador cerciorate que la fuente esté allí también o llevala en
+un pendrive e instalalas en ese ordenador para que se puedan
+visualizar.</li>
+</ul>
+<h1 id="referencias">Referencias</h1>
+<p><strong>Linux Font Equivalents to Popular Web Typefaces | Jon
+Christopher</strong><br />
+<a
+href="https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/">https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/</a></p>
+<p><strong>How do I install fonts?</strong><br />
+<a
+href="https://askubuntu.com/questions/3697/how-do-i-install-fonts">how-do-i-install-fonts</a></p>
+<p><strong>Añadir una tipografía adicional para usuarios
+individuales</strong><br />
+<a
+href="https://help.gnome.org/admin/system-admin-guide/stable/fonts-user.html.es">fonts-user.html.es</a></p>
+<p><strong>Font configuration (Español)</strong><br />
+<a
+href="https://wiki.archlinux.org/title/Font_configuration_%28Español%29">Font_configuration_%28Español%29</a></p>
+<h2
+id="solución-2.--descargar-las-fuentes-tipográficas-subidas-a-internet">SOLUCIÓN
+2.- Descargar las fuentes tipográficas subidas a internet</h2>
+<p>Encontré la siguiente descarga:</p>
+<h3 id="desde-github">Desde Github</h3>
+<p><a
+href="https://github.com/FSKiller/Microsoft-Fonts.git">https://github.com/FSKiller/Microsoft-Fonts.git</a></p>
+<p><strong>Nota:</strong> De este repositorio hice un Fork con
+explicaciones, está explicado después de este.</p>
+<p>Para descargarlo dar clic en Code y descargar el Zip (si lo hace de
+esta manera no estará presente la carpeta oculta .git la cual ocupa
+mucho espacio):</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMlCqto4JwMCsX_w66l9hQiYjGYdeWmmEumHffc8ZG7J8mcdCnR7M8XTamSApm-V9QIOIaet28i0GcKAEw97edgMnEbWmM5mPBx_TTAC4r8n_8sotD66ulOSMWKLRDuZBGe-c1eBP-vS6VqNwnw94qYc0tocqa7v9mCqJJ9mTe5PPf7V7293jhm0x7Bpc/s16000-rw/20250730-155222%20tambi%C3%A9n%20puede%20dar%20clic%20en%20Code%20y%20descargar%20el%20Zip.png"
+title="también puede dar clic en Code y descargar el Zip" /></p>
+<p>la descomprime y la pone en .fonts</p>
+<h3 id="mi-fork">Mi Fork</h3>
+<p>además yo hice un fork y le puse muchas explicaciones, puede ver
+en:</p>
+<p><a
+href="https://github.com/wachin/Microsoft-Fonts">https://github.com/wachin/Microsoft-Fonts</a></p>
+<p>Para instalarlo con mayor facilidad poner en la terminal:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/share/fonts/Microsoft-Fonts</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/wachin/Microsoft-Fonts</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> Microsoft-Fonts/.git</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Microsoft-Fonts/<span class="pp">*</span> ~/.local/share/fonts/Microsoft-Fonts/</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> Microsoft-Fonts</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Dios les bendiga&quot;</span></span></code></pre></div>
+<p>este comando además eliminará la carpeta .git la cual contiene mucho
+espacio que no necesitamos. Y leer además las descripciones que le puse
+en español en mi Fork:</p>
+<p><strong>Readme en español</strong><br />
+<a
+href="https://github.com/wachin/Microsoft-Fonts/blob/main/README_ES.md">https://github.com/wachin/Microsoft-Fonts/blob/main/README_ES.md</a></p>
+<p><strong>Texto de las fuentes con sus nombres</strong><br />
+<a
+href="https://github.com/wachin/Microsoft-Fonts/blob/main/01%20Text%20with%20fonts%20and%20their%20names.pdf">https://github.com/wachin/Microsoft-Fonts/blob/main/01%20Text%20with%20fonts%20and%20their%20names.pdf</a></p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJHHylHznl7O1x5cLm1gx-o8mqAkua7n97PtfdYL2WY-XdGq6sqfcpoGOdYBg1wvWhohJOGyacHZJWzfgPzuiZMi4jMuriYWAkuO1WyqQbD0eQvkToVyqe4CRXlZBKRDvj2VhJOHZylB-577b1uNgIHGvR0oUHUepzbDCjXFjs-XIyT2ePHH1XJphyphenhyphenCvM/s16000-rw/20250730-160753%20fuentes%20con%20sus%20nombres.png" /></p>
+<h3 id="descarga-desde-w7df.com"><strong>Descarga desde
+w7df.com</strong></h3>
+<p>Entre en la siguiente pagina:</p>
+<p><a
+href="https://www.w7df.com/p/windows-10.html">https://www.w7df.com/p/windows-10.html</a></p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia079ERRuHmdYkMoKiSpIFhdDTY-Tt6OnGhVJ5Tb1Wn0QTGaeY1uNCnAtWH7oVoxAPsu-bJhkIVsBn8q1M3N3zj_FfBUe-7oqAbdgVwJz9Jz-uFwynvKub3a85x46RdyqDxkz3qcSzEMU1yEg30rypwBimsCChtPuJIVdk_L2YnkPCmUg1LjritFfirHw/s16000-rw/20250730-160211%20descarga%20fuentes%20de%20windows%2010%20desde%20w7df.com.png"
+title="descarga fuentes de windows 10 desde w7df.com" /></p>
+<p>descargar el archivo y descomprimirlo y poner la carpeta en .fonts
+(no se preocupe que dentro hay otra carpeta igual las reconocerá el
+sistema, pero si desea puede pasa el contenido de la carpeta segunda a
+la primera).</p>
+<h2
+id="solución-3.--instalar-algunas-fuentes-de-windows-del-paquete-ttf-mscorefonts-installer">SOLUCIÓN
+3.- Instalar algunas fuentes de Windows del paquete
+ttf-mscorefonts-installer</h2>
+<p>Si tal vez usted no quiera usar el método anterior puede instalar
+algunas pocas de Windows del paquete ttf-mscorefonts-installer, la
+siguiente es una lista de las fuentes que este paquete instalará:</p>
+<p><strong>Lista de las fuentes</strong></p>
+<ul>
+<li><pre><code>Andale Mono</code></pre></li>
+<li><pre><code>Arial Black</code></pre></li>
+<li><pre><code>Arial (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Comic Sans MS (Bold)</code></pre></li>
+<li><pre><code>Courier New (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Georgia (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Impact</code></pre></li>
+<li><pre><code>Times New Roman (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Trebuchet (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Verdana (Bold, Italic, Bold Italic)</code></pre></li>
+<li><pre><code>Webdings</code></pre></li>
+</ul>
+<p>Ponga en la terminal el siguiente comando para la instalación (Nota:
+Si ya tenía instalado PlayOnLinux o Wine ya lo habrá instalado)</p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install ttf-mscorefonts-installer</span></code></pre></div>
+<p>Ese paquete tiene ese nombre en Ubuntu y en Debian. Puede constatar
+aquello en:</p>
+<p><a
+href="https://packages.ubuntu.com/ttf-mscorefonts-installer">https://packages.ubuntu.com/ttf-mscorefonts-installer</a></p>
+<p><a
+href="https://packages.debian.org/ttf-mscorefonts-installer">https://packages.debian.org/ttf-mscorefonts-installer</a></p>
+<p><strong>Nota:</strong> Esto significa que lo puede instalar en
+Sistemas operativos basados en ellos.</p>
+<p>el paquete instalará las fuentes en:</p>
+<p>/usr/share/fonts/truetype/msttcorefonts/</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAMVbwWaJ23iAC9SUvpiJwJz8ASWkXIrEhH1SCaLszr7ZFBSpVwAqwq5LWCWJ9PLh4Wba5qXp2-pNAvWuO7L0ZaeXxdliQY8xqpBvA6yxwLbJrZkxGO7xHVXLau_qTkDJ16pIRLxo75mw/s16000-rw/Selecci%25C3%25B3n_109.png" /></p>
+<p><strong>Nota:</strong> Esta vista es en el administrador de archivos
+thunar.<br />
+Si ustedes leen en la vista de lista (esto en thunar) allí están
+instaladas y se observa el nombre de la fuente en “Tipo”:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh30t-xF6Gkw9KygmAuBgd99QzsE26-JqcussKLuzKg2ZQShHe2TMU2NH4e62vtU2YBHu15gsRB4vY1nvfm0WWDWEZoRBbFLoEhnaDhgopAob-JtyxP3ZU6ZU5cLxZ1fQ18aEvlAL3TPn4/s16000-rw/Selecci%25C3%25B3n_110.png" /></p>
+<p><strong>Nota 1:</strong> No todos los nombres de fuentes se ven en
+“Tipo”</p>
+<h2 id="solucón-4.--instale-power-point-viewer">SOLUCÓN 4.- Instale
+Power Point Viewer</h2>
+<p>Si usted no quiere usar el primer metodo para tener las fuentes de
+Windows y ha usado la instalación anterior, puede instalar las
+siguientes del instalador Power Point Viewer</p>
+<p><strong>Lista de fuentes que instalará:</strong></p>
+<p>Corbel<br />
+Constantina<br />
+Consolas<br />
+Candara<br />
+Cambria<br />
+Calibri</p>
+<p>Este ejecutable “<strong>Power Point Viewer</strong>” ya no está
+disponible para su descarga en la página de Microsoft, lo deben
+descargar desde una de estas tres direcciones:</p>
+<p><strong>DESCARGA:</strong></p>
+<p><strong>Descargar PowerPoint Viewer 14.0.4754.1000 -
+FileHippo.com</strong><br />
+<a
+href="https://filehippo.com/es/download_powerpoint/">https://filehippo.com/es/download_powerpoint/</a></p>
+<p><strong>PowerPoint Viewer | Libere las revisiones de la transferencia
+directa y del software | CNET Download.com</strong><br />
+<a
+href="http://descargar.cnet.com/PowerPoint-Viewer/3000-2075_4-75450958.html">http://descargar.cnet.com/PowerPoint-Viewer/3000-2075_4-75450958.html</a></p>
+<p><strong>Nota:</strong> Es posible que los enlaces algún día se caigan
+por lo que ustedes deberán de buscar otros.</p>
+<p><strong>Para extraer el contenido de ese ejecutable .exe usar el
+gestor de archivadores</strong></p>
+<p>Esto me funciona en MX Linux 19, puede que funcione en otro tipo de
+Linux. En Thunar solo hay que dar clic derecho al ejecutable:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEjADpl8Bb5aHh3Jik7QmV3K0dFQ51rVIy9bMJhbrKzeW-YmuFoU5Ln25cG4JDDGBDlbHF9FEit4dLRfOEHqMkbzgO7B9pgdrebytdYkqsfPSza5XlTBIaA-DMjGwX5uO7hl3a1F5HfhRdcm0vT6NpOWrTcoTXgIt7awYGMKR57DPgPWCvS_HF8A3il7FyQ=s16000-rw" /></p>
+<p>luego extraer el .cab</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEjkiTHDxbS3M4e41USJKCUaZEYKonSTxNL4SrQzOZV904p9Fg79GqoOl4PrAYKOW6Ssfn2efHjhzwetVWa022LFwL0YZPsXU9HBocA8ZqY8kOZ5XNGj0ow1SsqkZyGPhQUch3LvbGnt636gEHfZpzNnMxpBBqGbg0vw83LdSxm8xTcMNAegkFe2fiWpUqg=s16000-rw" /></p>
+<p>depende de su sistema Linux aparecerá alguna opción, como sea guarde
+lo que se va a extraer a alguna carpeta:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEggEiDsXAMBcp1JFF5-D6tiOENgwUuaLnUszhugRb9Z3ps4qz5oTmsMEhLD9qvKLLPi7b3bEbP5UQKI5Jvgg8l1o5EnOXsamUV81z2wsgRPYy4sXWFs0NTpoxdmp6ErdeZXrflfWpfC5FFZdTMZx9h-2ouU0uoJxXVpXEXEdqZIC23xhz_0dcKj6f5wFd4=s16000-rw" /></p>
+<p>y ahora debe buscar la carpeta donde lo extrajo al archivo .cab
+abrirlo con el gestor de archivadores:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgG2SU9voPVkFBcvmygO-rJvQ2Fu7kH6OSNfl7feqSSAPc9NBXj53Tf1M45aPzHPvDsLfMHbQt_nViy2fI4HCitpzREwcTK6rGbyQOLUqafdAKpfoYeXaM-xztcqr34HRGQRmCZbvSIG_UkObWx0Uvh6MOxNQXsX1sFgVYsmsiJ3ktDgulg5LL2or8uipA=s16000-rw" /></p>
+<p>y extraer allí su contenido:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEh34jBNjHUI_hkDn79H2tEMKa0QogEi9v0P5Y6QEe5sMvkQOXj11Vb8up0zaJayauO2O3V7vXXU930Utn67fz7qYWWjA2NC-NcZrc1g3YPmrtkvI-jYQWMZDXqY7XMpT4u-Rx2KFDvRuUKxsvTtVFIvbIV27BVZNHjqygPQN5R06uLUjCwYfQgyBjqbLss=s16000-rw" /></p>
+<p><strong>También puede usar peazip</strong></p>
+<p>Este programa no está en los repositorios, hay que descargarlo
+de:</p>
+<p><a
+href="https://github.com/peazip/PeaZip/releases/">https://github.com/peazip/PeaZip/releases/</a></p>
+<p>o:</p>
+<p><a
+href="https://sourceforge.net/projects/peazip/files/">https://sourceforge.net/projects/peazip/files/</a></p>
+<p><strong>PeaZip</strong></p>
+<p>Hay algunas versiones de 64 o 32 bits, o para ambas de 64 o 32 bits,
+yo instalé en MX Linux 19 de 32 bits la siguiente versión:</p>
+<p><strong>PeaZip 7.2.1</strong></p>
+<p>En la página 4</p>
+<p><a
+href="https://github.com/peazip/PeaZip/releases?page=3">https://github.com/peazip/PeaZip/releases?page=3</a></p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEj_v4voEsbYgICVGJfbSX2LOq0eguOGzvDNuQm-RHbveKisgV8A5asq-sXhPTzehZFSpiLUoDyrTpclDsAfXwrAL_epdC5VtS4tWp5tytQ1EVv3E0mhF1M4APseqO0DtRtvD--JYTVG-YaN9KFIQOIAr3A0lQI_jFIs8D9J7VGX3kpzWebzg9BrRAlJbws=s16000-rw" /></p>
+<p>esa versión es para ambas arquitecturas, es la ultima de ese tipo que
+encontré, de allí las nuevas son solo para 64 bits</p>
+<p>Instalelo con gdebi, sino sabe cómo hacerlo vea este <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2016/09/instalar-paquetes-deb-con-gdebi.html">tutorial</a>.</p>
+<p>Una vez instalado PeaZip búsquelo entre sus aplicaciones y
+ábralo:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEiMyGyMe-oK1LRJmSjUg2Bo_WdfJQ61MxaDF1Wy4AyuXgDf1vWcP4pY60AN8KeViXvXNq-0iwcniWlsThLssA8jqrJHeBOKghPdYmlejbqxyX83uM8VrumGIp0sObqYS4zRut9ORlkNpgbNftgy9nYbkiWxCYv_6QuUxJ6OjnDeuSi4gzxRBNe_SW5cPqc=s16000-rw" />
+En esta versión para ponerla en español dar clic en:</p>
+<p><strong>opciones - localización</strong></p>
+<p>elija el idioma en español:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEj6k_rnXqiqKGvyCdvfPDXErHBGcQo_pNvSiHD57iiBWxkyHe-F5nHgdIQyVxWTjLY8H6-svS0VESYYTvuyPlwELriSHkIXKTzg-VFAc5IHwNkiHHSa0Vgvbq1gOiVREqwS3-3w7sg_5mrxXANEu3_smOAT0zTvSd-EdyIZ6lT5HRbYUOuQEEK1xX9qRDY=s16000-rw" /></p>
+<p>en esta versión se cierra y al iniciarse otra vez ya estarán en
+español (en versiones futuras puede que mejoren eso)</p>
+<p>Ahora descomprima el archivo que descargó (60.3 MB)<br />
+Para hacerlo búsquelo con PeaZip, debe estar en descargas: <img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEjTidHy_7AIrqcFRn2LiX-xoeil5_jE2G7IQMVI9uAhcrppeucwO21leDzzOL7fU1VvDLE48_G1bqSAkXdWojeSZwshgT3eYQmzcLKUMwWnnS8jq9DIPBH_CvA4MarGCq3Z5Q7ykYKugZoTKA-3QqAt0AgzexofFnQlX04eUe0IBgoKoGOlh9j2JiOqMbg=s16000-rw" /></p>
+<p>darle doble clic al .cab</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEhbYqbVVZZ5UOKtT10SdTtX9nJnr6wCUEsSl9JwPdVksDSFBFygSDaMrtMMD-kaDxwwj9rf7uGXGsE8_2GmwG7VsELUMmWF0dlwafr8irYfOkdN564zabEIWLKnEqaH6QIRKi0Rdb7Or9sA02zanOZq6gEhcjwPiiYHtKILtN_UUz6RzXlfqoqs5RZOdhk=s16000-rw" /></p>
+<p>dar clic en extraer</p>
+<p><strong>Nota</strong>: Cuidado le da clic en alguno de los archivos
+allí dentro pues después se seleccionaría solo aquel.</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgjW3sfHYkd1SEBZbu1whp929ZSS3C0g73WZlcfWgd4i8DxVT8fE3t28slXyPVVll-hUHLah9cFkf2RzfBPx3xAqmzVxtQoUgj0Ldg0IgMyMyT8FBhe0uJ1HjGmSgcH6BysO_LGH6LMtQ9uHPdCemjJFlrLQGfBc9luW7r_1FByaUNpwoI6k8KvxAE2KU0=s16000-rw" /></p>
+<p>Debe de marcar extraer en una nueva carpeta y clic en Aceptar:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEitTO7HDVMS6sw3G-YWrTDF_cWip_6aziVduBoykDLYhlIq3ybroPHXBM6eSOJPnU__jVveJhK-lrsDHFEZyWRfwDipTs64nBv8uwt3n560BL54awkDhj-2v-hTbJlp0Ak4Jtbc5FWjw7qdxIa6tu5BRmH5uV7sY3-kDBl5FDqoW7uHE04E4NqLezb5PeM=s16000-rw" /></p>
+<p>y se descomprime el contenido a:</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEglvBwqZU62CjBT8jaSG6Eu8xsoGZDKU1c8LSJP2naC2HIVT3UpAH7kEBVneTsUqBukGYr12abTdliNf30YYd-EJV8jP5S-M34XayOkctEtl5wYlSiZxNO2Jds4s4IfgLYFksVSD-N0Y4Y7t86htzx6gDh1UQuOjuYzMdtrmIPuofDWN4eVE7X7UBwu4Wo=s16000-rw" /></p>
+<p>allí dentro están todos los .ttf</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEiPGl-5Wtc3ULMikXSyOm3hvuQvUMJYAtQ-zWXvche5Y60svaLuRh8CRooByFCcA44oSWqUc7tDn3ZT5ILUb0zjrFJGBQ1IJmX-W7EwQDyulN0GzzG81EAOtor76gUiBk7unIVkUa7Rj9ootPcuk96olnhkChDZFGcRXxUMBRIQfLJF1SnVDPXw5vViDyo=s16000-rw" /></p>
+<p>en la imagen de arriba en Thunar estoy en la vista de Detalles y he
+dado clic en la opción “Tipo” para que se ordenen los archvios por tipo
+y así poder seleccionar cada uno de los .ttf o sea todas las fuentes que
+las voy a sacar de allí y poner en otra carpeta con un nombre por
+ejemplo:</p>
+<p>Power Point Fonts</p>
+<p>para poder ponerlas en</p>
+<p>~/.local/share/fonts/</p>
+<p>Como quiera, con el administrador de archivos que usted use, deberá
+de ordenarlas por tipo y luego cortarlas y ponerlas en otra carpeta con
+algún nombre y pegarlas en la carpeta .fonts</p>
+<p>Y no se olvide que para que estén disponibles en los programas donde
+usted las necesite como: LibreOffice, WPS Office, Inkscape, Gimp, etc,
+si usted tenía abierto al programa debe de cerrarlo y volverlo a abrir
+para que la fuente aparezca disponible.</p>
+<p>Dios les bendiga</p>
+<p>Le aconsejo ver la siguiente entrada:</p>
+<p><strong>Cómo instalar fuentes tipográficas en Linux</strong><br />
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2021/01/como-instalar-fuentes-tipograficas-en-linux.html">https://facilitarelsoftwarelibre.blogspot.com/2021/01/como-instalar-fuentes-tipograficas-en-linux.html</a></p>
+<p><strong>LECTURAS IMPORTANTES (sólo que están en Inglés)</strong></p>
+<p><strong>Install Free Office 2007 Fonts for Linux and XP -
+OpenOffice.org Ninja</strong><br />
+<a
+href="https://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html">https://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html</a></p>
+<p><strong>Metric Equivalent Fonts and Font Substitution -
+OpenOffice.org Ninja</strong><br />
+<a
+href="https://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html">https://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html</a></p>
+<p><strong>Fonts - ArchWiki</strong><br />
+<a
+href="https://wiki.archlinux.org/index.php/fonts">https://wiki.archlinux.org/index.php/fonts</a></p>
+<p><strong>Microsoft fonts - ArchWiki</strong><br />
+<a
+href="https://wiki.archlinux.org/index.php/Microsoft_fonts">https://wiki.archlinux.org/index.php/Microsoft_fonts</a></p>
+<p><strong>[SOLVED] ttf-mscorefonts-installer reinstall</strong><br />
+<a
+href="https://ubuntuforums.org/showthread.php?t=2286648">https://ubuntuforums.org/showthread.php?t=2286648</a></p>

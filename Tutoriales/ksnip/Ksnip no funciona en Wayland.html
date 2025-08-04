@@ -1,0 +1,101 @@
+<h1
+id="ksnip-no-funciona-en-wayland-alternativas-y-soluciones-2025"><strong>Ksnip
+no funciona en Wayland: Alternativas y Soluciones (2025)</strong></h1>
+<p><em>📅 Actualizado: Agosto 2025</em> <strong>¿Te encanta Ksnip pero
+no funciona en Wayland?</strong> No eres el único. Muchos usuarios de
+KDE Plasma, GNOME y otras distribuciones Linux han reportado problemas
+con esta herramienta de captura de pantalla en entornos Wayland. En esta
+entrada, exploramos por qué ocurre y qué alternativas puedes usar.</p>
+<h2 id="por-qué-ksnip-no-funciona-en-wayland"><strong>🔍 ¿Por qué Ksnip
+no funciona en Wayland?</strong></h2>
+<p>Wayland es un protocolo de visualización más seguro que X11, pero
+impone restricciones que afectan a aplicaciones como Ksnip. Según los
+desarrolladores (<a
+href="https://github.com/ksnip/ksnip/issues/1026">Issue #1026</a>):</p>
+<blockquote>
+<p><em>“Wayland es muy restrictivo y no permite capturar pantalla
+directamente. Ksnip depende de ‘portales’ (xdg-desktop-portal) para
+solicitar capturas, lo que limita su funcionalidad.”</em></p>
+</blockquote>
+<h3 id="problemas-comunes"><strong>Problemas comunes:</strong></h3>
+<ul>
+<li><strong>Error:</strong>
+<code>"No image provided but one was expected"</code>.</li>
+<li><strong>No se puede capturar áreas rectangulares</strong> (solo
+pantalla completa).</li>
+<li><strong>Advertencias como:</strong>
+<code>"Wayland does not support QWindow::requestActivate()"</code>.</li>
+</ul>
+<h2 id="soluciones-y-alternativas"><strong>🛠 Soluciones y
+Alternativas</strong></h2>
+<h3 id="usar-ksnip-en-x11-si-es-posible"><strong>1. Usar Ksnip en X11
+(si es posible)</strong></h3>
+<p>Si no dependes de Wayland, la solución más sencilla es cambiar a X11:
+1. <strong>Cierra tu sesión</strong>. 2. <strong>En la pantalla de
+inicio</strong>, selecciona <strong>“Plasma (X11)”</strong> o
+<strong>“GNOME on Xorg”</strong>. 3. <strong>Inicia sesión</strong> y
+prueba Ksnip nuevamente.</p>
+<h3 id="usar-alternativas-nativas-de-wayland"><strong>3. Usar
+alternativas nativas de Wayland</strong></h3>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 64%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Herramienta</th>
+<th>Descripción</th>
+<th>Instalación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Spectacle</strong> (KDE)</td>
+<td>Captura pantalla completa, ventana o área. Soporta anotaciones
+básicas.</td>
+<td><code>sudo apt install spectacle</code></td>
+</tr>
+<tr class="even">
+<td><strong>Flameshot</strong></td>
+<td>Editor avanzado con flechas, texto y difuminado. Funciona mejor en
+Wayland.</td>
+<td><code>sudo apt install flameshot</code></td>
+</tr>
+<tr class="odd">
+<td><strong>GNOME Screenshot</strong></td>
+<td>Herramienta predeterminada en GNOME (disponible en
+Ubuntu/Zorin).</td>
+<td><code>gnome-screenshot -i</code> (interactivo)</td>
+</tr>
+<tr class="even">
+<td><strong>Shutter</strong></td>
+<td>Herramienta para capturas de pantallla con muchas funciones (en
+Debian 12 está en los repositorios)</td>
+<td><code>sudo apt install shutter</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="habrá-soporte-oficial-para-wayland"><strong>💡 ¿Habrá soporte
+oficial para Wayland?</strong></h2>
+<p>Según el desarrollador de Ksnip (<a
+href="https://github.com/ksnip/ksnip/discussions/884">Discusión
+#884</a>):</p>
+<blockquote>
+<p><em>“Wayland no permite que aplicaciones externas capturen pantalla
+libremente. Dependemos de los portales de KDE/GNOME, que tienen
+limitaciones. Por ahora, Spectacle (KDE) y GNOME Screenshot funcionan
+mejor porque tienen acceso privilegiado.”</em></p>
+</blockquote>
+<p><strong>Conclusión:</strong> Hasta que Wayland permita más
+flexibilidad o Ksnip implemente una solución nativa, <strong>lo mejor es
+usar alternativas o cambiar a X11</strong>.</p>
+<p>🔗 <strong>Más Consultas:</strong><br />
+- <a href="https://github.com/ksnip/ksnip/issues/1026">Issue #1026 en
+GitHub</a><br />
+- <a
+href="https://askubuntu.com/questions/1442468/connect-wayland-screenshot-tool-to-ksnip">Alternativas
+en AskUbuntu</a></p>
+<p><em>🏷️ Etiquetas: #Linux #Wayland #Ksnip #CapturaDePantalla #KDE
+#GNOME</em></p>

@@ -1,11 +1,51 @@
 <h1 id="tutorial-completo-de-sway-para-principiantes"><strong>Tutorial
 Completo de Sway para Principiantes</strong></h1>
-<p>Sway es un <strong>gestor de ventanas en mosaico (tiling window
-manager)</strong> para Wayland, inspirado en i3wm. A diferencia de los
-entornos de escritorio tradicionales (como GNOME o KDE), Sway organiza
-automáticamente las ventanas en mosaicos, sin superposiciones, lo que lo
-hace muy eficiente para el uso con el teclado.</p>
-<hr/>
+<p>Un <strong>administrador de ventanas Tiling</strong> (o de mosaico)
+como lo es Sway es un tipo de gestor de ventanas en Linux que organiza
+automáticamente las ventanas en la pantalla sin que se superpongan. A
+diferencia de los administradores de ventanas “flotantes” tradicionales
+(como los que se encuentran en Windows o macOS), donde puedes arrastrar
+y soltar las ventanas libremente, los administradores de ventanas Tiling
+llenan el espacio disponible en la pantalla con las ventanas que abres,
+así Sway tiene:</p>
+<ul>
+<li><strong>Organización automática en mosaico:</strong> La
+característica principal. Cuando abres una ventana, el gestor la coloca
+automáticamente en una parte de la pantalla. Si abres una segunda
+ventana, la primera se redimensiona para compartir el espacio y la
+segunda ocupa el resto, creando un “mosaico” de ventanas.</li>
+<li><strong>Sin superposiciones:</strong> Las ventanas nunca se
+superponen. Siempre se muestran una al lado de la otra, dividiendo la
+pantalla en secciones lógicas.</li>
+<li><strong>Enfoque en el teclado:</strong> Los administradores de
+ventanas Tiling están diseñados para ser controlados casi por completo
+con el teclado. En lugar de usar el ratón para mover, redimensionar y
+cerrar ventanas, utilizas atajos de teclado para todas estas acciones.
+Esto permite un flujo de trabajo más rápido y eficiente.</li>
+<li><strong>Configuración y personalización:</strong> Suelen ser muy
+configurables. Los usuarios pueden modificar la disposición de las
+ventanas, los atajos de teclado, los colores y otros aspectos a través
+de un archivo de configuración de texto plano. Esto permite una
+personalización muy profunda para adaptarse a las necesidades de cada
+usuario.</li>
+<li><strong>Trabajo con múltiples monitores:</strong> Funcionan muy bien
+con múltiples pantallas. Los gestores de ventanas de mosaico pueden
+organizar las ventanas en cada monitor de forma independiente, o incluso
+mover ventanas y espacios de trabajo entre ellos fácilmente con atajos
+de teclado.</li>
+<li><strong>Sway y Wayland:</strong> Sway es un administrador de
+ventanas de mosaico diseñado para el servidor de visualización
+<strong>Wayland</strong>. Es un sucesor directo de <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">i3</code>, otro
+popular administrador de ventanas de mosaico, pero está diseñado para el
+ecosistema moderno de Wayland en lugar del antiguo servidor X11. Esto
+significa que Sway aprovecha las características y mejoras de
+rendimiento de Wayland.</li>
+</ul>
+<p>En resumen, un administrador de ventanas Tiling como lo es Sway es
+una herramienta de productividad para usuarios avanzados de Linux que
+buscan un control total y un flujo de trabajo más eficiente, eliminando
+la necesidad de usar el ratón y organizando las ventanas de forma lógica
+para maximizar el espacio en la pantalla.</p>
 <h2 id="instalación-de-paquetes-necesarios"><strong>📦 Instalación de
 Paquetes Necesarios</strong></h2>
 <p>Primero, instala todos los paquetes necesarios en Debian 12:</p>
@@ -14,7 +54,6 @@ Paquetes Necesarios</strong></h2>
 <p>Si prefieres <strong>Alacritty</strong> en lugar de
 <strong>Foot</strong> (otro terminal rápido para Wayland):</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt install alacritty</span></code></pre></div>
-<hr/>
 <h2 id="iniciar-y-salir-de-sway"><strong>🚀 Iniciar y Salir de
 Sway</strong></h2>
 <h3 id="iniciar-sway-desde-la-terminal-sin-gestor-de-inicio-de-sesión"><strong>Iniciar
@@ -25,66 +64,65 @@ lista de sesiones.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">sway</span></span></code></pre></div>
 <h3 id="salir-de-sway"><strong>Salir de Sway</strong></h3>
 <ul>
-<li><p><strong>Cerrar sesión</strong>: <code>Mod + Shift + E</code> (te
+<li><strong>Cerrar sesión</strong>: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + E</code> (te
 pedirá confirmación).<br/>
-</p></li>
-<li><p><strong>Forzar cierre</strong> (si Sway se congela):
-<code>Ctrl + Alt + F2</code> (cambia a TTY) y luego ejecuta:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">killall</span> sway</span></code></pre></div></li>
+</li>
+<li><strong>Forzar cierre</strong> (si Sway se congela):
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Ctrl + Alt + F2</code> (cambia a TTY) y luego ejecuta:</li>
 </ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">killall</span> sway</span></code></pre></div>
 <hr/>
 <h2 id="atajos-de-teclado-básicos"><strong>⌨️ Atajos de Teclado
 Básicos</strong></h2>
-<p>Sway usa la tecla <code>Mod</code> (normalmente la tecla
+<p>Sway usa la tecla <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod</code> (normalmente la tecla
 <strong>Windows/Super</strong> o <strong>Alt</strong>) para los
 atajos.</p>
 <h3 id="movimiento-entre-ventanas"><strong>Movimiento entre
 ventanas</strong></h3>
 <ul>
-<li><code>Mod + ← / → / ↑ / ↓</code> → Cambiar el foco entre
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + ← / → / ↑ / ↓</code> → Cambiar el foco entre
 ventanas.<br/>
 </li>
-<li><code>Mod + Shift + ← / → / ↑ / ↓</code> → Mover ventana a otra
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + ← / → / ↑ / ↓</code> → Mover ventana a otra
 dirección.<br/>
 </li>
-<li><code>Mod + h / j / k / l</code> (alternativa Vim-style).</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + h / j / k / l</code> (alternativa Vim-style).</li>
 </ul>
 <h3 id="gestión-de-ventanas"><strong>Gestión de ventanas</strong></h3>
 <ul>
-<li><code>Mod + Enter</code> → Abrir terminal (Foot/Alacritty).<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Enter</code> → Abrir terminal (Foot/Alacritty).<br/>
 </li>
-<li><code>Mod + q</code> → Cerrar ventana.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + q</code> → Cerrar ventana.<br/>
 </li>
-<li><code>Mod + f</code> → Pantalla completa.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + f</code> → Pantalla completa.<br/>
 </li>
-<li><code>Mod + d</code> → Abrir lanzador de aplicaciones
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + d</code> → Abrir lanzador de aplicaciones
 (<strong>Wofi</strong>).<br/>
 </li>
-<li><code>Mod + Shift + Espacio</code> → Cambiar a modo flotante (para
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + Espacio</code> → Cambiar a modo flotante (para
 mover ventanas libremente).<br/>
 </li>
-<li><code>Mod + Espacio</code> → Cambiar entre mosaico/flotante.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Espacio</code> → Cambiar entre mosaico/flotante.</li>
 </ul>
 <h3 id="gestión-de-espacios-de-trabajo-workspaces"><strong>Gestión de
 espacios de trabajo (workspaces)</strong></h3>
 <ul>
-<li><code>Mod + 1-9</code> → Cambiar a workspace 1-9.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + 1-9</code> → Cambiar a workspace 1-9.<br/>
 </li>
-<li><code>Mod + Shift + 1-9</code> → Mover ventana a workspace 1-9.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + 1-9</code> → Mover ventana a workspace 1-9.</li>
 </ul>
 <h3 id="gestión-de-monitores"><strong>Gestión de monitores</strong></h3>
 <ul>
-<li><code>Mod + Shift + m</code> → Mover ventana a otro monitor.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + m</code> → Mover ventana a otro monitor.<br/>
 </li>
-<li><code>wlr-randr --output HDMI-1 --mode 1368x768@75.00</code> →
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wlr-randr --output HDMI-1 --mode 1368x768@75.00</code> →
 Cambiar resolución y Hz.</li>
 </ul>
 <h3 id="bloqueo-de-pantalla"><strong>Bloqueo de pantalla</strong></h3>
 <ul>
-<li><code>Mod + Escape</code> → Bloquear pantalla con
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Escape</code> → Bloquear pantalla con
 <strong>swaylock</strong>.</li>
 </ul>
-<hr/>
 <h2 id="manejo-de-archivos-y-documentos"><strong>📂 Manejo de Archivos y
 Documentos</strong></h2>
 <p>Sway no incluye un gestor de archivos, pero puedes instalar uno:</p>
@@ -92,23 +130,22 @@ Documentos</strong></h2>
 <h3 id="abrir-archivos-desde-terminal"><strong>Abrir archivos desde
 terminal</strong></h3>
 <ul>
-<li><p>Usa <code>xdg-open</code> para abrir archivos con la aplicación
-predeterminada:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">xdg-open</span> documento.pdf</span>
-<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="fu">xdg-open</span> imagen.png</span></code></pre></div></li>
+<li>Usa <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">xdg-open</code> para abrir archivos con la aplicación
+predeterminada:</li>
 </ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">xdg-open</span> documento.pdf</span>
+<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="fu">xdg-open</span> imagen.png</span></code></pre></div>
 <h3 id="gestión-del-portapapeles"><strong>Gestión del
 portapapeles</strong></h3>
 <ul>
-<li><code>wl-copy "texto"</code> → Copiar texto al portapapeles.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wl-copy "texto"</code> → Copiar texto al portapapeles.<br/>
 </li>
-<li><code>wl-paste</code> → Pegar texto.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wl-paste</code> → Pegar texto.</li>
 </ul>
-<hr/>
 <h2 id="personalización-básica"><strong>🔧 Personalización
 Básica</strong></h2>
 <h3 id="configuración-de-sway-.configswayconfig"><strong>1.
-Configuración de Sway (<code>~/.config/sway/config</code>)</strong></h3>
+Configuración de Sway (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>)</strong></h3>
 <p>Crea o edita el archivo de configuración:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/sway</span>
 <span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a><span class="fu">cp</span> /etc/sway/config ~/.config/sway/  <span class="co"># Copia la configuración por defecto</span></span>
@@ -123,19 +160,19 @@ personalizarlo:</p>
 <h3 id="fondo-de-pantalla"><strong>3. Fondo de pantalla</strong></h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="ex">swaybg</span> <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
 <p>Para que se ejecute al inicio, añádelo al archivo
-<code>~/.config/sway/config</code>:</p>
-<pre><code>exec swaybg -i ~/Imágenes/fondo.jpg -m fill</code></pre>
-<hr/>
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="bu">exec</span> swaybg <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
 <h2 id="grabación-de-pantalla"><strong>🎥 Grabación de
 Pantalla</strong></h2>
-<p>Con <code>wf-recorder</code>:</p>
+<p>Con <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wf-recorder</code>:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">-f</span> grabacion.mp4  <span class="co"># Iniciar grabación</span></span>
 <span id="cb11-2"><a aria-hidden="true" href="#cb11-2" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">--stop</span>            <span class="co"># Detener grabación</span></span></code></pre></div>
 <hr/>
 <h2 id="consejos-finales"><strong>🔍 Consejos Finales</strong></h2>
 <ul>
-<li><p>Si algo no funciona, revisa los logs con:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">-u</span> sway <span class="at">--no-pager</span> <span class="at">-f</span></span></code></pre></div></li>
-<li><p>Para aprender más comandos, ejecuta
-<code>man sway</code>.</p></li>
+<li>Si algo no funciona, revisa los logs con:</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">-u</span> sway <span class="at">--no-pager</span> <span class="at">-f</span></span></code></pre></div>
+<ul>
+<li>Para aprender más comandos, ejecuta <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">man sway</code>.</li>
 </ul>

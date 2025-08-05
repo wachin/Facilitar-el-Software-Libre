@@ -99,6 +99,55 @@ def mejorar_tablas(html, porcentaje_fuente):
     
     return str(soup)
 
+def mejorar_bloques_code_simples(html):
+    """
+    Mejora la apariencia de los bloques <pre><code> simples que no tienen clase sourceCode.
+    Versión mejorada con mejor contraste y legibilidad.
+    """
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    for pre in soup.find_all('pre'):
+        # Solo procesamos los pre que contienen code directamente y no son de clase sourceCode
+        if pre.code and not pre.get('class'):
+            # Creamos el nuevo div contenedor
+            div = soup.new_tag('div')
+            pre.wrap(div)
+            
+            # Estilo mejorado para el pre
+            pre['style'] = (
+                "background-color: #f8f8f8; "  # Fondo más claro para mejor contraste
+                "border: 1px solid #d0d0d0; "  # Borde sólido en lugar de dashed
+                "border-left: 3px solid #d44950; "  # Borde izquierdo acentuado
+                "line-height: 1.5; "  # Mejor espaciado entre líneas
+                "margin: 10px 0; "  # Margen más equilibrado
+                "overflow-wrap: break-word; "
+                "padding: 10px; "  # Más padding para mejor legibilidad
+                "border-radius: 4px; "  # Esquinas ligeramente redondeadas
+            )
+            
+            # Creamos el span para el contenido con mejor contraste
+            span_outer = soup.new_tag('span', style=(
+                "color: #222222; "  # Color casi negro para mejor contraste
+                "font-family: 'Ubuntu Mono', 'Courier New', monospace; "
+                "font-weight: bold; "  # Fuente en negrita
+            ))
+            
+            span_inner = soup.new_tag('span', style=(
+                "font-size: 15px; "  # Tamaño ligeramente mayor
+                "white-space: pre-wrap; "
+            ))
+            
+            # Movemos el contenido del code al span interno
+            code = pre.code
+            span_inner.string = code.get_text()
+            
+            # Reconstruimos la estructura
+            span_outer.append(span_inner)
+            pre.clear()
+            pre.append(span_outer)
+    
+    return str(soup)
+
 def procesar_archivo(entry_fuente):
     """
     Procesa el archivo HTML seleccionado:
@@ -119,6 +168,7 @@ def procesar_archivo(entry_fuente):
     html = mejorar_elementos_code(html)
     html = mejorar_caja_codigo(html)
     html = mejorar_tablas(html, porcentaje_fuente)
+    html = mejorar_bloques_code_simples(html)  # <-- Nueva función añadida
     
     output_filepath = filepath.replace(".html", "-fix.html")
     with open(output_filepath, 'w', encoding='utf-8') as file:

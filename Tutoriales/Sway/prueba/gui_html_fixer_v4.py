@@ -26,22 +26,63 @@ def mejorar_elementos_code(html):
 def mejorar_caja_codigo(html):
     """
     Mejora la apariencia de las cajas de código <pre class="sourceCode">.
-    Aquí solo se ajusta el estilo de la caja de código.
+    Versión ajustada sin separación entre la barra y el contenido.
     """
     soup = BeautifulSoup(html, 'html.parser')
     
     for pre in soup.find_all('pre', class_='sourceCode'):
-        # --- Cambiar aquí colores de la caja de código si se desea ---
+        # Primero creamos un contenedor para agrupar la barra y el contenido
+        container = soup.new_tag('div', style=(
+            "margin: 15px 0; "
+            "border-radius: 6px; "
+            "overflow: hidden; "
+            "box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
+        ))
+        pre.wrap(container)
+        
+        # Estilo mejorado para el pre (contenido del código)
         pre['style'] = (
-            "background: rgb(231, 232, 233); "      # Fondo gris claro
-            "border-color: rgb(214, 73, 55); "     # Borde lateral izquierdo (rojo)
-            "border-style: solid; "
-            "border-width: 1px 1px 1px 20px; "
-            "font-family: 'Ubuntu Mono', Consolas, monospace; "  # Fuente monoespaciada principal Ubuntu, luego Consolas
-            "font-size: medium; line-height: 22.4px; "
-            "margin: 10px; max-height: 500px; overflow: auto; "
-            "padding: 28px 10px 10px 20px; z-index: 10000;"
+            "background: #1e1e1e; "                 # Fondo oscuro
+            "color: #f0f0f0; "                     # Texto claro
+            "font-family: 'Ubuntu Mono', 'Courier New', monospace; "
+            "font-weight: bold; "                   # Texto en negrita
+            "font-size: 14px; "
+            "line-height: 1.5; "
+            "margin: 0; "                           # Eliminamos margen interno
+            "padding: 12px 20px; "
+            "border-left: 4px solid #3aa655; "      # Borde izquierdo verde
+            "overflow: auto; "
+            "max-height: 500px; "
         )
+        
+        # Barra de terminal ajustada
+        terminal_bar = soup.new_tag('div', style=(
+            "background: #3a3a3a; "
+            "height: 28px; "
+            "display: flex; "
+            "align-items: center; "
+            "padding: 0 15px; "
+            "border-bottom: 1px solid #2a2a2a; "    # Línea divisoria sutil
+        ))
+        
+        # Puntos de la barra de terminal
+        for color in ['#ff5f56', '#ffbd2e', '#27c93f']:
+            dot = soup.new_tag('span', style=(
+                f"background: {color}; "
+                "width: 12px; "
+                "height: 12px; "
+                "border-radius: 50%; "
+                "margin-right: 8px; "
+            ))
+            terminal_bar.append(dot)
+        
+        # Insertamos la barra antes del pre dentro del contenedor
+        container.insert(0, terminal_bar)
+        
+        # Ajustamos el código interno
+        for code in pre.find_all('code'):
+            code['style'] = "color: inherit; font-family: inherit;"
+    
     return str(soup)
 
 def mejorar_tablas(html, porcentaje_fuente):
@@ -99,6 +140,55 @@ def mejorar_tablas(html, porcentaje_fuente):
     
     return str(soup)
 
+def mejorar_bloques_code_simples(html):
+    """
+    Mejora la apariencia de los bloques <pre><code> simples que no tienen clase sourceCode.
+    Versión mejorada con mejor contraste y legibilidad.
+    """
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    for pre in soup.find_all('pre'):
+        # Solo procesamos los pre que contienen code directamente y no son de clase sourceCode
+        if pre.code and not pre.get('class'):
+            # Creamos el nuevo div contenedor
+            div = soup.new_tag('div')
+            pre.wrap(div)
+            
+            # Estilo mejorado para el pre
+            pre['style'] = (
+                "background-color: #f8f8f8; "  # Fondo más claro para mejor contraste
+                "border: 1px solid #d0d0d0; "  # Borde sólido en lugar de dashed
+                "border-left: 3px solid #d44950; "  # Borde izquierdo acentuado
+                "line-height: 1.5; "  # Mejor espaciado entre líneas
+                "margin: 10px 0; "  # Margen más equilibrado
+                "overflow-wrap: break-word; "
+                "padding: 10px; "  # Más padding para mejor legibilidad
+                "border-radius: 4px; "  # Esquinas ligeramente redondeadas
+            )
+            
+            # Creamos el span para el contenido con mejor contraste
+            span_outer = soup.new_tag('span', style=(
+                "color: #222222; "  # Color casi negro para mejor contraste
+                "font-family: 'Ubuntu Mono', 'Courier New', monospace; "
+                "font-weight: bold; "  # Fuente en negrita
+            ))
+            
+            span_inner = soup.new_tag('span', style=(
+                "font-size: 15px; "  # Tamaño ligeramente mayor
+                "white-space: pre-wrap; "
+            ))
+            
+            # Movemos el contenido del code al span interno
+            code = pre.code
+            span_inner.string = code.get_text()
+            
+            # Reconstruimos la estructura
+            span_outer.append(span_inner)
+            pre.clear()
+            pre.append(span_outer)
+    
+    return str(soup)
+
 def procesar_archivo(entry_fuente):
     """
     Procesa el archivo HTML seleccionado:
@@ -119,6 +209,7 @@ def procesar_archivo(entry_fuente):
     html = mejorar_elementos_code(html)
     html = mejorar_caja_codigo(html)
     html = mejorar_tablas(html, porcentaje_fuente)
+    html = mejorar_bloques_code_simples(html)  # <-- Nueva función añadida
     
     output_filepath = filepath.replace(".html", "-fix.html")
     with open(output_filepath, 'w', encoding='utf-8') as file:

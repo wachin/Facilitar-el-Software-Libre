@@ -35,7 +35,7 @@ mover ventanas y espacios de trabajo entre ellos fácilmente con atajos
 de teclado.</li>
 <li><strong>Sway y Wayland:</strong> Sway es un administrador de
 ventanas de mosaico diseñado para el servidor de visualización
-<strong>Wayland</strong>. Es un sucesor directo de <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">i3</code>, otro
+<strong>Wayland</strong>. Es un sucesor directo de <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">i3</code>, otro
 popular administrador de ventanas de mosaico, pero está diseñado para el
 ecosistema moderno de Wayland en lugar del antiguo servidor X11. Esto
 significa que Sway aprovecha las características y mejoras de
@@ -45,15 +45,23 @@ rendimiento de Wayland.</li>
 una herramienta de productividad para usuarios avanzados de Linux que
 buscan un control total y un flujo de trabajo más eficiente, eliminando
 la necesidad de usar el ratón y organizando las ventanas de forma lógica
-para maximizar el espacio en la pantalla.</p>
+para maximizar el espacio en la pantalla</p>
+<figure>
+<img alt="Sway" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_pAj-I-zA1OjBMacBDj1I_u7or2UcdpJwUl5nUWHRR0mi_zuGO0ek-Zl2G7NkpWIzfE0X-VfQLGlIdbGU0fekFNz0kBMPzz4I2tgwzguOwURh8rCy7vfwRhSiy2MoTk1-fo2yOSW9Bo0VfKFJmfHOVf7eeHAUIFs0jBpfmfKiWAgaFdcVnDF7n4V-GS4/s1366/captura.png"/>
+<figcaption aria-hidden="true">Sway</figcaption>
+</figure>
 <h2 id="instalación-de-paquetes-necesarios"><strong>📦 Instalación de
 Paquetes Necesarios</strong></h2>
 <p>Primero, instala todos los paquetes necesarios en Debian 12:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="fu">sudo</span> apt install sway waybar sway-notification-center swaykbdd wofi python3-i3ipc wlr-randr swaybg swayidle swaylock foot wl-clipboard wf-recorder wvkbd</span></code></pre></div>
+<p>Actualizar los repositorios:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
+<p>e instalar los paquetes:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt install sway waybar sway-notification-center swaykbdd wofi <span class="dt">\</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>    python3-i3ipc wlr-randr swaybg swayidle swaylock foot wl-clipboard <span class="dt">\</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    wf-recorder wvkbd grimshot grim slurp</span></code></pre></div>
 <p>Si prefieres <strong>Alacritty</strong> en lugar de
 <strong>Foot</strong> (otro terminal rápido para Wayland):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt install alacritty</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> apt install alacritty</span></code></pre></div>
 <h2 id="iniciar-y-salir-de-sway"><strong>🚀 Iniciar y Salir de
 Sway</strong></h2>
 <h3 id="iniciar-sway-desde-la-terminal-sin-gestor-de-inicio-de-sesión"><strong>Iniciar
@@ -61,118 +69,449 @@ Sway desde la terminal (sin gestor de inicio de sesión)</strong></h3>
 <p>Si usas un gestor de inicio como GDM o LightDM, selecciona Sway en la
 lista de sesiones.</p>
 <p>Si inicias sesión desde la terminal (TUI), ejecuta:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">sway</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="ex">sway</span></span></code></pre></div>
 <h3 id="salir-de-sway"><strong>Salir de Sway</strong></h3>
 <ul>
-<li><strong>Cerrar sesión</strong>: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + E</code> (te
+<li><strong>Cerrar sesión</strong>: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + E</code> (te
 pedirá confirmación).<br/>
 </li>
 <li><strong>Forzar cierre</strong> (si Sway se congela):
-<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Ctrl + Alt + F2</code> (cambia a TTY) y luego ejecuta:</li>
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Ctrl + Alt + F2</code> (cambia a TTY) y luego ejecuta:</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">killall</span> sway</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">killall</span> sway</span></code></pre></div>
+<p>con esto debería solucionarse</p>
 <hr/>
+<h1 id="atajos-de-teclado-combinaciones-de-teclas">Atajos de teclado
+(Combinaciones de teclas)</h1>
+<p>Las siguientes son las equivalencias para el teclado</p>
+<h3 id="mod-tecla-modificadora"><strong>Mod</strong> (Tecla
+modificadora)</h3>
+<p>En Sway, <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod</code> se refiere por defecto a la <strong>tecla
+Super</strong> (también llamada tecla Windows):</p>
+<ul>
+<li><strong>Tecla Windows/Super</strong>: La tecla con el logo de
+Windows en teclados estándar</li>
+<li><strong>Ubicación</strong>: Generalmente entre Ctrl y Alt, a la
+izquierda de la barra espaciadora</li>
+<li><strong>Símbolo</strong>: ⊞ o ❖</li>
+</ul>
+<h3 id="shift"><strong>Shift</strong></h3>
+<ul>
+<li><strong>Tecla Shift</strong>: La tecla de mayúsculas</li>
+<li><strong>Ubicación</strong>: Hay dos, una a cada lado del
+teclado</li>
+<li><strong>Puedes usar cualquiera de las dos</strong></li>
+</ul>
+<h3 id="minus"><strong>minus</strong></h3>
+<p>Se refiere al <strong>guión medio</strong> o <strong>signo
+menos</strong>:</p>
+<ul>
+<li><strong>Símbolo</strong>: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">-</code></li>
+<li><strong>Ubicación</strong>: En el teclado en español/latinoamericano
+está generalmente:</li>
+<li>Entre el <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">0</code> y el <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">=</code> en la fila de
+números</li>
+<li>O junto a la <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">ñ</code> dependiendo del layout</li>
+</ul>
+<h2 id="ejemplo-visual-de-la-combinación">Ejemplo visual de la
+combinación</h2>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">[Super] + [Shift] + [-]</code><br/>
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">❖    +    ⇧    +  -</code></p>
+<h2 id="en-la-práctica">En la práctica</h2>
+<p>Para ejecutar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + minus</code>:</p>
+<ol type="1">
+<li><strong>Mantén presionada</strong> la tecla Super/Windows (❖)</li>
+<li><strong>Mantén presionada</strong> Shift (⇧)</li>
+<li><strong>Presiona</strong> el guión/menos (-)</li>
+<li><strong>Suelta todas</strong> las teclas</li>
+</ol>
 <h2 id="atajos-de-teclado-básicos"><strong>⌨️ Atajos de Teclado
 Básicos</strong></h2>
-<p>Sway usa la tecla <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod</code> (normalmente la tecla
-<strong>Windows/Super</strong> o <strong>Alt</strong>) para los
-atajos.</p>
 <h3 id="movimiento-entre-ventanas"><strong>Movimiento entre
 ventanas</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + ← / → / ↑ / ↓</code> → Cambiar el foco entre
-ventanas.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ←</code> Enfocar ventana a la izquierda</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + →</code> Enfocar ventana a la derecha<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + ← / → / ↑ / ↓</code> → Mover ventana a otra
-dirección.<br/>
-</li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + h / j / k / l</code> (alternativa Vim-style).</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ↑</code> Enfocar ventana arriba</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ↓</code> Enfocar ventana abajo</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + flechas</code> → Mover ventana a otra
+dirección.</li>
+</ul>
+<p><strong>Alternativa con teclas vim:</strong></p>
+<ul>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + h</code> Izquierda</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + l</code> Derecha</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + k</code> Arriba</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + j</code> Abajo</li>
 </ul>
 <h3 id="gestión-de-ventanas"><strong>Gestión de ventanas</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Enter</code> → Abrir terminal (Foot/Alacritty).<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Enter</code> → Abrir terminal (Foot/Alacritty).<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + q</code> → Cerrar ventana.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + q</code> → Cerrar ventana.<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + f</code> → Pantalla completa.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + f</code> → Pantalla completa.<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + d</code> → Abrir lanzador de aplicaciones
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + d</code> → Abrir lanzador de aplicaciones
 (<strong>Wofi</strong>).<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + Espacio</code> → Cambiar a modo flotante (para
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + Espacio</code> → Cambiar a modo flotante (para
 mover ventanas libremente).<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Espacio</code> → Cambiar entre mosaico/flotante.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Espacio</code> → Cambiar entre mosaico/flotante.</li>
 </ul>
 <h3 id="gestión-de-espacios-de-trabajo-workspaces"><strong>Gestión de
 espacios de trabajo (workspaces)</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + 1-9</code> → Cambiar a workspace 1-9.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + 1-9</code> → Cambiar a workspace 1-9.<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + 1-9</code> → Mover ventana a workspace 1-9.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + 1-9</code> → Mover ventana a workspace 1-9.</li>
 </ul>
 <h3 id="gestión-de-monitores"><strong>Gestión de monitores</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + m</code> → Mover ventana a otro monitor.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + m</code> → Mover ventana a otro monitor.<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wlr-randr --output HDMI-1 --mode 1368x768@75.00</code> →
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">wlr-randr --output HDMI-1 --mode 1368x768@75.00</code> →
 Cambiar resolución y Hz.</li>
 </ul>
 <h3 id="bloqueo-de-pantalla"><strong>Bloqueo de pantalla</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">Mod + Escape</code> → Bloquear pantalla con
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Escape</code> → Bloquear pantalla con
 <strong>swaylock</strong>.</li>
 </ul>
 <h2 id="manejo-de-archivos-y-documentos"><strong>📂 Manejo de Archivos y
 Documentos</strong></h2>
-<p>Sway no incluye un gestor de archivos, pero puedes instalar uno:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> apt install thunar pcmanfm nautilus  <span class="co"># (elige uno)</span></span></code></pre></div>
+<p>Sway no incluye un gestor de archivos, puedes usar el que venga
+instalado o pero puedes instalar uno:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> apt install thunar pcmanfm nautilus  <span class="co"># (elige uno)</span></span></code></pre></div>
+<p>lo puedes abrir desde la terminal, según sea el nombre del
+administrador de archivos</p>
 <h3 id="abrir-archivos-desde-terminal"><strong>Abrir archivos desde
 terminal</strong></h3>
 <ul>
-<li>Usa <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">xdg-open</code> para abrir archivos con la aplicación
+<li>Usa <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">xdg-open</code> para abrir archivos con la aplicación
 predeterminada:</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">xdg-open</span> documento.pdf</span>
-<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="fu">xdg-open</span> imagen.png</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">xdg-open</span> documento.pdf</span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a><span class="fu">xdg-open</span> imagen.png</span></code></pre></div>
 <h3 id="gestión-del-portapapeles"><strong>Gestión del
 portapapeles</strong></h3>
 <ul>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wl-copy "texto"</code> → Copiar texto al portapapeles.<br/>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">wl-copy "texto"</code> → Copiar texto al portapapeles.<br/>
 </li>
-<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wl-paste</code> → Pegar texto.</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">wl-paste</code> → Pegar texto.</li>
 </ul>
 <h2 id="personalización-básica"><strong>🔧 Personalización
 Básica</strong></h2>
 <h3 id="configuración-de-sway-.configswayconfig"><strong>1.
-Configuración de Sway (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>)</strong></h3>
+Configuración de Sway (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>)</strong></h3>
 <p>Crea o edita el archivo de configuración:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/sway</span>
-<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a><span class="fu">cp</span> /etc/sway/config ~/.config/sway/  <span class="co"># Copia la configuración por defecto</span></span>
-<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a><span class="fu">nano</span> ~/.config/sway/config</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/sway</span>
+<span id="cb8-2"><a aria-hidden="true" href="#cb8-2" tabindex="-1"></a><span class="fu">cp</span> /etc/sway/config ~/.config/sway/  <span class="co"># Copia la configuración por defecto</span></span>
+<span id="cb8-3"><a aria-hidden="true" href="#cb8-3" tabindex="-1"></a><span class="fu">nano</span> ~/.config/sway/config</span></code></pre></div>
 <h3 id="barra-de-estado-waybar"><strong>2. Barra de estado
 (Waybar)</strong></h3>
 <p>Waybar se ejecuta automáticamente si está instalado. Para
 personalizarlo:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/waybar</span>
-<span id="cb8-2"><a aria-hidden="true" href="#cb8-2" tabindex="-1"></a><span class="fu">cp</span> /etc/xdg/waybar/config ~/.config/waybar/</span>
-<span id="cb8-3"><a aria-hidden="true" href="#cb8-3" tabindex="-1"></a><span class="fu">nano</span> ~/.config/waybar/config</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/waybar</span>
+<span id="cb9-2"><a aria-hidden="true" href="#cb9-2" tabindex="-1"></a><span class="fu">cp</span> /etc/xdg/waybar/config ~/.config/waybar/</span>
+<span id="cb9-3"><a aria-hidden="true" href="#cb9-3" tabindex="-1"></a><span class="fu">nano</span> ~/.config/waybar/config</span></code></pre></div>
 <h3 id="fondo-de-pantalla"><strong>3. Fondo de pantalla</strong></h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="ex">swaybg</span> <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="ex">swaybg</span> <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
 <p>Para que se ejecute al inicio, añádelo al archivo
-<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="bu">exec</span> swaybg <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="bu">exec</span> swaybg <span class="at">-i</span> ~/Imágenes/fondo.jpg <span class="at">-m</span> fill</span></code></pre></div>
 <h2 id="grabación-de-pantalla"><strong>🎥 Grabación de
 Pantalla</strong></h2>
-<p>Con <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">wf-recorder</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">-f</span> grabacion.mp4  <span class="co"># Iniciar grabación</span></span>
-<span id="cb11-2"><a aria-hidden="true" href="#cb11-2" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">--stop</span>            <span class="co"># Detener grabación</span></span></code></pre></div>
+<p>Con <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">wf-recorder</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">-f</span> grabacion.mp4  <span class="co"># Iniciar grabación</span></span>
+<span id="cb12-2"><a aria-hidden="true" href="#cb12-2" tabindex="-1"></a><span class="ex">wf-recorder</span> <span class="at">--stop</span>            <span class="co"># Detener grabación</span></span></code></pre></div>
+<hr/>
+<h1 id="capturas-de-pantalla-en-sway-guía-completa-con-grimshot-y-grim">Capturas
+de Pantalla en Sway: Guía Completa con Grimshot y Grim</h1>
+<p>Sway es un compositor de ventanas para Wayland que reemplaza las
+herramientas tradicionales de captura de pantalla de X11. En esta guía
+aprenderás a configurar y usar las herramientas más efectivas para
+capturar pantalla en Sway.</p>
+<h2 id="por-qué-las-herramientas-tradicionales-no-funcionan">¿Por qué
+las herramientas tradicionales no funcionan?</h2>
+<p>En entornos Wayland como Sway, las herramientas clásicas como
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">scrot</code> o <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">gnome-screenshot</code> no funcionan debido a
+las diferencias de seguridad y arquitectura. Necesitamos herramientas
+específicas para Wayland.</p>
+<h2 id="instalación-de-las-herramientas">Instalación de las
+Herramientas</h2>
+<h3 id="grim-la-base-fundamental">Grim: La base fundamental</h3>
+<p>Grim es la herramienta principal para capturas de pantalla en
+Wayland:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb13-2"><a aria-hidden="true" href="#cb13-2" tabindex="-1"></a><span class="fu">sudo</span> apt install grim slurp</span></code></pre></div>
+<ul>
+<li><strong>grim</strong>: Captura la pantalla</li>
+<li><strong>slurp</strong>: Permite seleccionar regiones
+específicas</li>
+</ul>
+<h3 id="grimshot-el-script-mejorado">Grimshot: El script mejorado</h3>
+<p>Aunque <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">sway-backgrounds</code> está instalado, grimshot no
+siempre viene incluido automáticamente. Necesitas instalarlo por
+separado:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb14-1"><a aria-hidden="true" href="#cb14-1" tabindex="-1"></a><span class="fu">sudo</span> apt install grimshot</span></code></pre></div>
+<h2 id="uso-básico-de-grim">Uso Básico de Grim</h2>
+<h3 id="capturas-simples">Capturas simples</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb15-1"><a aria-hidden="true" href="#cb15-1" tabindex="-1"></a><span class="co"># Capturar toda la pantalla</span></span>
+<span id="cb15-2"><a aria-hidden="true" href="#cb15-2" tabindex="-1"></a><span class="ex">grim</span> captura.png</span>
+<span id="cb15-3"><a aria-hidden="true" href="#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a aria-hidden="true" href="#cb15-4" tabindex="-1"></a><span class="co"># Capturar con timestamp</span></span>
+<span id="cb15-5"><a aria-hidden="true" href="#cb15-5" tabindex="-1"></a><span class="ex">grim</span> ~/Pictures/screenshot-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span>.png</span>
+<span id="cb15-6"><a aria-hidden="true" href="#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a aria-hidden="true" href="#cb15-7" tabindex="-1"></a><span class="co"># Capturar región específica</span></span>
+<span id="cb15-8"><a aria-hidden="true" href="#cb15-8" tabindex="-1"></a><span class="ex">grim</span> <span class="at">-g</span> <span class="st">"</span><span class="va">$(</span><span class="ex">slurp</span><span class="va">)</span><span class="st">"</span> captura-region.png</span>
+<span id="cb15-9"><a aria-hidden="true" href="#cb15-9" tabindex="-1"></a></span>
+<span id="cb15-10"><a aria-hidden="true" href="#cb15-10" tabindex="-1"></a><span class="co"># Capturar ventana específica</span></span>
+<span id="cb15-11"><a aria-hidden="true" href="#cb15-11" tabindex="-1"></a><span class="ex">grim</span> <span class="at">-g</span> <span class="st">"</span><span class="va">$(</span><span class="ex">swaymsg</span> <span class="at">-t</span> get_tree <span class="kw">|</span> <span class="ex">jq</span> <span class="at">-j</span> <span class="st">'.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"'</span><span class="va">)</span><span class="st">"</span> ventana.png</span></code></pre></div>
+<h3 id="opciones-avanzadas">Opciones avanzadas</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb16-1"><a aria-hidden="true" href="#cb16-1" tabindex="-1"></a><span class="co"># Capturar con calidad específica</span></span>
+<span id="cb16-2"><a aria-hidden="true" href="#cb16-2" tabindex="-1"></a><span class="ex">grim</span> <span class="at">-q</span> 100 captura-hq.png</span>
+<span id="cb16-3"><a aria-hidden="true" href="#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a aria-hidden="true" href="#cb16-4" tabindex="-1"></a><span class="co"># Capturar en formato específico</span></span>
+<span id="cb16-5"><a aria-hidden="true" href="#cb16-5" tabindex="-1"></a><span class="ex">grim</span> <span class="at">-t</span> jpeg captura.jpg</span>
+<span id="cb16-6"><a aria-hidden="true" href="#cb16-6" tabindex="-1"></a></span>
+<span id="cb16-7"><a aria-hidden="true" href="#cb16-7" tabindex="-1"></a><span class="co"># Capturar monitor específico</span></span>
+<span id="cb16-8"><a aria-hidden="true" href="#cb16-8" tabindex="-1"></a><span class="ex">grim</span> <span class="at">-o</span> DP-1 monitor1.png</span></code></pre></div>
+<h2 id="uso-de-grimshot">Uso de Grimshot</h2>
+<p>Grimshot es un wrapper que simplifica el uso de grim y añade
+funcionalidades adicionales.</p>
+<h3 id="comandos-principales">Comandos principales</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb17-1"><a aria-hidden="true" href="#cb17-1" tabindex="-1"></a><span class="co"># Capturar toda la pantalla al portapapeles</span></span>
+<span id="cb17-2"><a aria-hidden="true" href="#cb17-2" tabindex="-1"></a><span class="ex">grimshot</span> copy output</span>
+<span id="cb17-3"><a aria-hidden="true" href="#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a aria-hidden="true" href="#cb17-4" tabindex="-1"></a><span class="co"># Capturar región seleccionada al portapapeles</span></span>
+<span id="cb17-5"><a aria-hidden="true" href="#cb17-5" tabindex="-1"></a><span class="ex">grimshot</span> copy area</span>
+<span id="cb17-6"><a aria-hidden="true" href="#cb17-6" tabindex="-1"></a></span>
+<span id="cb17-7"><a aria-hidden="true" href="#cb17-7" tabindex="-1"></a><span class="co"># Capturar ventana activa al portapapeles</span></span>
+<span id="cb17-8"><a aria-hidden="true" href="#cb17-8" tabindex="-1"></a><span class="ex">grimshot</span> copy active</span>
+<span id="cb17-9"><a aria-hidden="true" href="#cb17-9" tabindex="-1"></a></span>
+<span id="cb17-10"><a aria-hidden="true" href="#cb17-10" tabindex="-1"></a><span class="co"># Capturar ventana específica al portapapeles</span></span>
+<span id="cb17-11"><a aria-hidden="true" href="#cb17-11" tabindex="-1"></a><span class="ex">grimshot</span> copy window</span></code></pre></div>
+<h3 id="guardar-como-archivos">Guardar como archivos</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb18-1"><a aria-hidden="true" href="#cb18-1" tabindex="-1"></a><span class="co"># Guardar captura completa</span></span>
+<span id="cb18-2"><a aria-hidden="true" href="#cb18-2" tabindex="-1"></a><span class="ex">grimshot</span> save output ~/captura.png</span>
+<span id="cb18-3"><a aria-hidden="true" href="#cb18-3" tabindex="-1"></a></span>
+<span id="cb18-4"><a aria-hidden="true" href="#cb18-4" tabindex="-1"></a><span class="co"># Guardar región seleccionada</span></span>
+<span id="cb18-5"><a aria-hidden="true" href="#cb18-5" tabindex="-1"></a><span class="ex">grimshot</span> save area ~/captura.png</span>
+<span id="cb18-6"><a aria-hidden="true" href="#cb18-6" tabindex="-1"></a></span>
+<span id="cb18-7"><a aria-hidden="true" href="#cb18-7" tabindex="-1"></a><span class="co"># Guardar ventana activa</span></span>
+<span id="cb18-8"><a aria-hidden="true" href="#cb18-8" tabindex="-1"></a><span class="ex">grimshot</span> save active ~/captura.png</span>
+<span id="cb18-9"><a aria-hidden="true" href="#cb18-9" tabindex="-1"></a></span>
+<span id="cb18-10"><a aria-hidden="true" href="#cb18-10" tabindex="-1"></a><span class="co"># Guardar con nombre automático</span></span>
+<span id="cb18-11"><a aria-hidden="true" href="#cb18-11" tabindex="-1"></a><span class="ex">grimshot</span> save output ~/Pictures/screenshot-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span>.png</span></code></pre></div>
+<h2 id="configuración-de-atajos-de-teclado">Configuración de Atajos de
+Teclado</h2>
+<p>Edita tu archivo de configuración de Sway
+(<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">~/.config/sway/config</code>):</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb19-1"><a aria-hidden="true" href="#cb19-1" tabindex="-1"></a><span class="co"># Capturas básicas con grim</span></span>
+<span id="cb19-2"><a aria-hidden="true" href="#cb19-2" tabindex="-1"></a><span class="ex">bindsym</span> Print exec grim ~/Pictures/screenshot-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span>.png</span>
+<span id="cb19-3"><a aria-hidden="true" href="#cb19-3" tabindex="-1"></a><span class="ex">bindsym</span> Shift+Print exec grim <span class="at">-g</span> <span class="st">"</span><span class="va">$(</span><span class="ex">slurp</span><span class="va">)</span><span class="st">"</span> ~/Pictures/screenshot-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span>.png</span>
+<span id="cb19-4"><a aria-hidden="true" href="#cb19-4" tabindex="-1"></a></span>
+<span id="cb19-5"><a aria-hidden="true" href="#cb19-5" tabindex="-1"></a><span class="co"># Capturas con grimshot (recomendado)</span></span>
+<span id="cb19-6"><a aria-hidden="true" href="#cb19-6" tabindex="-1"></a><span class="ex">bindsym</span> Print exec grimshot copy output</span>
+<span id="cb19-7"><a aria-hidden="true" href="#cb19-7" tabindex="-1"></a><span class="ex">bindsym</span> Shift+Print exec grimshot copy area</span>
+<span id="cb19-8"><a aria-hidden="true" href="#cb19-8" tabindex="-1"></a><span class="ex">bindsym</span> Ctrl+Print exec grimshot copy active</span>
+<span id="cb19-9"><a aria-hidden="true" href="#cb19-9" tabindex="-1"></a><span class="ex">bindsym</span> Alt+Print exec grimshot save output ~/Pictures/screenshot-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span>.png</span>
+<span id="cb19-10"><a aria-hidden="true" href="#cb19-10" tabindex="-1"></a></span>
+<span id="cb19-11"><a aria-hidden="true" href="#cb19-11" tabindex="-1"></a><span class="co"># Captura con notificación</span></span>
+<span id="cb19-12"><a aria-hidden="true" href="#cb19-12" tabindex="-1"></a><span class="ex">bindsym</span> Print exec grimshot copy output <span class="kw">&amp;&amp;</span> <span class="ex">notify-send</span> <span class="st">"Captura copiada al portapapeles"</span></span></code></pre></div>
+<p>Después de modificar la configuración:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb20-1"><a aria-hidden="true" href="#cb20-1" tabindex="-1"></a><span class="co"># Recargar configuración de Sway</span></span>
+<span id="cb20-2"><a aria-hidden="true" href="#cb20-2" tabindex="-1"></a><span class="ex">swaymsg</span> reload</span>
+<span id="cb20-3"><a aria-hidden="true" href="#cb20-3" tabindex="-1"></a><span class="co"># O usar el atajo: Super+Shift+C</span></span></code></pre></div>
+<h2 id="trabajando-con-el-portapapeles">Trabajando con el
+Portapapeles</h2>
+<h3 id="verificar-contenido-del-portapapeles">Verificar contenido del
+portapapeles</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb21-1"><a aria-hidden="true" href="#cb21-1" tabindex="-1"></a><span class="co"># Instalar herramientas de portapapeles</span></span>
+<span id="cb21-2"><a aria-hidden="true" href="#cb21-2" tabindex="-1"></a><span class="fu">sudo</span> apt install wl-clipboard</span>
+<span id="cb21-3"><a aria-hidden="true" href="#cb21-3" tabindex="-1"></a></span>
+<span id="cb21-4"><a aria-hidden="true" href="#cb21-4" tabindex="-1"></a><span class="co"># Ver tipos de contenido disponibles</span></span>
+<span id="cb21-5"><a aria-hidden="true" href="#cb21-5" tabindex="-1"></a><span class="ex">wl-paste</span> <span class="at">--list-types</span></span>
+<span id="cb21-6"><a aria-hidden="true" href="#cb21-6" tabindex="-1"></a></span>
+<span id="cb21-7"><a aria-hidden="true" href="#cb21-7" tabindex="-1"></a><span class="co"># Guardar imagen del portapapeles a archivo</span></span>
+<span id="cb21-8"><a aria-hidden="true" href="#cb21-8" tabindex="-1"></a><span class="ex">wl-paste</span> <span class="op">&gt;</span> imagen-desde-portapapeles.png</span>
+<span id="cb21-9"><a aria-hidden="true" href="#cb21-9" tabindex="-1"></a></span>
+<span id="cb21-10"><a aria-hidden="true" href="#cb21-10" tabindex="-1"></a><span class="co"># Copiar archivo al portapapeles</span></span>
+<span id="cb21-11"><a aria-hidden="true" href="#cb21-11" tabindex="-1"></a><span class="ex">wl-copy</span> <span class="op">&lt;</span> imagen.png</span></code></pre></div>
+<h3 id="scripts-útiles">Scripts útiles</h3>
+<p>Crear un script personalizado para capturas automáticas:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb22-1"><a aria-hidden="true" href="#cb22-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb22-2"><a aria-hidden="true" href="#cb22-2" tabindex="-1"></a><span class="co"># Guardar como ~/bin/captura</span></span>
+<span id="cb22-3"><a aria-hidden="true" href="#cb22-3" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/Pictures/screenshots</span>
+<span id="cb22-4"><a aria-hidden="true" href="#cb22-4" tabindex="-1"></a><span class="va">FILENAME</span><span class="op">=</span><span class="st">"screenshot-</span><span class="va">$(</span><span class="fu">date</span> +%Y%m%d-%H%M%S<span class="va">)</span><span class="st">.png"</span></span>
+<span id="cb22-5"><a aria-hidden="true" href="#cb22-5" tabindex="-1"></a><span class="ex">grimshot</span> save output ~/Pictures/screenshots/<span class="va">$FILENAME</span></span>
+<span id="cb22-6"><a aria-hidden="true" href="#cb22-6" tabindex="-1"></a><span class="ex">notify-send</span> <span class="st">"Captura guardada"</span> <span class="st">"</span><span class="va">$FILENAME</span><span class="st">"</span></span></code></pre></div>
+<p>Hacer el script ejecutable:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb23-1"><a aria-hidden="true" href="#cb23-1" tabindex="-1"></a><span class="fu">chmod</span> +x ~/bin/captura</span></code></pre></div>
+<h2 id="solución-de-problemas-comunes">Solución de Problemas
+Comunes</h2>
+<h3 id="grimshot-no-encontrado">Grimshot no encontrado</h3>
+<p>Si <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">grimshot</code> no está disponible después de instalar
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">sway-backgrounds</code>:</p>
+<ol type="1">
+<li>Verificar instalación: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">which grimshot</code></li>
+<li>Instalar manualmente desde el repositorio de Sway</li>
+<li>Usar grim directamente como alternativa</li>
+</ol>
+<h3 id="permisos-de-captura">Permisos de captura</h3>
+<p>En algunos casos, necesitas permisos específicos:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb24-1"><a aria-hidden="true" href="#cb24-1" tabindex="-1"></a><span class="co"># Agregar usuario al grupo video</span></span>
+<span id="cb24-2"><a aria-hidden="true" href="#cb24-2" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-a</span> <span class="at">-G</span> video <span class="va">$USER</span></span></code></pre></div>
+<h3 id="capturas-en-negro">Capturas en negro</h3>
+<p>Si las capturas salen en negro, puede ser un problema de drivers
+gráficos:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb25-1"><a aria-hidden="true" href="#cb25-1" tabindex="-1"></a><span class="co"># Usar software rendering temporalmente</span></span>
+<span id="cb25-2"><a aria-hidden="true" href="#cb25-2" tabindex="-1"></a><span class="va">LIBGL_ALWAYS_SOFTWARE</span><span class="op">=</span>1 <span class="ex">grimshot</span> copy output</span></code></pre></div>
+<h2 id="comparación-grim-vs-grimshot">Comparación: Grim vs Grimshot</h2>
+<div style="width: 100%; overflow-x: auto; margin-bottom: 1em;"><table style="border-collapse: collapse; width: 100%; table-layout: auto; white-space: normal; word-break: normal; overflow-wrap: break-word; border: 1px solid #333333; font-size: 80%;">
+<thead>
+<tr class="header" style="background-color: #fcebea;">
+<th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Característica</th>
+<th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Grim</th>
+<th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Grimshot</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" style="background-color: #ffffff;">
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Velocidad</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Muy rápida</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Rápida</td>
+</tr>
+<tr class="even" style="background-color: #f9f9f9;">
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Simplicidad</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Comando directo</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Wrapper simplificado</td>
+</tr>
+<tr class="odd" style="background-color: #ffffff;">
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Portapapeles</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Requiere wl-copy</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Integrado</td>
+</tr>
+<tr class="even" style="background-color: #f9f9f9;">
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Flexibilidad</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Máxima</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Buena</td>
+</tr>
+<tr class="odd" style="background-color: #ffffff;">
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Dependencias</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Mínimas</td>
+<td style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;">Más herramientas</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="conclusión">Conclusión</h2>
+<p>Para la mayoría de usuarios, <strong>grimshot</strong> es la opción
+más conveniente por su simplicidad y integración con el portapapeles.
+<strong>Grim</strong> ofrece más control granular para casos
+específicos.</p>
+<p>La combinación de ambas herramientas te permitirá manejar cualquier
+escenario de captura de pantalla en tu entorno Sway de manera
+eficiente.</p>
+<hr/>
+<h1 id="solución-a-problemas-de-ventanas-perdidas-en-sway">Solución a
+problemas de ventanas perdidas en Sway</h1>
+<h2 id="el-problema">El Problema</h2>
+<p>Si usas Sway (el compositor de ventanas para Wayland) y te encuentras
+en esta situación:</p>
+<ul>
+<li>Tienes varias ventanas abiertas en modo flotante</li>
+<li>Una ventana se maximiza o va a pantalla completa (como gwenview al
+abrir una imagen)</li>
+<li>Cambias esa ventana a modo flotante con
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + Espacio</code></li>
+<li>Las otras ventanas “desaparecen” detrás y no puedes acceder a
+ellas</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Alt + Tab</code> no funciona para cambiar entre ventanas</li>
+</ul>
+<p><strong>¡No te preocupes!</strong> Tus ventanas siguen ahí, solo
+están ocultas. Este tutorial te enseñará cómo recuperarlas y evitar que
+vuelva a pasar.</p>
+<h2 id="soluciones-inmediatas">Soluciones Inmediatas</h2>
+<h3 id="método-1-navegación-con-teclado">Método 1: Navegación con
+teclado</h3>
+<p>Usa las teclas de dirección para moverte entre ventanas:</p>
+<ul>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ←</code> Enfocar ventana a la izquierda</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + →</code> Enfocar ventana a la derecha<br/>
+</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ↑</code> #Enfocar ventana arriba</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + ↓</code> Enfocar ventana abajo</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + flechas</code> → Mover ventana a otra
+dirección.</li>
+</ul>
+<p><strong>Alternativa con teclas vim:</strong></p>
+<ul>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + h</code> Izquierda</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + l</code> Derecha</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + k</code> Arriba</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + j</code> Abajo</li>
+</ul>
+<h3 id="alternar-entre-ventanas-flotantes-y-en-mosaico">Alternar entre
+ventanas flotantes y en mosaico</h3>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Ctrl + Espacio</code> Cambiar foco entre ventanas
+flotantes y tiling</p>
+<h2 id="consejos-adicionales">Consejos Adicionales</h2>
+<h3 id="gestión-preventiva">Gestión Preventiva</h3>
+<ul>
+<li><strong>Usa workspaces:</strong> <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + [1-9]</code> para
+cambiar entre espacios de trabajo</li>
+<li><strong>Organiza por tipo:</strong> Terminales en workspace 1,
+navegador en 2, etc.</li>
+<li><strong>Modo picture-in-picture:</strong>
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + Espacio</code> seguido de redimensionar con
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + r</code></li>
+</ul>
+<h3 id="si-nada-funciona">Si nada funciona</h3>
+<p>Como último recurso, puedes reiniciar Sway sin perder tu trabajo:</p>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + e</code> Menú de salida</p>
+<p>Selecciona “Reload” en lugar de “Exit”.</p>
+<h2 id="flujo-de-trabajo-recomendado">Flujo de Trabajo Recomendado</h2>
+<ol type="1">
+<li><strong>Abre aplicaciones en orden:</strong> Primero las que usarás
+como base (terminales, editor)</li>
+<li><strong>Usa workspaces:</strong> Separa aplicaciones por
+función</li>
+<li><strong>Modo flotante solo cuando sea necesario:</strong> La mayoría
+del tiempo, el modo tiling es más eficiente</li>
+<li><strong>Aprende los atajos:</strong> Memoriza <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + w</code>,
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + e</code>, <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + s</code> para cambios rápidos de
+layout</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Si las ventanas siguen sin aparecer:</strong></p>
+<ul>
+<li>Verifica que no estén minimizadas: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + Shift + minus</code>
+para minimizar/restaurar</li>
+<li>Revisa si están en otro workspace: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">Mod + [número]</code></li>
+<li>Usa <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">swaymsg -t get_workspaces</code> para ver todos los
+espacios de trabajo activos</li>
+</ul>
+<p><strong>Si Alt + Tab definitivamente no funciona:</strong></p>
+<ul>
+<li>Instala un switcher alternativo como <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">wofi</code> o
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">rofi</code></li>
+<li>O usa los atajos nativos de Sway mencionados arriba</li>
+</ul>
 <hr/>
 <h2 id="consejos-finales"><strong>🔍 Consejos Finales</strong></h2>
 <ul>
 <li>Si algo no funciona, revisa los logs con:</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">-u</span> sway <span class="at">--no-pager</span> <span class="at">-f</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb26-1"><a aria-hidden="true" href="#cb26-1" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">-u</span> sway <span class="at">--no-pager</span> <span class="at">-f</span></span></code></pre></div>
 <ul>
-<li>Para aprender más comandos, ejecuta <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Courier New', Courier, monospace; color: #c7254e; font-size: 90%; ">man sway</code>.</li>
+<li>Para aprender más comandos, ejecuta <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; color: #c7254e; font-size: 90%; ">man sway</code>.</li>
 </ul>
+<h2 id="conclusión-1">Conclusión</h2>
+<p>Los gestores de ventanas como Sway requieren un poco de curva de
+aprendizaje, pero una vez que dominas estos comandos básicos, la
+productividad aumenta significativamente. La clave está en entender que
+las ventanas no desaparecen, solo cambian de contexto, y siempre hay una
+forma de navegar de vuelta a ellas.</p>

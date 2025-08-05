@@ -13,6 +13,7 @@ En resumen, un administrador de ventanas Tiling como lo es Sway es una herramien
 
 ![Sway](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_pAj-I-zA1OjBMacBDj1I_u7or2UcdpJwUl5nUWHRR0mi_zuGO0ek-Zl2G7NkpWIzfE0X-VfQLGlIdbGU0fekFNz0kBMPzz4I2tgwzguOwURh8rCy7vfwRhSiy2MoTk1-fo2yOSW9Bo0VfKFJmfHOVf7eeHAUIFs0jBpfmfKiWAgaFdcVnDF7n4V-GS4/s1366/captura.png)
 
+
 ## **📦 Instalación de Paquetes Necesarios**  
 Primero, instala todos los paquetes necesarios en Debian 12:   
 
@@ -56,6 +57,8 @@ sway
 killall sway
 ```
 
+con esto debería solucionarse
+
 ---
 
 # Atajos de teclado (Combinaciones de teclas)
@@ -63,32 +66,36 @@ Las siguientes son las equivalencias para el teclado
 
 ### **Mod** (Tecla modificadora)
 En Sway, `Mod` se refiere por defecto a la **tecla Super** (también llamada tecla Windows):
+
 - **Tecla Windows/Super**: La tecla con el logo de Windows en teclados estándar
 - **Ubicación**: Generalmente entre Ctrl y Alt, a la izquierda de la barra espaciadora
 - **Símbolo**: ⊞ o ❖
 
 ### **Shift** 
+
 - **Tecla Shift**: La tecla de mayúsculas
 - **Ubicación**: Hay dos, una a cada lado del teclado
 - **Puedes usar cualquiera de las dos**
 
 ### **minus**
 Se refiere al **guión medio** o **signo menos**:
-- **Símbolo**: `-`
-- **Ubicación**: En el teclado en español/latinoamericano está generalmente:
+
+  - **Símbolo**: `-`
+  - **Ubicación**: En el teclado en español/latinoamericano está generalmente:
   - Entre el `0` y el `=` en la fila de números
   - O junto a la `ñ` dependiendo del layout
 
 ## Ejemplo visual de la combinación
 
-```plaintext
-[Super] + [Shift] + [-]
-   ❖    +   ⇧    + -
+```
+[Super] + [Shift] + [-]   
+   ❖    +    ⇧    +  -
 ```
 
 ## En la práctica
 
 Para ejecutar `Mod + Shift + minus`:
+
 1. **Mantén presionada** la tecla Super/Windows (❖)
 2. **Mantén presionada** Shift (⇧) 
 3. **Presiona** el guión/menos (-)
@@ -98,11 +105,11 @@ Para ejecutar `Mod + Shift + minus`:
 ## **⌨️ Atajos de Teclado Básicos**  
 
 ### **Movimiento entre ventanas**  
+
 - `Mod + ←`   Enfocar ventana a la izquierda
 - `Mod + →`   Enfocar ventana a la derecha  
 - `Mod + ↑`   Enfocar ventana arriba
 - `Mod + ↓`    Enfocar ventana abajo
-
 - `Mod + Shift + flechas` → Mover ventana a otra dirección.  
 
 **Alternativa con teclas vim:**
@@ -303,7 +310,7 @@ grimshot save output ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
 
 Edita tu archivo de configuración de Sway (`~/.config/sway/config`):
 
-```config
+```bash
 # Capturas básicas con grim
 bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
 bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
@@ -432,7 +439,6 @@ Usa las teclas de dirección para moverte entre ventanas:
 - `Mod + →`   Enfocar ventana a la derecha  
 - `Mod + ↑`  #Enfocar ventana arriba
 - `Mod + ↓`    Enfocar ventana abajo
-
 - `Mod + Shift + flechas` → Mover ventana a otra dirección.  
 
 **Alternativa con teclas vim:**
@@ -449,15 +455,16 @@ Usa las teclas de dirección para moverte entre ventanas:
 ## Consejos Adicionales
 
 ### Gestión Preventiva
+
 - **Usa workspaces:** `Mod + [1-9]` para cambiar entre espacios de trabajo
 - **Organiza por tipo:** Terminales en workspace 1, navegador en 2, etc.
 - **Modo picture-in-picture:** `Mod + Shift + Espacio` seguido de redimensionar con `Mod + r`
 
 ### Si nada funciona
 Como último recurso, puedes reiniciar Sway sin perder tu trabajo:
-```
-Mod + Shift + e  # Menú de salida
-```
+
+`Mod + Shift + e` Menú de salida
+
 Selecciona "Reload" en lugar de "Exit".
 
 ## Flujo de Trabajo Recomendado
@@ -470,11 +477,13 @@ Selecciona "Reload" en lugar de "Exit".
 ## Troubleshooting
 
 **Si las ventanas siguen sin aparecer:**
+
 - Verifica que no estén minimizadas: `Mod + Shift + minus` para minimizar/restaurar
 - Revisa si están en otro workspace: `Mod + [número]`
 - Usa `swaymsg -t get_workspaces` para ver todos los espacios de trabajo activos
 
 **Si Alt + Tab definitivamente no funciona:**
+
 - Instala un switcher alternativo como `wofi` o `rofi`
 - O usa los atajos nativos de Sway mencionados arriba
 

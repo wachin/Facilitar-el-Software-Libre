@@ -73,7 +73,7 @@ Si usted es curioso y desea saber cómo obtuve este enlace pues es desde:
 
 [https://www.kernel.org/](https://www.kernel.org/)
 
-![kernel.org pub](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfsPXnnnoIbVGBKQbUnSLtEZmeuwM5UPMvUtrH_Ji2ve3U5wkp_Pbd7Og23N7JozXapO1MvfRu7f8Id2lyEpV0Amtx5rLGtspXzYfuG4tuFS3ZRYx70lJKltEl5pGj13cuSNU3THsqffnR1y3nxUaQdxpNGucgfJQ3V92e3o84XKqiEtyqhIHmD0IxQxY/s909/20240503-045223%20kernel.org%20pub.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfsPXnnnoIbVGBKQbUnSLtEZmeuwM5UPMvUtrH_Ji2ve3U5wkp_Pbd7Og23N7JozXapO1MvfRu7f8Id2lyEpV0Amtx5rLGtspXzYfuG4tuFS3ZRYx70lJKltEl5pGj13cuSNU3THsqffnR1y3nxUaQdxpNGucgfJQ3V92e3o84XKqiEtyqhIHmD0IxQxY/s909/20240503-045223%20kernel.org%20pub.png)
 
 ese link es este:
 
@@ -89,21 +89,21 @@ y allí clic a:
 
 y allí clic a Kernel:
 
-![clic al kernel linux](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8DMIjfj67dq3jeyORceV5w8Xq6Rg62C189aAYNbxZOeoa_tquSFPCvnusfoTsPWCV2U8tz0zVup1ieDnHgRAZNFj6ZWJLOHOdX2aEMy7wZ0MSzWKW_QIOtJ-o7X2jqUiVP1q65nuFgbjb0kQ4AFjMe7BCXpnrJXmG8RbYc3ygctDCkL33fWDwWhKa4OA/s553/20240503-045709%20clic%20al%20kernel%20linux.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8DMIjfj67dq3jeyORceV5w8Xq6Rg62C189aAYNbxZOeoa_tquSFPCvnusfoTsPWCV2U8tz0zVup1ieDnHgRAZNFj6ZWJLOHOdX2aEMy7wZ0MSzWKW_QIOtJ-o7X2jqUiVP1q65nuFgbjb0kQ4AFjMe7BCXpnrJXmG8RbYc3ygctDCkL33fWDwWhKa4OA/s553/20240503-045709%20clic%20al%20kernel%20linux.png)
 
 y allí clic a projects:
 
-![clic a projects](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2DabXo0PEXbl3sznArSpQ669QtPmECDOBYWpGK4akBrYkwtiHQ1EtR_0lCSUsOvTsriBACQlcbDWSa9fuB4AD0pQeh6d9DH0dk9SqLTXdRnXK5WqWfLwd1LGO2Vrg1qknlmMRnxr4HMaWuvJ4FLIoGgxO5MTT6KoYi0kZFpjhdGTI7wqkZydu5NxrJx8/s621/20240503-045954%20clic%20a%20projects.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2DabXo0PEXbl3sznArSpQ669QtPmECDOBYWpGK4akBrYkwtiHQ1EtR_0lCSUsOvTsriBACQlcbDWSa9fuB4AD0pQeh6d9DH0dk9SqLTXdRnXK5WqWfLwd1LGO2Vrg1qknlmMRnxr4HMaWuvJ4FLIoGgxO5MTT6KoYi0kZFpjhdGTI7wqkZydu5NxrJx8/s621/20240503-045954%20clic%20a%20projects.png)
 
 y allí clic a rt (Real Time):
 
-![clic a rt](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNd5cnNqFx0k944x2oChMmT48N6ga7xBa9OUQW9v_pBzcrjpHnxWUCpcmFTm7XnELVFcnefoSwWT_qUVs8ZQxt_o9iB1Y2M-KzOP8BecLIORNfAtrS_ksViKCHnDG7utdRoa_0KKC3ZRDh5XmL5hUB-iZ2sckW1DH-DQSMYqat69pVtVOsJ9JkN_jVEMc/s559/20240503-050057%20clic%20a%20rt.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNd5cnNqFx0k944x2oChMmT48N6ga7xBa9OUQW9v_pBzcrjpHnxWUCpcmFTm7XnELVFcnefoSwWT_qUVs8ZQxt_o9iB1Y2M-KzOP8BecLIORNfAtrS_ksViKCHnDG7utdRoa_0KKC3ZRDh5XmL5hUB-iZ2sckW1DH-DQSMYqat69pVtVOsJ9JkN_jVEMc/s559/20240503-050057%20clic%20a%20rt.png)
 
 y clic a la versión 5.10 y veo que si hay uno y entro allí:
 
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/)
 
-![Si hay parche Real Time para Kernel 5.10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv6YfSnolX-zvbVqcci00co9x5gxJl5c2s-h3P076d7A0Ygh0qjr6KjJXJWsTN0PqEFSLF31ogDA0ICUDqZB1D1CIfRzqeSnYRQy_hE8Uazr_9jScxeaqBLxHLUo89ztCIlTp5I0VbqHf5Xn0mfKW20IFiArO_EUIqzCbmf0GJM-1iz1IYs5p0rE3YIZU/s620/20240624-221924%20Si%20hay%20parche%20Real%20Time%20para%20Kernel%205.10.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv6YfSnolX-zvbVqcci00co9x5gxJl5c2s-h3P076d7A0Ygh0qjr6KjJXJWsTN0PqEFSLF31ogDA0ICUDqZB1D1CIfRzqeSnYRQy_hE8Uazr_9jScxeaqBLxHLUo89ztCIlTp5I0VbqHf5Xn0mfKW20IFiArO_EUIqzCbmf0GJM-1iz1IYs5p0rE3YIZU/s620/20240624-221924%20Si%20hay%20parche%20Real%20Time%20para%20Kernel%205.10.png)
 
 **Nota:** En el repositorio de parches RT para Linux, el archivo `patch` contiene **todos los cambios en un único parche**, ideal para aplicar rápidamente y compilar el kernel con soporte _real-time_. En cambio, `patches` es un paquete con **varios parches individuales**, útil si se quiere revisar o aplicar cambios de forma selectiva. Para una compilación estándar, lo más práctico es usar el `patch` único.
 
@@ -123,11 +123,11 @@ Como ya tengo el enlace del Kernel, entro en:
 
 busco allí uno 5x
 
-![Kernel 5x](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqYm8kAECYMPoxFSImkJ2YfRPCBd2oyWhkpjCIkXkxZNeb90hV3z3iTDMS1KhHqRlhO4nsPo702mS9yHhd3lSaqnH3lJ1amkNcjNmcnntggeHj9kkaJame4GRmvVBqYKBBeiiHPK3oNICSpyS7uzqPxgaVgkh6PMvk-lfDbkufz2GLk7ZR87_Dc0X1XXw/s640/20240624-222141%20Kernel%205x.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqYm8kAECYMPoxFSImkJ2YfRPCBd2oyWhkpjCIkXkxZNeb90hV3z3iTDMS1KhHqRlhO4nsPo702mS9yHhd3lSaqnH3lJ1amkNcjNmcnntggeHj9kkaJame4GRmvVBqYKBBeiiHPK3oNICSpyS7uzqPxgaVgkh6PMvk-lfDbkufz2GLk7ZR87_Dc0X1XXw/s640/20240624-222141%20Kernel%205x.png)
 
 y voy a buscar el Kernel con las siguientes palabras: `linux-5.10.` con `Crtl + F` buscaré el más actual:
 
-![el más actual es ese](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji7SIjUxwE9vfsXo1CpMvg7OsbgEUtlXebSrqegD8UJihgB_lf6DEVshLqYG1rmfGiKVCvBQ8hyvvT9sM3LM-U0SZQZZGwv6SizCGmUKGcXC8qCOeqxzkNtgR-bQG_xsRcUCqrgQ6ioZXjXoMpXGXp7ZHnlr9rWNOwurwa2CVcPFQLQYk9b4cxJQXmpV4/s724/20240624-222406%20el%20m%C3%A1s%20actual%20es%20ese.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji7SIjUxwE9vfsXo1CpMvg7OsbgEUtlXebSrqegD8UJihgB_lf6DEVshLqYG1rmfGiKVCvBQ8hyvvT9sM3LM-U0SZQZZGwv6SizCGmUKGcXC8qCOeqxzkNtgR-bQG_xsRcUCqrgQ6ioZXjXoMpXGXp7ZHnlr9rWNOwurwa2CVcPFQLQYk9b4cxJQXmpV4/s724/20240624-222406%20el%20m%C3%A1s%20actual%20es%20ese.png)
 
 y copio aquí el nombre y la descripción:
 
@@ -145,8 +145,9 @@ Sea como sea que descarguen los archivos recomiendo que los tengan dentro de una
 wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.218-rt110.patch.xz
 wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.220.tar.xz
 ```
+para descargarlos:
 
-![donde tengo el kernel 5.10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz39qlv43eEhW-GBcVWqMYQWLh6LvElIfFoq-0MPofyfN5zU83RBkdtRI-uKSPfZraTzp86CzTc2flrTOJ9ScwBU2cTFMCqq-7F1Lzal1NkgLzp7gyyofZx87zjRqv5jumy43GyGpxPXn8eDxyFbMws8iHYd0oE9dnPWQQJCEERGRTOi26p6MY-uM0GK4/s904/20240624-232621%20donde%20tengo%20el%20kernel%205.10.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz39qlv43eEhW-GBcVWqMYQWLh6LvElIfFoq-0MPofyfN5zU83RBkdtRI-uKSPfZraTzp86CzTc2flrTOJ9ScwBU2cTFMCqq-7F1Lzal1NkgLzp7gyyofZx87zjRqv5jumy43GyGpxPXn8eDxyFbMws8iHYd0oE9dnPWQQJCEERGRTOi26p6MY-uM0GK4/s904/20240624-232621%20donde%20tengo%20el%20kernel%205.10.png)
 
 ## Extracción y parchado del Kernel
 
@@ -162,7 +163,7 @@ tar xJvf linux-5.10.220.tar.xz
 
 como sea que usted descomprima el archivo debe que darle así:
 
-![descomprimido](https://blogger.googleusercontent.com/img/a/AVvXsEgVR0YljqUxQ7AJsBWBnNmD9N-CiQYrieDsWeZzSj_fRhv6Z1BvbRSPl6sGGisLqXOMAeCu4tJ9D3zCs16lN-kCwpauiDOQEg5dor46AV1nj6-2biu34rTZBCWcrSziz2FxrY_hCPcWwOsQLv5wl52c02jZ740p-Y9-qUaaIaCrTPVsiv-VL8HV7owz2Sg)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgVR0YljqUxQ7AJsBWBnNmD9N-CiQYrieDsWeZzSj_fRhv6Z1BvbRSPl6sGGisLqXOMAeCu4tJ9D3zCs16lN-kCwpauiDOQEg5dor46AV1nj6-2biu34rTZBCWcrSziz2FxrY_hCPcWwOsQLv5wl52c02jZ740p-Y9-qUaaIaCrTPVsiv-VL8HV7owz2Sg)
 
 si desea puede entrar desde una terminal con ejemplo:
 
@@ -180,11 +181,11 @@ xzcat ../patch-5.10.218-rt110.patch.xz | patch -p1
 
 Este comando  para otro kernel lo debe de editar, debe poner el nombre correcto del parche
 
-![parchado](https://blogger.googleusercontent.com/img/a/AVvXsEgpUxRQrD5skGCHgF7W_jU3RcfS2WVlnTyuZqDvTt_spKRKVrgKQZjw8pyOnmNsRAvRlfLGkLtyAwMUIXDWpIvKt3keijUzdxPN5lGVWECpcA2dC_kEnA0pXPqOGMDfOBup5PGrVumuanqB0ozuAAaeyZl8aT06Ma9mwaeuwwsT9kXN5ByItAVPtc6qek4)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgpUxRQrD5skGCHgF7W_jU3RcfS2WVlnTyuZqDvTt_spKRKVrgKQZjw8pyOnmNsRAvRlfLGkLtyAwMUIXDWpIvKt3keijUzdxPN5lGVWECpcA2dC_kEnA0pXPqOGMDfOBup5PGrVumuanqB0ozuAAaeyZl8aT06Ma9mwaeuwwsT9kXN5ByItAVPtc6qek4)
 
 De Enter y se parchará
 
-![parchado completado](https://blogger.googleusercontent.com/img/a/AVvXsEg3stmD9WGqlX3nsYUlIjI7c8swF7pmbYwWTunAn0X5QP5HxI7qRPcCAKQ27xha9MIzNGEkcqKAkAoxLHoYvtqc64PgiLwTUjruBWscPe3gd2CL13zpeIkHbs1jh5hudhc1uA0xN5IRbuE7768ce6LnbGE4USE7U6cXby-DPv-csQb5TfqkD3bL__dqmUI)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEg3stmD9WGqlX3nsYUlIjI7c8swF7pmbYwWTunAn0X5QP5HxI7qRPcCAKQ27xha9MIzNGEkcqKAkAoxLHoYvtqc64PgiLwTUjruBWscPe3gd2CL13zpeIkHbs1jh5hudhc1uA0xN5IRbuE7768ce6LnbGE4USE7U6cXby-DPv-csQb5TfqkD3bL__dqmUI)
 
 ## Añadir el nombre del Mantenedor o Responsable a su Sistema para que se compile con ese nombre (Opcional)
 
@@ -196,7 +197,7 @@ gedit ~/.bashrc
 
 allí debe llegar hasta abajo y con enter hacerse un espacio:
 
-![bashrc](https://blogger.googleusercontent.com/img/a/AVvXsEjyxEkHtC6FSeAlqfV2KXKI7Ni5nBvtiejsMpYKzDSMmrI4Y5aOlBpg3ugbrYZiRClOyQ_H7JMG8v0BhLnRReShE41vqAkGfZrwUzK2LInVfrqNKeLAFacBXzUh1HThfoel9-sWfNimBDGH5Z3SMQ78okzwNrpiFSf9wasoIX9L1kpWKWpLzidERUeU)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEjyxEkHtC6FSeAlqfV2KXKI7Ni5nBvtiejsMpYKzDSMmrI4Y5aOlBpg3ugbrYZiRClOyQ_H7JMG8v0BhLnRReShE41vqAkGfZrwUzK2LInVfrqNKeLAFacBXzUh1HThfoel9-sWfNimBDGH5Z3SMQ78okzwNrpiFSf9wasoIX9L1kpWKWpLzidERUeU)
 
 y allí debe de poner lo siguiente:
 
@@ -208,7 +209,7 @@ export DEBEMAIL DEBFULLNAME
 
 y cambiar con sus datos, a mi me queda así:
 
-![bashrc modificado](https://blogger.googleusercontent.com/img/a/AVvXsEiYcoO48RbNiVNv75ejUow3IkQhbUAWP5k0exROfZ1UlYHZCD0_yocp5HigNJcWrZnWLf_etsKS2MLlck7stoAjzAMi7nl127bL0Q-wgFS3E_y5-a_RPMeRNgdQ_LWzvRlZXtRMAuls_U1GXG8k21OcwMjMG7Ggfcea7QhszAre6qnFUmqfX7UZf96f)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEiYcoO48RbNiVNv75ejUow3IkQhbUAWP5k0exROfZ1UlYHZCD0_yocp5HigNJcWrZnWLf_etsKS2MLlck7stoAjzAMi7nl127bL0Q-wgFS3E_y5-a_RPMeRNgdQ_LWzvRlZXtRMAuls_U1GXG8k21OcwMjMG7Ggfcea7QhszAre6qnFUmqfX7UZf96f)
 
 ahora cierro el editor de texto y:
 
@@ -259,27 +260,33 @@ poner:
 make menuconfig
 ```
 
-![menuconfig](https://blogger.googleusercontent.com/img/a/AVvXsEh46qKhKChdfuEB1o2HH8WYSMeZGriBNxmfmzRlJ6U1hTIiPFr-ZnRmy_EdDZE2IZ-Ry6s6oFt-iax4JjNRfKqBNLfzy5NMVBn-a6N-JxuL6YzqYHb7kvgjHCnvUFNg6vICjqjNfY74yoVJZ5Ar0AFtGqpC4QINIjjXPiASZPVVGQroE89D9b42AyiJcKA)
+para que se abra el menú:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEh46qKhKChdfuEB1o2HH8WYSMeZGriBNxmfmzRlJ6U1hTIiPFr-ZnRmy_EdDZE2IZ-Ry6s6oFt-iax4JjNRfKqBNLfzy5NMVBn-a6N-JxuL6YzqYHb7kvgjHCnvUFNg6vICjqjNfY74yoVJZ5Ar0AFtGqpC4QINIjjXPiASZPVVGQroE89D9b42AyiJcKA)
 
 y aparecerá el menú:
 
-![menú menuconfig](https://blogger.googleusercontent.com/img/a/AVvXsEgldqWzM8_iu92K7vxsGZoLAj_uYA-PGfofGSobXUyzwQAoy37uShZk2CdOJ-uLBvgkkzTPqeeN721AKlBcPzpCjmQPE8dKElBWS1utG6w4z8iPvIv3OUHxOh7dWI_LJbwfmoSuYfWjmvVT7dt3lB3dolCTjx9DPezXZSCtNfC5UJnV_KSDLpauLbVqBKQ)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgldqWzM8_iu92K7vxsGZoLAj_uYA-PGfofGSobXUyzwQAoy37uShZk2CdOJ-uLBvgkkzTPqeeN721AKlBcPzpCjmQPE8dKElBWS1utG6w4z8iPvIv3OUHxOh7dWI_LJbwfmoSuYfWjmvVT7dt3lB3dolCTjx9DPezXZSCtNfC5UJnV_KSDLpauLbVqBKQ)
 
 **Nota:** En la imagen de arriba ya hice la ventana más grade, pero si tiene un ordenador con una buena pantalla hagala más grande de alto.
 
 **Explicación de la ayuda.-** Allí dice en inglés:
 
-> Arrow keys navigate the menu.  <Enter> selects submenus ---> (or empty submenus ----).  
-> Highlighted letters are hotkeys.  Pressing <Y> includes, <N> excludes, <M> modularizes features.  
-> Press <Esc><Esc> to exit, <?> for Help, </> for Search.  Legend: [*] built-in  [ ] excluded  
-> <M> module  < > module capable
+```
+Arrow keys navigate the menu.  <Enter> selects submenus ---> (or empty submenus ----).  
+Highlighted letters are hotkeys.  Pressing <Y> includes, <N> excludes, <M> modularizes features.  
+Press <Esc><Esc> to exit, <?> for Help, </> for Search.  Legend: [*] built-in  [ ] excluded  
+<M> module  < > module capable
+```
 
 Cuya traducción **significa**:
 
-> Las teclas de flecha se usan para navegar por el menú. <Enter> selecciona submenús ---> (o submenús vacíos ----).  
-> Las letras resaltadas son teclas de acceso rápido. Presionar <Y> incluye, <N> excluye, <M> modulariza características.  
-> Presione <Esc><Esc> para salir, <?> para Ayuda, </> para Buscar. Leyenda: [*] incorporado [ ] excluido  
-> <M> módulo < > compatible con módulo
+```
+Las teclas de flecha se usan para navegar por el menú. <Enter> selecciona submenús ---> (o submenús vacíos ----).  
+Las letras resaltadas son teclas de acceso rápido. Presionar <Y> incluye, <N> excluye, <M> modulariza características.  
+Presione <Esc><Esc> para salir, <?> para Ayuda, </> para Buscar. Leyenda: [*] incorporado [ ] excluido  
+<M> módulo < > compatible con módulo
+```
 
 **Explicación:**
 
@@ -288,10 +295,10 @@ Cuya traducción **significa**:
 La herramienta `menuconfig` presenta una interfaz basada en texto para configurar las opciones del kernel. Aquí están las instrucciones clave sobre cómo navegar:
 
 - **Teclas de flecha**:  
-  Usa las teclas de flecha **arriba** y **abajo** para moverte por las opciones del menú.  
-  Usa las teclas de flecha **izquierda** y **derecha** para moverte entre acciones (como "Salir" o "Guardar").
+  - Usa las teclas de flecha **arriba** y **abajo** para moverte por las opciones del menú.  
+  - Usa las teclas de flecha **izquierda** y **derecha** para moverte entre acciones (como "Salir" o "Guardar").
 
-- **<Enter>**:  
+- **`Enter`**:  
   Presionar la tecla `Enter` en una opción:
   - Si es un **submenú**, te lleva a un nivel más profundo del menú para configurar opciones relacionadas. Ejemplo: "Controladores de red".
   - Si es una opción que no tiene submenú, puedes cambiar su estado (activado, desactivado o modular, dependiendo de lo que soporte). Tenga siempre mucho cuidado en cuantas veces da Enter
@@ -322,7 +329,7 @@ La interfaz tiene accesos rápidos para facilitar la configuración:
 - **Teclas resaltadas**:  
   Cada opción tiene letras resaltadas (normalmente en mayúsculas). Puedes presionar esa letra para seleccionar rápidamente esa opción.
 
-- **<Esc><Esc>**:  
+- **`Esc Esc`**:  
   Presiona `Esc` dos veces seguidas para salir del menú o de un submenú.
 
 - **<?>**:  
@@ -409,41 +416,41 @@ Ahora si, de aquí para abajo para facilidad de entender qué es lo que se hace 
 
 **Temporizadores de alta resolución** son **esenciales** para garantizar que las tareas de audio en tiempo real se gestionen correctamente, ya que permiten una mayor precisión en la ejecución de procesos, es crucial para lograr un sistema de audio de baja latencia:
 
-- -> General setup
+--> General setup
 
-![General setup](https://blogger.googleusercontent.com/img/a/AVvXsEi93yDckV6ALDZzxbaENiThSypOrOCInLTW9k4WpJ7so--CONaBOldks7W9D2r0NsRzYxCJgh6K0F3IzymtoTI-X0EHBxBJVoatfXD0UUAHgUVsjmZkMRAYzXRpk6KeHImjYWUqoqZP5b-MqKMqYCdFhK7ycOj1_nstiYtu9Hxck_eGo7k1aDH9EW7K0NY)
+![Imagen 101: General setup](https://blogger.googleusercontent.com/img/a/AVvXsEi93yDckV6ALDZzxbaENiThSypOrOCInLTW9k4WpJ7so--CONaBOldks7W9D2r0NsRzYxCJgh6K0F3IzymtoTI-X0EHBxBJVoatfXD0UUAHgUVsjmZkMRAYzXRpk6KeHImjYWUqoqZP5b-MqKMqYCdFhK7ycOj1_nstiYtu9Hxck_eGo7k1aDH9EW7K0NY)
 
-- -> Timers subsystem
-    [*] High Resolution Timer Support
+--> Timers subsystem
+    -   [*] High Resolution Timer Support
 
-![High Resolution Timer Support](https://blogger.googleusercontent.com/img/a/AVvXsEj3Y41omXxTC5vjABugnAT69dbFevnqr_B38dG_CCg3wDqC7ZUHIng_shy3SKILItJBJD0ls1-GWGbZTxapbTJU48cU27ZvXEifvCBobOcoAgyKe7FYQeQ07l6ZVNeYBfFx3FF1oYeopASivo-7Iv-sS8uIf6jplbCZitGb2U1CAxGDQrZskD006NyFNlw)
+![Imagen 102: High Resolution Timer Support](https://blogger.googleusercontent.com/img/a/AVvXsEj3Y41omXxTC5vjABugnAT69dbFevnqr_B38dG_CCg3wDqC7ZUHIng_shy3SKILItJBJD0ls1-GWGbZTxapbTJU48cU27ZvXEifvCBobOcoAgyKe7FYQeQ07l6ZVNeYBfFx3FF1oYeopASivo-7Iv-sS8uIf6jplbCZitGb2U1CAxGDQrZskD006NyFNlw)
 
 ### # Habilitado CCONFIG_NO_HZ_IDLE
 
 El **"sistema tickless"** ayuda a reducir las interrupciones cuando el sistema está inactivo. Esto es útil para evitar que el kernel desperdicie ciclos de CPU en tiempos de inactividad y, de este modo, se mejora la latencia general. Dado que tu sistema se usará para producción de audio, el sistema **tickless** es altamente recomendable:
 
-- -> General setup
-    - -> Timers subsystem
+--> General setup
+    --> Timers subsystem
 
-![Timers subsystem](https://blogger.googleusercontent.com/img/a/AVvXsEiKVY7icwTw0v1J_T29XXxFQEgrRICa2oGixhkkW_YzZtYKASO5suk4QAIphQnnZF_MQD-0ttMrMsAzvByDLTvK11zTYbUsH7jPZbCc2WmadOjKfb2ltrcosCXAtPd8zKPaxKTrDjmfqeuLlApTGcYkusGroWDcm18hwZYDYMSYK8SjBiDTwaITxGA-Aq0)
+![Imagen 104: Timers subsystem](https://blogger.googleusercontent.com/img/a/AVvXsEiKVY7icwTw0v1J_T29XXxFQEgrRICa2oGixhkkW_YzZtYKASO5suk4QAIphQnnZF_MQD-0ttMrMsAzvByDLTvK11zTYbUsH7jPZbCc2WmadOjKfb2ltrcosCXAtPd8zKPaxKTrDjmfqeuLlApTGcYkusGroWDcm18hwZYDYMSYK8SjBiDTwaITxGA-Aq0)
 
 y de Enter en:
 
-    Timer tick handling (Idle dynticks system (tickless idle)) --->
+   -- Timer tick handling (Idle dynticks system (tickless idle)) --->
 
-![Timer tick handling](https://blogger.googleusercontent.com/img/a/AVvXsEgHwqh3fPJbiFu1t9Ay4o4Lb2-xQ2VhKEAIMdQE6_QIbu-8t2kcDWwrkH9CsQY8K_8r_Dp78jMjNx5_H106P5HEF3i_piGq2i17ifzoAm5XF3Aa9IqDzjPoRBftZYiiSzy2XL5xhkyf5cg_70sS5JN5csKtfxDgKcehFq5nItawsLV3ThlQpSIjKroTsRY)
+![Imagen 106: Timer tick handling](https://blogger.googleusercontent.com/img/a/AVvXsEgHwqh3fPJbiFu1t9Ay4o4Lb2-xQ2VhKEAIMdQE6_QIbu-8t2kcDWwrkH9CsQY8K_8r_Dp78jMjNx5_H106P5HEF3i_piGq2i17ifzoAm5XF3Aa9IqDzjPoRBftZYiiSzy2XL5xhkyf5cg_70sS5JN5csKtfxDgKcehFq5nItawsLV3ThlQpSIjKroTsRY)
 
 aparece así:
 
-![Idle dynticks system](https://blogger.googleusercontent.com/img/a/AVvXsEgPIUdQweUbqQJZ8cBGH5Hty-UhTeMqUeqmCxdxJKmXJE_m3h5aQ9EcKuefrxTz9r0mRkkNYpDf9hLImmfsZWJfGzzTej1sJa7WsWAIuFxwN3RElRc2i_FvjnjvHfmLRuqBGCzahoGli7MB63KQcni0q0a2fIz7YpLgiu-ZyUG1AkYrNdAMTRMsl6aUFbk)
+![Imagen 107: Idle dynticks system](https://blogger.googleusercontent.com/img/a/AVvXsEgPIUdQweUbqQJZ8cBGH5Hty-UhTeMqUeqmCxdxJKmXJE_m3h5aQ9EcKuefrxTz9r0mRkkNYpDf9hLImmfsZWJfGzzTej1sJa7WsWAIuFxwN3RElRc2i_FvjnjvHfmLRuqBGCzahoGli7MB63KQcni0q0a2fIz7YpLgiu-ZyUG1AkYrNdAMTRMsl6aUFbk)
 
 y doy flecha abajo y aplasto la barra espaciadora para poner:
 
-    (X) Idle dynticks system (tickless idle)
+   -- (X) Idle dynticks system (tickless idle)
 
 y se sale automáticamente a la ventana anterior pero si se aplicó el cambio, si usted lo que ver, ingrese otra vez allí y verá que ya está marcado:
 
-![Idle dynticks system marcado](https://blogger.googleusercontent.com/img/a/AVvXsEj1K1YHYDbkS_7HukJHe_5R4s5h7-RO_K3SUfeNgYq5LFGfbVauTpuOyXPQBugHaTT7kEUzF3Ap271t4CeK2xScuOLlt4aOuiTvMmU5CYB1MFuvZGzLsKjSNP8SaY6xnO_nBRxPrjHmPxp2IAdCRET-dGjeWCaHMJuI0_q6ec9tzx5rD8NjHqUMyvkK7vc)
+![Imagen 107: Idle dynticks system marcado](https://blogger.googleusercontent.com/img/a/AVvXsEj1K1YHYDbkS_7HukJHe_5R4s5h7-RO_K3SUfeNgYq5LFGfbVauTpuOyXPQBugHaTT7kEUzF3Ap271t4CeK2xScuOLlt4aOuiTvMmU5CYB1MFuvZGzLsKjSNP8SaY6xnO_nBRxPrjHmPxp2IAdCRET-dGjeWCaHMJuI0_q6ec9tzx5rD8NjHqUMyvkK7vc)
 
 **Nota:** El nombre podría variar algo en otros Kernel pero el sentido debe ser algo semejante.
 
@@ -451,20 +458,20 @@ y se sale automáticamente a la ventana anterior pero si se aplicó el cambio, s
 
 La opción `CONFIG_PREEMPT_RT` (habilitada por el parche RT) es **esencial** para la producción de audio. Estas opciones aseguran que las tareas del kernel pueden interrumpir otras tareas de manera agresiva, lo que es crucial cuando necesitas baja latencia y preempción en tiempo real.
 
-- -> General setup
-    - -> Preemption Model (Voluntary Kernel Preemption (Desktop)) --->
+--> General setup
+    --> Preemption Model (Voluntary Kernel Preemption (Desktop)) --->
 
-![Preemption Model](https://blogger.googleusercontent.com/img/a/AVvXsEgXPTby5GGwZRuCdJVuNuHTyt9l_XSbfIJnqTnlPRNUHJFSs4C3YO689w6E11NZD4mZ6rZAB4Sh8grgDUnTeF4wQN2RrB3gwoOXTqteNobAHtXgq6XFdEInGgR3z7HGAkEkGjtfrX1uO3_ZWUF0Ohn81fWcQpHNjqfLEcug_FJKWVxvaBnwE3vymeybbpE)
+![Imagen 108: Preemption Model](https://blogger.googleusercontent.com/img/a/AVvXsEgXPTby5GGwZRuCdJVuNuHTyt9l_XSbfIJnqTnlPRNUHJFSs4C3YO689w6E11NZD4mZ6rZAB4Sh8grgDUnTeF4wQN2RrB3gwoOXTqteNobAHtXgq6XFdEInGgR3z7HGAkEkGjtfrX1uO3_ZWUF0Ohn81fWcQpHNjqfLEcug_FJKWVxvaBnwE3vymeybbpE)
 
 al entrar con Enter está en Voluntary Kernel Preemption o en alguna opción semejante si usa otra versión de Kernel:
 
-![Voluntary Kernel Preemption](https://blogger.googleusercontent.com/img/a/AVvXsEhC8oY6PvPnlP7Su5zRUhFmfv0l0sgP98S5PdjR89JuwSi9jgbiah8IiY1Krb9mcS5vlMi86XH8mhpR9C1OxYM4trnjQecqgUDL4TUuL5IdL5WRcutIHqx_edzOEGdDJf37fEBWKJIqHxtODRbly-4HBIOkMftLdsjzOEKmlcEaGKq7dSR7UipK-FZleT4)
+![Imagen 109: Voluntary Kernel Preemption](https://blogger.googleusercontent.com/img/a/AVvXsEhC8oY6PvPnlP7Su5zRUhFmfv0l0sgP98S5PdjR89JuwSi9jgbiah8IiY1Krb9mcS5vlMi86XH8mhpR9C1OxYM4trnjQecqgUDL4TUuL5IdL5WRcutIHqx_edzOEGdDJf37fEBWKJIqHxtODRbly-4HBIOkMftLdsjzOEKmlcEaGKq7dSR7UipK-FZleT4)
 
 debe dejarla en:
 
-    (X) Fully Preemptible Kernel (Real-Time)
+   -- (X) Fully Preemptible Kernel (Real-Time)
 
-![Fully Preemptible Kernel](https://blogger.googleusercontent.com/img/a/AVvXsEjFsIhb3OopECYbqf1VFKDMmrGvyuQq8GrSaCKqi3B3-zSBnGjw320WlgfU-iXv_dAxW13rHUsjfi1f9A8L3nIC7KF6Fjcrvz8Sjw8OuzEgIC6nG4K2GyaeUTDPvuHN6Y5IOZjXfl9LGu01EhhPjYJDojQfDRhhbfpk0QivKSnNmT_ixpZWsayKw-NgySQ)
+![Imagen 110: Fully Preemptible Kernel](https://blogger.googleusercontent.com/img/a/AVvXsEjFsIhb3OopECYbqf1VFKDMmrGvyuQq8GrSaCKqi3B3-zSBnGjw320WlgfU-iXv_dAxW13rHUsjfi1f9A8L3nIC7KF6Fjcrvz8Sjw8OuzEgIC6nG4K2GyaeUTDPvuHN6Y5IOZjXfl9LGu01EhhPjYJDojQfDRhhbfpk0QivKSnNmT_ixpZWsayKw-NgySQ)
 
 y como automáticamente se pone la opción anterior, al volver a entrar se puede ver que ya está activa esa opción
 
@@ -472,14 +479,14 @@ y como automáticamente se pone la opción anterior, al volver a entrar se puede
 
 El valor **1000 Hz** es ideal para la producción de audio, ya que garantiza una frecuencia de temporización más alta y, por lo tanto, una mayor precisión en el manejo de las interrupciones. Esto reduce la latencia del sistema y permite que los procesos de audio se ejecuten más rápidamente:
 
-- -> Processor type and features
-    - -> Timer frequency
+--> Processor type and features
+    --> Timer frequency
 
-![Timer frequency](https://blogger.googleusercontent.com/img/a/AVvXsEjCybC4ymWwgZj8TxsT-kLqdAvO-6oKJTSD3J52v9AAv7e0TKhod5bG8Aw93Dshknsyh003P4B_OseCRHGvolVO9NEpuHvp4GaMKDdTIdLFVYshr4mIWqgaHSmrR4DFUjx5cPruMhyO0OxXvOEjCGLspB3nVpJVXInhjgEa4EKL70AU9yPWWW4qxBwvsuU)
+![Imagen 110: Timer frequency](https://blogger.googleusercontent.com/img/a/AVvXsEjCybC4ymWwgZj8TxsT-kLqdAvO-6oKJTSD3J52v9AAv7e0TKhod5bG8Aw93Dshknsyh003P4B_OseCRHGvolVO9NEpuHvp4GaMKDdTIdLFVYshr4mIWqgaHSmrR4DFUjx5cPruMhyO0OxXvOEjCGLspB3nVpJVXInhjgEa4EKL70AU9yPWWW4qxBwvsuU)
 
 está por defecto en 250 Hz (en este Kernel), debe quedar en 1000
 
-- -> Timer frequency (1000 HZ)
+--> Timer frequency (1000 HZ)
 
 entre y con la flecla abajo marquela y dé barra espaciadora
 
@@ -487,21 +494,21 @@ salga
 
 y así queda:
 
-![Timer frequency 1000 HZ](https://blogger.googleusercontent.com/img/a/AVvXsEgu8al1WNYOys8HDQrdsYBl_Dm5dlMBCtyAj9r_d_vi5bCR6qMIx3-u14Xu92vuJa_DA6DB56xO3l3n2xL5b0f9T7mJb6H10WxS605kIiP8geu3vQmgqQ8vA49aXDDonVN6FJ9DefbChSWqemA1zzc6H3UpFnGqaRNDRpdNHglSn9Budxiz0MkfV6-SaS0)
+![Imagen 112: Timer frequency (1000 HZ) habilitada](https://blogger.googleusercontent.com/img/a/AVvXsEgu8al1WNYOys8HDQrdsYBl_Dm5dlMBCtyAj9r_d_vi5bCR6qMIx3-u14Xu92vuJa_DA6DB56xO3l3n2xL5b0f9T7mJb6H10WxS605kIiP8geu3vQmgqQ8vA49aXDDonVN6FJ9DefbChSWqemA1zzc6H3UpFnGqaRNDRpdNHglSn9Budxiz0MkfV6-SaS0)
 
 ### # Habilitado CPU_FREQ_DEFAULT_GOV_PERFORMANCE
 
 **El escalado de frecuencia de CPU** (`CONFIG_SCHED_CPUFREQ`) puede causar fluctuaciones en la frecuencia de la CPU, lo que puede llevar a **latencias impredecibles**. En un sistema de producción de audio, es crucial que la frecuencia de la CPU no fluctúe, por lo que necesitas **forzar el "governor" de la CPU a rendimiento máximo (performance)**:
 
-- -> Power management and ACPI options
-    - -> CPU Frequency scaling
-        - -> Default CPUFreq governor
+--> Power management and ACPI options
+    --> CPU Frequency scaling
+        --> Default CPUFreq governor
 
-![Default CPUFreq governor](https://blogger.googleusercontent.com/img/a/AVvXsEg-DD-D_P-89sV2r6VXTyzIiJ37Y4kQmU4ErXYDThzdrQ5FT4MfAAkVennoKMLV7Sx9L5SBvSgFe3-MCB_9pPVYAodZHIbXhYLEn_cT2MO8ef5fHnwZ056b4-WxfYbQLzvWWro71wHa_VTGfqpsoDlplL28-81IFFkeV0tZ_lduB5SaefugRoubVOhk_48)
+![Imagen 113: Default CPUFreq governor](https://blogger.googleusercontent.com/img/a/AVvXsEg-DD-D_P-89sV2r6VXTyzIiJ37Y4kQmU4ErXYDThzdrQ5FT4MfAAkVennoKMLV7Sx9L5SBvSgFe3-MCB_9pPVYAodZHIbXhYLEn_cT2MO8ef5fHnwZ056b4-WxfYbQLzvWWro71wHa_VTGfqpsoDlplL28-81IFFkeV0tZ_lduB5SaefugRoubVOhk_48)
 
 dejarlo en:
 
-    (X) performance
+   -- (X) performance
 
 ## OPCIONAL
 
@@ -511,18 +518,18 @@ Si usted tiene un ordenador que sólo soporta 32 bits, o si solo quiera usar 32 
 
 Navega a la sección:
 
-- -> Processor type and features
+--> Processor type and features
 
 y habilita la opción (puede que ya esté habilitada por defecto):
 
-[*] PAE (Physical Address Extension) Support
+-- [*] PAE (Physical Address Extension) Support
 
 ### Deshabilitar las características de soporte para máquinas virtuales "Linux Guest Support" y "Virtualization"
 
 Si deseas deshabilitar las características de soporte para máquinas virtuales al compilar el kernel de Linux, puedes hacerlo al configurar el kernel antes de la compilación. Para esto, debes seguir estos pasos busca las opciones relacionadas con la virtualización, yo he desabilitado:
 
-- -> Processor type and features -> [ ] Linux Guest Support ---
-- -> [ ] Virtualization ---
+--> Processor type and features -> [ ] Linux Guest Support ---
+--> [ ] Virtualization ---
 
 Antes allí estaban unos asteriscos * pero los desmarqué con la tecla de tabulación
 
@@ -532,18 +539,17 @@ Porque no voy a instalar ninguna máquina virtual, ni voy a crear un Sistema Ope
 
 Si usted al estar realizando este tutorial sin querer llegue hasta salirse de la ventana por dar varios ESC:
 
-![me pregunta si quiero grabar los cambios](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ4Nh-pKz6KpEEkGCoUrahtBBpy9jtY53ILF9PjheE6DGorzLYxGssQT_PITRF9pgzmbEQKv5cXCKQ_RJMx2Efa5-G0-YMKdmPL7H5aT_8YCv3QuvBJVUKMK1HxAmmJBg4ilpyx6gn-V370sFgeKJL5ZCPvCrNcmxvEdPHNmynxiEqIewqf5_gQOoQwLM/s680/20240503-074022%20me%20pregutna%20si%20quiero%20grabar%20los%20cambios.png)
+![Imagen 201](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ4Nh-pKz6KpEEkGCoUrahtBBpy9jtY53ILF9PjheE6DGorzLYxGssQT_PITRF9pgzmbEQKv5cXCKQ_RJMx2Efa5-G0-YMKdmPL7H5aT_8YCv3QuvBJVUKMK1HxAmmJBg4ilpyx6gn-V370sFgeKJL5ZCPvCrNcmxvEdPHNmynxiEqIewqf5_gQOoQwLM/s680/20240503-074022%20me%20pregutna%20si%20quiero%20grabar%20los%20cambios.png)
 
 allí dice:
 
-"Do you wish to save your new configuration?             │  
-                    │  (Press <ESC><ESC> to continue kernel configuration.)"
+"Do you wish to save your new configuration?  
+ (Press <ESC><ESC> to continue kernel configuration.)"
 
 que traducido es:
 
-"¿Desea guardar su nueva configuración? │
-
-│ (Presione <ESC><ESC> para continuar con la configuración del kernel)."
+"¿Desea guardar su nueva configuración?
+(Presione <ESC><ESC> para continuar con la configuración del kernel)."
 
 darle Enter pues allí dice **YES**
 
@@ -595,7 +601,6 @@ $ make menuconfig
   HOSTCC  scripts/kconfig/symbol.o
   HOSTCC  scripts/kconfig/util.o
   HOSTLD  scripts/kconfig/mconf
-
 *** End of the configuration.
 *** Execute 'make' to start the build or try 'make help'.
 ```
@@ -631,7 +636,7 @@ y ahora si a esperar un buen rato hasta que termine la compilación, pueden ser 
 
 cuando ya fueron generados automáticamente los deb estarán en el directorio anterior de donde lo compilamos:
 
-![los deb del kernel creados](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNkzZwlN2gnCMYmZU-eTV7azNYczD4OP5FM4cPTa1VHeYhyphenhyphen3lTMPMwQFw9P8HvLsVSTJIXCV-UtMFDwQeaqWgl9QiWkNIvbdru0CIVXRICZ3plt6TAbK5EEJM11CYTIuZ9F6zQ6FhFVLnctdCAFEuX33cqxLOMR6r8SLYyoBrDyqBVleFJC3_ypjAR1Dc/s783/20240625-095804%20los%20deb%20del%20kernel%20creados.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNkzZwlN2gnCMYmZU-eTV7azNYczD4OP5FM4cPTa1VHeYhyphenhyphen3lTMPMwQFw9P8HvLsVSTJIXCV-UtMFDwQeaqWgl9QiWkNIvbdru0CIVXRICZ3plt6TAbK5EEJM11CYTIuZ9F6zQ6FhFVLnctdCAFEuX33cqxLOMR6r8SLYyoBrDyqBVleFJC3_ypjAR1Dc/s783/20240625-095804%20los%20deb%20del%20kernel%20creados.png)
 
 y para instalarlos sugiero hacer lo siguiente:
 

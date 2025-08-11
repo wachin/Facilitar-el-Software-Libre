@@ -8,7 +8,7 @@ https://github.com/wachin/Como-instalar-Debian-12-NetInstall-CD
 y allí en la instalación seleccionar sólo LXQT y las herramientas de Debian nada más
 
 
-## Fix `Username Is Not In The Sudoers File. This Incident Will Be Reported` On Debian 
+# Fix `Username Is Not In The Sudoers File. This Incident Will Be Reported` On Debian 
 
 Los Sistema Operativos Debian no vienen configurados para elevar los permisos con `sudo` esto es así porque es un sistema operativo dirigido a usuarios avanzados, y por otras razones está configurado así.
 
@@ -51,8 +51,6 @@ Este tutorial explica cómo añadir los repositorios de MX Linux a sistemas basa
 > **Nota:** Si usas un gestor de ventanas ligero como Openbox, Fluxbox o JWM, antes de seguir revisa cómo activar **PolicyKit** para que las aplicaciones gráficas funcionen con permisos elevados:
 > [Activar el agente de PolicyKit en Openbox y gestores de ventanas ligeros X11](https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html)
 
----
-
 ## 1. Qué se puede instalar desde este repositorio
 
 El repositorio de MX Linux incluye aplicaciones y utilidades como:
@@ -69,20 +67,17 @@ El repositorio de MX Linux incluye aplicaciones y utilidades como:
 * `ksnip` – Capturador de pantalla.
 * `avidemux` – Editor de video.
 * `yt-dlp` – Descargador de videos de YouTube, Facebook, etc.
-* `telegram-desktop` – Cliente oficial de Telegram.
+* `telegram-desktop` – Cliente oficial de Telegram (además la versión de 32 bit).
 * `formatusb` – Formatea memorias USB.
-* `virtualbox` – Virtualización.
+* `virtualbox` – Virtualización (para 64 bit). 
 * `mx-snapshot` – Crea un sistema Live a partir del instalado.
 * Paquetes de **firmware** para controladores.
-
----
 
 ## 2. Advertencia sobre el repositorio de prueba y Backports
 
 MX Linux incluye un “**Repo de prueba**” que contiene software en desarrollo. Estos paquetes pueden fallar o ser inestables.
-Ejemplo: el 17 de julio de 2025 probé **Gimp 3.0.0 RC2** desde este repositorio y se colgaba. Para volver a la versión estable, deshabilité el repo de prueba y reinstalé la versión de Debian.
 
----
+Ejemplo: el 17 de julio de 2025 probé **Gimp 3.0.0 RC2** desde este repositorio y se colgaba. Para volver a la versión estable, deshabilité el repo de prueba y reinstalé la versión de Debian.
 
 ## 3. Añadir el repositorio de MX Linux a Debian 12
 
@@ -108,13 +103,14 @@ deb http://mxrepo.com/mx/repo/ bookworm main non-free
 # deb http://mxrepo.com/mx/repo/ bookworm ahs
 ```
 
-3. Guarda y cierra el archivo.
+**Nota:** Para otra Distribución de Debian sólo cambia su nombre, ejemplo bullseye, buster, trixie
 
----
+3. Guarda y cierra el archivo.
 
 ## 4. Instalar la llave del repositorio
 
-1. Descarga la llave desde:
+1. Descarga la llave que encaja con Debian 12, desde:
+
    [https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/](https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/)
 
 2. Instálala desde la terminal (ejemplo para la versión actual):
@@ -125,7 +121,7 @@ sudo dpkg -i mx23-archive-keyring_*.*.deb
 
 Este paquete contiene las claves para verificar la autenticidad de los programas del repositorio.
 
----
+**Nota:** Para saber cual es la llave para determinado Debian debes descargar MX Linux la versión que desees probar y probarlo como Live, lo puedes poner en [Ventoy](https://facilitarelsoftwarelibre.blogspot.com/2021/12/creando-pendrive-usb-multiboot-con-ventoy-desde-linux.html) para eso, y allí revisar sus repositorios en /etc/apt/sources.list.d/mx.list y allí sabrás qué Debian está usando (y viceversa).
 
 ## 5. Actualizar la lista de repositorios
 
@@ -137,8 +133,6 @@ sudo apt update
 
 También puedes usar **Synaptic** y pulsar en **Recargar** para actualizar.
 
----
-
 ## 6. Instalar el “MX Instalar paquetes”
 
 1. En la terminal:
@@ -147,9 +141,12 @@ También puedes usar **Synaptic** y pulsar en **Recargar** para actualizar.
 sudo apt install mx-repo-list mx-repo-manager mx-packageinstaller
 ```
 
-2. Una vez instalado, podrás abrirlo desde el menú de aplicaciones y buscar los programas que desees instalar.
+2. Una vez instalado, podrás abrirlo desde el menú de aplicaciones con el nombre:
 
----
+MX instalador de paquetes
+
+y buscar los programas que desees instalar.
+
 
 ## 7. Instalar `yt-dlp` (ejemplo)
 
@@ -189,7 +186,7 @@ sudo apt install ksnip
 ## 10. Resumen de buenas prácticas
 
 * **Usa el repositorio estable siempre que sea posible.**
-* **Activa el repo de prueba solo para un paquete específico** y luego vuelve a desactivarlo.
+* **Activa el repo de prueba solo para un paquete específico** y luego vuelve a desactivarlo en Synaptic.
 * **Haz copia de seguridad** antes de instalar software experimental.
 * **Comprueba las dependencias** antes de confirmar la instalación.
 

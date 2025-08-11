@@ -97,6 +97,7 @@ y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la te
 *   Si ya existe, no hace nada.
 
 📁 Carpeta final:  
+
 `~/.local/share/file-manager/actions/`
 
 **2. `cd /tmp`**

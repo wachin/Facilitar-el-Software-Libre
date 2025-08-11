@@ -1,56 +1,14 @@
-Si usas **PCManFM-QT** en Debian 12 o cualquier otra distribución de Linux y la opción **"Extraer aquí"** no funciona correctamente (especialmente con archivos `.rar .deb .zip`), esta guía te ayudará a solucionarlo integrando **Engrampa** en el menú contextual del botón derecho de `pcmanfm-qt`.
+Si usas **PCManFM-QT** en Debian 12 o cualquier otra distribución de Linux y la opción **"Extraer aquí"** no funciona correctamente (especialmente con archivos `.rar .deb .zip xz`), esta guía te ayudará a solucionarlo integrando **Engrampa** en el menú contextual del botón derecho de `pcmanfm-qt`.
 
-Este método añade dos nuevas acciones contextuales:
-- **Extraer aquí**
-- **Extraer a carpeta**
-
-La segunda crea una nueva carpeta con el nombre del archivo comprimido antes de la extracción, evitando así la acumulación de espacio en el directorio actual
-
-En la siguiente imagen está funionando este menú con un archivo .rar:
-
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgvLxgBpzlDXsRpKw9NN8W2BzEDH5CX2PaF696JNpIMa08b5HImELEkDFKuhrM9-nceQh4ap8lP7Zd5jDXI9jD0yArd9KB3J783XPcIpksCxvlJ6Lmm_rH5xQesEtNnvp2ieT5gqs9zDL0Zb6EL1f1uZz6yFz8DXp3mahS8lLRKI05zqBouY2jLOgH_07E=s16000)
+# Requisitos
+Se necesitan los siguientes requisitos:
 
 # En Debian no viene activado el repositorio non-free, activalo
 
-unrar-free tiene limitaciones con ciertos archivos `.rar`, especialmente los modernos. El paquete `unrar` (de repositorios no-free) ofrece mejor soporte. Si no tienes habilitado el repositorio `non-free`, edíta el sources.list:
+unrar-free tiene limitaciones con ciertos archivos `.rar`, especialmente los modernos. El paquete `unrar` (de repositorios no-free) ofrece mejor soporte. Si no tienes habilitado el repositorio `non-free`, sigue los pasos de la siguiente entrada para habilitarlo (de paso activa también contrib):
 
-## Usando nano para editar el sources.list
-Ponga en la terminal:
-
-```bash
-sudo nano /etc/apt/sources.list
-```
-
-Asegúrate de que tengas algo como esto:
-
-```bash
-deb http://deb.debian.org/debian/ bookworm main contrib non-free
-```
-
-si no es así como en la siguiente imagen:
-
-![](https://blogger.googleusercontent.com/img/a/AVvXsEhiYN6HExdTofvjfC9l1rljSwiotHZXmW5g0JH_NZ2vVeQgXUhAJksWnmoDlYhGN4j3C-EzVudsMaSyTp0WME02rWbJxlvDjmQbM7vNP396w6SdUSoiaJLkgeSm_Cq0CUq5tSkqO15L26dXGFKmPv1EuTKXcb04BYPHrfEb4Dphwo9TxrUPNzfQs-oXLeo=s16000)
-
-añadelo:
-
-![](https://blogger.googleusercontent.com/img/a/AVvXsEhUYAg8H_c9RmzknvMWAJOJs8HA4hPpFe4Bcz8R5PtQkYNwqoldrORClc_Xe4D7E_voXZ02KEKEi5zslsx8x2Y2DZIgfmK61kgh3Khaz7jb8RY7wczap_JN7AfsMlVQxnT6tYvMrpM4cEqUudoG0BZ8tbQeiCWjDF-dof8zgkP3VtfMgcgiOz8Ck2K6kAQ=s16000)
-
-Guarda y cierra y recarga los repositorios.
-
-Si no sabes como usar nano ve el siguiente tutorial:
-
-**Cómo usar nano en la terminal de Linux para editar archivos de texto**   
-[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
-
-## Usando Gedit para editar el sources.list 
-También si deseas puedes usar gedit el cual generalmente deja hacer esas cosas desde la terminal, solo reemplaza en:
-
-```bash
-sudo gedit /etc/apt/sources.list
-```
-
-También puedes intentar usar otros editores de archivos, pero por ejemplo kate generalmente no permite hacer estas operaciones.
-
+**En Debian no viene activado el repositorio non-free, ni contrib, activalos** 
+[https://facilitarelsoftwarelibre.blogspot.com/2025/07/en-debian-no-viene-activado-repositorio-non-free-ni-contrib.html](https://facilitarelsoftwarelibre.blogspot.com/2025/07/en-debian-no-viene-activado-repositorio-non-free-ni-contrib.html)
 
 ---
 
@@ -70,19 +28,45 @@ sudo apt install unzip unrar-free unrar xz-utils p7zip-full engrampa pcmanfm-qt
 
 **Nota**: En caso que algun .rar no lo puedas descomprimir lo mejor será instalar la versión de Windows de WinRar en Linux con Wine, vea [este](https://facilitarelsoftwarelibre.blogspot.com/2024/07/como-instalar-winrar-en-debian-mx-linux.html) tutorial.  
 
-Esto hará que funcione el poder extraer aquí, pero como funciona en PCManFM no me gusta porque extrae siempre todos los archivos en el directorio y no en una carpeta, para solucionarlo ahora vamos a crear una **acción contextual personalizada para `pcmanfm-qt`** que permita integrar las opciones de **Engrampa** directamente desde el menú contextual del explorador de archivos. Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se guardan en la carpeta:
+
+# SOLUCIÓN 1.- Instalar emgrama y elegirlo en las opciones avanzadas de PCManFM
+
+Como ya está instalado engrama con los demás soportes, elegirlo en:
+
+`Editar → Preferencias  → Avanzado`
+ 
+allí en `Archivador integrado al sistema` elige `engrampa` 
+
+da clic en `Aceptar` y quedará listo, desde ahora lo que descomprimas en PCManFM usará engrama
+
+![20250811 Exraer aquí](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZSk7vLSwRTaM6e_M3uLHGqQcdzT21Dh8sfIDkIQr8qC_VBlxC7Gl2V0oANva-fcTM95h4sTAMXRJNdTGxCR0aghyphenhyphen65TkrD-jQZuxe3aT7XnUkqtQDXOHIxVPy_yFDB1Ffh-nL9XJ0vLdOnXzlsEDKnoe28mynIl4ui3gjKgVeX1xTSG3JTbKeTv9SViY/s16000-rw/20250811-093607%20PCmanFM%20Extraer%20aqu%C3%AD.png)
+
+
+# SOLUCIÓN 2.1- Creción de menú Extraer aquí, con instalación automática (Opcional)
+
+Este paso es opcional, pero te dará una idea de que se pueden crear más menus. Vamos a crear una **acción contextual personalizada para `pcmanfm-qt`** que permita integrar las opciones de **Engrampa** directamente desde el menú contextual del explorador de archivos. Este método usa el sistema de acciones personalizadas de `pcmanfm-qt`, que se guardan en la carpeta:
 
 ```
 ~/.local/share/file-manager/actions/
 ```
 
-- - -
+Este método añade dos nuevas acciones contextuales:
 
-# Crear una acción contextual personalizada para `pcmanfm-qt` que permita integrar las opciones para “Extraer aquí” con Engrampa
+- **Extraer aquí**
+- **Extraer a carpeta**
+
+La segunda crea una nueva carpeta con el nombre del archivo comprimido antes de la extracción, evitando así la acumulación de espacio en el directorio actual
+
+En la siguiente imagen está funionando este menú con un archivo .rar:
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgvLxgBpzlDXsRpKw9NN8W2BzEDH5CX2PaF696JNpIMa08b5HImELEkDFKuhrM9-nceQh4ap8lP7Zd5jDXI9jD0yArd9KB3J783XPcIpksCxvlJ6Lmm_rH5xQesEtNnvp2ieT5gqs9zDL0Zb6EL1f1uZz6yFz8DXp3mahS8lLRKI05zqBouY2jLOgH_07E=s16000)
+
+
+## Crear una acción contextual personalizada para `pcmanfm-qt` que permita integrar las opciones para “Extraer aquí” con Engrampa
 
 Mi objetivo de este blog es hacer las cosas fáciles de usar, así que he hecho una manera de instalar el nuevo menú contextual que integra las opciones de **Engrampa**
 
-# Instalación rápida y automática con script
+## Instalación rápida y automática con script
 
 Copiar todas las siguietnes líneas (obvio después de haber instalado las dependencias de arriba) y poner en una terminal como Konsole, gnome-terminal o alguna otra que acepte el uso de pegar todas las líneas (hay algunas terminales que no pueden manejar esto, en ese caso hacerlo una por una):
 
@@ -106,7 +90,7 @@ y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la te
 
 ## 🔍 Explicación línea por línea del Script
 
-**1\. `mkdir -p ~/.local/share/file-manager/actions/`**
+**1. `mkdir -p ~/.local/share/file-manager/actions/`**
 
 *   Crea la carpeta donde `pcmanfm-qt` busca las acciones personalizadas.
 *   La opción `-p` asegura que se creen todas las carpetas necesarias si no existen.
@@ -115,23 +99,23 @@ y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la te
 📁 Carpeta final:  
 `~/.local/share/file-manager/actions/`
 
-**2\. `cd /tmp`**
+**2. `cd /tmp`**
 
 *   Cambia al directorio temporal `/tmp`.
 *   Es una ubicación común para descargar o clonar repositorios temporales.
 
-**3\. `git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here`**
+**3. `git clone https://github.com/wachin/PCManFM-engrampa-Extract-Here`**
 
 *   Clona mi repositorio de GitHub en la máquina local.
 *   Descarga los archivos `.desktop` desde el repositorio público.
 
 📦 Esto crea una carpeta llamada `PCManFM-engrampa-Extract-Here` dentro de `/tmp`.
 
-**4\. `cd PCManFM-engrampa-Extract-Here`**
+**4. `cd PCManFM-engrampa-Extract-Here`**
 
 *   Entra a la carpeta recién clonada para trabajar con sus archivos.
 
-**5\. `cp *.desktop ~/.local/share/file-manager/actions/`**
+**5. `cp *.desktop ~/.local/share/file-manager/actions/`**
 
 *   Copia todos los archivos `.desktop` (en este caso, las dos acciones) a la carpeta de acciones personalizadas de `pcmanfm-qt`.
 
@@ -140,7 +124,7 @@ y da **Enter**, y quedará una ultima linea en la terminal (dependiendo de la te
 *   `engrampa-extract-here.desktop`
 *   `engrampa-extract-to-folder.desktop`
 
-**6\. `cd && echo "Dios les bendiga"`**
+**6. `cd && echo "Dios les bendiga"`**
 
 *   `cd` sin argumentos vuelve al directorio personal (`~`).
 *   `echo "Dios les bendiga"` muestra un mensaje amigable y positivo en la terminal 😊
@@ -158,7 +142,7 @@ Ambas usarán **Engrampa**, respetando el idioma del sistema y mostrando iconos 
 
 - - -
 
-# Si deseas crear manualmente los menú haz lo siguiente
+# SOLUCIÓN 2.2.- Si deseas crear manualmente los menú haz lo siguiente
 
 Puede que haya alguien que tenga dudas en usar el metodo automático de arriba y quiera revisar personalmente cada paso y cada parte del código, entonces si fuera así, para su tranquilidad haga lo siguiente:
 
@@ -169,8 +153,6 @@ Ejecuta este comando en tu terminal:
 ```
 mkdir -p ~/.local/share/file-manager/actions
 ```
-
-- - -
 
 ## 📄 Paso 2: Crear el archivo `.desktop` para “Extraer aquí”
 
@@ -234,7 +216,6 @@ Name[pt]=Extrair na pasta atual
 
 después de pegar, guarda y cierra el archivo.
 
-- - -
 
 ## 📄 Paso 3: Crear otro archivo para “Extraer en carpeta…”
 
@@ -290,7 +271,6 @@ Name[pt]=Extrair na própria pasta
 
 después de pegar, guarda y cierra el archivo.
 
-- - -
 
 ## 🌐 ¿Qué hace cada cosa?
 
@@ -301,7 +281,6 @@ Descripción:
 * `Exec=`  Comando que se ejecuta cuando se selecciona la opción 
 * `MimeTypes=`  Lista de formatos compatibles 
 
-- - -
 
 ## ✅ Resultado final
 

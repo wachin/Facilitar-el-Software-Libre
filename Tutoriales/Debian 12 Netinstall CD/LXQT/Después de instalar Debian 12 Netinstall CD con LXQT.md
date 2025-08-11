@@ -133,7 +133,7 @@ sudo apt update
 
 También puedes usar **Synaptic** y pulsar en **Recargar** para actualizar.
 
-## 6. Instalar el “MX Instalar paquetes”
+## 6. Instalar el Gestor de Software “MX Instalar Paquetes”
 
 1. En la terminal:
 
@@ -143,21 +143,9 @@ sudo apt install mx-repo-list mx-repo-manager mx-packageinstaller
 
 2. Una vez instalado, podrás abrirlo desde el menú de aplicaciones con el nombre:
 
-MX instalador de paquetes
+`MX Instalar Paquetes`
 
 y buscar los programas que desees instalar.
-
-
-## 7. Instalar `yt-dlp` (ejemplo)
-
-En mayo de 2025, `yt-dlp` estaba disponible en la versión estable de MX Linux, así que basta con ejecutar:
-
-```bash
-sudo apt install yt-dlp
-```
-
-Si no estuviera en la versión estable, puedes habilitar el **Repo de prueba** desde MX Repo Manager, actualizar la lista de paquetes y buscarlo allí.
-⚠️ Recuerda: solo instala un paquete a la vez desde el repositorio de prueba para minimizar riesgos.
 
 ---
 
@@ -170,16 +158,28 @@ Para instalar desde allí, habilita la opción en Synaptic o agrega el repositor
 
 ## 9. Instalar `ksnip` (ejemplo)
 
-En abril de 2025, la versión más reciente (`1.10.1`) estaba solo en el **Repo de prueba de MX** o en **Backports de Debian**.
-El proceso es igual al de `yt-dlp`:
+En abril de 2025, la versión más reciente (`1.10.1`) está solo en el **Repo de prueba de MX** o en **Backports de Debian**
 
-* Activar el repo de prueba o Backports.
+* Estando los repositorios de prueba activados
 * Actualizar la lista de paquetes.
 * Instalar `ksnip` desde Synaptic o con:
 
 ```bash
 sudo apt install ksnip
 ```
+
+---
+
+## 7. Instalar `yt-dlp` (ejemplo)
+
+En mayo de 2025, `yt-dlp` estaba disponible en la versión estable de MX Linux, así que basta con ejecutar:
+
+```bash
+sudo apt install yt-dlp
+```
+
+Si no estuviera en la versión estable, puedes habilitar el **Repo de prueba** desde MX Repo Manager, actualizar la lista de paquetes y buscarlo allí.
+⚠️ Recuerda: solo instala un paquete a la vez desde el repositorio de prueba para minimizar riesgos.
 
 ---
 

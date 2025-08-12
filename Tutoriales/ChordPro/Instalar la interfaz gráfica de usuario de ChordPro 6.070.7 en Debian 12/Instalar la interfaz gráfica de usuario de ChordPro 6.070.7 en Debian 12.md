@@ -56,7 +56,7 @@ sudo cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper 
            File::HomeDir Image::Info
 ```
 
-### **Paso 4: Para Debian 12 de 32 bit tuve que hacer estos pasos:
+### **Paso 4: Para Debian 12 de 32 bit tuve que hacer estos pasos:**
 
 #### Instalar manualmente JavaScript::QuickJS
 En Debian 12 no está disponible el paquete ` libjavascript-quickjs-perl` pero se lo puede instalar manualmente:

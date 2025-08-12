@@ -14,7 +14,8 @@
 Ejecuta estos comandos para instalar compiladores y librerías necesarias:
 ```bash
 sudo apt install build-essential cpanminus libssl-dev zlib1g-dev \
-                libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev
+                libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev \
+                libobject-pad-perl  
 ```
 
 ---

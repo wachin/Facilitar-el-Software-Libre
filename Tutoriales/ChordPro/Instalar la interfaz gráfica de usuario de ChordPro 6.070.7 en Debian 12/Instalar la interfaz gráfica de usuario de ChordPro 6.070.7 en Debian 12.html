@@ -1,0 +1,166 @@
+<h2
+id="tutorial-instalar-chordpro-con-interfaz-gráfica-gui-en-debian-12">🎸
+<strong>Tutorial: Instalar ChordPro con Interfaz Gráfica (GUI) en Debian
+12</strong></h2>
+<p>Antes de seguir, les explico que este tutorial lo hago en Debian 12
+de 32 bit por lo que debe servir para Debian 12 de 64 bit y</p>
+<p>Otra recomendación, más abajo cuando toca clonar los repositorios
+recomiendo hacerlo en una carpeta para el caso, ejemplo:</p>
+<p>🗀 ChordPro-src</p>
+<p>y allí dentro clonarlos, esto para cuestiones de orden, además cuando
+usted termine con un repositorio lo mejor es que cierra esa instancia de
+la terminal y luego abra otra para el otro terminal que va a clonar para
+evitar equivocaciones</p>
+<h3 id="requisitos-previos"><strong>Requisitos previos</strong></h3>
+<p>Sistema actualizado:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span></code></pre></div>
+<h3 id="paso-1-instalar-dependencias-esenciales"><strong>Paso 1:
+Instalar dependencias esenciales</strong></h3>
+<p>Según la página web para compilar para Linux</p>
+<p><strong>Installation on Linux</strong><br />
+<a
+href="https://www.chordpro.org/chordpro/chordpro-install-on-linux/">https://www.chordpro.org/chordpro/chordpro-install-on-linux/</a></p>
+<p>Instalaremos la mayoría de los que allí están en la lista. Ejecute
+estos comandos para instalar compiladores y librerías necesarias:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install build-essential cpanminus libssl-dev zlib1g-dev <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        libobject-pad-perl libpdf-api2-perl libimage-info-perl <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        libjson-pp-perl libjson-xs-perl libfile-homedir-perl <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        libdata-printer-perl</span></code></pre></div>
+<p>De la lista de la pagina web en Debian 12 no hay los paquetes:</p>
+<p>libstorable-perl libpod-usage-perl</p>
+<p>alternativamente en debian 12 si hay los siguientes que los
+instalé:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libclass-std-storable-perl libpod-simple-perl <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        libpod-parser-perl libpod-pom-perl libpod-coverage-perl</span></code></pre></div>
+<h3 id="paso-2-instalar-módulos-perl-requeridos"><strong>Paso 2:
+Instalar módulos Perl requeridos</strong></h3>
+<p>Instala los módulos Perl críticos (incluyendo <code>Wx</code> para la
+GUI):</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper <span class="dt">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>           JavaScript::QuickJS LWP::Protocol::https Mozilla::CA Pod::Usage <span class="dt">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>           Scalar::Util String::Interpolate::Named Text::Layout <span class="dt">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>           File::HomeDir Image::Info</span></code></pre></div>
+<h3
+id="paso-4-para-debian-12-de-32-bit-tuve-que-hacer-estos-pasos"><strong>Paso
+4: Para Debian 12 de 32 bit tuve que hacer estos pasos:</strong></h3>
+<h4 id="instalar-manualmente-javascriptquickjs">Instalar manualmente
+JavaScript::QuickJS</h4>
+<p>En Debian 12 no está disponible el paquete
+<code>libjavascript-quickjs-perl</code> pero se lo puede instalar
+manualmente:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> http://www.cpan.org/authors/id/F/FE/FELIPE/JavaScript-QuickJS-0.21.tar.gz</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzvf</span> JavaScript-QuickJS-0.21.tar.gz</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> JavaScript-QuickJS-0.21</span></code></pre></div>
+<p>Configurar y compilar manualmente</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> Makefile.PL</span></code></pre></div>
+<p>si sale el siguiente mensaje no es un error:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Checking</span> if your kit is complete...</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Looks</span> good</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Deep 0 not found.</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::FailWarnings 0 not found.</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Fatal 0 not found.</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> a Unix-style Makefile</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> Makefile for JavaScript::QuickJS</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> MYMETA.yml and MYMETA.json</span></code></pre></div>
+<p>sino advertencias sobre dependencias opcionales de pruebas
+(Test::Deep, Test::FailWarnings, Test::Fatal). El proceso de
+configuración (Makefile.PL) se completó correctamente y generó los
+archivos necesarios para la compilación, continuar nomás</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<p>Verificar que los módulos estén instalados:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> <span class="at">-MJavaScript::QuickJS</span> <span class="at">-e</span> <span class="st">&#39;print &quot;Módulo instalado\n&quot;&#39;</span></span></code></pre></div>
+<p>si se instaló, dirá:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Módulo</span> instalado</span></code></pre></div>
+<h4
+id="instalar-manualmente-libquickjs-dev-desde-código-fuente">Instalar
+manualmente libquickjs-dev desde código fuente</h4>
+<p><strong>En Debian 12 <code>libquickjs-dev</code> no está disponible ,
+instalarlo desde código fuente</strong>:<br />
+Instala desde fuentes alternativas:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar QuickJS desde el repositorio oficial</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bellard/quickjs.git</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> quickjs</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> make install</span></code></pre></div>
+<h3 id="paso-5-descargar-y-compilar-chordpro"><strong>Paso 5: Descargar
+y compilar ChordPro</strong></h3>
+<p><strong>1.-</strong> Descarga la última versión del código fuente
+desde GitHub:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/ChordPro/chordpro/releases/latest/download/App-Music-ChordPro-6.070.7.tar.gz</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzvf</span> App-Music-ChordPro-<span class="pp">*</span>.tar.gz  </span></code></pre></div>
+<p><strong>2.-</strong> Entrar en la carpeta descomprimida:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> App-Music-ChordPro-6.070.7</span></code></pre></div>
+<p><strong>3.-</strong> Genera el <code>Makefile</code> y compila:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> Makefile.PL</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div>
+<p><strong>4.-</strong> Instala en el sistema:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<p>y quedaron instalados dos programas:</p>
+<p>chordpro wxchordpro</p>
+<hr />
+<h3 id="paso-6-verificar-la-instalación"><strong>Paso 6: Verificar la
+instalación</strong></h3>
+<h4 id="para-la-versión-cli-línea-de-comandos"><strong>Para la versión
+CLI</strong> (línea de comandos):</h4>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--version</span></span></code></pre></div>
+<p>Debe mostrar: <code>ChordPro version 6.070.7</code>.</p>
+<p>Para la ayuda:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--help</span></span></code></pre></div>
+<p>y allí ver con qué comandos de terminal usarlo</p>
+<h4 id="para-la-gui"><strong>Para la GUI</strong>:</h4>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div>
+<p>¡La interfaz gráfica debería abrirse correctamente!</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgb4Pbi5M0lx8OdU3BszmVcOG4T7gdbJBSnMKnUwEgknVQf4hZ29W-VTJAS3ec53V0xC_nRDCXX97S6VtZ-q131QJSDz2GAPMGMXr8he6rzWoWHuRX4X-6VGquriH2Mv2T0qUMrm-ZJIrzJG0x9qde1k29UnSRT0WvwKUf43xDlbu5yhJbVz_ZdUjUD4Yc=s16000" /></p>
+<p>en <code>Help</code> y <code>About Chordpro</code>puedes ver la
+versión del programa</p>
+<hr />
+<h3 id="paso-7-acceso-directo-opcional"><strong>Paso 7: Acceso directo
+(opcional)</strong></h3>
+<p>Si quieres un lanzador en el menú de aplicaciones, para este proceso
+te recomiendo Gedit, sino lo tienes instálalo:</p>
+<p><strong>1.-</strong> Crea un archivo <code>.desktop</code>:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit /usr/share/applications/wxchordpro.desktop</span></code></pre></div>
+<p><strong>2.-</strong> Pega este contenido:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode ini"><code class="sourceCode ini"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[Desktop Entry]</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="dt">Name</span><span class="ot">=</span><span class="st">wxChordPro</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="dt">Comment</span><span class="ot">=</span><span class="st">ChordPro GUI Editor</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="dt">Exec</span><span class="ot">=</span><span class="st">wxchordpro</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="dt">Icon</span><span class="ot">=</span><span class="st">music</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="dt">Terminal</span><span class="ot">=</span><span class="kw">false</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="dt">Type</span><span class="ot">=</span><span class="st">Application</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="dt">Categories</span><span class="ot">=</span><span class="st">Audio;Music;</span></span></code></pre></div>
+<p>guarda y cierra</p>
+<p><strong>3.-</strong> Actualiza el menú, opcional, pues lo mas seguro
+es que ya está allí:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> update-desktop-database</span></code></pre></div>
+<h3 id="notas-adicionales">📌 <strong>Notas adicionales</strong></h3>
+<p>– <strong>Actualizaciones</strong>: Para actualizar, repite los pasos
+5 y 6 con la nueva versión.<br />
+– <strong>Documentación</strong>: Consulta la ayuda integrada:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--manual</span></span></code></pre></div>
+<p>–</p>
+<p>Dios les bendiga</p>

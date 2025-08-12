@@ -41,7 +41,7 @@ libpod-usage-perl
 
 alternativamente en debian 12 si hay los siguientes que los instalé:
 
-```
+```bash
 sudo apt install libclass-std-storable-perl libpod-simple-perl \
         libpod-parser-perl libpod-pom-perl libpod-coverage-perl
 ```

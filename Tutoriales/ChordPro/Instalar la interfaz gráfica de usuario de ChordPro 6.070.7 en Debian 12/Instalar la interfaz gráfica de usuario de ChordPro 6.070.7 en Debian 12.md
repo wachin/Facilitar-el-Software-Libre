@@ -154,31 +154,46 @@ y quedaron instalados dos programas:
 
 ### **Paso 6: Verificar la instalación**
 
-**Para la versión CLI** (línea de comandos):
+#### **Para la versión CLI** (línea de comandos):
 
 ```bash
 chordpro --version
 ```
+ 
+Debe mostrar: `ChordPro version 6.070.7`.
+  
+Para la ayuda:
 
-  Debe mostrar: `ChordPro version 6.070.7`.
+```bash
+chordpro --help
+```
 
-**Para la GUI**:
+y allí ver con qué comandos de terminal usarlo
+
+
+#### **Para la GUI**:
 
 ```bash
 wxchordpro
 ```
 
  ¡La interfaz gráfica debería abrirse correctamente!
+ 
+
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgb4Pbi5M0lx8OdU3BszmVcOG4T7gdbJBSnMKnUwEgknVQf4hZ29W-VTJAS3ec53V0xC_nRDCXX97S6VtZ-q131QJSDz2GAPMGMXr8he6rzWoWHuRX4X-6VGquriH2Mv2T0qUMrm-ZJIrzJG0x9qde1k29UnSRT0WvwKUf43xDlbu5yhJbVz_ZdUjUD4Yc=s16000)
+
+en `Help` y `About Chordpro`puedes ver la versión del programa
 
 ---
 
 ### **Paso 7: Acceso directo (opcional)**
-Si quieres un lanzador en el menú de aplicaciones:
+
+Si quieres un lanzador en el menú de aplicaciones, para este proceso te recomiendo Gedit, sino lo tienes instálalo:
 
 **1.-** Crea un archivo `.desktop`:
 
 ```bash
-sudo nano /usr/share/applications/wxchordpro.desktop
+sudo gedit /usr/share/applications/wxchordpro.desktop
 ```
     
 **2.-** Pega este contenido:
@@ -193,26 +208,23 @@ Terminal=false
 Type=Application
 Categories=Audio;Music;
 ```
+
+guarda y cierra
     
-**3.-** Actualiza el menú:
+**3.-** Actualiza el menú, opcional, pues lo mas seguro es que ya está allí:
 
 ```bash
 sudo update-desktop-database
 ```
 
----
-
-### ✅ **¡Listo!**
-Ahora  **ChordPro con GUI** está funcionando en Debian 12 de 32 bit. Puedes:
-
-- Usar `wxchordpro` para la interfaz gráfica.
-- Usar `chordpro` para la línea de comandos (más opciones avanzadas).
-
----
-
 ### 📌 **Notas adicionales**
-- **Actualizaciones**: Para actualizar, repite los pasos 5 y 6 con la nueva versión.
-- **Documentación**: Consulta la ayuda integrada:
-    ```bash
-    chordpro --manual
-    ```
+
+-- **Actualizaciones**: Para actualizar, repite los pasos 5 y 6 con la nueva versión.  
+-- **Documentación**: Consulta la ayuda integrada:  
+
+```bash
+chordpro --manual
+```
+-- 
+
+Dios les bendiga

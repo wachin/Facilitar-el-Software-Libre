@@ -47,6 +47,8 @@ Abre una terminal (Ctrl + Alt + T) y escribe:
 sudo apt install python3 python3-tk xsct python3-pil.imagetk python3-cairosvg
 ```
 
+la siguiente es una tabla con la descripción de cada uno
+
 |              Programa              |                       ¿Para qué sirve?                       |
 | ---------------------------------- | ------------------------------------------------------------ |
 | **Python 3**                       | Es el lenguaje en el que está hecho el programa.             |
@@ -95,7 +97,7 @@ Si usas Debian y sus derivados como MX Linux, antiX, etc, en los que se pueda in
 
 👉 Se abrirá una ventana con dos controles:
 
-![](src/vx_images/01-xsct_guit-main-window.webp)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEixMsvdzTpTY5ENvil5n1a9KoIlz3rWyYkq1qlxnS4OPN_47wJmk5uBqhvM1PZu0fhNqgRf8_ttnMRlyjxns5iyFEBqZ8CIiLk22lq6Ak86gAa0O9tOxqeIrjOOQKI1WHKq4JS-2_5tvUZPZNWLCeNrnDjh-9xw2fvz54a56Rvnc9R_59TVd8EEWi7aLdc=s16000-rw)
 
 ### OPCIÓN 2.- Desde una terminal ejecuta `python3 xsct_gui.py`
 
@@ -193,27 +195,25 @@ sudo apt install libx11-dev libxrandr-dev
 ```
 Luego, clone el repositorio de xsct:
 
-```
+```bash
 git clone https://github.com/faf0/sct
 ```
 y entre allí
-```
+```bash
 cd sct
 ```
 y compilelo:
 
-```
+```bash
 make
 ```
 
 no se demora mucho en compilar, es rapidísimo, e instálelo:
 
-```
+```bash
 sudo make install
 ```
-aquí pongo una captura de pantalla:
-
-![](src/vx_images/02-sct-compilado-en-debian-11-10.png)
+y se instalará
 
 ## Dependencias para xsct_gui en Debian 11, 10
 1. Para usar la interfáz gráfica para xsct necesitamos instalar:

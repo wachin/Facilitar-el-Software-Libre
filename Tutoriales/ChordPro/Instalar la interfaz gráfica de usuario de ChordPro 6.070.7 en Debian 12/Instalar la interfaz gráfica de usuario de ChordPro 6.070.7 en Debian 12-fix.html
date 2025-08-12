@@ -1,0 +1,142 @@
+<h2 id="tutorial-instalar-chordpro-con-interfaz-gráfica-gui-en-debian-12">🎸
+<strong>Tutorial: Instalar ChordPro con Interfaz Gráfica (GUI) en Debian
+12</strong></h2>
+<h3 id="requisitos-previos"><strong>Requisitos previos</strong></h3>
+<p>Sistema actualizado:</p>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span></code></pre></div></div>
+<h3 id="paso-1-instalar-dependencias-esenciales"><strong>Paso 1:
+Instalar dependencias esenciales</strong></h3>
+<p>Según la página web para compilar para Linux</p>
+<p><strong>Installation on Linux</strong><br/>
+<a href="https://www.chordpro.org/chordpro/chordpro-install-on-linux/">https://www.chordpro.org/chordpro/chordpro-install-on-linux/</a></p>
+<p>Instalaremos la mayoría de los que allí están en la lista. Ejecute
+estos comandos para instalar compiladores y librerías necesarias:</p>
+<div class="sourceCode" id="cb2"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt install build-essential cpanminus libssl-dev zlib1g-dev <span class="dt">\</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>        libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev <span class="dt">\</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>        libobject-pad-perl libpdf-api2-perl libimage-info-perl <span class="dt">\</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>        libjson-pp-perl libjson-xs-perl libfile-homedir-perl <span class="dt">\</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>        libdata-printer-perl</span></code></pre></div></div>
+<p>De la lista de la pagina web en Debian 12 no hay los paquetes:</p>
+<p>libstorable-perl libpod-usage-perl</p>
+<p>alternativamente en debian 12 si hay los siguientes que los
+instalé:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; "><span style="font-size: 15px; white-space: pre-wrap; ">sudo apt install libclass-std-storable-perl libpod-simple-perl \
+        libpod-parser-perl libpod-pom-perl libpod-coverage-perl</span></span></pre></div>
+<h3 id="paso-2-instalar-módulos-perl-requeridos"><strong>Paso 2:
+Instalar módulos Perl requeridos</strong></h3>
+<p>Instala los módulos Perl críticos (incluyendo <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">Wx</code> para la
+GUI):</p>
+<div class="sourceCode" id="cb4"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">sudo</span> cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper <span class="dt">\</span></span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>           JavaScript::QuickJS LWP::Protocol::https Mozilla::CA Pod::Usage <span class="dt">\</span></span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>           Scalar::Util String::Interpolate::Named Text::Layout <span class="dt">\</span></span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>           File::HomeDir Image::Info</span></code></pre></div></div>
+<h3 id="paso-4-para-debian-12-de-32-bit-tuve-que-hacer-estos-pasos">**Paso
+4: Para Debian 12 de 32 bit tuve que hacer estos pasos:</h3>
+<h4 id="instalar-manualmente-javascriptquickjs">Instalar manualmente
+JavaScript::QuickJS</h4>
+<p>En Debian 12 no está disponible el paquete
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">libjavascript-quickjs-perl</code> pero se lo puede instalar
+manualmente:</p>
+<div class="sourceCode" id="cb5"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">wget</span> http://www.cpan.org/authors/id/F/FE/FELIPE/JavaScript-QuickJS-0.21.tar.gz</span>
+<span id="cb5-2"><a aria-hidden="true" href="#cb5-2" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzvf</span> JavaScript-QuickJS-0.21.tar.gz</span>
+<span id="cb5-3"><a aria-hidden="true" href="#cb5-3" tabindex="-1"></a><span class="bu">cd</span> JavaScript-QuickJS-0.21</span></code></pre></div></div>
+<p>Configurar y compilar manualmente</p>
+<div class="sourceCode" id="cb6"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">perl</span> Makefile.PL</span></code></pre></div></div>
+<p>si sale el siguiente mensaje no es un error:</p>
+<div class="sourceCode" id="cb7"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="ex">Checking</span> if your kit is complete...</span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a><span class="ex">Looks</span> good</span>
+<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Deep 0 not found.</span>
+<span id="cb7-4"><a aria-hidden="true" href="#cb7-4" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::FailWarnings 0 not found.</span>
+<span id="cb7-5"><a aria-hidden="true" href="#cb7-5" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Fatal 0 not found.</span>
+<span id="cb7-6"><a aria-hidden="true" href="#cb7-6" tabindex="-1"></a><span class="ex">Generating</span> a Unix-style Makefile</span>
+<span id="cb7-7"><a aria-hidden="true" href="#cb7-7" tabindex="-1"></a><span class="ex">Writing</span> Makefile for JavaScript::QuickJS</span>
+<span id="cb7-8"><a aria-hidden="true" href="#cb7-8" tabindex="-1"></a><span class="ex">Writing</span> MYMETA.yml and MYMETA.json</span></code></pre></div></div>
+<p>sino advertencias sobre dependencias opcionales de pruebas
+(Test::Deep, Test::FailWarnings, Test::Fatal). El proceso de
+configuración (Makefile.PL) se completó correctamente y generó los
+archivos necesarios para la compilación, continuar nomás</p>
+<div class="sourceCode" id="cb8"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">make</span></span>
+<span id="cb8-2"><a aria-hidden="true" href="#cb8-2" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div></div>
+<p>Verificar que los módulos estén instalados:</p>
+<div class="sourceCode" id="cb9"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="fu">perl</span> <span class="at">-MJavaScript::QuickJS</span> <span class="at">-e</span> <span class="st">'print "Módulo instalado\n"'</span></span></code></pre></div></div>
+<p>si se instaló, dirá:</p>
+<div class="sourceCode" id="cb10"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="ex">Módulo</span> instalado</span></code></pre></div></div>
+<h4 id="instalar-manualmente-libquickjs-dev-desde-código-fuente">Instalar
+manualmente libquickjs-dev desde código fuente</h4>
+<p><strong>En Debian 12 <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">libquickjs-dev</code> no está disponible ,
+instalarlo desde código fuente</strong>:<br/>
+Instala desde fuentes alternativas:</p>
+<div class="sourceCode" id="cb11"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="co"># Instalar QuickJS desde el repositorio oficial</span></span>
+<span id="cb11-2"><a aria-hidden="true" href="#cb11-2" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bellard/quickjs.git</span>
+<span id="cb11-3"><a aria-hidden="true" href="#cb11-3" tabindex="-1"></a><span class="bu">cd</span> quickjs</span>
+<span id="cb11-4"><a aria-hidden="true" href="#cb11-4" tabindex="-1"></a><span class="fu">make</span> <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> make install</span></code></pre></div></div>
+<h3 id="paso-4-descargar-y-compilar-chordpro"><strong>Paso 4: Descargar
+y compilar ChordPro</strong></h3>
+<ol type="1">
+<li>Descarga la última versión del código fuente desde GitHub:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     wget https://github.com/ChordPro/chordpro/releases/latest/download/App-Music-ChordPro-6.070.7.tar.gz     tar -xzvf App-Music-ChordPro-*.tar.gz</code></li>
+<li>Entrar en la carpeta descomprimida:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash      cd App-Music-ChordPro-6.070.7</code><br/>
+App-Music-ChordPro-6.070.7</li>
+<li>Genera el <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">Makefile</code> y compila:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     perl Makefile.PL     make</code></li>
+<li>Instala en el sistema: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     sudo make install</code><br/>
+y quedaron instalados dos programas:<br/>
+chordpro wxchordpro</li>
+</ol>
+<hr/>
+<h3 id="paso-4-verificar-la-instalación"><strong>Paso 4: Verificar la
+instalación</strong></h3>
+<ul>
+<li><strong>Para la versión CLI</strong> (línea de comandos):</li>
+</ul>
+<div class="sourceCode" id="cb12"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--version</span></span></code></pre></div></div>
+<p>Debe mostrar: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">ChordPro version 6.070.7</code>.</p>
+<ul>
+<li><strong>Para la GUI</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb13"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div></div>
+<p>¡La interfaz gráfica debería abrirse correctamente!</p>
+<hr/>
+<h3 id="paso-5-acceso-directo-opcional"><strong>Paso 5: Acceso directo
+(opcional)</strong></h3>
+<p>Si quieres un lanzador en el menú de aplicaciones:</p>
+<ol type="1">
+<li>Crea un archivo <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">.desktop</code>:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     sudo nano /usr/share/applications/wxchordpro.desktop</code></li>
+<li>Pega este contenido:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">ini     [Desktop Entry]     Name=wxChordPro     Comment=ChordPro GUI Editor     Exec=wxchordpro     Icon=music     Terminal=false     Type=Application     Categories=Audio;Music;</code></li>
+<li>Actualiza el menú:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     sudo update-desktop-database</code></li>
+</ol>
+<hr/>
+<h3 id="solución-de-problemas">🔍 <strong>Solución de
+problemas</strong></h3>
+<ol type="1">
+<li><strong>Si <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">wxchordpro</code> no se abre</strong>:
+<ul>
+<li>Verifica que <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">libwxgtk3.2-dev</code> esté instalado:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash      sudo apt install --reinstall libwxgtk3.2-dev</code></li>
+<li>Reinstala los módulos Perl:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash      sudo cpanm -f Wx Wx::Perl::Packager</code></li>
+</ul></li>
+<li><strong>Errores de dependencias faltantes</strong>:
+<ul>
+<li>Si falta algún módulo Perl, instálalo manualmente:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash      sudo cpanm Nombre::Del::Modulo</code></li>
+</ul></li>
+</ol>
+<hr/>
+<h3 id="listo">✅ <strong>¡Listo!</strong></h3>
+<p>Ahora tienes <strong>ChordPro con GUI</strong> funcionando en Debian
+12. Puedes: - Usar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">wxchordpro</code> para la interfaz gráfica. -
+Usar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">chordpro</code> para la línea de comandos (más opciones
+avanzadas).</p>
+<hr/>
+<h3 id="notas-adicionales">📌 <strong>Notas adicionales</strong></h3>
+<ul>
+<li><strong>Actualizaciones</strong>: Para actualizar, repite los pasos
+3 y 4 con la nueva versión.</li>
+<li><strong>Documentación</strong>: Consulta la ayuda integrada:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     chordpro --manual</code></li>
+</ul>

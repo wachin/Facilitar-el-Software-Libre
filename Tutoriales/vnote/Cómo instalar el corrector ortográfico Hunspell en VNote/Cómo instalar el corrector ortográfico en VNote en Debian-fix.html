@@ -1,0 +1,124 @@
+<h1 id="cómo-instalar-el-correcctor-ortográfico-en-vnote-editor-de-markdown-en-mx-linux-debian-ubuntu-mint-etc">Cómo
+instalar el correcctor ortográfico en VNote editor de Markdown, en MX
+Linux Debian, Ubuntu, Mint, etc</h1>
+<p>Para mi VNote es el mejor editor de Markdown gratuito. Este tutorial
+es para instalar el corrector ortográfico que necesita para VNote
+AppImage pues no lo tiene integrado sino que hay que instalarlo por
+separado</p>
+<h2 id="descarga-vnote-appimage-para-64-bit">Descarga VNote AppImage
+para 64 bit</h2>
+<p>VNote es multiplataforma, está disponible también para Windows, MAC
+OS. Para Linux esa AppImage debe funcionar en Ubuntu, MX Linux, Linux
+Mint, y otros Sistemas Operativos basados en ellos:</p>
+<p><a class="uri" href="https://github.com/vnotex/vnote/releases">https://github.com/vnotex/vnote/releases</a></p>
+<p>Una vez descargado, descomprime el archivo y con clic derecho y en la
+pestaña permisos verifica que esté marcado como ejecutable y luego dale
+doble clic y se abrirá el programa</p>
+<h1 id="descarga-vnote-deb-para-32-bit">Descarga VNote deb para 32
+bit</h1>
+<p>He creado unos paquetes deb de 32 bit, funciona bien en Debian 11,
+12</p>
+<p><strong>Paquetes deb de Vnote para MX Linux 21 de 32 y 64 bits + Cómo
+compilarlo desde código fuente</strong><br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2022/07/vnote-for-mx-linux-deb-package.html">https://facilitarelsoftwarelibre.blogspot.com/2022/07/vnote-for-mx-linux-deb-package.html</a></p>
+<p>instalelos</p>
+<h2 id="buscando-las-instrucciones-de-los-diccionaros-en-vnote">Buscando
+las instrucciones de los diccionaros en VNote</h2>
+<p>Al abrirse, arriba en la esquina derecha están tres puntitos (⋮) dale
+clic en:</p>
+<p><strong>&gt; Settings &gt; Editor &gt; Spell check dictionary &gt;
+Add Dictionary</strong></p>
+<p>Aparece un mensaje que dice:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikqXKCUcx6iKgCdXJnpWvKRBSjdZmTYnABhDCtGT-j2ltZ9dAHlEuLr0e9LMlNy7LZJAD97Elk8ezNmuDG1ZHLTEYnJd8Yk3Lo03P0boxNkM1puI3rmRa_YPF-FQbsC-e5onBQ_81KGhTFoJQEqy0WUi7Gv2skaXFe8BOroEs5DpD9kNhg1ksiqMiFisE/s16000-rw/20250509-0010%20Como%20ponerle%20un%20diccionario%20a%20VNote%20AppImage.png"/></p>
+<p>ese mensaje traducido al español dice:</p>
+<blockquote>
+<p>“VNote usa <a class="uri" href="https://hunspell.github.io">https://hunspell.github.io</a> para la corrección
+ortográfica Por favor descargue un diccionario Hunspell y póngalo dentro
+de: .config/VNote/VNote/dicts y reinicie VNote”</p>
+</blockquote>
+<h2 id="instala-el-corrector-ortográfico-hunspell-y-el-idiona-que-necesite">Instala
+el corrector ortográfico Hunspell y el idiona que necesite</h2>
+<p>Busca en Synaptic (si no lo tienes instalado instalalo) un
+diccionario Hunspell, ejemplo del idioma español:</p>
+<p><strong>hunspell-es</strong></p>
+<p>instálalo:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgC2nNDNsIVtSxzY8DBd4kgNy6y4-aFnKaS4UDMO__3r8obo8RJWXA2D8G9OGN0zIJpmOapKIGYzuoNxD_165cFf-hw7V5W6TrLwTDefEaJ4a2U_-ookU5xHNGfeeaBa4uMFGtodyoOsc6KfgVXfwZ5HRtgM-ZTXx7yCnVuv_rPb82aTJEA2oZRhP-W8P4/s16000-rw/20250509-0012%20busca%20un%20diccionario%20Hunspell%20ejemplo%20espa%C3%B1ol%20en%20Synaptic.png"/></p>
+<p>Allí hay otros diccionarios de otros idiomas, si necesitas otro
+puedes instalar más</p>
+<p>Cuando se haya instalado, allí en Synaptic dale clic derecho al
+nombre del paquete, y en “<strong>Propiedades</strong>” y busca los
+<strong>Archivos instalados</strong> de los diccionarios :</p>
+<p>.dic</p>
+<p>.aff</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge9NMcspgBTZXGoCEpNEw4BmBiYW13INgD50VCXL65c77yuXwolK0Hc85VexOn7TK5B-6kFhIdUb9gxLOEBWhihAvZujOeJH-oqCTHeHfwAZBeJ1s81z0Ng-HJdboziDC5CZwFpGcckxz4De8CDxDujn4XxqLnAorQcDa-wIxVH4mvgJ6DH0WQMtB9TLo/s16000-rw/20250509-0013%20hunspell%20archivos%20que%20contiene%20el%20diccionario.png"/></p>
+<p>Tome nota de cuales son. Copia esa ruta:</p>
+<p>/usr/share/hunspell/</p>
+<p>pégala “Ctrl + L” al administrador de archivos y entra allí, y
+selecciona con cuidado para copiar sólo todos los archivos que el
+paquete instaló, bueno también si dedea sólo los que usted quiera poner
+allí:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2f5w6-KJtT1FkPjpRFY2ZGKU3uCm_RT_1EwCPGVgvO9B1ZiA-oWPhd4X9soLbbURoUvZHirhW_6sRKY6-S5FUqMYxiCYMfG68PC7v0QV5QrcgV5TWN3KT-j52cUAci_V1a1zKIxx5IZ2QiwLM67OkKW41PWcawJZOuIQCq7iND4yUgtGmaqcTnLV1t-w/s16000-rw/20250509-0014%20copiando%20manualmente%20los%20archivos%20de%20Hunspell.png"/></p>
+<p>y has visibles los archivos ocultos con “Ctrl + H” y entra en:</p>
+<p>.config/VNote/VNote/dicts</p>
+<p>Pega los diccionarios allí</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1mZp3CMTpNo-tzG_EMBNo8ccE5sOdSkm0GY3fmQL4w21GaphnvQ3RgL0albX4USzP0nJy1Ssn3fzEQ9mIIcHDJQ7_nTGLaqxRbwooUhdTIUfFk6eSgKb9t-cdjbHvRyy7AtD_ewUw8hlj6ZYLszkN2vVJf4jWxXIBmn9O_uSTPjpmYAANVApBFrHqtiA/s16000-rw/20250509-0015%20Pegar%20los%20diccionarios%20en%20.config%20-%20VNote%20-%20Vnote%20-%20dicts.png"/></p>
+<p>Cierra VNote y vuevelo a abrir, queda iconizado, allí cierrelo con
+clic derecho y Quit:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8-W0FhxbkJBf6httfFaVZEuP27AhIjX8LxmXmiusXcgdX8xNgh-D52ctuROMvt0TB12uk59th4qr_wOaznsz3mXrn6dVQ94balCeJ5-hurulwFz2hSZg5RmtE2r-rWQT3-pNRCTJ4__jzFyIcqy4oAxr_I6x5DcMMyz7bwovdwCkg0WTzwEjQ-FW2Qdc/s16000-rw/20250518-00016%20%20clic%20derecho%20al%20icono%20de%20VNote.png"/></p>
+<h2 id="alternativamente-puede-crear-accesos-directos-pero-es-más-difícil-es-opcional">Alternativamente
+puede crear accesos directos, pero es más difícil, es opcional</h2>
+<p>Puedes crear un enlace simbólico en lugar de copiar los diccionarios
+de <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">/usr/share/hunspell/</code> a
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">~/.config/VNote/VNote/dicts/</code> para evitar duplicar los
+archivos. Esto es seguro , ya que mantiene todo sincronizado: cuando se
+actualicen los diccionarios del sistema, VNote seguirá usando la versión
+más reciente. Funciona igual que si los archivos estuvieran copiados</p>
+<p><strong>Pasos para crear el enlace simbólico:</strong></p>
+<ol type="1">
+<li><strong>Asegúrate de que el directorio de VNote para diccionarios
+exista:</strong></li>
+</ol>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.config/VNote/VNote/dicts</span></code></pre></div></div>
+<ol start="2" type="1">
+<li><strong>Crea enlaces simbólicos para los diccionarios de español
+(<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">es_ANY.dic</code> y <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">es_ANY.aff</code> o
+similar):</strong></li>
+</ol>
+<p>Los diccionarios en Debian normalmente se instalan como: -
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">/usr/share/hunspell/es_ANY.dic</code> -
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">/usr/share/hunspell/es_ANY.aff</code></p>
+<p><strong>Nota:</strong> La palabra ANY equivale al nombre de algún
+diccionario que usted necesite</p>
+<p>Puedes verificarlos con:</p>
+<div class="sourceCode" id="cb2"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">ls</span> /usr/share/hunspell/es_<span class="pp">*</span>.dic /usr/share/hunspell/es_<span class="pp">*</span>.aff</span></code></pre></div></div>
+<p>a mi me sale:</p>
+<div class="sourceCode" id="cb3"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">wachin@debian12:~$</span> ls /usr/share/hunspell/es_<span class="pp">*</span>.dic /usr/share/hunspell/es_<span class="pp">*</span>.aff</span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_AR.aff</span>  /usr/share/hunspell/es_EC.aff  /usr/share/hunspell/es_PE.aff</span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_AR.dic</span>  /usr/share/hunspell/es_EC.dic  /usr/share/hunspell/es_PE.dic</span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_BO.aff</span>  /usr/share/hunspell/es_ES.aff  /usr/share/hunspell/es_PR.aff</span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_BO.dic</span>  /usr/share/hunspell/es_ES.dic  /usr/share/hunspell/es_PR.dic</span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CL.aff</span>  /usr/share/hunspell/es_GT.aff  /usr/share/hunspell/es_PY.aff</span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CL.dic</span>  /usr/share/hunspell/es_GT.dic  /usr/share/hunspell/es_PY.dic</span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CO.aff</span>  /usr/share/hunspell/es_HN.aff  /usr/share/hunspell/es_SV.aff</span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CO.dic</span>  /usr/share/hunspell/es_HN.dic  /usr/share/hunspell/es_SV.dic</span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CR.aff</span>  /usr/share/hunspell/es_MX.aff  /usr/share/hunspell/es_US.aff</span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CR.dic</span>  /usr/share/hunspell/es_MX.dic  /usr/share/hunspell/es_US.dic</span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CU.aff</span>  /usr/share/hunspell/es_NI.aff  /usr/share/hunspell/es_UY.aff</span>
+<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_CU.dic</span>  /usr/share/hunspell/es_NI.dic  /usr/share/hunspell/es_UY.dic</span>
+<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_DO.aff</span>  /usr/share/hunspell/es_PA.aff  /usr/share/hunspell/es_VE.aff</span>
+<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a><span class="ex">/usr/share/hunspell/es_DO.dic</span>  /usr/share/hunspell/es_PA.dic  /usr/share/hunspell/es_VE.dic</span></code></pre></div></div>
+<p>Luego, crear los enlaces simbólicos, para el idioma o los idiomas que
+necesite, en mi caso quiero para el español Ecuador:</p>
+<div class="sourceCode" id="cb4"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /usr/share/hunspell/es_EC.dic ~/.config/VNote/VNote/dicts/es_EC.dic</span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /usr/share/hunspell/es_EC.aff ~/.config/VNote/VNote/dicts/es_EC.aff</span></code></pre></div></div>
+<h2 id="eligiendo-los-diccionarios-a-usar">Eligiendo los diccionarios a
+usar</h2>
+<p>Una vez que ya están instalados los diccionarios abra otra vez, de
+clic en el botón de editar:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhioTRfHLZVxMP8YpoV4R17qLAwtxPBYcXLi9FhYeV0MGqo4AyC_lfUwscT2qi7S7XmIASeg92FIlCnbMigUHFuwdVi0vsH2Zphw-48J8as5bFSkuQH5QLKEM3u9PDbxafSVYszZ2qcHe2cZLA00gyMat2F5uSGFQ5n74eTVfvYLa2f2xxJ3HmNqjEcijg/s16000-rw/20250518-00014%20la%20opci%C3%B3n%20Spelling%20de%20VNote%20s%C3%B3lo%20aparece%20estando%20en%20el%20modo%20edici%C3%B3n.png"/></p>
+<p>y en el programa en la esquina derecha abajo dice:</p>
+<p>Spelling</p>
+<p>y de clic en el diccionario que usted necesite:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjyZmw5ybwpywEVRkGFe2JlU1J1FnnMSzAKNNbS50W3v64UKV5oyHmPZhMAUKo0MDU18FMoQd3EIAW088Gl9SFW4O0TvEr7qw6CxvKMYHxgYWYyS2ahG1F1_1743Zo1zGHWoJCHE3S98YtmEIRB__rk17YCqKoafbuoZ-g6ZSAXJCgoJhdwpuO11HF5ULY=s16000"/></p>
+<p>luego habilita la corrección ortográfica Spell Check:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjyZmw5ybwpywEVRkGFe2JlU1J1FnnMSzAKNNbS50W3v64UKV5oyHmPZhMAUKo0MDU18FMoQd3EIAW088Gl9SFW4O0TvEr7qw6CxvKMYHxgYWYyS2ahG1F1_1743Zo1zGHWoJCHE3S98YtmEIRB__rk17YCqKoafbuoZ-g6ZSAXJCgoJhdwpuO11HF5ULY=s16000"/></p>

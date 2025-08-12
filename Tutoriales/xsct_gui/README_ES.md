@@ -102,15 +102,11 @@ Si usas Debian y sus derivados como MX Linux, antiX, etc, en los que se pueda in
 ### OPCIÓN 2.- Desde una terminal ejecuta `python3 xsct_gui.py`
 
 1. **Abre una terminal** (tecla: `Ctrl + Alt + T`)
-2. **Ve a la carpeta** donde guardaste el archivo `xsct_gui.py`.  
-   Por ejemplo:
-   ```bash
-   cd Descargas
-   ```
+2. **Ve a la carpeta** donde está el archivo `xsct_gui.py`.  O abre una terminal allí desde tu administrador de archivos
 3. **Ejecuta el programa** con este comando:
-   ```bash
-   python3 xsct_gui.py
-   ```
+    ```bash
+    python3 xsct_gui.py
+    ```
 
 👉 Se abrirá una ventana con dos controles:
 

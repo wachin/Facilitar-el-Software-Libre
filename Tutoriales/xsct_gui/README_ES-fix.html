@@ -1,0 +1,294 @@
+<h1 id="xsct_gui">🖥️ xsct_gui</h1>
+<p><a href="https://github.com/topics/linux"><img alt="Topic" src="https://img.shields.io/badge/topic-linux%20x11%20gui-blueviolet"/></a></p>
+<h2 id="xsct_gui-fácil-control-de-la-luz-de-tu-pantalla-para-x11-window-manager">🖥️
+xsct_gui – Fácil control de la luz de tu pantalla (para X11 Window
+Manager)</h2>
+<p>Este programa te ayuda a <strong>cambiar el color y el brillo de tu
+pantalla</strong> en Linux, para que sea más cómoda de ver,
+especialmente por la noche.</p>
+<p>Es como agregar un “filtro de luz cálida” (similar al modo nocturno
+de tu teléfono que reduce la lúz azúl) para reducir la fatiga visual y
+hacer que el uso de pantallas a altas horas de la noche sea más
+llevadero para tus ojos.</p>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct_gui</code> es una interfáz gráfica para <a href="https://github.com/faf0/sct">xsct</a>, una pequeña herramienta de
+línea de comandos que cambia la temperatura de color de la pantalla
+usando <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xrandr</code>.</p>
+<hr/>
+<h2 id="qué-hace-este-programa">🎯 ¿Qué hace este programa?</h2>
+<ul>
+<li>🔆 <strong>Ajusta el color de la pantalla</strong>: Puedes hacerla
+más naranja (cálida) o más blanca (fría).</li>
+<li>💡 <strong>Cambia el brillo</strong>: Puedes hacerla más oscura o
+más clara.</li>
+<li>🖱️ Todo con una <strong>interfaz sencilla y fácil de usar</strong>,
+con barras deslizantes.</li>
+</ul>
+<blockquote>
+<p>✅ Ideal para usar de noche, estudiando o trabajando en la
+computadora. Trata de que el color de la pantalla se asemeje al de tu
+cuarto, que por cierto en la noche es mejor que uses un tipo de foco o
+iluminación que no tenga mucha luz azúl</p>
+</blockquote>
+<hr/>
+<h2 id="lo-que-necesitas-tener-instalado">🧰 Lo que necesitas tener
+instalado</h2>
+<p>Necesitará un sistema Linux con el <strong>Gestor de Ventanas
+X11</strong> (no Wayland).</p>
+<p>A partir de 2025, estos entornos de escritorio aún admiten sesiones
+X11:</p>
+<ul>
+<li>GNOME</li>
+<li>KDE</li>
+<li>Linux Mint</li>
+<li>XFCE</li>
+<li>LXQt</li>
+<li>LXDE</li>
+<li>Openbox, Fluxbox, JWM y otros gestores de ventanas X11</li>
+</ul>
+<blockquote>
+<p>❗ Esta herramienta <strong>no funciona en Wayland</strong>.
+Asegúrese de iniciar sesión con una sesión X11.</p>
+</blockquote>
+<h3 id="cómo-instalar-todo-en-una-sola-línea">✅ Cómo instalar todo (en
+una sola línea)</h3>
+<p>Abre una terminal (Ctrl + Alt + T) y escribe:</p>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt install python3 python3-tk xsct python3-pil.imagetk python3-cairosvg</span></code></pre></div></div>
+<p>la siguiente es una tabla con la descripción de cada uno</p>
+<pre class="table-code-box" style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; font-size: 95%;">
+<colgroup>
+<col style="width: 36%"/>
+<col style="width: 63%"/>
+</colgroup>
+<thead>
+<tr class="header" style="background-color: black; color: white; font-weight: bold; padding: 8px; ">
+<th style="border: 1px solid black; padding: 8px; text-align: left;">Programa</th>
+<th style="border: 1px solid black; padding: 8px; text-align: left;">¿Para qué sirve?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Python 3</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Es el lenguaje en el que está hecho el programa.</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Tkinter</strong> (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">python3-tk</code>)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Sirve para mostrar la ventana y botones.</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Pillow</strong> (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">python3-pil.imagetk</code>)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Permite mostrar colores bonitos en las barras.</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>CairoSVG</strong> (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">python3-cairosvg</code>)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Necesario para ver el ícono del programa.</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>xsct</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Es el programa que realmente cambia el color de tu pantalla.</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Papirus Icon Theme</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Da el ícono bonito a la ventana.</td>
+</tr>
+</tbody>
+</table></pre>
+<h2 id="soporte-de-distribución-de-linux">🐧 Soporte de distribución de
+Linux</h2>
+<h3 id="ubuntu">Ubuntu</h3>
+<p>Si usas Ubuntu y sus sabores, en los que se pueda iniciar sesión con
+X11, esos paquetes están en los repositorios desde:</p>
+<ul>
+<li><a href="https://packages.ubuntu.com/xsct">https://packages.ubuntu.com/xsct</a>
+<strong>Desde noble (24.04LTS)</strong></li>
+<li><a href="https://packages.ubuntu.com/papirus-icon-theme">https://packages.ubuntu.com/papirus-icon-theme</a>
+Desde jammy (22.04LTS)</li>
+<li><a href="https://packages.ubuntu.com/python3">https://packages.ubuntu.com/python3</a>
+Desde jammy (22.04LTS)</li>
+<li><a href="https://packages.ubuntu.com/python3-tk">https://packages.ubuntu.com/python3-tk</a>
+Desde jammy (22.04LTS)<br/>
+</li>
+<li><a href="https://packages.ubuntu.com/python3-pil.imagetk">https://packages.ubuntu.com/python3-pil.imagetk</a>
+Desde jammy (22.04LTS)</li>
+<li><a href="https://packages.ubuntu.com/python3-cairosvg">https://packages.ubuntu.com/python3-cairosvg</a>
+Desde jammy (22.04LTS)</li>
+</ul>
+<p><strong>Nota:</strong> Linux Mint está basado en Ubuntu, puede que
+allí también tengan estos paquetes esos nombres.</p>
+<h3 id="debian">Debian</h3>
+<p>Si usas Debian y sus derivados como MX Linux, antiX, etc, en los que
+se pueda iniciar sesión con X11, esos paquetes están en los repositorios
+desde:</p>
+<ul>
+<li><a href="https://packages.debian.org/xsct">https://packages.debian.org/xsct</a>
+<strong>desde Debian 12</strong></li>
+<li><a href="https://packages.debian.org/papirus-icon-theme">https://packages.debian.org/papirus-icon-theme</a>
+Desde Debian 10</li>
+<li><a href="https://packages.debian.org/python3">https://packages.debian.org/python3</a>
+Desde Debian 10</li>
+<li><a href="https://packages.debian.org/python3-tk">https://packages.debian.org/python3-tk</a>
+Desde Debian 10<br/>
+</li>
+<li><a href="https://packages.debian.org/python3-pil.imagetk">https://packages.debian.org/python3-pil.imagetk</a>
+Desde Debian 10</li>
+<li><a href="https://packages.debian.org/python3-cairosvg">https://packages.debian.org/python3-cairosvg</a>
+Desde Debian 10</li>
+</ul>
+<p><strong>Nota:</strong> MX Linux 23, antiX 23 y otros están basados en
+Debian 12</p>
+<hr/>
+<h2 id="cómo-usar-el-programa">▶️ Cómo usar el programa</h2>
+<h3 id="opción-1.--abre-el-script-launcher.sh">OPCIÓN 1.- Abre el script
+Launcher.sh</h3>
+<ol type="1">
+<li>Asegúrate que el script <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">Launcher.sh</code>está como
+ejecutable, en el administrador de archivos dele clic derecho y en la
+pestaña “<strong>Permisos</strong>” asegúrese de que “<strong>es
+ejecutable</strong>”</li>
+<li>Dele doble clic al script <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">Launcher.sh</code></li>
+</ol>
+<p>👉 Se abrirá una ventana con dos controles:</p>
+<p><img src="https://blogger.googleusercontent.com/img/a/AVvXsEixMsvdzTpTY5ENvil5n1a9KoIlz3rWyYkq1qlxnS4OPN_47wJmk5uBqhvM1PZu0fhNqgRf8_ttnMRlyjxns5iyFEBqZ8CIiLk22lq6Ak86gAa0O9tOxqeIrjOOQKI1WHKq4JS-2_5tvUZPZNWLCeNrnDjh-9xw2fvz54a56Rvnc9R_59TVd8EEWi7aLdc=s16000-rw"/></p>
+<h3 id="opción-2.--desde-una-terminal-ejecuta-python3-xsct_gui.py">OPCIÓN
+2.- Desde una terminal ejecuta <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">python3 xsct_gui.py</code></h3>
+<ol type="1">
+<li><strong>Abre una terminal</strong> (tecla:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">Ctrl + Alt + T</code>)</li>
+<li><strong>Ve a la carpeta</strong> donde está el archivo
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct_gui.py</code>. O abre una terminal allí desde tu
+administrador de archivos</li>
+<li><strong>Ejecuta el programa</strong> con este comando:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">bash     python3 xsct_gui.py</code></li>
+</ol>
+<p>👉 Se abrirá una ventana con dos controles:</p>
+<hr/>
+<h2 id="controles-de-la-interfaz">🎛️ Controles de la interfaz</h2>
+<h3 id="temperatura-de-color-de-2000k-a-6500k">1. 🌡️ Temperatura de
+color (de 2000K a 6500K)</h3>
+<ul>
+<li><strong>Izquierda (2000K)</strong>: color naranja cálido → ideal
+para la noche.</li>
+<li><strong>Derecha (6500K)</strong>: blanco brillante → ideal para el
+día.</li>
+</ul>
+<blockquote>
+<p>📌 Mueve el deslizador para elegir el color que más te guste.</p>
+</blockquote>
+<hr/>
+<h3 id="brillo-de-0.200-a-1.000">2. 💡 Brillo (de 0.200 a 1.000)</h3>
+<ul>
+<li><strong>Izquierda (0.200)</strong>: muy oscuro → buenísimo para la
+oscuridad.</li>
+<li><strong>Derecha (1.000)</strong>: brillo máximo → para ambientes
+claros.</li>
+</ul>
+<blockquote>
+<p>📌 Mueve el deslizador para ajustar el brillo.</p>
+</blockquote>
+<hr/>
+<h2 id="los-cambios-se-aplican-solos">🔄 ¿Los cambios se aplican
+solos?</h2>
+<p>¡Sí! Cada vez que mueves una barra, el cambio se aplica
+<strong>automáticamente</strong>.</p>
+<p>También puedes hacer clic en el botón <strong>“Acerca de…”</strong>
+para ver información del programa.</p>
+<hr/>
+<h2 id="consejos-para-usarlo-bien">💡 Consejos para usarlo bien</h2>
+<pre class="table-code-box" style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; font-size: 95%;">
+<colgroup>
+<col style="width: 36%"/>
+<col style="width: 64%"/>
+</colgroup>
+<thead>
+<tr class="header" style="background-color: black; color: white; font-weight: bold; padding: 8px; ">
+<th style="border: 1px solid black; padding: 8px; text-align: left;">Situación</th>
+<th style="border: 1px solid black; padding: 8px; text-align: left;">Recomendación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;">🌙 <strong>De noche o en una habitación oscura</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Usa <strong>3000K – 4000K</strong> de temperatura y <strong>0.700 –
+0.800</strong> de brillo.</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;">☀️ <strong>Durante el día o con luz natural</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Usa <strong>5500K – 6500K</strong> y brillo al máximo
+(<strong>1.000</strong>).</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;">👀 <strong>Si te duelen los ojos</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Prueba con más naranja y menos brillo.</td>
+</tr>
+</tbody>
+</table></pre>
+<blockquote>
+<p>🔎 <strong>Experimenta</strong> hasta encontrar la combinación que
+más cómoda te parezca, además según el cuarto y el tipo de foco donde
+estés.</p>
+</blockquote>
+<hr/>
+<h2 id="puedo-modificar-el-programa">🛠️ ¿Puedo modificar el
+programa?</h2>
+<p>¡Claro! Este programa está hecho en <strong>Python</strong> y puedes
+abrir el archivo <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct_gui.py</code> con cualquier editor de texto
+(como <strong>Geany</strong>, <strong>Thonny</strong> o
+<strong>Mousepad</strong>) para ver cómo funciona o cambiar colores,
+mensajes, etc.</p>
+<blockquote>
+<p>📚 Es un buen ejemplo para aprender sobre interfaces gráficas con
+<strong>Tkinter</strong>.</p>
+</blockquote>
+<hr/>
+<h2 id="más-información">📚 Más información</h2>
+<ul>
+<li>🐍 Código del programa GUI: <a href="https://github.com/wachin/xsct_gui">https://github.com/wachin/xsct_gui</a></li>
+<li>⚙️ El programa CLI “xsct”: <a href="https://github.com/faf0/sct">https://github.com/faf0/sct</a></li>
+</ul>
+<hr/>
+<h2 id="sobre-este-programa">🙌 Sobre este programa</h2>
+<p>Este programa fue creado por <strong>Washington Indacochea</strong>
+(wachin.id@gmail.com), con licencia libre <strong>GNU GPL3</strong></p>
+<blockquote>
+<p>✨ ¡Gracias por usarlo!<br/>
+Que tu pantalla sea siempre cómoda para tus ojos. 👀💙</p>
+</blockquote>
+<hr/>
+<blockquote>
+<p>📝 Nota: Si usas una versión antigua de Debian (como Buster), puede
+que debas cambiar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct</code> por <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">sct</code> en el código.
+Pero en Debian 12 y MX Linux 23, todo funciona sin problemas.</p>
+</blockquote>
+<hr/>
+<p>✅ Listo. Ahora ya sabes cómo usar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct_gui</code>.<br/>
+¡Abre la terminal y prueba cambiar el color de tu pantalla especialmente
+en la noche! 🌈🖥️</p>
+<h1 id="para-instalar-en-debian-11-bullseye-debian-10-buster-compilar-sct">Para
+Instalar en Debian 11 bullseye, Debian 10 buster, compilar sct</h1>
+<p>Necesitamos las siguientes dependencias para poder compilar el código
+fuente y que se pueda instalar xsct en Debian 11, 10:</p>
+<div class="sourceCode" id="cb2"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt install libx11-dev libxrandr-dev</span></code></pre></div></div>
+<p>Luego, clone el repositorio de xsct:</p>
+<div class="sourceCode" id="cb3"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/faf0/sct</span></code></pre></div></div>
+<p>y entre allí</p>
+<div class="sourceCode" id="cb4"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="bu">cd</span> sct</span></code></pre></div></div>
+<p>y compilelo:</p>
+<div class="sourceCode" id="cb5"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div></div>
+<p>no se demora mucho en compilar, es rapidísimo, e instálelo:</p>
+<div class="sourceCode" id="cb6"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div></div>
+<p>y se instalará</p>
+<h2 id="dependencias-para-xsct_gui-en-debian-11-10">Dependencias para
+xsct_gui en Debian 11, 10</h2>
+<ol type="1">
+<li>Para usar la interfáz gráfica para xsct necesitamos instalar:</li>
+</ol>
+<div class="sourceCode" id="cb7"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">sudo</span> apt install python3 python3-tk python3-pil.imagetk python3-cairosvg</span></code></pre></div></div>
+<p>y ahora si:</p>
+<ol start="2" type="1">
+<li>Navega hasta el directorio donde guardaste el archivo
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">xsct_gui.py</code>.</li>
+<li>Ejecuta el siguiente comando:</li>
+</ol>
+<div class="sourceCode" id="cb8"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode python" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode python" style="color: inherit; font-family: inherit;"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a>python3 xsct_gui.py</span></code></pre></div></div>
+<blockquote>
+<p>🙏 Dios les bendiga</p>
+</blockquote>

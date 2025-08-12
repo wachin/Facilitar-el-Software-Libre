@@ -1,3 +1,4 @@
+
 # **Cómo instalar Debian 12 Netinstall CD con LXQT**
 
 Estos son los pasos para dejar utilizable a LXQT instalado desde Netinstall CD, del cual he hecho un tutorial general:
@@ -190,3 +191,14 @@ Si no estuviera en la versión estable, puedes habilitar el **Repo de prueba** d
 * **Haz copia de seguridad** antes de instalar software experimental.
 * **Comprueba las dependencias** antes de confirmar la instalación.
 
+# Instalar network-manager-gnome
+
+Este paquete hay que instalarlo porque 
+
+```bash
+sudo apt install network-manager-gnome
+```
+
+
+
+# el Firmware para el Wi-Fi para Laptop Dell Inspiron

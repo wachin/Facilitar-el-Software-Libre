@@ -30,35 +30,43 @@ sudo cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper 
 ---
 
 ### **Paso 3: Descargar y compilar ChordPro**
+
 1. Descarga la última versión del código fuente desde GitHub:
    ```bash
    wget https://github.com/ChordPro/chordpro/releases/latest/download/App-Music-ChordPro-6.070.7.tar.gz
-   tar -xzvf App-Music-ChordPro-*.tar.gz
-   cd App-Music-ChordPro-*
+   tar -xzvf App-Music-ChordPro-*.tar.gz  
    ```
-2. Genera el `Makefile` y compila:
+2. Entrar en la carpeta descomprimida:
+   ```bash 
+   cd App-Music-ChordPro-6.070.7
+   ```  
+   App-Music-ChordPro-6.070.7
+3. Genera el `Makefile` y compila:
    ```bash
    perl Makefile.PL
    make
    ```
-3. Instala en el sistema:
+4. Instala en el sistema:
    ```bash
    sudo make install
-   ```
+   ```  
+   y quedaron instalados dos programas:  
+   chordpro
+   wxchordpro
 
 ---
 
 ### **Paso 4: Verificar la instalación**
 - **Para la versión CLI** (línea de comandos):
-  ```bash
-  chordpro --version
-  ```
+```bash
+chordpro --version
+```
   Debe mostrar: `ChordPro version 6.070.7`.
 
 - **Para la GUI**:
-  ```bash
-  wxchordpro
-  ```
+```bash
+wxchordpro
+```
   ¡La interfaz gráfica debería abrirse correctamente!
 
 ---
@@ -119,5 +127,3 @@ Ahora tienes **ChordPro con GUI** funcionando en Debian 12. Puedes:
   ```bash
   chordpro --manual
   ```
-
-Si tienes algún problema, ¡coméntalo y te ayudo! 🚀

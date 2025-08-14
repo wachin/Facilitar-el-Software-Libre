@@ -1,0 +1,138 @@
+<h1 id="xinput-plus">🖱️ xinput-plus</h1>
+<h1 id="ajusta-la-velocidad-de-tu-mouse-o-touchpad-muy-fácil">Ajusta la
+velocidad de tu mouse o touchpad (¡muy fácil!)</h1>
+<p>Este programa es para <strong>Linux</strong> y te permite
+<strong>cambiar la velocidad del puntero</strong> (el cursor del mouse o
+touchpad) de forma gráfica para usarlo en X11 Window Manager como en:
+Openbox, JWM, iceWM, Fluxbox, y otros Gestores o Administradores de
+ventana minimalistas en los cuales no hay un programa con GUI para
+hacerlo, sin tener que escribir comandos complicados. Es ideal si usas
+teclados externos que traen <strong>teclado con touchpad
+integrado</strong>, como el <strong>Logitech K400</strong>, o incluso
+para el touchpad de tu laptop si sientes que el cursor va muy lento.</p>
+<hr />
+<h2 id="para-qué-sirve">🎯 ¿Para qué sirve?</h2>
+<ul>
+<li>✅ Aumentar o disminuir la velocidad del mouse o touchpad.</li>
+<li>✅ Guardar la configuración para que no se pierda al reiniciar.</li>
+<li>✅ Funciona con dispositivos como:
+<ul>
+<li>Teclados con touchpad (ej: Logitech K400)</li>
+<li>Mouses USB</li>
+<li>Touchpads de laptop</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="requisitos">🖥️ Requisitos</h2>
+<p>Antes de usarlo, asegúrate de tener instalado lo siguiente en tu
+computadora con Linux:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install xinput git libinput-tools python3-pyqt6</span></code></pre></div>
+<ol type="1">
+<li>⚠️ Este programa solo funciona en <strong>X11</strong>, no en
+Wayland.<br />
+</li>
+<li>Es sólo para X11 WM como Openbox, JWM, iceWM, Fluxbox, Xubuntu,
+etc</li>
+<li>En el 2025 ejemplo en GNOME, KDE antes de hacer login se puede
+seleccionar X11 para entrar en vez de con Wayland.</li>
+</ol>
+<hr />
+<h2 id="cómo-usar-el-programa">🚀 Cómo usar el programa</h2>
+<h3 id="era-opción-descargar-el-repositorio"><strong>1era OPCIÓN:
+Descargar el repositorio</strong></h3>
+<p>En:</p>
+<p><a
+href="https://github.com/wachin/xinput-plus">https://github.com/wachin/xinput-plus</a></p>
+<p>da clic en la especie de flecha abajo en Code:</p>
+<p><strong>&lt;&gt; Code ▼</strong></p>
+<p>y clic en:</p>
+<p><strong>Download ZIP</strong></p>
+<p>descompríme, y allí dentro de la carpeta está el archivo
+<code>xinput-plus.py</code>.</p>
+<p>o lo puedes clonar:</p>
+<h3 id="da-opción-clonar-el-repositorio"><strong>2da OPCIÓN: Clonar el
+repositorio</strong></h3>
+<p><strong>1.-</strong> Como ya tenemos instalado a git poner en una
+terminal en una carpeta donde tenga programas de Linux:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/wachin/xinput-plus</span></code></pre></div>
+<p><strong>2.-</strong> Dale permisos de ejecución</p>
+<p>Puede ser con clic derecho en el <strong>administrador de
+archivos</strong> y en la pestaña “<strong>Permisos</strong>” verificar
+que esté marcado como ejecutatable</p>
+<p>o desde la terminal con:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x xinput-plus.py</span></code></pre></div>
+<h2 id="ejecutando-con-launcher.sh">Ejecutando con Launcher.sh</h2>
+<p>Asegúrate que el script <code>Launcher.sh</code>está como ejecutable,
+en el administrador de archivos dele clic derecho y en la pestaña
+“<strong>Permisos</strong>” asegúrese de que “<strong>es
+ejecutable</strong>”</p>
+<p>Dele doble clic al script <code>Launcher.sh</code> y clic en
+<code>Ejecutar</code></p>
+<p>👉 Se abrirá una ventana con dos controles:</p>
+<p><img src="vx_images/403085416299084.png" /></p>
+<h2 id="ejecutando-a-xinput-plus">Ejecutando a xinput-plus</h2>
+<p><strong>1.-</strong> <strong>Abre una terminal</strong>
+<strong>2.-</strong> <strong>Ve a la carpeta</strong> donde está el
+archivo <code>xinput-plus.py</code>, o abre una terminal allí desde tu
+administrador de archivos <strong>3.-</strong> <strong>Ejecuta el
+programa</strong> con este comando:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> xinput-plus.py</span></code></pre></div>
+<p>y se abrirá.</p>
+<blockquote>
+<p>💡 En algunos Linux puedes dar clic derecho en el archivo
+<code>xinput-plus.py</code> y abrir con python.</p>
+</blockquote>
+<hr />
+<h2 id="cómo-usarlo">🎛️ Cómo usarlo</h2>
+<ol type="1">
+<li>Al abrir el programa.</li>
+<li>En la lista de la izquierda, <strong>haz clic en tu
+dispositivo</strong> (por ejemplo: “Logitech K400”).</li>
+<li>Usa la barra deslizante para cambiar la velocidad:
+<ul>
+<li>← Más lento</li>
+<li>→ Más rápido (¡hasta 2 veces más rápido!)</li>
+</ul></li>
+<li>Cuando encuentres la velocidad perfecta, haz clic en
+<strong>“Guardar configuración”</strong>.</li>
+</ol>
+<p>✅ ¡Listo! El cambio se aplica al instante y se guarda para la
+próxima vez. Per una vez que hayas encendido otra vez el ordenador y
+abierto el programa debes de darle clic a la ventana para que se
+apliquen los cambios guardados.</p>
+<hr />
+<h2 id="dónde-se-guarda-la-configuración">💾 ¿Dónde se guarda la
+configuración?</h2>
+<p>El programa guarda tus ajustes en este archivo (no lo borres si no
+quieres perder la configuración):</p>
+<pre><code>~/.config/libinput-gui.json</code></pre>
+<hr />
+<h2 id="cómo-funciona-por-dentro">🤓 ¿Cómo funciona por dentro?</h2>
+<p>Usa comandos de Linux con <code>xinput</code> para cambiar la
+velocidad del dispositivo en tiempo real.<br />
+Pero para usarlo: ¡la interfaz lo hace todo por ti!</p>
+<hr />
+<h2 id="quieres-mejorar-este-programa">🛠️ ¿Quieres mejorar este
+programa?</h2>
+<p>Este código está hecho en Python con PyQt6, perfecto para estudiantes
+que quieren aprender sobre: - Interfaces gráficas - Automatización en
+Linux - Control de hardware</p>
+<p>¡Siéntete libre de modificarlo, mejorarlo o usarlo en tus
+proyectos!</p>
+<hr />
+<h2 id="sobre-este-programa">🙌 Sobre este programa</h2>
+<p>Creado por: <strong>Washington Indacochea Delgado</strong> Licencia:
+<strong>GNU GPL3</strong> (gratis y open source)</p>
+<p>✨ Gracias por usar <code>xinput-plus</code>!</p>
+<p>Para los que aman X11 y los gestores de ventana minimalistas.
+👀💙</p>
+<hr />
+<blockquote>
+<p>🌟 Si te sirvió, dale una estrella ⭐ en GitHub. ¡Ayuda mucho!
+```</p>
+</blockquote>
+<p>Dios te bendiga</p>

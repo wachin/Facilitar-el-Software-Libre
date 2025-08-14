@@ -1,9 +1,9 @@
-# 🖥️ xsct_gui
+# 🌙  xsct_gui
 
 [![Topic](https://img.shields.io/badge/topic-linux%20x11%20gui-blueviolet)](https://github.com/topics/linux)
 
 
-## 🖥️ xsct_gui – Fácil control de la luz de tu pantalla (para X11 Window Manager)
+## 🌙 xsct_gui – Fácil control de la luz de tu pantalla, para X11 Window Manager
 
 Este programa te ayuda a **cambiar el color y el brillo de tu pantalla** en Linux, para que sea más cómoda de ver, especialmente por la noche. 
 
@@ -23,7 +23,7 @@ Es como agregar un “filtro de luz cálida” (similar al modo nocturno de tu t
 
 ---
 
-## 🧰 Lo que necesitas tener instalado
+## 💻 El Sistema Operativo que necesitas
 
 Necesitará un sistema Linux con el **Gestor de Ventanas X11** (no Wayland).
 
@@ -39,12 +39,12 @@ A partir de 2025, estos entornos de escritorio aún admiten sesiones X11:
 
 > ❗ Esta herramienta **no funciona en Wayland**. Asegúrese de iniciar sesión con una sesión X11.
 
-### ✅ Cómo instalar todo (en una sola línea)
+### ✅ Software requerido
 
-Abre una terminal (Ctrl + Alt + T) y escribe:
+Antes de usar `xsct_gui`, asegúrese de tener estos instalados (abre una terminal y ejecuta):
 
 ```bash
-sudo apt install python3 python3-tk xsct python3-pil.imagetk python3-cairosvg
+sudo apt install python3 git python3-tk xsct python3-pil.imagetk python3-cairosvg
 ```
 
 la siguiente es una tabla con la descripción de cada uno
@@ -90,25 +90,60 @@ Si usas Debian y sus derivados como MX Linux, antiX, etc, en los que se pueda in
 
 ## ▶️ Cómo usar el programa
 
-### OPCIÓN 1.- Abre el script Launcher.sh
+Lo primero es tener el programa en una carpeta en el ordenador con Linux
 
-1. Asegúrate que el script `Launcher.sh`está como ejecutable, en el administrador de archivos dele clic derecho y en la pestaña "**Permisos**" asegúrese de que "**es ejecutable**"
-2. Dele doble clic al script `Launcher.sh`
+### **1era OPCIÓN: Descargar el repositorio**
+
+Diríjase al sitio web:
+
+[https://github.com/wachin/xsct_gui](https://github.com/wachin/xsct_gui)
+
+de clic en la especie de flecha abajo en Code:
+
+**<>  Code ▼**
+
+y clic en:
+
+**Download ZIP**
+
+descompríme, y allí dentro de la carpeta está el archivo `Launcher.sh`
+
+o puedes clonarlo:
+
+### **2da OPCIÓN: Clona el repositorio**
+
+**1.-** Como ya tenemos instalado a git poner en una terminal en una carpeta donde tenga programas de Linux:
+
+```bash
+git clone https://github.com/wachin/xsct_gui  
+```
+y entra allí con:
+
+```bash
+cd xsct_gui  
+```
+
+## Ejecutando con Launcher.sh
+
+Asegúrate que el script `Launcher.sh`está como ejecutable, en el administrador de archivos dele clic derecho y en la pestaña "**Permisos**" asegúrese de que "**es ejecutable**"
+
+Dele doble clic al script `Launcher.sh` y clic en `Ejecutar`
 
 👉 Se abrirá una ventana con dos controles:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEixMsvdzTpTY5ENvil5n1a9KoIlz3rWyYkq1qlxnS4OPN_47wJmk5uBqhvM1PZu0fhNqgRf8_ttnMRlyjxns5iyFEBqZ8CIiLk22lq6Ak86gAa0O9tOxqeIrjOOQKI1WHKq4JS-2_5tvUZPZNWLCeNrnDjh-9xw2fvz54a56Rvnc9R_59TVd8EEWi7aLdc=s16000-rw)
 
-### OPCIÓN 2.- Desde una terminal ejecuta `python3 xsct_gui.py`
+### Abrir el programa con python con `python3 xsct_gui.py`
 
-1. **Abre una terminal** (tecla: `Ctrl + Alt + T`)
-2. **Ve a la carpeta** donde está el archivo `xsct_gui.py`.  O abre una terminal allí desde tu administrador de archivos
-3. **Ejecuta el programa** con este comando:
-    ```bash
-    python3 xsct_gui.py
-    ```
+**1.-** **Abre una terminal**
+**2.-** **Ve a la carpeta** donde está el archivo `xsct_gui.py`, o abre una terminal allí desde tu administrador de archivos
+**3.-** **Ejecuta el programa** con este comando:
 
-👉 Se abrirá una ventana con dos controles:
+```bash
+python3 xsct_gui.py
+```
+
+👉 Se abrirá una ventana con dos controles
 
 ---
 
@@ -169,7 +204,7 @@ También puedes hacer clic en el botón **"Acerca de..."** para ver información
 
 ## 🙌 Sobre este programa
 
-Este programa fue creado por **Washington Indacochea** (wachin.id@gmail.com), con licencia libre **GNU GPL3**
+Este programa fue creado por **Washington Indacochea Delgado**, con licencia libre **GNU GPL3**
 
 > ✨ ¡Gracias por usarlo!  
 > Que tu pantalla sea siempre cómoda para tus ojos. 👀💙

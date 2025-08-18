@@ -1,0 +1,6 @@
+# MX Community Main and Test Repos
+deb http://mirror.cedia.org.ec/mx-workspace/mx/repo/ bookworm main non-free
+#deb http://mirror.cedia.org.ec/mx-workspace/mx/testrepo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mirror.cedia.org.ec/mx-workspace/mx/repo/ bookworm ahs

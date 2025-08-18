@@ -1,0 +1,86 @@
+<h3
+id="qué-url-debo-usar-para-reutilizar-una-imagen-en-blogger-href-o-src">📌
+¿Qué URL debo usar para reutilizar una imagen en Blogger: href o
+src?</h3>
+<p>Publicadas por <a
+href="https://www.blogger.com/profile/17773143494819856315"
+title="author profile">Washington Indacochea Delgado</a> <a
+href="https://facilitarelsoftwarelibre.blogspot.com/2025/08/que-url-debo-usar-para-reutilizar-una-imagen-en-blogger-href-o-src.html"
+title="permanent link">agosto 18, 2025</a></p>
+<p>Si alguna vez has querido usar una imagen de una entrada anterior en
+un nuevo post de tu blog en <strong>Blogger</strong>, seguramente te has
+encontrado con un dilema:<br />
+¿Debo copiar la URL del enlace (<code>href</code>) o la del origen de la
+imagen (<code>src</code>)?</p>
+<p>Vamos a aclararlo de una vez por todas.</p>
+<hr />
+<h4 id="el-escenario-común">🔍 El escenario común</h4>
+<p>Imagina que tienes una entrada con una imagen insertada, y el código
+HTML se ve algo así:</p>
+<pre><code>&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;
+  &lt;a href=&quot;https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c&quot;&gt;
+    &lt;img data-original-height=&quot;489&quot; data-original-width=&quot;790&quot; 
+         src=&quot;https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000&quot; 
+         title=&quot;xinput-plus-openned-in-linux-debian12&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p><img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7RFScQTdKjbUVamUpGfgo7BwDPTS4pfcMojnXYjzSaCXSF4uiftWqtckUGXr5G38IyNLce6K3W2WS1m5rCeCr0qn-v6lynbOjZa12hNNSJqWguzMiJ-ZIdKyVvCVNRkph1NLFj3JPwfHqucQDRVvoo9X7bjn1YDZDM2E-o14X1Y_nudbUb1eLsZOBCcE/s16000-rw/20250818-090532%20el%20codigo%20html%20de%20una%20imagen%20en%20blogger.png"
+title="el codigo html del lugar donde está una imagen en blogger" /> Y
+ahora quieres usar <strong>esa misma imagen</strong> en otro post. ¿Cuál
+URL debes copiar?</p>
+<hr />
+<h4 id="la-respuesta-usa-la-url-del-src">✅ La respuesta: Usa la URL del
+<code>src</code></h4>
+<p>La <strong>URL correcta</strong> es la que aparece en el atributo
+<strong><code>src</code></strong> del elemento
+<code>&lt;img&gt;</code>.<br />
+Esta es la que apunta directamente al <strong>archivo de imagen alojado
+en los servidores de Google</strong> (que Blogger utiliza para el
+almacenamiento).</p>
+<blockquote>
+<p>✅ <strong><code>src</code></strong> = <strong>Source</strong>
+(fuente). Es la ubicación real de la imagen.</p>
+</blockquote>
+<p>La URL del <code>href</code>, en cambio, es solo un enlace a una
+<strong>página de visualización</strong> de la imagen (por ejemplo, una
+página donde se muestra la imagen a tamaño completo). No es la imagen en
+sí.</p>
+<hr />
+<h4 id="cómo-reutilizar-la-imagen">🛠️ Cómo reutilizar la imagen</h4>
+<ol type="1">
+<li><strong>Copia la URL del atributo <code>src</code></strong>:</li>
+</ol>
+<pre><code>    https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000</code></pre>
+<ol start="2" type="1">
+<li>En tu nueva entrada, inserta la imagen usando este código HTML:</li>
+</ol>
+<pre><code>&lt;img src=&quot;TU_URL_AQUÍ&quot; alt=&quot;Descripción de la imagen&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;</code></pre>
+<p>Por ejemplo:</p>
+<pre><code>    &lt;img src=&quot;https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000&quot; 
+         alt=&quot;xinput-plus en Linux Debian 12&quot; 
+         style=&quot;max-width: 100%; height: auto; display: block; margin: 0 auto;&quot; /&gt;</code></pre>
+<p>Este código hará que la imagen se vea bien en todos los dispositivos
+y centrada si lo deseas.</p>
+<hr />
+<h4 id="consejo-adicional-controla-el-tamaño">💡 Consejo adicional:
+Controla el tamaño</h4>
+<p>El sufijo <code>=s16000</code> en la URL indica que Blogger sirve la
+imagen a un tamaño máximo de 16000px (lo cual es enorme). Puedes
+cambiarlo para optimizar:</p>
+<ul>
+<li><code>=s800</code> → imagen de hasta 800px de ancho (ideal para
+blogs).</li>
+<li><code>=s1600</code> → alta calidad, pero más pesada.</li>
+<li>Sin modificar → tamaño original.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>...=s800</code></pre>
+<p>Así reduces el peso de la página y mejoras el rendimiento.</p>
+<hr />
+<h4 id="conclusión">✅ Conclusión</h4>
+<p>Cuando quieras reutilizar una imagen de una entrada anterior en
+Blogger, <strong>siempre usa la URL del atributo
+<code>src</code></strong>, no la del <code>href</code>. Es la forma más
+directa, eficiente y segura de mostrar la imagen en otro post, sin tener
+que volver a subirla.</p>

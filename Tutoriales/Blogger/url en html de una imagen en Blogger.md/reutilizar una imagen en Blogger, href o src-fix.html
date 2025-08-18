@@ -1,0 +1,79 @@
+<h3 id="qué-url-debo-usar-para-reutilizar-una-imagen-en-blogger-href-o-src">📌
+¿Qué URL debo usar para reutilizar una imagen en Blogger: href o
+src?</h3>
+<p>Publicadas por <a href="https://www.blogger.com/profile/17773143494819856315" title="author profile">Washington Indacochea Delgado</a> <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/08/que-url-debo-usar-para-reutilizar-una-imagen-en-blogger-href-o-src.html" title="permanent link">agosto 18, 2025</a></p>
+<p>Si alguna vez has querido usar una imagen de una entrada anterior en
+un nuevo post de tu blog en <strong>Blogger</strong>, seguramente te has
+encontrado con un dilema:<br/>
+¿Debo copiar la URL del enlace (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">href</code>) o la del origen de la
+imagen (<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code>)?</p>
+<p>Vamos a aclararlo de una vez por todas.</p>
+<hr/>
+<h4 id="el-escenario-común">🔍 El escenario común</h4>
+<p>Imagina que tienes una entrada con una imagen insertada, y el código
+HTML se ve algo así:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">&lt;div class="separator" style="clear: both; text-align: center;"&gt;
+  &lt;a href="https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c"&gt;
+    &lt;img data-original-height="489" data-original-width="790" 
+         src="https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000" 
+         title="xinput-plus-openned-in-linux-debian12" /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</span></span></pre></div>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7RFScQTdKjbUVamUpGfgo7BwDPTS4pfcMojnXYjzSaCXSF4uiftWqtckUGXr5G38IyNLce6K3W2WS1m5rCeCr0qn-v6lynbOjZa12hNNSJqWguzMiJ-ZIdKyVvCVNRkph1NLFj3JPwfHqucQDRVvoo9X7bjn1YDZDM2E-o14X1Y_nudbUb1eLsZOBCcE/s16000-rw/20250818-090532%20el%20codigo%20html%20de%20una%20imagen%20en%20blogger.png" title="el codigo html del lugar donde está una imagen en blogger"/> Y
+ahora quieres usar <strong>esa misma imagen</strong> en otro post. ¿Cuál
+URL debes copiar?</p>
+<hr/>
+<h4 id="la-respuesta-usa-la-url-del-src">✅ La respuesta: Usa la URL del
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code></h4>
+<p>La <strong>URL correcta</strong> es la que aparece en el atributo
+<strong><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code></strong> del elemento
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">&lt;img&gt;</code>.<br/>
+Esta es la que apunta directamente al <strong>archivo de imagen alojado
+en los servidores de Google</strong> (que Blogger utiliza para el
+almacenamiento).</p>
+<blockquote>
+<p>✅ <strong><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code></strong> = <strong>Source</strong>
+(fuente). Es la ubicación real de la imagen.</p>
+</blockquote>
+<p>La URL del <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">href</code>, en cambio, es solo un enlace a una
+<strong>página de visualización</strong> de la imagen (por ejemplo, una
+página donde se muestra la imagen a tamaño completo). No es la imagen en
+sí.</p>
+<hr/>
+<h4 id="cómo-reutilizar-la-imagen">🛠️ Cómo reutilizar la imagen</h4>
+<ol type="1">
+<li><strong>Copia la URL del atributo <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code></strong>:</li>
+</ol>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">    https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000</span></span></pre></div>
+<ol start="2" type="1">
+<li>En tu nueva entrada, inserta la imagen usando este código HTML:</li>
+</ol>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">&lt;img src="TU_URL_AQUÍ" alt="Descripción de la imagen" style="max-width: 100%; height: auto;" /&gt;</span></span></pre></div>
+<p>Por ejemplo:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">    &lt;img src="https://blogger.googleusercontent.com/img/a/AVvXsEjpX652hNVrABN1QASxS3bgTiZvC7MDDoRjhIIVs2a0rrQHemqm4vwVZD_mpVAeuiflGv-gyLAW5oxTi6vLmUcq5KKwnPwLVxp0ycoP4jfHSpk24yWO_6TD888U2tjl4aRW_gPvxTCF5eMuoVJ0Ea4J0FxHTnzogi7PhdcSs9K6z5g7PLxzFNRB-u0nX2c=s16000" 
+         alt="xinput-plus en Linux Debian 12" 
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;" /&gt;</span></span></pre></div>
+<p>Este código hará que la imagen se vea bien en todos los dispositivos
+y centrada si lo deseas.</p>
+<hr/>
+<h4 id="consejo-adicional-controla-el-tamaño">💡 Consejo adicional:
+Controla el tamaño</h4>
+<p>El sufijo <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">=s16000</code> en la URL indica que Blogger sirve la
+imagen a un tamaño máximo de 16000px (lo cual es enorme). Puedes
+cambiarlo para optimizar:</p>
+<ul>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">=s800</code> → imagen de hasta 800px de ancho (ideal para
+blogs).</li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">=s1600</code> → alta calidad, pero más pesada.</li>
+<li>Sin modificar → tamaño original.</li>
+</ul>
+<p>Ejemplo:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">...=s800</span></span></pre></div>
+<p>Así reduces el peso de la página y mejoras el rendimiento.</p>
+<hr/>
+<h4 id="conclusión">✅ Conclusión</h4>
+<p>Cuando quieras reutilizar una imagen de una entrada anterior en
+Blogger, <strong>siempre usa la URL del atributo
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">src</code></strong>, no la del <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">href</code>. Es la forma más
+directa, eficiente y segura de mostrar la imagen en otro post, sin tener
+que volver a subirla.</p>

@@ -2,7 +2,7 @@
 
 Este tutorial es para instalar los repositorios de MX Linux a Sistemas Operativos Debian y basados en Debian que no lo tienen añadido, y para instalar el Instalador de paquetes de MX Linux el cual es un Centro de Software con una colección de los mejores programas para Linux
 
-### ¿Qué programas se pueden instalar desde MX Instalador de paquetes?
+## ¿Qué programas se pueden instalar desde MX Instalador de paquetes?
 
 Este programa trae una Colección de Software que está organizado en **pestañas o colecciones**, cada una enfocada en un tipo de software o necesidad específica:
 
@@ -170,11 +170,9 @@ Este tutorial es para usarlo en un Sistema Operativo Linux que trae por defecto 
 [https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html](https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html)
 
 
-
-
 ## Qué se puede instalar desde este repositorio en Synaptic?
 
-En los repositorios de MX Linux hay software muy importante como ejemplo:
+En los repositorios de MX Linux hay software muy importante como ejemplo que se puede encontrar en Synaptic:
 
 **Extensiones para Dolphin Administrador de archivos:**
 
@@ -231,7 +229,9 @@ se abrirá gedit y copiar el siguiente texto:
 ```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
 #deb http://mxrepo.com/mx/repo/ bookworm test
+
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bookworm ahs
 ```
@@ -417,7 +417,9 @@ Copie las siguientes líneas:
 ```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bullseye main non-free
+
 #deb http://mxrepo.com/mx/repo/ bullseye test
+
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ bullseye ahs
 ```
@@ -447,7 +449,9 @@ Copie las siguientes líneas:
 ```
 #MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ buster main non-free
+
 #deb http://mxrepo.com/mx/repo/ buster test
+
 #ahs hardware stack repo
 #deb http://mxrepo.com/mx/repo/ buster ahs
 ```

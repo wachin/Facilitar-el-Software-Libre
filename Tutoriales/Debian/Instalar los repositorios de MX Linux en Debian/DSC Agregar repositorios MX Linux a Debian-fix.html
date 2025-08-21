@@ -1,0 +1,1175 @@
+<h1 id="instalar-los-repositorios-de-mx-linux-23-en-debian-12">Instalar
+los repositorios de MX Linux 23 en Debian 12</h1>
+<p>Este tutorial es para instalar los repositorios de MX Linux a
+Sistemas Operativos Debian y basados en Debian que no lo tienen añadido,
+y para instalar el Instalador de paquetes de MX Linux el cual es un
+Centro de Software con una colección de los mejores programas para
+Linux</p>
+<h2 id="qué-programas-se-pueden-instalar-desde-mx-instalador-de-paquetes">¿Qué
+programas se pueden instalar desde MX Instalador de paquetes?</h2>
+<p>Este programa trae una Colección de Software que está organizado en
+<strong>pestañas o colecciones</strong>, cada una enfocada en un tipo de
+software o necesidad específica:</p>
+<h3 id="programas-disponibles-en-el-instalador-de-mx-linux">🖥️ Programas
+disponibles en el instalador de MX Linux</h3>
+<pre class="table-code-box" style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; font-size: 87%;">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 21%"/>
+<col style="width: 57%"/>
+</colgroup>
+<thead>
+<tr class="header" style="background-color: black; color: white; font-weight: bold; padding: 8px; ">
+<th style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Categoría</strong></th>
+<th style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Nombre del Programa</strong></th>
+<th style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Acceso remoto</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">ssh Conduit</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Una forma sencilla de usar recursos remotos a través de una conexión
+cifrada SSH</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">TeamViewer</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Acceso remoto TeamViewer</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">x11vnc</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Servidor VNC para el entorno de ventanas X</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GNOME Base</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Instalación mínima de GNOME Shell</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">KDE5 Standard</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Instala <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">kde-standard</code>,
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">kde-plasma-desktop</code></td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">LXDE</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Instalación mínima de LXDE</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MATE</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Instalación mínima del escritorio MATE</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Xfce</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Xfce (MX Linux)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Asunder</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Destripador y codificador gráfico de CD de audio</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Audacious</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor de audio ligero, estilo Winamp/XMMS</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Audacity</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de audio multi-pistas</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Clementine</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor de música moderno y organizador de biblioteca</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">DeaDBeeF</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor de audio sencillo</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MOC</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor de audio para consola de comandos, potente y fácil de
+usar</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Pithos</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de radio Pandora nativo</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">PulseEffects</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Ecualizador de PulseAudio</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Qmmp</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor de audio tipo Winamp/XMMS muy completo, escrito en
+Qt</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">XMMS</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor multimedia estilo Winamp</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Centro multimedia</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Convertidor de media</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Convierte entre formatos de audio y video</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Plex</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Servidor multimedia Plex (incluye cliente web; requiere
+reinicio)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">HandBrake</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Versátil herramienta para rippear DVD y transcodificar video (CLI y
+GUI)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">WinFF</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Conversor gráfico de formatos de audio y video</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Desarrollo</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">deb packaging tools</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramientas para la creación de paquetes <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">.deb</code></td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Geany</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de textos rápido y ligero (IDE)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GIT Tools</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramientas de repositorio GIT</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">kdiff3</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta gráfica de comparación de archivos (3 archivos)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">kompare</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta gráfica de comparación de archivos</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Meld</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta gráfica de comparación de archivos</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">QT5 Documentation</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Documentación de Qt5 y del IDE QtCreator</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">QT5 Dev Environment</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Entorno de desarrollo QT5</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Docks</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cairo Dock</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Muelle compatible con plugins 3D</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Plank</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Dock simple y atractivo</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Email</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Claws-Mail</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de correo electrónico ligero</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Evolution</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Suite groupware con cliente de correo y organizador</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">KMail</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de correo del entorno KDE</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Thunderbird</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de correo electrónico Thunderbird</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>FTP</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">FileZilla</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente FTP con interfaz completa y fácil de usar</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">gFTP</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente FTP multiproceso</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Gestores de archivos</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Dolphin</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestor de archivos predeterminado de KDE Plasma</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Nemo</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestor de archivos predeterminado de Cinnamon</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">PCManFM</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestor de archivos rápido y ligero</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">ROX Filer</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestor gráfico de archivos rápido y potente</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">SpaceFM</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestor de archivos multi-panel con pestañas y soporte de
+escritorio</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Sunflower</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Pequeño y altamente personalizable gestor de archivos de doble
+panel</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Gestores de ventanas</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">IceWM</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Entorno de escritorio ligero</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fluxbox (con MX-flux settings)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Entorno ligero y minimalista</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Gráficos</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Blender</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Suite de animación 3D libre y de código abierto</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">digiKam</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestión de fotos digitales (proyecto KDE)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">font-manager</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Aplicación de gestión de fuentes del escritorio GNOME</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">photocx</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gestiona y edita grandes colecciones de fotos</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GIMP Basic</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de imágenes avanzado (solo GIMP)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GIMP Full</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de imágenes avanzado (GIMP + ayuda y plugins)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">gscan2pdf</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GUI para crear archivos PDF o DjVu a partir de documentos
+escaneados</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">gThumb</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Navegador y visor de imágenes avanzado</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">ImageMagick</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Software para crear, editar y componer imágenes de mapa de bits</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Inkscape</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Programa de dibujo vectorial</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Krita</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Aplicación creativa para imágenes ráster</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">LazPaint</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de imágenes con capas raster y vectoriales</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Mirage</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Visor de imágenes rápido y simple</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Oficina</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">AbiWord</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Procesador de textos ligero</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Calibre (latest)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Organizador de biblioteca de e-books (última versión)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Calibre</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Organizador de biblioteca de e-books</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Evince</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Visor de documentos (PostScript, PDF) simple</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Foliate</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Visor de libros electrónicos simple y moderno</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">GnuCash</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Software de contabilidad personal y para pequeñas empresas</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Gnumeric</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Hoja de cálculo ligera</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kapow</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reloj de tiempo de perforación (punch clock)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">LibreOffice</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Meta-paquete para LibreOffice</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">LibreOffice (backports)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Versión actualizada desde backports</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Microsoft Fonts</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fuentes clásicas de Microsoft (Arial, Times, etc.)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Okular</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Visor universal de documentos (ADVERTENCIA: instala componentes de
+KDE)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">PDF Arranger</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Combinar, dividir y reorganizar páginas de PDF</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Papel tapiz (Wallpapers)</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 14 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 14</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 15 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 15</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 16 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 16</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 17 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 17</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 18 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 18</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 19 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 19</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX 21 Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos de escritorio de MX 21</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MX Fluxbox Wallpapers</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Fondos con tema Fluxbox (basados en MX 19)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Temas</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Bluebird</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK+ azul del proyecto Shimmer</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Breeze (GTK)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK que coincide con KDE Breeze</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">darkblood</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK oscuro con acento rojo profundo</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">darkcold</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK oscuro con acento azul</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">darkfire</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK oscuro con acento rojo</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">darkiiniiL</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK oscuro con acento verde</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">grub-themes-mx</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Temas para el menú de arranque GRUB</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Materia (KDC)</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema KDC que combina con Materia</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Materia</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema de diseño Material</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Numix</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema plano moderno del proyecto Numix</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Obsidian-2 Gtk Theme</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema GTK oscuro</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Orchis</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Tema de diseño Material</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Yaru</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Familia de temas de Ubuntu</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Torrent</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Deluge</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente BitTorrent escrito en Python/PyGTK</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">qBittorrent</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente BitTorrent completo y ligero, similar a uTorrent</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">rTorrent</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente BitTorrent basado en ncurses</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Utilidades</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Advert-Block-antiX</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Bloquea servidores de anuncios mediante archivo hosts
+modificado</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Clonezilla</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Clona y restaura discos y particiones</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Grub Customizer</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Personaliza el menú de arranque GRUB</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">KeePassXC</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Administrador de contraseñas de código abierto</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Redshift</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Ajusta la temperatura del color de la pantalla según la hora del
+día</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Synapse</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Lanzador semántico de archivos</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Synaptic Package Manager</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Administrador de paquetes gráfico</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Variety</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cambiador de fondos de escritorio</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">VeraCrypt</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta de cifrado de disco (fork de TrueCrypt)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Xfce4 Appfinder</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Buscador de aplicaciones del proyecto Xfce</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Capturas de pantalla</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">ksnip</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta de captura inspirada en Snipping Tool (basada en
+Qt)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">shutter</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Programa de captura de pantalla con muchas funciones</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">xfce4-screenshot</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta de captura integrada en Xfce</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Video</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Celluloid</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor multimedia gráfico que usa mpv</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kdenlive</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de video no lineal de KDE</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">libdvdcss</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Biblioteca para reproducir DVDs comerciales</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">MPlayer</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Potente reproductor multimedia</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">OpenShot</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Editor de video no lineal</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">SMPlayer</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Interfaz gráfica temática para MPlayer con funciones
+adicionales</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">SMtube</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Busca y descarga videos de YouTube</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">VLC</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Reproductor multimedia y streamer</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Juegos</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Lutris</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Suite de instalación de juegos (wrapper)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">PlayOnLinux</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Herramienta para instalar juegos de Windows en Linux</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Steam</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Plataforma de juegos Steam</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Steam Device Support</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Soporte para dispositivos de entrada y realidad virtual de
+Steam</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">SuperTux</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Juego de plataformas estilo Mario con Tux</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">SuperTuxKart</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Juego de carreras estilo Mario Kart</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Kernels</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">antiX 4.19 pae 32 bit</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel antiX 4.19.276 (parches Meltdown/Spectre), PAE, 32 bits</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">antiX 4.9 32 bit no-pae</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel antiX 4.9.326, 32 bits, sin PAE</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">antiX 4.9 32 bit pae</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel antiX 4.9.326, 32 bits, con PAE</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">antiX 5.10 32 bit pae</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel antiX 5.10.234, 32 bits, con PAE</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Debian 32 bit no-pae</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel predeterminado de Debian con paquete de actualizaciones
+automáticas</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Debian 32 bit w/PAE</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Kernel predeterminado de Debian con PAE y actualizaciones
+automáticas</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Navegadores</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Chromium</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Navegador Chromium con paquete de idioma</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Falkon</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Navegador ligero (antiguo QupZilla)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Firefox-ESR</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Versión soportada a largo plazo de Firefox</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Firefox</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Última versión de Firefox</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Opera</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Navegador Opera</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Palemoon</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Navegador desde el repositorio de MX Linux</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Niños / Educación</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Preschool</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Incluye: Gamine, GCompris, TuxPaint</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Primary</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Incluye: GCompris, Laby, Ri-li, Stellarium, TuxMath, TuxPaint,
+TuxType, Marble</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Secondary</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Incluye: Alibre, Dia, Laby, Melting, Ri-li, Stellarium</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Scratch</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Entorno de programación gráfica del MIT
+(https://scratch.mit.edu/)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Mensajería</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Finch</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de mensajería instantánea modular para terminal</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Pidgin</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Cliente de chat fácil de usar y gratuito</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Misceláneos</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">AppArmor</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Componentes del espacio de usuario de AppArmor (seguridad)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Google Earth</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Globo terráqueo de Google Earth</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Java</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Java 17 (instala openjdk-17)</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Wine</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Lectores de noticias</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Newsboat</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Lector de fuentes RSS en modo texto con soporte para podcasts</td>
+</tr>
+<tr class="odd" style="background-color: #ffffffff;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Pan</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">Lector de noticias Usenet (GNOME)</td>
+</tr>
+<tr class="even" style="background-color: #e6e6e6;">
+<td style="border: 1px solid black; padding: 8px; text-align: left;"><strong>Impresión</strong></td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">HP Printing</td>
+<td style="border: 1px solid black; padding: 8px; text-align: left;">HPLIP y complementos para impresoras HP</td>
+</tr>
+</tbody>
+</table></pre>
+<p>y además poder instalar las últimas versiones de algunos programas,
+desde la pestaña de los repositorios de prueba o los backpots de
+Debian</p>
+<h2 id="sobre-usar-este-tutorial-en-administradores-de-ventana-minimalista-como-fluxbox-jwm-icewm-opebox-etc">Sobre
+usar este tutorial en Administradores de ventana minimalista como
+fluxbox, jwm, iceWM, Opebox, etc</h2>
+<p>Este tutorial es para usarlo en un Sistema Operativo Linux que trae
+por defecto su Gestor de Ventanas, pero si deseas allí instalar otro,
+por ejemplo Openbox, Fluxbox, JWM, etc, debes revisar el siguiente
+tutorial para activar PolicyKit:</p>
+<p><strong>Activar el agente de PolicyKit en Openbox y gestores de
+ventanas ligeros x11</strong><br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html">https://facilitarelsoftwarelibre.blogspot.com/2025/05/activar-el-agente-de-policykit-en-openbox-y-gestores-de-ventanas-ligerosx11.html</a></p>
+<h2 id="qué-se-puede-instalar-desde-este-repositorio-en-synaptic">Qué se
+puede instalar desde este repositorio en Synaptic?</h2>
+<p>En los repositorios de MX Linux hay software muy importante como
+ejemplo que se puede encontrar en Synaptic:</p>
+<p><strong>Extensiones para Dolphin Administrador de
+archivos:</strong></p>
+<ul>
+<li><strong>kde-servicemenu-extract-and-compress</strong>: Pone un menú
+Extraer y Comprimir.</li>
+<li><strong>kde-servicemenu-checkhash-installdebs</strong>: Permite
+instalar deb.</li>
+<li><strong>kde-servicemenu-rootactions</strong>: Permite realizar
+acciones con elevación de permisos.</li>
+<li><strong>kde-servicemenu-kim5</strong>: Permite realizar operaciones
+con imágenes.</li>
+</ul>
+<p><strong>Herramientas</strong></p>
+<ul>
+<li><strong>deb-installer</strong>: Instalador de paquetes deb</li>
+<li><strong>ksnip</strong>: Capturado de pantalla (versión
+actualizada)</li>
+<li><strong>avidemux</strong>: editor de video (En el 2025-05-016 no lo
+pude instalar porque dice que depende de libfaac0, libfdk-aac2 y no se
+pueden instalar)</li>
+<li><strong>yt-dlp</strong>: <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-yt-dlp-en-termux-para-descargar-vieos-audios-de-youtube-y-otros-sitios.html">Descargador
+de videos</a> (versión actualizada)</li>
+<li><strong>telegram-desktop</strong> = Telegram (32 y 64 bit)</li>
+<li><strong>formatusb</strong>: Para formatear un Pendrive</li>
+<li><strong>virtualBox</strong>: La máquina virtual</li>
+<li><strong>mx-snapshot</strong>: MX Snapshot es una herramienta
+utilizada para crear un CD en vivo desde el sistema en ejecución
+(Respins)</li>
+<li><strong>Firmware</strong>: <a href="https://facilitarelsoftwarelibre.blogspot.com/2021/11/firmware-instalado-en-mx-linux-21-de-32.html">Controladores</a>,
+ejemplo de Wi-Fi, otros</li>
+<li>otros</li>
+</ul>
+<p><strong>Nota</strong>: Se pueden instalar las últimas versiones, pero
+no es necesario si ya las movieron al repo estable, más abajo explico
+con más detalle.</p>
+<h3 id="advertencia-con-mx-repo-de-prueba-o-backports-de-debian">Advertencia
+con MX repo de prueba o Backports de Debian</h3>
+<p>Algunos programas podrían dar fallos, ejemplo en el 2025-07-17
+instalé a Gimp 3.0.0 RC2 desde el “MX Repo de prueba” y se colgaba a
+veces, por lo que no me servía. En la siguiente imagen se ve dónde ya lo
+había desinstalado y está disponible en el MX Repo de prueba la versión
+3.0.0 RC2:</p>
+<figure>
+<img alt="Gimp 3.0.0 RC2 desde el MX Repo de prueba" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaAuJBonw0vjV4bTRTvZAhNumjlD7ramUiPZ2E6WBk4sI_Knl9O85KMQo5Fth7UEc7vTB3qSri0TjQf3RHmi8MHTdOMHnbjlaXfbIsbw47xDCAxH2Afu2mwX6adm4G1I43xJNah97vEezwFeWS0mURz7LhUo_PAsTiphwtQuC3S7aj8c_zub7oEBjams4/s16000/20250718-114358%20desde%20el%20MX%20Repo%20de%20prueba%20no%20instalen%20a%20Gimp%203.0.0%20RC2.png"/>
+<figcaption aria-hidden="true">Gimp 3.0.0 RC2 desde el MX Repo de
+prueba</figcaption>
+</figure>
+<p>Para desinstalarlo tuve que deshabilitar los repositorios de MX Linux
+desde Synaptic (como indico más abajo) y desinstalar Gimp 3 y todos los
+paquetes referidos a él e instalar la versión de los repositorios de
+Debian.</p>
+<h2 id="añadiendo-los-repositorios-de-mx-linux-a-debian-12">Añadiendo
+los repositorios de MX Linux a Debian 12</h2>
+<p>La siguiente es una explicación genérica que hago para Debian 12, y
+estas explicaciones deberán servir para hacer esto en Debian 11, y
+Debian 10 (más abajo dejo las líneas para ellos)</p>
+<p>Para añadir el repositorio de MX Linux debemos añadirlo en el:</p>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">/etc/apt/sources.list.d/</code></p>
+<p>podemos hacerlo fácilmente con gedit que permite elevar los
+permisos</p>
+<p>Además si desean se puede usar un <strong>editor de texto de
+terminal</strong> como <a href="https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html">nano</a>
+o <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html">vim</a></p>
+<h2 id="usando-gedit-para-añadir-mx-repo-a-sources.list.d">Usando Gedit
+para añadir MX repo a sources.list.d</h2>
+<p>Poniendo en la terminal:</p>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> gedit /etc/apt/sources.list.d/mx.list</span></code></pre></div></div>
+<p>se abrirá gedit y copiar el siguiente texto:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bookworm main non-free
+
+#deb http://mxrepo.com/mx/repo/ bookworm test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bookworm ahs</span></span></pre></div>
+<p>y pegarlo allí, y guardar y cerrar</p>
+<h3 id="instalando-la-llave">Instalando la llave</h3>
+<p>Ahora descargue la llave MX23 desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring_2023.6.6_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx23-archive-keyring/mx23-archive-keyring_2023.6.6_all.deb</a></p>
+<figure>
+<img alt="mx23-archive-keyring_2023.6.6_all.deb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueQdbSd8OHyGbUnbS4cXkpp08vfq8YxpzLEjJfeAvRsOkGQD4-c2emanbOU_raOzAPloBJyC_r5fdAVQM-Iz5hFhNr27VrIIjD8ABWMorC_Gmj_960QIfQIYMfXUt5_e2XLUp7fa-ogoP_VcnmdY5MTMoHaK60UVM3fmpTIbo0JdbWN8w2vltq_SKgAQ/s790/20240719-082459%20mx23-archive-keyring_2023.6.6_all.deb.png"/>
+<figcaption aria-hidden="true">mx23-archive-keyring_2023.6.6_all.deb</figcaption>
+</figure>
+<p><strong>Nota:</strong> Es posible que con el paso del tiempo lo
+cambien con otro más actual y cambie el nombre de la versión.</p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb3"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx23-archive-keyring_<span class="pp">*</span>.<span class="pp">*</span>.deb</span></code></pre></div></div>
+<p>Este comando se descompone en varias partes:</p>
+<ol type="1">
+<li><p><strong><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">sudo</code></strong>: Ejecuta el comando con
+privilegios de superusuario (root). Esto es necesario porque instalar
+paquetes en el sistema requiere permisos de administrador.</p></li>
+<li><p><strong><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">dpkg -i</code></strong>: <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">dpkg</code> es el
+gestor de paquetes de bajo nivel en Debian y sus derivados, como Ubuntu.
+La opción <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">-i</code> (o <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">--install</code>) indica que quieres
+instalar un paquete.</p></li>
+<li><p><strong><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">mx23-archive-keyring_*.*.deb</code></strong>:
+Especifica el paquete que deseas instalar. En este caso, es un archivo
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">.deb</code> que contiene el keyring (anillo de claves) para los
+repositorios de MX Linux 23. El uso del comodín <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">*.*</code> permite
+coincidir con cualquier versión del paquete, es decir, no importa cuál
+sea el número de versión, siempre que comience con
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">mx23-archive-keyring</code>.</p></li>
+</ol>
+<p>En conjunto, el comando instala el paquete
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">mx23-archive-keyring</code> que contiene las claves públicas
+necesarias para verificar la autenticidad de los paquetes del
+repositorio de MX Linux 23. Estas claves son importantes para asegurar
+que los paquetes instalados desde los repositorios no han sido
+manipulados y provienen de una fuente confiable.</p>
+<p><strong>Actualizar la lista de repositorios</strong>: después de
+guardar el archivo, ejecuta:</p>
+<div class="sourceCode" id="cb4"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div></div>
+<p>Siguiendo estos pasos, habrás añadido el repositorio y actualizado la
+lista de paquetes en tu sistema.</p>
+<p>o también se pueden actualizar desde synaptic</p>
+<p><strong>Recargue</strong> los repositorios le recomiendo desde
+Synaptic:</p>
+<figure>
+<img alt="Recarga repos en Synaptic" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-laJM3nUXcOzImy90UkmyZU1PMtg3xZCMq-XCk9h7_NiAUuVXFHioCfb-G-64htcQVXuSb74YIFrrgaaBNpnklgHj6qRVHaejuN8vpm-64omih6XcFMZxaGQwEaOu1oSTvmto3dDb-oVHVbfmBPEkarEt9YM4pkQVxzHvaoMtedv-4YP7Ecx4edTFG98/s860/20240719-083406%20synaptic%20Recarga%20repos.png"/>
+<figcaption aria-hidden="true">Recarga repos en Synaptic</figcaption>
+</figure>
+<p>e instale el programa que necesite</p>
+<p>En la siguiente imagen les indico cómo ver sólo los del repositorio
+de MX Linux en Synaptic:</p>
+<figure>
+<img alt="Repositorios de MX Linux activados en Debian 12" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxQI40yxl3gelqmUdDSRmTa5h6jJglCx-E-YtpcHsQRyc3B4941PukhXHsYziBYYtYPSEP_LQQNRLn0IeoTR3jI1XRc46ObfWTfyALpiop5j_4bRqhjLGsgqGjd1jD6iN2Zg2tUiUXTsK4gn71_ER-5YcQUSchjt4MOH13CthEikvqGDB1RoQC4FZbIzA/s964/20240719-083602%20repositorios%20de%20MX%20Linux%20activados%20en%20Debian%2012.png"/>
+<figcaption aria-hidden="true">Repositorios de MX Linux activados en
+Debian 12</figcaption>
+</figure>
+<h2 id="mx-instalar-paquetes">MX Instalar paquetes</h2>
+<p>Los siguientes paquetes los podemos buscar en Synaptic e instalarlos
+uno por uno, pero también lo podemos cerrar Synaptic e instalarlos de un
+solo poniendo en la terminal:</p>
+<div class="sourceCode" id="cb5"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller</span></code></pre></div></div>
+<p>y luego buscarlo y abrirlo:</p>
+<figure>
+<img alt="MX Instalar paquetes" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0dPdD7n0wFZEQCf5ttuyRGwhGKTvwtPwK_c0KcMKOdnSBcPpOkYD1LWdCXc1K2Rj9wSiqJhRM7_D1Al7RUJl28AutV4OVyKAoFsIb5M4_Y-ia6PCfuJgl-_vypXKTwH8IICMl6LoTzx6jjgAW5x25EwZ9C1kFFM-BEw_zs8FebSGOMSil_b4Ma0x8k8k/s562/20240205-054409%20MX%20Instalar%20paquetes.png"/>
+<figcaption aria-hidden="true">MX Instalar paquetes</figcaption>
+</figure>
+<p><strong>Nota</strong>: La imagen de arriba es en xfe4-appfinder en MX
+Linux 21 usando el administrador de ventanas Fluxbox.</p>
+<h2 id="cómo-instalar-actualizado-a-yt-dlp-desde-los-paquetes-de-prueba-test">Cómo
+instalar actualizado a yt-dlp desde los paquetes de Prueba (test)</h2>
+<p>El siguiente programa es un ejemplo de los programas que ahora están
+disponibles para instalar. El programa yt-dlp que sirve para descargar
+videos, audios, de Youtube, Facebook, Instagram, Tiktok, Twitter, otros
+desde la terminal</p>
+<p>En la fecha 18 de Mayo de 2025 una versión muy actual de este mismo
+año está en los repositorios estables de MX Linux, así lo puedes
+instalar desde Synaptic o desde la terminal:</p>
+<div class="sourceCode" id="cb6"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> apt install yt-dlp</span></code></pre></div></div>
+<p>Si no usas MX Linux y usas algún Debian basado en este, una vez que
+instales los repositorios, lo podrás instalar así.</p>
+<h3 id="el-motivo-de-ser-de-los-repositorios-de-prueba">El motivo de ser
+de los repositorios de prueba</h3>
+<p>Los programas que hay en los repositorios de prueba son programas
+cuya finalidad es que después que estén corregidos por haber pasado en
+tantas pruebas puedan pasar a los repositorios estables de MX Linux, por
+tal motivo es posible que después que hayan dejado bien estable algún
+programa, lo pasen desde los repositorios de prueba a los repositorios
+estables (o sea, llegará un momento en que es posible que no veamos tal
+o cual versión en los repositorios de prueba sino en los estables)</p>
+<p>sigamos, clic en la pestaña:</p>
+<p><strong>MX Repo de prueba</strong></p>
+<figure>
+<img alt="repo de prueba" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_RSXPCNku2HSLfoOHrEsu0n0qCQie2SdPMycQKfC_DWbvRGsf-rWd9wnuuv4HIms1LbaZfR3Vb6vkNpeKt-6JrzDveBnhUDyqCc1nEapPlMRNiN8yP-9XD7oY10zf5fanSblrwLjue4iXhUmkKUlryfQyb31TzVoFr-IkUsPdhi-cN2rG6Z1BdSgZlFU/s803/20240205-054512%20repo%20de%20prueba.png"/>
+<figcaption aria-hidden="true">repo de prueba</figcaption>
+</figure>
+<p>Antes de seguir recargue la lista:</p>
+<figure>
+<img alt="Recargar lista" src="https://blogger.googleusercontent.com/img/a/AVvXsEhHx5ku7i8Qz4_oW_2a75TTZAFYq3EyQSnR3DV0Zb1awwDnDK9k4mmWLyXB2kD7621tp8J165FKNAmGKP-NrsN6b5bXn5Tlmr5ejiyM4FzMOdvc_t_yS0EKQbfGZ4VN9T5N8XzUoX0Dh6Td-QpT1Cv0OjDSrpAlBFCvfrpfxwiBQgDxtSPJHOKJ3DKjUjQ=s16000-rw"/>
+<figcaption aria-hidden="true">Recargar lista</figcaption>
+</figure>
+<p>ahora si, sigamos, en la imagen anterior dice:</p>
+<blockquote>
+<p>“Advertencia<br/>
+Está a punto de utilizar el repositorio MX de<br/>
+prueba, cuyos paquetes se proporcionan solo con<br/>
+fines de prueba. Podrían llegar a dañar su sistema,<br/>
+por lo que se sugiere que haga un respaldo de su<br/>
+sistema e instale y/o actualice solo un paquete a la<br/>
+vez. Por favor, envíe sus comentarios al Foro para<br/>
+que los paquetes puedan ser evaluados antes de pasar<br/>
+al repositorio principal (Main)”</p>
+</blockquote>
+<p>allí buscar a:</p>
+<p><strong>yt-dlp</strong></p>
+<p>La siguiente imagen es en Debian 11 donde había instalado los
+repositorios de MX, allí la última versión solo estaba en los paquetes
+de prueba de MX Linux (<strong>MX Repo de prueba</strong>):</p>
+<figure>
+<img alt="buscando a yt-dlp en mx test repo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Y2jcLWu1fC3rYR-sxvz03vzuIMX4DNl4sif2_ejHb_fUFjMO1mTkwY_f6-OapSrQzo1mXdHsHEDJUHQT9jTIDs6I6Na0SFwk98G7b6jtIkpTLgSP9iCdqjUkDfYLujFi86XQDU30FgfnjZ9TW_XiJLCvpV5okkNAShKt5o0yetGcBVoBClh9C-395t8/s803/20240121-163620%20buscando%20a%20yt-dlp%20en%20mx%20test%20repo.png"/>
+<figcaption aria-hidden="true">buscando a yt-dlp en mx test
+repo</figcaption>
+</figure>
+<p><strong>Nota:</strong> Pueden dar clic en “<strong>Mostrar
+detalles…</strong>” para que vean si el programa va a instalar alguna
+dependencia, como dice el mensaje de arriba, el repositorio de prueba
+contiene software que podría llegar a dañar su sistema, pero en este
+caso solo se instala un paquete desde esos repositorios, y los demás son
+paquetes del mismo sistema</p>
+<figure>
+<img alt="instalar yt-dlp" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUuyqbNvHJjRbDj0lhHxr40Nra6U2cuF1vn-27wA6LOfFWcEV9kgU1biWC0zzZvfqhyphenhyphenvQvMF87eIPa3V2TAwxNmUQCBK0rD8gwftlHiIF1eeDrs03pGd7gBWoAVK7VlFuMReHToKYDpPGSAxuBURSXlCRusOCf0Vh1JigZ3zL6vOL8Dtj4O18Sgq5ZuNs/s800/20240121-163920%20instalar%20yt-dlp.png"/>
+<figcaption aria-hidden="true">instalar yt-dlp</figcaption>
+</figure>
+<p>También si ya lo tenías instalado desde los repositorios de Debian lo
+puedes actualizar. La siguiente imagen es en Debian 12 donde instalé los
+repositorios de MX Linux 23 y fue tomada en enero de 2025 aprox:</p>
+<figure>
+<img alt="actualizando yt-dlp" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0RmB7wGC832eGhlH3OjPTJiOh-lGGBbeGX_2XpRhv2lmbFW73IwheOLJzVlbg1yCg3YsPMY-1ilkjGLNwSq0Kl4E6ZwE0yvBdSLAhCkx1cY7GeZjXe75njTsjlvFagdsvqWeRGX3zm0S8vo-twCqrqyZ3Jm87nKd2xdO_f6s_Iy5i3iizYbO88cUNvE0/s745/20250424-%200014%20actualizando%20yt-dlp.png"/>
+<figcaption aria-hidden="true">actualizando yt-dlp</figcaption>
+</figure>
+<p><strong>yt-dlp desde Backports de Debian</strong></p>
+<p>También está una versión actual en los Backports de Debian, esa
+versión me sirvió para instalar la versión más actual en Debian 12 de 32
+bit, pues es el único lugar donde estaba:</p>
+<figure>
+<img alt="pestaña Backports de Debian" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOUVIXO1xMiy3vLsB-dp6szetoAmoYljjhm0-sj43QZNOYZSYl8f_1V0MF8Ge6aX6SRG5yTcvoQiUZ1dyvltt0-eVFc7M2UgbgOjfSb4ajkJld92iS-sWUDG6vtWZX3G244BttDjOIZSy9OoCVgNBgVhwcwJWwGCqbvVxYORzD6r7h0bTlRVt97Lr29bw/s16000-rw/20250518-0001%20pesta%C3%B1a%20Backports%20de%20Debian.png"/>
+<figcaption aria-hidden="true">pestaña Backports de Debian</figcaption>
+</figure>
+<p>a continuación pongo el mensaje:</p>
+<blockquote>
+<p>“Advertencia Va a usar Debian Backports, que contiene paquetes
+tomados de la próxima versión de Debian (llamada ‘prueba”), ajustados y
+recompilados para el uso en Debian Estable. Los mismos no pueden ser
+probados extensivamente como en las versiones estables de Debian y MX
+Linux, y se proporcionan ’como están’, con el riesgo de
+incompatibilidades con otros componentes en Debian Estable. ¡Utilícelos
+con cuidado!”</p>
+</blockquote>
+<p>e instalandolo, pues solo se instala este paquete (en caso de que
+luego no sirva lo desinstalo y no pasa nada pues se cual fue que se
+instaló):</p>
+<figure>
+<img alt="yt-dlp en Backports de Debian" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIr6cxEQPBsOW-z-X7kWwuYWgvBHJwPBeVXw_zYT4oul4IABoa2DqOildRye4RjN3-wKm1ycG4YUWGbA6JXpqElGdjy7lzupvZzfIzTtIIoLBNSXS2AlA1HZvTMIHp4ttYze5TJX5l0PI_iwlI4eJj-T9B8DHE5NuH8PyepP3FkcNXlg84x34ylLLX_zE/s16000-rw/20250518-0002%20yt-dlp%20en%20Backports%20de%20Debian.png"/>
+<figcaption aria-hidden="true">yt-dlp en Backports de
+Debian</figcaption>
+</figure>
+<h2 id="los-paquetes-vistos-online-desde-un-navegador-web-opcional">Los
+paquetes vistos online desde un navegador Web (Opcional)</h2>
+<p>Por motivos educativos pongo esta información, aclaro que no deseo
+confundir a nadie.</p>
+<p>La siguiente imagen es el paquete <strong>yt-dlp</strong> el 25 de
+Abril 2025 visto online desde un navegador web en los repositorios
+estables de MX Linux, está la versión 2025.03.27</p>
+<p><a href="http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/">http://mxrepo.com/mx/repo/pool/main/y/yt-dlp/</a></p>
+<figure>
+<img alt="yt-dlp en repositorio estable" src="https://blogger.googleusercontent.com/img/a/AVvXsEgtE2csEWlHX1uAcg09-7cPynurKKErK8NTG62LIcPPU_gWPV6usFuPIEvo2-YSKHv39tbkaE0WOaGMNxp857FgnKMCARguCUaMyZVeKakmqRdWlzVLjhFM3hSky1utPlblYxklvdlVlp2Rzvmw7AjEs7SE58k5Ykn67t3Mofs_SIaYcH4QYouQAaLSpbM=s16000-rw"/>
+<figcaption aria-hidden="true">yt-dlp en repositorio
+estable</figcaption>
+</figure>
+<p>por eso se lo puede encontrar en Synaptic en MX Linux y si uno
+instala los repositorios de MX Linux</p>
+<p>La siguiente imagen es de yt-dlp el 25 de Abril visto online desde un
+navegador web en los repositorios de prueba de MX Linux, está la versión
+2024.12.23, pero allí antes estaba la versión 2025.03.27</p>
+<figure>
+<img alt="yt-dlp en repositorio de prueba" src="https://blogger.googleusercontent.com/img/a/AVvXsEhlXuAWe9OD2a5QDb4PIe7H0iAr8zFGVH5y_7fdC7FENd7K8e5373aICkUhs2n2Q-I9YqZ6YEs7vlT3WhHj4QvHYvnZS8gpt3NI-yUlEbdKX4iChMx2adhE63eEMgycDo74u7oysPH408MHiq6YuwiGa1J7G95QFUzPegRLFEy3_RlbOaMMU7j4hdW85XA=s16000-rw"/>
+<figcaption aria-hidden="true">yt-dlp en repositorio de
+prueba</figcaption>
+</figure>
+<h2 id="instalando-a-ksnip-desde-los-repositorios-de-prueba-de-mx-o-backports-de-debian">Instalando
+a ksnip desde los Repositorios de prueba de MX, o Backports de
+Debian</h2>
+<p>Ksnip sirve para hacer capturas de pantalla</p>
+<p>La siguiente imagen es de ksnip visto en Debian 12 de 64 bit en los
+repositorios en Synaptic, el 25 de abril 2025:</p>
+<figure>
+<img alt="ksnip en repositorio estable" src="https://blogger.googleusercontent.com/img/a/AVvXsEg1spM90xMJ_saLeuQpRQ1uLVyUanIbfg6sodi9bleP6efjl1x9iN0IpulGrWZPM3VVZye7mBXf7ztEeF3mdcpZtjNoZUtMHgfxwMwDAFvAcbsfPk7nfHnJb5FkMcXMKp9BDl6U7ihiErw37uPpyEoUqYiBixzpiu9YUxlrvHV39eyHjyN34GGmT0s0vZQ=s16000-rw"/>
+<figcaption aria-hidden="true">ksnip en repositorio estable</figcaption>
+</figure>
+<p>La última versión ksnip 1.10.1 está todavía en el repositorio de
+prueba y no la han pasado al repositorio estable, por lo que la única
+manera de tener la última versión es desde el <strong>repositorio de
+prueba de MX Linux</strong> o <strong>Backports de Debian</strong>, la
+siguiente imagen es en MX Linux 23 KDE de 64 bit:</p>
+<figure>
+<img alt="ksnip en repositorio de prueba MX" src="https://blogger.googleusercontent.com/img/a/AVvXsEjB9PTkCZwv1eDVwvZ3TuuX7Df7kBZCPKJaJDDOhORvpXTmzWX_RnOspWmyMamkMRYi_vzY0sdmd-flnU76Vq7FUHsjgMQIV1SYJWYxxZV-TyPk43yxDLRF9l-ifMKS-SV1gieSsm8TszKsUiz4Mr5w-UfBAICeG7QYgBY-hybju_VeEzOBc7In2cHkdQ4=s16000-rw"/>
+<figcaption aria-hidden="true">ksnip en repositorio de prueba
+MX</figcaption>
+</figure>
+<p>La siguiente imagen es de ksnip la última versión en
+<strong>Backports de Debian</strong> visto en Debian 12 de 32 bit, pues
+allí no la encuentro en los repositorios de prueba:</p>
+<figure>
+<img alt="ksnip en Backports de Debian" src="https://blogger.googleusercontent.com/img/a/AVvXsEjeVWdx5ToshfxmCHcJ7VXzcWXfEC4i2iM9aaRU9tuLOrdBxw4ty81JPevda1vOGWM5XZ3GdfRJJLTAKf_EWdyIz1ustbiI_jlfzQTvpFneEmXklan9Sze5_ez2wghknV1feghyZZkqU2BBjcSKm7On2x6aOFqRqctOUlBn-RmrI02Nie_mDdh5BKwCh20=s16000"/>
+<figcaption aria-hidden="true">ksnip en Backports de Debian</figcaption>
+</figure>
+<p>En resumen, deben de buscar dónde esté la última versión
+disponible.</p>
+<p>Bueno, ahora sí dejo las instrucciones para:</p>
+<p>Debian 11 Debian 10</p>
+<p>repito para la primera, pero solo los pasos de instalación del
+repositorio:</p>
+<h2 id="para-debian-11-bullseye-mx-linux-21-repo">Para Debian 11
+bullseye: MX Linux 21 Repo</h2>
+<p>Copie las siguientes líneas:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ bullseye main non-free
+
+#deb http://mxrepo.com/mx/repo/ bullseye test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ bullseye ahs</span></span></pre></div>
+<p>en el archivo mx.list con alguno de los métodos que se indicó arriba
+y guarde</p>
+<p>ahora descargue la llave desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx21-archive-keyring/mx21-archive-keyring_2021.2.19_all.deb</a></p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb8"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx21-archive-keyring_<span class="pp">*</span>.<span class="pp">*</span>.deb</span></code></pre></div></div>
+<p>Recargue los repositorios e instale el programa que necesite</p>
+<h2 id="para-debian-10-buster-mx-linux-19-repo">Para Debian 10 buster:
+MX Linux 19 Repo</h2>
+<p>Copie las siguientes líneas:</p>
+<div><pre style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 3px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-wrap: break-word; padding: 10px; border-radius: 4px; "><span style="color: #222222; font-family: 'Ubuntu Mono', 'Courier New', monospace; "><span style="font-size: 15px; white-space: pre-wrap; ">#MX Community Main and Test Repos
+deb http://mxrepo.com/mx/repo/ buster main non-free
+
+#deb http://mxrepo.com/mx/repo/ buster test
+
+#ahs hardware stack repo
+#deb http://mxrepo.com/mx/repo/ buster ahs</span></span></pre></div>
+<p>en el archivo mx.list con alguno de los métodos que se indicó arriba
+y guarde</p>
+<p>ahora descargue la llave desde:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/">https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/</a></p>
+<p>a la fecha que hago este tutorial está el archivo:</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb">https://mxrepo.com/mx/repo/pool/main/m/mx19-archive-keyring/mx19-archive-keyring_2020.4.29_all.deb</a></p>
+<p>e instálelo, puede ser con dpkg desde la terminal, ejemplo para este
+archivo sería:</p>
+<div class="sourceCode" id="cb10"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> mx19-archive-keyring_<span class="pp">*</span>.<span class="pp">*</span>.deb</span></code></pre></div></div>
+<p>Recargue los repositorios e instale el programa que necesite</p>
+<p><strong>Nota:</strong> En Debian 10 buster a esta hay menos
+programas.</p>
+<h1 id="repositorio-añadido-en-algunos-sistemas-operativos">Repositorio
+añadido en algunos Sistemas Operativos</h1>
+<p>La siguiente imagen es del repositorio de MX Linux 21 que yo añadí en
+<a href="https://q4os.org/downloads3.html">Q4OS versión 4</a> visto en
+Synaptic:</p>
+<figure>
+<img alt="repositorio de MX Linux 21 añadido" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUZ0BS5HvsuwuvmHxlpJsA13z-DogK5MpV_P0MgnzDS7LiecvKXPXJKHfreGHLcDtGR28MTPS0wYqOd6c_ReDlh1Pf7-Q5WtMIur-_T1kR4onHinXcOjAH2n7ulL92dAB5MkImxIMhkH0HZR5iWM51eV7HvOmfWNG3vKkfEm0os4sc48hFiIb4ROx7raY/s603/20231118-182409%20repositorio%20de%20MX%20Linux%2021%20a%C3%B1adido.png"/>
+<figcaption aria-hidden="true">repositorio de MX Linux 21
+añadido</figcaption>
+</figure>
+<h2 id="es-posible-descargar-manualmente-programas">Es posible descargar
+manualmente programas</h2>
+<p>Por si necesita manualmente descargar algún programa, puede entrar
+manualmente a las siguientes direcciones</p>
+<p><a href="https://mxrepo.com/mx/repo/pool/">https://mxrepo.com/mx/repo/pool/</a></p>
+<p>allí yo he buscado en:</p>
+<p>pool<br/>
+non-free</p>
+<p><a href="https://mxrepo.com/mx/testrepo/pool/">https://mxrepo.com/mx/testrepo/pool/</a></p>
+<p>allí yo he buscado en:</p>
+<p>test</p>
+<p>Dios les bendiga</p>
+<h2 id="consultas">CONSULTAS</h2>
+<p><strong>https://github.com/MX-Linux/mx-packageinstaller</strong><br/>
+<a href="https://github.com/MX-Linux/mx-packageinstaller">https://github.com/MX-Linux/mx-packageinstaller</a></p>
+<p><strong>Repos — MX-23</strong><br/>
+<a href="https://mxlinux.org/uncategorized/repos-mx-23/">https://mxlinux.org/uncategorized/repos-mx-23/</a></p>
+<p><strong>Lista de repositorios MX Linux</strong><br/>
+<a href="https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt">https://github.com/MX-Linux/mx-repo-list/blob/master/repos.txt</a></p>

@@ -1,0 +1,5 @@
+https://github.com/prachpub/furiusisomount
+
+https://sources.debian.org/src/furiusisomount/
+
+https://launchpad.net/furiusisomount

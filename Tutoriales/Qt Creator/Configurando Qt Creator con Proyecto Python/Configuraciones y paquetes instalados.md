@@ -66,7 +66,7 @@ To avoid modifying the system Python and align with the error's suggestion, crea
 
 1. **Install `python3-full` (if needed)**:
    ```
-   sudo apt install python3-full
+   sudo apt install python3-full python-pip python3-pylsp
    ```
 2. **Create a Virtual Environment**:
    - Navigate to your project directory in the terminal:

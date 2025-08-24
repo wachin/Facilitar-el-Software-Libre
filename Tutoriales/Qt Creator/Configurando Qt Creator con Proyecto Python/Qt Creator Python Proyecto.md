@@ -28,7 +28,7 @@ si usa Debian se puede instalar el Repositorio de MX Linux según estas instrucc
 **Nota:** Esta instalación es para instalar Qt Creator 9 desde los paquetes de la Distribución Linux Debian, no desde [Qt](https://www.qt.io/offline-installers).
 
 # **Instalar Qt Creator y Qt**
-Los siguientes son los pasos para instalar Qt Creator en Debian 12 de 32 o 64 bit
+Los siguientes son los pasos para instalar Qt Creator en Debian 12 de 32 o 64 bit. Aquí en este tutorial estoy mezclando los dos metodos, pues aún instalando desde el instalador de MX Linux faltan algunas dependencias
 
 ## 1. Instala las dependencias
    - Abre una terminal y ejecuta el siguiente comando para instalar Qt Creator y las bibliotecas de Qt:
@@ -51,6 +51,20 @@ sudo apt-get -y install build-essential openssl libssl-dev libssl1.0  \
 ```
 
 pero les cuento que sin ellas funciona Qt Creator desde los paquete de la distribución, pero las he instalado por un caso.
+
+
+## Dependencias para proyecto Python
+Para un proyecto de python se necesitan los siguientes paquetes
+
+```bash
+sudo apt install python3-all python-pip python3-pylsp
+```
+
+donde;
+
+python3-all.- 
+python-pip.- 
+python3-pylsp.- Python implementation of the Language Server Protocol
 
 Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desarrollar aplicaciones en Qt.
 
@@ -283,13 +297,7 @@ Los siguientes son los requisitos
 SolaBibleReader
 
 
-- Para un proyecto de python se necesitan los siguientes paquetes
 
-sudo apt install python3-all python-pip python3-pylsp
-
-donde;
-
-python3-pylsp.- Python implementation of the Language Server Protocol
 
 
 # Cómo configurar un Proyecto Qt Creator con Python

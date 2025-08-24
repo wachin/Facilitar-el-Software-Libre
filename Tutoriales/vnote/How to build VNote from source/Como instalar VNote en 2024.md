@@ -4,6 +4,9 @@ cd vnote.git
 git submodule update --init --recursive
 
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0GQK0QwqspWmlHFZ00W11IeuCtrR7QPit-wXc-9tzqu1K6kNu1ipkaWGjTN2FjFFf7NFoRKQhZvEGkAiU-rlNCXkr9gzfvE9rs88JlMv-Ey9xOk-GERaYyGxED66BjrDp9VHnDTQw3Vt4-YR_Yk32Bleqh_cGws0zmfArsOhFzeflmJkAbZOHR1Gh1_0/s16000/20250823-220544%20QT5%20Dev%20Enviroment.png)
+
+
 # Cómo instalar VNote 3.17.0 en Linux 
 
 El archivo .pro que es neceario ya no está en la versión más reciente, pero en la anterior si está

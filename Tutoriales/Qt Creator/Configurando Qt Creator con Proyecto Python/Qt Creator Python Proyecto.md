@@ -1,43 +1,58 @@
-# Instalar Qt Creator 9 en Debian 12 de 64 o 32 bit + Project - Application Qt for Python
+# Instalar Qt Creator 9 en Debian 12 de 64 o 32 bit + Project - Application (Qt for Python)
 
  
+Esta es la manera en que he instalado en el 2025 a Qt Creator 9 en Debian 12. 
 
-Consultando encontré que es necesario instalar varias dependencias pues sino no funciona. Estos son los paso:
+**Nota:** No se si esta instalación también pueda servir para Ubuntu, Linux Mint u otro, si desean probar usen los comandos de instalación de apt más abajo indicados.
 
-Actualice sus repositorios:
+
+# Requisitos previos
+
+1. Actualice sus repositorios:
 
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 
-**Nota:** Esta instalación es para instalar Qt Creator 9 desde los paquetes de la Distribución Linux Debian 9, no desde [Qt](https://www.qt.io/offline-installers).
+2. Instale QT5 Dev Enviroment
 
+Si usa MX Linux esto está en el instalador de paquetes de MX Linux:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0GQK0QwqspWmlHFZ00W11IeuCtrR7QPit-wXc-9tzqu1K6kNu1ipkaWGjTN2FjFFf7NFoRKQhZvEGkAiU-rlNCXkr9gzfvE9rs88JlMv-Ey9xOk-GERaYyGxED66BjrDp9VHnDTQw3Vt4-YR_Yk32Bleqh_cGws0zmfArsOhFzeflmJkAbZOHR1Gh1_0/s16000/20250823-220544%20QT5%20Dev%20Enviroment.png)
+
+si usa Debian se puede instalar el Repositorio de MX Linux según estas instrucciones:
+
+**Instalar el repositorio de MX Linux en Debian y Sistemas Operativos Linux basados en el, y el instalador MX Instalar paquetes para instalar Ksnip, yt-dlp, otros**  
+[https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html](https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html)
+
+**Nota:** Esta instalación es para instalar Qt Creator 9 desde los paquetes de la Distribución Linux Debian, no desde [Qt](https://www.qt.io/offline-installers).
 
 # **Instalar Qt Creator y Qt**
 Los siguientes son los pasos para instalar Qt Creator en Debian 12 de 32 o 64 bit
 
 ## 1. Instala las dependencias
    - Abre una terminal y ejecuta el siguiente comando para instalar Qt Creator y las bibliotecas de Qt:
-     ```
-     sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
-     	dh-make qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools \
-     	qtdeclarative5-dev qtcreator qttools5-dev qttools5-dev-tools \
-     	libqt5svg5-dev clang xterm cmake-extras qmlscene-qt6 qmlscene \
-     	qml qmake6 qt6-base-dev qtcreator qmake6 libdbusmenu-qt5-dev
-     ```
+
+```bash
+sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
+    dh-make qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools \
+    qtdeclarative5-dev qtcreator qttools5-dev qttools5-dev-tools \
+    libqt5svg5-dev clang xterm cmake-extras qmlscene-qt6 qmlscene \
+    qml qmake6 qt6-base-dev qtcreator qmake6 libdbusmenu-qt5-dev
+```
      
-   - Añado que en la siguiente entrada: https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux dicen que además hay que instalar lo siguiente:
+   - Añado que en la siguiente entrada: [https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux](https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux) dicen que además hay que instalar lo siguiente:
 
-     ```
-      sudo apt-get -y install build-essential openssl libssl-dev libssl1.0  \
-     	libgl1-mesa-dev libqt5x11extras5 '^libxcb.*-dev' libx11-xcb-dev \
-         libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev \
-         libxkbcommon-x11-dev
-     ```
+```bash
+sudo apt-get -y install build-essential openssl libssl-dev libssl1.0  \
+    libgl1-mesa-dev libqt5x11extras5 '^libxcb.*-dev' libx11-xcb-dev \
+    libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev \
+    libxkbcommon-x11-dev
+```
 
-      pero les cuento que sin ellas funciona Qt Creator desde los paquete de la distribución, pero las he instalado por un caso.
+pero les cuento que sin ellas funciona Qt Creator desde los paquete de la distribución, pero las he instalado por un caso.
 
-   - Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desarrollar aplicaciones en Qt.
+Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desarrollar aplicaciones en Qt.
 
 ## 2. **Abrir Qt Creator**
    - Una vez instalado, abre Qt Creator desde el menú de aplicaciones o ejecutando `qtcreator` en la terminal o desde sus aplicaciones:

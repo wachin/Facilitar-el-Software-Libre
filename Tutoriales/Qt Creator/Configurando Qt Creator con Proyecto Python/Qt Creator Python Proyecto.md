@@ -133,7 +133,7 @@ por defecto está PySide6, dejarlo así y Next:
 
 lo dejo como está para que añada el control de versíon Git:
 
-
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFG97G1nfxGPJI64l6x2pChUEq7ZH-ty3QVCUHoxJPDasVt9iy3i6xw2bEIFfX2hsTgaTagJtHz7vZxr_OHp-LDZthv7m_UsHBVaTfIeJL6a3m0eLguxRdeuP_uTrWKuW4SWrOjEUh3BVDxNVyJavLbxLFLMfxzaC9bueB6fHKAABcy8z-iR9Mj3o5W7Q/s16000/20250825-083058%20elijo%20el%20control%20de%20versiones.png)
 
 al continuar me crea un repositorio, veo la carpeta oculta y los archivos:
 
@@ -276,26 +276,33 @@ Navigate to your project directory in the terminal:
 cd /path/to/your/project
 ```  
 
-- Create a virtual environment:
+- Create a virtual environment:  
+
 ```
 /usr/bin/python3 -m venv venv
 ```
+
 - Activate it:
+
 ```
 source venv/bin/activate
+```  
+
+3. **Install PySide6 in the Virtual Environment**:  
+
 ```
-3. **Install PySide6 in the Virtual Environment**:
-   ```
-   pip install PySide6
-   ```
+pip install PySide6
+```  
+   
 4. **Configure Qt Creator**:
    - In Qt Creator, go to `Tools` > `Options` > `Kits` or `Build & Run` > `Python`.
    - Set the Python interpreter to `venv/bin/python3` (the path to the virtual environment's Python).
    - Save and re-run your project.
-5. **Deactivate (when done)**:
-   ```
-   deactivate
-   ```
+5. **Deactivate (when done)**:  
+
+```
+deactivate
+```
 
 It keeps your system intact and allows flexibility for development. After setting it up, restart Qt Creator and ensure the virtual environment’s Python is selected. Let me know if you need help with any step!
 

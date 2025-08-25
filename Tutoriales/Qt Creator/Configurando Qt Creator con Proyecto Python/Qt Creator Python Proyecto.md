@@ -68,7 +68,7 @@ En Debian y basados en el como MX, antiX Linux, en Ubuntu y sabores además de *
 Para instalarlos, puedes usar el gestor de paquetes `apt`:
 
 ```bash
-sudo apt install git 
+sudo apt install git gitk
 ```
 
 ```bash

@@ -60,22 +60,27 @@ Para un proyecto de python se necesitan los siguientes paquetes
 sudo apt install python3-all python-pip python3-pylsp
 ```
 
-donde;
+donde:
 
-python3-all.- 
-python-pip.- 
-python3-pylsp.- Python implementation of the Language Server Protocol
+python3-all.- Paquete que depende de todas las versiones compatibles del entorno de ejecución de Python 3.
+python3-pip.- Instalador de paquetes de Python.
+python3-pylsp.- Implementación de Python del Protocolo de Servidor de Lenguaje.
 
-Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desarrollar aplicaciones en Qt.
+Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desarrollar aplicaciones en Qt y además el soporte para Python.
 
 ## 2. **Abrir Qt Creator**
-   - Una vez instalado, abre Qt Creator desde el menú de aplicaciones o ejecutando `qtcreator` en la terminal o desde sus aplicaciones:
+ Una vez instalado, abre Qt Creator desde el menú de aplicaciones buscalo como `qtcreator`:
+ 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioBDV7r1M17-RTj0q0yJUMSebQ72f5shQBK2PW1XW6UoyxUAs9OBhI31hc3oXTNgVpqvf1eJbNhZqFXKpcqcMcIRCuPpyufNNwZS0mBWF4nG0HcvXEgv3YgLoUAlJMRqteuWJzpiZlcZ62tDjwgPhTr1DLDg2wbhSJO7ZW6mUjw10kjqlf2xA8BnRpktc/s16000/20250824-153132%20menu%20Desarrollo%20-%20Qt%20Creator.png)
 
-![Qt Creator en Debian 12](vx_images/42160009298388.png)
 
+## 3. **Crear un nuevo proyecto Python**
+En Qt Creator, haz clic en el **Welcome** en **"Create Project..."** > **"Application (Qt for Python)"** > **"Empty Application"** > **"Choose..."**
 
-## 3. **Crear un nuevo proyecto**
-   - En Qt Creator, haz clic en **"File"** (Archivo) > **"New Project"** (Nuevo  proyecto).
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy7ixTgI6Zoh55gdF8r6mym1qcChU7adnaYRw3faewkfRoMpD6JZ3V8Dd2zi388Sf54iJPpGRgRE4-cNCnsGqzWjWPgJ-Th4q1PO8nUX_67Y-z-EwZKk450SdeL2XQ-WpCWIX1GlkuO2Go7AVbfEtdR9V2SjwjeejzNVzek2h_xTRv_Tum3OwMDhPhGlk/s16000/20250824-153640%20Qt%20Creator%20-%20Create%20Project%20-%20Application%20(Qt%20for%20Python).png)
+
+busque un lugar donde poner su proyecto:
+
    - En la ventana que aparece, selecciona **"Qt Widgets Application"** si deseas crear una aplicación de escritorio con interfaz gráfica. (También puedes seleccionar otros tipos de proyectos como **"Qt Console Application"** o **"Qt Quick Application"** según tus necesidades.)
    - Haz clic en **"Choose..."** (Elegir) después de seleccionar el tipo de proyecto.
 

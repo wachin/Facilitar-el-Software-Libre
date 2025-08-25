@@ -74,16 +74,103 @@ Esto instalará tanto el IDE Qt Creator con las bibliotecas necesarias para desa
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioBDV7r1M17-RTj0q0yJUMSebQ72f5shQBK2PW1XW6UoyxUAs9OBhI31hc3oXTNgVpqvf1eJbNhZqFXKpcqcMcIRCuPpyufNNwZS0mBWF4nG0HcvXEgv3YgLoUAlJMRqteuWJzpiZlcZ62tDjwgPhTr1DLDg2wbhSJO7ZW6mUjw10kjqlf2xA8BnRpktc/s16000/20250824-153132%20menu%20Desarrollo%20-%20Qt%20Creator.png)
 
 
-## 3. **Crear un nuevo proyecto Python**
+## 3. **Crear un nuevo Proyecto "Application (Qt for Python)"**
 En Qt Creator, haz clic en el **Welcome** en **"Create Project..."** > **"Application (Qt for Python)"** > **"Empty Application"** > **"Choose..."**
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy7ixTgI6Zoh55gdF8r6mym1qcChU7adnaYRw3faewkfRoMpD6JZ3V8Dd2zi388Sf54iJPpGRgRE4-cNCnsGqzWjWPgJ-Th4q1PO8nUX_67Y-z-EwZKk450SdeL2XQ-WpCWIX1GlkuO2Go7AVbfEtdR9V2SjwjeejzNVzek2h_xTRv_Tum3OwMDhPhGlk/s16000/20250824-153640%20Qt%20Creator%20-%20Create%20Project%20-%20Application%20(Qt%20for%20Python).png)
 
-busque un lugar donde poner su proyecto:
+busque un lugar donde poner su proyecto
+
+# Cree un repositorio nuevo desde cero o Seleccione su repositorio en GitHub o GitLab
+
+Aquí hay dos opciones:
+
+## OPCIÓN 1: Dejar que Qt Creator cree la base del repositorio Git para luego inicializarlo
+
+al continuar me crea un repositorio, veo la carpeta oculta y los archivos:
 
 
-Selecciono un lugar donde ya tenía un repositorio de GitHub
+.git
+.gitignore
+main.py
+SolaBibleReader.pyproject
+SolaBibleReader.pyproject.user
+.config
 
+y este .config sólo tiene esto:
+
+```plaintext
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+```
+
+Para conectar tu repositorio local de Git con un repositorio en GitHub, debes seguir estos pasos.
+
+### 1. Crear un repositorio en GitHub
+
+Primero, debes crear un nuevo repositorio en tu cuenta de GitHub. Puedes hacerlo desde la página principal de GitHub, haciendo clic en el botón "New repository". Dale un nombre a tu repositorio (por ejemplo, "EpubReader"), elige si será público o privado, y no lo inicialices con un README, `.gitignore` o licencia, ya que tu proyecto local ya tiene los archivos necesarios.
+
+-----
+
+### 2. Conectar el repositorio local con GitHub
+
+Abre una terminal en la carpeta raíz de tu proyecto (donde está el directorio `.git`) y ejecuta los siguientes comandos. Estos comandos le dicen a tu repositorio local dónde está el repositorio remoto en GitHub y luego suben los archivos.
+
+1.  **Añadir la URL del repositorio remoto:**
+    Reemplaza `nombre-de-usuario` y `nombre-del-repositorio` con los valores correctos de tu cuenta de GitHub.
+
+    ```bash
+    git remote add origin https://github.com/nombre-de-usuario/nombre-del-repositorio.git
+    ```
+
+    Este comando crea una conexión llamada **'origin'** que apunta a la URL de tu repositorio en GitHub.
+
+2.  **Subir los archivos iniciales:**
+    Sube todos los archivos del repositorio local a la rama principal (o `main`) del repositorio remoto.
+
+    ```bash
+    git push -u origin main
+    ```
+
+    El comando `git push` sube los cambios. La opción `-u` (o `--set-upstream`) establece la rama `main` de tu repositorio local para que siga la rama `main` del repositorio remoto `origin`. Esto hace que los futuros comandos `git push` y `git pull` sean más sencillos.
+
+-----
+
+### 3\. Verificar la conexión
+
+Una vez que ejecutes el comando `git push`, se te pedirá que inicies sesión en tu cuenta de GitHub. Después de hacerlo, si actualizas la página del repositorio en tu navegador, verás que todos los archivos de tu proyecto local ya están en GitHub.
+
+### Notas adicionales
+
+  - **`git remote -v`**: Puedes usar este comando para verificar que la URL del repositorio remoto ha sido añadida correctamente. Te mostrará las URLs de `fetch` y `push` para `origin`.
+  - **Configuración de Git**: El archivo `.config` que mencionas es parte de la configuración interna de Git y no es algo que necesites modificar manualmente para conectar con GitHub. Los comandos anteriores se encargan de actualizar la configuración necesaria por ti.
+
+## OPCIÓN 2: 
+
+Selecciono un lugar donde ya tenías un repositorio de GitHub en el cual estabas desarrollando tu proyecto pero quieres usar Qt Creator para continuar con el mismo:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2sH1EdPhMBphEC2M3irpetJdyI2_Iw3hfGY5j7PwUzUDVB6PkzvA-a12W4gVMNwyLeRDRpkJ3vBcI0f5CaVa5_S72xUHojRlsZcfJCGsPR1F_smABG-tCiLYbsqr-sJAZ57ZOmqhCmfXxrFq_83XoVxWFODm7QLbO1HeASVufAAWRcu6m3HAka2V_JiE/s16000/20250824-154031%20busque%20un%20lugar%20donde%20poner%20su%20proyecto.png)
+
+y allí:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5kbk62o9iNtwD3PhOdNEnuUU7bVPR52h3Dh9auUQmbp2qB3_Brg0GUJqP2a83wmBPnBI_-G9_jra9gUE0TKHNb7cluT_ZeRzXmuM745lu6WkR0otYH1N8HDlRMUAIIroi1YFfPAiiWpQgmB5oJ8ixscOQtYJQsw4nhvuUyOs4l2oRsWnralp15z582tw/s16000/20250824-193631%20Selecciono%20un%20lugar%20donde%20ya%20tenía%20un%20repositorio%20de%20GitHub.png)
+
+por defecto está PySide6 dejarlo así y Next:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
+
+hj
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjepw8LR2dCF3Ai3EULm0ILwci25sWQL0FjwX-JE1PZ5cngNnucOmk304ItURMcccbpNQQS0DYwxueG95jyDHJUHeo9iB3j1uoIGIAzUUFT1Lx1KKAk8ppssy2YNnSnHe32ng6_LHr1CO_ipDlzbP2z3PeLFwHe6NgXzYC0IyciJyUN7MK8O8Ko6e6Ais8/s16000/20250824-194347%20añado%20los%20archivos%20de%20Git.png)
+
+
+
+20250825-002000 Qt Creator dice que falta instalar PySide6
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW8d1dqCbxc63F5akLTjf6r69fMVaG0OmFGeOqcDk4sHOXHEt7Zh3jwofakGybhFsBYneEKE0thtR86_3eg0hIEyO6s05qylAvko_COu87xfy8287qr791jBJXgWH-ql9AzkfsFGeiXH4LNmFBVChaJRfzz3miAQPlS_DvCJGpmzj50h6J9RTPBZXzn4k/s16000/20250825-002000%20Qt%20Creator%20dice%20que%20falta%20instalar%20PySide6.png)
 
    - En la ventana que aparece, selecciona **"Qt Widgets Application"** si deseas crear una aplicación de escritorio con interfaz gráfica. (También puedes seleccionar otros tipos de proyectos como **"Qt Console Application"** o **"Qt Quick Application"** según tus necesidades.)
    - Haz clic en **"Choose..."** (Elegir) después de seleccionar el tipo de proyecto.

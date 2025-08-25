@@ -81,6 +81,10 @@ En Qt Creator, haz clic en el **Welcome** en **"Create Project..."** > **"Applic
 
 busque un lugar donde poner su proyecto:
 
+
+Selecciono un lugar donde ya tenía un repositorio de GitHub
+
+
    - En la ventana que aparece, selecciona **"Qt Widgets Application"** si deseas crear una aplicación de escritorio con interfaz gráfica. (También puedes seleccionar otros tipos de proyectos como **"Qt Console Application"** o **"Qt Quick Application"** según tus necesidades.)
    - Haz clic en **"Choose..."** (Elegir) después de seleccionar el tipo de proyecto.
 

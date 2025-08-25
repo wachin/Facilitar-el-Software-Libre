@@ -52,6 +52,37 @@ sudo apt-get -y install build-essential openssl libssl-dev libssl1.0  \
 
 pero les cuento que sin ellas funciona Qt Creator desde los paquete de la distribución, pero las he instalado por un caso.
 
+## Instalando el control de versiones
+
+En Debian y basados en el como MX, antiX Linux, en Ubuntu y sabores además de **Git**, los sistemas de control de versiones más comunes que puedes encontrar en los repositorios son **Subversion (SVN)**, **Mercurial (Hg)**, y **Bazaar (Bzr)**.
+
+-----
+
+### Descripción de los sistemas de control de versiones
+
+  * **Git**: Es un sistema de control de versiones **distribuido**. Cada desarrollador tiene una copia completa del repositorio y su historial, lo que permite trabajar sin conexión y fusionar cambios más fácilmente. Es el estándar de la industria y el más popular en la actualidad.
+  * **Subversion (SVN)**: Es un sistema **centralizado**. Un único servidor aloja el repositorio y los desarrolladores deben conectarse a él para actualizar o enviar cambios. Es menos flexible que Git, pero aún se usa en muchos entornos empresariales.
+  * **Mercurial (Hg)**: Al igual que Git, es un sistema **distribuido**. Es conocido por ser fácil de aprender y usar, con comandos intuitivos que lo hacen una buena alternativa a Git, aunque su popularidad es menor.
+  * **Bazaar (Bzr)**: También es un sistema **distribuido**. Fue popular en proyectos de código abierto como Ubuntu, pero su uso ha disminuido considerablemente en favor de Git.
+
+Para instalarlos, puedes usar el gestor de paquetes `apt`:
+
+```bash
+sudo apt install git 
+```
+
+```bash
+sudo apt install subversion
+```
+
+```bash
+sudo apt install mercurial
+```
+
+```bash
+sudo apt install bazaar
+```
+
 
 ## Dependencias para proyecto Python
 Para un proyecto de python se necesitan los siguientes paquetes
@@ -87,8 +118,24 @@ Aquí hay dos opciones:
 
 ## OPCIÓN 1: Dejar que Qt Creator cree la base del repositorio Git para luego inicializarlo
 
-al continuar me crea un repositorio, veo la carpeta oculta y los archivos:
+Voy a buscar una carpeta que **he creado** para los proyectos hechos en Qt Creator:
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivoXn1IBRdaOBJCJOgVKpyPOC18MW-fpIZiFOZ4SNhkRPwIFokA_krdYA8OkQdIYNSk4jNOndB4ICiygX3qaF7WGk-rzfFgF-YY5EFaJ8jjrVZnr0GnBSCdlZhNgtZm_nxkL0womdv-xC5584x08AS2HjIvb_PK6nNgKFAhm_qnT43JPKOTbKt_txaj5c/s16000/20250825-081505%20eligiendo%20una%20carpeta%20para%20el%20proyecto.png)
+
+le pongo un nombre:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDRcRvMfrPR0T88owWh1A8dP2UZ3DRBjh77CaGjnMcENhnEfajk-j9WXGpb5fsK9qzhsqFKHuuUcm2sPu4_kW-cojzbPLRQGn13EiBaEZrb5nTXs-ZbXmZiisRTewZ7pUuKl7d_GmynV1VNA9mx-l2mnmAMN7U9KUBQfF5xJ8Xjrnp8WnP9jCflmApBwo/s16000/20250825-081827%20le%20pongo%20un%20nombre%20al%20proyecto.png)
+
+
+por defecto está PySide6, dejarlo así y Next:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
+
+lo dejo como está para que añada el control de versíon Git:
+
+
+
+al continuar me crea un repositorio, veo la carpeta oculta y los archivos:
 
 .git
 .gitignore
@@ -158,11 +205,12 @@ y allí:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5kbk62o9iNtwD3PhOdNEnuUU7bVPR52h3Dh9auUQmbp2qB3_Brg0GUJqP2a83wmBPnBI_-G9_jra9gUE0TKHNb7cluT_ZeRzXmuM745lu6WkR0otYH1N8HDlRMUAIIroi1YFfPAiiWpQgmB5oJ8ixscOQtYJQsw4nhvuUyOs4l2oRsWnralp15z582tw/s16000/20250824-193631%20Selecciono%20un%20lugar%20donde%20ya%20tenía%20un%20repositorio%20de%20GitHub.png)
 
+
 por defecto está PySide6 dejarlo así y Next:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
 
-hj
+lo dejo como está para que añada el control de versíon Git:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjepw8LR2dCF3Ai3EULm0ILwci25sWQL0FjwX-JE1PZ5cngNnucOmk304ItURMcccbpNQQS0DYwxueG95jyDHJUHeo9iB3j1uoIGIAzUUFT1Lx1KKAk8ppssy2YNnSnHe32ng6_LHr1CO_ipDlzbP2z3PeLFwHe6NgXzYC0IyciJyUN7MK8O8Ko6e6Ais8/s16000/20250824-194347%20añado%20los%20archivos%20de%20Git.png)
 
@@ -183,7 +231,8 @@ si se le da clic en Instalar saldrá un mensaje que dice This environment is ext
 
 Después de crear un nuevo proyecto de Qt con Python y luego de dejar elegido a Git, en el programa hay un botón que decía para instalar pyside6 con pip y le di clic pero apareció este mensaje en QtCreator:
 
-```
+
+```plaintext
 Running "/usr/bin/python3 -m pip install PySide6 --user" to install PySide6.
 error: externally-managed-environment
 
@@ -214,23 +263,27 @@ The error message indicates that your Debian 12 system has an "externally manage
 ### Use a Virtual Environment (Recommended for Development)
 To avoid modifying the system Python and align with the error's suggestion, create a virtual environment:
 
-1. **Install `python3-full` (if needed)**:
-   ```
-   sudo apt install python3-full python-pip python3-pylsp
-   ```
-2. **Create a Virtual Environment**:
-   - Navigate to your project directory in the terminal:
-     ```
-     cd /path/to/your/project
-     ```
-   - Create a virtual environment:
-     ```
-     /usr/bin/python3 -m venv venv
-     ```
-   - Activate it:
-     ```
-     source venv/bin/activate
-     ```
+**1.-** **Install `python3-full` (if needed)**:
+
+```
+sudo apt install python3-full python-pip python3-pylsp
+```  
+
+**2.-** **Create a Virtual Environment**:
+Navigate to your project directory in the terminal:
+
+```
+cd /path/to/your/project
+```  
+
+- Create a virtual environment:
+```
+/usr/bin/python3 -m venv venv
+```
+- Activate it:
+```
+source venv/bin/activate
+```
 3. **Install PySide6 in the Virtual Environment**:
    ```
    pip install PySide6

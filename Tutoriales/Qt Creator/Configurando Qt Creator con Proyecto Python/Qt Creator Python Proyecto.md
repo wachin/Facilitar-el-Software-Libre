@@ -131,7 +131,7 @@ por defecto está PySide6, dejarlo así y Next:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
 
-### Añadaço el control de versíon Git:
+### Añado el control de versíon Git:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFG97G1nfxGPJI64l6x2pChUEq7ZH-ty3QVCUHoxJPDasVt9iy3i6xw2bEIFfX2hsTgaTagJtHz7vZxr_OHp-LDZthv7m_UsHBVaTfIeJL6a3m0eLguxRdeuP_uTrWKuW4SWrOjEUh3BVDxNVyJavLbxLFLMfxzaC9bueB6fHKAABcy8z-iR9Mj3o5W7Q/s16000/20250825-083058%20elijo%20el%20control%20de%20versiones.png)
 
@@ -220,9 +220,9 @@ y este .config sólo tiene esto:
 
 Para conectar tu repositorio local de Git con un repositorio en GitHub, debes seguir estos pasos.
 
-### 1. Crear un repositorio en GitHub
+### 1. Crear un repositorio en GitHub para conectarlo al que creó Qt Creator
 
-Primero, debes crear un nuevo repositorio en tu cuenta de GitHub. Puedes hacerlo desde la página principal de GitHub, haciendo clic en el botón "New repository". Dale un nombre a tu repositorio (por ejemplo, "EpubReader"), elige si será público o privado, y no lo inicialices con un README, `.gitignore` o licencia, ya que tu proyecto local ya tiene los archivos necesarios.
+Primero, debes crear un nuevo repositorio en tu cuenta de GitHub. Puedes hacerlo desde la página principal de GitHub, haciendo clic en el botón "New repository". Dale un nombre a tu repositorio (por ejemplo, "EpubReader"), elige si será público o privado, y no lo inicialices con gitignote.
 
 -----
 
@@ -250,7 +250,7 @@ Abre una terminal en la carpeta raíz de tu proyecto (donde está el directorio 
 
 -----
 
-### 3\. Verificar la conexión
+### 3. Verificar la conexión
 
 Una vez que ejecutes el comando `git push`, se te pedirá que inicies sesión en tu cuenta de GitHub. Después de hacerlo, si actualizas la página del repositorio en tu navegador, verás que todos los archivos de tu proyecto local ya están en GitHub.
 
@@ -259,9 +259,9 @@ Una vez que ejecutes el comando `git push`, se te pedirá que inicies sesión en
   - **`git remote -v`**: Puedes usar este comando para verificar que la URL del repositorio remoto ha sido añadida correctamente. Te mostrará las URLs de `fetch` y `push` para `origin`.
   - **Configuración de Git**: El archivo `.config` que mencionas es parte de la configuración interna de Git y no es algo que necesites modificar manualmente para conectar con GitHub. Los comandos anteriores se encargan de actualizar la configuración necesaria por ti.
 
-## OPCIÓN 2: 
+## OPCIÓN 2: Para un repositorio ya creado y con contendido en el cual se quiere implementar Qt Creator
 
-Selecciono un lugar donde ya tenías un repositorio de GitHub en el cual estabas desarrollando tu proyecto pero quieres usar Qt Creator para continuar con el mismo:
+Debes seleccionar un lugar donde ya tenías un repositorio de GitHub en el cual estabas desarrollando tu proyecto pero quieres usar Qt Creator para continuar con el mismo:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2sH1EdPhMBphEC2M3irpetJdyI2_Iw3hfGY5j7PwUzUDVB6PkzvA-a12W4gVMNwyLeRDRpkJ3vBcI0f5CaVa5_S72xUHojRlsZcfJCGsPR1F_smABG-tCiLYbsqr-sJAZ57ZOmqhCmfXxrFq_83XoVxWFODm7QLbO1HeASVufAAWRcu6m3HAka2V_JiE/s16000/20250824-154031%20busque%20un%20lugar%20donde%20poner%20su%20proyecto.png)
 

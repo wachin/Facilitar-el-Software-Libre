@@ -114,7 +114,7 @@ busque un lugar donde poner su proyecto
 
 # Cree un repositorio nuevo desde cero o Seleccione su repositorio en GitHub o GitLab
 
-Aquí hay dos opciones:
+Aquí hay dos opciones, yo uso la 2da:
 
 ## OPCIÓN 1: Dejar que Qt Creator cree la base del repositorio Git para luego inicializarlo
 
@@ -260,6 +260,8 @@ Una vez que ejecutes el comando `git push`, se te pedirá que inicies sesión en
   - **Configuración de Git**: El archivo `.config` que mencionas es parte de la configuración interna de Git y no es algo que necesites modificar manualmente para conectar con GitHub. Los comandos anteriores se encargan de actualizar la configuración necesaria por ti.
 
 ## OPCIÓN 2: Para un repositorio ya creado y con contendido en el cual se quiere implementar Qt Creator
+
+En Qt Creator, haz clic en **"File"** (Archivo) > **"New Project"** (Nuevo  proyecto).
 
 Debes seleccionar un lugar donde ya tenías un repositorio de GitHub en el cual estabas desarrollando tu proyecto pero quieres usar Qt Creator para continuar con el mismo:
 

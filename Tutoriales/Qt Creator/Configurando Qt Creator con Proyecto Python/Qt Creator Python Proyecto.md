@@ -131,17 +131,81 @@ por defecto está PySide6, dejarlo así y Next:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
 
-lo dejo como está para que añada el control de versíon Git:
+### Añadaço el control de versíon Git:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFG97G1nfxGPJI64l6x2pChUEq7ZH-ty3QVCUHoxJPDasVt9iy3i6xw2bEIFfX2hsTgaTagJtHz7vZxr_OHp-LDZthv7m_UsHBVaTfIeJL6a3m0eLguxRdeuP_uTrWKuW4SWrOjEUh3BVDxNVyJavLbxLFLMfxzaC9bueB6fHKAABcy8z-iR9Mj3o5W7Q/s16000/20250825-083058%20elijo%20el%20control%20de%20versiones.png)
 
-al continuar me crea un repositorio, veo la carpeta oculta y los archivos:
+Además se puede configura Git al dar clic en **Configure...**
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNgSTuVeqS2A5_CMfd2NwQzZsNebHYRTs9mHlLyU7L8-p2f15zNZC2u6TJj6xb1QwgIEdG1Qb7wpMeZbyUaU0iQhRB3tQq5MiM_7OHZlbzGsLauzGUjCnIWVU5zV5UX-cnR2VX2Z0WLDmdMRAJkTMv-4sc1IV37Jw-QY2PyFT8Kz3yNrZy9KS4KGwW41U/s16000/20250825-092233%20Version%20Control%20-%20Pertaña%20Git.png)
+
+al darle clic en configurar aparece esto en la pestaña **Git**
+
+```
+Configuration
+Prepend to PATH:
+
+Miscellaneous
+Long count 100   Timeout 30s
+
+[ ] Pull with rebase
+
+Gitk
+Arguments:
+
+Repository Browser
+Commnad: 
+```
+
+#### Pestaña de Configuración de Git en Qt Creator
+
+
+**Prepend to PATH**
+
+Esto añade una ruta de directorio al **PATH** del sistema. Es útil si el ejecutable de Git no se encuentra en una ubicación estándar y el sistema operativo no puede encontrarlo automáticamente.
+
+**Miscellaneous**
+
+  * **Long count 100**: Establece un límite de 100 para el número de **commits** a mostrar en las vistas de registro. Esto ayuda a optimizar el rendimiento.
+  * **Timeout 30s**: Es el tiempo de espera de 30 segundos para las operaciones de Git. Si una operación tarda más, se considera que ha fallado.
+
+**Pull with rebase**
+
+Al activar esta opción, al ejecutar el comando **git pull**, se usa la opción **--rebase**. Esto reorganiza los commits locales sobre los commits remotos en lugar de crear un nuevo commit de fusión.
+
+**Gitk Arguments**
+
+**Gitk** es una herramienta gráfica para explorar el historial de un repositorio de Git. En esta sección se pueden añadir argumentos de línea de comandos para personalizar su comportamiento.
+
+**Repository Browser Command**
+
+Esta opción permite especificar el comando de un navegador de repositorio de Git para abrirlo desde Qt Creator.
+
+y me queda así:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCwqTA9NM0u4THCh4fL147mjhW3rM1C-MmH8ga180h4dTqjvHqOfKqK5CRxzU_pBCG1Q95jDbW-2E8WhABsqzoqoQOeAJqsnmBY8MvwfpHcs5pFDg0DfcQYbhvJdg5PDcqpfd9f4AZ6lb9qW8Bjm3AE7aacM8Qjnk9VS1jEzqnXxQk-7A-LFO4SLQiUQA/s16000/20250825-092812%20Proyecto%20con%20git%20configurado.png)
+
+veo estos archivos en la ventana:
+
+.gitignore
+SolaBibleReader.pyproject
+main.py
+
+al dar clic en Finish dice que falta instalar PySide6:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hysOBe3mBU_doDdQ5-CsuL29OoTkBxupcO3DAkM58K9Sh4Zl2VRyNfZhfYyy_AG9Mj8dyMDlzLtn05EPGI4dQLdIy9plkjeOKY0w5OCvgeOFPJCioAZqWpkXEg4ktYDhG-HGbkJk4HUtzBVGSsI9X6EHbvFVj4PELTGr-M7O035a1jKqeerVWgbSVyQ/s16000/20250825-093219%20se%20crearon%20mis%20archivos,%20missing%20PySide6.png)
+
+al ver desde el administrador de Archivos Dophin, veo la carpeta oculta .git y los archivos:
 
 .git
 .gitignore
 main.py
 SolaBibleReader.pyproject
-SolaBibleReader.pyproject.user
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmzgAxhOAnqunPJ-6SiP30qUcFbR1IqhRvh8PyXtWG9gaT4MGKqIbWorKwjVZP5QIiF68Q-Jb6wuGaa9xxAYfZmPIBuzTuCCqyIIDO7DTVwdFlz4tJKibrnMnqrrI3Q6RkzFuCVfYVqmSTmk21iIPQy2KKAJ1yjtgB48Yaf6nk6yzIrXVFGtM9654XUd0/s16000/20250825-093636%20se%20han%20creado%20los%20archivos.png)
+
+dentro de .git está el archivo:
+
 .config
 
 y este .config sólo tiene esto:

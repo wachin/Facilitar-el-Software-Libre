@@ -386,7 +386,7 @@ git tag
 para seleccionarla:
 
 ```bash
-git checkout 6.5.2
+git checkout 6.4.2
 ```
 
 2. **Configure and Build**:

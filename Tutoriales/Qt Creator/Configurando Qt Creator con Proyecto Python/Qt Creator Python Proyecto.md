@@ -329,36 +329,55 @@ Para resolverlo e instalar **PySide6** para usarlo en **Qt Creator** lo siguient
 Para evitar modificar la instacion Python del sistema y alinearse con la sugerencia del error, crea un entorno virtual:
 
 **1.-** **Instalar `python3-full`:**
-)
-```
+
+```bash
 sudo apt install python3-full
 ```  
-
 
 **2.-** **Crear un entorno virtual**:
 Vaya al directorio de su proyecto en la terminal:
 
-```
+```bash
 cd /path/to/your/project
 ```  
 
 - Crear un entorno virtual:
 
-```
-/usr/bin/python3 -m venv venv
+```bash
+python3 -m venv venv
 ```
 
 - Activarlo:
 
-```
+```bash
 source venv/bin/activate
 ```  
 
-3. **Instalar PySide6 en el entorno virtual**:
+cerrar **Qt Creator**
 
+3. **Instalar PySide6 desde código fuente**
+
+sudo apt install clang qt6-base-dev build-essential cmake python3-dev python3-pip libclang-dev
+
+```bash
+git clone https://code.qt.io/pyside/pyside-setup
+cd pyside-setup
 ```
-pip install PySide6
-```  
+
+
+
+git tag
+git checkout 6.5.2
+
+
+
+qtpaths
+
+
+
+despues de que cerró a Qt Creator, vuelvalo a abrir y de clic en el mensaje que ahora aparece:
+
+
    
 4. **Configure Qt Creator**:
    - In Qt Creator, go to `Tools` > `Options` > `Kits` or `Build & Run` > `Python`.

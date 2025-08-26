@@ -389,9 +389,38 @@ para seleccionarla:
 git checkout 6.5.2
 ```
 
+2. **Configure and Build**:
+   - Run the setup script.
 
-qtpaths
+```bash
+python3 setup.py install --parallel=8 --build-tests
+```
 
+a las 11H30 inicia la compilación
+
+
+### Step 4: Verify Installation
+1. **Activate Your Virtual Environment**:
+   ```
+   source /home/wachin/Dev/QtCreator-Dev/Audinux/venv/bin/activate
+   ```
+2. **Test PySide6**:
+   ```
+   python -c "import PySide6; print(PySide6.__version__)"
+   ```
+   If a version number is printed, the installation was successful.
+
+### Step 5: Configure Qt Creator
+- In Qt Creator, go to `Tools` > `Options` > `Kits` or `Build & Run` > `Python`.
+- Set the Python interpreter to `venv/bin/python` from your virtual environment.
+- Restart Qt Creator and try running your project again.
+
+### Considerations
+- **32-bit Support**: Building PySide6 for 32-bit Debian 12 is challenging because Qt 6 and its dependencies are increasingly dropping 32-bit support. If the build fails due to missing 32-bit libraries or Qt components, you might need to consider switching to a 64-bit system or an older version of Qt/PySide (e.g., PySide2 with Qt 5), which had better 32-bit support.
+- **Time and Resources**: Building from source can be time-consuming and resource-intensive. Ensure your system has sufficient disk space and memory.
+- **Alternative**: If building fails, you could explore using a container (e.g., Docker) with a 64-bit environment or a pre-built 32-bit image, though this requires additional setup.
+
+Let me know if you encounter specific errors during the build process, and I’ll help you troubleshoot further!
 
 
 despues de que cerró a Qt Creator, vuelvalo a abrir y de clic en el mensaje que ahora aparece:

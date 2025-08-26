@@ -369,6 +369,14 @@ Antes de compilar desde la fuente, asegúrese de tener las herramientas y biblio
 sudo apt install ninja-build clang build-essential cmake python3-dev python3-pip libclang-dev
 ```
 
+make --version
+
+ninja --version
+
+g++ --version
+
+qmake --version
+
 ### Paso 2: Descargar el código fuente de PySide6
 1. **Clonar el repositorio de PySide6**:
 
@@ -459,6 +467,9 @@ There is no GCC as a compiler and is compatible with your version of Qt for Qt C
 Dios les bendiga
 
 ### Consultas:  
+
+**Getting Started**
+[https://doc.qt.io/qtforpython-6/gettingstarted.html](https://doc.qt.io/qtforpython-6/gettingstarted.html)
 
 **PySide6**
 [https://github.com/pyside/pyside-setup/blob/dev/README.pyside6.md](https://github.com/pyside/pyside-setup/blob/dev/README.pyside6.md)

@@ -279,17 +279,12 @@ por defecto está PySide6 dejarlo así y Next:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
 
-lo dejo como está para que añada el control de versíon Git:
+y listo el proyecto de Qt Creator se puse encima del repositorio git, y Qt Creator dice que falta instalar PySide6
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjepw8LR2dCF3Ai3EULm0ILwci25sWQL0FjwX-JE1PZ5cngNnucOmk304ItURMcccbpNQQS0DYwxueG95jyDHJUHeo9iB3j1uoIGIAzUUFT1Lx1KKAk8ppssy2YNnSnHe32ng6_LHr1CO_ipDlzbP2z3PeLFwHe6NgXzYC0IyciJyUN7MK8O8Ko6e6Ais8/s16000/20250824-194347%20añado%20los%20archivos%20de%20Git.png)
-
-
-Qt Creator dice que falta instalar PySide6
-
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW8d1dqCbxc63F5akLTjf6r69fMVaG0OmFGeOqcDk4sHOXHEt7Zh3jwofakGybhFsBYneEKE0thtR86_3eg0hIEyO6s05qylAvko_COu87xfy8287qr791jBJXgWH-ql9AzkfsFGeiXH4LNmFBVChaJRfzz3miAQPlS_DvCJGpmzj50h6J9RTPBZXzn4k/s16000/20250825-002000%20Qt%20Creator%20dice%20que%20falta%20instalar%20PySide6.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxAuotjGs77hLKtaQINrPR4bFS4brNxoYsxK4mUzmZUvB7cT6FkZJA0qZ-LBBbNMX2ImaRVqnckWs0zfvDB-TV3h6J_W0TK_gTAQ-KlcR3Q2uw4-q0OVp01tv66c3X4QcVyTpXJREwlM13hgub1OAOQFt5mAaPew8PDaQXF5DkX6ADFKo505fRwRGro8k/s16000/20250826-100016%20y%20listo%20el%20proyecto%20de%20Qt%20Creator%20se%20puse%20encima%20del%20repositorio%20git.png)
 
 
-si se le da clic en Instalar saldrá un mensaje que dice This environment is externally managed
+si se le da clic en **Install** saldrá un mensaje que dice **This environment is externally managed**
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhSvPKQBV-GUY1slAtzXvYdSHeyMs_7L3KuSFjDZ50TGwp6KyXBZW7qjP1dYBxF198yzh76zDSAEC7HP_5otMqQgXwKdEzOmAyXUhQ-Ng4VUQqmomc53lUKCvBAv1uursCm0bE2-ulKDLinJzcz9WEo6QkQYe4ZIKLMoxaI9leQYvwz-C5ABb7pcAfBZE/s16000/20250825-002306%20si%20se%20le%20da%20clic%20en%20Instalar%20saldrá%20un%20mensaje%20que%20dice%20This%20environment%20is%20externally%20managed.png)
 

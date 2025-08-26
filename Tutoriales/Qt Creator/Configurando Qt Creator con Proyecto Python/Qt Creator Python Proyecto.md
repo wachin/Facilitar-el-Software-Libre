@@ -25,9 +25,9 @@ si usa Debian se puede instalar el Repositorio de MX Linux según estas instrucc
 **Instalar el repositorio de MX Linux en Debian y Sistemas Operativos Linux basados en el, y el instalador MX Instalar paquetes para instalar Ksnip, yt-dlp, otros**  
 [https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html](https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html)
 
-**Nota:** Esta instalación es para instalar Qt Creator 9 desde los paquetes de la Distribución Linux Debian, no desde [Qt](https://www.qt.io/offline-installers).
+**Nota:** Esta instalación es para instalar Qt Creator 9 desde los paquetes de la Distribución Linux Debian 12, no desde [Qt](https://www.qt.io/offline-installers).
 
-# **Instalar Qt Creator y Qt**
+# **Instalar Qt Creator**
 Los siguientes son los pasos para instalar Qt Creator en Debian 12 de 32 o 64 bit. Aquí en este tutorial estoy mezclando los dos metodos, pues aún instalando desde el instalador de MX Linux faltan algunas dependencias
 
 ## 1. Instala las dependencias
@@ -122,12 +122,12 @@ Voy a buscar una carpeta que **he creado** para los proyectos hechos en Qt Creat
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivoXn1IBRdaOBJCJOgVKpyPOC18MW-fpIZiFOZ4SNhkRPwIFokA_krdYA8OkQdIYNSk4jNOndB4ICiygX3qaF7WGk-rzfFgF-YY5EFaJ8jjrVZnr0GnBSCdlZhNgtZm_nxkL0womdv-xC5584x08AS2HjIvb_PK6nNgKFAhm_qnT43JPKOTbKt_txaj5c/s16000/20250825-081505%20eligiendo%20una%20carpeta%20para%20el%20proyecto.png)
 
-le pongo un nombre:
+le pongo un nombre y **Next**:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDRcRvMfrPR0T88owWh1A8dP2UZ3DRBjh77CaGjnMcENhnEfajk-j9WXGpb5fsK9qzhsqFKHuuUcm2sPu4_kW-cojzbPLRQGn13EiBaEZrb5nTXs-ZbXmZiisRTewZ7pUuKl7d_GmynV1VNA9mx-l2mnmAMN7U9KUBQfF5xJ8Xjrnp8WnP9jCflmApBwo/s16000/20250825-081827%20le%20pongo%20un%20nombre%20al%20proyecto.png)
 
 
-por defecto está PySide6, dejarlo así y Next:
+por defecto está **PySide6**, dejarlo así y Next:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBP_bmNKCPzhHex450LmqjmDxdXrSskWo2KTOAqUoJa1foUXklFxonR4DAE2eYymycd95DhVKvmum71JsuydovyOaFlMWlsdx1DxDEa_PIvmYrexLFv8rRZQziAbjNtYu9y81h2uHrjaetY9mpNNlkHwasD4NEhd7NkI2o0CDYIQNIKRot_5J1EV1XDXk/s16000/20250824-194226%20por%20defecto%20PySide6,%20Next.png)
 
@@ -185,13 +185,13 @@ y me queda así:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCwqTA9NM0u4THCh4fL147mjhW3rM1C-MmH8ga180h4dTqjvHqOfKqK5CRxzU_pBCG1Q95jDbW-2E8WhABsqzoqoQOeAJqsnmBY8MvwfpHcs5pFDg0DfcQYbhvJdg5PDcqpfd9f4AZ6lb9qW8Bjm3AE7aacM8Qjnk9VS1jEzqnXxQk-7A-LFO4SLQiUQA/s16000/20250825-092812%20Proyecto%20con%20git%20configurado.png)
 
-veo estos archivos en la ventana:
+ahora veo estos archivos en la ventana:
 
 .gitignore
 SolaBibleReader.pyproject
 main.py
 
-al dar clic en Finish dice que falta instalar PySide6:
+al dar clic en **Finish** dice que falta instalar **PySide6**:
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hysOBe3mBU_doDdQ5-CsuL29OoTkBxupcO3DAkM58K9Sh4Zl2VRyNfZhfYyy_AG9Mj8dyMDlzLtn05EPGI4dQLdIy9plkjeOKY0w5OCvgeOFPJCioAZqWpkXEg4ktYDhG-HGbkJk4HUtzBVGSsI9X6EHbvFVj4PELTGr-M7O035a1jKqeerVWgbSVyQ/s16000/20250825-093219%20se%20crearon%20mis%20archivos,%20missing%20PySide6.png)
 
@@ -265,12 +265,15 @@ En Qt Creator, haz clic en **"File"** (Archivo) > **"New Project"** (Nuevo  proy
 
 Debes seleccionar un lugar donde ya tenías un repositorio de GitHub en el cual estabas desarrollando tu proyecto pero quieres usar Qt Creator para continuar con el mismo:
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2sH1EdPhMBphEC2M3irpetJdyI2_Iw3hfGY5j7PwUzUDVB6PkzvA-a12W4gVMNwyLeRDRpkJ3vBcI0f5CaVa5_S72xUHojRlsZcfJCGsPR1F_smABG-tCiLYbsqr-sJAZ57ZOmqhCmfXxrFq_83XoVxWFODm7QLbO1HeASVufAAWRcu6m3HAka2V_JiE/s16000/20250824-154031%20busque%20un%20lugar%20donde%20poner%20su%20proyecto.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqWsaOOE75cGGGvO28x5KIYyaxMA0BZx9vdnE6p4Y8EDchghspwyNU8UrpTyGXf9QfUOUXpA3rgiZNglSEk9C6ShrRvW4BNyn70RUjZbasxhuimR2fsIQhCuUU_-Si_w7tkjIQPOpYm0rd-y1lgQfZ_5UaTixGlWU5CY-FkLJK-0PD2dGlD_SYHWfn9c0/s16000/20250826-094400%20selecciona%20la%20carpeta%20anterior.png)
 
-y allí:
+Crear el proyecto encima del repositorio GitHub
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5kbk62o9iNtwD3PhOdNEnuUU7bVPR52h3Dh9auUQmbp2qB3_Brg0GUJqP2a83wmBPnBI_-G9_jra9gUE0TKHNb7cluT_ZeRzXmuM745lu6WkR0otYH1N8HDlRMUAIIroi1YFfPAiiWpQgmB5oJ8ixscOQtYJQsw4nhvuUyOs4l2oRsWnralp15z582tw/s16000/20250824-193631%20Selecciono%20un%20lugar%20donde%20ya%20tenía%20un%20repositorio%20de%20GitHub.png)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiunjrFhcp_4DfqY7aLs5-gjeaZ8wUlQBCpPfXkchWTLMjvPMolI7CSJB8263h5dGkVpqVV8A-VATHUOVslyxvorv2-pMGyZMBGaaQLjwZGqKKs3OoQ2EuWVhl8QdfoJlLIrejDRsO7hH0F7L6G81LLGsDiQpfCNwrwZPl6ly0ZqgKXdFFtf1AgnUAUnlI/s16000/20250826-094954%20Crear%20el%20proyecto%20encima%20del%20repositorio%20GitHub.png)
 
+en esta ocasión no ponerle el control de versiones:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjitu4gulQ5dVjjYwXJtW-c8OuIzQpLG-RzKFrqCyDWFASLlGJkVOCve4PlZyItQxYr52gvrznNoL_OAEI-SEpN6JZM2kZVsnrWID1uhlapN8_zQYxVLzNHZ3nzPjell2P2RyLt4Xerjwczugm5IM39iebQemsmu01OJZFS8kbouhA-8-0gA4vFkdNV9nw/s16000/20250826-095446%20en%20esta%20ocasión%20no%20ponerle%20el%20control%20de%20versiones.png)
 
 por defecto está PySide6 dejarlo así y Next:
 

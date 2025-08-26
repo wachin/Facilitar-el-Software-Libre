@@ -324,7 +324,7 @@ Para resolverlo e instalar **PySide6** para usarlo en **Qt Creator** lo siguient
 
 ---
 
-### Usar un Entorno Virtual (Recomendado para Desarrollo)
+## Usar un Entorno Virtual (Recomendado para Desarrollo)
 
 Para evitar modificar la instacion Python del sistema y alinearse con la sugerencia del error, crea un entorno virtual:
 
@@ -355,20 +355,39 @@ source venv/bin/activate
 
 cerrar **Qt Creator**
 
-3. **Instalar PySide6 desde código fuente**
+**Nota**: Si lo abre otra vez aparecerá un mensaje que dice que se puede instalar PySide6 desde venv, pero en Debian 12 no está en los repositorios:
 
-sudo apt install clang qt6-base-dev build-essential cmake python3-dev python3-pip libclang-dev
+[https://packages.debian.org/pyside6](https://packages.debian.org/pyside6) 
+
+## 3. Instalar PySide6 desde código fuente
+
+PySide6 requiere Qt 6 y se necesita instalar las bibliotecas de desarrollo de Qt 6, pero ya las instalamos arriba
+
+Antes de compilar desde la fuente, asegúrese de tener las herramientas y bibliotecas necesarias:
+
+```bash
+sudo apt install ninja-build clang build-essential cmake python3-dev python3-pip libclang-dev
+```
+
+### Paso 2: Descargar el código fuente de PySide6
+1. **Clonar el repositorio de PySide6**:
 
 ```bash
 git clone https://code.qt.io/pyside/pyside-setup
 cd pyside-setup
 ```
 
+Ahora revise una versión estable, con la flecha abajo en el teclado vea todas las versiones disponibles. A esta fecha y para Debian 12 sugerido 6.5.2:
 
-
+```bash
 git tag
-git checkout 6.5.2
+```
 
+para seleccionarla:
+
+```bash
+git checkout 6.5.2
+```
 
 
 qtpaths
@@ -408,11 +427,12 @@ There is no GCC as a compiler and is compatible with your version of Qt for Qt C
 
 
 
-
-
 Dios les bendiga
 
 ### Consultas:  
+
+**PySide6**
+[https://github.com/pyside/pyside-setup/blob/dev/README.pyside6.md](https://github.com/pyside/pyside-setup/blob/dev/README.pyside6.md)
 
 **How to install qt version?(for Linux)**  
 [https://forum.qt.io/topic/116658/how-to-install-qt-version-for-linux](https://forum.qt.io/topic/116658/how-to-install-qt-version-for-linux )  

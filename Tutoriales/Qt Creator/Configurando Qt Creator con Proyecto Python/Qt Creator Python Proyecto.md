@@ -283,12 +283,9 @@ y listo el proyecto de Qt Creator se puse encima del repositorio git, y Qt Creat
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxAuotjGs77hLKtaQINrPR4bFS4brNxoYsxK4mUzmZUvB7cT6FkZJA0qZ-LBBbNMX2ImaRVqnckWs0zfvDB-TV3h6J_W0TK_gTAQ-KlcR3Q2uw4-q0OVp01tv66c3X4QcVyTpXJREwlM13hgub1OAOQFt5mAaPew8PDaQXF5DkX6ADFKo505fRwRGro8k/s16000/20250826-100016%20y%20listo%20el%20proyecto%20de%20Qt%20Creator%20se%20puse%20encima%20del%20repositorio%20git.png)
 
-
-si se le da clic en **Install** saldrá un mensaje que dice **This environment is externally managed**
+si le da clic en **Install** saldrá un mensaje que dice **This environment is externally managed**
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhSvPKQBV-GUY1slAtzXvYdSHeyMs_7L3KuSFjDZ50TGwp6KyXBZW7qjP1dYBxF198yzh76zDSAEC7HP_5otMqQgXwKdEzOmAyXUhQ-Ng4VUQqmomc53lUKCvBAv1uursCm0bE2-ulKDLinJzcz9WEo6QkQYe4ZIKLMoxaI9leQYvwz-C5ABb7pcAfBZE/s16000/20250825-002306%20si%20se%20le%20da%20clic%20en%20Instalar%20saldrá%20un%20mensaje%20que%20dice%20This%20environment%20is%20externally%20managed.png)
-
-
 
 
 # Cómo configurar un Proyecto Qt Creator con Python
@@ -321,38 +318,43 @@ hint: See PEP 668 for the detailed specification.
 Installing the PySide6 failed with exit code 1
 ```
 
-The error message indicates that your Debian 12 system has an "externally managed environment" for Python (due to PEP 668), which prevents `pip` from installing packages system-wide without explicit permission. This is a safety feature to avoid breaking the system's Python installation. Based on the suggestions in the error, here’s how to resolve this and install PySide6 for use in Qt Creator:
+El mensaje de error indica que tu sistema Debian 12 tiene un **“entorno gestionado externamente”** para Python (debido a la **PEP 668**), lo cual impide que `pip` instale paquetes a nivel del sistema sin un permiso explícito. Esta es una característica de seguridad para evitar dañar la instalación de Python del sistema.
 
+Para resolverlo e instalar **PySide6** para usarlo en **Qt Creator** lo siguiente:
 
-### Use a Virtual Environment (Recommended for Development)
-To avoid modifying the system Python and align with the error's suggestion, create a virtual environment:
+---
 
-**1.-** **Install `python3-full` (if needed)**:
+### Usar un Entorno Virtual (Recomendado para Desarrollo)
 
+Para evitar modificar la instacion Python del sistema y alinearse con la sugerencia del error, crea un entorno virtual:
+
+**1.-** **Instalar `python3-full`:**
+)
 ```
-sudo apt install python3-full python-pip python3-pylsp
+sudo apt install python3-full
 ```  
 
-**2.-** **Create a Virtual Environment**:
-Navigate to your project directory in the terminal:
+
+**2.-** **Crear un entorno virtual**:
+Vaya al directorio de su proyecto en la terminal:
 
 ```
 cd /path/to/your/project
 ```  
 
-- Create a virtual environment:  
+- Crear un entorno virtual:
 
 ```
 /usr/bin/python3 -m venv venv
 ```
 
-- Activate it:
+- Activarlo:
 
 ```
 source venv/bin/activate
 ```  
 
-3. **Install PySide6 in the Virtual Environment**:  
+3. **Instalar PySide6 en el entorno virtual**:
 
 ```
 pip install PySide6

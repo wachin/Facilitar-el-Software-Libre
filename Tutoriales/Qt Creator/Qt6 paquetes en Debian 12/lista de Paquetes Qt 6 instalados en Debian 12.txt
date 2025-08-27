@@ -1,0 +1,925 @@
+estos son los paquetes instalados:
+
+```bash
+wachin@debian12:~/Dev/pyside6/pyside-setup$ dpkg -l | grep qt6
+ii  assistant-qt6                                6.4.2~rc1-2                         i386         Qt 6 Assistant
+ii  designer-qt6                                 6.4.2~rc1-2                         i386         Qt 6 Designer
+ii  libkf5bluezqt6:i386                          5.103.0-1                           i386         Qt wrapper for bluez
+ii  libqscintilla2-qt6-15:i386                   2.13.3+dfsg-3                       i386         Qt6 port of the Scintilla source code editing widget
+ii  libqscintilla2-qt6-l10n                      2.13.3+dfsg-3                       all          Scintilla source code editing widget for Qt6, translation files
+ii  libqt6charts6:i386                           6.4.2-3                             i386         Qt 6 charts library
+ii  libqt6concurrent6:i386                       6.4.2+dfsg-10                       i386         Qt 6 concurrent module
+ii  libqt6core5compat6:i386                      6.4.2-1                             i386         Qt 6 Qt5Compat library
+ii  libqt6core6:i386                             6.4.2+dfsg-10                       i386         Qt 6 core module
+ii  libqt6dbus6:i386                             6.4.2+dfsg-10                       i386         Qt 6 D-Bus module
+ii  libqt6designer6:i386                         6.4.2~rc1-2                         i386         Qt 6 Designer library
+ii  libqt6designercomponents6:i386               6.4.2~rc1-2                         i386         Qt 6 Designer Components library
+ii  libqt6gui6:i386                              6.4.2+dfsg-10                       i386         Qt 6 GUI module
+ii  libqt6help6:i386                             6.4.2~rc1-2                         i386         Qt 6 Help library
+ii  libqt6jsonrpc6:i386                          6.4.2-2                             i386         Qt 6 JSON RPC library
+ii  libqt6languageserver6:i386                   6.4.2-2                             i386         Qt 6 Language Server library
+ii  libqt6network6:i386                          6.4.2+dfsg-10                       i386         Qt 6 network module
+ii  libqt6opengl6:i386                           6.4.2+dfsg-10                       i386         Qt 6 OpenGL module
+ii  libqt6opengl6-dev:i386                       6.4.2+dfsg-10                       i386         Qt 6 OpenGL library development files
+ii  libqt6openglwidgets6:i386                    6.4.2+dfsg-10                       i386         Qt 6 OpenGL widgets module
+ii  libqt6positioning6:i386                      6.4.2-1                             i386         Qt 6 Positioning library
+ii  libqt6printsupport6:i386                     6.4.2+dfsg-10                       i386         Qt 6 print support module
+ii  libqt6qml6:i386                              6.4.2+dfsg-1                        i386         Qt 6 QML module
+ii  libqt6qmlcompiler6:i386                      6.4.2+dfsg-1                        i386         Qt 6 QML Compiler library
+ii  libqt6qmlmodels6:i386                        6.4.2+dfsg-1                        i386         Qt 6 QML Models library
+ii  libqt6qmlworkerscript6:i386                  6.4.2+dfsg-1                        i386         Qt 6 QML WorkerScript library
+ii  libqt6quick3d6:i386                          6.4.2-1                             i386         Qt 6 Quick 3D library
+ii  libqt6quick3dassetimport6:i386               6.4.2-1                             i386         Qt 6 Quick 3D Asset Import library
+ii  libqt6quick3dassetutils6:i386                6.4.2-1                             i386         Qt 6 Quick 3D Asset Utils library
+ii  libqt6quick3dparticles6:i386                 6.4.2-1                             i386         Qt 6 Quick 3D Particles library
+ii  libqt6quick3druntimerender6:i386             6.4.2-1                             i386         Qt 6 Quick 3D Runtime Renderer library
+ii  libqt6quick3dutils6:i386                     6.4.2-1                             i386         Qt 6 Quick 3D Utils library
+ii  libqt6quick6:i386                            6.4.2+dfsg-1                        i386         Qt 6 Quick library
+ii  libqt6quickcontrols2-6:i386                  6.4.2+dfsg-1                        i386         Qt 6 Quick Controls 2 library
+ii  libqt6quickcontrols2impl6:i386               6.4.2+dfsg-1                        i386         Qt 6 Quick Controls 2 Impl library
+ii  libqt6quicklayouts6:i386                     6.4.2+dfsg-1                        i386         Qt 6 Quick Layouts library
+ii  libqt6quicktemplates2-6:i386                 6.4.2+dfsg-1                        i386         Qt 6 Quick Templates 2 library
+ii  libqt6quicktest6:i386                        6.4.2+dfsg-1                        i386         Qt 6 Quick Test library
+ii  libqt6quicktimeline6:i386                    6.4.2-1                             i386         Qt 6 Quick Timeline library
+ii  libqt6quickwidgets6:i386                     6.4.2+dfsg-1                        i386         Qt 6 Quick Widgets library
+ii  libqt6serialport6:i386                       6.4.2-2                             i386         Qt 6 serial port support library
+ii  libqt6shadertools6:i386                      6.4.2-1                             i386         Qt 6 shader tools module
+ii  libqt6sql6:i386                              6.4.2+dfsg-10                       i386         Qt 6 SQL module
+ii  libqt6sql6-sqlite:i386                       6.4.2+dfsg-10                       i386         Qt 6 SQLite 3 database driver
+ii  libqt6svg6:i386                              6.4.2-2                             i386         Qt 6 SVG library
+ii  libqt6svgwidgets6:i386                       6.4.2-2                             i386         Qt 6 SVG Widgets library
+ii  libqt6test6:i386                             6.4.2+dfsg-10                       i386         Qt 6 test module
+ii  libqt6uitools6:i386                          6.4.2~rc1-2                         i386         Qt 6 UI tools library
+ii  libqt6webchannel6:i386                       6.4.2-1                             i386         Qt 6 WebChannel library
+ii  libqt6webengine6-data                        6.4.2-final+dfsg-1                  all          Qt 6 Web content engine library - data
+ii  libqt6webenginecore6:i386                    6.4.2-final+dfsg-1                  i386         Qt 6 WebEngine Core library
+ii  libqt6webenginecore6-bin                     6.4.2-final+dfsg-1                  i386         Qt 6 WebEngine Core binaries
+ii  libqt6webenginequick6:i386                   6.4.2-final+dfsg-1                  i386         Qt 6 WebEngine Quick library
+ii  libqt6webenginewidgets6:i386                 6.4.2-final+dfsg-1                  i386         Qt 6 WebEngine Widgets library
+ii  libqt6widgets6:i386                          6.4.2+dfsg-10                       i386         Qt 6 widgets module
+ii  libqt6xml6:i386                              6.4.2+dfsg-10                       i386         Qt 6 XML module
+ii  linguist-qt6                                 6.4.2~rc1-2                         i386         Qt 6 Linguist
+ii  python3-pyqt6                                6.4.2-1                             i386         Python bindings for Qt 6
+ii  python3-pyqt6.qsci                           2.13.3+dfsg-3                       i386         Python 3 bindings for QScintilla 2 with Qt 6
+ii  python3-pyqt6.qtcharts                       6.4.0+dfsg-2                        i386         Python 3 bindings for Qt6's Charts module
+ii  python3-pyqt6.qthelp                         6.4.2-1                             i386         Python bindings for Qt 6 Help module
+ii  python3-pyqt6.qtqml                          6.4.2-1                             i386         Python bindings for Qt 6 QML module
+ii  python3-pyqt6.qtserialport                   6.4.2-1                             i386         Python bindings for Qt 6 Serial Port module
+ii  python3-pyqt6.qtsvg                          6.4.2-1                             i386         Python bindings for Qt 6 SVG module
+ii  python3-pyqt6.qtwebchannel                   6.4.2-1                             i386         Python bindings for Qt 6 WebChannel module
+ii  python3-pyqt6.qtwebengine                    6.4.0-1                             i386         Python bindings for the Qt 6 WebEngine framework
+ii  python3-pyqt6.sip                            13.4.1-1                            i386         runtime module for Python extensions using SIP
+ii  qdbus-qt6                                    6.4.2~rc1-2                         i386         Qt 6 D-Bus application
+ii  qml-qt6                                      6.4.2+dfsg-1                        i386         Qt 6 QML viewer
+ii  qmlscene-qt6                                 6.4.2+dfsg-1                        i386         Qt 6 QML scene viewer
+ii  qt6-base-dev:i386                            6.4.2+dfsg-10                       i386         Qt 6 base development files
+ii  qt6-base-dev-tools                           6.4.2+dfsg-10                       i386         Qt 6 base development programs
+ii  qt6-declarative-dev-tools                    6.4.2+dfsg-1                        i386         Qt 6 declarative development programs
+ii  qt6-documentation-tools                      6.4.2~rc1-2                         i386         Qt 6 documentation tools
+ii  qt6-gtk-platformtheme:i386                   6.4.2+dfsg-10                       i386         Qt 6 GTK+ 3 platform theme
+ii  qt6-image-formats-plugins                    6.4.2-1                             i386         Qt 6 Image Formats plugins
+ii  qt6-l10n-tools                               6.4.2~rc1-2                         i386         Qt 6 translation tools
+ii  qt6-qmltooling-plugins:i386                  6.4.2+dfsg-1                        i386         Qt 6 qmltooling plugins
+ii  qt6-qpa-plugins:i386                         6.4.2+dfsg-10                       i386         Qt 6 QPA plugins
+ii  qt6-tools-dev-tools                          6.4.2~rc1-2                         i386         Qt 6 development tools
+ii  qt6-translations-l10n                        6.4.2-1                             all          translations for Qt 6
+wachin@debian12:~/Dev/pyside6/pyside-setup$ 
+```
+
+
+y los paquetes qt6:
+
+```bash
+wachin@debian12:~/Dev/pyside6/pyside-setup$ apt search qt6
+Ordenando... Hecho
+Buscar en todo el texto... Hecho
+adwaita-qt6/oldstable 1.4.2-3 i386
+  Qt 6 port of GNOME’s Adwaita theme
+
+assistant-qt6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Assistant
+
+celestia-qt6/mx 1.7.0~git20250418+fab96cc-1~mx23+1 i386
+  real-time visual space simulation (Qt6 frontend)
+
+designer-qt6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Designer
+
+exit-options/mx 25.7.01 i386
+  Exit Options dialog for MX Fluxbox
+
+fcitx-frontend-qt6/oldstable 1.2.7-2+b7 i386
+  Free Chinese Input Toy of X - Qt6 IM Module frontend
+
+fcitx5-frontend-qt6/oldstable 5.0.16-1+b3 i386
+  Qt6 IM module for fcitx5
+
+gstreamer1.0-qt6/oldstable,oldstable-security 1.22.0-5+deb12u2 i386
+  GStreamer plugin for Qt6
+
+libadwaitaqt6-1/oldstable 1.4.2-3 i386
+  Qt 6 port of GNOME’s Adwaita theme — public library
+
+libadwaitaqt6-dev/oldstable 1.4.2-3 i386
+  Qt 6 port of GNOME’s Adwaita theme — development files
+
+libadwaitaqt6priv1/oldstable 1.4.2-3 i386
+  Qt 6 port of GNOME’s Adwaita theme — private library
+
+libfcitx5-qt6-1/oldstable 5.0.16-1+b3 i386
+  Qt6 library and IM module for fcitx5
+
+libfcitx5-qt6-dev/oldstable 5.0.16-1+b3 i386
+  Qt6 library and IM module for fcitx5 (development files)
+
+libkdsingleapplication-qt6-1.0/mx 1.0.0-2~mx23+1 i386
+  KDAB's helper class for single-instance policy applications
+
+libkdsingleapplication-qt6-dev/mx 1.0.0-2~mx23+1 i386
+  KDAB's helper class for single-instance policy applications
+
+libkf5bluezqt6/oldstable,now 5.103.0-1 i386 [instalado, automático]
+  Qt wrapper for bluez
+
+libkf5modemmanagerqt6/oldstable 5.103.0-1 i386
+  Qt wrapper library for ModemManager
+
+libkf5networkmanagerqt6/oldstable 5.103.0-1 i386
+  Qt wrapper for NetworkManager - library
+
+libpappsomspp-widget0-qt6/oldstable 0.9.6-1 i386
+  C++ library to handle mass spectrometry data (GUI runtime)
+
+libpappsomspp0-qt6/oldstable 0.9.6-1 i386
+  C++ library to handle mass spectrometry data (non-GUI runtime)
+
+libpoppler-qt6-3/oldstable 22.12.0-2+deb12u1 i386
+  PDF rendering library (Qt 6 based shared library)
+
+libpoppler-qt6-dev/oldstable 22.12.0-2+deb12u1 i386
+  PDF rendering library -- development files (Qt 6 interface)
+
+libqcoro6core0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - Core
+
+libqcoro6dbus0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - DBus
+
+libqcoro6network0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - Network
+
+libqcoro6qml0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - QML
+
+libqcoro6quick0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - QtQuick
+
+libqcoro6websockets0/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - WebSockets
+
+libqcustomplot-dev/oldstable 2.1.0+dfsg1-3.1 i386
+  Qt C++ widget for plotting - header
+
+libqcustomplot2.1-qt6/oldstable 2.1.0+dfsg1-3.1 i386
+  Qt C++ widget for plotting
+
+libqscintilla2-qt6-15/oldstable,now 2.13.3+dfsg-3 i386 [instalado, automático]
+  Qt6 port of the Scintilla source code editing widget
+
+libqscintilla2-qt6-designer/oldstable 2.13.3+dfsg-3 i386
+  Qt6 Designer plugin for QScintilla 2
+
+libqscintilla2-qt6-dev/oldstable 2.13.3+dfsg-3 i386
+  Scintilla source code editing widget for Qt6, development files
+
+libqscintilla2-qt6-l10n/oldstable,now 2.13.3+dfsg-3 all [instalado, automático]
+  Scintilla source code editing widget for Qt6, translation files
+
+libqt63danimation6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Animation library
+
+libqt63dcore6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Core library
+
+libqt63dextras6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D extras library
+
+libqt63dinput6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Input library
+
+libqt63dlogic6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Logic library
+
+libqt63dquick6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick library
+
+libqt63dquickanimation6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick Animation library
+
+libqt63dquickextras6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick extras library
+
+libqt63dquickinput6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick Input library
+
+libqt63dquickrender6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick Renderer library
+
+libqt63dquickscene2d6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Quick Scene 2D library
+
+libqt63drender6/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Renderer library
+
+libqt6bluetooth6/oldstable 6.4.2-1 i386
+  Qt 6 Connectivity Bluetooth library
+
+libqt6bluetooth6-bin/oldstable 6.4.2-1 i386
+  Qt 6 Connectivity Bluetooth module helper binaries
+
+libqt6bodymovin6/oldstable 6.4.2-1 i386
+  Qt 6 Lottie Bodymovin library
+
+libqt6charts6/oldstable,now 6.4.2-3 i386 [instalado, automático]
+  Qt 6 charts library
+
+libqt6chartsqml6/oldstable 6.4.2-3 i386
+  Qt 6 charts QML library
+
+libqt6concurrent6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 concurrent module
+
+libqt6core5compat6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Qt5Compat library
+
+libqt6core6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 core module
+
+libqt6datavisualization6/oldstable 6.4.2-3 i386
+  Qt 6 Data Visualization library
+
+libqt6datavisualizationqml6/oldstable 6.4.2-3 i386
+  Qt 6 Data Visualization QML library
+
+libqt6dbus6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 D-Bus module
+
+libqt6designer6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Designer library
+
+libqt6designercomponents6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Designer Components library
+
+libqt6gui6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 GUI module
+
+libqt6help6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Help library
+
+libqt6httpserver6/oldstable 6.4.2-1 i386
+  Qt 6 HTTP Server library
+
+libqt6hunspellinputmethod6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Hunspell Input Method helper library
+
+libqt6jsonrpc6/oldstable,now 6.4.2-2 i386 [instalado, automático]
+  Qt 6 JSON RPC library
+
+libqt6keychain1/oldstable 0.13.2-5 i386
+  Qt API to store passwords (QT6 version)
+
+libqt6labsanimation6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs Animation library
+
+libqt6labsfolderlistmodel6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs FolderListModel library
+
+libqt6labsqmlmodels6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs QML Models library
+
+libqt6labssettings6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs Settings library
+
+libqt6labssharedimage6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs Shared Image library
+
+libqt6labswavefrontmesh6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Labs WavefrontMesh library
+
+libqt6languageserver6/oldstable,now 6.4.2-2 i386 [instalado, automático]
+  Qt 6 Language Server library
+
+libqt6multimedia6/oldstable 6.4.2-5 i386
+  Qt 6 Multimedia library
+
+libqt6multimediaquick6/oldstable 6.4.2-5 i386
+  Qt 6 Multimedia Quick library
+
+libqt6multimediawidgets6/oldstable 6.4.2-5 i386
+  Qt 6 Multimedia Widgets library
+
+libqt6network6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 network module
+
+libqt6networkauth6/oldstable 6.4.2-1 i386
+  Qt 6 QtNetworkAuth library
+
+libqt6nfc6/oldstable 6.4.2-1 i386
+  Qt 6 Connectivity NFC library
+
+libqt6opengl6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 OpenGL module
+
+libqt6opengl6-dev/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 OpenGL library development files
+
+libqt6openglwidgets6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 OpenGL widgets module
+
+libqt6pdf6/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 PDF library
+
+libqt6pdfquick6/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 PDF Quick library
+
+libqt6pdfwidgets6/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 PDF Widgets library
+
+libqt6positioning6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Positioning library
+
+libqt6positioning6-plugins/oldstable 6.4.2-1 i386
+  Qt 6 Positioning module - position plugins
+
+libqt6positioningquick6/oldstable 6.4.2-1 i386
+  Qt 6 Positioning library - Qt Quick library
+
+libqt6printsupport6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 print support module
+
+libqt6qml6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 QML module
+
+libqt6qmlcompiler6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 QML Compiler library
+
+libqt6qmlcore6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 QML Core library
+
+libqt6qmllocalstorage6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 QML Local Storage library
+
+libqt6qmlmodels6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 QML Models library
+
+libqt6qmlworkerscript6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 QML WorkerScript library
+
+libqt6qmlxmllistmodel6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 QML XmlListModel library
+
+libqt6quick3d6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D library
+
+libqt6quick3dassetimport6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D Asset Import library
+
+libqt6quick3dassetutils6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D Asset Utils library
+
+libqt6quick3deffects6/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D Effects library
+
+libqt6quick3dglslparser6/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D GLS Parser library
+
+libqt6quick3dhelpers6/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D Helpers library
+
+libqt6quick3diblbaker6/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D IblBaker library
+
+libqt6quick3dparticleeffects6/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D Particle Effects library
+
+libqt6quick3dparticles6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D Particles library
+
+libqt6quick3druntimerender6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D Runtime Renderer library
+
+libqt6quick3dutils6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick 3D Utils library
+
+libqt6quick6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick library
+
+libqt6quickcontrols2-6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Controls 2 library
+
+libqt6quickcontrols2impl6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Controls 2 Impl library
+
+libqt6quickdialogs2-6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Quick Dialogs 2 library
+
+libqt6quickdialogs2quickimpl6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Quick Dialogs 2 Quick Impl library
+
+libqt6quickdialogs2utils6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Quick Dialogs 2 Utils library
+
+libqt6quicklayouts6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Layouts library
+
+libqt6quickparticles6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Quick particles library
+
+libqt6quickshapes6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Quick Shapes library
+
+libqt6quicktemplates2-6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Templates 2 library
+
+libqt6quicktest6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Test library
+
+libqt6quicktimeline6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Quick Timeline library
+
+libqt6quickwidgets6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 Quick Widgets library
+
+libqt6remoteobjects6/oldstable 6.4.2-1 i386
+  Qt 6 Remote Objects library
+
+libqt6remoteobjects6-bin/oldstable 6.4.2-1 i386
+  Qt 6 Remote Objects - the Replica Compiler (repc)
+
+libqt6remoteobjectsqml6/oldstable 6.4.2-1 i386
+  Qt 6 Remote Objects QML library
+
+libqt6scxml6/oldstable 6.4.2-2 i386
+  Qt 6 SCXML library
+
+libqt6scxml6-bin/oldstable 6.4.2-2 i386
+  Qt 6 SCXML helper binaries
+
+libqt6scxmlqml6/oldstable 6.4.2-2 i386
+  Qt 6 SCXML QML library
+
+libqt6sensors6/oldstable 6.4.2-1 i386
+  Qt 6 Sensors library
+
+libqt6sensorsquick6/oldstable 6.4.2-1 i386
+  Qt 6 Sensors Quick library
+
+libqt6serialbus6/oldstable 6.4.2-1 i386
+  Qt 6 Serial Bus library
+
+libqt6serialbus6-bin/oldstable 6.4.2-1 i386
+  Qt 6 Serial Bus helper binaries
+
+libqt6serialport6/oldstable,now 6.4.2-2 i386 [instalado, automático]
+  Qt 6 serial port support library
+
+libqt6shadertools6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 shader tools module
+
+libqt6spatialaudio6/oldstable 6.4.2-5 i386
+  Qt 6 Spatial Audio library
+
+libqt6sql6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 SQL module
+
+libqt6sql6-ibase/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 Firebird database driver
+
+libqt6sql6-mysql/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 MySQL database driver
+
+libqt6sql6-odbc/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 ODBC database driver
+
+libqt6sql6-psql/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 PostgreSQL database driver
+
+libqt6sql6-sqlite/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 SQLite 3 database driver
+
+libqt6statemachine6/oldstable 6.4.2-2 i386
+  Qt 6 State Machine library
+
+libqt6statemachineqml6/oldstable 6.4.2-2 i386
+  Qt 6 State Machine QML library
+
+libqt6svg6/oldstable,now 6.4.2-2 i386 [instalado, automático]
+  Qt 6 SVG library
+
+libqt6svgwidgets6/oldstable,now 6.4.2-2 i386 [instalado, automático]
+  Qt 6 SVG Widgets library
+
+libqt6test6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 test module
+
+libqt6texttospeech6/oldstable 6.4.2-3 i386
+  Qt 6 Speech library
+
+libqt6uitools6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 UI tools library
+
+libqt6virtualkeyboard6/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Virtual Keyboard library
+
+libqt6waylandclient6/oldstable 6.4.2-1 i386
+  Qt 6 Wayland Client library
+
+libqt6waylandcompositor6/oldstable 6.4.2-1 i386
+  Qt 6 Wayland Compositor library
+
+libqt6waylandeglclienthwintegration6/oldstable 6.4.2-1 i386
+  Qt 6 Wayland WaylandEglClientHwIntegration library
+
+libqt6waylandeglcompositorhwintegration6/oldstable 6.4.2-1 i386
+  Qt 6 Wayland WaylandEglCompositorHwIntegration library
+
+libqt6webchannel6/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 WebChannel library
+
+libqt6webengine6-data/oldstable,now 6.4.2-final+dfsg-1 all [instalado, automático]
+  Qt 6 Web content engine library - data
+
+libqt6webenginecore6/oldstable,now 6.4.2-final+dfsg-1 i386 [instalado, automático]
+  Qt 6 WebEngine Core library
+
+libqt6webenginecore6-bin/oldstable,now 6.4.2-final+dfsg-1 i386 [instalado, automático]
+  Qt 6 WebEngine Core binaries
+
+libqt6webenginequick6/oldstable,now 6.4.2-final+dfsg-1 i386 [instalado, automático]
+  Qt 6 WebEngine Quick library
+
+libqt6webenginequickdelegatesqml6/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 WebEngine Quick Delegates QML library
+
+libqt6webenginewidgets6/oldstable,now 6.4.2-final+dfsg-1 i386 [instalado, automático]
+  Qt 6 WebEngine Widgets library
+
+libqt6websockets6/oldstable 6.4.2-1 i386
+  Qt 6 WebSockets library
+
+libqt6webview6/oldstable 6.4.2-1 i386
+  Qt 6 WebView library
+
+libqt6webviewquick6/oldstable 6.4.2-1 i386
+  Qt 6 WebView Quick library
+
+libqt6widgets6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 widgets module
+
+libqt6wlshellintegration6/oldstable 6.4.2-1 i386
+  Qt 6 Wayland ShellIntegration library
+
+libqt6xml6/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 XML module
+
+libquazip1-qt6-1/oldstable 1.4-1 i386
+  Qt/C++ wrapper over minizip - Version 1 (Qt6)
+
+libquazip1-qt6-dev/oldstable 1.4-1 i386
+  Qt/C++ wrapper over minizip - Version 1 (Qt6) - development files
+
+libquazip1-qt6-doc/oldstable 1.4-1 all
+  Qt/C++ wrapper over minizip - Version 1 (Qt6) - documentation
+
+linguist-qt6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 Linguist
+
+pyqt6-charts-dev/oldstable 6.4.0+dfsg-2 all
+  Development files for PyQtCharts
+
+pyqt6-dev/oldstable 6.4.2-1 all
+  development files for PyQt6
+
+pyqt6-dev-tools/oldstable 6.4.2-1 all
+  development tools for PyQt6
+
+pyqt6-examples/oldstable 6.4.2-1 all
+  Examples for PyQt6
+
+pyqt6-webengine-dev/oldstable 6.4.0-1 all
+  Development files for PyQt6-WebEngine
+
+pyqt6.qsci-dev/oldstable 2.13.3+dfsg-3 all
+  Development files for Python Qscintilla2 (Qt6)
+
+python-anyqt-doc/oldstable 0.1.0-3 all
+  PyQt/PySide compatibility layer for Qt4/Qt5/Qt6.
+
+python-superqt-doc/oldstable 0.4.0-3 all
+  'missing' widgets and components for PyQt/PySide - documentation
+
+python3-anyqt/oldstable 0.1.0-3 all
+  PyQt/PySide compatibility layer for Qt4/Qt5/Qt6.
+
+python3-dbus.mainloop.pyqt6/oldstable 6.4.2-1 i386
+  D-Bus Qt main loop support for Python
+
+python3-pyqt6/oldstable,now 6.4.2-1 i386 [instalado]
+  Python bindings for Qt 6
+
+python3-pyqt6.qsci/oldstable,now 2.13.3+dfsg-3 i386 [instalado, automático]
+  Python 3 bindings for QScintilla 2 with Qt 6
+
+python3-pyqt6.qtbluetooth/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Bluetooth module
+
+python3-pyqt6.qtcharts/oldstable,now 6.4.0+dfsg-2 i386 [instalado, automático]
+  Python 3 bindings for Qt6's Charts module
+
+python3-pyqt6.qtdesigner/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Designer module
+
+python3-pyqt6.qthelp/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Python bindings for Qt 6 Help module
+
+python3-pyqt6.qtmultimedia/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Multimedia module
+
+python3-pyqt6.qtnfc/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 NFC module
+
+python3-pyqt6.qtpdf/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 PDF module
+
+python3-pyqt6.qtpositioning/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Positioning module
+
+python3-pyqt6.qtqml/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Python bindings for Qt 6 QML module
+
+python3-pyqt6.qtquick/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Quick module
+
+python3-pyqt6.qtquick3d/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Quick 3D module
+
+python3-pyqt6.qtremoteobjects/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Remote Objects module
+
+python3-pyqt6.qtsensors/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 Sensors module
+
+python3-pyqt6.qtserialport/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Python bindings for Qt 6 Serial Port module
+
+python3-pyqt6.qtsvg/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Python bindings for Qt 6 SVG module
+
+python3-pyqt6.qttexttospeech/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 TextToSpeech module
+
+python3-pyqt6.qtwebchannel/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Python bindings for Qt 6 WebChannel module
+
+python3-pyqt6.qtwebengine/oldstable,now 6.4.0-1 i386 [instalado, automático]
+  Python bindings for the Qt 6 WebEngine framework
+
+python3-pyqt6.qtwebsockets/oldstable 6.4.2-1 i386
+  Python bindings for Qt 6 WebSockets module
+
+python3-pyqt6.sip/oldstable,now 13.4.1-1 i386 [instalado, automático]
+  runtime module for Python extensions using SIP
+
+python3-qtpy/oldstable,now 2.3.0-1 all [instalado, automático]
+  Abstraction layer for PySide2/PySide6/PyQt5/PyQt6 (Python 3)
+
+python3-sphinx-qt-documentation/oldstable 0.4.1-1 all
+  Plugin for proper resolve intersphinx references for Qt elements
+
+python3-superqt/oldstable 0.4.0-3 all
+  'missing' widgets and components for PyQt/PySide
+
+qbs-doc/oldstable 1.24.1+dfsg-2 all
+  Qbs documentation
+
+qcoro-qt6-dev/oldstable 0.8.0-1 i386
+  C++20 coroutines for Qt6 - development
+
+qdbus-qt6/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 D-Bus application
+
+qml-qt6/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 QML viewer
+
+qmlscene-qt6/oldstable,now 6.4.2+dfsg-1 i386 [instalado]
+  Qt 6 QML scene viewer
+
+qt6-3d-assimpsceneimport-plugin/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D GL Assimp Scene Import plugin
+
+qt6-3d-defaultgeometryloader-plugin/oldstable 6.4.2+dfsg-2 i386
+  Qt 3D default geometry loader plugin
+
+qt6-3d-dev/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D - development files
+
+qt6-3d-gltfsceneio-plugin/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D GL Transmission Format Scene IO plugin
+
+qt6-3d-scene2d-plugin/oldstable 6.4.2+dfsg-2 i386
+  Qt 6 3D Scene 2D plugin
+
+qt6-5compat-dev/oldstable 6.4.2-1 i386
+  Qt 6 Qt5Compat - development files
+
+qt6-base-dev/oldstable,now 6.4.2+dfsg-10 i386 [instalado]
+  Qt 6 base development files
+
+qt6-base-dev-tools/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 base development programs
+
+qt6-base-private-dev/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 base private development files
+
+qt6-charts-dev/oldstable 6.4.2-3 i386
+  Qt 6 charts - development files
+
+qt6-connectivity-dev/oldstable 6.4.2-1 i386
+  Qt 6 Connectivity - development files
+
+qt6-datavisualization-dev/oldstable 6.4.2-3 i386
+  Qt 6 Data Visualization - development files
+
+qt6-declarative-dev/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 declarative development files
+
+qt6-declarative-dev-tools/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 declarative development programs
+
+qt6-declarative-private-dev/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 declarative private development files
+
+qt6-documentation-tools/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 documentation tools
+
+qt6-gtk-platformtheme/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 GTK+ 3 platform theme
+
+qt6-httpserver-dev/oldstable 6.4.2-1 i386
+  Qt 6 HTTP Server - development files
+
+qt6-image-formats-plugin-pdf/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 PDF image format plugin
+
+qt6-image-formats-plugins/oldstable,now 6.4.2-1 i386 [instalado, automático]
+  Qt 6 Image Formats plugins
+
+qt6-l10n-tools/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 translation tools
+
+qt6-languageserver-dev/oldstable 6.4.2-2 i386
+  Qt 6 Language Server development files
+
+qt6-languageserver-private-dev/oldstable 6.4.2-2 i386
+  Qt 6 Language Server private development files
+
+qt6-lottie-dev/oldstable 6.4.2-1 i386
+  Qt 6 Lottie - development files
+
+qt6-multimedia-dev/oldstable 6.4.2-5 i386
+  Qt 6 Multimedia - development files
+
+qt6-networkauth-dev/oldstable 6.4.2-1 i386
+  Qt 6 QtNetworkAuth - development files
+
+qt6-pdf-dev/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 PDF library - development files
+
+qt6-positioning-dev/oldstable 6.4.2-1 i386
+  Qt 6 Positioning - development files
+
+qt6-qmllint-plugins/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 qmllint plugins
+
+qt6-qmltooling-plugins/oldstable,now 6.4.2+dfsg-1 i386 [instalado, automático]
+  Qt 6 qmltooling plugins
+
+qt6-qmltooling-quick3dprofiler-plugin/oldstable 6.4.2-1 i386
+  Qt 6 qmltooling Quick3D profiler plugin
+
+qt6-qpa-plugins/oldstable,now 6.4.2+dfsg-10 i386 [instalado, automático]
+  Qt 6 QPA plugins
+
+qt6-quick3d-assetimporters-plugin/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D Assimp Import plugin
+
+qt6-quick3d-dev/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D - development files
+
+qt6-quick3d-dev-tools/oldstable 6.4.2-1 i386
+  Qt 6 Quick 3D development programs
+
+qt6-quicktimeline-dev/oldstable 6.4.2-1 i386
+  Qt 6 Quick Timeline - development files
+
+qt6-remoteobjects-dev/oldstable 6.4.2-1 i386
+  Qt 6 Remote Objects - development files
+
+qt6-scxml-dev/oldstable 6.4.2-2 i386
+  Qt 6 SCXML - development files
+
+qt6-sensors-dev/oldstable 6.4.2-1 i386
+  Qt 6 Sensors - development files
+
+qt6-serialbus-dev/oldstable 6.4.2-1 i386
+  Qt 6 Serial Bus development files
+
+qt6-serialport-dev/oldstable 6.4.2-2 i386
+  Qt 6 serial port development files
+
+qt6-shader-baker/oldstable 6.4.2-1 i386
+  Qt 6 shader baker
+
+qt6-shadertools-dev/oldstable 6.4.2-1 i386
+  Qt 6 shader tools module - development files
+
+qt6-speech-dev/oldstable 6.4.2-3 i386
+  Qt 6 Speech library - development files
+
+qt6-speech-flite-plugin/oldstable 6.4.2-3 i386
+  Qt 6 Speech library - Flite plugin
+
+qt6-speech-speechd-plugin/oldstable 6.4.2-3 i386
+  Qt 6 Speech library - speechd plugin
+
+qt6-style-kvantum/mx 1.0.10-0.1~mx23+1 i386
+  Qt6 component of the Kvantum theme engine
+
+qt6-svg-dev/oldstable 6.4.2-2 i386
+  Qt 6 SVG - development files
+
+qt6-tools-dev/oldstable 6.4.2~rc1-2 i386
+  Qt 6 Tools - development files
+
+qt6-tools-dev-tools/oldstable,now 6.4.2~rc1-2 i386 [instalado, automático]
+  Qt 6 development tools
+
+qt6-tools-private-dev/oldstable 6.4.2~rc1-2 i386
+  Qt 6 Tools - private development files
+
+qt6-translations-l10n/oldstable,now 6.4.2-1 all [instalado]
+  translations for Qt 6
+
+qt6-virtualkeyboard-dev/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Virtual Keyboard - development files
+
+qt6-virtualkeyboard-plugin/oldstable 6.4.2+dfsg-1 i386
+  Qt 6 Virtual Keyboard
+
+qt6-wayland/oldstable 6.4.2-1 i386
+  Qt 6 Wayland platform plugin
+
+qt6-wayland-dev/oldstable 6.4.2-1 i386
+  Qt 6 Wayland - development files
+
+qt6-wayland-dev-tools/oldstable 6.4.2-1 i386
+  Qt 6 Wayland developer tools
+
+qt6-webchannel-dev/oldstable 6.4.2-1 i386
+  Qt 6 WebChannel library - development files
+
+qt6-webengine-dev/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 WebEngine library - development files
+
+qt6-webengine-dev-tools/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 WebEngine development programs
+
+qt6-webengine-private-dev/oldstable 6.4.2-final+dfsg-1 i386
+  Qt 6 WebEngine library - private development files
+
+qt6-websockets-dev/oldstable 6.4.2-1 i386
+  Qt 6 WebSockets library - development files
+
+qt6-websockets-private-dev/oldstable 6.4.2-1 i386
+  Qt 6 WebSockets library - private development files
+
+qt6-webview-dev/oldstable 6.4.2-1 i386
+  Qt 6 WebView - development files
+
+qt6-webview-plugins/oldstable 6.4.2-1 i386
+  Qt 6 WebView plugins
+
+qt6-xdgdesktopportal-platformtheme/oldstable 6.4.2+dfsg-10 i386
+  Qt 6 XDG Desktop Portal platform theme
+
+qt6ct/oldstable 0.7-3+b1 i386
+  Qt6 Configuration Tool
+
+qt6gtk2/mx 0.4-1~mx23 i386
+  GTK 2 integration plugins for Qt6
+
+qtkeychain-qt6-dev/oldstable 0.13.2-5 i386
+  Development files for qtkeychain (QT6 version)
+```
+
+

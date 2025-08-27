@@ -1,0 +1,18 @@
+
+Cómo instalar WPS Office en Ubuntu 17.04
+
+RESUMEN:
+Se necesita la librería de Ubuntu 16.04
+
+Descarguela de aquí, sea 32 o 64 bits dependiendo de su PC o laptop:
+
+https://packages.ubuntu.com/xenial/libpng12-0
+
+instale el deb con gdebi
+
+
+
+dependencies - Cannot install wps office - Ask Ubuntu
+https://askubuntu.com/questions/871876/cannot-install-wps-office
+
+ 

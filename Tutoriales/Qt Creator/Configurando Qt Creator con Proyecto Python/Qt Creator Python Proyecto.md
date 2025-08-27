@@ -369,6 +369,14 @@ Antes de compilar desde la fuente, asegúrese de tener las herramientas y biblio
 sudo apt install ninja-build clang build-essential cmake python3-dev python3-pip libclang-dev
 ```
 
+### Step 1: Install Missing Core Development Packages
+To ensure a complete Qt 6 development environment, install the missing core packages:
+```
+sudo apt install qt6-declarative-dev qt6-tools-dev qt6-3d-dev qt6-charts-dev qt6-multimedia-dev qt6-svg-dev libqt6quickcontrols2-6
+```
+
+
+
 make --version
 
 ninja --version
@@ -376,6 +384,10 @@ ninja --version
 g++ --version
 
 qmake --version
+
+/usr/lib/qt6/bin/qtpaths6 --version
+
+
 
 ### Paso 2: Descargar el código fuente de PySide6
 1. **Clonar el repositorio de PySide6**:

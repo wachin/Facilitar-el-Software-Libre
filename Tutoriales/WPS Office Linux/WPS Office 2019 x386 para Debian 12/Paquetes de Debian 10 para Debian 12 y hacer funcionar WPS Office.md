@@ -17,12 +17,12 @@ Gracias por el listado 🙌. Revisando tu árbol de instalación veo que están 
 
 ---
 
-libc6
+
 
 En Debian 12 están
 
-
 libstdc++6      v 12.2.0-14+deb12u1
+biblioteca estándar de C++ de GNU v3
 
 libfreetype6           v 2.12.1+dfsg-5+deb12u4
 motor de tipografías de FreeType 2, archivos de biblioteca compartida

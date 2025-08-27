@@ -23,6 +23,7 @@ En Debian 12 están
 
 libstdc++6      v 12.2.0-14+deb12u1
 biblioteca estándar de C++ de GNU v3
+packages.debian.org/libstdc++6 
 
 libfreetype6           v 2.12.1+dfsg-5+deb12u4
 motor de tipografías de FreeType 2, archivos de biblioteca compartida
@@ -35,3 +36,18 @@ biblioteca de «Tag Image File Format» (TIFF)
 
 libjpeg62-turbo           v 1:2.1.5-2
 biblioteca de tiempo de ejecución libjpeg-turbo JPEG
+
+## En Debian 11 están:
+
+libstdc++6      v 10.2.1-6: 
+https://packages.debian.org/bullseye/libstdc++6
+
+https://packages.debian.org/bullseye/libfreetype6
+
+1.6.37-3:
+https://packages.debian.org/bullseye/libpng16-16
+
+libtiff5     4.2.0-1+deb11u6 
+https://packages.debian.org/bullseye/libtiff5
+
+https://packages.debian.org/bullseye/

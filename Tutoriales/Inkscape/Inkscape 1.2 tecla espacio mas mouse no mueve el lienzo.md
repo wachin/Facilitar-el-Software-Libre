@@ -2,7 +2,10 @@ Inkscape 1.2 tecla espacio mas mouse no mueve el lienzo
 
 inkscape 1.2 Space+mouse drag pans canvas instead of switching to/from Selector not working on KDE
 
+The space for dragging the canvas does not work
 
+
+http://www-mdp.eng.cam.ac.uk/web/CD/deskapps/inkscape/keyshortcuts.html
 
 Inkscape keyboard and mouse reference 
 Version 1.2.x

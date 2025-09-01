@@ -45,15 +45,17 @@ Esto instala el programa **Qt5 Configuration Tool**.
 
 ## 3. Configurar qt5ct utilidad de configuración de Qt5 en fluxbox, openbox
 
-Si usas ejemplo FluxBox o Openbox en un sisema operativo ejemplo MX Linux 23 XFCE esto es necesario para las aplicaciones que han sido escritas en Qt (KDE) como por ejemplo Dolphin, Kate, etc puedan elegir los iconos y temas de ellas
+Si usas ejemplo FluxBox o Openbox u otro gestor de ventanas minimalista X11 en un sisema operativo ejemplo MX Linux 23 XFCE esto es necesario para las aplicaciones que han sido escritas en Qt (KDE) como por ejemplo Dolphin, Kate, etc puedan elegir los iconos y temas de ellas
 
 Ponga en una terminal:
 
- echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> ~/.profile
+```bash
+echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> ~/.profile
+```
 
-Con esto hemos añadido esa última línea al archivo oculto .profile
+con esto hemos añadido esa última línea al archivo oculto .profile
 
-**Nota: **Esto funciona al cerrar sesión y volver a entrar.
+**Nota: **Esto funciona al cerrar sesión y volver a entrar en la sesión del WM x11 minimalista
 
 ---
 
@@ -115,12 +117,14 @@ En una laptop antigua con 2 GB de RAM, usar **Motif** hará que el sistema se si
 
 ---
 
-📌 **Ejercicio para los estudiantes:**
+📌 **Ejercicio para los experimentar:**
 
 1. Instala `qt5ct` en tu Debian.
 2. Cambia el estilo a **Motif** y abre un programa Qt (ej. VLC).
-3. Luego cámbialo a **Oxygen** y compara el uso de memoria en **htop** o con `free -h`.
-4. Explica en clase cuál fue más rápido y por qué.
+3. Luego cámbialo a **Oxygen** y compara el uso de memoria en **htop** o rapidamente con el comando  `free -h` (con los mismos programas abiertos)
+
+
+
 
 
 

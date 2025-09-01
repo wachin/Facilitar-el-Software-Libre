@@ -1,18 +1,4 @@
-
-
-desinstalar:
-
-libreoffice-gtk3
-
-que por cierto en Debian 12 está instalado el paquete libreoffice-qt5 que necesitamos, ahora poner:
-
-
-
-SAL_USE_VCLPLUGIN=qt5 libreoffice
-
-
-
-# 🌱 Tutorial: Cómo hacer que tu sistema vaya más rápido cambiando el estilo de las aplicaciones Qt con **qt5ct**
+# Cómo hacer que tu sistema Linux vaya más rápido cambiando el estilo de las aplicaciones Qt con **qt5ct**
 
 ## 🎯 Objetivo
 

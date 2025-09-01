@@ -17,12 +17,13 @@ Aprenderás a configurar el **estilo visual** de los programas basados en **Qt5*
 
 ---
 
-## 2. Instalar la herramienta
+## 2. Instalar la herramienta Qt5 y dependencias
 
-En Debian 12 ya existe el paquete. Abre la terminal y escribe:
+En Debian 12 ya existe el paquete qt5ct y además las demás paquetes necesarios. Abre la terminal y escribe:
 
 ```bash
-sudo apt install qt5ct
+sudo apt install qt5ct kde-style-qtcurve-qt5 qt5-style-plugin-cleanlooks
+qt5-style-plugin-motif qt5-style-plugin-plastique qt5-style-plugins libkf5style5 qt5-styles-ukui qtcurve
 ```
 
 Esto instala el programa **Qt5 Configuration Tool**.
@@ -48,44 +49,22 @@ con esto hemos añadido esa última línea al archivo oculto .profile
 ## 4. Abrir la herramienta
 
 Después de reiniciar, abre el menú de aplicaciones y busca:
-👉 **Qt5 Settings** o **Qt5 Configuration Tool (qt5ct)**
+👉 **Ajustes Qt5** o **qt5ct**
 
 Se abre una ventana donde puedes elegir el estilo visual.
 
 ---
 
-## 5. Probar estilos
+## 5. Probar estilos ¿Qué estilo elegir?
 
-En la pestaña **"Appearance"** verás una lista de estilos como:
+En la pestaña **"Appearance"** da clic en **"Estilo"** y verás una lista de **Estilos**:
 
-* **Motif** (muy rápido y ligero)
-* **CDE** (básico y ligero)
-* **Plastique / Cleanlooks** (clásicos y rápidos)
-* **Fusion** (balance entre simple y moderno)
-* **Breeze / Oxygen / Kvantum** (bonitos pero pesados)
-
-Selecciona uno, aplica los cambios y abre un programa como **VLC o qBittorrent** para ver la diferencia.
-
----
-
-## 6. ¿Qué estilo elegir?
-
-* Si tu PC es **vieja o lenta** → usa **Motif, CDE, Plastique o Cleanlooks**.
-* Si tu PC es **moderna** → puedes usar **Fusion** o **Breeze** sin problemas.
-* Si quieres **lo más bonito posible** y no te importa gastar más recursos → usa **Oxygen o Kvantum**.
-
-💡 Ejemplo práctico:
-En una laptop antigua con 2 GB de RAM, usar **Motif** hará que el sistema se sienta mucho más rápido que con **Oxygen**.
-
----
-
-## 7. Comparación de consumo
-
-| Estilo         | Recursos usados    | Velocidad              | Apariencia             |
+|     Estilo     |  Recursos usados   |       Velocidad        |       Apariencia       |
 | -------------- | ------------------ | ---------------------- | ---------------------- |
 | **Motif**      | Muy bajos          | 🚀 Rápido              | Muy simple             |
 | **CDE**        | Muy bajos          | 🚀 Rápido              | Muy simple             |
 | **Plastique**  | Bajos              | 🚀 Rápido              | Clásico Qt             |
+| **GTK2**       | Bajos              | 🚀 Rápido              | Clásico Qt             |
 | **Cleanlooks** | Bajos              | 🚀 Rápido              | Un poco más moderno    |
 | **Windows**    | Bajos              | 🚀 Rápido              | Simple, estilo Windows |
 | **Fusion**     | Medios             | ⚡ Normal               | Moderno y limpio       |
@@ -93,17 +72,22 @@ En una laptop antigua con 2 GB de RAM, usar **Motif** hará que el sistema se si
 | **Breeze**     | Más altos          | 🐢 Lento en PCs viejas | Moderno KDE            |
 | **Oxygen**     | Altos              | 🐢 Lento en PCs viejas | Muy bonito             |
 | **Kvantum**    | Altos (según tema) | 🐢 Lento en PCs viejas | Estilo avanzado        |
+| **UKUI**       | Altos (según tema) | 🐢 Lento en PCs viejas | Estilo avanzado        |
+
+* Si tu PC es **vieja o lenta** → usa **Motif, CDE, Plastique, GTK2, Cleanlooks o Windows,**.
+* Si tu PC es **moderna** → puedes usar **Fusion**, **QtCurve** o **Breeze** sin problemas.
+* Si quieres **lo más bonito posible** y no te importa gastar más recursos → usa **Oxygen, UKUI o Kvantum**.
 
 ---
 
-## 8. Conclusión
+## 6. Conclusión
 
 * Cambiar el **estilo Qt** es como elegir entre un coche de lujo con muchos extras (bonito pero pesado) o un coche sencillo (más rápido y práctico).
 * En computadoras con **pocos recursos**, elegir un estilo ligero como **Motif** o **Plastique** puede mejorar bastante la rapidez del sistema.
 
 ---
 
-📌 **Ejercicio para los experimentar:**
+📌 **RESUMEN:**
 
 1. Instala `qt5ct` en tu Debian.
 2. Cambia el estilo a **Motif** y abre un programa Qt (ej. VLC).

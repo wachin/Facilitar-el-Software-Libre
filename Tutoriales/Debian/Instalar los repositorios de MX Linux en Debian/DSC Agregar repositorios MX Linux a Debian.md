@@ -160,6 +160,10 @@ Este programa trae una Colección de Software que está organizado en **pestaña
 | **Impresión**                | HP Printing                    | HPLIP y complementos para impresoras HP                                                             |
 
 
+La siguiete es una captura de pantalla que la tomé en Debian 12 Netinstall CD LXQT de 64 bit (en 64 bit hay más programas):
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglynQnmeJCacrJnc0xF7l5Wi-vTWOgsU77-eS7crwrCRltfLqjHrYN9WBeGKcEuohtkQsAMBw22qG9cn-WuvYkEm93tqNJahKsbzWe3aNMUnrDPGVXR0mpZHdYxidXKWWyPWoRZhq9GrDhrHKFxzGzwWlc3UKPqaHhuPDPUtmdBbyhUQjCBSv0KTV72wY/s16000/01%20Instalador%20de%20paquetes%20de%20MX%20Linux.png)
+
 y además poder instalar las últimas versiones de algunos programas, desde la pestaña de los repositorios de prueba o los backpots de Debian
 
 

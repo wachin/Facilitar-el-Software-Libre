@@ -59,7 +59,6 @@ la siguiente captura de pantalla fue tomada el 5 sep 2025:
 Voy a descargar el Kernel 5.15, porque probé un Kernel 5.10 que había compilado y no funcionaba el cursor de la pantalla
 
 
-
 ### Este tutorial es para compilar un Kernl 5.10, pero dejo una explicación para descargar un Kernel algo más antiguo para compilarlo (opcional)
 
 1. Porque puede que tengan un ordenador antiguo y quiera que rinda mejor, ejemplo tengo un ordenador que fue comprado en el año 2008 y quiero usar MX Linux 23 a esta fecha que hago este tutorial Junio del 2024, entonces necesito un Kernel lo más antiguo que se pueda instalar en este MX Linux 23 porque debe saber usted que un Kernel lo que tiene de importante es que funcionen el hardware de su ordenador y que sea seguro (esté actualizado). **Nota:** Los Kernel tienen una fecha en que ya no se les dará más soporte, pero viejo no quiere decir que no sirva sino que no estará actualizado para alguna vulnerabilidad que se pueda encontrar en el futuro.
@@ -78,9 +77,9 @@ Primero es necesario saber si existe el parche pues sino de nada servirá descar
 
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/)
 
-debo saber si hay uno 5.10:
+buscar uno 5.15:
 
-![parche 5.10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZbkbEmt58NDFXe49AfvCxjZCLD2ad8jJ4fjcpVJeNoswS7RAiXWLa0HgD7ePN6wQVqddEhtx5Bpol9bR3nKygGFTFS_V7ztidleMFe9nJF1b9cceUZlpDpzwINhTqNeP-Ixl8GTZsFPq8zKn3kh6QmgIazx3DXJL3VpRVmFLitygrKU_WWV2ewkQr1mI/s625/20240624-221437%20parche%205.10.png)
+![20250905-154919%20eligiendo%20el%20kernel%205.15.png](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRH9dBQJ1yYLA8wwAcc2Yeh1HMY5pn4uyFKLuaaCok1bNxnyDYGSwqX6PhgDs_8eo-Uz72FKYUlqNysNqgGi_rb3gvH3pk8u4wJer9_33rtblJvuOR-pOoSKBC5_qiy6MLb5_vbaLUgtBjyixaGQ_UOouAWS555rnKU3mubzsyt0-L8cLcISsQ6VHOWt4/s16000/20250905-154919%20eligiendo%20el%20kernel%205.15.png)
 
 Si usted es curioso y desea saber cómo obtuve este enlace pues es desde:
 
@@ -112,23 +111,31 @@ y allí clic a rt (Real Time):
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNd5cnNqFx0k944x2oChMmT48N6ga7xBa9OUQW9v_pBzcrjpHnxWUCpcmFTm7XnELVFcnefoSwWT_qUVs8ZQxt_o9iB1Y2M-KzOP8BecLIORNfAtrS_ksViKCHnDG7utdRoa_0KKC3ZRDh5XmL5hUB-iZ2sckW1DH-DQSMYqat69pVtVOsJ9JkN_jVEMc/s559/20240503-050057%20clic%20a%20rt.png)
 
-y clic a la versión 5.10 y veo que si hay uno y entro allí:
+y clic a la versión 5.15:
 
-[https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRH9dBQJ1yYLA8wwAcc2Yeh1HMY5pn4uyFKLuaaCok1bNxnyDYGSwqX6PhgDs_8eo-Uz72FKYUlqNysNqgGi_rb3gvH3pk8u4wJer9_33rtblJvuOR-pOoSKBC5_qiy6MLb5_vbaLUgtBjyixaGQ_UOouAWS555rnKU3mubzsyt0-L8cLcISsQ6VHOWt4/s16000/20250905-154919%20eligiendo%20el%20kernel%205.15.png)
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv6YfSnolX-zvbVqcci00co9x5gxJl5c2s-h3P076d7A0Ygh0qjr6KjJXJWsTN0PqEFSLF31ogDA0ICUDqZB1D1CIfRzqeSnYRQy_hE8Uazr_9jScxeaqBLxHLUo89ztCIlTp5I0VbqHf5Xn0mfKW20IFiArO_EUIqzCbmf0GJM-1iz1IYs5p0rE3YIZU/s620/20240624-221924%20Si%20hay%20parche%20Real%20Time%20para%20Kernel%205.10.png)
+ y veo que si hay uno y entro allí:
+ 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCI0kcOSJ12e-fjiFTSxkH-syCFuFMAPDMTW8GioTP59rksBPj-phfMe7cpprJ43M_h_75bYc6gvrJ87PmuvhHk30LcnYEhmcYzvDEBzc7kEmknf9k6wr9sTnz7m9VG3Pily5eg4OzPHgY246-ObxNtM-EAlR7Qat3CV3m_2gKw2G3XBUQIgRX45LsjHo/s16000/20250905-155301%20patch%20RT%20para%20el%20Kernel%205.15.png)
+
+[https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/)
 
 **Nota:** En el repositorio de parches RT para Linux, el archivo `patch` contiene **todos los cambios en un único parche**, ideal para aplicar rápidamente y compilar el kernel con soporte _real-time_. En cambio, `patches` es un paquete con **varios parches individuales**, útil si se quiere revisar o aplicar cambios de forma selectiva. Para una compilación estándar, lo más práctico es usar el `patch` único.
 
 y copio el enlace del parche:
 
-[https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.218-rt110.patch.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.218-rt110.patch.xz)
+[https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.189-rt87.patch.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.189-rt87.patch.xz)
+
+y lo descargo en una carpeta preparada para tal propósito de compilar el Kernel,  ejemplo:
+
+`/home/wachin/Dev/Kernel-RT/Kernel-5.15/`
 
 **Nota:** Este enlace con el paso del tiempo es muy posible que ya no esté porque o lo habrán actualizado o habrá salido del soporte.
 
 Entonces como sé que existe el parche Real Time, entonces ahora si busco el Kernel correspondiente, pues es obvio que si hay un parche para ese Kernel entonces habrá el Kernel (por eso no hago la busqueda de primero el Kernel y luego del parque, porque es posible que el parche no haya para alguna versión de Kernel entonces por gusto perdería el tiempo)
 
-### Buscando el Kernel 5.10
+### Buscando el Kernel 5.15
 
 Como ya tengo el enlace del Kernel, entro en:
 
@@ -138,58 +145,60 @@ busco allí uno 5x
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqYm8kAECYMPoxFSImkJ2YfRPCBd2oyWhkpjCIkXkxZNeb90hV3z3iTDMS1KhHqRlhO4nsPo702mS9yHhd3lSaqnH3lJ1amkNcjNmcnntggeHj9kkaJame4GRmvVBqYKBBeiiHPK3oNICSpyS7uzqPxgaVgkh6PMvk-lfDbkufz2GLk7ZR87_Dc0X1XXw/s640/20240624-222141%20Kernel%205x.png)
 
-y voy a buscar el Kernel con las siguientes palabras: `linux-5.10.` con `Crtl + F` buscaré el más actual:
+[https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/](https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/)
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji7SIjUxwE9vfsXo1CpMvg7OsbgEUtlXebSrqegD8UJihgB_lf6DEVshLqYG1rmfGiKVCvBQ8hyvvT9sM3LM-U0SZQZZGwv6SizCGmUKGcXC8qCOeqxzkNtgR-bQG_xsRcUCqrgQ6ioZXjXoMpXGXp7ZHnlr9rWNOwurwa2CVcPFQLQYk9b4cxJQXmpV4/s724/20240624-222406%20el%20m%C3%A1s%20actual%20es%20ese.png)
+y voy a buscar el Kernel con las siguientes palabras: `linux-5.15.189` con `Crtl + F` y lo encuentro:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3Om1T7iX2jX5fVOt-_Y8Q6WrWYTg4FkaksU-0qh6SDR1OwDJESmjTjJ1pPl9lNmQLnElMZXXxpO24vsZEhMQLqd9rGIugA-ZMvdxQBXrVLujvBuluLqlCH0_3MoI2rKEq7_yUP6MOwjA_pYEBJRyGyZdydTioi6a89gTMeepGF0f-BoY_t-T_YSFfPz0/s16000/20250905-164427%20linux-5.15.189.png)
 
 y copio aquí el nombre y la descripción:
 
-`linux-5.10.220.tar.xz` 21-Jun-2024 13:03 115M
+`linux-5.15.189.tar.xz` 17-Jul-2025 16:43    121M
 
-**Nota:** la versión 220 es la más actualizada con la fecha 24 de junio 2024 entonces esa la utilizaré, copio el enlace:
+y lo descargo en la carpeta preparada para tal propósito de compilar el Kernel
 
-[https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.220.tar.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.220.tar.xz)
+**Nota:** la versión 5.15.189 encaja con el parche a esta fecha 5 de Septiembre 2015
+
+además copio el enlace
+
+[https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.15.189.tar.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.15.189.tar.xz)
 
 ## Descarga de ambos desde la terminal (Opcional)
 
-Sea como sea que descarguen los archivos recomiendo que los tengan dentro de una carpeta, para este caso con algun nombre que la identifique, en mi caso yo lo hago en la ruta que he creado: `/home/wachin/Dev/kernel5.10/`, allí dentro pongo en la terminal:
+Como tenemos los dos enlaces, los podemos descargar ambos también desde la terminal así:
 
 ```bash
-wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.10/patch-5.10.218-rt110.patch.xz
-wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.220.tar.xz
+wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.189-rt87.patch.xz
+wget -c https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.15.189.tar.xz
 ```
-para descargarlos:
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz39qlv43eEhW-GBcVWqMYQWLh6LvElIfFoq-0MPofyfN5zU83RBkdtRI-uKSPfZraTzp86CzTc2flrTOJ9ScwBU2cTFMCqq-7F1Lzal1NkgLzp7gyyofZx87zjRqv5jumy43GyGpxPXn8eDxyFbMws8iHYd0oE9dnPWQQJCEERGRTOi26p6MY-uM0GK4/s904/20240624-232621%20donde%20tengo%20el%20kernel%205.10.png)
 
 ## Extracción y parchado del Kernel
 
-Se puede descomprimir el Kernel con clic derecho y extraer aquí:
-
-![extraer aquí](https://blogger.googleusercontent.com/img/a/AVvXsEhUOAjXGwh1fBXAUNzo9W_RX-hDbGnKR__nKh6vBP7buaA_qko53u4jWGWdy85_dTkRJS4ZIfTy2JBpg-Nip420DYR8TX7H-NFoacRxlmPMGDXgmu1fK-sxuz3aKes4qxdxS0Voc54Z5Mganov5MhkwT9muajX65AKoyiRw_Yk-FzrhVaRB5iilbjQuZyI)
+Se puede descomprimir el Kernel con clic derecho y extraer aquí
 
 o también desde la terminal con:
 
 ```bash
-tar xJvf linux-5.10.220.tar.xz
+tar xJvf linux-5.15.189.tar.xz
 ```
 
-como sea que usted descomprima el archivo debe que darle así:
+como sea que usted descomprima el archivo. A mi me queda la carpeta así:
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgVR0YljqUxQ7AJsBWBnNmD9N-CiQYrieDsWeZzSj_fRhv6Z1BvbRSPl6sGGisLqXOMAeCu4tJ9D3zCs16lN-kCwpauiDOQEg5dor46AV1nj6-2biu34rTZBCWcrSziz2FxrY_hCPcWwOsQLv5wl52c02jZ740p-Y9-qUaaIaCrTPVsiv-VL8HV7owz2Sg)
+linux-5.15.189
 
-si desea puede entrar desde una terminal con ejemplo:
+entrar desde una terminal:
 
 ```bash
-cd linux-5.10.220
+cd linux-5.15.189
 ```
 
 o tambén se puede con clic derecho y abrir terminal aquí
 
-si lo descomprimió desde la terminal y con clic derecho abrir terminal aquí,  o como sea que lo haya hecho, hay que poner lo siguiente:
+una ves que esté en la terminal allí ubicado hay que poner lo siguiente:
 
 ```bash
-xzcat ../patch-5.10.218-rt110.patch.xz | patch -p1
+xzcat ../patch-5.15.189-rt87.patch.xz | patch -p1
 ```
 
 Este comando  para otro kernel lo debe de editar, debe poner el nombre correcto del parche

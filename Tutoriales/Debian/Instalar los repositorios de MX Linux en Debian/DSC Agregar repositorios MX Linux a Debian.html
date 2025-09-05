@@ -882,7 +882,7 @@ para añadir MX repo a sources.list.d</h2>
 <p>Poniendo en la terminal:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit /etc/apt/sources.list.d/mx.list</span></code></pre></div>
-<p>se abrirá gedit y copiar el siguiente texto:</p>
+<p>se abrirá gedit y copiar el siguiente texto para Debian 12:</p>
 <pre><code>#MX Community Main and Test Repos
 deb http://mxrepo.com/mx/repo/ bookworm main non-free
 
@@ -964,7 +964,7 @@ Debian 12</figcaption>
 uno por uno, pero también lo podemos cerrar Synaptic e instalarlos de un
 solo poniendo en la terminal:</p>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mx-repo-list mx-repo-manager mx-packageinstaller deb-installer</span></code></pre></div>
 <p>y luego buscarlo y abrirlo:</p>
 <figure>
 <img
@@ -974,6 +974,8 @@ alt="MX Instalar paquetes" />
 </figure>
 <p><strong>Nota</strong>: La imagen de arriba es en xfe4-appfinder en MX
 Linux 21 usando el administrador de ventanas Fluxbox.</p>
+<p>y cuando de clic derecho en un paquete deb desde el administrador de
+archivos podría instalarlo con <strong>deb-installer</strong></p>
 <h2
 id="cómo-instalar-actualizado-a-yt-dlp-desde-los-paquetes-de-prueba-test">Cómo
 instalar actualizado a yt-dlp desde los paquetes de Prueba (test)</h2>

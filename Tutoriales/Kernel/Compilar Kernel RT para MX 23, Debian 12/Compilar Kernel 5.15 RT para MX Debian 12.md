@@ -127,11 +127,13 @@ y copio el enlace del parche:
 
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.189-rt87.patch.xz](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.189-rt87.patch.xz)
 
+**Nota:** Este enlace con el paso del tiempo es muy posible que ya no esté porque o lo habrán actualizado o habrá salido del soporte.
+
 y lo descargo en una carpeta preparada para tal propósito de compilar el Kernel,  ejemplo:
 
 `/home/wachin/Dev/Kernel-RT/Kernel-5.15/`
 
-**Nota:** Este enlace con el paso del tiempo es muy posible que ya no esté porque o lo habrán actualizado o habrá salido del soporte.
+**Nota**: El Kernel debe tenerlo dentro de una carpeta que no tenga espacios, y esa carpeta entra que tampoco tenga espacios, de lo contrario le saldrá este error: `Makefile:195: *** source directory cannot contain spaces or colons.  Alto.`
 
 Entonces como sé que existe el parche Real Time, entonces ahora si busco el Kernel correspondiente, pues es obvio que si hay un parche para ese Kernel entonces habrá el Kernel (por eso no hago la busqueda de primero el Kernel y luego del parque, porque es posible que el parche no haya para alguna versión de Kernel entonces por gusto perdería el tiempo)
 
@@ -203,15 +205,15 @@ xzcat ../patch-5.15.189-rt87.patch.xz | patch -p1
 
 Este comando  para otro kernel lo debe de editar, debe poner el nombre correcto del parche
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgpUxRQrD5skGCHgF7W_jU3RcfS2WVlnTyuZqDvTt_spKRKVrgKQZjw8pyOnmNsRAvRlfLGkLtyAwMUIXDWpIvKt3keijUzdxPN5lGVWECpcA2dC_kEnA0pXPqOGMDfOBup5PGrVumuanqB0ozuAAaeyZl8aT06Ma9mwaeuwwsT9kXN5ByItAVPtc6qek4)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzwtV_k5bhG45by3qzGGPCuCa9XRrBzOyXuv_40ry2A_8IPyPw5aWcnXd_QcZ8-zjmAUSDyMQTfQVHwJcNgJpwPR44XclS3wxqdOXDiH3VKMWYQl7_SOOgsF5svXgq2oEVcmJ9TkzPzH7NHKwkFIrCzN3qtiOS4VFpQ4t3BRiJUupbDgZtbgEL7Y3rQx4/s16000/20250905-165845%20aplicando%20el%20parque%20al%20kernel.png)
 
 De Enter y se parchará
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEg3stmD9WGqlX3nsYUlIjI7c8swF7pmbYwWTunAn0X5QP5HxI7qRPcCAKQ27xha9MIzNGEkcqKAkAoxLHoYvtqc64PgiLwTUjruBWscPe3gd2CL13zpeIkHbs1jh5hudhc1uA0xN5IRbuE7768ce6LnbGE4USE7U6cXby-DPv-csQb5TfqkD3bL__dqmUI)
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiE0KUa-_uy4E4M6UNpJuk2gS3P5U31AGOG2wr8xuFNgfxtkmqIi9PeYjf4256Z2ygHDtyYkJ1l9fWZPvIeuaFSELQ4yu1uOX0g2Gn4Q26P1gRQG63dE9fk9h4hT7DHn1TMQY1WXWuAt-73eeo1ebjAwG0_uBiI2bpavWiEsDoh9SNipzmZheb2Y735yk/s16000/20250905-170013%20parchado%20correcto.png)
 
 ## Añadir el nombre del Mantenedor o Responsable a su Sistema para que se compile con ese nombre (Opcional)
 
-Esto es totalmente opcional, no es necesario para compilar el Kernel, para hacer esto ponga en una terminal lo siguiente (teniendo instalado Gedit u otro editor pero debe cambiar el nombre en la terminal):
+Esto es totalmente opcional, no es necesario para compilar el Kernel, para este paso yo uso gedit (instálelo si no lo tiene) porque trabaja bien con acciones desde superusuario:
 
 ```bash
 gedit ~/.bashrc
@@ -395,7 +397,9 @@ El consejo que les doy es que la tecla "Espacio" la usen con mucho cuidado, no l
 
 Verificar las configuraciones Real Time según el tutorial:
 
-Debe ver si están las siguientes marcadas para convertirlo en un Kernel Real Time, **las siguientes son todas las instrucciones en texto, más abajo están las mismas a las cuales les he puesto unas capturas de pantalla para que vean con imágenes**:
+Debe ver si están las siguientes marcadas para convertirlo en un Kernel Real Time, **las siguientes son todas las instrucciones en texto, más abajo están las mismas a las cuales les he puesto unas capturas de pantalla para que vean con imágenes**
+
+Deberá quedar habilitado . . . 
 
 ```
 # Habilitado CCONFIG_NO_HZ_IDLE
@@ -655,7 +659,7 @@ este tipo de error se debe a que en el archivo de configuración .config hay val
 Es posible Compilar el Kernel y ponerle una etiqueta como descripción en los deb generados. En el siguiente ejemplo en LOCALVERSION= está la etiqueta debian12:
 
 ```bash
-make deb-pkg LOCALVERSION=-debian12 KDEB_PKGVERSION=$(make kernelversion)-1
+make deb-pkg LOCALVERSION=-debian12-amd64 KDEB_PKGVERSION=$(make kernelversion)-1
 ```
 
 si se pone eso en la terminal con esa etiqueta será compilado el Kernel y eso aparecerá en el deb

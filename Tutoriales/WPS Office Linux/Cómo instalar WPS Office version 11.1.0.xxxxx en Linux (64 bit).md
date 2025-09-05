@@ -102,6 +102,8 @@ El siguiente enlace es un espejo que he subido a mi cuenta de **MEGA** en caso d
 
 🔗 [https://mega.nz/folder/s6AQHSzC#Kd8qbA-Z7yeTa2P5qcVG3w](https://mega.nz/folder/s6AQHSzC#Kd8qbA-Z7yeTa2P5qcVG3w)  
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDKfHew24_8HOgmD_m1t_KdMeBEU8xQ4Ro2fIVx2B7WbZPCQjUvA-2RkCgpVTUuiRU9y4f6mD_wnF2D86FUc6BvSKm2yTSyWMckzBYX89ueZICkAGgxk9tOJwH5HDxToZr0f9q92O80tlhZy_ony5s_DdzJufCnLfYuiPFL6nwv_ORY39ugDf7s_9qaXs/s16000/20250905-144112%20dscargado%20WPS%20desde%20MEGA.png)
+
 ---
 
 ## Descarga desde Telegram  
@@ -364,6 +366,10 @@ En algunas distribuciones de Linux, como:
 WPS Office puede fallar al guardar documentos en formato **PDF**. Para solucionarlo, sigue estos pasos:  
 
 ### 🔹 Paso 1: Verificar si tienes instalado el paquete `libtiff6`  
+
+Cuando exportes un PDF debe aparecer una ventana pequeña de confirmación:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlbSHmyO744Lq0OvLuSNNQeqm4J-cdB__hjrZTcdXOQzH4ON030ao1J2GCOb_FpJFAsnmMPeMDxFSus3Ty8_7XWzqro9aXoTUsNBidfL2MfZjEe0HdUCzTdTRGBZikroUzXa2jXqt9eZ3ZjYUIKQL-J5IyM1UJTjr6o6sRvXCHT2zgXKsjDtymw9xwKv0/s16000/20250905-133035%20Exportación%20correcta%20de%20PDF%20en%20WPS%20Office.png)
 
 Ejecuta el siguiente comando en la terminal:  
 

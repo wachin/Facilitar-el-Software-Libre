@@ -1,4 +1,4 @@
-# Cómo compilar el kernel Linux Real Time 5.10 para MX Linux 23 (crear los deb)
+# Cómo compilar kernel Linux Real Time 5.15 para Debian para Laptop Lenovo Gamming (crear los deb)
 
 Este Kernel "Real Time" yo lo uso para hacer música, vea la siguiente entrada:
 
@@ -29,7 +29,7 @@ sudo apt upgrade
 Instalar:
 
 ```bash
-sudo apt-get install gcc build-essential libncurses5-dev fakeroot wget xz-utils \
+sudo apt-get install gcc dkms build-essential libncurses5-dev fakeroot wget xz-utils \
     flex bison libssl-dev autoconf automake cmake dwarves openssl libelf-dev \
     libudev-dev libpci-dev libiberty-dev bc python3-sphinx lzop lzma \
     lzma-dev libmpc-dev u-boot-tools gettext rsync libncurses-dev \
@@ -43,11 +43,24 @@ Necesito descargar un Kernel ni tan antiguo ni tan nuevo
 **Longterm release kernels**  
 [https://www.kernel.org/category/releases.html](https://www.kernel.org/category/releases.html)
 
-![Kernel 5.10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh52VrC3U4xu-WY1OtMRGvc0cTn_72z4Liu868S0_WPWefwcpD1WUw4nGrpVGhrt5WmLFz_l72S5bq-DLDugSJybYrwhN5QdZVQa6Z7e9PjRPcHqrdM0_F98QolmAP_ecxFtEg0E-1YLwytH9sVk9917BW7-Ciyg_JAotgQD-z3X4twf9_74Yt-2FtxmXA/s920/20240624-220435%20Kernel%205.10.png)
+la siguiente captura de pantalla fue tomada el 5 sep 2025:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfM0MPJMlzK9n4apxAniRGlGcscJhnimW5hMkAJpedwKjPcM6V9Gb2OvkewYwZnAnsK-JZsHYATYpU3z2ILT1SBEKa8_-UnhqMHzj8U9T8tNu9PS_rUhVDqoQYW880WHwBu2NVgZRrRcM34-itkwu7BgdXunZft4orsyxSiA4vyFtDgZV_r-EuCb16fJc/s16000/20250905-152816%20kernel.org%20longterm.png)
 
 **Nota:** Estos pasos usted los puede modificar para compilar otra versión de Kernel.
 
-### Por qué descargar un Kernel algo antiguo para compilarlo?
+
+### Buscando un Kernel para Lenovo IdeaPad 320-15ABR
+
+* La **Lenovo IdeaPad 320-15ABR** Según un sitio de reparación (iFixit), este modelo fue **lanzado en 2017** [Lenovo_Ideapad_320-15ABR](https://www.ifixit.com/Device/Lenovo_Ideapad_320-15ABR)
+* Una reseña técnica de PC Verge menciona que el procesador APU de séptima generación en este equipo fue **lanzado en 2017** [Lenovo IdeaPad 320-15ABR Review | PC VERGE - VARGE](https://www.pcvarge.com/lenovo-ideapad-320-15abr-review/)
+* Además, en la ficha técnica oficial (PSREF) de Lenovo aparece publicada en **agosto de 2018**, lo que confirma que el modelo ya estaba disponible al menos desde el año anterior [ PDF ideapad 320 (15'') AMD Platform Specifications - 15ABR / 15AST](https://psref.lenovo.com/syspool/Sys/PDF/Lenovo_Laptops/ideapad_320_15_AMD/ideapad_320_15_AMD_Spec.PDF)
+
+Voy a descargar el Kernel 5.15, porque probé un Kernel 5.10 que había compilado y no funcionaba el cursor de la pantalla
+
+
+
+### Este tutorial es para compilar un Kernl 5.10, pero dejo una explicación para descargar un Kernel algo más antiguo para compilarlo (opcional)
 
 1. Porque puede que tengan un ordenador antiguo y quiera que rinda mejor, ejemplo tengo un ordenador que fue comprado en el año 2008 y quiero usar MX Linux 23 a esta fecha que hago este tutorial Junio del 2024, entonces necesito un Kernel lo más antiguo que se pueda instalar en este MX Linux 23 porque debe saber usted que un Kernel lo que tiene de importante es que funcionen el hardware de su ordenador y que sea seguro (esté actualizado). **Nota:** Los Kernel tienen una fecha en que ya no se les dará más soporte, pero viejo no quiere decir que no sirva sino que no estará actualizado para alguna vulnerabilidad que se pueda encontrar en el futuro.
 

@@ -1,6 +1,3 @@
-Claro, aquí tienes el contenido del HTML traducido a **Markdown**. He mantenido la estructura, enlaces, títulos, listas y bloques de código tal como aparecen en el original, pero en formato Markdown:
-
----
 
 # wps-office-all-mui-win-language
 
@@ -10,7 +7,7 @@ En 2023, la empresa china de software Kingsoft Office, desarrolladora de WPS Off
 
 Este tutorial está disponible en inglés aquí:
 
-**How to Install WPS Office version 11.1.0.xxxxx on Linux Linux (64 bit)**  
+**How to Install WPS Office version 11.1.0.xxxxx on Linux Linux (64 bit)**
 🔗 [https://facilitarelsoftwarelibre.blogspot.com/2023/11/wps-office-2019-version-11.1.0.11704-actualizacion-2023.html](https://facilitarelsoftwarelibre.blogspot.com/2023/11/wps-office-2019-version-11.1.0.11704-actualizacion-2023.html)
 
 ---
@@ -23,16 +20,16 @@ Este es un tutorial para instalar la versión 11.1.0.xxxxx en Linux, solo en sis
 
 Probado en:
 
-**Abreviaturas:**  
-MX = MX Linux  
-Deb = Debian  
-Mint 21 = Linux Mint 21 Vanessa  
-✔ = Funciona correctamente  
+**Abreviaturas:**
+MX = MX Linux
+Deb = Debian
+Mint 21 = Linux Mint 21 Vanessa
+✔ = Funciona correctamente
 ❌ = No funciona
 
 | Versión WPS       | Lanzamiento | MX 23 (Deb 12) | MX 21 (Deb 11) | Mint 21 | Ubuntu |
 |-------------------|-------------|----------------|----------------|---------|--------|
-| 11.1.0.10702      | ?           | ❌             |                |         |        |
+| 11.1.0.10702      | ?           | ❌              |                |         |        |
 | 11.1.0.11704      | ©2023       | ✔              |                | ✔       |        |
 | 11.1.0.11711      | ©2023       | ✔              | ✔              | ✔       |        |
 | 11.1.0.11723      | ©2024       | ✔              |                |         |        |
@@ -46,13 +43,17 @@ WPS Office 11.1.0.xxxxx incluye cuatro programas:
 - **Spreadsheet** (Hojas de cálculo)
 - **PDF**
 
-**Nota**: Desde la versión 11.1.0.11711, WPS Office tiene todos los programas en la misma ventana.
+**Nota**: Desde la versión 11.1.0.11711, WPS Office tiene todos los programas en la misma ventana:
+
+![Ventana unificada de WPS Office](https://blogger.googleusercontent.com/img/a/AVvXsEjo3vVAROfTnM-ClTGBoMvnb0wOujLt0kA3qHt1YXZbFha03FFboDEk9BxC9cArC3K9Yn77dHBfyofycP_rkXrJ2LA7PnoEZRMQtWm8vh5xm5EY6Kmf0JUhnxK4gEsfmIqK69a7T-_0R8lV_4iGFuDojblY3SVfFndqM0vnpjZCssfzsj-d8IT3o0jz7uA=s16000)
 
 ---
 
 ### La versión china de WPS Office tiene un botón de selección de idioma
 
-Debes descargar la versión china 11.1.0.xxxxx, ya que tiene habilitado el botón para cambiar el idioma.
+Debes descargar la versión china 11.1.0.xxxxx, ya que tiene habilitado el botón para cambiar el idioma:
+
+![Botón de cambio de idioma en WPS Office](https://blogger.googleusercontent.com/img/a/AVvXsEg9WdAqL3KshuGLRrxwv9WoT43le-yG3SJTYPidZ5S4L9D_jT5Y5vrPj3dkCuZG3mjdqGVKcSChsz6l65eb2X_UpVneGaXVgClYJcK-eno-4Nz-Kb1IRuBiDIIlaBc6G0l3pUCE0npqLwrXPnoEUW5yagBRox1-s0BbqjrfnNeYMpzq1N3cxy3q5y6QqSg=s16000)
 
 ---
 
@@ -79,9 +80,19 @@ Algunas versiones de WPS están disponibles en la siguiente web espejo, pero no 
 
 🔗 [https://mirrors.163.com/ubuntukylin/pool/partner/](https://mirrors.163.com/ubuntukylin/pool/partner/)
 
+![Web espejo de WPS Office](https://blogger.googleusercontent.com/img/a/AVvXsEicse4O8-dwacuCgXSfe2x7fFz7IS05mWF9t6WHGMTagicZRYvVkngE_jgCeEEAsPbhggCofWzZebYUFLIb7dwKSyL1ieMhnVz7Wz_W-KX3wlzSoh9Z1itStRvQt9VdPZFL7hB5lQaenJ6gyvMd3STZWIhK3w5Eea62bKyLrCNuhbjEz11khU_sesmpP8s=s16000)
+
 Además, si deseas usar la versión 11.1.0.11704 de WPS Office Linux, que tiene cada programa por separado, como se muestra en la siguiente imagen:
 
+![WPS Office con programas separados](https://blogger.googleusercontent.com/img/a/AVvXsEi7cOTHU3138xeWFVIkJAhvs2pp8UWNPslU1vYXCJNBUmHiqEIeDxUyy9tkdTp-rv4aeT5nCTJnzvsTPgOywhJ9-B_DqiVy1YlWR-qgmzV9CCg1FkQevZRImWVZxKoKH41con-51-hOQ7IMwAZqYgEXcwq9WAEjb23S1TEcWt2JUoPseeENgnXQBP9b4Uo=s16000)
+
+Aquí tienes otra captura:
+
+![Otra captura de WPS Office](https://blogger.googleusercontent.com/img/a/AVvXsEh_T2Bv12unn26ZFL0FdMbHrQxD8jdH4lxVpNs4eQnGUZGi3ohEp7jI39ORyIuvHa9J9J3xc3at4MbU0fm0m0tcTrZTiy1TgcaaaE8RYRu82SoYUfVqeqDfA0SvPG98i61Y0RdWTDVWcnQF2MIYNCIveKAldg6yGwJ3e1sm_cq6xxlHjMJKgfD-gJuNaj8=s16000)
+
 Puedes descargarla aquí:
+
+![Enlace de descarga](https://blogger.googleusercontent.com/img/a/AVvXsEgIx0LH4pl-AaDw4WtQivdd6AYcoEO3COP5fQl3HjstMwZ8Fvqm1hZmYmTePssvQ7j3H-nSOemv5Pn5Qj6R4bbgqXDJR0_gHaPnhnkfnCActRvBqbnWw3S1pigp9wp43UXQp8DOUgwjdl3nto53kR8hX3KFzYceZ-vNVqPAcn2KtnZhb75oaakWYKUrXtY=s16000)
 
 ---
 
@@ -89,14 +100,16 @@ Puedes descargarla aquí:
 
 El siguiente enlace es un espejo que he subido a mi cuenta de **MEGA** en caso de que los otros enlaces fallen. Contiene varias versiones:
 
-En **MEGA**  
+En **MEGA**
 🔗 [https://mega.nz/folder/m59AkL5B#v3UAMSsJLc56grdBuOdaSQ](https://mega.nz/folder/m59AkL5B#v3UAMSsJLc56grdBuOdaSQ)
+
+![Descarga desde MEGA](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDKfHew24_8HOgmD_m1t_KdMeBEU8xQ4Ro2fIVx2B7WbZPCQjUvA-2RkCgpVTUuiRU9y4f6mD_wnF2D86FUc6BvSKm2yTSyWMckzBYX89ueZICkAGgxk9tOJwH5HDxToZr0f9q92O80tlhZy_ony5s_DdzJufCnLfYuiPFL6nwv_ORY39ugDf7s_9qaXs/s16000/20250905-144112%20dscargado%20WPS%20desde%20MEGA.png)
 
 ---
 
 ### Descarga desde Telegram
 
-En **Telegram**:  
+En **Telegram**:
 🔗 [https://t.me/c/1343202595/14](https://t.me/c/1343202595/14)
 
 ---
@@ -107,14 +120,16 @@ Ese mensaje es una advertencia general que aparece al descargar archivos ejecuta
 
 La advertencia **no** significa necesariamente que el archivo sea peligroso, sino que debes tener precaución y asegurarte de que proviene de una fuente confiable. Es importante verificar la autenticidad y el origen del archivo antes de instalarlo, especialmente si **no lo descargas desde los repositorios oficiales de tu distribución Linux**.
 
-También puedes analizarlo en **VirusTotal** para comprobar su seguridad:  
+También puedes analizarlo en **VirusTotal** para comprobar su seguridad:
 🔍 [https://virustotal.com](https://virustotal.com)
 
 ---
 
 ### 1.) Instalar un archivo .deb con clic derecho
 
-Cuando haces clic derecho sobre el archivo `.deb`, debería aparecer una opción en el explorador de archivos para instalarlo, ejemplo en MX Linux 23 KDE.
+Cuando haces clic derecho sobre el archivo `.deb`, debería aparecer una opción en el explorador de archivos para instalarlo, ejemplo en MX Linux 23 KDE:
+
+![Instalar con clic derecho](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzErvUM5LOYi7nCYkEoyOtS6xrxOo3rZDSdtOMjTzl3A_It2kPJfQyAMgHRMBk0MmXCdPme-89dmntOvZbMkksjUgG8dgVxOonVaohh89DTm8l1z2n4G11m5em5hVHBkUhMYhEhhdui7xqJQFTfoJ9ixtTI7xP0BmYULruVbAPi9FRqdV5UoJd3Y87wJ4/s16000/20250220-103254%20clic%20derecho%20al%20deb%20y%20abrir%20con%20Discover.png)
 
 En **MX Linux, Debian y Ubuntu**, etc debe haber algún programa que gestione la instalación de paquetes deb. Si en tu distribución no aparece esta opción, busca en internet cómo instalar archivos `.deb` manualmente.
 
@@ -124,13 +139,13 @@ En **MX Linux, Debian y Ubuntu**, etc debe haber algún programa que gestione la
 
 Estas son fuentes de símbolos necesarias para **WPS Office**. Se utilizan para mostrar fórmulas matemáticas. Como la descarga oficial ya no está disponible, he subido el archivo a **GitHub**:
 
-🔹 **Para Linux basado en Debian:**  
+🔹 **Para Linux basado en Debian:**
 [https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts_1.0_all.deb](https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts_1.0_all.deb)
 
-🔹 **Para Linux basado en RPM:**  
+🔹 **Para Linux basado en RPM:**
 [https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts-1.0_all.rpm](https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts-1.0_all.rpm)
 
-🔹 **Para otras distribuciones Linux:**  
+🔹 **Para otras distribuciones Linux:**
 [https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts_1.0.tar.gz](https://github.com/wachin/ttf-wps-fonts/releases/download/1.0/ttf-wps-fonts_1.0.tar.gz)
 
 Después de descargar el archivo `.tar.gz`, extrae su contenido haciendo clic derecho en **“Extraer aquí”** y luego copia la carpeta en:
@@ -179,7 +194,7 @@ En algunas distribuciones de Linux más modernas, puede ser necesario instalar e
 sudo apt install ibus-gtk4
 ```
 
-📌 **Después de la instalación, reinicia tu computadora** para que los cambios surtan efecto.  
+📌 **Después de la instalación, reinicia tu computadora** para que los cambios surtan efecto.
 ⚠️ **Nota:** Si no reinicias el sistema, **ibus** no funcionará correctamente.
 
 ---
@@ -188,7 +203,7 @@ sudo apt install ibus-gtk4
 
 El **MUI (Multilingual User Interface)** permite cambiar el idioma de **WPS Office Linux 2019**.
 
-**Descargar desde GitHub:**  
+**Descargar desde GitHub:**
 🔗 [https://github.com/wachin/wps-office-all-mui-win-language/releases/download/v11.1.0.11704/mui.7z](https://github.com/wachin/wps-office-all-mui-win-language/releases/download/v11.1.0.11704/mui.7z)
 
 Después de descargar el archivo `.7z`, descomprímelo y cópialo en la siguiente ubicación:
@@ -220,7 +235,7 @@ Esta carpeta está oculta. Para mostrarla, presiona **Ctrl + H** en tu explorado
 
 **Instalar los diccionarios de corrección ortográfica**
 
-**Descargar desde GitHub:**  
+**Descargar desde GitHub:**
 🔗 [https://github.com/wachin/wps-office-all-mui-win-language/releases/download/v11.1.0.11704/dicts.7z](https://github.com/wachin/wps-office-all-mui-win-language/releases/download/v11.1.0.11704/dicts.7z)
 
 Después de descargar el archivo `.7z`, descomprímelo y cópialo en la siguiente ubicación:
@@ -303,16 +318,17 @@ Luego, reemplázalo por la versión que he corregido, con este comando:
 
 ```bash
 wget -c https://github.com/wachin/wps-office-all-mui-win-language/releases/download/v11.1.0.11704/lang_list_community.json && sudo cp lang_list_community.json /opt/kingsoft/wps-office/office6/mui/lang_list/
-
 ```
 
-📌 **¿Qué hace este comando?**  
-1. Descarga el archivo corregido en tu carpeta **HOME**.  
+📌 **¿Qué hace este comando?**
+1. Descarga el archivo corregido en tu carpeta **HOME**.
 2. Luego, te pedirá permisos de **superusuario** para copiarlo en la ubicación correcta dentro del sistema.
 
 Si deseas revisar su contenido antes de instalarlo, copia la línea hasta antes de **&&** y pégala en una terminal. Se descargará el archivo y lo puedes abrir con un editor de texto para que lo revises; luego, si quieres, usa la línea completa.
 
-Para que este arreglo sea visible, es necesario **reiniciar** WPS Office (abrirlo y cerrarlo), y luego verás los demás idiomas disponibles.
+Para que este arreglo sea visible, es necesario **reiniciar** WPS Office (abrirlo y cerrarlo), y luego verás los demás idiomas disponibles:
+
+![Selector de idioma corregido](https://blogger.googleusercontent.com/img/a/AVvXsEixEEP9R3BB99HeQyM5KMdcOooODFREBrB5VqdYS8w-96DGP9Nwm6p9Ir1fX3UV-JsHlf_jolkvEciMPa6KpvA10OvwEi0sCWqpmffp6-J4W3YD-krh8b9HLYKkTgQR8eXEjMPvl1ThgRdxaDPHWIRQlZNTFFGC_5z2TAyQjkpJN661e64ox6vOjXN0BGg=s16000)
 
 ⚠️ **Nota:** Si actualizas WPS Office en el futuro, deberás aplicar nuevamente esta corrección.
 
@@ -322,15 +338,19 @@ Para que este arreglo sea visible, es necesario **reiniciar** WPS Office (abrirl
 
 En algunas distribuciones de Linux que usan `libtiff6` en vez de `libtiff5`, como:
 
-- **MX Linux 23 (basado en Debian 12)**  
+- **MX Linux 23 (basado en Debian 12)**
   [🔗 packages.debian.org/libtiff6](http://packages.debian.org/libtiff6)
 
-- **Ubuntu 24.04**  
+- **Ubuntu 24.04**
   [🔗 packages.ubuntu.com/libtiff6](http://packages.ubuntu.com/libtiff6)
 
 WPS Office puede fallar al guardar documentos en formato **PDF**. Para solucionarlo, sigue estos pasos:
 
 #### 🔹 Paso 1: Verificar si tienes instalado el paquete `libtiff6`
+
+Cuando exportes un PDF debe aparecer una ventana pequeña de confirmación:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlbSHmyO744Lq0OvLuSNNQeqm4J-cdB__hjrZTcdXOQzH4ON030ao1J2GCOb_FpJFAsnmMPeMDxFSus3Ty8_7XWzqro9aXoTUsNBidfL2MfZjEe0HdUCzTdTRGBZikroUzXa2jXqt9eZ3ZjYUIKQL-J5IyM1UJTjr6o6sRvXCHT2zgXKsjDtymw9xwKv0/s16000/20250905-133035%20Exportación%20correcta%20de%20PDF%20en%20WPS%20Office.png)
 
 Ejecuta el siguiente comando en la terminal:
 
@@ -352,12 +372,14 @@ Ejecuta el siguiente comando en la terminal:
 sudo ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 ```
 
-📌 **¿Por qué es necesario este paso?**  
+📌 **¿Por qué es necesario este paso?**
 WPS Office busca la versión **libtiff5**, pero en las versiones más recientes de Linux, solo está disponible **libtiff6**. Este comando crea un **enlace simbólico** que hace que el sistema “engañe” a WPS Office y le permita usar la versión disponible.
 
 #### 🔹 Paso 3: Reiniciar WPS Office
 
 Después de hacer estos cambios, **reinicia WPS Office** e intenta nuevamente guardar como PDF.
+
+![Exportación correcta a PDF](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlbSHmyO744Lq0OvLuSNNQeqm4J-cdB__hjrZTcdXOQzH4ON030ao1J2GCOb_FpJFAsnmMPeMDxFSus3Ty8_7XWzqro9aXoTUsNBidfL2MfZjEe0HdUCzTdTRGBZikroUzXa2jXqt9eZ3ZjYUIKQL-J5IyM1UJTjr6o6sRvXCHT2zgXKsjDtymw9xwKv0/s16000/20250905-133035%20Exportaci%C3%B3n%20correcta%20de%20PDF%20en%20WPS%20Office.png)
 
 ---
 
@@ -365,10 +387,10 @@ Después de hacer estos cambios, **reinicia WPS Office** e intenta nuevamente gu
 
 Si te preguntas de dónde provienen los archivos de **diccionarios** y **MUI**, aquí tienes la explicación:
 
-**Ubicación de los archivos en PlayOnLinux:**  
+**Ubicación de los archivos en PlayOnLinux:**
 🔗 [https://github.com/wachin/wps-office-all-mui-win-language/blob/master/src/PlayOnLinux's%20virtual%20drives/Where%20is%20the%20files%20under%20PlayOnLinux.md](https://github.com/wachin/wps-office-all-mui-win-language/blob/master/src/PlayOnLinux's%20virtual%20drives/Where%20is%20the%20files%20under%20PlayOnLinux.md)
 
-**Ubicación de los archivos en Windows 8.1:**  
+**Ubicación de los archivos en Windows 8.1:**
 🔗 [https://github.com/wachin/wps-office-all-mui-win-language/blob/master/src/C_Windows8.1/Where%20is%20the%20files%20on%20Windows%208.1.md](https://github.com/wachin/wps-office-all-mui-win-language/blob/master/src/C_Windows8.1/Where%20is%20the%20files%20on%20Windows%208.1.md)
 
 ---
@@ -383,7 +405,7 @@ Esta versión puede dejar de funcionar en las versiones más recientes de Linux 
 
 **Nota:** MX Linux está basado en Debian.
 
-Para conocer los ciclos de vida de Debian, revisa la siguiente página:  
+Para conocer los ciclos de vida de Debian, revisa la siguiente página:
 🔗 [https://www.debian.org/releases/](https://www.debian.org/releases/)
 
 **WPS Office 2019 Linux 11.1.0.8392 (64 bits) funciona bien en:**
@@ -395,20 +417,20 @@ Para conocer los ciclos de vida de Debian, revisa la siguiente página:
 
 ### Descargar WPS Office 2019 desde MEGA
 
-🔗 **WPS Office 64 y 32 bits + ttf-wps-fonts**  
+🔗 **WPS Office 64 y 32 bits + ttf-wps-fonts**
 [https://mega.nz/folder/WhdGUCbD#AScUhE8HB_GI457CW2n3FQ](https://mega.nz/folder/WhdGUCbD#AScUhE8HB_GI457CW2n3FQ)
 
 ---
 
 ### Descargar WPS Office 2019 desde Telegram
 
-🔗 **Versión 64 bits** 📥  
+🔗 **Versión 64 bits** 📥
 [https://t.me/PFSLEE/17](https://t.me/PFSLEE/17)
 
-🔗 **Versión 32 bits** 📥  
+🔗 **Versión 32 bits** 📥
 [https://t.me/PFSLEE/16](https://t.me/PFSLEE/16)
 
-🔗 **ttf-wps-fonts** 📥  
+🔗 **ttf-wps-fonts** 📥
 [https://t.me/PFSLEE/18](https://t.me/PFSLEE/18)
 
 📌 **Nota:** Debes extraer el contenido con **clic derecho → “Extraer aquí”**.
@@ -419,17 +441,17 @@ Para conocer los ciclos de vida de Debian, revisa la siguiente página:
 
 Si deseas instalar **WPS Office 11.1.0.8392** (32 o 64 bits) en Linux, sigue estos pasos:
 
-📌 **Compatible con:**  
-- **MX Linux 19 y 21**  
-- **Debian 10 y 11**  
+📌 **Compatible con:**
+- **MX Linux 19 y 21**
+- **Debian 10 y 11**
 - **Ubuntu 20.04**
 
 ⚠️ **Es posible que esta versión no funcione en distribuciones más nuevas de Linux.**
 
 Para completar la instalación, sigue **solo** los siguientes pasos mencionados anteriormente:
 
-1. Instalar fuentes chinas  
-2. Instalar MUI (Interfaz de usuario multilingüe) y diccionarios  
+1. Instalar fuentes chinas
+2. Instalar MUI (Interfaz de usuario multilingüe) y diccionarios
 3. Instalar la corrección del selector de idioma
 
 ---
@@ -440,11 +462,10 @@ Para completar la instalación, sigue **solo** los siguientes pasos mencionados 
 
 ### Referencias
 
-🔹 **Configuración de ibus en Debian**  
+🔹 **Configuración de ibus en Debian**
 [https://wiki.debian.org/I18n/ibus](https://wiki.debian.org/I18n/ibus)
 
-🔹 **Error al convertir documentos a PDF en WPS Office (Ubuntu)**  
+🔹 **Error al convertir documentos a PDF en WPS Office (Ubuntu)**
 [https://www.reddit.com/r/Ubuntu/comments/17ehukn/wps_converting_to_pdf_error/](https://www.reddit.com/r/Ubuntu/comments/17ehukn/wps_converting_to_pdf_error/)
 
----
 

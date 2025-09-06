@@ -1,7 +1,72 @@
+Wps Converting to pdf error
+https://www.reddit.com/r/Ubuntu/comments/17ehukn/wps_converting_to_pdf_error/
+ sudo ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+
+https://github.com/Rongronggg9/wps-office-repack/releases
+
+https://bugs.gentoo.org/920310
+I've found amd64 version on Ubuntu Kylin mirror:
+https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11698_amd64.deb
+
+NetEasy Espejo
+https://mirrors.163.com/
+
+https://mirrors.163.com/ubuntukylin/pool/partner/
+
+https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11723_amd64.deb
 
 
 
+En la página de Ubuntu Kylin hay una dirección donde está WPS Office:
+https://www.ubuntukylin.com/applications/19-cn.html
+y al darle clic a la descarga está el siguiente enlace:
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_12.1.0.17900_amd64.deb
 
-https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office/ 
+Como han quitado los permisos para poder revisar todos los archivos que estan en https://archive.ubuntukylin.com se han restringido pero los archivos están allí, puede reconstruir con la siguiente dirección:
+
+https://archive.ubuntukylin.com/software/pool/partner/
+
+con los nombres de los paquetes deb, ejemplo:
+
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11723_amd64.deb
+
+
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office/
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office/wps-office_11.1.0.11720.xa_amd64.deb
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-full-fix-es/
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-full-fix-es/wps-full-fix-es_1.0-2019_all.deb
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office-fonts/
+
+
+Enlaces:
+
+
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11698_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11704_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11711_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11719_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11720_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_11.1.0.11723_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_12.1.0.17881_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_12.1.0.17885_amd64.deb
+https://archive.ubuntukylin.com/software/pool/partner/wps-office_12.1.0.17900_amd64.deb
+
+
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office-fonts/
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office-fonts/wps-office-fonts_1.0_all.deb  69 MiB   23/1/2022, 4:41:24 p. m.
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/wps-office/wps-office_11.1.0.11723.xa_amd64.deb    327 MiB  5/2/2025, 12:08:12 a. m.
+
+
+https://repositorio.deepines.com/pub/deepines/5/pool/main/w/windows-icon-theme/windows-icon-theme_2.0.0_all.deb  10 MiB
+21/1/2022, 12:15:19 a. m.
+
+https://repositorio.deepines.com/pub/deepines/store/svg/
+
+
 
 

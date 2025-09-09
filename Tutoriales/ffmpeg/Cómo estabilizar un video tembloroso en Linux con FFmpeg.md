@@ -16,7 +16,7 @@ Vamos a ver cómo usarla para dejar tu video **fijo como una roca**. 🪨
 No todos los `ffmpeg` son iguales. Algunos pueden estabilizar videos… y otros no.  
 Pero no te preocupes, vamos a **chequearlo en 10 segundos**.
 
-Abrí la terminal (sí, esa pantalla negra que parece de hacker) y escribí:
+Abrí la terminal (sí, esa pantalla negra que parece de hacker) y escribe:
 
 ```bash
 ffmpeg -filters | grep stabiliz
@@ -59,11 +59,13 @@ Ahora viene la parte mágica. Vamos a hacer **dos pasos**:
 
 ### ✅ Paso 1: Analizar el video (como hacerle un "escáner")
 
-`ffmpeg` necesita primero entender **cómo y cuánto tiembla** tu video. Para eso, escribí esto en la terminal (cambiando `tu_video.mp4` por el nombre real de tu video):
+`ffmpeg` necesita primero entender **cómo y cuánto tiembla** tu video. Para eso, escribe esto en la terminal (cambiando `tu_video.mp4` por el nombre real de tu video):
 
 ```bash
 ffmpeg -i tu_video.mp4 -vf vidstabdetect=result=trf.trf -f null -
 ```
+
+ffmpeg -i "Como funciona xinput-plus.mp4" -vf vidstabdetect=result=trf.trf -f null -
 
 ➡️ Esto no crea un video nuevo. Solo analiza y guarda la información en un archivo llamado `trf.trf`.
 
@@ -73,11 +75,14 @@ ffmpeg -i tu_video.mp4 -vf vidstabdetect=result=trf.trf -f null -
 
 ### ✅ Paso 2: Arreglar el temblor (la parte cool)
 
-Ahora sí, vamos a crear el video estable. Escribí esto:
+Ahora sí, vamos a crear el video estable. escribe esto:
 
 ```bash
 ffmpeg -i tu_video.mp4 -vf "vidstabtransform=input=trf.trf:smoothing=25:crop=1" video_estable.mp4
 ```
+
+ffmpeg -i "Como funciona xinput-plus.mp4" -vf "vidstabtransform=input=trf.trf:smoothing=25:crop=1" video_estable.mp4
+
 
 Y listo. 🎉  
 En unos minutos (dependiendo del tamaño del video), vas a tener un archivo nuevo llamado `video_estable.mp4`… ¡sin temblores!

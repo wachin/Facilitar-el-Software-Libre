@@ -1,0 +1,5 @@
+
+
+
+
+chordpro *.txt --output=text 

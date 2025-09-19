@@ -225,6 +225,12 @@ sudo update-desktop-database
 ```bash
 chordpro --manual
 ```
+
+queda instalado en:
+
+/usr/local/share/perl/5.36.0/ChordPro/
+
+
 -- 
 
 Dios les bendiga

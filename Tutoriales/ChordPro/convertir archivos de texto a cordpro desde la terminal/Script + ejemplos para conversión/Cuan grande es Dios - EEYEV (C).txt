@@ -2,7 +2,7 @@ Cuan grande es Dios (C)
 En Espíritu y Verdad
 BPM (72 versos) (144 Coro)
 
-VERSO I
+[Verse I]
 C                       G 
 El esplendor de un Rey
     Am 
@@ -21,7 +21,7 @@ Y tiembla a Su voz
               G 
 Tiembla a Su voz
 
-CORO x2
+[Chorus x2]
        C
 Cuán Grande es Dios
       G         Am 
@@ -31,7 +31,7 @@ Y todos lo verán
        G         C
 Cuán grande es Dios
 
-VERSO II
+[VERSO II]
 C                  G 
 Día a día El está
       Am 
@@ -50,7 +50,7 @@ Cordero y el León
                G 
 Cordero y el León
 
-CORO x2
+[CORO x2]
 
 PUENTE x2
              C

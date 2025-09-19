@@ -1,0 +1,11 @@
+
+
+
+
+chordpro cancion.txt --output canción.cho
+
+
+
+wachin@debian12:~/Dev/Cancionero/Acordes domingo/wachin$ chordpro "Canta al Señor - Vertical C# (Capo 1ra C) con arreglos.txt" --output canta.cho
+Converting Canta al Señor - Vertical C# (Capo 1ra C) con arreglos.txt to ChordPro format
+

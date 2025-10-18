@@ -1,60 +1,79 @@
+# Reducir el tamaño del repositorio eliminando el historial .git
 
-Sí, es posible usar dos usuarios de GitHub en un mismo sistema Linux. Esto se puede hacer configurando diferentes configuraciones de usuario a nivel de repositorio
+## Significado de "Copy the master branch only"
 
-### Opción 1: Configuración de usuario por repositorio
-Puedes configurar diferentes usuarios para diferentes repositorios en Git usando `git config`.
+Un repositorio de GitHub no es solo el código; es la **combinación de todas sus ramas** (`master`, `main`, `develop`, `feature-x`, etc.) y todo su **historial de commits** (el gigantesco registro de cambios) dentro de la carpeta oculta `.git`.
 
-1. **Configurar el usuario global por defecto - Omite el paso si ya lo tenías**
+1.  **Si la dejas marcada (Recomendado para tu caso):**
 
-   Primero, configura el usuario por defecto (global), que se aplicará a todos los repositorios donde no se haya configurado uno específico.
+      * Tu nuevo *fork* solo incluirá la rama principal del repositorio original (`master` o `main`).
+      * **NO** copiará ninguna otra rama de desarrollo, *features* antiguas, o ramas de prueba que el repositorio original pueda tener.
+      * **Beneficio para ti:** Al no copiar ramas innecesarias, reduces la cantidad de historial de *commits* que se traen inicialmente. Esto se traduce en un **tamaño inicial de la carpeta `.git` mucho más pequeño**, lo cual es precisamente lo que quieres.
 
-   ```bash
-   git config --global user.name "Usuario1"
-   git config --global user.email "usuario1@example.com"
-   ```
+2.  **Si la desmarcas:**
 
-2. **Configurar el usuario para un repositorio específico:**
+      * Tu nuevo *fork* copiará **TODAS** las ramas existentes del repositorio original.
+      * **Efecto:** El repositorio será más grande y contendrá todo el historial de esas ramas, lo cual no te sirve si tu objetivo es limpiarlo.
 
-   Luego, lo que si necesitas es usar un usuario diferente para un repositorio específico, navega hasta el directorio de ese repositorio y configura el usuario local para ese repositorio, desde una terminal haga lo siguietne:
+-----
 
-   ```bash
-   cd /ruta/del/repositorio
-   git config user.name "Usuario2"
-   git config user.email "usuario2@example.com"
-   ```
+## ¿Qué debes hacer para tu objetivo?
 
-Reemplaza con tus datos
+Para el objetivo que mencionaste (reducir el tamaño de la carpeta `.git` y el repositorio, pero mantener el *fork*), te recomiendo seguir estos dos pasos:
 
-Ahora vea los archivos ocultos con Ctrl + H y entre en un administrador de archivos en:
+### 1\. En el paso del Fork (Ahora)
 
-.git
+**✅ Acción:** **Deja la casilla "Copy the master branch only" MARCADA.**
 
-y allí está el archivo:
+Esto asegura que tu *fork* sea lo más pequeño posible desde el inicio.
 
-config
+### 2\. Después del Fork (Siguiente paso)
 
-éste ábralo con algún editor de texto y donde está en mi caso me debe quedar así 
+A pesar de marcar la casilla, el historial de *commits* de la rama `master` original sigue siendo grande (todo el código que quieres eliminar está en ese historial).
 
-[remote "origin"]
-	url = https://github.com/tuusuario/Cancionero
+Para reemplazarlo por completo con tu versión más pequeña y compacta, **deberás aplicar la técnica de reescribir la historia** que te mencioné en la respuesta anterior, que es usar la rama huérfana (`git checkout --orphan`).
 
-y añadiendo el token debe quedar así:
+-----
 
-[remote "origin"]
-	url = https://tuusuario:eltoken@github.com/tuusuario/Cancionero
+### Resumen del proceso completo (Ahora que tienes el fork limpio)
 
-	
-cierre el archivo.
+Una vez que completes el *fork* con la opción marcada, ve a tu terminal y aplica estos comandos para reescribir la historia y reducir el tamaño del repositorio al mínimo:
 
-Además debe editar el archivo:
+1.  **Clonar:**
 
-/home/usuario/.git-credentials
+    ```bash
+    git clone https://www.spanishdict.com/translate/fork
+    cd [nombre-del-repositorio]
+    ```
 
-allí debe poner el token así:
+2.  **Crear una rama huérfana (sin historia) para tu nuevo código:**
 
-https://tuusuario:tutoken@github.com
+    ```bash
+    git checkout --orphan nueva-version
+    ```
 
-y guardar el archivo
+3.  **Limpiar el directorio de trabajo y añadir tu nuevo código:**
 
-y luego si todo salió bien hacer git status en tu repositorio de otra cuenta y se podrán hacer los demás comandos, add commit push fetch etc
+    ```bash
+    git rm -rf .
+    # Copia o mueve tu código pequeño aquí
+    cp -r /ruta/a/tu/codigo/nuevo/* .
+    ```
 
+4.  **Hacer el *commit* único y forzar la subida:**
+
+    ```bash
+    git add .
+    git commit -m "Inicio de la nueva versión optimizada"
+    git push origin nueva-version
+    ```
+
+5.  **Reemplazar la rama principal (destructivo para la historia):**
+
+    ```bash
+    git checkout master # o main
+    git reset --hard nueva-version
+    git push origin master --force # O main --force
+    ```
+
+Al hacer esto, lograrás las tres cosas: **mantener el estado de *fork***, **borrar el contenido antiguo** y **reducir el tamaño de `.git`** a solo tu *commit* inicial de la nueva versión.

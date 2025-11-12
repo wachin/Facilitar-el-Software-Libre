@@ -1,4 +1,4 @@
-# 🚀 Tutorial: Cómo Eliminar el Historial Pesado de un Fork de GitHub (Sin Perder la Conexión)
+# Cómo Eliminar el Historial Pesado de un Fork de GitHub (Sin Perder la Conexión)
 
 Si has *forkeado* un repositorio grande en GitHub y solo quieres quedarte con tu versión del código (mucho más pequeña y limpia), pero sin perder el estado de **"fork"** (la relación con el repositorio original), este tutorial te mostrará cómo **reescribir la historia de Git** para reducir drásticamente el tamaño del repositorio y la carpeta oculta `.git`.
 
@@ -70,22 +70,22 @@ git checkout master # o git checkout main
 2.  **Reemplaza el historial de la rama principal:**
     Este comando hace que `master` apunte exactamente al mismo *commit* que `nueva-version`. **¡Esto elimina todo el historial antiguo de la rama\!**
 
-    ```bash
-    git reset --hard nueva-version
-    ```
+```bash
+git reset --hard nueva-version
+```
 
 3.  **Fuerza la subida a GitHub:**
     Debes usar `--force` porque estás sobreescribiendo el historial remoto completo.
 
-    ```bash
-    git push origin master --force # o git push origin main --force
-    ```
+```bash
+git push origin master --force # o git push origin main --force
+```
 
-    *En este punto, el repositorio en GitHub ya solo contiene tu *commit* único, y sigue siendo un *fork*.*
+*En este punto, el repositorio en GitHub ya solo contiene tu *commit* único, y sigue siendo un *fork*.*
 
 ## Paso 4: Limpiar la Carpeta .git Local (Reducción de Tamaño)
 
-Aunque la historia ya desapareció de la rama, Git aún guarda los objetos antiguos en tu carpeta local **`.git`** por un tiempo (en caso de que quieras revertir). Estos objetos son los que mantienen el tamaño en $40 \text{ MB}$.
+Aunque la historia ya desapareció de la rama, Git aún guarda los objetos antiguos en tu carpeta local **`.git`** por un tiempo (en caso de que quieras revertir). Revisa el tamño de .git dandole clic derecho y ver en Propiedades
 
 Para liberar ese espacio, necesitamos forzar a Git a ejecutar su proceso de **recolección de basura** (`Garbage Collection`).
 
@@ -109,9 +109,8 @@ git gc --prune=now
 du -sh .git
 ```
 
-    *(Deberías ver una reducción drástica, como de $40 \text{ MB}$ a unos pocos cientos de kilobytes).*
+*Deberías ver una reducción drástica, ejemplo yo tenía un fork de un repositorio que tenía 40 MB y después de aplicar esto qeudó en 100 kilobytes.*
 
------
 
 ## Paso 5: Limpieza Final (Opcional)
 

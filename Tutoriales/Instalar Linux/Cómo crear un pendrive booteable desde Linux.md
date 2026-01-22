@@ -66,6 +66,10 @@ Usa este comando:
 sudo dd if=/ruta/a/tu.iso of=/dev/sdX bs=4M status=progress oflag=sync
 ```
 
+
+sudo dd if=EndeavourOS_Mercury-Neo-2025.03.19.iso of=/dev/sdc bs=4M status=progress oflag=sync
+
+
 Reemplaza:
 
 * `/ruta/a/tu.iso` → la ruta del archivo ISO, por ejemplo:

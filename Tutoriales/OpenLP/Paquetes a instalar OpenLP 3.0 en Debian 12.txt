@@ -1,0 +1,23 @@
+
+wachin@debian12:~$ sudo apt install openlp
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+Se instalarán los siguientes paquetes adicionales:
+  fonts-elusive-icons fonts-font-awesome fonts-fork-awesome fonts-lato helpdev libodbc2 libsass1 python-qtawesome-common
+  python3-alembic python3-async-timeout python3-flask-cors python3-icu python3-ifaddr python3-libsass python3-pymediainfo
+  python3-pymysql python3-pyodbc python3-pysword python3-qdarkstyle python3-qrcode python3-qtawesome python3-qtsass python3-waitress
+  python3-watchdog python3-webob python3-zeroconf sphinx-rtd-theme-common
+Paquetes sugeridos:
+  odbc-postgresql tdsodbc python-pymysql-doc python-qtawesome-doc python-waitress-doc python-webob-doc
+Se instalarán los siguientes paquetes NUEVOS:
+  fonts-elusive-icons fonts-font-awesome fonts-fork-awesome fonts-lato helpdev libodbc2 libsass1 openlp python-qtawesome-common
+  python3-alembic python3-async-timeout python3-flask-cors python3-icu python3-ifaddr python3-libsass python3-pymediainfo
+  python3-pymysql python3-pyodbc python3-pysword python3-qdarkstyle python3-qrcode python3-qtawesome python3-qtsass python3-waitress
+  python3-watchdog python3-webob python3-zeroconf sphinx-rtd-theme-common
+0 actualizados, 28 nuevos se instalarán, 0 para eliminar y 161 no actualizados.
+Se necesita descargar 3.339 kB/11,8 MB de archivos.
+Se utilizarán 52,7 MB de espacio de disco adicional después de esta operación.
+¿Desea continuar? [S/n]
+
+

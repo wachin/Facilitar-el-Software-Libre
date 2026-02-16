@@ -1,5 +1,3 @@
-Gracias por el listado 🙌. Revisando tu árbol de instalación veo que están todos los **recursos**, `.so`, `.pak`, `.html`, etc., pero falta verificar lo más importante:
-
 
 2. **Revisa `libtcmalloc`**:
    El script intenta cargar:

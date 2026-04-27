@@ -1,0 +1,24 @@
+
+ LICENSE:
+
+ ================================================================================
+ DTAB Lesson Pack is (C) copyright 2000 Kevin Picone
+ ================================================================================
+
+
+ - Dtab Lesson Pack may be freely distributed, provided the distribution
+   package is NOT modified. 
+
+ - No files within this distribution package are to be distributed separately.
+
+ - No person or company may charge a fee for the distribution package, in whole
+   or in part, without written permission from the copyright holder.
+
+
+ - Dtab Lesson Pack IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS
+   EXPRESSED OR IMPLIED.
+
+ - All rights not expressly granted here are reserved by Kevin Picone
+
+
+ ================================================================================

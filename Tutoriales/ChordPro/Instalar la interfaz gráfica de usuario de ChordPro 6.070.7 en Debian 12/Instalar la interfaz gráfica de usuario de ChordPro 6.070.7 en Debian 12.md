@@ -31,7 +31,10 @@ sudo apt install build-essential cpanminus libssl-dev zlib1g-dev \
         libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev \
         libobject-pad-perl libpdf-api2-perl libimage-info-perl \
         libjson-pp-perl libjson-xs-perl libfile-homedir-perl \
-        libdata-printer-perl
+        libdata-printer-perl libref-util-perl libref-util-xs-perl \
+        libclass-std-storable-perl libpod-simple-perl \
+        libpod-parser-perl libpod-pom-perl libpod-coverage-perl
+       
 ```
   
 De la lista de la pagina web en Debian 12 no hay los paquetes:
@@ -39,12 +42,9 @@ De la lista de la pagina web en Debian 12 no hay los paquetes:
 libstorable-perl 
 libpod-usage-perl
 
-alternativamente en debian 12 si hay los siguientes que los instalé:
+pero con los que instalé funciona
 
-```bash
-sudo apt install libclass-std-storable-perl libpod-simple-perl \
-        libpod-parser-perl libpod-pom-perl libpod-coverage-perl
-```
+---
 
 ### **Paso 2: Instalar módulos Perl requeridos**
 Instala los módulos Perl críticos (incluyendo `Wx` para la GUI):
@@ -59,13 +59,25 @@ sudo cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper 
 ### **Paso 4: Para Debian 12 de 32 bit tuve que hacer estos pasos:**
 
 #### Instalar manualmente JavaScript::QuickJS
-En Debian 12 no está disponible el paquete ` libjavascript-quickjs-perl` pero se lo puede instalar manualmente:
+
+En Debian 12 no está disponible el paquete ` libjavascript-quickjs-perl` pero se lo puede instalar manualmente
+
+Si desean hagan lo siguiente dentro de una carpeta para este propósito:
 
 ```bash
 wget http://www.cpan.org/authors/id/F/FE/FELIPE/JavaScript-QuickJS-0.21.tar.gz
 tar -xzvf JavaScript-QuickJS-0.21.tar.gz
+```
+
+este paquete "JavaScript-QuickJS-x.xx.tar.gz" si desean lo pueden subir a virustotal.com debido a los ultimos ataques sabidos "[Internet Estaba A Semanas Del Desastre y Nadie Lo Sabía](https://youtu.be/a62HpQpVBh8?si=C8HGbGIVzLK24Nod)", "[¡GITHUB HACKEADO!](https://youtu.be/NapghLlS2I0?si=aNdr_b-3dSSNm4zE)" (lo revisé, está limpio)
+
+luego entro en la versión que descargué:
+
+```bash
 cd JavaScript-QuickJS-0.21
 ```
+
+**Nota:** Cambiar la ruta en caso de usar otra versión.
 
 Configurar y compilar manualmente
 
@@ -89,11 +101,10 @@ Writing MYMETA.yml and MYMETA.json
 sino advertencias sobre dependencias opcionales de pruebas (Test::Deep, Test::FailWarnings, Test::Fatal). El proceso de configuración (Makefile.PL) se completó correctamente y generó los archivos necesarios para la compilación, continuar nomás 
 
 ```bash
-make
-sudo make install
+make && sudo make install
 ```
 
-Verificar que los módulos estén instalados:
+Verificar que los módulos estén instalados, pon en la terminal:
 
 ```bash
 perl -MJavaScript::QuickJS -e 'print "Módulo instalado\n"'
@@ -105,9 +116,25 @@ si se instaló, dirá:
 Módulo instalado
 ```
 
+cierre esta instancia de la terminal
+
+---
+
 #### Instalar manualmente libquickjs-dev desde código fuente
+
 **En Debian 12 `libquickjs-dev` no está disponible , instalarlo desde código fuente**:  
-   Instala desde fuentes alternativas:
+
+pero si antes deseas revisarlo entra en:
+
+[https://github.com/bellard/quickjs](https://github.com/bellard/quickjs)
+
+y descarga el código fuente en el botón verde:
+
+<>Code
+
+y subelo a [https://www.virustotal.com/](https://www.virustotal.com/)
+
+luego si poner (ponga esto en una carpeta para este fin):
    
 ```bash
 # Instalar QuickJS desde el repositorio oficial
@@ -116,21 +143,23 @@ cd quickjs
 make && sudo make install
 ```
 
+y quedará instalado (cierre esta instancia de la terminal)
+
+---
 
 ### **Paso 5: Descargar y compilar ChordPro**
 
-**1.-** Descarga la última versión del código fuente desde GitHub:
+**1.-** Descarga la versión del código fuente desde GitHub de "App-Music-ChordPro-6.070.7.tar.gz" (en una carpeta para tal propósito):
 
-```bash
-wget https://github.com/ChordPro/chordpro/releases/latest/download/App-Music-ChordPro-6.070.7.tar.gz
-tar -xzvf App-Music-ChordPro-*.tar.gz  
-```
+[https://github.com/ChordPro/chordpro/releases/R6.101.0/](https://github.com/ChordPro/chordpro/releases/R6.101.0/)
+
+descargue el paquete en una carpeta para tal propósito :
+
+App-Music-ChordPro-6.101.0.tar.gz
+
+Súbalo a virustotal
     
-**2.-** Entrar en la carpeta descomprimida:
-
-```bash 
-cd App-Music-ChordPro-6.070.7
-```  
+**2.-** Entrar en la carpeta descomprimida desde una terminal
 
 **3.-** Genera el `Makefile` y compila:
 
@@ -145,10 +174,14 @@ make
 sudo make install
 ```  
 
-y quedaron instalados dos programas:  
+y quedaron instalados:  
  
-   chordpro
-   wxchordpro
+```
+chordpro
+wxchordpro
+```
+
+dos programas
 
 ---
 
@@ -160,7 +193,13 @@ y quedaron instalados dos programas:
 chordpro --version
 ```
  
-Debe mostrar: `ChordPro version 6.070.7`.
+Debe mostrar:
+
+```bash
+chordpro --version
+Non-constant field initialiser expression is experimental and may be changed or removed without notice at /usr/local/share/perl/5.36.0/ChordPro/Chords/Transpose.pm line 19.
+This is ChordPro core 6.101.0
+```
   
 Para la ayuda:
 
@@ -170,8 +209,9 @@ chordpro --help
 
 y allí ver con qué comandos de terminal usarlo
 
+--
 
-#### **Para la GUI**:
+#### **Para la GUI (Interfaz Gráfica de Usuario)**:
 
 ```bash
 wxchordpro

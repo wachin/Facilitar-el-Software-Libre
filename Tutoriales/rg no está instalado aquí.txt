@@ -1,0 +1,1 @@
+rg no está instalado aquí y la carpeta no es un repo, así que usaré herramientas normales del sistema. Ahora voy a sacar un inventario de audio y ver si tenemos utilidades como ffprobe, eyeD3, mid3v2 o exiftool para leer/incrustar carátulas sin maltratar los archivos.

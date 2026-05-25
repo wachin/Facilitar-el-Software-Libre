@@ -1,5 +1,86 @@
+# Instalando ChordPro R5.988 en M Linux 21 (base Debian 11), cómo usar la GUI y línea de comandos + tratando de crear el deb
 
 ChordPro es un formato de notación diseñado para facilitar la escritura, lectura y distribución de canciones, especialmente las que incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en la década de 1990 y se utiliza ampliamente por músicos y entusiastas para compartir canciones de una manera estandarizada y fácil de entender.
+
+---
+
+### En qué sistema operativo Linux lo instalaré
+
+Específicamente lo voy a instalar en:  
+
+**MX Linux 21 (Basado en Debian 11)**
+
+Esta distribución de Linux fue liberada en Octubre 21, 2021 según:  
+[MX Linux | Recent Releases](https://en.m.wikipedia.org/wiki/MX_Linux)
+
+A la fecha Junio 2024 en que hago este tutorial estaba presente en [releases](https://github.com/ChordPro/chordpro/releases) la versión [R6.050](https://github.com/ChordPro/chordpro/releases/tag/R6.050) pero la intenté instalar y no se pudo por ser muy moderna para la base Debian 11, entonces intenté instalar varias versiones y me funcionó la versión [R5.988](https://github.com/ChordPro/chordpro/releases/tag/R5.988)
+
+# Instalando ChordPro R5.988 en M Linux 21 (base Debian 11)
+
+Desde este release:
+
+[R5.988](https://github.com/ChordPro/chordpro/releases/tag/R5.988)  
+
+Sí se puede instalar, probablemente porque las fechas de liberación están más cercanas.
+
+Debe descargar el siguiente archivo:  
+
+`App-Music-ChordPro-5.988.tar.gz`
+
+![Descargar](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvxhIgjf7X8wJ04I_mHi-qibiYJR93FJEX9n92Ilxhgj0wGlQPXnuWzOiR_ll2XXjLCFIBHEsHLlPpCU3A1TTdaohGcK2yVx-seypqfJBMA2BrGW6NkJJYho550HjBadEdC6gaXSyRfBfepdVbmlw7BB-1QZEMiLltHrtuMOrzF2kh7mwEzV9j-Hfx-RA/s973/20240604-103054%20este%20descargar.webp)
+
+Descomprimirlo con clic derecho, entrar en la carpeta y abrir una terminal.
+
+pero si antes deseas revisarlo, sube ese archivo a: [https://www.virustotal.com/](https://www.virustotal.com/)
+
+y revísalo
+
+esto debido a los ultimos ataques sabidos en el 2026 "[Internet Estaba A Semanas Del Desastre y Nadie Lo Sabía](https://youtu.be/a62HpQpVBh8?si=C8HGbGIVzLK24Nod)", "[¡GITHUB HACKEADO!](https://youtu.be/NapghLlS2I0?si=aNdr_b-3dSSNm4zE)" (lo revisé, está limpio)
+
+---
+
+### Compilación
+
+Según consulté en:  
+[Installation on Linux](https://www.chordpro.org/chordpro/chordpro-install-on-linux/)
+
+Instalé las siguientes dependencias:
+
+```bash
+sudo apt install dh-make-perl pristine-tar libwxgtk3.2-dev libdpkg-parse-perl
+sudo apt install libpdf-api2-perl libimage-info-perl libwx-perl
+```
+
+Para compilarlo, en la terminal abierta poner:
+
+```bash
+cpan build chordpro
+```
+
+Espere y llegará un momento que pide contraseña, póngala.
+
+---
+
+### Para lanzar la interfaz gráfica
+
+Para lanzar la interfaz gráfica, ponga en la terminal:
+
+```bash
+wxchordpro
+```
+
+Aparecerá una ventana que pedirá un archivo de ChordPro. Búsquelo:
+
+![Ventana wxchordpro](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hyphenhyphen8-nQS5tjrcxf4-qpSDMd_OFhW7KT2-46Jx5a-msR9jrgsZyQBQLRsEqi_qIwC5-WINsWsD1LerfIqRbxhfla3W69xoFlqmOD6LPAz0KmIULVPlybJVjdslO4W7lmhsCJxHp9Pc-2N7tjDHJBruLdTm5OvvALhdqhDivMC0e7cgmnT_vOZ-cGuBDoc/s893/20240604-103353%20programa%20wxchordpro.webp)
+
+Configure lo que desee hacer, por ejemplo:  
+**Task - More...**
+
+![Task - More...](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXVWkRK75MXwysnpnrZUps_t1PQx6_2g08-Cs6ju5N_-U6WV493XuNS0HiPuxbCRFuGP8rcBTlvHCVjtDgiVkLHLJIaV38E2NnjJcm_BgJJyHeAxD2QeRR4GUcVHf9jNV-kLXbPBh17Asq-4ZZg_oVgBlz5bHe9_rdddlsMUhlAwfJrhRfNOauJmXrR0E/s603/20240604-103530%20Task%20-%20More....webp)
+
+Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
+
+---
 
 ### Características Principales de ChordPro:
 
@@ -42,79 +123,12 @@ En resumen, ChordPro es una herramienta poderosa y sencilla para la notación de
 
 ---
 
-### En qué sistema operativo Linux lo instalaré
-
-Específicamente lo voy a instalar en:  
-**MX Linux 21**
-
-Esta distribución fue liberada en Octubre 21, 2021 según:  
-[MX Linux | Recent Releases](https://en.m.wikipedia.org/wiki/MX_Linux)
-
-Y a esta fecha Junio 2024 está presente en:  
-[ChordPro Releases](https://github.com/ChordPro/chordpro/releases)
-
-La última versión es la:  
-[R6.050](https://github.com/ChordPro/chordpro/releases/tag/R6.050)
-
-Intenté instalarla pero no hay manera de satisfacer las dependencias. Sin embargo, la versión:  
-**R5.988**  
-[R5.988](https://github.com/ChordPro/chordpro/releases/tag/R5.988)  
-Sí se puede instalar, probablemente porque las fechas de liberación están más cercanas.
-
-Debe descargar el siguiente archivo:  
-`App-Music-ChordPro-5.988.tar.gz`
-
-![Descargar](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvxhIgjf7X8wJ04I_mHi-qibiYJR93FJEX9n92Ilxhgj0wGlQPXnuWzOiR_ll2XXjLCFIBHEsHLlPpCU3A1TTdaohGcK2yVx-seypqfJBMA2BrGW6NkJJYho550HjBadEdC6gaXSyRfBfepdVbmlw7BB-1QZEMiLltHrtuMOrzF2kh7mwEzV9j-Hfx-RA/s973/20240604-103054%20este%20descargar.webp)
-
-Descomprimirlo con clic derecho, entrar en la carpeta y abrir una terminal.
-
----
-
-### Compilación
-
-Según consulté en:  
-[Installation on Linux](https://www.chordpro.org/chordpro/chordpro-install-on-linux/)
-
-Instalé las siguientes dependencias:
-```bash
-sudo apt install dh-make-perl pristine-tar libwxgtk3.2-dev libdpkg-parse-perl
-sudo apt install libpdf-api2-perl libimage-info-perl libwx-perl
-```
-
-Para compilarlo, en la terminal abierta poner:
-```bash
-cpan build chordpro
-```
-
-Espere y llegará un momento que pide contraseña, póngala.
-
----
-
-### Para lanzar la interfaz gráfica
-
-Para lanzar la interfaz gráfica, ponga en la terminal:
-```bash
-wxchordpro
-```
-
-Aparecerá una ventana que pedirá un archivo de ChordPro. Búsquelo:
-
-![Ventana wxchordpro](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hyphenhyphen8-nQS5tjrcxf4-qpSDMd_OFhW7KT2-46Jx5a-msR9jrgsZyQBQLRsEqi_qIwC5-WINsWsD1LerfIqRbxhfla3W69xoFlqmOD6LPAz0KmIULVPlybJVjdslO4W7lmhsCJxHp9Pc-2N7tjDHJBruLdTm5OvvALhdqhDivMC0e7cgmnT_vOZ-cGuBDoc/s893/20240604-103353%20programa%20wxchordpro.webp)
-
-Configure lo que desee hacer, por ejemplo:  
-**Task - More...**
-
-![Task - More...](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXVWkRK75MXwysnpnrZUps_t1PQx6_2g08-Cs6ju5N_-U6WV493XuNS0HiPuxbCRFuGP8rcBTlvHCVjtDgiVkLHLJIaV38E2NnjJcm_BgJJyHeAxD2QeRR4GUcVHf9jNV-kLXbPBh17Asq-4ZZg_oVgBlz5bHe9_rdddlsMUhlAwfJrhRfNOauJmXrR0E/s603/20240604-103530%20Task%20-%20More....webp)
-
-Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
-
----
-
 ### Ejemplo de uso de ChordPro desde la línea de comandos para convertir un PDF en formato ChordPro de unos acordes de guitarra
 
 En esta instalación quedan instalados dos ejecutables en:  
-`/usr/local/bin/chordpro`  
-`/usr/local/bin/wxchordpro`
+
+`/usr/local/bin/chordpro`   
+`/usr/local/bin/wxchordpro`  
 
 ![ChordPro instalado](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJm0d4_l_nS5L3qLjAU34qMgXpAD8JdG0vmRV9Lk0qLE3CibbtDt1QRv69fFL1KCpuWcCkcDZeIhX6ksXeg4cn3hOmVym_3CmLUfrG1j0GltPK5qmy6KhmbVZrs2z0MzDPHClLtvoHuIZX3h5hFPEyc2OJWGjWEwQTzBYLeOetU7pW0WKnjab9imSZUOQ/s722/20240605-041540%20ChordPro%20instalado%20en%20local.webp)
 
@@ -126,6 +140,7 @@ Tengo una alabanza en un archivo txt que contiene la letra y los acordes en C y 
 [Canta al Señor - Vertical C# (Capo 1ra C).txt](https://mega.nz/file/LsUgnaCI#BmL_JtrMWVIMxheOw_sN9Ce5k4Mv7c8tZxfBen7SwXY)
 
 Contiene lo siguiente:
+
 ```
 Canta al Señor
 Vertical
@@ -222,12 +237,15 @@ Incomparables promesas me das, etc
 ```
 
 En la terminal, ejecuto:
+
 ```bash
 chordpro --transpose=2 '/home/wachin/Dev2/Cancionero/Cancionero de Acordes de Guitarra para celular (63x110mm)/Canta al Señor - Vertical C# (Capo 1ra C).txt'
 ```
 
 Esto creará un archivo PDF:  
+
 `Canta al Señor - Vertical C# (Capo 1ra C).pdf`  
+
 Disponible aquí:  
 [PDF Generado](https://mega.nz/file/mxsGmYyI#IWRBsO5LMpVYuc_tRct4S7HmQA2dbtpN5F82qdBuKbg)
 
@@ -241,11 +259,13 @@ El programa añade los acordes en gráfico:
 ### Ejemplo 2:
 
 Para convertir un archivo de texto a PDF sin transponer los acordes:
+
 ```bash
 chordpro '/home/wachin/Dev2/Cancionero/Cancionero de Acordes de Guitarra para celular (63x110mm)/Canta al Señor - Vertical C# (Capo 1ra C).txt'
 ```
 
 Para ver todos los comandos disponibles:
+
 ```bash
 chordpro --help
 ```
@@ -266,12 +286,15 @@ Tengo el archivo:
 ![Archivo original](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSVdu89cuvJI1aBPlMac0_enBJuv4CX3TZHCHUwGvoCeKPyyB0oriT6l6r-oOsz3PDL-o08-rGVZIXuANa9sMz8_b8XGK6cRMw1mcPrrXQCzCbPVYbT4WE_JGB3ZmwcXAz6QwgeEh-TIemAWtF1r8u0Ni2N6wGCVhqhxVuNlHEP9EpCOEFL7BS4Hj4nl4/s820/20240605-120053%20Para%20ti%20Oh%20Se%C3%B1or%20Em.webp)
 
 En la terminal, ejecuto:
+
 ```bash
 chordpro --transpose=-2 '/home/wachin/Dev2/Conversiones/Para ti Oh Señor (Dm).txt' -o "Para ti Oh Señor (Cm).txt"
 ```
 
 Esto crea el archivo:  
+
 `Para ti Oh Señor (Cm).txt`  
+
 Disponible aquí:  
 [Archivo transponido](https://mega.nz/file/3lMXXbiA#WjElXaZ68TvfSC1NL1hh-mup-4VN1A8bHRym464r8fk)
 
@@ -282,11 +305,13 @@ Disponible aquí:
 ### Cómo posiblemente se podría construir el deb
 
 En la terminal:
+
 ```bash
 cpan2deb chordpro
 ```
 
 Pero actualmente da el error:  
+
 `Dependency is not satisfiable: libdata-printer-perl (>= 1.001001)`
 
 ---

@@ -1,0 +1,181 @@
+<h1 id="cómo-descargar-vídeos-de-youtube-en-mp4-mkv-o-mp3-u-otros-con-yt-dlp-desde-la-terminal-de-linux-o-de-termux">Cómo
+descargar Vídeos de youtube en mp4, mkv o mp3 u otros con yt-dlp desde
+la terminal de Linux o de Termux</h1>
+<p><strong>yt-dlp</strong>es una bifurcación (fork)
+de<strong>youtube-dl</strong>, una herramienta popular de línea de
+comandos utilizada para descargar videos de YouTube, Facebook, Tiktok,
+Instagram, Twitter y otros sitios web, desde la
+terminal.<strong>yt-dlp</strong>incluye características adicionales,
+mejoras en la funcionalidad original y soporte para más plataformas. Es
+una herramienta poderosa para gestionar contenido multimedia desde
+diversas plataformas.</p>
+<h2 id="paso-1-instalar-termux-en-android">Paso 1: Instalar Termux en
+Android</h2>
+<p>Debemos instalar Termux en Android pero no la versión que viene en la
+Play Store sino la versión completa, si tiene un celular Xiaomi allí
+está una versión completa disponible en el gestor de software de esos
+celulares, pero no en otros como los SANSUMG. Si tiene un SAMSUNG u otro
+celular debe instalar F-Droid o la apk que allí está, para ello vea la
+siguiente entrada:</p>
+<p><strong>Tutorial: Uso de Git en Termux para Android</strong> <a href="https://github.com/wachin/Instalar-git-en-Android-con-Termux">https://github.com/wachin/Instalar-git-en-Android-con-Termux</a></p>
+<p>Si has seguido bien mi tutorial deberás haber usado:</p>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="ex">pkg</span> update</span></code></pre></div></div>
+<p>y recomiendo usar un solo repositorio de los paquetes Termux, yo uso
+Grimler, y bueno allí están las explicaciones.</p>
+<h2 id="paso-2.1-instalar">Paso 2.1: Instalar</h2>
+<p>las dependencias necesarias para Termux</p>
+<p>Para usar<strong>yt-dlp</strong>, necesitarás Python y FFmpeg.
+Ejecuta el siguiente comando para instalar esos paquetes:</p>
+<div class="sourceCode" id="cb2"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="ex">pkg</span> install python ffmpeg <span class="at">-y</span></span></code></pre></div></div>
+<p>Donde:</p>
+<p>-<strong>python</strong>: Es necesario para
+ejecutar<strong>yt-dlp</strong>.</p>
+<p>-<strong>ffmpeg</strong>: Es una herramienta esencial para fusionar
+video y audio.</p>
+<h2 id="paso-2.2-instalar-las-dependencias-necesarias-para-linux">Paso
+2.2: Instalar las dependencias necesarias para Linux</h2>
+<p>Para usar<strong>yt-dlp</strong> en los Sistemas Operativos Linux
+necesitarás Python (ya viene instalado por defecto) FFmpeg y
+python3-mutagen, Ejecuta el siguiente comando:</p>
+<div class="sourceCode" id="cb3"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> apt install ffmpeg python3-mutagen</span></code></pre></div></div>
+<h2 id="paso-3.1-instalar-yt-dlp-y-mutagen-en-termux-desde-pip">Paso
+3.1: Instalar yt-dlp y mutagen en Termux desde pip</h2>
+<p>Para Android en Termux, una vez instaladas las dependencias python,
+ffmpeg,
+instala<strong>yt-dlp</strong>y<strong>mutagen</strong>usando<strong>pip</strong>:</p>
+<div class="sourceCode" id="cb4"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install yt-dlp mutagen</span></code></pre></div></div>
+<p>El paquete de<a href="https://products.documentprocessing.com/es/metadata/python/mutagen/#:~:text=Mutagen%20es%20una%20biblioteca%20Python%20potente%20y,incluidos%20MP3%2C%20FLAC%2C%20OGG%2C%20AAC%20y%20m%C3%A1s.">Python
+mutagen</a>sirve para manipular metadatos de archivos de audio. Permite
+leer, escribir y modificar etiquetas de metadatos en diversos formatos,
+como MP3, FLAC, OGG, y muchos otros, esto es para que la imagen del
+Vídeo mp4 quede en el mp3.</p>
+<h2 id="paso-3.2-instalar-yt-dlp-en-linux">Paso 3.2: Instalar yt-dlp en
+Linux</h2>
+<p>Para Ubuntu y sabores, para Linux Mint y otros semejantes desde PPA
+(del siguiente tutorial solo usa la indicación del PPA):</p>
+<p><strong>Instalar “Media Downloader” y “yt-dlp” para descarga audios
+(en mp3) y videos (mp4) de youtube con en MX Linux, Ubuntu, Linux Mint,
+otros</strong><br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html">https://facilitarelsoftwarelibre.blogspot.com/2024/01/descarga-videos-y-audios-de-youtube-con-media-downloader-en-mx-linux.html</a></p>
+<p>y en Debian y otros basados en este, desde este tutorial:</p>
+<p><strong>Instalar el repositorio de MX Linux en Debian 12, 11, 10 y
+Sistemas Operativos Linux basados en el, y el instalador MX Instalar
+paquetes para instalar Ksnip, yt-dlp, otros</strong> <a href="https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html">https://facilitarelsoftwarelibre.blogspot.com/2023/11/como-anadir-el-repositorio-de-mx-linux-en-basados-en-debian.html</a></p>
+<p>y para <strong>MX Linux</strong> (no se si en los paquetes de
+<strong>antiX</strong> también esté) pues ya viene listo para instalar,
+igual las instrucciones de instalación están en la entrada.</p>
+<p>Para otros Linux debe averiguar según su distribución.</p>
+<h2 id="paso-4.1-mantener-yt-dlp-actualizado-en-termux">Paso 4.1:
+Mantener yt-dlp actualizado en Termux</h2>
+<p>Es recomendable mantener<strong>yt-dlp</strong>actualizado para
+aprovechar las últimas funciones y correcciones. Este comando es para
+usarlo después, para actualizarlo:</p>
+<div class="sourceCode" id="cb5"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">-U</span> <span class="st">"yt-dlp[default]"</span></span></code></pre></div></div>
+<p>Este comando debemos de usarlo con cierta frecuencia, puede ser una
+vez al mes o una vez cada dos meses, es para ver si han enviado alguna
+actualización y aplicarla, debido a que sino se hace esto, es posible
+que ya no se pueda descargar desde Youtube.</p>
+<h2 id="paso-4.1-mantener-yt-dlp-actualizado-en-linux">Paso 4.1:
+Mantener yt-dlp actualizado en Linux</h2>
+<p>Si instaló yt-dlp en Ubuntu, Linux Mint con el PPA este se acualizará
+cuando envien una actualización y usted actualice el sistema, y si lo
+instaló en Debian, MX u otros como se indica en ese tutorial debe
+revisar dónde está el paquete más actual.</p>
+<p><strong>Nota</strong>: Por un caso, no piense que se puede instalar
+yt-dlp desde pip, bueno si se puede en Linux pero habría que crear un
+entorno virtual venv y eso es todo un trámite, y una gran demora, no es
+necesario si ya está en los paquetes del Sistema.</p>
+<h2 id="paso-5-acceder-al-almacenamiento-interno-de-android">Paso 5:
+Acceder al almacenamiento interno de Android</h2>
+<p>En tu celular Android, para descargar con yt-dlp desde Termux
+archivos directamente en tu almacenamiento interno, configura los
+permisos de acceso con:</p>
+<div class="sourceCode" id="cb6"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="ex">termux-setup-storage</span></span></code></pre></div></div>
+<p>Sigue los pasos y quedará listo.</p>
+<p>Luego, navega al directorio compartido con uno de los siguientes
+métodos:</p>
+<div class="sourceCode" id="cb7"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="bu">cd</span> /sdcard</span></code></pre></div></div>
+<p>O bien:</p>
+<div class="sourceCode" id="cb8"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="bu">cd</span> storage/shared</span></code></pre></div></div>
+<p>Y por si lo necesitas, para verificar tu ubicación actual, usa:</p>
+<div class="sourceCode" id="cb9"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div></div>
+<p>sólo allí debes descargar los videos. Esto y otras indicaciones están
+explicadas en el anterior <a href="https://github.com/wachin/Instalar-git-en-Android-con-Termux">tutorial</a>.</p>
+<h1 id="descargar-vídeos-junto-con-su-audio-en-formato-mp4">Descargar
+vídeos (junto con su audio) en formato mp4</h1>
+<p>Usa el siguiente comando para descargar un video con audio en
+formato<strong>.mp4</strong> (es que si no se hace esto sólo de descarga
+el vídeo sin el audio):</p>
+<div class="sourceCode" id="cb10"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">"bv*+ba"</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 <span class="op">&lt;</span>URL_DEL_VIDEO<span class="op">&gt;</span></span></code></pre></div></div>
+<p><strong>Explicación del comando:</strong></p>
+<ol type="1">
+<li><strong>-f “bv*****+ba”</strong>: Selecciona el mejor formato de
+video (<strong>bv</strong>*) y lo combina con el mejor formato de audio
+(<strong>ba</strong>).</li>
+<li><strong>-S ext:mp4</strong>: Prioriza los formatos con
+extensión<strong>.mp4</strong>.</li>
+<li><strong>–merge-output-format mp4</strong>: Garantiza que el archivo
+final sea un<strong>.mp4</strong>, pero también puedes poner otro
+formato de salida: mkv, webm, flv, avi, mov</li>
+<li><strong><url_del_video></url_del_video></strong>: Reemplaza esto con la URL del
+video que deseas descargar</li>
+</ol>
+<h2 id="formatos-de-video-queyt-dlppuede-generar-con-ayuda-deffmpeg"><strong>Formatos
+de video que</strong>yt-dlp<strong>puede generar (con ayuda
+de</strong>ffmpeg<strong>)</strong></h2>
+<p>Cuando usas<strong>–merge-output-format</strong>, los formatos más
+comunes que puedes usar son:</p>
+<ul>
+<li><strong>mp4</strong>Muy compatible con casi todos los dispositivos y
+navegadores.</li>
+<li><strong>mkv</strong>Flexible, soporta múltiples pistas de audio,
+subtítulos, capítulos, etc.</li>
+<li><strong>webm</strong>Formato abierto, bien soportado por
+navegadores.</li>
+<li><strong>flv</strong>Antiguo formato usado para streaming (menos
+común ahora).</li>
+<li><strong>avi</strong>Formato más viejo; no recomendado para contenido
+moderno.</li>
+<li><strong>mov</strong>Usado por Apple/QuickTime.</li>
+</ul>
+<p>si deseas ver todos los formatos disponibles pon:</p>
+<div class="sourceCode" id="cb11"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-muxers</span></span></code></pre></div></div>
+<h2 id="ejemplo-práctico-de-descarga-de-vídeo">Ejemplo práctico de
+descarga de vídeo:</h2>
+<div class="sourceCode" id="cb12"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">yt-dlp</span> <span class="at">-f</span> <span class="st">"bv*+ba"</span> <span class="at">-S</span> ext:mp4 <span class="at">--merge-output-format</span> mp4 https://www.youtube.com/watch<span class="pp">?</span>v=example</span></code></pre></div></div>
+<p>Verifica que el archivo se haya descargado correctamente:</p>
+<div class="sourceCode" id="cb13"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div></div>
+<p>allí deberás ver los archivos, claro también los puedes ver con el
+administrador de archivos de Android</p>
+<h1 id="micro-resumen-de-descarga">Micro Resumen de descarga</h1>
+<p>Solo tengan en bloque de notas como <a href="http://keep.google.com">keep.google.com</a> u otro, los siguientes
+comandos, en texto plano, pues es para que pueda reemplazar las url con
+las suyas:</p>
+<pre class="simple-code-box" style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 6px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-x: auto; padding: 10px; border-radius: 4px; "><span style="color: #000000; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: 15px; white-space: pre; ">---
+✔️ DESCARGAR MP3 de YouTube
+
+yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata https://youtube.com/watch?v=9u_kg7y_M5E&amp;si=YhG-YkMSyIrmEY_R
+
+------------------------------
+
+✔️ DESCARGAR MP4 de Facebook
+
+yt-dlp -v -f "bv*+ba" -S ext:mp4 https://www.facebook.com/share/p/18BBF9fFT4/ 
+
+------------------------------
+
+✔️ Desde TikTok
+
+yt-dlp https://vt.tiktok.com/ZSmP3VcUg/
+
+------------------------------
+
+✔️ DESCARGAR MP4 DE YOUTUBE
+
+yt-dlp -f "bv*+ba" -S ext:mp4 --merge-output-format mp4 https://youtube.com/watch?v=MjrrtaCWNzM&amp;si=woAcBz3RwW_5YnMJ
+
+------------------------------
+</span></pre>
+<p>una vez que hayan realizado el reemplazo, copien el código a Termux y
+ejecutarlo.</p>
+<p>Dios les bendiga</p>

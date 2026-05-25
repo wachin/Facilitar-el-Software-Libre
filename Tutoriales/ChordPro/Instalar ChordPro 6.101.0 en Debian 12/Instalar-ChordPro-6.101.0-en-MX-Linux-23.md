@@ -1,6 +1,6 @@
 
 
-## Instalando ChordPro 6.101.0 en M Linux 23 (base Debian 12), cómo usar la GUI y línea de comandos 
+## Instalando ChordPro 6.101.0 en MX Linux 23 (base Debian 12), cómo usar la GUI y línea de comandos 
 
 ChordPro es un formato de notación diseñado para facilitar la escritura, lectura y distribución de canciones, especialmente las que incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en la década de 1990 y se utiliza ampliamente por músicos y entusiastas para compartir canciones de una manera estandarizada y fácil de entender.
 
@@ -119,7 +119,7 @@ cierre esta instancia de la terminal
 
 **En Debian 12 `libquickjs-dev` no está disponible , instalarlo desde código fuente**:  
 
-pero si antes deseas revisarlo entra en:
+pero si antes deseas revisarlo, entra en:
 
 [https://github.com/bellard/quickjs](https://github.com/bellard/quickjs)
 
@@ -217,7 +217,7 @@ wxchordpro
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEgb4Pbi5M0lx8OdU3BszmVcOG4T7gdbJBSnMKnUwEgknVQf4hZ29W-VTJAS3ec53V0xC_nRDCXX97S6VtZ-q131QJSDz2GAPMGMXr8he6rzWoWHuRX4X-6VGquriH2Mv2T0qUMrm-ZJIrzJG0x9qde1k29UnSRT0WvwKUf43xDlbu5yhJbVz_ZdUjUD4Yc=s16000)
 
-en `Help` y `About Chordpro`puedes ver la versión del programa
+en `Help` y `About Chordpro` puedes ver la versión del programa
 
 ---
 
@@ -251,6 +251,121 @@ guarda y cierra
 ```bash
 sudo update-desktop-database
 ```
+
+---
+
+### Cómo construir el deb
+
+Necesitamos tener instalado:
+
+```bash
+sudo apt install dh-make-perl libtest-more-utf8-perl libtemplate-perl libjson-relaxed-perl
+```
+
+Debian 12 trae versiones antiguas en sus repositorios, así que necesitas actualizarlas desde CPAN.
+
+Instálalos así:
+
+```bash
+sudo cpanm PDF::API2
+sudo cpanm Object::Pad
+sudo cpanm JSON::Relaxed::Parser
+```
+
+luego tener una carpeta creada para que se cree allí dentro el deb, no es necesario estar en ninguna carpeta específica pues se descargará todo lo necesario, luego allí poner:
+
+```bash
+dh-make-perl --build --cpan App::Music::ChordPro
+```
+
+y si es que pide, escribir:
+
+yes
+
+y luego:
+
+sudo
+
+y se creará el archivo .deb 
+
+
+## deb creado pero no avanza la terminal
+
+Después de un rato se ha creado el deb:
+
+libapp-music-chordpro-perl_6.101.0-1_all.deb
+
+pero se ha quedado sin avanzar la terminal en:
+
+```bash
+Installing /home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0/debian/libapp-music-chordpro-perl/usr/bin/ttc
+Installing /home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0/debian/libapp-music-chordpro-perl/usr/bin/chordpro
+make[1]: se sale del directorio '/home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: construyendo el paquete `libapp-music-chordpro-perl' en `../libapp-music-chordpro-perl_6.101.0-1_all.deb'.
+make: se sale del directorio '/home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0'
+--- Done
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+*** Notice ***
+Some of the modules in the newly created package are already present
+in other packages.
+
+  PDF::API2 is in 'libpdf-api2-perl' (APT)
+```
+
+No está colgada por un error grave. Ese mensaje es un **aviso** de `dh-make-perl`.
+
+Te está diciendo que el paquete que acabas de crear contiene módulos que también existen en otros paquetes de Debian, por ejemplo:
+
+```text
+PDF::API2 is in 'libpdf-api2-perl' (APT)
+```
+
+Como ya creó el `.deb`, puedes detener con:
+
+```text
+Ctrl + C
+```
+
+Luego verifica:
+
+```bash
+cd ~/AppsLinux/Chordpro/chordpro-deb
+ls -lh *.deb
+```
+
+Para instalarlo:
+
+```bash
+sudo apt install ./libapp-music-chordpro-perl_6.101.0-1_all.deb
+```
+
+Y probar:
+
+```bash
+chordpro --version
+wxchordpro
+```
+
+Ese aviso es normal porque ChordPro trae/usa módulos Perl y algunos ya existen en el sistema.
+
+
+---
 
 ### 📌 **Notas adicionales**
 

@@ -1,4 +1,4 @@
-# Instalando ChordPro R5.988 en M Linux 21 (base Debian 11), cómo usar la GUI y línea de comandos + tratando de crear el deb
+# Cómo instalar ChordPro R5.988 en M Linux 21 (base Debian 11)
 
 ChordPro es un formato de notación diseñado para facilitar la escritura, lectura y distribución de canciones, especialmente las que incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en la década de 1990 y se utiliza ampliamente por músicos y entusiastas para compartir canciones de una manera estandarizada y fácil de entender.
 
@@ -84,7 +84,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 
 ---
 
-### Características Principales de ChordPro:
+## Características Principales de ChordPro:
 
 1. **Simplicidad y Claridad**: El formato ChordPro coloca los acordes directamente sobre las letras de la canción, lo que facilita ver cuándo se deben tocar los acordes específicos mientras se canta o se toca.
 
@@ -100,7 +100,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 
 4. **Compatibilidad y Conversión**: Existen muchos programas y aplicaciones que soportan el formato ChordPro, lo que facilita la conversión entre diferentes formatos de canciones y la impresión de hojas de acordes bien formateadas.
 
-## Ejemplo de una Canción en Formato ChordPro:
+### Ejemplo de una Canción en Formato ChordPro:
 
 ```
 {title: Despiértame Cuan}
@@ -115,7 +115,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 [F]De tanto escribir
 ```
 
-### Beneficios de Usar ChordPro:
+## Beneficios de Usar ChordPro:
 
 - **Estandarización**: Permite a los músicos compartir y leer canciones de una manera uniforme y consistente.
 - **Facilidad de Uso**: Los acordes colocados directamente sobre las letras hacen que sea fácil para los músicos seguir la estructura de la canción.
@@ -314,7 +314,7 @@ o también puede generar `.chopro` dependiendo del nombre/configuración.
 Si quieres especificar el archivo de salida:
 
 ```bash
-chordpro --convert cancion.txt -o "mi mejor cancion.chopro"
+chordpro --convert "mi cancion.txt" -o "mi mejor cancion.chopro"
 ```
 
 Por ejemplo, si tienes esto:
@@ -348,23 +348,9 @@ wxchordpro
 ```
 
 
-
-
-### Cómo posiblemente se podría construir el deb
-
-En la terminal:
-
-```bash
-cpan2deb chordpro
-```
-
-Pero actualmente da el error:  
-
-`Dependency is not satisfiable: libdata-printer-perl (>= 1.001001)`
-
 ---
 
-### Versión R0_975 ya compilada y generados los binarios
+## Versión R0_975 ya compilada y generados los binarios
 
 En la versión R0_975, la compilación produjo archivos binarios ejecutables que pueden ser distribuidos sin necesidad de incluir el código fuente original. Descargar desde:  
 [R0_975](https://github.com/ChordPro/chordpro/releases/tag/R0_975)  
@@ -378,7 +364,9 @@ Descomprimirlo, entrar en la carpeta y ejecutarlo desde una terminal.
 
 ---
 
-### Quién usa ChordPro, Ejemplo
+## Quién usa ChordPro, Ejemplo
+
+### songselect.ccli.com
 
 El siguiente servicio lo usa:  
 [SongSelect](https://songselect.ccli.com/)
@@ -414,10 +402,10 @@ Tengo un cancionero de alabanzas que he estado haciendo:
 ![Cancionero](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ4S4RHaWwwg5j1LEbKAdmC9ZNgDdLDYFJI0sRriS-fjWeMmpCk2p_ZUau1PnauFcLYgg7DgCSIKauL45FeqBeobSmacgej9LMmC8SuKuQa4RJesf8jj3qbKoDZwA3eMiCl4Q5mag71VnAFBE5BoK_m9vvgD4bR6GOIv1beNd3LRY9Qjh-lkyXDhrV2_I/s914/20240606-092626%20Wachi%20Cancionero.webp)
 
 Dentro de la carpeta:  
-`Cancionero de Acordes de Guitarra para celular (63x110mm)`
 
-Contiene muchas letras con acordes:  
-![Letras en texto](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3_V87tPXI42auktL_eekkibSLPoIbV8gWc3BrPGJyXsf6tJLQBByxRS0IaLiBHKDGcQJbp8jVMHPG_-5w0vNXeXgXizlZD5KkwIl3uUoWJBcF5UepYQAyWTHHXI6vWrMxFzgjyLRpZplcke53D6rn62Rb2B5w0PW_IToHyFLrxZgXhBeLSziUczKfNic/s995/20240606-092835%20wachi%20cancionero%20letras%20texto.webp)
+/Acordes63x110mm
+
+[https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm](https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm)
 
 También están en .docx y PDF. En la carpeta Fonts están las fuentes usadas para los documentos .docx.
 
@@ -432,7 +420,7 @@ También están en .docx y PDF. En la carpeta Fonts están las fuentes usadas pa
 
 ---
 
-### Songbook Pro
+#### Songbook Pro
 
 [Songbook Pro](https://songbook-pro.com/es/docs/manual/editor/chordpro/)  
 Traducción al español:  
@@ -445,7 +433,7 @@ La versión de Android admite gratis 12 canciones. Permite transponer los tonos.
 
 ---
 
-### Worship Tools
+#### Worship Tools
 
 [Worship Tools](https://www.worshiptools.com/en-us/docs/69-ch-chordpro)  
 Traducción al español:  
@@ -453,7 +441,7 @@ Traducción al español:
 
 ---
 
-### Gig Performer
+#### Gig Performer
 
 [Gig Performer](https://gigperformer.com/docs_4_8/UserManualOnline/chordpro.html)  
 Traducción:  
@@ -462,7 +450,7 @@ Traducción:
 
 ---
 
-### Onsong
+#### Onsong
 
 [Onsong](https://onsongapp.com/docs/features/formats/chordpro/)  
 Traducción:  

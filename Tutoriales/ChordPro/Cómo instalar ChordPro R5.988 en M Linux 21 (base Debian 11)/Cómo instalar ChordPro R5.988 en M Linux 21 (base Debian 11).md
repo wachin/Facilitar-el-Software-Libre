@@ -4,7 +4,7 @@ ChordPro es un formato de notación diseñado para facilitar la escritura, lectu
 
 ---
 
-### En qué sistema operativo Linux lo instalaré
+## En qué sistema operativo Linux lo instalaré
 
 Específicamente lo voy a instalar en:  
 
@@ -84,7 +84,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 
 ---
 
-## Características Principales de ChordPro:
+# Características Principales de ChordPro:
 
 1. **Simplicidad y Claridad**: El formato ChordPro coloca los acordes directamente sobre las letras de la canción, lo que facilita ver cuándo se deben tocar los acordes específicos mientras se canta o se toca.
 
@@ -100,7 +100,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 
 4. **Compatibilidad y Conversión**: Existen muchos programas y aplicaciones que soportan el formato ChordPro, lo que facilita la conversión entre diferentes formatos de canciones y la impresión de hojas de acordes bien formateadas.
 
-### Ejemplo de una Canción en Formato ChordPro:
+## Ejemplo de una Canción en Formato ChordPro:
 
 ```
 {title: Despiértame Cuan}
@@ -115,7 +115,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 [F]De tanto escribir
 ```
 
-## Beneficios de Usar ChordPro:
+## Beneficios de Usar ChordPro:                                                                                                                                                                                                                                                                                                                                                                                                                             
 
 - **Estandarización**: Permite a los músicos compartir y leer canciones de una manera uniforme y consistente.
 - **Facilidad de Uso**: Los acordes colocados directamente sobre las letras hacen que sea fácil para los músicos seguir la estructura de la canción.
@@ -126,6 +126,8 @@ En resumen, ChordPro es una herramienta poderosa y sencilla para la notación de
 ---
 
 ## Ejemplo de uso de ChordPro desde la línea de comandos para convertir un PDF en formato ChordPro de unos acordes de guitarra
+
+Por cierto, en los archivos a convertir no deben haber corchetes "[ ]" o paréntesis llave "{ }" porque no se podrán convertir, debido a que ChrodPro usa estos símbolos
 
 ### Ejemplo 1: Transportar tono y convertir de .txt a .pdf
 

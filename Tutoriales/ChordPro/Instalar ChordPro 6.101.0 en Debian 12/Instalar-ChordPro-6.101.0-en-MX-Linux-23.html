@@ -1,0 +1,627 @@
+<h2
+id="instalando-chordpro-6.101.0-en-mx-linux-23-base-debian-12-cómo-usar-la-gui-y-línea-de-comandos">Instalando
+ChordPro 6.101.0 en MX Linux 23 (base Debian 12), cómo usar la GUI y
+línea de comandos</h2>
+<p>ChordPro es un formato de notación diseñado para facilitar la
+escritura, lectura y distribución de canciones, especialmente las que
+incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en
+la década de 1990 y se utiliza ampliamente por músicos y entusiastas
+para compartir canciones de una manera estandarizada y fácil de
+entender.</p>
+<h3 id="requisitos-previos"><strong>Requisitos previos</strong></h3>
+<p>Sistema actualizado MX Linux 23 (base Debian 12) de 64 bit o 32
+bit:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span></code></pre></div>
+<h3 id="paso-1-instalar-dependencias-esenciales"><strong>Paso 1:
+Instalar dependencias esenciales</strong></h3>
+<p>Según la página web para compilar para Linux</p>
+<p><strong>Installation on Linux</strong><br />
+<a
+href="https://www.chordpro.org/chordpro/chordpro-install-on-linux/">https://www.chordpro.org/chordpro/chordpro-install-on-linux/</a></p>
+<p>Instalaremos la mayoría de los que allí están en la lista. Ejecute
+estos comandos para instalar compiladores y librerías necesarias:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install build-essential cpanminus libssl-dev zlib1g-dev <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        libwx-perl libwxgtk3.2-dev libharfbuzz-dev libpango1.0-dev <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        libobject-pad-perl libpdf-api2-perl libimage-info-perl <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        libjson-pp-perl libjson-xs-perl libfile-homedir-perl <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        libdata-printer-perl libref-util-perl libref-util-xs-perl <span class="dt">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        libclass-std-storable-perl libpod-simple-perl <span class="dt">\</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        libpod-parser-perl libpod-pom-perl libpod-coverage-perl</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       </span></code></pre></div>
+<p>De la lista de la pagina web en Debian 12 no hay los paquetes:</p>
+<p>libstorable-perl libpod-usage-perl</p>
+<p>pero con los que instalé funciona</p>
+<hr />
+<h3 id="paso-2-instalar-módulos-perl-requeridos"><strong>Paso 2:
+Instalar módulos Perl requeridos</strong></h3>
+<p>Instala los módulos Perl críticos (incluyendo <code>Wx</code> para la
+GUI):</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cpanm Wx Wx::Perl::Packager Data::Printer File::LoadLines HarfBuzz::Shaper <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           JavaScript::QuickJS LWP::Protocol::https Mozilla::CA Pod::Usage <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           Scalar::Util String::Interpolate::Named Text::Layout <span class="dt">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>           File::HomeDir Image::Info</span></code></pre></div>
+<h3
+id="paso-4-para-debian-12-de-32-bit-tuve-que-hacer-estos-pasos"><strong>Paso
+4: Para Debian 12 de 32 bit tuve que hacer estos pasos:</strong></h3>
+<h4 id="instalar-manualmente-javascriptquickjs">Instalar manualmente
+JavaScript::QuickJS</h4>
+<p>En Debian 12 no está disponible el paquete
+<code>libjavascript-quickjs-perl</code> pero se lo puede instalar
+manualmente</p>
+<p>Si desean hagan lo siguiente dentro de una carpeta para este
+propósito:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> http://www.cpan.org/authors/id/F/FE/FELIPE/JavaScript-QuickJS-0.21.tar.gz</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzvf</span> JavaScript-QuickJS-0.21.tar.gz</span></code></pre></div>
+<p>este paquete “JavaScript-QuickJS-x.xx.tar.gz” si desean lo pueden
+subir a virustotal.com debido a los ultimos ataques sabidos “<a
+href="https://youtu.be/a62HpQpVBh8?si=C8HGbGIVzLK24Nod">Internet Estaba
+A Semanas Del Desastre y Nadie Lo Sabía</a>”, “<a
+href="https://youtu.be/NapghLlS2I0?si=aNdr_b-3dSSNm4zE">¡GITHUB
+HACKEADO!</a>” (lo revisé, está limpio)</p>
+<p>luego entro en la versión que descargué:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> JavaScript-QuickJS-0.21</span></code></pre></div>
+<p><strong>Nota:</strong> Cambiar la ruta en caso de usar otra
+versión.</p>
+<p>Configurar y compilar manualmente</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> Makefile.PL</span></code></pre></div>
+<p>si sale el siguiente mensaje no es un error:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Checking</span> if your kit is complete...</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Looks</span> good</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Deep 0 not found.</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::FailWarnings 0 not found.</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Warning:</span> prerequisite Test::Fatal 0 not found.</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> a Unix-style Makefile</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> Makefile for JavaScript::QuickJS</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> MYMETA.yml and MYMETA.json</span></code></pre></div>
+<p>sino advertencias sobre dependencias opcionales de pruebas
+(Test::Deep, Test::FailWarnings, Test::Fatal). El proceso de
+configuración (Makefile.PL) se completó correctamente y generó los
+archivos necesarios para la compilación, continuar nomás</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> make install</span></code></pre></div>
+<p>Verificar que los módulos estén instalados, pon en la terminal:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> <span class="at">-MJavaScript::QuickJS</span> <span class="at">-e</span> <span class="st">&#39;print &quot;Módulo instalado\n&quot;&#39;</span></span></code></pre></div>
+<p>si se instaló, dirá:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Módulo</span> instalado</span></code></pre></div>
+<p>cierre esta instancia de la terminal</p>
+<hr />
+<h4
+id="instalar-manualmente-libquickjs-dev-desde-código-fuente">Instalar
+manualmente libquickjs-dev desde código fuente</h4>
+<p><strong>En Debian 12 <code>libquickjs-dev</code> no está disponible ,
+instalarlo desde código fuente</strong>:</p>
+<p>pero si antes deseas revisarlo, entra en:</p>
+<p><a
+href="https://github.com/bellard/quickjs">https://github.com/bellard/quickjs</a></p>
+<p>y descarga el código fuente en el botón verde:</p>
+<p>&lt;&gt;Code</p>
+<p>y subelo a <a
+href="https://www.virustotal.com/">https://www.virustotal.com/</a></p>
+<p>luego si poner (ponga esto en una carpeta para este fin):</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar QuickJS desde el repositorio oficial</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bellard/quickjs.git</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> quickjs</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> make install</span></code></pre></div>
+<p>y quedará instalado (cierre esta instancia de la terminal)</p>
+<hr />
+<h3 id="paso-5-descargar-y-compilar-chordpro"><strong>Paso 5: Descargar
+y compilar ChordPro</strong></h3>
+<p><strong>1.-</strong> Descarga la versión del código fuente desde
+GitHub de “App-Music-ChordPro-6.070.7.tar.gz” (en una carpeta para tal
+propósito):</p>
+<p><a
+href="https://github.com/ChordPro/chordpro/releases/R6.101.0/">https://github.com/ChordPro/chordpro/releases/R6.101.0/</a></p>
+<p>descargue el paquete en una carpeta para tal propósito :</p>
+<p>App-Music-ChordPro-6.101.0.tar.gz</p>
+<p>Súbalo a virustotal</p>
+<p><strong>2.-</strong> Entrar en la carpeta descomprimida desde una
+terminal</p>
+<p><strong>3.-</strong> Genera el <code>Makefile</code> y compila:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">perl</span> Makefile.PL</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div>
+<p><strong>4.-</strong> Instala en el sistema:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<p>y quedaron instalados:</p>
+<pre><code>chordpro
+wxchordpro</code></pre>
+<p>dos programas</p>
+<hr />
+<h3 id="paso-6-verificar-la-instalación"><strong>Paso 6: Verificar la
+instalación</strong></h3>
+<h4 id="para-la-versión-cli-línea-de-comandos"><strong>Para la versión
+CLI</strong> (línea de comandos):</h4>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--version</span></span></code></pre></div>
+<p>Debe mostrar:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--version</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Non-constant</span> field initialiser expression is experimental and may be changed or removed without notice at /usr/local/share/perl/5.36.0/ChordPro/Chords/Transpose.pm line 19.</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> is ChordPro core 6.101.0</span></code></pre></div>
+<p>Para la ayuda:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--help</span></span></code></pre></div>
+<p>y allí ver con qué comandos de terminal usarlo</p>
+<p>–</p>
+<h4 id="para-la-gui-interfaz-gráfica-de-usuario"><strong>Para la GUI
+(Interfaz Gráfica de Usuario)</strong>:</h4>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div>
+<p>¡La interfaz gráfica debería abrirse correctamente!</p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEgb4Pbi5M0lx8OdU3BszmVcOG4T7gdbJBSnMKnUwEgknVQf4hZ29W-VTJAS3ec53V0xC_nRDCXX97S6VtZ-q131QJSDz2GAPMGMXr8he6rzWoWHuRX4X-6VGquriH2Mv2T0qUMrm-ZJIrzJG0x9qde1k29UnSRT0WvwKUf43xDlbu5yhJbVz_ZdUjUD4Yc=s16000" /></p>
+<p>en <code>Help</code> y <code>About Chordpro</code> puedes ver la
+versión del programa</p>
+<hr />
+<h3 id="paso-7-acceso-directo-opcional"><strong>Paso 7: Acceso directo
+(opcional)</strong></h3>
+<p>Si quieres un lanzador en el menú de aplicaciones, para este proceso
+te recomiendo Gedit, sino lo tienes instálalo:</p>
+<p><strong>1.-</strong> Crea un archivo <code>.desktop</code>:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit /usr/share/applications/wxchordpro.desktop</span></code></pre></div>
+<p><strong>2.-</strong> Pega este contenido:</p>
+<pre><code>[Desktop Entry]
+Name=wxChordPro
+Comment=ChordPro GUI Editor
+Exec=wxchordpro
+Icon=music
+Terminal=false
+Type=Application
+Categories=Audio;Music;</code></pre>
+<p>guarda y cierra</p>
+<p><strong>3.-</strong> Actualiza el menú, opcional, pues lo mas seguro
+es que ya está allí:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> update-desktop-database</span></code></pre></div>
+<hr />
+<hr />
+<h1 id="características-principales-de-chordpro">Características
+Principales de ChordPro:</h1>
+<ol type="1">
+<li><p><strong>Simplicidad y Claridad</strong>: El formato ChordPro
+coloca los acordes directamente sobre las letras de la canción, lo que
+facilita ver cuándo se deben tocar los acordes específicos mientras se
+canta o se toca.</p></li>
+<li><p><strong>Uso de Etiquetas y Comandos</strong>: ChordPro utiliza
+etiquetas específicas para marcar diferentes partes de la canción, como
+títulos, secciones de coro, y otros elementos estructurales. Algunas
+etiquetas comunes incluyen:</p>
+<ul>
+<li><code>{title: Título de la Canción}</code></li>
+<li><code>{artist: Nombre del Artista}</code></li>
+<li><code>{chorus}</code> para marcar el inicio de un coro y
+<code>{end_of_chorus}</code> para marcar el final.</li>
+</ul></li>
+<li><p><strong>Acordes en Corchetes</strong>: Los acordes se escriben
+entre corchetes y se colocan en la línea de la letra de la canción donde
+deben tocarse. Por ejemplo:</p>
+<pre><code>[G] Despiértame cuan[A]do pase el temblor</code></pre></li>
+<li><p><strong>Compatibilidad y Conversión</strong>: Existen muchos
+programas y aplicaciones que soportan el formato ChordPro, lo que
+facilita la conversión entre diferentes formatos de canciones y la
+impresión de hojas de acordes bien formateadas.</p></li>
+</ol>
+<h2 id="ejemplo-de-una-canción-en-formato-chordpro">Ejemplo de una
+Canción en Formato ChordPro:</h2>
+<pre><code>{title: Despiértame Cuan}
+{artist: Soda Stereo}
+
+[G] Despiértame cuan[D]do pase el temblor
+[G] Despiértame cuan[D]do pase el temblor
+
+[C]Cierro los ojos
+[F]No me atrevo a dormir
+[C]Me duelen las manos
+[F]De tanto escribir</code></pre>
+<h2 id="beneficios-de-usar-chordpro">Beneficios de Usar ChordPro:</h2>
+<ul>
+<li><strong>Estandarización</strong>: Permite a los músicos compartir y
+leer canciones de una manera uniforme y consistente.</li>
+<li><strong>Facilidad de Uso</strong>: Los acordes colocados
+directamente sobre las letras hacen que sea fácil para los músicos
+seguir la estructura de la canción.</li>
+<li><strong>Soporte Tecnológico</strong>: Muchos editores y aplicaciones
+musicales pueden procesar y mostrar archivos ChordPro, ofreciendo
+funciones adicionales como transposición de acordes, generación de
+diagramas de acordes y más.</li>
+</ul>
+<p>En resumen, ChordPro es una herramienta poderosa y sencilla para la
+notación de canciones, ideal tanto para principiantes como para músicos
+experimentados.</p>
+<hr />
+<h2
+id="ejemplo-de-uso-de-chordpro-desde-la-línea-de-comandos-para-convertir-un-pdf-en-formato-chordpro-de-unos-acordes-de-guitarra">Ejemplo
+de uso de ChordPro desde la línea de comandos para convertir un PDF en
+formato ChordPro de unos acordes de guitarra</h2>
+<p>Por cierto, en los archivos a convertir no deben haber corchetes “[
+]” o paréntesis llave “{ }” porque no se podrán convertir, debido a que
+ChrodPro usa estos símbolos</p>
+<h3 id="ejemplo-1-transportar-tono-y-convertir-de-.txt-a-.pdf">Ejemplo
+1: Transportar tono y convertir de .txt a .pdf</h3>
+<p>Tengo una alabanza en un archivo txt que contiene la letra y los
+acordes en C y quiero transponerla a D (subir un tono o dos
+semitonos)</p>
+<p>El archivo contiene lo siguiente:</p>
+<pre><code>Canta al Señor
+Vertical
+
+Poner el Capotraste en la 1ra
+
+INTRO x3
+Am  G  F
+
+VERSO
+C         G         Am       G    F
+Mi Cristo, mi Rey, nadie es como tu
+         C       F        G
+Toda mi vida, quiero exaltar,
+     Am         A#      G
+las maravillas de tu amor
+C          G
+　Consuelo, refugio,
+ Am        G         F
+torre de fuerza y poder
+         C    F      G
+Todo mi ser, lo que soy,
+ Am         A#    G
+nunca cese de adorar
+
+CORO I
+ C          Am       F         G
+Cante al Señor toda la creación
+ C         Am        F            G
+Honra y poder, majestad sea al Rey
+Am      G         F
+Incomparables promesas me das
+   Am  G  F  Am  G  F
+Señor
+
+VERSO
+C   G Am G  F
+C F G Am A# G
+C   G Am G  F
+C F G Am A# G
+
+CORO I y II
+ C          Am       F          G
+Cante al Señor toda la creación
+C         Am         F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+      G   Am    G
+Al sonar de tu nombre
+ C         Am        F            G
+Canto con gozo al mirar tu poder
+     C          Am    F        G
+Por siempre yo te amaré y diré
+Am    G           F              Am G F
+Incomparables promesas me das Señor
+                   Am  G  F
+       son incomparables
+                   Am  G  F
+       son incomparables
+         C    F      G
+Todo mi ser, lo que soy,
+ Am           A#  G  Am G F  Am G F
+nunca cese de adorar
+
+CORO I y II
+ C          Am       F          G
+Cante al Señor toda la creación
+ C         Am        F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+
+ C          Am       F          G
+Cante al Señor toda la creación
+ C         Am        F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+      G   Am    G
+Al sonar de tu nombre
+ C         Am        F           G
+Canto con gozo al mirar tu poder
+     C          Am    F        G
+Por siempre yo te amaré y diré
+
+FINAL n
+C       F         G
+Incomparables promesas me das
+Am      G         F
+Incomparables promesas me das
+Am      G         F
+Incomparables promesas me das, etc</code></pre>
+<p>En la terminal, ejecuto (estando en una terminal ubicada donde está
+el archivo):</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--transpose</span><span class="op">=</span>2 <span class="st">&#39;nombre-de-tu-archivo.txt&#39;</span></span></code></pre></div>
+<p>Esto creará un archivo PDF:</p>
+<p>‘nombre-de-tu-archivo.pdf’</p>
+<p>transportado más dos semitonos</p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu-9q6hJK_p0dmzuE5zcplgVQW-zD3ETTpt455qM6bcOP2Vm5c1_amD0VFPonR-lF2R_Ds8dK_zhiVnoP7GnQ0-evRvWGyzj03Fh3CwzOKcKGGty4RiHejwHLUJgJJowcD-Gt82AUDP5szuQXLtfWi4zopFKEjwzzadtmncvwPMHDa65vgW2urB_ZGNCM/s773/20240604-102157%20canta%20al%20se%C3%B1or%20ChordPro.webp"
+alt="PDF Generado" />
+<figcaption aria-hidden="true">PDF Generado</figcaption>
+</figure>
+<p>El programa añade los acordes en gráfico:<br />
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEeubCUpFM4DpwwggKqU8jOrSEye4sAcogT2D8vb4jRAhXJIZ51GPWmCRP0DNaBnYfg_GP56PgLb7MVS5frzSG8Y4NEBG4DOKVAqZKcu6_9_ig2zCe-KlGEh6gUgWLnneXGI-jBIeDynRdYLwhriY2filEkXr-Ub5Dh_pb0TMMTqoE_Gcs5m6OAxvBnuE/s650/20240604-102500%20ChordPro%20a%C3%B1ade%20acordes.webp"
+alt="Acordes añadidos" /></p>
+<hr />
+<h3 id="ejemplo-2-convertir-.txt-a-.pdf-sin-transportar">Ejemplo 2:
+Convertir .txt a .pdf sin transportar</h3>
+<p>Para convertir un archivo de texto a PDF sin transponer los
+acordes:</p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="st">&quot;nombrede tu archivo.txt&quot;</span></span></code></pre></div>
+<p>Para ver todos los comandos disponibles:</p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--help</span></span></code></pre></div>
+<p>de la ayuda.</p>
+<hr />
+<h3 id="ejemplo-3-transportar-archivo-.txt-a-.txt-mismo">Ejemplo 3:
+Transportar archivo .txt a .txt mismo</h3>
+<p>Deseo bajarle el tono a una canción que tiene su letra y acordes en
+un archivo de texto .txt y quiero que el proceso me dé como resultado un
+archivo de texto mismo.</p>
+<p><strong>Solución:</strong><br />
+Tengo el archivo:<br />
+<a
+href="https://mega.nz/file/ahMnRBrT#7dGYuTPwjrtEC_1Pco332cknCgjLmkrk55Qx9nu9Gow">Para
+ti Oh Señor (Dm).txt</a></p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSVdu89cuvJI1aBPlMac0_enBJuv4CX3TZHCHUwGvoCeKPyyB0oriT6l6r-oOsz3PDL-o08-rGVZIXuANa9sMz8_b8XGK6cRMw1mcPrrXQCzCbPVYbT4WE_JGB3ZmwcXAz6QwgeEh-TIemAWtF1r8u0Ni2N6wGCVhqhxVuNlHEP9EpCOEFL7BS4Hj4nl4/s820/20240605-120053%20Para%20ti%20Oh%20Se%C3%B1or%20Em.webp"
+alt="Archivo original" />
+<figcaption aria-hidden="true">Archivo original</figcaption>
+</figure>
+<p>En la terminal, ejecuto:</p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--transpose</span><span class="op">=</span>-2 <span class="st">&#39;nombre de tu archivo.txt&#39;</span> <span class="at">-o</span> <span class="st">&quot;nombre de tu archivo_transportado.txt&quot;</span></span></code></pre></div>
+<p>Esto crea el archivo:</p>
+<p>“nombre-de-tu-archivo_transportado.txt”</p>
+<hr />
+<h3 id="ejemplo-4-convertir-un-.txt-al-formato-chordpro">Ejemplo 4:
+Convertir un <code>.txt</code> al formato ChordPro</h3>
+<p>Desde la terminal usando la opción:</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">--convert</span></span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--convert</span> <span class="st">&quot;mi cancion.txt&quot;</span></span></code></pre></div>
+<p>Eso generará automáticamente:</p>
+<pre><code>mi cancion.cho</code></pre>
+<p>o también puede generar <code>.chopro</code> dependiendo del
+nombre/configuración.</p>
+<p>Si quieres especificar el archivo de salida:</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--convert</span> <span class="st">&quot;mi cancion.txt&quot;</span> <span class="at">-o</span> <span class="st">&quot;mi mejor cancion.chopro&quot;</span></span></code></pre></div>
+<p>Por ejemplo, si tienes esto:</p>
+<pre class="text"><code>G           D
+Santo, santo, santo
+
+C           G
+Dios poderoso</code></pre>
+<p>ChordPro lo convertirá automáticamente a:</p>
+<pre class="text"><code>[G]Santo, santo, [D]santo
+
+[C]Dios po[G]deroso</code></pre>
+<p>Y luego ya puedes renderizarlo a PDF:</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> cancion.cho</span></code></pre></div>
+<p>o abrirlo en la GUI:</p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div>
+<p>y se lanzará</p>
+<hr />
+<h2 id="quién-usa-chordpro-ejemplo">Quién usa ChordPro, Ejemplo</h2>
+<h3 id="songselect.ccli.com">songselect.ccli.com</h3>
+<p>El siguiente servicio lo usa:<br />
+<a href="https://songselect.ccli.com/">SongSelect</a></p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNM4L6tU7qbGLJ07st1bLv0phzzLR0mru5TexwXYMkNz7y3l8XIo1e1xRDLoA2luTOLj0bEQ9mbv-uwkRU2IMjFoQzEFE-81wr2qDORf5EKpgRgWEBlSL5oLOrFqOVpCTbv3OdGhgztyE5H8mAABUr7PSlVjkXJUt5NCpx7fVPs5STnlmJPfPX7fAZ_gs/s1276/20240605-134802%20songselect%20Amazing%20Grace.webp"
+alt="SongSelect" />
+<figcaption aria-hidden="true">SongSelect</figcaption>
+</figure>
+<p>Ejemplo de canción:<br />
+<a
+href="https://songselect.ccli.com/songs/22025/amazing-grace/viewchordsheet">Amazing
+Grace</a></p>
+<p>El archivo descargado es un .txt:<br />
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhed8SodoJMPvLKbahh1JxsO8PfyTUju1W4aG9fp9KRTySSt68DTKh7jZMiKby9QxpjKwGd7Gpj_27AA2j4ftEoIoPV6DLOV_jIAv8utjCdJXttVKU9suymVUitsBFzJ0-Z-85Tp8JnzeyZtgj7-oIaJtLRbPvUD9RkoJxulj00vq4kP1edfzbhuNV5eeE/s728/20240605-140508%20Amazing%20Grace%20ChordPro%20.txt.webp"
+alt="Amazing Grace ChordPro.txt" /></p>
+<p>Para transformarlo a PDF, ejecute <code>wxchordpro</code> y busque el
+archivo. Seleccione “All files”:<br />
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirBb2e1KcxjBTn0LiuYoYJ9kyEk06z6JeYBz-cdv5r8OHjOXQbh_JGt8gg81qcNlVOYRhwYtRmVfJ1jfiiCpdG3nwTkNboFYM50rRDv2jwmKRszWqLhvsI8UTeYGOOle5P-gCrqQpLgdFj_qXQk7mHpObkrHiItsko5CAMB8ET_IdLe81BtJfHlsAsTys/s781/20240605-141744%20a%20la%20ventana%20ponerle%20All%20files.webp"
+alt="Ventana wxchordpro" /></p>
+<p>Haga clic en “Task - Default preview” y se abrirá con un visor de
+PDF. Guarde el archivo con un nombre.</p>
+<p>Si desea el PDF generado:<br />
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqem4JwoRuajcAbw9YVUEQvQn4oTULKmGmBWnj1nIvIdvUUmytImVRcz39dYEtpq3S9AIwL_0NdPFqdaCceKGoSXC5rLkzZRRNW0Sgb38eHLRb_eheFwUlEp8f0WDMi5pUaoUZ9Qa-trnUSCatlu_3dCIWc2r859zWo9uwmmkDOsIwwbnpzJg0ypz9ZnY/s726/20240605-140211%20Amazing%20Grace%20PDF%20ChordPro.webp"
+alt="Amazing Grace PDF" /></p>
+<p>Puede convertirlo a Word con:<br />
+<a href="https://www.ilovepdf.com/es/pdf_a_word">ILovePDF</a></p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXuQj9sBiJeQvnB5ql-8MXrpggYkIqg98B6kaAXLg4T6XjO-sWfcGpI9oaY6-LQzWpqMnc3Tn_WnFWSRLm0IzBFBB-cyFqYMfUSr7MnNt0qZi45vxIfQTj112JYvqgzpLh_AqlPF9nMUz6qHvLFXYW6uZrIWaOxmMFowkbNYY6Nd5l2Ig8gFCSwORXi-I/s751/20240605-140323%20Conversion%20del%20PDF%20a%20Word%20de%20Amazing%20Grace%20Chrod%20Pro.webp"
+alt="Conversión a Word" />
+<figcaption aria-hidden="true">Conversión a Word</figcaption>
+</figure>
+<hr />
+<h3 id="cancionero-de-acordes-gratuito-en-texto-.txt">Cancionero de
+acordes gratuito en texto .txt</h3>
+<p>Tengo un cancionero de alabanzas que he estado haciendo:<br />
+<a href="https://github.com/wachin/Cancionero">Wachin Cancionero</a></p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ4S4RHaWwwg5j1LEbKAdmC9ZNgDdLDYFJI0sRriS-fjWeMmpCk2p_ZUau1PnauFcLYgg7DgCSIKauL45FeqBeobSmacgej9LMmC8SuKuQa4RJesf8jj3qbKoDZwA3eMiCl4Q5mag71VnAFBE5BoK_m9vvgD4bR6GOIv1beNd3LRY9Qjh-lkyXDhrV2_I/s914/20240606-092626%20Wachi%20Cancionero.webp"
+alt="Cancionero" />
+<figcaption aria-hidden="true">Cancionero</figcaption>
+</figure>
+<p>Dentro de la carpeta:</p>
+<p>/Acordes63x110mm</p>
+<p><a
+href="https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm">https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm</a></p>
+<p>También están en .docx y PDF. En la carpeta Fonts están las fuentes
+usadas para los documentos .docx.</p>
+<hr />
+<h3 id="programas-que-usan-chordpro">Programas que usan ChordPro</h3>
+<p><strong>ChordSmith</strong> lo acepta:<br />
+<a
+href="https://facilitarelsoftwarelibre.blogspot.com/2023/12/descargar-y-usar-chordsmith-en-linux.html">Descargar
+y usar ChordSmith en Linux</a></p>
+<figure>
+<img
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj539eTvi62W8wB9V7yELK3O5e-nsYs7TwpcZTGXgRixfDhaaAzy5t6xhSbhF2GBWAhTOh9TYZT0Q0NHSRX2RRnC5X0933dWnzQmRP8ZCes5o9jtVPsIoFoNsx29gslk4vOlFv-YNf2-RBfhiVJpnXOV_-t9xu8TaNXp8LO5FWKtclqiQInP8KuzON_JTc/s1084/20240605-141558%20chordsmith,%20convertir%20de%20chordpro.webp"
+alt="ChordSmith" />
+<figcaption aria-hidden="true">ChordSmith</figcaption>
+</figure>
+<hr />
+<h4 id="songbook-pro">Songbook Pro</h4>
+<p><a
+href="https://songbook-pro.com/es/docs/manual/editor/chordpro/">Songbook
+Pro</a><br />
+Traducción al español:<br />
+<a
+href="https://songbook--pro-com.translate.goog/es/docs/manual/editor/chordpro/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Songbook
+Pro en español</a></p>
+<p>Descargas disponibles para:<br />
+<a href="https://songbook-pro.com/es/download/">Android, IOS, Windows
+10, 11, Fire</a></p>
+<p>La versión de Android admite gratis 12 canciones. Permite transponer
+los tonos.</p>
+<hr />
+<h4 id="worship-tools">Worship Tools</h4>
+<p><a
+href="https://www.worshiptools.com/en-us/docs/69-ch-chordpro">Worship
+Tools</a><br />
+Traducción al español:<br />
+<a
+href="https://www-worshiptools-com.translate.goog/en-us/docs/69-ch-chordpro?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Worship
+Tools en español</a></p>
+<hr />
+<h4 id="gig-performer">Gig Performer</h4>
+<p><a
+href="https://gigperformer.com/docs_4_8/UserManualOnline/chordpro.html">Gig
+Performer</a><br />
+Traducción:<br />
+<a
+href="https://gigperformer-com.translate.goog/docs_4_8/UserManualOnline/chordpro.html?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Gig
+Performer en español</a><br />
+<a href="https://gigperformer.com/">Sitio oficial</a></p>
+<hr />
+<h4 id="onsong">Onsong</h4>
+<p><a
+href="https://onsongapp.com/docs/features/formats/chordpro/">Onsong</a><br />
+Traducción:<br />
+<a
+href="https://onsongapp-com.translate.goog/docs/features/formats/chordpro/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Onsong
+en español</a><br />
+Solo para Apple.</p>
+<hr />
+<h1 id="cómo-construir-el-deb">Cómo construir el deb</h1>
+<p>Necesitamos tener instalado:</p>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install dh-make-perl libtest-more-utf8-perl libtemplate-perl libjson-relaxed-perl</span></code></pre></div>
+<p>Debian 12 trae versiones antiguas en sus repositorios, así que
+necesitas actualizarlas desde CPAN.</p>
+<p>Instálalos así:</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cpanm PDF::API2</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cpanm Object::Pad</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cpanm JSON::Relaxed::Parser</span></code></pre></div>
+<p>luego tener una carpeta creada para que se cree allí dentro el deb,
+no es necesario estar en ninguna carpeta específica pues se descargará
+todo lo necesario, luego allí poner:</p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dh-make-perl</span> <span class="at">--build</span> <span class="at">--cpan</span> App::Music::ChordPro</span></code></pre></div>
+<p>y si es que pide, escribir:</p>
+<p>yes</p>
+<p>y luego:</p>
+<p>sudo</p>
+<p>y se creará el archivo .deb</p>
+<h2 id="deb-creado-pero-no-avanza-la-terminal">deb creado pero no avanza
+la terminal</h2>
+<p>Después de un rato se ha creado el deb:</p>
+<p>libapp-music-chordpro-perl_6.101.0-1_all.deb</p>
+<p>pero se ha quedado sin avanzar la terminal en:</p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Installing</span> /home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0/debian/libapp-music-chordpro-perl/usr/bin/ttc</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Installing</span> /home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0/debian/libapp-music-chordpro-perl/usr/bin/chordpro</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="va">make</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ex">:</span> se sale del directorio <span class="st">&#39;/home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0&#39;</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_installdocs</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_installchangelogs</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_installexamples</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_installman</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_perl</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_link</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_strip_nondeterminism</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_compress</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_fixperms</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_missing</span></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_installdeb</span></span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_gencontrol</span></span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_md5sums</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>   <span class="ex">dh_builddeb</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a><span class="ex">dpkg-deb:</span> construyendo el paquete <span class="kw">`</span><span class="ex">libapp-music-chordpro-perl</span><span class="st">&#39; en `../libapp-music-chordpro-perl_6.101.0-1_all.deb&#39;</span><span class="ex">.</span></span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a><span class="ex">make:</span> se sale del directorio <span class="st">&#39;/home/wachin/AppsLinux/Chordpro/chordpro-deb/App-Music-ChordPro-6.101.0&#39;</span></span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span> Done</span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a><span class="ex">Leyendo</span> lista de paquetes... Hecho</span>
+<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a><span class="ex">Creando</span> árbol de dependencias... Hecho</span>
+<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a><span class="ex">Leyendo</span> la información de estado... Hecho</span>
+<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a><span class="ex">***</span> Notice <span class="pp">***</span></span>
+<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a><span class="ex">Some</span> of the modules in the newly created package are already present</span>
+<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a><span class="er">in</span> <span class="ex">other</span> packages.</span>
+<span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-28"><a href="#cb40-28" aria-hidden="true" tabindex="-1"></a>  <span class="ex">PDF::API2</span> is in <span class="st">&#39;libpdf-api2-perl&#39;</span> <span class="er">(</span><span class="ex">APT</span><span class="kw">)</span></span></code></pre></div>
+<p>No está colgada por un error grave. Ese mensaje es un
+<strong>aviso</strong> de <code>dh-make-perl</code>.</p>
+<p>Te está diciendo que el paquete que acabas de crear contiene módulos
+que también existen en otros paquetes de Debian, por ejemplo:</p>
+<pre class="text"><code>PDF::API2 is in &#39;libpdf-api2-perl&#39; (APT)</code></pre>
+<p>Como ya creó el <code>.deb</code>, puedes detener con:</p>
+<pre class="text"><code>Ctrl + C</code></pre>
+<p>Luego verifica:</p>
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/AppsLinux/Chordpro/chordpro-deb</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lh</span> <span class="pp">*</span>.deb</span></code></pre></div>
+<p>Para instalarlo:</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install ./libapp-music-chordpro-perl_6.101.0-1_all.deb</span></code></pre></div>
+<p>Y probar:</p>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--version</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div>
+<p>Ese aviso es normal porque ChordPro trae/usa módulos Perl y algunos
+ya existen en el sistema.</p>
+<hr />
+<h3 id="notas-adicionales">📌 <strong>Notas adicionales</strong></h3>
+<p>– <strong>Actualizaciones</strong>: Para actualizar, repite los pasos
+5 y 6 con la nueva versión.<br />
+– <strong>Documentación</strong>:</p>
+<p>Consulta la ayuda en la interfaz en:</p>
+<p>Help &gt; ChordPro File Format</p>
+<p>Consulta la ayuda integrada (opcional desde la terminal):</p>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--manual</span></span></code></pre></div>
+<p>Dios les bendiga</p>

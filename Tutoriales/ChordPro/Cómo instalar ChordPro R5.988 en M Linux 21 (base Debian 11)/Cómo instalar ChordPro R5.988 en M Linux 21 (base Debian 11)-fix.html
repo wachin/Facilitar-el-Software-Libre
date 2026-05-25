@@ -1,0 +1,409 @@
+<h1 id="cómo-instalar-chordpro-r5.988-en-m-linux-21-base-debian-11">Cómo
+instalar ChordPro R5.988 en M Linux 21 (base Debian 11)</h1>
+<p>ChordPro es un formato de notación diseñado para facilitar la
+escritura, lectura y distribución de canciones, especialmente las que
+incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en
+la década de 1990 y se utiliza ampliamente por músicos y entusiastas
+para compartir canciones de una manera estandarizada y fácil de
+entender.</p>
+<hr/>
+<h2 id="en-qué-sistema-operativo-linux-lo-instalaré">En qué sistema
+operativo Linux lo instalaré</h2>
+<p>Específicamente lo voy a instalar en:</p>
+<p><strong>MX Linux 21 (Basado en Debian 11)</strong></p>
+<p><strong>Nota:</strong> Si deseas instalar una versión para algún
+Sistema Linux basado en Debian 12 o superior <a href="https://facilitarelsoftwarelibre.blogspot.com/2025/08/chordpro-instalar-la-interfaz-grafica-de-usuario-en-linux-debian-12.html">ve
+este tutorial</a> (tal vez podría servir para Ubuntu).</p>
+<p>Esta distribución de Linux fue liberada en Octubre 21, 2021
+según:<br/>
+<a href="https://en.m.wikipedia.org/wiki/MX_Linux">MX Linux | Recent
+Releases</a></p>
+<p>A la fecha Junio 2024 en que hago este tutorial estaba presente en <a href="https://github.com/ChordPro/chordpro/releases">releases</a> la
+versión <a href="https://github.com/ChordPro/chordpro/releases/tag/R6.050">R6.050</a>
+pero la intenté instalar y no se pudo por ser muy moderna para la base
+Debian 11, entonces intenté instalar varias versiones y me funcionó la
+versión <a href="https://github.com/ChordPro/chordpro/releases/tag/R5.988">R5.988</a></p>
+<h1 id="instalando-chordpro-r5.988-en-m-linux-21-base-debian-11">Instalando
+ChordPro R5.988 en M Linux 21 (base Debian 11)</h1>
+<p>Desde este release:</p>
+<p><a href="https://github.com/ChordPro/chordpro/releases/tag/R5.988">R5.988</a></p>
+<p>Sí se puede instalar, probablemente porque las fechas de liberación
+están más cercanas.</p>
+<p>Debe descargar el siguiente archivo:</p>
+<p><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">App-Music-ChordPro-5.988.tar.gz</code></p>
+<figure>
+<img alt="Descargar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvxhIgjf7X8wJ04I_mHi-qibiYJR93FJEX9n92Ilxhgj0wGlQPXnuWzOiR_ll2XXjLCFIBHEsHLlPpCU3A1TTdaohGcK2yVx-seypqfJBMA2BrGW6NkJJYho550HjBadEdC6gaXSyRfBfepdVbmlw7BB-1QZEMiLltHrtuMOrzF2kh7mwEzV9j-Hfx-RA/s973/20240604-103054%20este%20descargar.webp"/>
+<figcaption aria-hidden="true">Descargar</figcaption>
+</figure>
+<p>Descomprimirlo con clic derecho, entrar en la carpeta y abrir una
+terminal.</p>
+<p>pero si antes deseas revisarlo, sube ese archivo a: <a href="https://www.virustotal.com/">https://www.virustotal.com/</a></p>
+<p>y revísalo</p>
+<p>esto debido a los ultimos ataques sabidos en el 2026 “<a href="https://youtu.be/a62HpQpVBh8?si=C8HGbGIVzLK24Nod">Internet Estaba
+A Semanas Del Desastre y Nadie Lo Sabía</a>”, “<a href="https://youtu.be/NapghLlS2I0?si=aNdr_b-3dSSNm4zE">¡GITHUB
+HACKEADO!</a>” (lo revisé, está limpio)</p>
+<hr/>
+<h2 id="compilación">Compilación</h2>
+<p>Según consulté en:<br/>
+<a href="https://www.chordpro.org/chordpro/chordpro-install-on-linux/">Installation
+on Linux</a></p>
+<p>Instalé las siguientes dependencias:</p>
+<div class="sourceCode" id="cb1"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt install dh-make-perl pristine-tar libwxgtk3.2-dev libdpkg-parse-perl</span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="fu">sudo</span> apt install libpdf-api2-perl libimage-info-perl libwx-perl</span></code></pre></div></div>
+<p>Para compilarlo, en la terminal abierta poner:</p>
+<div class="sourceCode" id="cb2"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="ex">cpan</span> build chordpro</span></code></pre></div></div>
+<p>Espere y llegará un momento que pide contraseña, póngala.</p>
+<hr/>
+<h2 id="para-lanzar-la-interfaz-gráfica">Para lanzar la interfaz
+gráfica</h2>
+<p>Para lanzar la interfaz gráfica, ponga en la terminal:</p>
+<div class="sourceCode" id="cb3"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div></div>
+<p>Aparecerá una ventana que pedirá un archivo de ChordPro.
+Búsquelo:</p>
+<figure>
+<img alt="Ventana wxchordpro" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hyphenhyphen8-nQS5tjrcxf4-qpSDMd_OFhW7KT2-46Jx5a-msR9jrgsZyQBQLRsEqi_qIwC5-WINsWsD1LerfIqRbxhfla3W69xoFlqmOD6LPAz0KmIULVPlybJVjdslO4W7lmhsCJxHp9Pc-2N7tjDHJBruLdTm5OvvALhdqhDivMC0e7cgmnT_vOZ-cGuBDoc/s893/20240604-103353%20programa%20wxchordpro.webp"/>
+<figcaption aria-hidden="true">Ventana wxchordpro</figcaption>
+</figure>
+<p>Configure lo que desee hacer, por ejemplo:<br/>
+<strong>Task - More…</strong></p>
+<figure>
+<img alt="Task - More…" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXVWkRK75MXwysnpnrZUps_t1PQx6_2g08-Cs6ju5N_-U6WV493XuNS0HiPuxbCRFuGP8rcBTlvHCVjtDgiVkLHLJIaV38E2NnjJcm_BgJJyHeAxD2QeRR4GUcVHf9jNV-kLXbPBh17Asq-4ZZg_oVgBlz5bHe9_rdddlsMUhlAwfJrhRfNOauJmXrR0E/s603/20240604-103530%20Task%20-%20More....webp"/>
+<figcaption aria-hidden="true">Task - More…</figcaption>
+</figure>
+<p>Una vez finalizado, se abrirá automáticamente el archivo PDF
+generado.</p>
+<hr/>
+<h1 id="características-principales-de-chordpro">Características
+Principales de ChordPro:</h1>
+<ol type="1">
+<li><p><strong>Simplicidad y Claridad</strong>: El formato ChordPro
+coloca los acordes directamente sobre las letras de la canción, lo que
+facilita ver cuándo se deben tocar los acordes específicos mientras se
+canta o se toca.</p></li>
+<li><p><strong>Uso de Etiquetas y Comandos</strong>: ChordPro utiliza
+etiquetas específicas para marcar diferentes partes de la canción, como
+títulos, secciones de coro, y otros elementos estructurales. Algunas
+etiquetas comunes incluyen:</p>
+<ul>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">{title: Título de la Canción}</code></li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">{artist: Nombre del Artista}</code></li>
+<li><code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">{chorus}</code> para marcar el inicio de un coro y
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">{end_of_chorus}</code> para marcar el final.</li>
+</ul></li>
+<li><p><strong>Acordes en Corchetes</strong>: Los acordes se escriben
+entre corchetes y se colocan en la línea de la letra de la canción donde
+deben tocarse. Por ejemplo:</p>
+<pre class="simple-code-box" style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 6px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-x: auto; padding: 10px; border-radius: 4px; "><span style="color: #000000; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: 15px; white-space: pre; ">[G] Despiértame cuan[A]do pase el temblor</span></pre></li>
+<li><p><strong>Compatibilidad y Conversión</strong>: Existen muchos
+programas y aplicaciones que soportan el formato ChordPro, lo que
+facilita la conversión entre diferentes formatos de canciones y la
+impresión de hojas de acordes bien formateadas.</p></li>
+</ol>
+<h2 id="ejemplo-de-una-canción-en-formato-chordpro">Ejemplo de una
+Canción en Formato ChordPro:</h2>
+<pre class="simple-code-box" style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 6px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-x: auto; padding: 10px; border-radius: 4px; "><span style="color: #000000; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: 15px; white-space: pre; ">{title: Despiértame Cuan}
+{artist: Soda Stereo}
+
+[G] Despiértame cuan[D]do pase el temblor
+[G] Despiértame cuan[D]do pase el temblor
+
+[C]Cierro los ojos
+[F]No me atrevo a dormir
+[C]Me duelen las manos
+[F]De tanto escribir</span></pre>
+<h2 id="beneficios-de-usar-chordpro">Beneficios de Usar ChordPro:</h2>
+<ul>
+<li><strong>Estandarización</strong>: Permite a los músicos compartir y
+leer canciones de una manera uniforme y consistente.</li>
+<li><strong>Facilidad de Uso</strong>: Los acordes colocados
+directamente sobre las letras hacen que sea fácil para los músicos
+seguir la estructura de la canción.</li>
+<li><strong>Soporte Tecnológico</strong>: Muchos editores y aplicaciones
+musicales pueden procesar y mostrar archivos ChordPro, ofreciendo
+funciones adicionales como transposición de acordes, generación de
+diagramas de acordes y más.</li>
+</ul>
+<p>En resumen, ChordPro es una herramienta poderosa y sencilla para la
+notación de canciones, ideal tanto para principiantes como para músicos
+experimentados.</p>
+<hr/>
+<h2 id="ejemplo-de-uso-de-chordpro-desde-la-línea-de-comandos-para-convertir-un-pdf-en-formato-chordpro-de-unos-acordes-de-guitarra">Ejemplo
+de uso de ChordPro desde la línea de comandos para convertir un PDF en
+formato ChordPro de unos acordes de guitarra</h2>
+<p>Por cierto, en los archivos a convertir no deben haber corchetes “[
+]” o paréntesis llave “{ }” porque no se podrán convertir, debido a que
+ChrodPro usa estos símbolos</p>
+<h3 id="ejemplo-1-transportar-tono-y-convertir-de-.txt-a-.pdf">Ejemplo
+1: Transportar tono y convertir de .txt a .pdf</h3>
+<p>Tengo una alabanza en un archivo txt que contiene la letra y los
+acordes en C y quiero transponerla a D (subir un tono o dos
+semitonos)</p>
+<p>El archivo contiene lo siguiente:</p>
+<pre class="simple-code-box" style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 6px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-x: auto; padding: 10px; border-radius: 4px; "><span style="color: #000000; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: 15px; white-space: pre; ">Canta al Señor
+Vertical
+
+Poner el Capotraste en la 1ra
+
+INTRO x3
+Am  G  F
+
+VERSO
+C         G         Am       G    F
+Mi Cristo, mi Rey, nadie es como tu
+         C       F        G
+Toda mi vida, quiero exaltar,
+     Am         A#      G
+las maravillas de tu amor
+C          G
+　Consuelo, refugio,
+ Am        G         F
+torre de fuerza y poder
+         C    F      G
+Todo mi ser, lo que soy,
+ Am         A#    G
+nunca cese de adorar
+
+CORO I
+ C          Am       F         G
+Cante al Señor toda la creación
+ C         Am        F            G
+Honra y poder, majestad sea al Rey
+Am      G         F
+Incomparables promesas me das
+   Am  G  F  Am  G  F
+Señor
+
+VERSO
+C   G Am G  F
+C F G Am A# G
+C   G Am G  F
+C F G Am A# G
+
+CORO I y II
+ C          Am       F          G
+Cante al Señor toda la creación
+C         Am         F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+      G   Am    G
+Al sonar de tu nombre
+ C         Am        F            G
+Canto con gozo al mirar tu poder
+     C          Am    F        G
+Por siempre yo te amaré y diré
+Am    G           F              Am G F
+Incomparables promesas me das Señor
+                   Am  G  F
+       son incomparables
+                   Am  G  F
+       son incomparables
+         C    F      G
+Todo mi ser, lo que soy,
+ Am           A#  G  Am G F  Am G F
+nunca cese de adorar
+
+CORO I y II
+ C          Am       F          G
+Cante al Señor toda la creación
+ C         Am        F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+
+ C          Am       F          G
+Cante al Señor toda la creación
+ C         Am        F             G
+Honra y poder, majestad sea al Rey
+ Am        G        F
+Montes caerán y el mar rugirá,
+      G   Am    G
+Al sonar de tu nombre
+ C         Am        F           G
+Canto con gozo al mirar tu poder
+     C          Am    F        G
+Por siempre yo te amaré y diré
+
+FINAL n
+C       F         G
+Incomparables promesas me das
+Am      G         F
+Incomparables promesas me das
+Am      G         F
+Incomparables promesas me das, etc</span></pre>
+<p>En la terminal, ejecuto (estando en una terminal ubicada donde está
+el archivo):</p>
+<div class="sourceCode" id="cb7"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--transpose</span><span class="op">=</span>2 <span class="st">'nombre-de-tu-archivo.txt'</span></span></code></pre></div></div>
+<p>Esto creará un archivo PDF:</p>
+<p>‘nombre-de-tu-archivo.pdf’</p>
+<p>transportado más dos semitonos</p>
+<figure>
+<img alt="PDF Generado" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu-9q6hJK_p0dmzuE5zcplgVQW-zD3ETTpt455qM6bcOP2Vm5c1_amD0VFPonR-lF2R_Ds8dK_zhiVnoP7GnQ0-evRvWGyzj03Fh3CwzOKcKGGty4RiHejwHLUJgJJowcD-Gt82AUDP5szuQXLtfWi4zopFKEjwzzadtmncvwPMHDa65vgW2urB_ZGNCM/s773/20240604-102157%20canta%20al%20se%C3%B1or%20ChordPro.webp"/>
+<figcaption aria-hidden="true">PDF Generado</figcaption>
+</figure>
+<p>El programa añade los acordes en gráfico:<br/>
+<img alt="Acordes añadidos" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEeubCUpFM4DpwwggKqU8jOrSEye4sAcogT2D8vb4jRAhXJIZ51GPWmCRP0DNaBnYfg_GP56PgLb7MVS5frzSG8Y4NEBG4DOKVAqZKcu6_9_ig2zCe-KlGEh6gUgWLnneXGI-jBIeDynRdYLwhriY2filEkXr-Ub5Dh_pb0TMMTqoE_Gcs5m6OAxvBnuE/s650/20240604-102500%20ChordPro%20a%C3%B1ade%20acordes.webp"/></p>
+<hr/>
+<h3 id="ejemplo-2-convertir-.txt-a-.pdf-sin-transportar">Ejemplo 2:
+Convertir .txt a .pdf sin transportar</h3>
+<p>Para convertir un archivo de texto a PDF sin transponer los
+acordes:</p>
+<div class="sourceCode" id="cb8"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="st">"nombrede tu archivo.txt"</span></span></code></pre></div></div>
+<p>Para ver todos los comandos disponibles:</p>
+<div class="sourceCode" id="cb9"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--help</span></span></code></pre></div></div>
+<p>de la ayuda.</p>
+<hr/>
+<h3 id="ejemplo-3-transportar-archivo-.txt-a-.txt-mismo">Ejemplo 3:
+Transportar archivo .txt a .txt mismo</h3>
+<p>Deseo bajarle el tono a una canción que tiene su letra y acordes en
+un archivo de texto .txt y quiero que el proceso me dé como resultado un
+archivo de texto mismo.</p>
+<p><strong>Solución:</strong><br/>
+Tengo el archivo:<br/>
+<a href="https://mega.nz/file/ahMnRBrT#7dGYuTPwjrtEC_1Pco332cknCgjLmkrk55Qx9nu9Gow">Para
+ti Oh Señor (Dm).txt</a></p>
+<figure>
+<img alt="Archivo original" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSVdu89cuvJI1aBPlMac0_enBJuv4CX3TZHCHUwGvoCeKPyyB0oriT6l6r-oOsz3PDL-o08-rGVZIXuANa9sMz8_b8XGK6cRMw1mcPrrXQCzCbPVYbT4WE_JGB3ZmwcXAz6QwgeEh-TIemAWtF1r8u0Ni2N6wGCVhqhxVuNlHEP9EpCOEFL7BS4Hj4nl4/s820/20240605-120053%20Para%20ti%20Oh%20Se%C3%B1or%20Em.webp"/>
+<figcaption aria-hidden="true">Archivo original</figcaption>
+</figure>
+<p>En la terminal, ejecuto:</p>
+<div class="sourceCode" id="cb10"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--transpose</span><span class="op">=</span>-2 <span class="st">'nombre de tu archivo.txt'</span> <span class="at">-o</span> <span class="st">"nombre de tu archivo_transportado.txt"</span></span></code></pre></div></div>
+<p>Esto crea el archivo:</p>
+<p>“nombre-de-tu-archivo_transportado.txt”</p>
+<hr/>
+<h3 id="ejemplo-4-convertir-un-.txt-al-formato-chordpro">Ejemplo 4:
+Convertir un <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">.txt</code> al formato ChordPro</h3>
+<p>Desde la terminal usando la opción:</p>
+<div class="sourceCode" id="cb11"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="ex">--convert</span></span></code></pre></div></div>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb12"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--convert</span> <span class="st">"mi cancion.txt"</span></span></code></pre></div></div>
+<p>Eso generará automáticamente:</p>
+<pre class="simple-code-box" style="background-color: #f8f8f8; border: 1px solid #d0d0d0; border-left: 6px solid #d44950; line-height: 1.5; margin: 10px 0; overflow-x: auto; padding: 10px; border-radius: 4px; "><span style="color: #000000; font-family: 'Ubuntu Mono', Consolas, monospace; font-size: 15px; white-space: pre; ">mi cancion.cho</span></pre>
+<p>o también puede generar <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">.chopro</code> dependiendo del
+nombre/configuración.</p>
+<p>Si quieres especificar el archivo de salida:</p>
+<div class="sourceCode" id="cb14"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb14-1"><a aria-hidden="true" href="#cb14-1" tabindex="-1"></a><span class="ex">chordpro</span> <span class="at">--convert</span> <span class="st">"mi cancion.txt"</span> <span class="at">-o</span> <span class="st">"mi mejor cancion.chopro"</span></span></code></pre></div></div>
+<p>Por ejemplo, si tienes esto:</p>
+<pre class="text"><code>G           D
+Santo, santo, santo
+
+C           G
+Dios poderoso</code></pre>
+<p>ChordPro lo convertirá automáticamente a:</p>
+<pre class="text"><code>[G]Santo, santo, [D]santo
+
+[C]Dios po[G]deroso</code></pre>
+<p>Y luego ya puedes renderizarlo a PDF:</p>
+<div class="sourceCode" id="cb17"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb17-1"><a aria-hidden="true" href="#cb17-1" tabindex="-1"></a><span class="ex">chordpro</span> cancion.cho</span></code></pre></div></div>
+<p>o abrirlo en la GUI:</p>
+<div class="sourceCode" id="cb18"><div style="margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><div style="background: #3a3a3a; height: 28px; display: flex; align-items: center; padding: 0 15px; border-bottom: 1px solid #2a2a2a; "><span style="background: #FAD510; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #0066CC; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><span style="background: #CE1126; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; "></span><button aria-label="Copy code" class="code-copy-btn" style="margin-left:auto;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:#fff;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;cursor:pointer;line-height:1;" title="Copy code" type="button">Copy</button></div><pre class="sourceCode bash" style="background: #1e1e1e; color: #f0f0f0; font-family: 'Ubuntu Mono', 'Courier New', monospace; font-weight: bold; font-size: 14px; line-height: 1.5; margin: 0; padding: 12px 20px; border-left: 4px solid #3aa655; overflow: auto; max-height: 500px; "><code class="sourceCode bash" style="color: inherit; font-family: inherit;"><span id="cb18-1"><a aria-hidden="true" href="#cb18-1" tabindex="-1"></a><span class="ex">wxchordpro</span></span></code></pre></div></div>
+<hr/>
+<h2 id="versión-r0_975-ya-compilada-y-generados-los-binarios">Versión
+R0_975 ya compilada y generados los binarios</h2>
+<p>En la versión R0_975, la compilación produjo archivos binarios
+ejecutables que pueden ser distribuidos sin necesidad de incluir el
+código fuente original. Descargar desde:<br/>
+<a href="https://github.com/ChordPro/chordpro/releases/tag/R0_975">R0_975</a><br/>
+<a href="https://github.com/ChordPro/chordpro/releases/tag/R0_977">R0_977</a></p>
+<p>Descargar exactamente estos archivos:<br/>
+<a href="https://github.com/ChordPro/chordpro/releases/download/R0_975/chordpro-0.975-linux.tar.gz">chordpro-0.975-linux.tar.gz</a><br/>
+<a href="https://github.com/ChordPro/chordpro/releases/download/R0_977/chordpro-0.977-linux.tar.gz">chordpro-0.977-linux.tar.gz</a></p>
+<p>Descomprimirlo, entrar en la carpeta y ejecutarlo desde una
+terminal.</p>
+<hr/>
+<h2 id="quién-usa-chordpro-ejemplo">Quién usa ChordPro, Ejemplo</h2>
+<h3 id="songselect.ccli.com">songselect.ccli.com</h3>
+<p>El siguiente servicio lo usa:<br/>
+<a href="https://songselect.ccli.com/">SongSelect</a></p>
+<figure>
+<img alt="SongSelect" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNM4L6tU7qbGLJ07st1bLv0phzzLR0mru5TexwXYMkNz7y3l8XIo1e1xRDLoA2luTOLj0bEQ9mbv-uwkRU2IMjFoQzEFE-81wr2qDORf5EKpgRgWEBlSL5oLOrFqOVpCTbv3OdGhgztyE5H8mAABUr7PSlVjkXJUt5NCpx7fVPs5STnlmJPfPX7fAZ_gs/s1276/20240605-134802%20songselect%20Amazing%20Grace.webp"/>
+<figcaption aria-hidden="true">SongSelect</figcaption>
+</figure>
+<p>Ejemplo de canción:<br/>
+<a href="https://songselect.ccli.com/songs/22025/amazing-grace/viewchordsheet">Amazing
+Grace</a></p>
+<p>El archivo descargado es un .txt:<br/>
+<img alt="Amazing Grace ChordPro.txt" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhed8SodoJMPvLKbahh1JxsO8PfyTUju1W4aG9fp9KRTySSt68DTKh7jZMiKby9QxpjKwGd7Gpj_27AA2j4ftEoIoPV6DLOV_jIAv8utjCdJXttVKU9suymVUitsBFzJ0-Z-85Tp8JnzeyZtgj7-oIaJtLRbPvUD9RkoJxulj00vq4kP1edfzbhuNV5eeE/s728/20240605-140508%20Amazing%20Grace%20ChordPro%20.txt.webp"/></p>
+<p>Para transformarlo a PDF, ejecute <code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">wxchordpro</code> y busque el
+archivo. Seleccione “All files”:<br/>
+<img alt="Ventana wxchordpro" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirBb2e1KcxjBTn0LiuYoYJ9kyEk06z6JeYBz-cdv5r8OHjOXQbh_JGt8gg81qcNlVOYRhwYtRmVfJ1jfiiCpdG3nwTkNboFYM50rRDv2jwmKRszWqLhvsI8UTeYGOOle5P-gCrqQpLgdFj_qXQk7mHpObkrHiItsko5CAMB8ET_IdLe81BtJfHlsAsTys/s781/20240605-141744%20a%20la%20ventana%20ponerle%20All%20files.webp"/></p>
+<p>Haga clic en “Task - Default preview” y se abrirá con un visor de
+PDF. Guarde el archivo con un nombre.</p>
+<p>Si desea el PDF generado:<br/>
+<img alt="Amazing Grace PDF" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqem4JwoRuajcAbw9YVUEQvQn4oTULKmGmBWnj1nIvIdvUUmytImVRcz39dYEtpq3S9AIwL_0NdPFqdaCceKGoSXC5rLkzZRRNW0Sgb38eHLRb_eheFwUlEp8f0WDMi5pUaoUZ9Qa-trnUSCatlu_3dCIWc2r859zWo9uwmmkDOsIwwbnpzJg0ypz9ZnY/s726/20240605-140211%20Amazing%20Grace%20PDF%20ChordPro.webp"/></p>
+<p>Puede convertirlo a Word con:<br/>
+<a href="https://www.ilovepdf.com/es/pdf_a_word">ILovePDF</a></p>
+<figure>
+<img alt="Conversión a Word" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXuQj9sBiJeQvnB5ql-8MXrpggYkIqg98B6kaAXLg4T6XjO-sWfcGpI9oaY6-LQzWpqMnc3Tn_WnFWSRLm0IzBFBB-cyFqYMfUSr7MnNt0qZi45vxIfQTj112JYvqgzpLh_AqlPF9nMUz6qHvLFXYW6uZrIWaOxmMFowkbNYY6Nd5l2Ig8gFCSwORXi-I/s751/20240605-140323%20Conversion%20del%20PDF%20a%20Word%20de%20Amazing%20Grace%20Chrod%20Pro.webp"/>
+<figcaption aria-hidden="true">Conversión a Word</figcaption>
+</figure>
+<hr/>
+<h3 id="cancionero-de-acordes-gratuito-en-texto-.txt">Cancionero de
+acordes gratuito en texto .txt</h3>
+<p>Tengo un cancionero de alabanzas que he estado haciendo:<br/>
+<a href="https://github.com/wachin/Cancionero">Wachin Cancionero</a></p>
+<figure>
+<img alt="Cancionero" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ4S4RHaWwwg5j1LEbKAdmC9ZNgDdLDYFJI0sRriS-fjWeMmpCk2p_ZUau1PnauFcLYgg7DgCSIKauL45FeqBeobSmacgej9LMmC8SuKuQa4RJesf8jj3qbKoDZwA3eMiCl4Q5mag71VnAFBE5BoK_m9vvgD4bR6GOIv1beNd3LRY9Qjh-lkyXDhrV2_I/s914/20240606-092626%20Wachi%20Cancionero.webp"/>
+<figcaption aria-hidden="true">Cancionero</figcaption>
+</figure>
+<p>Dentro de la carpeta:</p>
+<p>/Acordes63x110mm</p>
+<p><a href="https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm">https://github.com/wachin/Cancionero/tree/main/Acordes63x110mm</a></p>
+<p>También están en .docx y PDF. En la carpeta Fonts están las fuentes
+usadas para los documentos .docx.</p>
+<hr/>
+<h3 id="programas-que-usan-chordpro">Programas que usan ChordPro</h3>
+<p><strong>ChordSmith</strong> lo acepta:<br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2023/12/descargar-y-usar-chordsmith-en-linux.html">Descargar
+y usar ChordSmith en Linux</a></p>
+<figure>
+<img alt="ChordSmith" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj539eTvi62W8wB9V7yELK3O5e-nsYs7TwpcZTGXgRixfDhaaAzy5t6xhSbhF2GBWAhTOh9TYZT0Q0NHSRX2RRnC5X0933dWnzQmRP8ZCes5o9jtVPsIoFoNsx29gslk4vOlFv-YNf2-RBfhiVJpnXOV_-t9xu8TaNXp8LO5FWKtclqiQInP8KuzON_JTc/s1084/20240605-141558%20chordsmith,%20convertir%20de%20chordpro.webp"/>
+<figcaption aria-hidden="true">ChordSmith</figcaption>
+</figure>
+<hr/>
+<h4 id="songbook-pro">Songbook Pro</h4>
+<p><a href="https://songbook-pro.com/es/docs/manual/editor/chordpro/">Songbook
+Pro</a><br/>
+Traducción al español:<br/>
+<a href="https://songbook--pro-com.translate.goog/es/docs/manual/editor/chordpro/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Songbook
+Pro en español</a></p>
+<p>Descargas disponibles para:<br/>
+<a href="https://songbook-pro.com/es/download/">Android, IOS, Windows
+10, 11, Fire</a></p>
+<p>La versión de Android admite gratis 12 canciones. Permite transponer
+los tonos.</p>
+<hr/>
+<h4 id="worship-tools">Worship Tools</h4>
+<p><a href="https://www.worshiptools.com/en-us/docs/69-ch-chordpro">Worship
+Tools</a><br/>
+Traducción al español:<br/>
+<a href="https://www-worshiptools-com.translate.goog/en-us/docs/69-ch-chordpro?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Worship
+Tools en español</a></p>
+<hr/>
+<h4 id="gig-performer">Gig Performer</h4>
+<p><a href="https://gigperformer.com/docs_4_8/UserManualOnline/chordpro.html">Gig
+Performer</a><br/>
+Traducción:<br/>
+<a href="https://gigperformer-com.translate.goog/docs_4_8/UserManualOnline/chordpro.html?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Gig
+Performer en español</a><br/>
+<a href="https://gigperformer.com/">Sitio oficial</a></p>
+<hr/>
+<h4 id="onsong">Onsong</h4>
+<p><a href="https://onsongapp.com/docs/features/formats/chordpro/">Onsong</a><br/>
+Traducción:<br/>
+<a href="https://onsongapp-com.translate.goog/docs/features/formats/chordpro/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp">Onsong
+en español</a><br/>
+Solo para Apple.</p>
+<hr/>
+<h3 id="consultas">CONSULTAS</h3>
+<ul>
+<li><p>How to convert perl modules into deb packages?<br/>
+<a href="https://stackoverflow.com/questions/29170674/how-to-convert-perl-modules-into-deb-packages">StackOverflow</a></p></li>
+<li><p>Perl FAQ<br/>
+<a href="https://wiki.debian.org/PerlFAQ">Debian Wiki</a><br/>
+Comando mencionado:
+<code style="background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 1px 4px; font-family: 'Ubuntu Mono', Consolas, monospace; font-weight: bold; color: #c7254e; font-size: 90%; ">dh-make-perl --build --cpan Perl::Tidy</code></p></li>
+<li><p>ChordPro<br/>
+<a href="https://www.linux-magazine.com/Issues/2020/236/ChordPro">Linux
+Magazine</a></p></li>
+</ul>

@@ -10,6 +10,8 @@ Específicamente lo voy a instalar en:
 
 **MX Linux 21 (Basado en Debian 11)**
 
+**Nota:** Si deseas instalar una versión para algún Sistema Linux basado en Debian 12 o superior [ve este tutorial](https://facilitarelsoftwarelibre.blogspot.com/2025/08/chordpro-instalar-la-interfaz-grafica-de-usuario-en-linux-debian-12.html) (tal vez podría servir para Ubuntu).
+
 Esta distribución de Linux fue liberada en Octubre 21, 2021 según:  
 [MX Linux | Recent Releases](https://en.m.wikipedia.org/wiki/MX_Linux)
 
@@ -39,7 +41,7 @@ esto debido a los ultimos ataques sabidos en el 2026 "[Internet Estaba A Semanas
 
 ---
 
-### Compilación
+## Compilación
 
 Según consulté en:  
 [Installation on Linux](https://www.chordpro.org/chordpro/chordpro-install-on-linux/)
@@ -61,7 +63,7 @@ Espere y llegará un momento que pide contraseña, póngala.
 
 ---
 
-### Para lanzar la interfaz gráfica
+## Para lanzar la interfaz gráfica
 
 Para lanzar la interfaz gráfica, ponga en la terminal:
 
@@ -98,7 +100,7 @@ Una vez finalizado, se abrirá automáticamente el archivo PDF generado.
 
 4. **Compatibilidad y Conversión**: Existen muchos programas y aplicaciones que soportan el formato ChordPro, lo que facilita la conversión entre diferentes formatos de canciones y la impresión de hojas de acordes bien formateadas.
 
-### Ejemplo de una Canción en Formato ChordPro:
+## Ejemplo de una Canción en Formato ChordPro:
 
 ```
 {title: Despiértame Cuan}
@@ -123,23 +125,13 @@ En resumen, ChordPro es una herramienta poderosa y sencilla para la notación de
 
 ---
 
-### Ejemplo de uso de ChordPro desde la línea de comandos para convertir un PDF en formato ChordPro de unos acordes de guitarra
+## Ejemplo de uso de ChordPro desde la línea de comandos para convertir un PDF en formato ChordPro de unos acordes de guitarra
 
-En esta instalación quedan instalados dos ejecutables en:  
+### Ejemplo 1: Transportar tono y convertir de .txt a .pdf
 
-`/usr/local/bin/chordpro`   
-`/usr/local/bin/wxchordpro`  
+Tengo una alabanza en un archivo txt que contiene la letra y los acordes en C y quiero transponerla a D (subir un tono o dos semitonos)
 
-![ChordPro instalado](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJm0d4_l_nS5L3qLjAU34qMgXpAD8JdG0vmRV9Lk0qLE3CibbtDt1QRv69fFL1KCpuWcCkcDZeIhX6ksXeg4cn3hOmVym_3CmLUfrG1j0GltPK5qmy6KhmbVZrs2z0MzDPHClLtvoHuIZX3h5hFPEyc2OJWGjWEwQTzBYLeOetU7pW0WKnjab9imSZUOQ/s722/20240605-041540%20ChordPro%20instalado%20en%20local.webp)
-
----
-
-### Ejemplo 1:
-
-Tengo una alabanza en un archivo txt que contiene la letra y los acordes en C y quiero transponerla a D (subir un tono o dos semitonos). El archivo está aquí:  
-[Canta al Señor - Vertical C# (Capo 1ra C).txt](https://mega.nz/file/LsUgnaCI#BmL_JtrMWVIMxheOw_sN9Ce5k4Mv7c8tZxfBen7SwXY)
-
-Contiene lo siguiente:
+El archivo contiene lo siguiente:
 
 ```
 Canta al Señor
@@ -236,18 +228,17 @@ Am      G         F
 Incomparables promesas me das, etc
 ```
 
-En la terminal, ejecuto:
+En la terminal, ejecuto (estando en una terminal ubicada donde está el archivo):
 
 ```bash
-chordpro --transpose=2 '/home/wachin/Dev2/Cancionero/Cancionero de Acordes de Guitarra para celular (63x110mm)/Canta al Señor - Vertical C# (Capo 1ra C).txt'
+chordpro --transpose=2 'nombre-de-tu-archivo.txt'
 ```
 
 Esto creará un archivo PDF:  
 
-`Canta al Señor - Vertical C# (Capo 1ra C).pdf`  
+'nombre-de-tu-archivo.pdf'  
 
-Disponible aquí:  
-[PDF Generado](https://mega.nz/file/mxsGmYyI#IWRBsO5LMpVYuc_tRct4S7HmQA2dbtpN5F82qdBuKbg)
+transportado más dos semitonos
 
 ![PDF Generado](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu-9q6hJK_p0dmzuE5zcplgVQW-zD3ETTpt455qM6bcOP2Vm5c1_amD0VFPonR-lF2R_Ds8dK_zhiVnoP7GnQ0-evRvWGyzj03Fh3CwzOKcKGGty4RiHejwHLUJgJJowcD-Gt82AUDP5szuQXLtfWi4zopFKEjwzzadtmncvwPMHDa65vgW2urB_ZGNCM/s773/20240604-102157%20canta%20al%20se%C3%B1or%20ChordPro.webp)
 
@@ -256,12 +247,12 @@ El programa añade los acordes en gráfico:
 
 ---
 
-### Ejemplo 2:
+### Ejemplo 2: Convertir .txt a .pdf sin transportar
 
 Para convertir un archivo de texto a PDF sin transponer los acordes:
 
 ```bash
-chordpro '/home/wachin/Dev2/Cancionero/Cancionero de Acordes de Guitarra para celular (63x110mm)/Canta al Señor - Vertical C# (Capo 1ra C).txt'
+chordpro "nombrede tu archivo.txt"
 ```
 
 Para ver todos los comandos disponibles:
@@ -270,12 +261,11 @@ Para ver todos los comandos disponibles:
 chordpro --help
 ```
 
-Captura de pantalla del programa:  
-![ChordPro en MX Linux 21](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYy0egdtwqE05Pw2VbSHmT_bSg6C4znSOtO80i-i_tDjtNBCdKHPKzQ2WHaVibeJQVq_u_ox1PD72nkVm-1u1AttnXJ8nDdfEg1OeDOIb7wYoHARYinAGttOIMByGNcUFq3SOLKHV0xwbeGELnMnjtVDpyHpgku7q55ZuObFMKonAnFLBGTLP8vSjuQ7Y/s876/20240604-100131%20chordpro%20en%20MX%20Linux%2021.webp)
+de la ayuda.
 
 ---
 
-### Ejemplo 3
+### Ejemplo 3: Transportar archivo .txt a .txt mismo
 
 Deseo bajarle el tono a una canción que tiene su letra y acordes en un archivo de texto .txt y quiero que el proceso me dé como resultado un archivo de texto mismo.
 
@@ -288,19 +278,77 @@ Tengo el archivo:
 En la terminal, ejecuto:
 
 ```bash
-chordpro --transpose=-2 '/home/wachin/Dev2/Conversiones/Para ti Oh Señor (Dm).txt' -o "Para ti Oh Señor (Cm).txt"
+chordpro --transpose=-2 'nombre de tu archivo.txt' -o "nombre de tu archivo_transportado.txt"
 ```
 
 Esto crea el archivo:  
 
-`Para ti Oh Señor (Cm).txt`  
+"nombre-de-tu-archivo_transportado.txt"
 
-Disponible aquí:  
-[Archivo transponido](https://mega.nz/file/3lMXXbiA#WjElXaZ68TvfSC1NL1hh-mup-4VN1A8bHRym464r8fk)
-
-![Tono cambiado](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF7ojwnNAKH0thJgnGMuOBi9dkJ3i0rvgF2rs9WT-LpNGLn90NDiouex1QIyP8cchHKwgiVix6M3pUiGmr9eDWqnFCxjQjF2wAKJEEjsuu6Uu8C-YlJtr0lpHxqmbPKQzuHpLPqREbvz5bzTWCyUoN62v-T66lCBcX9jGwpDctI9g3gDGU3NqH4HhtphQ/s843/20240605-120235%20tono%20cambiado.webp)
 
 ---
+
+
+### Ejemplo 4: Convertir un `.txt` al formato ChordPro 
+
+Desde la terminal usando la opción:
+
+```bash
+--convert
+```
+
+Ejemplo:
+
+```bash
+chordpro --convert "mi cancion.txt"
+```
+
+Eso generará automáticamente:
+
+```
+mi cancion.cho
+```
+
+o también puede generar `.chopro` dependiendo del nombre/configuración.
+
+Si quieres especificar el archivo de salida:
+
+```bash
+chordpro --convert cancion.txt -o "mi mejor cancion.chopro"
+```
+
+Por ejemplo, si tienes esto:
+
+```text
+G           D
+Santo, santo, santo
+
+C           G
+Dios poderoso
+```
+
+ChordPro lo convertirá automáticamente a:
+
+```text
+[G]Santo, santo, [D]santo
+
+[C]Dios po[G]deroso
+```
+
+Y luego ya puedes renderizarlo a PDF:
+
+```bash
+chordpro cancion.cho
+```
+
+o abrirlo en la GUI:
+
+```bash
+wxchordpro
+```
+
+
+
 
 ### Cómo posiblemente se podría construir el deb
 
@@ -327,13 +375,6 @@ Descargar exactamente estos archivos:
 [chordpro-0.977-linux.tar.gz](https://github.com/ChordPro/chordpro/releases/download/R0_977/chordpro-0.977-linux.tar.gz)
 
 Descomprimirlo, entrar en la carpeta y ejecutarlo desde una terminal.
-
----
-
-### Otra idea
-
-Se podría compilar como se hizo con VNote en:  
-[Creando paquete deb del editor de Markdown "VNote" en MX Linux 21 al estilo Alien](https://facilitarelsoftwarelibre.blogspot.com/2022/11/creando-paquete-deb-de-vnote-en-mx-linux-21.html)
 
 ---
 

@@ -1,24 +1,19 @@
 
 
-## 🎸 **Tutorial: Instalar ChordPro con Interfaz Gráfica (GUI) en Debian 12**
+## Instalando ChordPro 6.101.0 en M Linux 23 (base Debian 12), cómo usar la GUI y línea de comandos 
 
-Antes de seguir, les explico que este tutorial lo hago en Debian 12 de 32 bit por lo que debe servir para Debian 12 de 64 bit y 
-
-Otra recomendación, más abajo cuando toca clonar los repositorios recomiendo hacerlo en una carpeta para el caso, ejemplo:
-
-🗀 ChordPro-src
-
-y allí dentro clonarlos, esto para cuestiones de orden, además cuando usted termine con un repositorio lo mejor es que cierra esa instancia de la terminal y luego abra otra para el otro terminal que va a clonar para evitar equivocaciones
-
+ChordPro es un formato de notación diseñado para facilitar la escritura, lectura y distribución de canciones, especialmente las que incluyen acordes para guitarra u otros instrumentos. Fue desarrollado en la década de 1990 y se utiliza ampliamente por músicos y entusiastas para compartir canciones de una manera estandarizada y fácil de entender.
 
 ### **Requisitos previos**
-Sistema actualizado:
+
+Sistema actualizado MX Linux 23 (base Debian 12) de 64 bit o 32 bit:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
 ### **Paso 1: Instalar dependencias esenciales**
+
 Según la página web para compilar para Linux
 
 **Installation on Linux**  
@@ -238,7 +233,7 @@ sudo gedit /usr/share/applications/wxchordpro.desktop
     
 **2.-** Pega este contenido:
 
-```ini
+```
 [Desktop Entry]
 Name=wxChordPro
 Comment=ChordPro GUI Editor
@@ -260,17 +255,16 @@ sudo update-desktop-database
 ### 📌 **Notas adicionales**
 
 -- **Actualizaciones**: Para actualizar, repite los pasos 5 y 6 con la nueva versión.  
--- **Documentación**: Consulta la ayuda integrada:  
+-- **Documentación**: 
+
+Consulta la ayuda en la interfaz en:
+
+Help > ChordPro File Format
+
+Consulta la ayuda integrada (opcional desde la terminal):  
 
 ```bash
 chordpro --manual
 ```
-
-queda instalado en:
-
-/usr/local/share/perl/5.36.0/ChordPro/
-
-
--- 
 
 Dios les bendiga
